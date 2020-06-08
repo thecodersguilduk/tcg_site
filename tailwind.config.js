@@ -4,6 +4,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
+      xs: '320px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -27,6 +28,7 @@ module.exports = {
         900: '#1a202c',
       },
       red: {
+        tcg: '#c94b62',
         100: '#fff5f5',
         200: '#fed7d7',
         300: '#feb2b2',
@@ -49,6 +51,7 @@ module.exports = {
         900: '#7b341e',
       },
       yellow: {
+        tcg: '#fad16c',
         100: '#fffff0',
         200: '#fefcbf',
         300: '#faf089',
@@ -60,6 +63,7 @@ module.exports = {
         900: '#744210',
       },
       green: {
+        tcg: '#86ba90',
         100: '#f0fff4',
         200: '#c6f6d5',
         300: '#9ae6b4',
@@ -82,6 +86,8 @@ module.exports = {
         900: '#234e52',
       },
       blue: {
+        tcg: '#16aedb',
+        tcg_dark: '#064789',
         100: '#ebf8ff',
         200: '#bee3f8',
         300: '#90cdf4',
@@ -221,6 +227,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Poppins",
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -248,7 +255,7 @@ module.exports = {
         '"Liberation Mono"',
         '"Courier New"',
         'monospace',
-      ],
+      ]
     },
     fontSize: {
       xs: '0.75rem',
@@ -485,6 +492,7 @@ module.exports = {
     zIndex: ['responsive'],
   },
   corePlugins: {},
+  
   plugins: [
     require('@tailwindcss/ui'),
   ],
