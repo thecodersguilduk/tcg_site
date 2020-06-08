@@ -3,10 +3,10 @@ import $$ from '@utilities/selectors'
 const MobileNav = function MobileNav()
 {
 
-    $$.mobileNavToggle.addEventListener('click', function() {
+    $$.navToggle.addEventListener('click', function() {
 
         this.classList.toggle('menu-toggle-active')
-        $$.mobileNav.classList.toggle('menu-visible')
+        $$.navLinks.classList.toggle('hidden')
 
         // set aria-expanded attribute on menu toggle button
         if ( this.getAttribute('aria-expanded') === 'false' )

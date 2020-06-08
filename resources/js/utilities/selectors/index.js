@@ -21,9 +21,9 @@ const $$ = {
 
     footer              : document.getElementById('footer'),
 
-    mobileNav           : document.getElementById('mobile-nav'),
+    navLinks            : document.getElementById('nav-links'),
 
-    mobileNavToggle     : document.getElementById('mobile-nav-toggle')
+    navToggle           : document.getElementById('nav-toggle')
 
 }
 
