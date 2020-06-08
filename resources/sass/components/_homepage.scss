@@ -1,0 +1,13 @@
+h2.title {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    height: 2px;
+    width: 100%;
+    max-width: 5rem;
+    background-color: $yellow;
+  }
+}
