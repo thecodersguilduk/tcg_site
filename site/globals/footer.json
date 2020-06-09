@@ -1,0 +1,120 @@
+{
+  "footer_blurb": "Making the world a better place through constructing elegant hierarchies.",
+
+  "social_links": [
+    {
+      "title": "facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "title": "twitter",
+      "url": "https://twitter.com/joe_dyer1"
+    },
+    {
+      "title": "linkedin",
+      "url": "https://www.linkedin.com/groups/8324305/"
+    },
+    {
+      "title": "instagram",
+      "url": "https://www.instagram.com/webdevappnet"
+    },
+    {
+      "title": "github",
+      "url": "https://github.com/thecodersguilduk"
+    },
+    {
+      "title": "youtube",
+      "url": "https://www.youtube.com/channel/UC_By6GiE5aVoMyoTLr5lGZA"
+    }
+  ],
+
+  "footer_sections": [
+    {
+      "title": "Solutions",
+      "links": [
+        {
+          "label": "Marketing",
+          "url": "/"
+        },
+        {
+          "label": "Analytics",
+          "url": "/"
+        },
+        {
+          "label": "Commerce",
+          "url": "/"
+        },
+        {
+          "label": "Insights",
+          "url": "/"
+        }
+      ]
+    },
+
+    {
+      "title": "Support",
+      "links": [
+        {
+          "label": "Pricing",
+          "url": "/"
+        },
+        {
+          "label": "Documentation",
+          "url": "/"
+        },
+        {
+          "label": "Guides",
+          "url": "/"
+        },
+        {
+          "label": "API Status",
+          "url": "/"
+        }
+      ]
+    },
+
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About",
+          "url": "/"
+        },
+        {
+          "label": "Blog",
+          "url": "/"
+        },
+        {
+          "label": "Jobs",
+          "url": "/"
+        },
+        {
+          "label": "Press",
+          "url": "/"
+        },
+        {
+          "label": "Partners",
+          "url": "/"
+        }
+      ]
+    },
+
+    {
+      "title": "Legal",
+      "links": [
+        {
+          "label": "Claim",
+          "url": "/"
+        },
+        {
+          "label": "Privacy",
+          "url": "/"
+        },
+        {
+          "label": "Terms",
+          "url": "/"
+        }
+      ]
+    }
+  ]
+}

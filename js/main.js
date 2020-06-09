@@ -170,9 +170,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MobileNav = function MobileNav() {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].mobileNavToggle.addEventListener('click', function () {
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function () {
     this.classList.toggle('menu-toggle-active');
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].mobileNav.classList.toggle('menu-visible'); // set aria-expanded attribute on menu toggle button
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navLinks.classList.toggle('hidden'); // set aria-expanded attribute on menu toggle button
 
     if (this.getAttribute('aria-expanded') === 'false') {
       this.setAttribute('aria-expanded', 'true');
@@ -249,8 +249,8 @@ var $$ = {
   containerRight: document.getElementById('container-right'),
   preFooter: document.getElementById('pre-footer'),
   footer: document.getElementById('footer'),
-  mobileNav: document.getElementById('mobile-nav'),
-  mobileNavToggle: document.getElementById('mobile-nav-toggle')
+  navLinks: document.getElementById('nav-links'),
+  navToggle: document.getElementById('nav-toggle')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
@@ -274,8 +274,8 @@ var $$ = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jurate/ssg/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /Users/jurate/ssg/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /Users/jurate/Desktop/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/jurate/Desktop/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
