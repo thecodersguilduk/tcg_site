@@ -1,16 +1,15 @@
+{% if meta_title === "Home" %}
+
 <div class="relative bg-gray-50 overflow-hidden">
   <div class="relative pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
-    
-    {# <iframe width="560" height="315" src="https://www.youtube.com/embed/agrHTsFUXBc?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> #}
-
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6">
       <div class="text-center">
         <img class="max-w-md mx-auto" src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild logo" />
         <h1 class="mb-8 text-4xl tracking-tight leading-10 font-semibold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-          The Coders Guild
+          {{ hero.title }}
         </h1>
         <p class="max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+          {{ hero.description }}
         </p>
         <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
           <div class="rounded-md shadow">
@@ -28,3 +27,19 @@
     </div>
   </div>
 </div>
+
+{% else %}
+
+<div class="relative bg-gray-50 overflow-hidden">
+  <div class="relative">
+      <div class="py-16 bg-cover bg-no-repeat bg-center" {% if hero.img.url %}style="background-image: url('{{ hero.img.url }}');"{% endif %}>
+        <div class="max-w-6xl mx-auto max-w-screen-xl px-4 sm:px-6 text-base">
+          <h1 class="mb-0 text-4xl tracking-tight leading-10 font-semibold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+            {{ hero.title }}
+          </h1>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endif %}
