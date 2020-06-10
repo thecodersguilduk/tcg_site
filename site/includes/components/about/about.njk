@@ -1,0 +1,23 @@
+
+
+<section class="lg:max-w-screen-xl">
+
+  <div>
+
+    {% if about and about.title and about.description %}
+
+    {# <h2 class="mb-12 inline-block relative title text-3xl leading-9 tracking-tight font-light text-gray-900 sm:text-4xl sm:leading-10">{{ about.title  }}</h2> #}
+
+      {% for paragraph in about.description %}
+
+        <p class="mb-6">{{ paragraph }}</p>
+
+      {% endfor %}
+
+      <a href="#contact-form">Contact us</a>
+
+    {% endif %}
+
+  </div>
+
+</section>
