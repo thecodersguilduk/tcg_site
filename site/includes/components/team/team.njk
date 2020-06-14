@@ -1,0 +1,39 @@
+<section class="lg:max-w-screen-xl">
+
+  <div class="py-12 bg-white">
+
+    <div class="max-w-full mx-auto lg:max-w-screen-xl">
+      
+      <h2 class="mb-12 inline-block relative title text-3xl leading-9 tracking-tight font-light text-gray-900 sm:text-4xl sm:leading-10">{{ team.title  }}</h2>
+      
+      <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+        
+        {% for member in collections.team %}
+         
+          <div class="mb-6 flex flex-col items-center">
+            
+            {# {% if member.img_url %} #}
+
+              <img src="{{ member.data.img.url }}" alt="{{ member.data.img.alt }}" />
+            
+            {# {% endif %} #}
+            
+            <div class="mt-5 text-center">
+              
+              <h5 class="text-lg leading-6 font-medium text-gray-900">{{ member.data.name }}</h5>
+              
+              <p class="text-base leading-6 text-gray-500">{{ member.data.role }}</p>
+            
+            </div>
+          
+          </div>
+        
+        {% endfor %}
+      
+      </div>
+    
+    </div>
+  
+  </div>
+
+</section>
