@@ -25,16 +25,15 @@
     },
 
     "address": {
-        "street": "123 Fake Street",
-        "street_2": "Fake Road",
-        "city": "London",
-        "postcode": "LN1 234",
+        "street": "The Coders Guild",
+        "street_2": "3 Sheaf St",
+        "city": "Leeds",
+        "postcode": "LS10 1HD",
         "country": "GB"
     },
 
     "contact": {
-        "phone": "123 456 789",
-        "mobile": "(+44) 1234 5678",
-        "email": "hello@maxpower.com"
+        "phone": "0113 460 1024",
+        "email": "hello@thecodersguild.org.uk"
     }
 }
