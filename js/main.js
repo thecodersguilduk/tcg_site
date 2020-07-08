@@ -169,10 +169,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
 
-var MobileNav = function MobileNav() {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function () {
+var Nav = function Nav() {
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function (e) {
     this.classList.toggle('menu-toggle-active');
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navLinks.classList.toggle('hidden'); // set aria-expanded attribute on menu toggle button
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navLinks.classList.toggle('nav-visible'); // set aria-expanded attribute on menu toggle button
 
     if (this.getAttribute('aria-expanded') === 'false') {
       this.setAttribute('aria-expanded', 'true');
@@ -182,7 +182,7 @@ var MobileNav = function MobileNav() {
   });
 }();
 
-/* harmony default export */ __webpack_exports__["default"] = (MobileNav);
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
 
