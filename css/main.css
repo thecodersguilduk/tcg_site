@@ -1024,15 +1024,19 @@ h1, h2, h3 {
   height: 100vh;
 }
 
+h1.intro,
+h2.title {
+  line-height: 1.5em;
+}
+
+h1.intro::after,
 h2.title::after {
   content: "";
-  position: absolute;
-  top: calc(100% + 5px);
-  left: 0;
+  display: block;
   height: 2px;
-  width: 100%;
-  max-width: 5rem;
-  background-color: #fad16c;
+  width: calc(100% + 35px);
+  background-color: black;
+  margin: 0.325em 0 0.5em 0;
 }
 
 .nav-links {
