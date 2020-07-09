@@ -39,20 +39,20 @@
     
 </head>
 
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal text-lg">
+<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal">
 
     <a class="sr-only" href="#main">Skip to content</a>
 
     <div id="wrapper" class="wrapper pb-16 md:pb-0 flex flex-col relative min-h-screen">
 
         {# include header #}
-        {% include "components/header.njk" %}
+        {% include "components/global/header.njk" %}
 
         {# include content #}
         {{ content | safe }}
 
         {# include footer #}
-        {% include "components/footer.njk" %}
+        {% include "components/global/footer.njk" %}
 
     </div>
 </body>

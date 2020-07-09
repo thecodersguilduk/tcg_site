@@ -1,0 +1,10 @@
+<nav id="nav-links" class="nav-links fixed">
+  <div class="nav-links-inner flex flex-col justify-center items-center bg-gray-200">
+    {% for nav_link in navigation.main %}
+      <a href="{{ nav_link.url | safe }}" class="mb-10 block py-2 border-l-4 border-transparent font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">{{ nav_link.label | safe }}
+      </a>
+    {% endfor %}
+  </div>
+</nav>
+        
+    

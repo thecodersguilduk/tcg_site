@@ -4,6 +4,9 @@ meta_title: Home
 meta_description: Skeleventy is a beautiful, powerful skeleton boilerplate built with Eleventy and TailwindCSS
 body_class: home
 title: Welcome to Skeleventy!
+hero: 
+  title: The Coders Guild
+  description: Expert technical training with a social mission
 ---
 
 <div class="container max-w-full">
@@ -13,12 +16,14 @@ title: Welcome to Skeleventy!
   <main id="main" class="main flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
 
     {% include "components/about/about-section.njk" %}
-    
-    {% include "components/products/products-section.njk" %}
 
     {% include "components/services/services-section.njk" %}
 
+    {% include "components/global/testimonials.njk" %}
+
     {% include "components/blog/blog-section.njk" %}  
+
+    {% include "components/global/newsletter.njk" %}
 
   </main>
 </div>  
