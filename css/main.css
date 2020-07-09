@@ -694,7 +694,6 @@ span {
   --border-opacity: 1;
   border-color: #808080;
   border-color: rgba(128, 128, 128, var(--border-opacity));
-  font-size: 1.5rem;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
   font-weight: 300;
