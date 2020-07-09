@@ -1060,11 +1060,6 @@ span {
   height: 100vh;
 }
 
-h1.intro,
-h2.title {
-  line-height: 1.5em;
-}
-
 h1.intro::after,
 h2.title::after {
   content: "";
@@ -1072,7 +1067,6 @@ h2.title::after {
   height: 2px;
   width: calc(100% + 35px);
   background-color: black;
-  margin: 0.325em 0 0.5em 0;
 }
 
 .nav-links {

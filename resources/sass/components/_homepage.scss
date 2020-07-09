@@ -1,6 +1,5 @@
 h1.intro,
 h2.title {
-  line-height: 1.5em;
 
   &::after {
     content: "";
@@ -9,6 +8,5 @@ h2.title {
     width: calc(100% + 35px);
     // max-width: 5rem;
     background-color: black;
-    margin: 0.325em 0 0.5em 0;
   }
 }
