@@ -1,37 +1,80 @@
 
-<section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl">
-  <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
-    <div class="relative max-w-full mx-auto lg:max-w-screen-xl">
-
+<section class="inner products sm:px-6 lg:px-8">
+  <div class="bg-gray-50 overflow-hidden">
+    <div class="relative max-w-full mx-auto">
       <div class="relative">
-        <h2 class="mb-12 inline-block relative title leading-9 tracking-tight font-light text-gray-900 sm:leading-10">
-          Products
-        </h2>
-        <p class="mb-6 max-w-3xl leading-7 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in, accusamus quisquam.
-        </p>
-      </div>
+        <div class="">
+          <h2 class="relative title font-semibold">
+            Apprenticeships
+          </h2>
+          <p class="mb-6">
+            We started the first industry led digital apprenticeship back in 2012. revolutionising the way modern technical vocations are learned. Since then we have been constantly revising and improving everything and are now transferring our know how to new areas.
+          </p>
+          <p class="mb-6">
+            Learning on the job is by far the best way to learn the skills and knowledge necessary to succeed in these areas. No one knows the landscape better than us.
+          </p>
 
-      <div class="relative mt-10 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <p class="mb-6">
+            All our courses are devised and delivered by industry professionals, many of them experts in their field. If you are looking for a training provider with a real understanding of the industry, <a>get in touch</a> today.
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div class="mb-8 shadow">
+            <button class="toggle-show-hide flex py-2 items-center products_drop_btn w-full">
+              <i class="px-6 fas chevron fa-chevron-down"></i>
+              <h3 class="font-semibold text-left">Software Developer Level 4</h3>
+            </button>
+            <ul class="px-6 products_drop_content">
+              <li>I want to <a>hire</a> a developer</li>
+              <li>I want to <a>be</a> a developer</li>
+            </ul>
+          </div>
+          <div class="mb-8 shadow">
+            <button class="toggle-show-hide flex py-2 items-center products_drop_btn w-full">
+              <i class="px-6 fas chevron fa-chevron-down"></i>
+              <h3 class="font-semibold text-left">Software Tester Level 4</h3>
+            </button>
+            <ul class="px-6 products_drop_content">
+              <li>I want to <a>hire</a> a tester</li>
+                <li>I want to <a>be</a> a tester</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        
+
         <div class="relative">
-          <ul>
+          <h4 class="relative title font-semibold">More coming soon</h4>
 
-            {% for product in collections.products %}
+          <p class="mb-6">Our training development team are 
+          constantly creating more digital apprenticeships and training programs.</p>
 
-              {% include "components/products/single-product.njk" %}
-
-            {% endfor %}
-
+          <ul class="list-disc flex flex-wrap justify-center">
+            <li class="mx-6">
+              <div>Intro courses at levels 2 and 3</div>
+            </li>
+            <li class="mx-6">
+              <div>Degree Level Apprenticeships</div>
+            </li>
+            <li class="mx-6">
+              <div>Data Analysis</div>
+            </li>
+            <li class="mx-6">
+              <div>Digital Marketing</div>
+            </li>
+            <li class="mx-6">
+              <div>Cyber Security</div>
+            </li>
+            <li class="mx-6">
+              <div>UX</div>
+            </li>
+            <li class="mx-6">
+              <div>and more</div>
+            </li>
           </ul>
         </div>
-
-        <div class="mt-10 -mx-4 relative lg:mt-0">
-
-          {% include "components/contact/contact-form.njk" %}
-
-        </div>
-      </div>
-
     </div>
   </div>
 </section>

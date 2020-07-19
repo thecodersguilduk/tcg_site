@@ -634,9 +634,8 @@ a:not([class]):hover {
   color: rgba(235, 82, 134, var(--text-opacity));
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.25;
   margin-top: 0;
   margin-bottom: 1.5rem;
   --text-opacity: 1;
@@ -1011,7 +1010,7 @@ span {
 }
 
 .form .row label:after {
-  font-size: 0.875rem;
+  font-size: 20px;
   --text-opacity: 1;
   color: #718096;
   color: rgba(113, 128, 150, var(--text-opacity));
@@ -1060,15 +1059,6 @@ span {
   height: 100vh;
 }
 
-h1.intro::after,
-h2.title::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: calc(100% + 35px);
-  background-color: black;
-}
-
 .nav-links {
   right: -50vw;
   transition: all 0.75s;
@@ -1079,6 +1069,39 @@ h2.title::after {
 .nav-links.nav-visible {
   right: 0;
   transition: all 0.75s;
+}
+
+.banner h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: calc(100% + 35px);
+  background-color: black;
+  margin: 18px 0 28px 0;
+}
+
+.banner span {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.products .shadow {
+  box-shadow: -3px 3px 5px -2px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.products_drop_btn {
+  display: block;
+}
+
+.products_drop_btn h3 {
+  margin-bottom: 0;
+}
+
+.products_drop_content {
+  max-height: 0;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
 }
 
 .space-y-0 > :not(template) ~ :not(template){
@@ -6701,24 +6724,28 @@ h2.title::after {
   height: 100vh;
 }
 
+.text-0{
+  font-size: 11px;
+}
+
 .text-xs{
-  font-size: 0.75rem;
+  font-size: 16px;
 }
 
 .text-sm{
-  font-size: 0.875rem;
+  font-size: 20px;
 }
 
 .text-base{
-  font-size: 1rem;
+  font-size: 24px;
 }
 
 .text-lg{
-  font-size: 1.125rem;
+  font-size: 32px;
 }
 
 .text-xl{
-  font-size: 1.25rem;
+  font-size: 40px;
 }
 
 .text-2xl{
@@ -6758,15 +6785,15 @@ h2.title::after {
 }
 
 .leading-normal{
-  line-height: 1.5;
+  line-height: 32px;
 }
 
 .leading-relaxed{
-  line-height: 1.625;
+  line-height: 40px;
 }
 
 .leading-loose{
-  line-height: 2;
+  line-height: 48px;
 }
 
 .list-inside{
@@ -24415,24 +24442,28 @@ h2.title::after {
     height: 100vh;
   }
 
+  .xs\:text-0{
+    font-size: 11px;
+  }
+
   .xs\:text-xs{
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 
   .xs\:text-sm{
-    font-size: 0.875rem;
+    font-size: 20px;
   }
 
   .xs\:text-base{
-    font-size: 1rem;
+    font-size: 24px;
   }
 
   .xs\:text-lg{
-    font-size: 1.125rem;
+    font-size: 32px;
   }
 
   .xs\:text-xl{
-    font-size: 1.25rem;
+    font-size: 40px;
   }
 
   .xs\:text-2xl{
@@ -24472,15 +24503,15 @@ h2.title::after {
   }
 
   .xs\:leading-normal{
-    line-height: 1.5;
+    line-height: 32px;
   }
 
   .xs\:leading-relaxed{
-    line-height: 1.625;
+    line-height: 40px;
   }
 
   .xs\:leading-loose{
-    line-height: 2;
+    line-height: 48px;
   }
 
   .xs\:list-inside{
@@ -42130,24 +42161,28 @@ h2.title::after {
     height: 100vh;
   }
 
+  .sm\:text-0{
+    font-size: 11px;
+  }
+
   .sm\:text-xs{
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 
   .sm\:text-sm{
-    font-size: 0.875rem;
+    font-size: 20px;
   }
 
   .sm\:text-base{
-    font-size: 1rem;
+    font-size: 24px;
   }
 
   .sm\:text-lg{
-    font-size: 1.125rem;
+    font-size: 32px;
   }
 
   .sm\:text-xl{
-    font-size: 1.25rem;
+    font-size: 40px;
   }
 
   .sm\:text-2xl{
@@ -42187,15 +42222,15 @@ h2.title::after {
   }
 
   .sm\:leading-normal{
-    line-height: 1.5;
+    line-height: 32px;
   }
 
   .sm\:leading-relaxed{
-    line-height: 1.625;
+    line-height: 40px;
   }
 
   .sm\:leading-loose{
-    line-height: 2;
+    line-height: 48px;
   }
 
   .sm\:list-inside{
@@ -59845,24 +59880,28 @@ h2.title::after {
     height: 100vh;
   }
 
+  .md\:text-0{
+    font-size: 11px;
+  }
+
   .md\:text-xs{
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 
   .md\:text-sm{
-    font-size: 0.875rem;
+    font-size: 20px;
   }
 
   .md\:text-base{
-    font-size: 1rem;
+    font-size: 24px;
   }
 
   .md\:text-lg{
-    font-size: 1.125rem;
+    font-size: 32px;
   }
 
   .md\:text-xl{
-    font-size: 1.25rem;
+    font-size: 40px;
   }
 
   .md\:text-2xl{
@@ -59902,15 +59941,15 @@ h2.title::after {
   }
 
   .md\:leading-normal{
-    line-height: 1.5;
+    line-height: 32px;
   }
 
   .md\:leading-relaxed{
-    line-height: 1.625;
+    line-height: 40px;
   }
 
   .md\:leading-loose{
-    line-height: 2;
+    line-height: 48px;
   }
 
   .md\:list-inside{
@@ -77560,24 +77599,28 @@ h2.title::after {
     height: 100vh;
   }
 
+  .lg\:text-0{
+    font-size: 11px;
+  }
+
   .lg\:text-xs{
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 
   .lg\:text-sm{
-    font-size: 0.875rem;
+    font-size: 20px;
   }
 
   .lg\:text-base{
-    font-size: 1rem;
+    font-size: 24px;
   }
 
   .lg\:text-lg{
-    font-size: 1.125rem;
+    font-size: 32px;
   }
 
   .lg\:text-xl{
-    font-size: 1.25rem;
+    font-size: 40px;
   }
 
   .lg\:text-2xl{
@@ -77617,15 +77660,15 @@ h2.title::after {
   }
 
   .lg\:leading-normal{
-    line-height: 1.5;
+    line-height: 32px;
   }
 
   .lg\:leading-relaxed{
-    line-height: 1.625;
+    line-height: 40px;
   }
 
   .lg\:leading-loose{
-    line-height: 2;
+    line-height: 48px;
   }
 
   .lg\:list-inside{
@@ -95275,24 +95318,28 @@ h2.title::after {
     height: 100vh;
   }
 
+  .xl\:text-0{
+    font-size: 11px;
+  }
+
   .xl\:text-xs{
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 
   .xl\:text-sm{
-    font-size: 0.875rem;
+    font-size: 20px;
   }
 
   .xl\:text-base{
-    font-size: 1rem;
+    font-size: 24px;
   }
 
   .xl\:text-lg{
-    font-size: 1.125rem;
+    font-size: 32px;
   }
 
   .xl\:text-xl{
-    font-size: 1.25rem;
+    font-size: 40px;
   }
 
   .xl\:text-2xl{
@@ -95332,15 +95379,15 @@ h2.title::after {
   }
 
   .xl\:leading-normal{
-    line-height: 1.5;
+    line-height: 32px;
   }
 
   .xl\:leading-relaxed{
-    line-height: 1.625;
+    line-height: 40px;
   }
 
   .xl\:leading-loose{
-    line-height: 2;
+    line-height: 48px;
   }
 
   .xl\:list-inside{

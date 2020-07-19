@@ -1,0 +1,20 @@
+.banner {
+  h1 {
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: calc(100% + 35px);
+      background-color: black;
+      margin: 18px 0 28px 0;
+    }
+  }
+
+  span {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+
+  

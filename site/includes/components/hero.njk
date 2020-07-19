@@ -1,37 +1,20 @@
-{% if meta_title === "Home" %}
-
-<div class="relative bg-gray-50 overflow-hidden">
+<div class="relative bg-gray-50 overflow-hidden banner">
   <div class="relative inner">
     <div class="mx-auto max-w-screen-xl">
       <div class="flex items-center">
-      <div class="pb-20 pt-20 w-1/2">
-        <h1 class="relative intro mb-8 tracking-tight leading-10 font-semibold text-gray-900  sm:leading-none ">
-          {{ hero.title }}
-        </h1>
-        <p class="max-w-md text-gray-500 md:mt-5 md:max-w-3xl">
-          {{ hero.description }}
-        </p>
-      </div>
-      <div class="ml-10 w-1/2">
-        <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild logo" />
-      </div>
+        <div class="w-1/2">
+          <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild logo" />
+        </div>
+        <div class="pb-20 pt-20 w-1/2">
+          <h1 class="relative font-bold text-gray-900">
+            {{ hero.title }}
+          </h1>
+          <span class="max-w-md md:max-w-3xl">
+            {{ hero.description }}
+          </span>
+        </div>
+      
       </div>
     </div>
   </div>
 </div>
-
-{% else %}
-
-<div class="relative bg-gray-50 overflow-hidden">
-  <div class="relative">
-      <div class="py-16 bg-cover bg-no-repeat bg-center" {% if hero.img.url %}style="background-image: url('{{ hero.img.url }}');"{% endif %}>
-        <div class="max-w-6xl mx-auto max-w-screen-xl px-4 sm:px-6">
-          <h1 class="mb-0 tracking-tight leading-10 font-semibold text-gray-900  sm:leading-none ">
-            {{ hero.title }}
-          </h1>
-        </div>
-      </div>
-  </div>
-</div>
-
-{% endif %}
