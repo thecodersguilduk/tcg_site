@@ -2,8 +2,8 @@
 //==========  Typography ==========//
 
 // headings
-h1, h2, h3 {
-    @apply font-bold leading-tight mt-0 mb-6 text-purple-900;
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mt-0 mb-6 text-purple-900;
 }
 
 h1, h2, h3, h4, h5 {
