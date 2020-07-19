@@ -1,39 +1,46 @@
-<section class="lg:max-w-screen-xl">
 
-  <div class="py-12 bg-white">
-
-    <div class="max-w-full mx-auto lg:max-w-screen-xl">
-      
-      <h2 class="mb-12 inline-block relative title leading-9 tracking-tight font-light text-gray-900 sm:leading-10">{{ team.title  }}</h2>
-      
-      <div class="lg:grid lg:grid-cols-3 lg:gap-8">
-        
-        {% for member in collections.team %}
-         
-          <div class="mb-6 flex flex-col items-center">
-            
-            {# {% if member.img_url %} #}
-
-              <img src="{{ member.data.img.url }}" alt="{{ member.data.img.alt }}" />
-            
-            {# {% endif %} #}
-            
-            <div class="mt-5 text-center">
-              
-              <h5 class="leading-6 font-medium text-gray-900">{{ member.data.name }}</h5>
-              
-              <p class="leading-6 text-gray-500">{{ member.data.role }}</p>
-            
-            </div>
-          
-          </div>
-        
-        {% endfor %}
-      
-      </div>
-    
+<div class="lg:grid lg:grid-cols-4 lg:gap-8">
+  <div class="mb-6 flex flex-col items-center">
+    <img src="../images/banner.jpg" alt="" />
+    <div class="mt-5 text-center">
+      <h5 class="font-medium ">Crispin</h5>
+      <span class="">Founder & Director</span>
+      <p>Making sure everything we do is brilliant and 
+      always getting better. 20 years as a developer, now full 
+      time advocate for apprenticeships and equality.</p>
     </div>
-  
   </div>
 
-</section>
+  <div class="mb-6 flex flex-col items-center">
+    <img src="../images/banner.jpg" alt="" />
+    <div class="mt-5 text-center">
+      <h5 class="font-medium ">Naomi</h5>
+      <span class="">Apprenticeships Manager</span>
+      <p>Looking after all our learners and partners, 
+      keeping projects running smoothly. Working in apprenticeships since 
+      2006, also heads up our social media channels - it’s her you’re talking to 
+      on twitter and instagram.</p>
+    </div>
+  </div>
+
+  <div class="mb-6 flex flex-col items-center">
+    <img src="../images/banner.jpg" alt="" />
+    <div class="mt-5 text-center">
+      <h5 class="font-medium ">Helen</h5>
+      <span class="">Head of Partnerships and Social Mission</span>
+      <p>Keeping us on track with compliance and constantly improving 
+      the quality of our delivery. She’s also heading up our social mission.</p>
+    </div>
+  </div>
+
+  <div class="mb-6 flex flex-col items-center">
+    <img src="../images/banner.jpg" alt="" />
+    <div class="mt-5 text-center">
+      <h5 class="font-medium ">Fiona</h5>
+      <span class="">Partnerships Development Manager</span>
+      <p>First point of contact for our partners and customers, making sure 
+      everyone we work with shares our vision and gets the most out of apprenticeships 
+      and training.</p>
+    </div>
+  </div>
+</div>
