@@ -23,7 +23,9 @@ const $$ = {
 
     navLinks            : document.getElementById('nav-links'),
 
-    navToggle           : document.getElementById('nav-toggle')
+    navToggle           : document.getElementById('nav-toggle'),
+
+    toggleShowHide      : document.querySelectorAll('.toggle-show-hide')
 
 }
 
