@@ -4,42 +4,131 @@ meta_title: About
 meta_description: About page description
 body_class: about
 title: About
-
-hero: 
-  title: "What we do"
-  img: 
-    url: "https://picsum.photos/1920/300"
-    alt: "Random image"
-  
-about:
-
-  title: "What we do"
-
-  description: 
-    - "Promoting inclusion, diversity and 
-    equality through expert training, coaching and CPD opportunities 
-    for software development. A safe space offering community-driven, 
-    peer-reviewed and open-source knowledge share."
-
-    - "We are best known for creating the nations first industry 
-    led digital apprenticeship. This scheme recently recieved the silver 
-    award in the Apprenticeship Of The Year awards for our work improving 
-    diversty in the industry. We are following on the success of this 
-    programme with apprenticeships in Software Testing, Data Analysis and 
-    Digital Marketing. We also provide CPD training and coaching for indivuals 
-    and teams as well as consultnacy and development of bespoke training programmes."
-
-team: 
-  title: "Our team"
 ---
 
-{% include "components/hero.njk" %}
+<div class="container max-w-full">
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+    
+    <section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl">
+      <div class="relative max-w-full mx-auto lg:max-w-screen-xl">
+        <h2 class="relative title font-semibold">Overview</h2>
+
+        <p class="mb-8">The Coders Guild is a well respected training provider 
+        with over seven years experience designing and delivering high 
+        quality digital apprenticeships. Our founder, Crispin Read, 
+        initiated the UKs first industry-led digital apprenticeship scheme 
+        in 2012. Crispin assembled a team of developers, business owners, community 
+        leaders and training experts to work together to devise a brand new 
+        apprenticeship scheme, with a focus on inclusion, to increase opportunity 
+        and diversity in the digital industries. After two successful deliveries 
+        the team were asked to join the Tech Parnership’s trailblazer pilot scheme 
+        which led to the creation of the new National Apprenticeship Standards in 
+        Software Development which all registered providers must now adhere to. </p>
+
+        <p class="mb-8">We deliver ‘best in class’, industry-led training and coaching 
+        for CPD / Digital Apprenticeships and provide both technical and core/soft 
+        digital skills training nationally with clients ranging from SMEs to large 
+        Levy paying organisations such as Universities and NHS Digital. All of our 
+        technical trainers are experienced industry professionals; many of them 
+        experts in their field. We currently specialise in providing level 4 Software 
+        Development Apprenticeships; however, we are rolling out new Apprenticeship Training 
+        schemes in 2020 including Level 3 ICT Apprenticeship roles and Level 4 Apprenticeship 
+        in Software Testing and Level 4 Apprenticeship in Data Analysis with more in the pipeline 
+        for 2021.</p>
+      </div>
+    </section>
+
+    <section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl">
+    <div class="relative max-w-full mx-auto lg:max-w-screen-xl">
+      <h2 class="relative title font-semibold">Mission and Vision</h2>
+
+      {% include "components/about/mission-and-vision.njk" %}
+
+      </div>
+    </section>
+
+    <section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl">
+      <div class="relative max-w-full mx-auto lg:max-w-screen-xl">
+        <h2 class="relative title font-semibold">Org Structure</h2>
+
+        <div class="flex -mx-8">
+          <div class="w-1/2 px-8 flex flex-col justify-center">
+            <p class="mb-8">The Coders Guild Ltd is a lean organisation with highly 
+            skilled and capable staff who work in cross-functional teams. 
+            We operate a non-hierarchical structure and believe everyone has a 
+            voice and should be treated equally. We are based from our offices 
+            in Duke Studios in Leeds, however we also work flexibly and remotely 
+            using state of the art technology to ensure efficiency, retain quality 
+            relationships and continually evolve best practices:</p>
+          </div>
+
+          <div class="w-1/2 px-8 my-auto">
+            <img src="../images/banner.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg:max-w-screen-xl">
+      <div class="py-12 bg-white">
+        <div class="max-w-full mx-auto lg:max-w-screen-xl">
+          <h2 class="mb-12 inline-block relative title">Core Team</h2>
+
+          {% include "components/team/team.njk" %}
+
+        </div>
+      </div>
+    </section>
 
 
-<main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
+    <section class="inner products sm:px-6 lg:px-8">
+      <div class="bg-gray-50 overflow-hidden">
+        <div class="relative max-w-full mx-auto">
+          <div class="relative">
 
-    {% include "components/about/about.njk" %}
-    {% include "components/team/team.njk" %}
-    {% include "components/contact/contact-form.njk" %}
+            <div class="">
+              <h2 class="relative title font-semibold">Work with us</h2>
+            </div>
 
-</main>
+            <div>
+              <h3>Apprenticeships</h3>
+
+              {% include "components/about/apprenticeships.njk" %}
+
+            </div>
+
+            <div>
+              <p>Got a techy outreach project? Know of an organisation 
+              who are looking to upskill marginalised or underrepresented groups?</p>
+              <p><a>Get in touch</a>  - let’s have a chat see if we can help</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner products sm:px-6 lg:px-8">
+      <div class="bg-gray-50 overflow-hidden">
+        <h2>Join Us</h2>
+        <div class="flex">
+          <div class="w-1/2">
+            <p>We are always looking for more people who share 
+            our vision and mission - get in touch and tell us about yourself.</p>
+          </div>
+          
+          <div class="w-1/2">
+
+            {% include "components/contact/contact-form.njk" %}
+
+          </div>
+        </div>
+        
+
+      </div>
+    </section>
+
+    {% include "components/global/newsletter.njk" %}
+
+  </main>
+<div>

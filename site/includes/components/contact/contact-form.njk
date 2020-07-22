@@ -1,39 +1,35 @@
 <div  id="contact-form" class="bg-white px-4 overflow-hidden sm:px-6 lg:px-8">
-  <form action="#" method="POST" class="grid grid-cols-1 row-gap-6">
-    <div>
-      <label for="full_name" class="sr-only">Full name
-      </label>
-      <div class="relative rounded-md shadow-sm">
-        <input id="full_name" class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Full name" />
+  <form action="#" method="POST">
+    <div class="grid grid-cols-2 row-gap-6 col-gap-8">
+      <div>
+        <label for="full_name" class="sr-only">Name</label>
+        <div class="relative shadow-sm">
+          <input id="full_name" class="rounded-none form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Your Name" />
+        </div>
+      </div>
+      <div>
+        <label for="email" class="sr-only">Email</label>
+        <div class="relative shadow-sm">
+          <input id="email" type="email" class="rounded-none form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Email" />
+        </div>
+      </div>
+      <div class="col-span-2">
+        <label for="phone" class="sr-only">Phone</label>
+        <div class="relative shadow-sm">
+          <input id="phone" class="rounded-none form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Phone" />
+        </div>
+      </div>
+      <div class="col-span-2">
+        <label for="message" class="sr-only">Message</label>
+        <div class="relative shadow-sm">
+          <textarea id="message" rows="4" class="rounded-none form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Message"></textarea>
+        </div>
       </div>
     </div>
     <div>
-      <label for="email" class="sr-only">Email
-      </label>
-      <div class="relative rounded-md shadow-sm">
-        <input id="email" type="email" class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Email" />
-      </div>
-    </div>
-    <div>
-      <label for="phone" class="sr-only">Phone
-      </label>
-      <div class="relative rounded-md shadow-sm">
-        <input id="phone" class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Phone" />
-      </div>
-    </div>
-    <div>
-      <label for="message" class="sr-only">Message
-      </label>
-      <div class="relative rounded-md shadow-sm">
-        <textarea id="message" rows="4" class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150" placeholder="Message"></textarea>
-      </div>
-    </div>
-    <div class="">
-      <span class="inline-flex rounded-md shadow-sm">
-        <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
-          Submit
-        </button>
-      </span>
+      <button type="submit" class="block ml-auto py-3 px-6 border border-transparent text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+        Submit
+      </button>
     </div>
   </form>
 </div>
