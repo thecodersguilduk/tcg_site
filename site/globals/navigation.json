@@ -20,7 +20,8 @@
 
     "footer": [
       {
-        "Employers": [
+        "group": "Employers",
+        "links": [
           {
             "label": "Software Dev L4",
             "url": "/"
@@ -44,7 +45,8 @@
         ]
       },
       {
-        "Applicants": [
+        "group": "Applicants",
+        "links": [
           {
             "label": "Software Dev L4",
             "url": "/"
@@ -68,7 +70,9 @@
         ]
       },
       {
-        "Policies": [
+        "group": "Policies",
+        "links": [
+
           {
             "label": "Full list",
             "url": "/"
