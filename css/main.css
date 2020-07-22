@@ -1054,6 +1054,57 @@ span {
   height: 6rem;
 }
 
+.nav .burger {
+  height: 24px;
+  width: 26px;
+}
+
+.nav .burger span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.nav .burger span:first-child {
+  top: 2px;
+}
+
+.nav .burger span:nth-child(2) {
+  top: 12px;
+}
+
+.nav .burger span:last-child {
+  top: 22px;
+}
+
+.nav .burger-active span:first-child {
+  top: 11px;
+  transform: rotate(135deg);
+}
+
+.nav .burger-active span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.nav .burger-active span:last-child {
+  top: 11px;
+  transform: rotate(-135deg);
+}
+
+.mobile-nav-container {
+  transition: all 0.5s ease-in;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.mobile-nav-container.opacity-0 {
+  left: 100%;
+}
+
 .banner h1::after {
   content: "";
   display: block;
