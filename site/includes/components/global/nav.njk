@@ -1,14 +1,39 @@
-<nav id="nav-links" class="nav-links">
-  <div class="nav-links-inner">
-    <ul class="flex -mx-3 my-3">
-    {% for nav_link in navigation.main %}
-      <li class="px-3">
-        <a href="{{ nav_link.url | safe }}" class="block py-3 px-3">{{ nav_link.label | safe }}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
+<div class="nav overflow-x-hidden">
+  <div class="sm:hidden">
+    <button id="nav-toggle" class="burger relative block z-20">
+      <span class="block bg-black"></span>
+      <span class="block bg-black"></span>
+      <span class="block bg-black"></span>
+    </button>
+
+    <div class="mobile-nav-container opacity-0 fixed z-10 h-full flex items-center justify-center bg-white">
+      <nav id="mobile-nav">
+        <ul class="">
+        {% for nav_link in navigation.main %}
+          <li class="my-6 text-center">
+            <a href="{{ nav_link.url | safe }}" class="block py-3 font-medium">{{ nav_link.label | safe }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
   </div>
-</nav>
+
+
+  <nav id="nav-links" class="nav-links hidden sm:block">
+    <div class="nav-links-inner">
+      <ul class="flex -mx-3">
+      {% for nav_link in navigation.main %}
+        <li class="px-3">
+          <a href="{{ nav_link.url | safe }}" class="block py-3 px-3">{{ nav_link.label | safe }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</div>
         
     
