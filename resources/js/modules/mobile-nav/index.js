@@ -1,27 +1,16 @@
-// import $$ from '@utilities/selectors'
+import $$ from '@utilities/selectors'
 
-// const Nav = function Nav()
-// {
+const mobileNav = function mobileNav()
+{
 
-//   $$.navToggle.addEventListener('click', function(e) {
+  $$.navToggle.addEventListener('click', function(e) {
 
-//     this.classList.toggle('menu-toggle-active')
-//     $$.navLinks.classList.toggle('nav-visible')
+    this.classList.toggle('burger-active');
 
-//     // set aria-expanded attribute on menu toggle button
-//     if ( this.getAttribute('aria-expanded') === 'false' )
-//     {
+    $$.mobileNavContainer.classList.toggle('opacity-0');
 
-//       this.setAttribute('aria-expanded', 'true')
+  })
 
-//     } else {
+}()
 
-//       this.setAttribute('aria-expanded', 'false')
-
-//     }
-
-//   })
-
-// }()
-
-// export default Nav
+export default mobileNav
