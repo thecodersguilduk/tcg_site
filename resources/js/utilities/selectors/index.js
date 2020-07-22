@@ -25,6 +25,8 @@ const $$ = {
 
     navToggle           : document.getElementById('nav-toggle'),
 
+    mobileNavContainer  : document.querySelector('.mobile-nav-container'),
+
     toggleShowHide      : document.querySelectorAll('.toggle-show-hide')
 
 }
