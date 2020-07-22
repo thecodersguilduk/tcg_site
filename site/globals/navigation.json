@@ -1,20 +1,91 @@
 {
     "main": [
         {
-            "label": "Home",
-            "url": "/"
+            "label": "About",
+            "url": "/about"
         },
         {
-            "label": "About",
-            "url": "/about/"
+            "label": "Apprenticeships",
+            "url": "/apprenticeships"
+        },
+        {
+          "label": "Contact us",
+          "url": "/contact"
         },
         {
             "label": "Blog",
-            "url": "/blog/"
-        },
-        {
-            "label": "Contact",
-            "url": "/contact/"
+            "url": "/blog"
         }
+    ],
+
+    "footer": [
+      {
+        "Employers": [
+          {
+            "label": "Software Dev L4",
+            "url": "/"
+          },
+          {
+            "label": "Software Tester L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Data Analyst L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Cyber Security L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Digital Support Technician (coming soon)",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "Applicants": [
+          {
+            "label": "Software Dev L4",
+            "url": "/"
+          },
+          {
+            "label": "Software Tester L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Data Analyst L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Cyber Security L4 (coming soon)",
+            "url": "/"
+          },
+          {
+            "label": "Digital Support Technician (coming soon)",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "Policies": [
+          {
+            "label": "Full list",
+            "url": "/"
+          },
+          {
+            "label": "E&D",
+            "url": "/"
+          },
+          {
+            "label": "Complaints",
+            "url": "/"
+          },
+          {
+            "label": "Modern Slavery",
+            "url": "/"
+          }
+        ]
+      }
     ]
 }
