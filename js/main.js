@@ -174,13 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 var mobileNav = function mobileNav() {
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function (e) {
     this.classList.toggle('burger-active');
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].mobileNavContainer.classList.toggle('opacity-0'); //     // set aria-expanded attribute on menu toggle button
-    //     if ( this.getAttribute('aria-expanded') === 'false' )
-    //     {
-    //       this.setAttribute('aria-expanded', 'true')
-    //     } else {
-    //       this.setAttribute('aria-expanded', 'false')
-    //     }
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].mobileNavContainer.classList.toggle('opacity-0');
   });
 }();
 
