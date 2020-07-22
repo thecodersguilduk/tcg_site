@@ -96,6 +96,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @modules/mobile-nav */ "./resources/js/modules/mobile-nav/index.js");
+/* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/show-hide */ "./resources/js/modules/show-hide/index.js");
 // Import local modules
@@ -163,28 +164,25 @@ var Lazyload = function Lazyload() {
 /*!**************************************************!*\
   !*** ./resources/js/modules/mobile-nav/index.js ***!
   \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
-
-
-var Nav = function Nav() {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function (e) {
-    this.classList.toggle('menu-toggle-active');
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navLinks.classList.toggle('nav-visible'); // set aria-expanded attribute on menu toggle button
-
-    if (this.getAttribute('aria-expanded') === 'false') {
-      this.setAttribute('aria-expanded', 'true');
-    } else {
-      this.setAttribute('aria-expanded', 'false');
-    }
-  });
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Nav);
+// import $$ from '@utilities/selectors'
+// const Nav = function Nav()
+// {
+//   $$.navToggle.addEventListener('click', function(e) {
+//     this.classList.toggle('menu-toggle-active')
+//     $$.navLinks.classList.toggle('nav-visible')
+//     // set aria-expanded attribute on menu toggle button
+//     if ( this.getAttribute('aria-expanded') === 'false' )
+//     {
+//       this.setAttribute('aria-expanded', 'true')
+//     } else {
+//       this.setAttribute('aria-expanded', 'false')
+//     }
+//   })
+// }()
+// export default Nav
 
 /***/ }),
 

@@ -1054,23 +1054,6 @@ span {
   height: 6rem;
 }
 
-.nav-links-inner {
-  width: 50vw;
-  height: 100vh;
-}
-
-.nav-links {
-  right: -50vw;
-  transition: all 0.75s;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-links.nav-visible {
-  right: 0;
-  transition: all 0.75s;
-}
-
 .banner h1::after {
   content: "";
   display: block;
