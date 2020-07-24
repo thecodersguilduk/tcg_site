@@ -1,37 +1,19 @@
 
-<section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl">
+<section class="inner sm:px-6 lg:px-8 lg:max-w-screen-xl pt-20">
   <div class="relative max-w-full mx-auto lg:max-w-screen-xl">
-    <div class="flex -mx-8">
-      <div class="w-1/2 px-8 flex flex-col justify-center">
-        <h2 class="relative title font-semibold">Industry Led Community Driven</h2>
-        <p class="mb-8">We deliver ‘best in class’ training to Apprentices 
-        and industry professionals. We actively support our local, national and 
-        international communities through outreach programs, events and sponsorship.</p>
-
-        <h3 class="relative title font-semibold">Social Mission</h3>
-        <p class="mb-8">We are an inclusive organisation, 
-        committed to taking positive action to remove barriers to participation 
-        in learning. We support individuals by reducing discrimination 
-        and barriers to entry, resulting in increased equality and opportunities.</p>
-        <div class="mb-8">
-          <a>Find more</a>
-        </div>
-        
+    <div class="md:flex mb-12">
+      <div class="mb-10 md:w-3/5 md:mb-0">
+        <h2 class="relative title font-semibold max-w-xs ">Industry Led, Community Driven</h2>
+        <p class="max-w-90">Our ‘best-in-class’ digital apprenticeships put you at the 
+        centre of an industry-led community. Our contribution to local, national 
+        and international communities, through outreach programs, events and sponsorship, 
+        sets us apart.</p>
       </div>
 
-      <div class="w-1/2 px-8 my-auto">
-        <img src="../images/banner.jpg" />
+      <div class="md:w-2/5 md:flex">
+        <img src="../images/banner.jpg" class="object-cover" />
       </div>
     </div>
-
-    
-
-    {# <h3 class="relative title font-semibold">Social Mission</h3>
-
-    <p class="max-w-3xl leading-7 mb-8">We are an inclusive organisation, 
-    committed to taking positive action to remove barriers to participation 
-    in learning. We support individuals by reducing discrimination and 
-    barriers to entry, resulting in increased equality and opportunities.</p>
-    <a href="/" class="block mt-10">Find out more</a> #}
+    {% include "components/about/our-social-mission.njk" %}
   </div>
 </section>
