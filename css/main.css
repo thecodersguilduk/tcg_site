@@ -613,6 +613,21 @@ video {
   padding-right: 1.5rem;
 }
 
+.max-w-90 {
+  max-width: 90%;
+}
+
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: "\F105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 10px;
+}
+
 a {
   --text-opacity: 1;
   color: #21183c;
