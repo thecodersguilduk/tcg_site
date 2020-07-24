@@ -1105,11 +1105,27 @@ span {
   left: 100%;
 }
 
+.banner {
+  background-image: url("../images/homepage/banner.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: block;
+  opacity: 0.75;
+}
+
 .banner h1::after {
   content: "";
   display: block;
   height: 2px;
-  width: calc(100% + 35px);
+  width: 100%;
   background-color: black;
   margin: 18px 0 28px 0;
 }
@@ -6819,15 +6835,15 @@ span {
 }
 
 .leading-normal{
-  line-height: 32px;
+  line-height: 1.5;
 }
 
 .leading-relaxed{
-  line-height: 40px;
+  line-height: 1.625;
 }
 
 .leading-loose{
-  line-height: 48px;
+  line-height: 2;
 }
 
 .list-inside{
@@ -24537,15 +24553,15 @@ span {
   }
 
   .xs\:leading-normal{
-    line-height: 32px;
+    line-height: 1.5;
   }
 
   .xs\:leading-relaxed{
-    line-height: 40px;
+    line-height: 1.625;
   }
 
   .xs\:leading-loose{
-    line-height: 48px;
+    line-height: 2;
   }
 
   .xs\:list-inside{
@@ -42256,15 +42272,15 @@ span {
   }
 
   .sm\:leading-normal{
-    line-height: 32px;
+    line-height: 1.5;
   }
 
   .sm\:leading-relaxed{
-    line-height: 40px;
+    line-height: 1.625;
   }
 
   .sm\:leading-loose{
-    line-height: 48px;
+    line-height: 2;
   }
 
   .sm\:list-inside{
@@ -59975,15 +59991,15 @@ span {
   }
 
   .md\:leading-normal{
-    line-height: 32px;
+    line-height: 1.5;
   }
 
   .md\:leading-relaxed{
-    line-height: 40px;
+    line-height: 1.625;
   }
 
   .md\:leading-loose{
-    line-height: 48px;
+    line-height: 2;
   }
 
   .md\:list-inside{
@@ -77694,15 +77710,15 @@ span {
   }
 
   .lg\:leading-normal{
-    line-height: 32px;
+    line-height: 1.5;
   }
 
   .lg\:leading-relaxed{
-    line-height: 40px;
+    line-height: 1.625;
   }
 
   .lg\:leading-loose{
-    line-height: 48px;
+    line-height: 2;
   }
 
   .lg\:list-inside{
@@ -95413,15 +95429,15 @@ span {
   }
 
   .xl\:leading-normal{
-    line-height: 32px;
+    line-height: 1.5;
   }
 
   .xl\:leading-relaxed{
-    line-height: 40px;
+    line-height: 1.625;
   }
 
   .xl\:leading-loose{
-    line-height: 48px;
+    line-height: 2;
   }
 
   .xl\:list-inside{
