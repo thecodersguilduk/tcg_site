@@ -1,15 +1,15 @@
-<div class="relative bg-gray-50 overflow-hidden banner">
+<div class="relative bg-gray-50 overflow-hidden banner xl:bg-fixed bg-no-repeat bg-center">
   <div class="relative inner">
     <div class="mx-auto max-w-screen-xl">
-      <div class="flex items-center">
-        <div class="w-1/2">
-          <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild logo" />
+      <div class="flex items-center flex-col sm:flex-row sm:justify-center py-20 xl:py-48 sm:py-32">
+        <div class="mb-10 sm:mb-0">
+          <img src="../images/logo/TCG-logo.svg" class="block mx-auto h-40 max-w-full lg:h-48 xl:h-56" alt="The Coders Guild logo" />
         </div>
-        <div class="pb-20 pt-20 w-1/2">
-          <h1 class="relative font-bold text-gray-900">
+        <div class="sm:w-1/2 sm:py-0 sm:pl-8">
+          <h1 class="relative font-bold text-gray-900 xl:text-6xl lg:text-5xl lg:leading-tight text-lg max-w-xs lg:max-w-3xl mx-auto sm:mx-0">
             {{ hero.title }}
           </h1>
-          <span class="max-w-md md:max-w-3xl">
+          <span class="lg:max-w-3xl mx-auto sm:mx-0 block sm:mx-0 ">
             {{ hero.description }}
           </span>
         </div>
