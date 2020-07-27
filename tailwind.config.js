@@ -17,8 +17,8 @@ module.exports = {
       white: '#fff',
 
       gray: {
-        100: '#b3b3b3',
-        200: '#808080',
+        100: '#e6e6e8',
+        200: '#6e6f72',
         300: '#4d4d4d',
         400: '#cbd5e0',
         500: '#a0aec0',
@@ -331,9 +331,9 @@ module.exports = {
       none: '1',
       tight: '1.25',
       snug: '1.375',
-      normal: '32px',
-      relaxed: '40px',
-      loose: '48px',
+      normal: '1.5',
+      relaxed: '1.625',
+      loose: '2',
     },
     listStyleType: {
       none: 'none',

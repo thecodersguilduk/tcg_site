@@ -1,2 +1,20 @@
 
 //==========  Globals ==========//
+
+.max-w-90 {
+  max-width: 90%;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+.link {
+  position: relative;
+  &::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+  }
+}
