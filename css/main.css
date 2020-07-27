@@ -613,6 +613,10 @@ video {
   padding-right: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .max-w-90 {
   max-width: 90%;
 }
