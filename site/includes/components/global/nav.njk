@@ -11,10 +11,13 @@
         <ul class="">
         {% for nav_link in navigation.main %}
           <li class="my-6 text-center">
-            <a href="{{ nav_link.url | safe }}" class="block py-3 font-medium">{{ nav_link.label | safe }}
+            <a href="{{ nav_link.url | safe }}" class="block py-3 font-semibold capitalize">{{ nav_link.label | safe }}
             </a>
           </li>
         {% endfor %}
+          <li class="my-6 text-center">
+            <a href="" class="block py-3 font-semibold rounded">Book a Call</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -27,10 +30,13 @@
       <ul class="flex -mx-3">
       {% for nav_link in navigation.main %}
         <li class="px-3">
-          <a href="{{ nav_link.url | safe }}" class="block py-3 px-3">{{ nav_link.label | safe }}
+          <a href="{{ nav_link.url | safe }}" class="block py-2 px-3 font-semibold text-gray-200 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
           </a>
         </li>
       {% endfor %}
+        <li class="px-3">
+          <a href="" class="block py-2 px-6 font-semibold bg-blue-100 text-white rounded font-heading hover:bg-blue-200">Book a Call</a>
+        </li>
       </ul>
     </div>
   </nav>
