@@ -21,3 +21,21 @@ html {
     margin-left: 10px;
   }
 }
+
+// Highlight the nav link based on page
+
+#about a[href="/about"] {
+    color: #16aedb;
+}
+
+#apprenticeships a[href="/apprenticeships"] {
+  color: #16aedb;
+}
+
+#blog a[href="/blog"] {
+  color: #16aedb;
+}
+
+#contact-us a[href="/contact-us"] {
+  color: #16aedb;
+}

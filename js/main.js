@@ -123,9 +123,9 @@ __webpack_require__.r(__webpack_exports__);
 var headerScroll = function headerScroll() {
   window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.add('bg-white', 'shadow');
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.add('bg-white', 'shadow-md');
     } else {
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.remove('bg-white', 'shadow');
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.remove('bg-white', 'shadow-md');
     }
   });
 }();
