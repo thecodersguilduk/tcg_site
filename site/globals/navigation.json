@@ -1,20 +1,20 @@
 {
     "main": [
         {
-            "label": "About",
+            "label": "about",
             "url": "/about"
         },
         {
-            "label": "Apprenticeships",
+            "label": "apprenticeships",
             "url": "/apprenticeships"
         },
         {
-          "label": "Contact us",
-          "url": "/contact"
+          "label": "blog",
+          "url": "/blog"
         },
         {
-            "label": "Blog",
-            "url": "/blog"
+          "label": "contact us",
+          "url": "/contact-us"
         }
     ],
 
