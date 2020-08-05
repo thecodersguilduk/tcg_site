@@ -1,95 +1,77 @@
 {
-    "main": [
-        {
-            "label": "about",
-            "url": "/about"
-        },
-        {
-            "label": "apprenticeships",
-            "url": "/apprenticeships"
-        },
-        {
-          "label": "blog",
-          "url": "/blog"
-        },
-        {
-          "label": "contact us",
-          "url": "/contact-us"
-        }
-    ],
-
-    "footer": [
+  "main": [
       {
-        "group": "Employers",
-        "links": [
-          {
-            "label": "Software Dev L4",
-            "url": "/"
-          },
-          {
-            "label": "Software Tester L4",
-            "url": "/"
-          },
-          {
-            "label": "Data Analyst L4",
-            "url": "/"
-          },
-          {
-            "label": "Cyber Security L4",
-            "url": "/"
-          },
-          {
-            "label": "Digital Support Technician",
-            "url": "/"
-          }
-        ]
+          "label": "about",
+          "url": "/about"
       },
       {
-        "group": "Applicants",
-        "links": [
-          {
-            "label": "Software Dev L4",
-            "url": "/"
-          },
-          {
-            "label": "Software Tester L4",
-            "url": "/"
-          },
-          {
-            "label": "Data Analyst L4",
-            "url": "/"
-          },
-          {
-            "label": "Cyber Security L4",
-            "url": "/"
-          },
-          {
-            "label": "Digital Support Technician",
-            "url": "/"
-          }
-        ]
+          "label": "apprenticeships",
+          "url": "/apprenticeships"
       },
       {
-        "group": "Policies",
-        "links": [
-
-          {
-            "label": "Full list",
-            "url": "/"
-          },
-          {
-            "label": "E&D",
-            "url": "/"
-          },
-          {
-            "label": "Complaints",
-            "url": "/"
-          },
-          {
-            "label": "Modern Slavery",
-            "url": "/"
-          }
-        ]
+        "label": "blog",
+        "url": "/blog"
+      },
+      {
+        "label": "contact us",
+        "url": "/contact-us"
       }
-    ]
+  ],
+
+  "footer": [
+    {
+      "title": "Policies",
+      "links": [
+
+        {
+          "label": "Full list",
+          "url": "/"
+        },
+        {
+          "label": "E&D",
+          "url": "/"
+        },
+        {
+          "label": "Complaints",
+          "url": "/"
+        },
+        {
+          "label": "Modern Slavery",
+          "url": "/"
+        }
+      ]
+    }
+  ],
+  "social_links": [
+    {
+      "title": "linkedin",
+      "url": "https://www.linkedin.com/titles/8324305/",
+      "icon": "fa-linkedin-in"
+    },
+    {
+      "title": "twitter",
+      "url": "https://twitter.com/joe_dyer1",
+      "icon": "fa-twitter"
+    },
+    {
+      "title": "instagram",
+      "url": "https://www.instagram.com/webdevappnet",
+      "icon": "fa-instagram"
+    },
+    {
+      "title": "facebook",
+      "url": "https://www.facebook.com",
+      "icon": "fa-facebook-f"
+    },
+    {
+      "title": "youtube",
+      "url": "https://www.youtube.com/channel/UC_By6GiE5aVoMyoTLr5lGZA",
+      "icon": "fa-youtube"
+    },
+    {
+      "title": "github",
+      "url": "https://github.com/thecodersguilduk",
+      "icon": "fa-github"
+    }
+  ]
 }
