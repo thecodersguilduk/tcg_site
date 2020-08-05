@@ -98,7 +98,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @modules/mobile-nav */ "./resources/js/modules/mobile-nav/index.js");
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/show-hide */ "./resources/js/modules/show-hide/index.js");
-/* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_show_hide__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @modules/header */ "./resources/js/modules/header/index.js");
 // Import local modules
 
@@ -215,35 +214,54 @@ var mobileNav = function mobileNav() {
 /*!*************************************************!*\
   !*** ./resources/js/modules/show-hide/index.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// import $$ from '@utilities/selectors';
-// const ShowHide = function ShowHide() {
-//   let content,
-//       chevron;
-//   $$.toggleShowHide.forEach(btn => {
-//     btn.addEventListener('click', function(e) {
-//       content = this.nextElementSibling;
-//       content.maxHeight = content.scrollHeight;
-//       for ( let i = 0; i < this.childNodes.length; i++ ) {
-//         if (this.childNodes[i].classList.contains('chevron')) {
-//           chevron = this.childNodes[i];
-//         }
-//       }
-//       if (!content.style.maxHeight) {
-//         chevron.classList.remove('fa-chevron-down');
-//         chevron.classList.add('fa-chevron-up');
-//         content.style.maxHeight = `${content.maxHeight}px`;
-//       } else {
-//         chevron.classList.add('fa-chevron-down');
-//         chevron.classList.remove('fa-chevron-up');
-//         content.style.maxHeight = null;
-//       }
-//     });
-//   });
-// }();
-// export default ShowHide
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+function loopThroughChildren(parent, className) {
+  if (!parent || !className || !parent.childNodes.length) {
+    console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
+    return;
+  }
+
+  for (var i = 0; i < parent.childNodes.length; i++) {
+    if (parent.childNodes[i].classList.contains(className)) {
+      return parent.childNodes[i];
+    }
+  }
+}
+
+var ShowHide = function ShowHide() {
+  var parentNode, content, iconUp, iconDown;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].toggleShowHide.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      parentNode = this.parentNode;
+      content = loopThroughChildren(parentNode, 'footer-dropdown-content');
+      if (!content) return;
+      iconDown = loopThroughChildren(this, 'fa-angle-down');
+      iconUp = loopThroughChildren(this, 'fa-angle-up');
+      content.maxHeight = content.scrollHeight;
+
+      if (!content.style.maxHeight) {
+        iconDown.classList.remove('fa-angle-down');
+        iconDown.classList.add('fa-angle-up');
+        content.classList.remove('opacity-0');
+        content.style.maxHeight = "".concat(content.maxHeight, "px");
+      } else {
+        iconUp.classList.add('fa-angle-down');
+        iconUp.classList.remove('fa-angle-up');
+        content.classList.add('opacity-0');
+        content.style.maxHeight = null;
+      }
+    });
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ShowHide);
 
 /***/ }),
 
@@ -326,7 +344,7 @@ var $$ = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n  ╷\n8 │ @import 'footer';\n  │         ^^^^^^^^\n  ╵\n  resources/sass/components/_all.scss 8:9  @import\n  /Users/jurate/Desktop/tcg_site/resources/sass/main.scss 17:9                               root stylesheet\n    at runLoaders (/Users/jurate/Desktop/tcg_site/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/jurate/Desktop/tcg_site/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/jurate/Desktop/tcg_site/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/jurate/Desktop/tcg_site/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at render (/Users/jurate/Desktop/tcg_site/node_modules/sass-loader/dist/index.js:73:7)\n    at Function.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:88455:16)\n    at _render_closure1.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:77847:12)\n    at _RootZone.runBinary$3$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26320:18)\n    at _RootZone.runBinary$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26324:19)\n    at _FutureListener.handleError$1 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24768:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:25065:40)\n    at Object._Future__propagateToListeners (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24893:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24285:12)\n    at Object._asyncRethrow (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:14183:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24306:12)\n    at _awaitOnObject_closure0.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24298:25)\n    at _RootZone.runBinary$3$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26320:18)\n    at _RootZone.runBinary$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26324:19)\n    at _FutureListener.handleError$1 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24768:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:25065:40)\n    at Object._Future__propagateToListeners (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24893:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24285:12)\n    at Object._asyncRethrow (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:16818:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24306:12)\n    at _awaitOnObject_closure0.call$2 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24298:25)\n    at _RootZone.runBinary$3$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26320:18)\n    at _RootZone.runBinary$3 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:26324:19)\n    at _FutureListener.handleError$1 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:24768:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:25065:40)\n    at Object._Future__propagateToListeners (/Users/jurate/Desktop/tcg_site/node_modules/sass/sass.dart.js:4311:88)");
 
 /***/ }),
 
