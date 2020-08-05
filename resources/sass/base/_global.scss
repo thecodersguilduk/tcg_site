@@ -12,6 +12,10 @@ html {
   max-width: none;
 }
 
+.max-h-0 {
+  max-height: 0;
+}
+
 .link {
   position: relative;
   &::after {
