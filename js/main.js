@@ -222,17 +222,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
 
-function loopThroughChildren(parent, className) {
+function getChildren(parent, className) {
+  var child;
+
   if (!parent || !className || !parent.childNodes.length) {
     console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
     return;
   }
 
-  for (var i = 0; i < parent.childNodes.length; i++) {
-    if (parent.childNodes[i].classList.contains(className)) {
-      return parent.childNodes[i];
+  var children = Array.from(parent.childNodes);
+  children.map(function (childEl) {
+    if (childEl.classList.contains(className)) {
+      child = childEl;
     }
-  }
+  });
+  return child;
 }
 
 var ShowHide = function ShowHide() {
@@ -240,10 +244,10 @@ var ShowHide = function ShowHide() {
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].toggleShowHide.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       parentNode = this.parentNode;
-      content = loopThroughChildren(parentNode, 'footer-dropdown-content');
+      content = getChildren(parentNode, 'footer-dropdown-content');
       if (!content) return;
-      iconDown = loopThroughChildren(this, 'fa-angle-down');
-      iconUp = loopThroughChildren(this, 'fa-angle-up');
+      iconDown = getChildren(this, 'fa-angle-down');
+      iconUp = getChildren(this, 'fa-angle-up');
       content.maxHeight = content.scrollHeight;
 
       if (!content.style.maxHeight) {

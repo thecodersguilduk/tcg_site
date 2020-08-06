@@ -1,15 +1,21 @@
 import $$ from '@utilities/selectors';
 
-function loopThroughChildren(parent, className) {
+function getChildren(parent, className) {
+  let child;
   if ( !parent || !className || !parent.childNodes.length) {
     console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
     return;
   }
-  for (let i = 0; i < parent.childNodes.length; i++ ) {
-    if (parent.childNodes[i].classList.contains(className)) {
-      return parent.childNodes[i];
+
+  let children = Array.from(parent.childNodes);
+
+  children.map(childEl => {
+    if (childEl.classList.contains(className)) {
+      child = childEl;
     }
-  }
+  });
+
+  return child;
 }
 
 const ShowHide = function ShowHide() {
@@ -22,12 +28,12 @@ const ShowHide = function ShowHide() {
     btn.addEventListener('click', function(e) {
       parentNode = this.parentNode;
 
-      content = loopThroughChildren(parentNode, 'footer-dropdown-content');
+      content = getChildren(parentNode, 'footer-dropdown-content');
 
       if (!content) return;
 
-      iconDown = loopThroughChildren(this, 'fa-angle-down');
-      iconUp = loopThroughChildren(this, 'fa-angle-up');
+      iconDown = getChildren(this, 'fa-angle-down');
+      iconUp = getChildren(this, 'fa-angle-up');
 
       content.maxHeight = content.scrollHeight;
   
