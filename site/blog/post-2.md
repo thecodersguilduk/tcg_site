@@ -1,9 +1,10 @@
 ---
+time: 6 min
+author: Crispin Read
 title: Five things you need to know to run a podcast
 date: 2019-10-30
 featured_image: /images/blog/post-2.jpg
 image_caption: Photo by Jonathan Velasquez on Unsplash
-time: 6 min
 excerpt: A podcast is an episodic series of digital audio files which a user can subscribe to so that new episodes are automatically downloaded via web syndication to the user’s own local computer, mobile application, or portable media player.
 tags:
     - blog
