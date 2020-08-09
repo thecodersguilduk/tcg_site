@@ -1,6 +1,7 @@
 ---
 time: 6 min
 author: Crispin Read
+avatar: author.jpg
 title: Five things you need to know to run a podcast
 date: 2019-10-30
 featured_image: /images/blog/post-2.jpg
