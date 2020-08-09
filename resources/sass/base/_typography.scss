@@ -48,18 +48,18 @@ span {
 
 // content
 .content {
+  // headings
+  h2 {
+		@apply text-blue-100;
+  }
 
 	// paragraph
 	p {
-		@apply mb-8;
+    @apply mb-8 max-w-90;
 
         // intro paragraph
 		&:first-child {
-			@apply border-b border-gray-200 pb-10 mb-10 font-light leading-snug text-gray-600;
-
-			@screen md {
-                @apply text-3xl;
-            }
+			@apply text-blue-200;
 		}
-    }
+  }
 }
