@@ -625,15 +625,25 @@ html {
   max-width: none;
 }
 
+.rounded-50 {
+  border-radius: 50%;
+}
+
 .link {
   position: relative;
 }
 
 .link::after {
-  content: "\F105";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-left: 10px;
+  content: "";
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #16aedb;
+  border-radius: 1rem;
 }
 
 #about a[href="/about"] {
@@ -722,28 +732,21 @@ span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.content h2 {
+  --text-opacity: 1;
+  color: #16aedb;
+  color: rgba(22, 174, 219, var(--text-opacity));
+}
+
 .content p {
   margin-bottom: 2rem;
+  max-width: 90%;
 }
 
 .content p:first-child {
-  border-bottom-width: 1px;
-  --border-opacity: 1;
-  border-color: #808080;
-  border-color: rgba(128, 128, 128, var(--border-opacity));
-  padding-bottom: 2.5rem;
-  margin-bottom: 2.5rem;
-  font-weight: 300;
-  line-height: 1.375;
   --text-opacity: 1;
-  color: #718096;
-  color: rgba(113, 128, 150, var(--text-opacity));
-}
-
-@media (min-width: 768px) {
-  .content p:first-child {
-    font-size: 1.875rem;
-  }
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
 }
 
 .container{
