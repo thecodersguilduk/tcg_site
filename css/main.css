@@ -698,7 +698,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 40px;
-  line-height: 48px;
+  line-height: 53px;
 }
 
 h2 {
@@ -724,7 +724,7 @@ h5 {
 p {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
-  line-height: 26px;
+  line-height: 32px;
   color: #6e6f72;
 }
 
@@ -739,7 +739,7 @@ span {
 }
 
 .content p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   max-width: 90%;
 }
 
@@ -747,6 +747,7 @@ span {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
+  font-weight: 600;
 }
 
 .container{
@@ -6856,6 +6857,10 @@ span {
 
 .leading-none{
   line-height: 1;
+}
+
+.leading-xs{
+  line-height: 16px;
 }
 
 .leading-tight{
@@ -24574,6 +24579,10 @@ span {
 
   .xs\:leading-none{
     line-height: 1;
+  }
+
+  .xs\:leading-xs{
+    line-height: 16px;
   }
 
   .xs\:leading-tight{
@@ -42295,6 +42304,10 @@ span {
     line-height: 1;
   }
 
+  .sm\:leading-xs{
+    line-height: 16px;
+  }
+
   .sm\:leading-tight{
     line-height: 1.25;
   }
@@ -60012,6 +60025,10 @@ span {
 
   .md\:leading-none{
     line-height: 1;
+  }
+
+  .md\:leading-xs{
+    line-height: 16px;
   }
 
   .md\:leading-tight{
@@ -77733,6 +77750,10 @@ span {
     line-height: 1;
   }
 
+  .lg\:leading-xs{
+    line-height: 16px;
+  }
+
   .lg\:leading-tight{
     line-height: 1.25;
   }
@@ -95450,6 +95471,10 @@ span {
 
   .xl\:leading-none{
     line-height: 1;
+  }
+
+  .xl\:leading-xs{
+    line-height: 16px;
   }
 
   .xl\:leading-tight{
