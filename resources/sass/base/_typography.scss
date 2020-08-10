@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 40px;
-  line-height: 48px;
+  line-height: 53px;
 }
 
 h2 {
@@ -38,7 +38,7 @@ h5 {
 p {
   @apply font-paragraph;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 32px;
   color: #6e6f72;
 }
 
@@ -55,11 +55,11 @@ span {
 
 	// paragraph
 	p {
-    @apply mb-8 max-w-90;
+    @apply mb-6 max-w-90;
 
         // intro paragraph
 		&:first-child {
-			@apply text-blue-200;
+			@apply text-blue-200 font-semibold;
 		}
   }
 }
