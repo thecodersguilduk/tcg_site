@@ -738,16 +738,84 @@ span {
   color: rgba(22, 174, 219, var(--text-opacity));
 }
 
-.content p {
+.content > p {
   margin-bottom: 1.5rem;
   max-width: 90%;
 }
 
-.content p:first-child {
+.content > p:first-child {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
   font-weight: 600;
+}
+
+.content > blockquote {
+  max-width: 90%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #b3b3b3;
+  border-color: rgba(179, 179, 179, var(--border-opacity));
+}
+
+.content > blockquote > p {
+  --text-opacity: 1;
+  color: #16aedb;
+  color: rgba(22, 174, 219, var(--text-opacity));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: center;
+}
+
+.content > blockquote > p::first-letter {
+  margin-left: 10px;
+}
+
+.content > blockquote > p::before, .content > blockquote > p::after {
+  position: absolute;
+}
+
+.content > blockquote > p::before {
+  content: "\201C";
+  letter-spacing: 3px;
+}
+
+.content > blockquote > p::after {
+  content: "\201D";
+}
+
+.content > blockquote span {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --text-opacity: 1;
+  color: #808080;
+  color: rgba(128, 128, 128, var(--text-opacity));
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+}
+
+.content > figure {
+  margin-bottom: 1.5rem;
+}
+
+.content > figure figcaption {
+  font-size: 11px;
+  line-height: 16px;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .container{
@@ -1649,6 +1717,18 @@ span {
   --divide-x-reverse: 0;
   border-right-width: calc(0px * var(--divide-x-reverse));
   border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
+}
+
+.divide-y-1 > :not(template) ~ :not(template){
+  --divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--divide-y-reverse));
+}
+
+.divide-x-1 > :not(template) ~ :not(template){
+  --divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
 }
 
 .divide-y-2 > :not(template) ~ :not(template){
@@ -6149,6 +6229,10 @@ span {
   border-width: 0;
 }
 
+.border-1{
+  border-width: 1px;
+}
+
 .border-2{
   border-width: 2px;
 }
@@ -6179,6 +6263,22 @@ span {
 
 .border-l-0{
   border-left-width: 0;
+}
+
+.border-t-1{
+  border-top-width: 1px;
+}
+
+.border-r-1{
+  border-right-width: 1px;
+}
+
+.border-b-1{
+  border-bottom-width: 1px;
+}
+
+.border-l-1{
+  border-left-width: 1px;
 }
 
 .border-t-2{
@@ -13606,6 +13706,10 @@ span {
   resize: both;
 }
 
+.shadow-primary{
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
 .shadow{
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -13638,6 +13742,10 @@ span {
   box-shadow: none;
 }
 
+.hover\:shadow-primary:hover{
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
 .hover\:shadow:hover{
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -13668,6 +13776,10 @@ span {
 
 .hover\:shadow-none:hover{
   box-shadow: none;
+}
+
+.focus\:shadow-primary:focus{
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .focus\:shadow:focus{
@@ -19373,6 +19485,18 @@ span {
     border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .xs\:divide-y-1 > :not(template) ~ :not(template){
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .xs\:divide-x-1 > :not(template) ~ :not(template){
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .xs\:divide-y-2 > :not(template) ~ :not(template){
     --divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--divide-y-reverse)));
@@ -23871,6 +23995,10 @@ span {
     border-width: 0;
   }
 
+  .xs\:border-1{
+    border-width: 1px;
+  }
+
   .xs\:border-2{
     border-width: 2px;
   }
@@ -23901,6 +24029,22 @@ span {
 
   .xs\:border-l-0{
     border-left-width: 0;
+  }
+
+  .xs\:border-t-1{
+    border-top-width: 1px;
+  }
+
+  .xs\:border-r-1{
+    border-right-width: 1px;
+  }
+
+  .xs\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .xs\:border-l-1{
+    border-left-width: 1px;
   }
 
   .xs\:border-t-2{
@@ -31328,6 +31472,10 @@ span {
     resize: both;
   }
 
+  .xs\:shadow-primary{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .xs\:shadow{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -31360,6 +31508,10 @@ span {
     box-shadow: none;
   }
 
+  .xs\:hover\:shadow-primary:hover{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .xs\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -31390,6 +31542,10 @@ span {
 
   .xs\:hover\:shadow-none:hover{
     box-shadow: none;
+  }
+
+  .xs\:focus\:shadow-primary:focus{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
   }
 
   .xs\:focus\:shadow:focus{
@@ -37096,6 +37252,18 @@ span {
     border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .sm\:divide-y-1 > :not(template) ~ :not(template){
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .sm\:divide-x-1 > :not(template) ~ :not(template){
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .sm\:divide-y-2 > :not(template) ~ :not(template){
     --divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--divide-y-reverse)));
@@ -41594,6 +41762,10 @@ span {
     border-width: 0;
   }
 
+  .sm\:border-1{
+    border-width: 1px;
+  }
+
   .sm\:border-2{
     border-width: 2px;
   }
@@ -41624,6 +41796,22 @@ span {
 
   .sm\:border-l-0{
     border-left-width: 0;
+  }
+
+  .sm\:border-t-1{
+    border-top-width: 1px;
+  }
+
+  .sm\:border-r-1{
+    border-right-width: 1px;
+  }
+
+  .sm\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .sm\:border-l-1{
+    border-left-width: 1px;
   }
 
   .sm\:border-t-2{
@@ -49051,6 +49239,10 @@ span {
     resize: both;
   }
 
+  .sm\:shadow-primary{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .sm\:shadow{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -49083,6 +49275,10 @@ span {
     box-shadow: none;
   }
 
+  .sm\:hover\:shadow-primary:hover{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .sm\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -49113,6 +49309,10 @@ span {
 
   .sm\:hover\:shadow-none:hover{
     box-shadow: none;
+  }
+
+  .sm\:focus\:shadow-primary:focus{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
   }
 
   .sm\:focus\:shadow:focus{
@@ -54819,6 +55019,18 @@ span {
     border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .md\:divide-y-1 > :not(template) ~ :not(template){
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .md\:divide-x-1 > :not(template) ~ :not(template){
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .md\:divide-y-2 > :not(template) ~ :not(template){
     --divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--divide-y-reverse)));
@@ -59317,6 +59529,10 @@ span {
     border-width: 0;
   }
 
+  .md\:border-1{
+    border-width: 1px;
+  }
+
   .md\:border-2{
     border-width: 2px;
   }
@@ -59347,6 +59563,22 @@ span {
 
   .md\:border-l-0{
     border-left-width: 0;
+  }
+
+  .md\:border-t-1{
+    border-top-width: 1px;
+  }
+
+  .md\:border-r-1{
+    border-right-width: 1px;
+  }
+
+  .md\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .md\:border-l-1{
+    border-left-width: 1px;
   }
 
   .md\:border-t-2{
@@ -66774,6 +67006,10 @@ span {
     resize: both;
   }
 
+  .md\:shadow-primary{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .md\:shadow{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -66806,6 +67042,10 @@ span {
     box-shadow: none;
   }
 
+  .md\:hover\:shadow-primary:hover{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .md\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -66836,6 +67076,10 @@ span {
 
   .md\:hover\:shadow-none:hover{
     box-shadow: none;
+  }
+
+  .md\:focus\:shadow-primary:focus{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
   }
 
   .md\:focus\:shadow:focus{
@@ -72542,6 +72786,18 @@ span {
     border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .lg\:divide-y-1 > :not(template) ~ :not(template){
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .lg\:divide-x-1 > :not(template) ~ :not(template){
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .lg\:divide-y-2 > :not(template) ~ :not(template){
     --divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--divide-y-reverse)));
@@ -77040,6 +77296,10 @@ span {
     border-width: 0;
   }
 
+  .lg\:border-1{
+    border-width: 1px;
+  }
+
   .lg\:border-2{
     border-width: 2px;
   }
@@ -77070,6 +77330,22 @@ span {
 
   .lg\:border-l-0{
     border-left-width: 0;
+  }
+
+  .lg\:border-t-1{
+    border-top-width: 1px;
+  }
+
+  .lg\:border-r-1{
+    border-right-width: 1px;
+  }
+
+  .lg\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .lg\:border-l-1{
+    border-left-width: 1px;
   }
 
   .lg\:border-t-2{
@@ -84497,6 +84773,10 @@ span {
     resize: both;
   }
 
+  .lg\:shadow-primary{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .lg\:shadow{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -84529,6 +84809,10 @@ span {
     box-shadow: none;
   }
 
+  .lg\:hover\:shadow-primary:hover{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .lg\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -84559,6 +84843,10 @@ span {
 
   .lg\:hover\:shadow-none:hover{
     box-shadow: none;
+  }
+
+  .lg\:focus\:shadow-primary:focus{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
   }
 
   .lg\:focus\:shadow:focus{
@@ -90265,6 +90553,18 @@ span {
     border-left-width: calc(0px * calc(1 - var(--divide-x-reverse)));
   }
 
+  .xl\:divide-y-1 > :not(template) ~ :not(template){
+    --divide-y-reverse: 0;
+    border-top-width: calc(1px * calc(1 - var(--divide-y-reverse)));
+    border-bottom-width: calc(1px * var(--divide-y-reverse));
+  }
+
+  .xl\:divide-x-1 > :not(template) ~ :not(template){
+    --divide-x-reverse: 0;
+    border-right-width: calc(1px * var(--divide-x-reverse));
+    border-left-width: calc(1px * calc(1 - var(--divide-x-reverse)));
+  }
+
   .xl\:divide-y-2 > :not(template) ~ :not(template){
     --divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--divide-y-reverse)));
@@ -94763,6 +95063,10 @@ span {
     border-width: 0;
   }
 
+  .xl\:border-1{
+    border-width: 1px;
+  }
+
   .xl\:border-2{
     border-width: 2px;
   }
@@ -94793,6 +95097,22 @@ span {
 
   .xl\:border-l-0{
     border-left-width: 0;
+  }
+
+  .xl\:border-t-1{
+    border-top-width: 1px;
+  }
+
+  .xl\:border-r-1{
+    border-right-width: 1px;
+  }
+
+  .xl\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .xl\:border-l-1{
+    border-left-width: 1px;
   }
 
   .xl\:border-t-2{
@@ -102220,6 +102540,10 @@ span {
     resize: both;
   }
 
+  .xl\:shadow-primary{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .xl\:shadow{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -102252,6 +102576,10 @@ span {
     box-shadow: none;
   }
 
+  .xl\:hover\:shadow-primary:hover{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  }
+
   .xl\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -102282,6 +102610,10 @@ span {
 
   .xl\:hover\:shadow-none:hover{
     box-shadow: none;
+  }
+
+  .xl\:focus\:shadow-primary:focus{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
   }
 
   .xl\:focus\:shadow:focus{
