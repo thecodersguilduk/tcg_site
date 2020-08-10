@@ -25,21 +25,21 @@
             </div>
           {% endif %}
           <div class="flex-1 bg-white p-6 flex flex-col justify-between relative">
-            <div class="flex-1 mt-4">
+            <div class="flex-1 mt-2">
               {% if post.data.tags %}
                 <div class="category absolute top-0 flex -my-4 -mx-1">
                   {% for item in post.data.tags %}
                     {% if item != "blog" %}
                       <div class="px-1">
-                        <a href="/category/{{ item }}" class="px-2 py-1 bg-red-100 text-white font-semibold rounded block">{{ item | capitalize }}</a>
+                        <a href="/category/{{ item }}" class="px-2 py-1 bg-red-100 text-white font-semibold rounded block font-heading">{{ item | capitalize }}</a>
                       </div>
                     {% endif %}
                   {% endfor %}
                   </div>
               {% endif %}
               <a href="#" class="block">
-                <h3 class="text-blue-200 max-w-90">{{ post.data.title }}</h3>
-                <p class="">{{ post.data.excerpt }}</p>
+                <h3 class="text-blue-200 max-w-90 mb-4">{{ post.data.title }}</h3>
+                <p class="mb-6">{{ post.data.excerpt }}</p>
               </a>
             </div>
             <div class="flex">
@@ -48,13 +48,13 @@
                   <img src="../../images/blog/{{post.data.avatar}}" class="h-12 w-12 object-cover rounded-50 block" />
                 </div>
 
-                <div>
-                  <p class="time text-blue-200 font-semibold">{{ post.data.time }} read time</p>
+                <div class="my-auto">
+                  <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ post.data.time }} read time</p>
                   
                   <div class="flex">
-                    <p class="author text-gray-200 text-0">By {{ post.data.author }}</p>
-                    <p class="text-0"> - </p>
-                    <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 block">
+                    <p class="author text-gray-200 text-0 leading-xs">By {{ post.data.author }}</p>
+                    <p class="text-0 leading-xs"> - </p>
+                    <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 leading-xs my-auto">
                         {{ post.data.date | dateDisplay }}
                     </time>
                   </div>
