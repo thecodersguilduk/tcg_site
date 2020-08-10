@@ -54,12 +54,50 @@ span {
   }
 
 	// paragraph
-	p {
+	& > p {
     @apply mb-6 max-w-90;
 
         // intro paragraph
 		&:first-child {
 			@apply text-blue-200 font-semibold;
 		}
+  }
+
+  & > blockquote {
+    @apply max-w-90 my-6 py-10 border-t-1 border-b-1 border-gray-100;
+
+    & > p {
+      @apply text-blue-100 mx-auto mb-6 text-base font-semibold font-heading text-center;
+
+      &::first-letter {
+        margin-left: 10px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+      }
+
+      &::before {
+        content: "\201C";
+        letter-spacing: 3px;
+      }
+
+      &::after {
+        content: "\201D";
+      }
+    }
+
+    span {
+      @apply font-paragraph text-gray-200 text-xs font-normal block text-center;
+    }
+  }
+
+  & > figure {
+    @apply mb-6;
+    
+    figcaption {
+      @apply text-0 leading-xs text-black my-2;
+    }
   }
 }
