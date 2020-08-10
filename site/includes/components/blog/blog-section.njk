@@ -38,28 +38,27 @@
                   </div>
               {% endif %}
               <a href="#" class="block">
-                <h3 class="text-blue-200 max-w-90 mb-4">{{ post.data.title }}</h3>
+                <a href="{{ post.url }}" class="block"><h3 class="text-blue-200 max-w-90 mb-4">{{ post.data.title }}</h3></a>
                 <p class="mb-6">{{ post.data.excerpt }}</p>
               </a>
             </div>
             <div class="flex">
+              <div class="mr-2">
+                <img src="../../images/blog/{{post.data.avatar}}" class="h-12 w-12 object-cover rounded-50 block" />
+              </div>
 
-                <div class="mr-4">
-                  <img src="../../images/blog/{{post.data.avatar}}" class="h-12 w-12 object-cover rounded-50 block" />
-                </div>
-
-                <div class="my-auto">
-                  <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ post.data.time }} read time</p>
-                  
-                  <div class="flex">
-                    <p class="author text-gray-200 text-0 leading-xs">By {{ post.data.author }}</p>
-                    <p class="text-0 leading-xs"> - </p>
-                    <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 leading-xs my-auto">
-                        {{ post.data.date | dateDisplay }}
-                    </time>
-                  </div>
+              <div class="my-auto">
+                <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ post.data.time }} read time</p>
+                
+                <div class="flex">
+                  <p class="author text-gray-200 text-0 leading-xs">By {{ post.data.author }}</p>
+                  <p class="text-0 leading-xs"> - </p>
+                  <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 leading-xs my-auto">
+                      {{ post.data.date | dateDisplay }}
+                  </time>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
