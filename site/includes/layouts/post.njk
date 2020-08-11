@@ -6,9 +6,9 @@ related_articles: true
 {# a post layout #}
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-    <article id="container-centre" class="inner column centre flex-1 mb-24 mx-auto pt-20">
+    <article id="container-centre" class="lg:inner column centre flex-1 mb-24 mx-auto pt-20">
 
-        <div class="mb-6">
+        <div class="mb-6 max-w-5xl">
             {% if featured_image %}
 
                 <figure class="">
@@ -17,7 +17,7 @@ related_articles: true
 
             {% endif %}
 
-            <div class="md:px-20 relative pt-10">
+            <div class="md:px-20 relative pt-10 max-w-4xl mx-auto inner">
               {% if tags %}
                 <div class="category absolute top-0 flex -my-4 -mx-1">
                   {% for item in tags %}
@@ -31,24 +31,25 @@ related_articles: true
               {% endif %}
 
               <header>
-                  <h1 class="text-blue-100 max-w-90">{{ title }}</h1>
+                  <h1 class="text-blue-100">{{ title }}</h1>
               </header>
 
               <div class="flex">
 
-                <div class="mr-2">
-                  <img src="../../images/blog/{{avatar}}" class="h-10 w-10 object-cover rounded-50 block" />
+                <div class="mr-2 w-12">
+                  <img src="../../images/blog/{{avatar}}" class="w-full object-cover rounded-50 block" />
                 </div>
 
                 <div class="my-auto">
                   <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ time }} read time</p>
-                  <div class="flex">
-                    <p class="author text-gray-200 text-0 leading-xs">By {{ author }}</p>
-                    {# <p class="my-auto block"> - </p> #}
-                    <span class="text-gray-200 text-0 leading-xs my-auto mx-1"> &#8210; </span>
-                    <time datetime="{{ date }}" class="text-gray-200 text-0 my-auto">
+                  <div class="">
+                    <p class="author text-gray-200 text-0 leading-xs">
+                      By {{ author }}
+                      <span class="text-gray-200 text-0 leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ date }}" class="text-gray-200 text-0 my-auto">
                         {{ date | dateDisplay }}
-                    </time>
+                      </time>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -56,13 +57,13 @@ related_articles: true
 
         </div>
 
-        <div class="content post md:px-20">
+        <div class="content post md:px-20 max-w-4xl mx-auto inner">
 
             {{ content | safe }}
 
         </div>
 
-        <div class="mt-8 md:px-20">
+        <div class="mt-8 md:px-20 max-w-4xl mx-auto inner">
 
             <div class="border-t border-gray-200 pt-6">
 
@@ -84,12 +85,12 @@ related_articles: true
                 <div class="mt-6">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
-                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-gray-200 font-heading text-sm font-bold link">{{ nextPost.data.title }}</a></p>
+                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-gray-200 font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                   {% if prevPost %}
                     <div>
-                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-gray-200 font-heading text-sm font-bold link">{{ prevPost.data.title }}</a></p>
+                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-gray-200 font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                 </div>
