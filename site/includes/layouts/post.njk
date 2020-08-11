@@ -13,7 +13,7 @@ layout: default
                 <h1 class="page-title md:text-center ">{{ title }}</h1>
             </header>
 
-            <div class="md:text-gray-600 flex justify-center">
+            <div class="md:text-grey-600 flex justify-center">
 
                 <p class="author">By {{ site.author.name }}</p>
 
@@ -57,7 +57,7 @@ layout: default
 
                     {% if image_caption %}
 
-                        <figcaption class="text-center italic text-gray-600 mt-4">{{ image_caption }}</figcaption>
+                        <figcaption class="text-center italic text-grey-600 mt-4">{{ image_caption }}</figcaption>
 
                     {% endif %}
 
@@ -96,9 +96,9 @@ layout: default
 
         <div class="mt-16 md:px-16">
 
-            <div class="flex justify-between mt-16 border-t border-gray-200 pt-12">
-                {% if prevPost %}<p class="text-gray-700"><span>Previous:</span> <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></p>{% endif %}
-                {% if nextPost %}<p class="text-gray-700"><span>Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+            <div class="flex justify-between mt-16 border-t border-grey-200 pt-12">
+                {% if prevPost %}<p class="text-grey-700"><span>Previous:</span> <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></p>{% endif %}
+                {% if nextPost %}<p class="text-grey-700"><span>Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
             </div>
         </div>
 
