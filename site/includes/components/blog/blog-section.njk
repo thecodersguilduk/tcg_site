@@ -17,14 +17,14 @@
 
     {% for post in collections.blog %}
 
-      <div class="lg:w-1/3 lg:px-3 w-full mb-12 lg:mb-0">
+      <div class="lg:w-1/3 lg:px-3 w-full mb-10 lg:mb-0">
         <div class="flex flex-col rounded-lg shadow-primary overflow-hidden md:h-full">
           {% if post.data.featured_image %}
             <div class="flex-shrink-0">
               <img class="h-56 w-full object-cover" data-lazy="{{ post.data.featured_image }}" alt="" />
             </div>
           {% endif %}
-          <div class="flex-1 bg-white p-6 flex flex-col justify-between relative">
+          <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
             <div class="flex-1 mt-2">
               {% if post.data.tags %}
                 <div class="category absolute top-0 flex -my-4 -mx-1">
@@ -43,20 +43,22 @@
               </a>
             </div>
             <div class="flex">
-              <div class="mr-2">
-                <img src="../../images/blog/{{post.data.avatar}}" class="h-12 w-12 object-cover rounded-50 block" />
+              <div class="mr-2 w-12">
+                <img src="../../images/blog/{{post.data.avatar}}" class="w-full object-cover rounded-50 block" />
               </div>
 
               <div class="my-auto">
                 <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ post.data.time }} read time</p>
                 
-                <div class="flex">
-                  <p class="author text-gray-200 text-0 leading-xs">By {{ post.data.author }}</p>
-                  <p class="text-0 leading-xs"> - </p>
-                  <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 leading-xs my-auto">
-                      {{ post.data.date | dateDisplay }}
-                  </time>
-                </div>
+                <div class="">
+                    <p class="author text-gray-200 text-0 leading-xs">
+                      By {{ post.data.author }}
+                      <span class="text-gray-200 text-0 leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 my-auto">
+                        {{ post.data.date | dateDisplay }}
+                      </time>
+                    </p>
+                  </div>
               </div>
             </div>
           </div>
