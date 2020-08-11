@@ -55,7 +55,7 @@ span {
 
 	// paragraph
 	& > p {
-    @apply mb-6 max-w-90;
+    @apply mb-6;
 
         // intro paragraph
 		&:first-child {
@@ -64,7 +64,7 @@ span {
   }
 
   & > blockquote {
-    @apply max-w-90 my-6 py-10 border-t-1 border-b-1 border-gray-100;
+    @apply my-6 py-10 border-t-1 border-b-1 border-gray-100;
 
     & > p {
       @apply text-blue-100 mx-auto mb-6 text-base font-semibold font-heading text-center;
