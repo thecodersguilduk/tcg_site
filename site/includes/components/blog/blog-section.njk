@@ -6,9 +6,9 @@
   <div class="relative max-w-7xl mx-auto">
     <div class="">
       {% if related_articles %}
-      <h2 class="mb-12 title text-blue-100">Related Articles</h2>
+      <h2 class="mb-12 title">Related Articles</h2>
       {% else %}
-        <h2 class="mb-12 relative title">
+        <h2 class="mb-12 title">
           Our latest news
         </h2>
       {% endif %}
@@ -51,10 +51,10 @@
                 <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ post.data.time }} read time</p>
                 
                 <div class="">
-                    <p class="author text-gray-200 text-0 leading-xs">
+                    <p class="author text-black text-0 leading-xs">
                       By {{ post.data.author }}
-                      <span class="text-gray-200 text-0 leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ post.data.date }}" class="text-gray-200 text-0 my-auto">
+                      <span class="text-black text-0 leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ post.data.date }}" class="text-black text-0 my-auto">
                         {{ post.data.date | dateDisplay }}
                       </time>
                     </p>
