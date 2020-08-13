@@ -11,10 +11,10 @@
 
       <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0 lg:ml-auto">
         <div class="">
-          <h5 class="uppercase text-blue-100 font-semibold">Contact us</h5>
+          <h5 class="uppercase text-blue-200 font-semibold">Contact us</h5>
           <p class="">Duke Studios, 3 Sheaf St</p>
           <p class="mb-4">Leeds LS10 1HD</p>
-          <p class="mb-4 font-semibold text-blue-100">0113 460 1024</p>
+          <p class="mb-4 font-semibold text-blue-200">0113 460 1024</p>
           <ul class="flex -mx-1">
             {% for social in navigation.social_links %}
               <li class="px-1">
@@ -32,14 +32,14 @@
         <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0">
           <div class="border-b-2 border-gray-100 sm:border-none">
             <button class="sm:hidden flex justify-between items-center w-full footer-dropdown relative toggle-show-hide mb-3">
-              <h5 class="uppercase text-blue-100 font-semibold mb-0">{{ group.title }}</h5>
-              <i class="fas fa-angle-down text-blue-100"></i>
+              <h5 class="uppercase text-blue-200 font-semibold mb-0">{{ group.title }}</h5>
+              <i class="fas fa-angle-down text-blue-200"></i>
             </button>
-            <h5 class="hidden sm:block uppercase text-blue-100 font-semibold">{{ group.title }}</h5>
+            <h5 class="hidden sm:block uppercase text-blue-200 font-semibold">{{ group.title }}</h5>
             <ul class="footer-dropdown-content h-auto max-h-0 opacity-0 sm:opacity-100 transition-all ease-in duration-150">
               {% for link in group.links %}
                 <li class="mb-2">
-                  <a href="{{ link.url }}" class="block text-gray-200">{{ link.label }}</a>
+                  <a href="{{ link.url }}" class="block text-black">{{ link.label }}</a>
                 </li>
               {% endfor %}
             </ul>
