@@ -11,7 +11,7 @@
         <ul class="py-24">
         {% for nav_link in navigation.main %}
           <li class="my-2 text-center">
-            <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold font-heading text-gray-200 capitalize text-base">{{ nav_link.label | safe }}
+            <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold font-heading text-grey-200 capitalize text-base">{{ nav_link.label | safe }}
             </a>
           </li>
         {% endfor %}
@@ -29,7 +29,7 @@
       <ul class="flex -mx-3">
       {% for nav_link in navigation.main %}
         <li class="px-4">
-          <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold text-gray-200 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
+          <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold text-grey-200 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
           </a>
         </li>
       {% endfor %}
