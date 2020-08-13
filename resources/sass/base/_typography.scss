@@ -3,7 +3,7 @@
 
 // headings
 h1, h2, h3, h4, h5, h6 {
-    @apply font-bold mt-0 mb-6 text-purple-900;
+    @apply font-bold mt-0 mb-6 text-blue-200;
 }
 
 h1, h2, h3, h4, h5 {
@@ -36,10 +36,9 @@ h5 {
 }
 
 p {
-  @apply font-paragraph;
+  @apply font-paragraph text-black;
   font-size: 16px;
   line-height: 32px;
-  color: #6e6f72;
 }
 
 span {
@@ -48,10 +47,6 @@ span {
 
 // content
 .content {
-  // headings
-  h2 {
-		@apply text-blue-100;
-  }
 
 	// paragraph
 	& > p {
@@ -67,7 +62,7 @@ span {
     @apply my-6 py-10 border-t-1 border-b-1 border-gray-100;
 
     & > p {
-      @apply text-blue-100 mx-auto mb-6 text-base font-semibold font-heading text-center;
+      @apply text-blue-200 mx-auto mb-6 text-base font-semibold font-heading text-center;
 
       &::first-letter {
         margin-left: 10px;
@@ -89,7 +84,7 @@ span {
     }
 
     span {
-      @apply font-paragraph text-gray-200 text-xs font-normal block text-center;
+      @apply font-paragraph text-black text-xs font-normal block text-center;
     }
   }
 

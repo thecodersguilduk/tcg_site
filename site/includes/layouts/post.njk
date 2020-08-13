@@ -31,7 +31,7 @@ related_articles: true
               {% endif %}
 
               <header>
-                  <h1 class="text-blue-100">{{ title }}</h1>
+                  <h1 class="text-blue-200">{{ title }}</h1>
               </header>
 
               <div class="flex">
@@ -43,10 +43,10 @@ related_articles: true
                 <div class="my-auto">
                   <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading">{{ time }} read time</p>
                   <div class="">
-                    <p class="author text-gray-200 text-0 leading-xs">
+                    <p class="author text-black text-0 leading-xs">
                       By {{ author }}
-                      <span class="text-gray-200 text-0 leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ date }}" class="text-gray-200 text-0 my-auto">
+                      <span class="text-black text-0 leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ date }}" class="text-black text-0 my-auto">
                         {{ date | dateDisplay }}
                       </time>
                     </p>
@@ -85,12 +85,12 @@ related_articles: true
                 <div class="mt-6">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
-                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-gray-200 font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-sm font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                   {% if prevPost %}
                     <div>
-                      <p class="text-gray-200"><span class="font-heading text-gray-200 text-sm font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-gray-200 font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-sm font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                 </div>
