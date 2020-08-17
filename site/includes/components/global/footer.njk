@@ -1,58 +1,76 @@
-<footer>
-    <div class="bg-white">
-  <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="xl:col-span-1">
-        <img class="h-10" src="../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" alt="Company name" />
-        <p class="mt-8 text-grey-500 leading-6">
-          {{ footer.footer_blurb }}
-        </p>
-        <div class="mt-8 flex">
+<footer class="border-t-2 border-gray-100">
+  <div class="py-12 inner sm:px-4 lg:px-8 lg:max-w-screen-xl">
+    <div class="flex justify-between flex-wrap sm:-mx-3 lg:mx-auto">
 
-          {% for link in footer.social_links %}
-            <a href="{{ link.url }}" class="mr-6 text-grey-400 hover:text-grey-500">
-              <span class="sr-only">{{ link.title }}</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-              </svg>
-            </a>
-          {% endfor %}
+      <div class="lg:w-auto mb-6 sm:mb-12 lg:mb-0 w-full sm:w-1/2 sm:px-6 lg:px-0">
+        <div class="mb-5">
+          <img src="../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" class="block h-16" />
+        </div>
+        <p>Industry led, community driven.</p>
+      </div>
 
+      <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0 lg:ml-auto">
+        <div class="">
+          <h5 class="uppercase text-blue-200 font-semibold">Contact us</h5>
+          <p class="">Duke Studios, 3 Sheaf St</p>
+          <p class="mb-4">Leeds LS10 1HD</p>
+          <p class="mb-4 font-semibold text-blue-200">0113 460 1024</p>
+          <ul class="flex -mx-1">
+            {% for social in navigation.social_links %}
+              <li class="px-1">
+                <span class="sr-only">Find us on {{ social.label }}</span>
+                <a href="{{ social.url }}" class="rounded h-10 w-10 lg:h-8 lg:w-8 flex justify-center items-center bg-blue-100">
+                  <i class="fab {{ social.icon }} text-white"></i>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 xl:mt-0 xl:col-span-2">
 
-        {% for footer_group in navigation.footer %}
-          <div class="">
-            <div>
-              <h4 class="uppercase">
-                {{ footer_group.group }}
-              </h4>
-              <ul class="mb-4">
-
-                {% for link in footer_group.links %}
-                  <li class="mt-4">
-                    <a href="{{ link.url }}" class="">
-                      {{ link.label }}
-                    </a>
-                  </li>
-
-                {% endfor %}
-
-              </ul>
-            </div>
+      {% for group in navigation.footer %}
+        <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0">
+          <div class="border-b-2 border-gray-100 sm:border-none">
+            <button class="sm:hidden flex justify-between items-center w-full footer-dropdown relative toggle-show-hide mb-3">
+              <h5 class="uppercase text-blue-200 font-semibold mb-0">{{ group.title }}</h5>
+              <i class="fas fa-angle-down text-blue-200"></i>
+            </button>
+            <h5 class="hidden sm:block uppercase text-blue-200 font-semibold">{{ group.title }}</h5>
+            <ul class="footer-dropdown-content h-auto max-h-0 opacity-0 sm:opacity-100 transition-all ease-in duration-150">
+              {% for link in group.links %}
+                <li class="mb-2">
+                  <a href="{{ link.url }}" class="block text-black">{{ link.label }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
+        </div>
+      {% endfor %}
 
-        {% endfor %}
-
+      <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-auto w-full bg-white sm:w-1/2 sm:px-6 lg:px-0">
+        <div class="flex flex-wrap sm:block lg:mx-0">
+          <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
+            <img src="../images/apprenticeships-logo.png" alt="" class="h-12 w-auto block relative" />
+          </div>
+          <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
+            <img src="../images/european-structural-investment-funds.png" alt="" class="h-12 w-auto block relative" />
+          </div>
+          <div class="">
+            <img src="../images/dcc.png" alt="" class="h-12 w-auto block relative" />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="mt-12 border-t border-grey-200 pt-8">
-      <p class="leading-6 text-grey-400 xl:text-center">
-        &copy; 2020 Workflow, Inc. All rights reserved.
-      </p>
+
     </div>
   </div>
-</div>
 
+  <div class="bg-blue-200">
+    <div class="inner sm:px-4 lg:px-8 lg:max-w-screen-xl py-2">
+      <div class="flex -mx-6 flex-wrap">
+        <div class="text-white lg:text-xs px-6 mb-1 md:mb-0 text-0">&copy; 2020 Workflow, Inc. All rights reserved.</div>
+        <div class="text-white lg:text-xs px-6 mb-1 md:mb-0 text-0">Reg England and Wales: 9622444</div>
+        <div class="text-white lg:text-xs px-6 text-0">UKPRN 10058030</div>
+      </div>
+    </div>
+  </div>
 </footer>

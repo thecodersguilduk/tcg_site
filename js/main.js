@@ -98,7 +98,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @modules/mobile-nav */ "./resources/js/modules/mobile-nav/index.js");
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/show-hide */ "./resources/js/modules/show-hide/index.js");
-/* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_show_hide__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @modules/header */ "./resources/js/modules/header/index.js");
 // Import local modules
 
@@ -215,35 +214,58 @@ var mobileNav = function mobileNav() {
 /*!*************************************************!*\
   !*** ./resources/js/modules/show-hide/index.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// import $$ from '@utilities/selectors';
-// const ShowHide = function ShowHide() {
-//   let content,
-//       chevron;
-//   $$.toggleShowHide.forEach(btn => {
-//     btn.addEventListener('click', function(e) {
-//       content = this.nextElementSibling;
-//       content.maxHeight = content.scrollHeight;
-//       for ( let i = 0; i < this.childNodes.length; i++ ) {
-//         if (this.childNodes[i].classList.contains('chevron')) {
-//           chevron = this.childNodes[i];
-//         }
-//       }
-//       if (!content.style.maxHeight) {
-//         chevron.classList.remove('fa-chevron-down');
-//         chevron.classList.add('fa-chevron-up');
-//         content.style.maxHeight = `${content.maxHeight}px`;
-//       } else {
-//         chevron.classList.add('fa-chevron-down');
-//         chevron.classList.remove('fa-chevron-up');
-//         content.style.maxHeight = null;
-//       }
-//     });
-//   });
-// }();
-// export default ShowHide
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+function getChildren(parent, className) {
+  var child;
+
+  if (!parent || !className || !parent.childNodes.length) {
+    console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
+    return;
+  }
+
+  var children = Array.from(parent.childNodes);
+  children.map(function (childEl) {
+    if (childEl.classList.contains(className)) {
+      child = childEl;
+    }
+  });
+  return child;
+}
+
+var ShowHide = function ShowHide() {
+  var parentNode, content, iconUp, iconDown;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].toggleShowHide.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      parentNode = this.parentNode;
+      content = getChildren(parentNode, 'footer-dropdown-content');
+      if (!content) return;
+      iconDown = getChildren(this, 'fa-angle-down');
+      iconUp = getChildren(this, 'fa-angle-up');
+      content.maxHeight = content.scrollHeight;
+
+      if (!content.style.maxHeight) {
+        iconDown.classList.remove('fa-angle-down');
+        iconDown.classList.add('fa-angle-up');
+        content.classList.remove('opacity-0');
+        content.style.maxHeight = "".concat(content.maxHeight, "px");
+      } else {
+        iconUp.classList.add('fa-angle-down');
+        iconUp.classList.remove('fa-angle-up');
+        content.classList.add('opacity-0');
+        content.style.maxHeight = null;
+      }
+    });
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ShowHide);
 
 /***/ }),
 
