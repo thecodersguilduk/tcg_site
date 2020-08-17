@@ -16,10 +16,10 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
-      gray: {
-        100: '#b3b3b3',
-        200: '#808080',
-        300: '#4d4d4d',
+      grey: {
+        100: '#f4f4f4',
+        200: '#dedede',
+        300: '#707070',
         400: '#cbd5e0',
         500: '#a0aec0',
         600: '#718096',
@@ -170,7 +170,7 @@ module.exports = {
     },
     borderColor: theme => ({
       ...theme('colors'),
-      default: theme('colors.gray.300', 'currentColor'),
+      default: theme('colors.grey.300', 'currentColor'),
     }),
     borderRadius: {
       none: '0',

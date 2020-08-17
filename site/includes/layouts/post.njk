@@ -8,11 +8,66 @@ related_articles: true
 
     <article id="container-centre" class="column centre flex-1 mb-24 mx-auto pt-20">
 
+<<<<<<< HEAD
         <div class="mb-6 max-w-5xl">
+=======
+        <div class="mb-12 md:mb-20">
+
+            <header>
+                <h1 class="page-title md:text-center ">{{ title }}</h1>
+            </header>
+
+            <div class="md:text-grey-600 flex justify-center">
+
+                <p class="author">By {{ site.author.name }}</p>
+
+                <p class="px-2">—</p>
+
+                <time datetime="{{ date }}">
+                    {{ date | dateDisplay }}
+                </time>
+
+                {% if tags %}
+
+                    {# this will create a comma for multiple category links #}
+                    {% set comma = joiner() %}
+
+                    <p class="px-2">—</p>
+
+                    <p class="category">Posted in
+
+                        {% for item in tags %}
+
+                            {%- if item != "blog" -%}
+
+                                <a href="/category/{{ item }}">{{ comma() }} {{ item | capitalize }}</a>
+
+                            {%- endif -%}
+
+                        {% endfor %}
+
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+            {# featured post image #}
+>>>>>>> master
             {% if featured_image %}
 
                 <figure class="">
                     <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}">
+<<<<<<< HEAD
+=======
+
+                    {% if image_caption %}
+
+                        <figcaption class="text-center italic text-grey-600 mt-4">{{ image_caption }}</figcaption>
+
+                    {% endif %}
+
+>>>>>>> master
                 </figure>
 
             {% endif %}
@@ -98,6 +153,17 @@ related_articles: true
 
         </div>
 
+<<<<<<< HEAD
+=======
+        <div class="mt-16 md:px-16">
+
+            <div class="flex justify-between mt-16 border-t border-grey-200 pt-12">
+                {% if prevPost %}<p class="text-grey-700"><span>Previous:</span> <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></p>{% endif %}
+                {% if nextPost %}<p class="text-grey-700"><span>Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+            </div>
+        </div>
+
+>>>>>>> master
     </article>
 
     {% include "components/blog/blog-section.njk" %}
