@@ -17,35 +17,35 @@ title: Policies - full list
         <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div class="align-middle inline-block min-w-full shadow overflow-hidden">
             <table class="min-w-full">
-              <thead class="border-b border-gray-200">
+              <thead class="border-b border-grey-200">
                 <tr>
-                  <th class="px-6 py-3  text-left text-gray-200 uppercase tracking-wider">
+                  <th class="px-6 py-3  text-left text-grey-200 uppercase tracking-wider">
                     Title
                   </th>
-                  <th class="px-6 py-3  text-left text-gray-200 uppercase tracking-wider">
+                  <th class="px-6 py-3  text-left text-grey-200 uppercase tracking-wider">
                     Version
                   </th>
-                  <th class="px-6 py-3  text-left text-gray-200 uppercase tracking-wider">
+                  <th class="px-6 py-3  text-left text-grey-200 uppercase tracking-wider">
                     Last updated
                   </th>
-                  <th class="px-6 py-3  text-left text-gray-200 uppercase tracking-wider">
+                  <th class="px-6 py-3  text-left text-grey-200 uppercase tracking-wider">
                     Contact
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {% for policy in policies_list.all %}
-                <tr class="border-b border-gray-200">
-                  <td class="px-6 py-4 whitespace-no-wrap text-gray-200">
+                <tr class="border-b border-grey-200">
+                  <td class="px-6 py-4 whitespace-no-wrap text-grey-200">
                     <a href="{{ policy.pdf }}" target="_blank" class="block pointer hover:text-blue-200">{{ policy.label }}</a>
                   </td>
-                  <td class="px-6 py-4 whitespace-no-wrap text-gray-200">
+                  <td class="px-6 py-4 whitespace-no-wrap text-grey-200">
                     {{ policy.version}}
                   </td>
-                  <td class="px-6 py-4 whitespace-no-wrap text-gray-200">
+                  <td class="px-6 py-4 whitespace-no-wrap text-grey-200">
                     {{ policy.last_update}}
                   </td>
-                  <td class="px-6 py-4 whitespace-no-wrap text-gray-200">
+                  <td class="px-6 py-4 whitespace-no-wrap text-grey-200">
                     {{ policy.author}}
                   </td>
                 </tr>
