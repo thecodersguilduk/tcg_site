@@ -633,6 +633,14 @@ html {
   max-height: 0;
 }
 
+.h-68 {
+  height: 24rem;
+}
+
+.max-h-68 {
+  max-height: 24rem;
+}
+
 .link {
   position: relative;
 }
@@ -1463,6 +1471,18 @@ span {
   margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
 }
 
+.space-y-68 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(24rem * var(--space-y-reverse));
+}
+
+.space-x-68 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(24rem * var(--space-x-reverse));
+  margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+}
+
 .space-y-px > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -1677,6 +1697,18 @@ span {
   --space-x-reverse: 0;
   margin-right: calc(-16rem * var(--space-x-reverse));
   margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-68 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-24rem * var(--space-y-reverse));
+}
+
+.-space-x-68 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-24rem * var(--space-x-reverse));
+  margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
 }
 
 .-space-y-px > :not(template) ~ :not(template){
@@ -6883,6 +6915,10 @@ span {
   height: 16rem;
 }
 
+.h-68{
+  height: 24rem;
+}
+
 .h-auto{
   height: auto;
 }
@@ -7067,6 +7103,10 @@ span {
   margin: 16rem;
 }
 
+.m-68{
+  margin: 24rem;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -7141,6 +7181,10 @@ span {
 
 .-m-64{
   margin: -16rem;
+}
+
+.-m-68{
+  margin: -24rem;
 }
 
 .-m-px{
@@ -7325,6 +7369,16 @@ span {
 .mx-64{
   margin-left: 16rem;
   margin-right: 16rem;
+}
+
+.my-68{
+  margin-top: 24rem;
+  margin-bottom: 24rem;
+}
+
+.mx-68{
+  margin-left: 24rem;
+  margin-right: 24rem;
 }
 
 .my-auto{
@@ -7515,6 +7569,16 @@ span {
 .-mx-64{
   margin-left: -16rem;
   margin-right: -16rem;
+}
+
+.-my-68{
+  margin-top: -24rem;
+  margin-bottom: -24rem;
+}
+
+.-mx-68{
+  margin-left: -24rem;
+  margin-right: -24rem;
 }
 
 .-my-px{
@@ -7813,6 +7877,22 @@ span {
 
 .ml-64{
   margin-left: 16rem;
+}
+
+.mt-68{
+  margin-top: 24rem;
+}
+
+.mr-68{
+  margin-right: 24rem;
+}
+
+.mb-68{
+  margin-bottom: 24rem;
+}
+
+.ml-68{
+  margin-left: 24rem;
 }
 
 .mt-auto{
@@ -8117,6 +8197,22 @@ span {
 
 .-ml-64{
   margin-left: -16rem;
+}
+
+.-mt-68{
+  margin-top: -24rem;
+}
+
+.-mr-68{
+  margin-right: -24rem;
+}
+
+.-mb-68{
+  margin-bottom: -24rem;
+}
+
+.-ml-68{
+  margin-left: -24rem;
 }
 
 .-mt-px{
@@ -8433,6 +8529,10 @@ span {
   padding: 16rem;
 }
 
+.p-68{
+  padding: 24rem;
+}
+
 .p-px{
   padding: 1px;
 }
@@ -8615,6 +8715,16 @@ span {
 .px-64{
   padding-left: 16rem;
   padding-right: 16rem;
+}
+
+.py-68{
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+}
+
+.px-68{
+  padding-left: 24rem;
+  padding-right: 24rem;
 }
 
 .py-px{
@@ -8913,6 +9023,22 @@ span {
 
 .pl-64{
   padding-left: 16rem;
+}
+
+.pt-68{
+  padding-top: 24rem;
+}
+
+.pr-68{
+  padding-right: 24rem;
+}
+
+.pb-68{
+  padding-bottom: 24rem;
+}
+
+.pl-68{
+  padding-left: 24rem;
 }
 
 .pt-px{
@@ -16423,6 +16549,10 @@ span {
   width: 16rem;
 }
 
+.w-68{
+  width: 24rem;
+}
+
 .w-auto{
   width: auto;
 }
@@ -16661,6 +16791,11 @@ span {
   gap: 16rem;
 }
 
+.gap-68{
+  grid-gap: 24rem;
+  gap: 24rem;
+}
+
 .gap-px{
   grid-gap: 1px;
   gap: 1px;
@@ -16774,6 +16909,12 @@ span {
        column-gap: 16rem;
 }
 
+.col-gap-68{
+  grid-column-gap: 24rem;
+  -moz-column-gap: 24rem;
+       column-gap: 24rem;
+}
+
 .col-gap-px{
   grid-column-gap: 1px;
   -moz-column-gap: 1px;
@@ -16868,6 +17009,11 @@ span {
 .row-gap-64{
   grid-row-gap: 16rem;
   row-gap: 16rem;
+}
+
+.row-gap-68{
+  grid-row-gap: 24rem;
+  row-gap: 24rem;
 }
 
 .row-gap-px{
@@ -17824,6 +17970,10 @@ span {
   --transform-translate-x: 16rem;
 }
 
+.translate-x-68{
+  --transform-translate-x: 24rem;
+}
+
 .translate-x-px{
   --transform-translate-x: 1px;
 }
@@ -17894,6 +18044,10 @@ span {
 
 .-translate-x-64{
   --transform-translate-x: -16rem;
+}
+
+.-translate-x-68{
+  --transform-translate-x: -24rem;
 }
 
 .-translate-x-px{
@@ -17988,6 +18142,10 @@ span {
   --transform-translate-y: 16rem;
 }
 
+.translate-y-68{
+  --transform-translate-y: 24rem;
+}
+
 .translate-y-px{
   --transform-translate-y: 1px;
 }
@@ -18058,6 +18216,10 @@ span {
 
 .-translate-y-64{
   --transform-translate-y: -16rem;
+}
+
+.-translate-y-68{
+  --transform-translate-y: -24rem;
 }
 
 .-translate-y-px{
@@ -18152,6 +18314,10 @@ span {
   --transform-translate-x: 16rem;
 }
 
+.hover\:translate-x-68:hover{
+  --transform-translate-x: 24rem;
+}
+
 .hover\:translate-x-px:hover{
   --transform-translate-x: 1px;
 }
@@ -18222,6 +18388,10 @@ span {
 
 .hover\:-translate-x-64:hover{
   --transform-translate-x: -16rem;
+}
+
+.hover\:-translate-x-68:hover{
+  --transform-translate-x: -24rem;
 }
 
 .hover\:-translate-x-px:hover{
@@ -18316,6 +18486,10 @@ span {
   --transform-translate-y: 16rem;
 }
 
+.hover\:translate-y-68:hover{
+  --transform-translate-y: 24rem;
+}
+
 .hover\:translate-y-px:hover{
   --transform-translate-y: 1px;
 }
@@ -18386,6 +18560,10 @@ span {
 
 .hover\:-translate-y-64:hover{
   --transform-translate-y: -16rem;
+}
+
+.hover\:-translate-y-68:hover{
+  --transform-translate-y: -24rem;
 }
 
 .hover\:-translate-y-px:hover{
@@ -18480,6 +18658,10 @@ span {
   --transform-translate-x: 16rem;
 }
 
+.focus\:translate-x-68:focus{
+  --transform-translate-x: 24rem;
+}
+
 .focus\:translate-x-px:focus{
   --transform-translate-x: 1px;
 }
@@ -18550,6 +18732,10 @@ span {
 
 .focus\:-translate-x-64:focus{
   --transform-translate-x: -16rem;
+}
+
+.focus\:-translate-x-68:focus{
+  --transform-translate-x: -24rem;
 }
 
 .focus\:-translate-x-px:focus{
@@ -18644,6 +18830,10 @@ span {
   --transform-translate-y: 16rem;
 }
 
+.focus\:translate-y-68:focus{
+  --transform-translate-y: 24rem;
+}
+
 .focus\:translate-y-px:focus{
   --transform-translate-y: 1px;
 }
@@ -18714,6 +18904,10 @@ span {
 
 .focus\:-translate-y-64:focus{
   --transform-translate-y: -16rem;
+}
+
+.focus\:-translate-y-68:focus{
+  --transform-translate-y: -24rem;
 }
 
 .focus\:-translate-y-px:focus{
@@ -19229,6 +19423,18 @@ span {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xs\:space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .xs\:space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xs\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -19443,6 +19649,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xs\:-space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .xs\:-space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xs\:-space-y-px > :not(template) ~ :not(template){
@@ -24649,6 +24867,10 @@ span {
     height: 16rem;
   }
 
+  .xs\:h-68{
+    height: 24rem;
+  }
+
   .xs\:h-auto{
     height: auto;
   }
@@ -24833,6 +25055,10 @@ span {
     margin: 16rem;
   }
 
+  .xs\:m-68{
+    margin: 24rem;
+  }
+
   .xs\:m-auto{
     margin: auto;
   }
@@ -24907,6 +25133,10 @@ span {
 
   .xs\:-m-64{
     margin: -16rem;
+  }
+
+  .xs\:-m-68{
+    margin: -24rem;
   }
 
   .xs\:-m-px{
@@ -25091,6 +25321,16 @@ span {
   .xs\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .xs\:my-68{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .xs\:mx-68{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .xs\:my-auto{
@@ -25281,6 +25521,16 @@ span {
   .xs\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .xs\:-my-68{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .xs\:-mx-68{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .xs\:-my-px{
@@ -25579,6 +25829,22 @@ span {
 
   .xs\:ml-64{
     margin-left: 16rem;
+  }
+
+  .xs\:mt-68{
+    margin-top: 24rem;
+  }
+
+  .xs\:mr-68{
+    margin-right: 24rem;
+  }
+
+  .xs\:mb-68{
+    margin-bottom: 24rem;
+  }
+
+  .xs\:ml-68{
+    margin-left: 24rem;
   }
 
   .xs\:mt-auto{
@@ -25883,6 +26149,22 @@ span {
 
   .xs\:-ml-64{
     margin-left: -16rem;
+  }
+
+  .xs\:-mt-68{
+    margin-top: -24rem;
+  }
+
+  .xs\:-mr-68{
+    margin-right: -24rem;
+  }
+
+  .xs\:-mb-68{
+    margin-bottom: -24rem;
+  }
+
+  .xs\:-ml-68{
+    margin-left: -24rem;
   }
 
   .xs\:-mt-px{
@@ -26199,6 +26481,10 @@ span {
     padding: 16rem;
   }
 
+  .xs\:p-68{
+    padding: 24rem;
+  }
+
   .xs\:p-px{
     padding: 1px;
   }
@@ -26381,6 +26667,16 @@ span {
   .xs\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .xs\:py-68{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .xs\:px-68{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .xs\:py-px{
@@ -26679,6 +26975,22 @@ span {
 
   .xs\:pl-64{
     padding-left: 16rem;
+  }
+
+  .xs\:pt-68{
+    padding-top: 24rem;
+  }
+
+  .xs\:pr-68{
+    padding-right: 24rem;
+  }
+
+  .xs\:pb-68{
+    padding-bottom: 24rem;
+  }
+
+  .xs\:pl-68{
+    padding-left: 24rem;
   }
 
   .xs\:pt-px{
@@ -34189,6 +34501,10 @@ span {
     width: 16rem;
   }
 
+  .xs\:w-68{
+    width: 24rem;
+  }
+
   .xs\:w-auto{
     width: auto;
   }
@@ -34427,6 +34743,11 @@ span {
     gap: 16rem;
   }
 
+  .xs\:gap-68{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .xs\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -34540,6 +34861,12 @@ span {
          column-gap: 16rem;
   }
 
+  .xs\:col-gap-68{
+    grid-column-gap: 24rem;
+    -moz-column-gap: 24rem;
+         column-gap: 24rem;
+  }
+
   .xs\:col-gap-px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
@@ -34634,6 +34961,11 @@ span {
   .xs\:row-gap-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .xs\:row-gap-68{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .xs\:row-gap-px{
@@ -35590,6 +35922,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xs\:translate-x-68{
+    --transform-translate-x: 24rem;
+  }
+
   .xs\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -35660,6 +35996,10 @@ span {
 
   .xs\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .xs\:-translate-x-68{
+    --transform-translate-x: -24rem;
   }
 
   .xs\:-translate-x-px{
@@ -35754,6 +36094,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xs\:translate-y-68{
+    --transform-translate-y: 24rem;
+  }
+
   .xs\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -35824,6 +36168,10 @@ span {
 
   .xs\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .xs\:-translate-y-68{
+    --transform-translate-y: -24rem;
   }
 
   .xs\:-translate-y-px{
@@ -35918,6 +36266,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xs\:hover\:translate-x-68:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .xs\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -35988,6 +36340,10 @@ span {
 
   .xs\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .xs\:hover\:-translate-x-68:hover{
+    --transform-translate-x: -24rem;
   }
 
   .xs\:hover\:-translate-x-px:hover{
@@ -36082,6 +36438,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xs\:hover\:translate-y-68:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .xs\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -36152,6 +36512,10 @@ span {
 
   .xs\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .xs\:hover\:-translate-y-68:hover{
+    --transform-translate-y: -24rem;
   }
 
   .xs\:hover\:-translate-y-px:hover{
@@ -36246,6 +36610,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xs\:focus\:translate-x-68:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .xs\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -36316,6 +36684,10 @@ span {
 
   .xs\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .xs\:focus\:-translate-x-68:focus{
+    --transform-translate-x: -24rem;
   }
 
   .xs\:focus\:-translate-x-px:focus{
@@ -36410,6 +36782,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xs\:focus\:translate-y-68:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .xs\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -36480,6 +36856,10 @@ span {
 
   .xs\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .xs\:focus\:-translate-y-68:focus{
+    --transform-translate-y: -24rem;
   }
 
   .xs\:focus\:-translate-y-px:focus{
@@ -36996,6 +37376,18 @@ span {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .sm\:space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .sm\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -37210,6 +37602,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:-space-y-px > :not(template) ~ :not(template){
@@ -42416,6 +42820,10 @@ span {
     height: 16rem;
   }
 
+  .sm\:h-68{
+    height: 24rem;
+  }
+
   .sm\:h-auto{
     height: auto;
   }
@@ -42600,6 +43008,10 @@ span {
     margin: 16rem;
   }
 
+  .sm\:m-68{
+    margin: 24rem;
+  }
+
   .sm\:m-auto{
     margin: auto;
   }
@@ -42674,6 +43086,10 @@ span {
 
   .sm\:-m-64{
     margin: -16rem;
+  }
+
+  .sm\:-m-68{
+    margin: -24rem;
   }
 
   .sm\:-m-px{
@@ -42858,6 +43274,16 @@ span {
   .sm\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .sm\:my-68{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .sm\:mx-68{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .sm\:my-auto{
@@ -43048,6 +43474,16 @@ span {
   .sm\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .sm\:-my-68{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .sm\:-mx-68{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .sm\:-my-px{
@@ -43346,6 +43782,22 @@ span {
 
   .sm\:ml-64{
     margin-left: 16rem;
+  }
+
+  .sm\:mt-68{
+    margin-top: 24rem;
+  }
+
+  .sm\:mr-68{
+    margin-right: 24rem;
+  }
+
+  .sm\:mb-68{
+    margin-bottom: 24rem;
+  }
+
+  .sm\:ml-68{
+    margin-left: 24rem;
   }
 
   .sm\:mt-auto{
@@ -43650,6 +44102,22 @@ span {
 
   .sm\:-ml-64{
     margin-left: -16rem;
+  }
+
+  .sm\:-mt-68{
+    margin-top: -24rem;
+  }
+
+  .sm\:-mr-68{
+    margin-right: -24rem;
+  }
+
+  .sm\:-mb-68{
+    margin-bottom: -24rem;
+  }
+
+  .sm\:-ml-68{
+    margin-left: -24rem;
   }
 
   .sm\:-mt-px{
@@ -43966,6 +44434,10 @@ span {
     padding: 16rem;
   }
 
+  .sm\:p-68{
+    padding: 24rem;
+  }
+
   .sm\:p-px{
     padding: 1px;
   }
@@ -44148,6 +44620,16 @@ span {
   .sm\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .sm\:py-68{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .sm\:px-68{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .sm\:py-px{
@@ -44446,6 +44928,22 @@ span {
 
   .sm\:pl-64{
     padding-left: 16rem;
+  }
+
+  .sm\:pt-68{
+    padding-top: 24rem;
+  }
+
+  .sm\:pr-68{
+    padding-right: 24rem;
+  }
+
+  .sm\:pb-68{
+    padding-bottom: 24rem;
+  }
+
+  .sm\:pl-68{
+    padding-left: 24rem;
   }
 
   .sm\:pt-px{
@@ -51956,6 +52454,10 @@ span {
     width: 16rem;
   }
 
+  .sm\:w-68{
+    width: 24rem;
+  }
+
   .sm\:w-auto{
     width: auto;
   }
@@ -52194,6 +52696,11 @@ span {
     gap: 16rem;
   }
 
+  .sm\:gap-68{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .sm\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -52307,6 +52814,12 @@ span {
          column-gap: 16rem;
   }
 
+  .sm\:col-gap-68{
+    grid-column-gap: 24rem;
+    -moz-column-gap: 24rem;
+         column-gap: 24rem;
+  }
+
   .sm\:col-gap-px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
@@ -52401,6 +52914,11 @@ span {
   .sm\:row-gap-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .sm\:row-gap-68{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .sm\:row-gap-px{
@@ -53357,6 +53875,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:translate-x-68{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -53427,6 +53949,10 @@ span {
 
   .sm\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:-translate-x-68{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:-translate-x-px{
@@ -53521,6 +54047,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:translate-y-68{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -53591,6 +54121,10 @@ span {
 
   .sm\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:-translate-y-68{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:-translate-y-px{
@@ -53685,6 +54219,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:hover\:translate-x-68:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -53755,6 +54293,10 @@ span {
 
   .sm\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:hover\:-translate-x-68:hover{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:hover\:-translate-x-px:hover{
@@ -53849,6 +54391,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:hover\:translate-y-68:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -53919,6 +54465,10 @@ span {
 
   .sm\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:hover\:-translate-y-68:hover{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:hover\:-translate-y-px:hover{
@@ -54013,6 +54563,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .sm\:focus\:translate-x-68:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .sm\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -54083,6 +54637,10 @@ span {
 
   .sm\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .sm\:focus\:-translate-x-68:focus{
+    --transform-translate-x: -24rem;
   }
 
   .sm\:focus\:-translate-x-px:focus{
@@ -54177,6 +54735,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .sm\:focus\:translate-y-68:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .sm\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -54247,6 +54809,10 @@ span {
 
   .sm\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .sm\:focus\:-translate-y-68:focus{
+    --transform-translate-y: -24rem;
   }
 
   .sm\:focus\:-translate-y-px:focus{
@@ -54763,6 +55329,18 @@ span {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .md\:space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .md\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -54977,6 +55555,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:-space-y-px > :not(template) ~ :not(template){
@@ -60183,6 +60773,10 @@ span {
     height: 16rem;
   }
 
+  .md\:h-68{
+    height: 24rem;
+  }
+
   .md\:h-auto{
     height: auto;
   }
@@ -60367,6 +60961,10 @@ span {
     margin: 16rem;
   }
 
+  .md\:m-68{
+    margin: 24rem;
+  }
+
   .md\:m-auto{
     margin: auto;
   }
@@ -60441,6 +61039,10 @@ span {
 
   .md\:-m-64{
     margin: -16rem;
+  }
+
+  .md\:-m-68{
+    margin: -24rem;
   }
 
   .md\:-m-px{
@@ -60625,6 +61227,16 @@ span {
   .md\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .md\:my-68{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .md\:mx-68{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .md\:my-auto{
@@ -60815,6 +61427,16 @@ span {
   .md\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .md\:-my-68{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .md\:-mx-68{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .md\:-my-px{
@@ -61113,6 +61735,22 @@ span {
 
   .md\:ml-64{
     margin-left: 16rem;
+  }
+
+  .md\:mt-68{
+    margin-top: 24rem;
+  }
+
+  .md\:mr-68{
+    margin-right: 24rem;
+  }
+
+  .md\:mb-68{
+    margin-bottom: 24rem;
+  }
+
+  .md\:ml-68{
+    margin-left: 24rem;
   }
 
   .md\:mt-auto{
@@ -61417,6 +62055,22 @@ span {
 
   .md\:-ml-64{
     margin-left: -16rem;
+  }
+
+  .md\:-mt-68{
+    margin-top: -24rem;
+  }
+
+  .md\:-mr-68{
+    margin-right: -24rem;
+  }
+
+  .md\:-mb-68{
+    margin-bottom: -24rem;
+  }
+
+  .md\:-ml-68{
+    margin-left: -24rem;
   }
 
   .md\:-mt-px{
@@ -61733,6 +62387,10 @@ span {
     padding: 16rem;
   }
 
+  .md\:p-68{
+    padding: 24rem;
+  }
+
   .md\:p-px{
     padding: 1px;
   }
@@ -61915,6 +62573,16 @@ span {
   .md\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .md\:py-68{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .md\:px-68{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .md\:py-px{
@@ -62213,6 +62881,22 @@ span {
 
   .md\:pl-64{
     padding-left: 16rem;
+  }
+
+  .md\:pt-68{
+    padding-top: 24rem;
+  }
+
+  .md\:pr-68{
+    padding-right: 24rem;
+  }
+
+  .md\:pb-68{
+    padding-bottom: 24rem;
+  }
+
+  .md\:pl-68{
+    padding-left: 24rem;
   }
 
   .md\:pt-px{
@@ -69723,6 +70407,10 @@ span {
     width: 16rem;
   }
 
+  .md\:w-68{
+    width: 24rem;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -69961,6 +70649,11 @@ span {
     gap: 16rem;
   }
 
+  .md\:gap-68{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .md\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -70074,6 +70767,12 @@ span {
          column-gap: 16rem;
   }
 
+  .md\:col-gap-68{
+    grid-column-gap: 24rem;
+    -moz-column-gap: 24rem;
+         column-gap: 24rem;
+  }
+
   .md\:col-gap-px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
@@ -70168,6 +70867,11 @@ span {
   .md\:row-gap-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .md\:row-gap-68{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .md\:row-gap-px{
@@ -71124,6 +71828,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .md\:translate-x-68{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -71194,6 +71902,10 @@ span {
 
   .md\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:-translate-x-68{
+    --transform-translate-x: -24rem;
   }
 
   .md\:-translate-x-px{
@@ -71288,6 +72000,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .md\:translate-y-68{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -71358,6 +72074,10 @@ span {
 
   .md\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:-translate-y-68{
+    --transform-translate-y: -24rem;
   }
 
   .md\:-translate-y-px{
@@ -71452,6 +72172,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .md\:hover\:translate-x-68:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -71522,6 +72246,10 @@ span {
 
   .md\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:hover\:-translate-x-68:hover{
+    --transform-translate-x: -24rem;
   }
 
   .md\:hover\:-translate-x-px:hover{
@@ -71616,6 +72344,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .md\:hover\:translate-y-68:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -71686,6 +72418,10 @@ span {
 
   .md\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:hover\:-translate-y-68:hover{
+    --transform-translate-y: -24rem;
   }
 
   .md\:hover\:-translate-y-px:hover{
@@ -71780,6 +72516,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .md\:focus\:translate-x-68:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .md\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -71850,6 +72590,10 @@ span {
 
   .md\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .md\:focus\:-translate-x-68:focus{
+    --transform-translate-x: -24rem;
   }
 
   .md\:focus\:-translate-x-px:focus{
@@ -71944,6 +72688,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .md\:focus\:translate-y-68:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .md\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -72014,6 +72762,10 @@ span {
 
   .md\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .md\:focus\:-translate-y-68:focus{
+    --transform-translate-y: -24rem;
   }
 
   .md\:focus\:-translate-y-px:focus{
@@ -72530,6 +73282,18 @@ span {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .lg\:space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .lg\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -72744,6 +73508,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:-space-y-px > :not(template) ~ :not(template){
@@ -77950,6 +78726,10 @@ span {
     height: 16rem;
   }
 
+  .lg\:h-68{
+    height: 24rem;
+  }
+
   .lg\:h-auto{
     height: auto;
   }
@@ -78134,6 +78914,10 @@ span {
     margin: 16rem;
   }
 
+  .lg\:m-68{
+    margin: 24rem;
+  }
+
   .lg\:m-auto{
     margin: auto;
   }
@@ -78208,6 +78992,10 @@ span {
 
   .lg\:-m-64{
     margin: -16rem;
+  }
+
+  .lg\:-m-68{
+    margin: -24rem;
   }
 
   .lg\:-m-px{
@@ -78392,6 +79180,16 @@ span {
   .lg\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .lg\:my-68{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .lg\:mx-68{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .lg\:my-auto{
@@ -78582,6 +79380,16 @@ span {
   .lg\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .lg\:-my-68{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .lg\:-mx-68{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .lg\:-my-px{
@@ -78880,6 +79688,22 @@ span {
 
   .lg\:ml-64{
     margin-left: 16rem;
+  }
+
+  .lg\:mt-68{
+    margin-top: 24rem;
+  }
+
+  .lg\:mr-68{
+    margin-right: 24rem;
+  }
+
+  .lg\:mb-68{
+    margin-bottom: 24rem;
+  }
+
+  .lg\:ml-68{
+    margin-left: 24rem;
   }
 
   .lg\:mt-auto{
@@ -79184,6 +80008,22 @@ span {
 
   .lg\:-ml-64{
     margin-left: -16rem;
+  }
+
+  .lg\:-mt-68{
+    margin-top: -24rem;
+  }
+
+  .lg\:-mr-68{
+    margin-right: -24rem;
+  }
+
+  .lg\:-mb-68{
+    margin-bottom: -24rem;
+  }
+
+  .lg\:-ml-68{
+    margin-left: -24rem;
   }
 
   .lg\:-mt-px{
@@ -79500,6 +80340,10 @@ span {
     padding: 16rem;
   }
 
+  .lg\:p-68{
+    padding: 24rem;
+  }
+
   .lg\:p-px{
     padding: 1px;
   }
@@ -79682,6 +80526,16 @@ span {
   .lg\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .lg\:py-68{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .lg\:px-68{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .lg\:py-px{
@@ -79980,6 +80834,22 @@ span {
 
   .lg\:pl-64{
     padding-left: 16rem;
+  }
+
+  .lg\:pt-68{
+    padding-top: 24rem;
+  }
+
+  .lg\:pr-68{
+    padding-right: 24rem;
+  }
+
+  .lg\:pb-68{
+    padding-bottom: 24rem;
+  }
+
+  .lg\:pl-68{
+    padding-left: 24rem;
   }
 
   .lg\:pt-px{
@@ -87490,6 +88360,10 @@ span {
     width: 16rem;
   }
 
+  .lg\:w-68{
+    width: 24rem;
+  }
+
   .lg\:w-auto{
     width: auto;
   }
@@ -87728,6 +88602,11 @@ span {
     gap: 16rem;
   }
 
+  .lg\:gap-68{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .lg\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -87841,6 +88720,12 @@ span {
          column-gap: 16rem;
   }
 
+  .lg\:col-gap-68{
+    grid-column-gap: 24rem;
+    -moz-column-gap: 24rem;
+         column-gap: 24rem;
+  }
+
   .lg\:col-gap-px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
@@ -87935,6 +88820,11 @@ span {
   .lg\:row-gap-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .lg\:row-gap-68{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .lg\:row-gap-px{
@@ -88891,6 +89781,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:translate-x-68{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -88961,6 +89855,10 @@ span {
 
   .lg\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:-translate-x-68{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:-translate-x-px{
@@ -89055,6 +89953,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:translate-y-68{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -89125,6 +90027,10 @@ span {
 
   .lg\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:-translate-y-68{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:-translate-y-px{
@@ -89219,6 +90125,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:hover\:translate-x-68:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -89289,6 +90199,10 @@ span {
 
   .lg\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:hover\:-translate-x-68:hover{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:hover\:-translate-x-px:hover{
@@ -89383,6 +90297,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:hover\:translate-y-68:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -89453,6 +90371,10 @@ span {
 
   .lg\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:hover\:-translate-y-68:hover{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:hover\:-translate-y-px:hover{
@@ -89547,6 +90469,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .lg\:focus\:translate-x-68:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .lg\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -89617,6 +90543,10 @@ span {
 
   .lg\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .lg\:focus\:-translate-x-68:focus{
+    --transform-translate-x: -24rem;
   }
 
   .lg\:focus\:-translate-x-px:focus{
@@ -89711,6 +90641,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .lg\:focus\:translate-y-68:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .lg\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -89781,6 +90715,10 @@ span {
 
   .lg\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .lg\:focus\:-translate-y-68:focus{
+    --transform-translate-y: -24rem;
   }
 
   .lg\:focus\:-translate-y-px:focus{
@@ -90297,6 +91235,18 @@ span {
     margin-left: calc(16rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xl\:space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(24rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(24rem * var(--space-x-reverse));
+    margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xl\:space-y-px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
@@ -90511,6 +91461,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-16rem * var(--space-x-reverse));
     margin-left: calc(-16rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-68 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-24rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-24rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-68 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-24rem * var(--space-x-reverse));
+    margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:-space-y-px > :not(template) ~ :not(template){
@@ -95717,6 +96679,10 @@ span {
     height: 16rem;
   }
 
+  .xl\:h-68{
+    height: 24rem;
+  }
+
   .xl\:h-auto{
     height: auto;
   }
@@ -95901,6 +96867,10 @@ span {
     margin: 16rem;
   }
 
+  .xl\:m-68{
+    margin: 24rem;
+  }
+
   .xl\:m-auto{
     margin: auto;
   }
@@ -95975,6 +96945,10 @@ span {
 
   .xl\:-m-64{
     margin: -16rem;
+  }
+
+  .xl\:-m-68{
+    margin: -24rem;
   }
 
   .xl\:-m-px{
@@ -96159,6 +97133,16 @@ span {
   .xl\:mx-64{
     margin-left: 16rem;
     margin-right: 16rem;
+  }
+
+  .xl\:my-68{
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+  }
+
+  .xl\:mx-68{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 
   .xl\:my-auto{
@@ -96349,6 +97333,16 @@ span {
   .xl\:-mx-64{
     margin-left: -16rem;
     margin-right: -16rem;
+  }
+
+  .xl\:-my-68{
+    margin-top: -24rem;
+    margin-bottom: -24rem;
+  }
+
+  .xl\:-mx-68{
+    margin-left: -24rem;
+    margin-right: -24rem;
   }
 
   .xl\:-my-px{
@@ -96647,6 +97641,22 @@ span {
 
   .xl\:ml-64{
     margin-left: 16rem;
+  }
+
+  .xl\:mt-68{
+    margin-top: 24rem;
+  }
+
+  .xl\:mr-68{
+    margin-right: 24rem;
+  }
+
+  .xl\:mb-68{
+    margin-bottom: 24rem;
+  }
+
+  .xl\:ml-68{
+    margin-left: 24rem;
   }
 
   .xl\:mt-auto{
@@ -96951,6 +97961,22 @@ span {
 
   .xl\:-ml-64{
     margin-left: -16rem;
+  }
+
+  .xl\:-mt-68{
+    margin-top: -24rem;
+  }
+
+  .xl\:-mr-68{
+    margin-right: -24rem;
+  }
+
+  .xl\:-mb-68{
+    margin-bottom: -24rem;
+  }
+
+  .xl\:-ml-68{
+    margin-left: -24rem;
   }
 
   .xl\:-mt-px{
@@ -97267,6 +98293,10 @@ span {
     padding: 16rem;
   }
 
+  .xl\:p-68{
+    padding: 24rem;
+  }
+
   .xl\:p-px{
     padding: 1px;
   }
@@ -97449,6 +98479,16 @@ span {
   .xl\:px-64{
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .xl\:py-68{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+  }
+
+  .xl\:px-68{
+    padding-left: 24rem;
+    padding-right: 24rem;
   }
 
   .xl\:py-px{
@@ -97747,6 +98787,22 @@ span {
 
   .xl\:pl-64{
     padding-left: 16rem;
+  }
+
+  .xl\:pt-68{
+    padding-top: 24rem;
+  }
+
+  .xl\:pr-68{
+    padding-right: 24rem;
+  }
+
+  .xl\:pb-68{
+    padding-bottom: 24rem;
+  }
+
+  .xl\:pl-68{
+    padding-left: 24rem;
   }
 
   .xl\:pt-px{
@@ -105257,6 +106313,10 @@ span {
     width: 16rem;
   }
 
+  .xl\:w-68{
+    width: 24rem;
+  }
+
   .xl\:w-auto{
     width: auto;
   }
@@ -105495,6 +106555,11 @@ span {
     gap: 16rem;
   }
 
+  .xl\:gap-68{
+    grid-gap: 24rem;
+    gap: 24rem;
+  }
+
   .xl\:gap-px{
     grid-gap: 1px;
     gap: 1px;
@@ -105608,6 +106673,12 @@ span {
          column-gap: 16rem;
   }
 
+  .xl\:col-gap-68{
+    grid-column-gap: 24rem;
+    -moz-column-gap: 24rem;
+         column-gap: 24rem;
+  }
+
   .xl\:col-gap-px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
@@ -105702,6 +106773,11 @@ span {
   .xl\:row-gap-64{
     grid-row-gap: 16rem;
     row-gap: 16rem;
+  }
+
+  .xl\:row-gap-68{
+    grid-row-gap: 24rem;
+    row-gap: 24rem;
   }
 
   .xl\:row-gap-px{
@@ -106658,6 +107734,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:translate-x-68{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:translate-x-px{
     --transform-translate-x: 1px;
   }
@@ -106728,6 +107808,10 @@ span {
 
   .xl\:-translate-x-64{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:-translate-x-68{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:-translate-x-px{
@@ -106822,6 +107906,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:translate-y-68{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:translate-y-px{
     --transform-translate-y: 1px;
   }
@@ -106892,6 +107980,10 @@ span {
 
   .xl\:-translate-y-64{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:-translate-y-68{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:-translate-y-px{
@@ -106986,6 +108078,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:hover\:translate-x-68:hover{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:hover\:translate-x-px:hover{
     --transform-translate-x: 1px;
   }
@@ -107056,6 +108152,10 @@ span {
 
   .xl\:hover\:-translate-x-64:hover{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:hover\:-translate-x-68:hover{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:hover\:-translate-x-px:hover{
@@ -107150,6 +108250,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:hover\:translate-y-68:hover{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:hover\:translate-y-px:hover{
     --transform-translate-y: 1px;
   }
@@ -107220,6 +108324,10 @@ span {
 
   .xl\:hover\:-translate-y-64:hover{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:hover\:-translate-y-68:hover{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:hover\:-translate-y-px:hover{
@@ -107314,6 +108422,10 @@ span {
     --transform-translate-x: 16rem;
   }
 
+  .xl\:focus\:translate-x-68:focus{
+    --transform-translate-x: 24rem;
+  }
+
   .xl\:focus\:translate-x-px:focus{
     --transform-translate-x: 1px;
   }
@@ -107384,6 +108496,10 @@ span {
 
   .xl\:focus\:-translate-x-64:focus{
     --transform-translate-x: -16rem;
+  }
+
+  .xl\:focus\:-translate-x-68:focus{
+    --transform-translate-x: -24rem;
   }
 
   .xl\:focus\:-translate-x-px:focus{
@@ -107478,6 +108594,10 @@ span {
     --transform-translate-y: 16rem;
   }
 
+  .xl\:focus\:translate-y-68:focus{
+    --transform-translate-y: 24rem;
+  }
+
   .xl\:focus\:translate-y-px:focus{
     --transform-translate-y: 1px;
   }
@@ -107548,6 +108668,10 @@ span {
 
   .xl\:focus\:-translate-y-64:focus{
     --transform-translate-y: -16rem;
+  }
+
+  .xl\:focus\:-translate-y-68:focus{
+    --transform-translate-y: -24rem;
   }
 
   .xl\:focus\:-translate-y-px:focus{
