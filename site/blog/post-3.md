@@ -29,7 +29,7 @@ A scene depicting long distance runners, originally found on a Panathenaic ampho
 It is thought that human running evolved at least four and a half million years ago out of the ability of the ape-like Australopithecus, an early ancestor of humans, to walk upright on two legs.
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
->><span>John Smith, CEO of Github.</span>
+>><div class="text-center text-grey-300"><span class="font-bold inline-block">John Smith</span>, CEO of Github.</div>
 
 The theory proposed considered to be the most likely evolution of running is of early humans’ developing as endurance runners from the practice of persistence hunting of animals, the activity of following and chasing until a prey is too exhausted to flee, succumbing to “chase myopathy” of the Nariokotome Skeleton provided further evidence for the Carrier theory.
 
