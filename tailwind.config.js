@@ -286,7 +286,7 @@ module.exports = {
     },
     fontSize: {
       0: '11px',
-      1: '14px',
+      default: '14px',
       xs: '16px',
       sm: '20px',
       base: '24px',
@@ -351,7 +351,7 @@ module.exports = {
       screen: '100vh',
     },
     maxWidth: {
-      xs: '20rem',
+      xs: '22rem',
       sm: '24rem',
       md: '28rem',
       lg: '32rem',
