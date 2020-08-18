@@ -756,8 +756,8 @@ span {
   border-top-width: 1px;
   border-bottom-width: 1px;
   --border-opacity: 1;
-  border-color: #f4f4f4;
-  border-color: rgba(244, 244, 244, var(--border-opacity));
+  border-color: #707070;
+  border-color: rgba(112, 112, 112, var(--border-opacity));
 }
 
 .content > blockquote > p {

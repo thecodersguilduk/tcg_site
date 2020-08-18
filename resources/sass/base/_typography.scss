@@ -59,7 +59,7 @@ span {
   }
 
   & > blockquote {
-    @apply my-6 py-10 border-t-1 border-b-1 border-grey-100;
+    @apply my-6 py-10 border-t-1 border-b-1 border-grey-300;
 
     & > p {
       @apply text-blue-200 mx-auto mb-6 text-base font-semibold font-heading text-center;
