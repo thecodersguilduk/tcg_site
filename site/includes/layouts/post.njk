@@ -12,7 +12,7 @@ related_articles: true
             {% if featured_image %}
 
                 <figure class="">
-                    <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}" class="max-h-68 max-w-4xl h-40 sm:h-56 md:h-auto object-cover">
+                    <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="max-h-68 max-w-4xl h-40 sm:h-56 md:h-auto object-cover">
                 </figure>
 
             {% endif %}
@@ -37,7 +37,7 @@ related_articles: true
               <div class="flex">
 
                 <div class="mr-2 w-10">
-                  <img src="../../images/blog/{{avatar}}" class="w-full object-cover rounded-50 block" />
+                  <img src="../../images/blog/{{avatar}}" alt="{{avatar_alt}}" class="w-full object-cover rounded-50 block" />
                 </div>
 
                 <div class="my-auto">
