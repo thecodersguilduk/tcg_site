@@ -50,19 +50,23 @@ span {
 
 	// paragraph
 	& > p {
-    @apply mb-6;
+    @apply mb-8;
 
         // intro paragraph
 		&:first-child {
-			@apply text-blue-200;
+			@apply text-blue-200 text-sm leading-lg;
 		}
   }
 
+  & > h2 {
+    @apply text-lg leading-lg mb-8;
+  }
+
   & > blockquote {
-    @apply my-6 py-10 border-t-1 border-b-1 border-grey-300;
+    @apply mb-8 py-12 border-t-1 border-b-1 border-grey-300;
 
     & > p {
-      @apply text-blue-200 mx-auto mb-6 text-base font-semibold font-heading text-center;
+      @apply text-blue-200 mx-auto mb-6 text-lg font-bold font-heading text-center;
 
       &::first-letter {
         margin-left: 10px;
@@ -84,15 +88,15 @@ span {
     }
 
     span {
-      @apply font-paragraph text-xs text-center;
+      @apply font-paragraph text-xs leading-md text-center;
     }
   }
 
   & > figure {
-    @apply mb-6;
+    @apply mb-8;
     
     figcaption {
-      @apply text-0 leading-xs text-black my-2;
+      @apply text-0 leading-xs text-black mt-2;
     }
   }
 }

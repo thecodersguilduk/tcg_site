@@ -6,24 +6,24 @@ related_articles: true
 {# a post layout #}
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-    <article id="container-centre" class="column centre flex-1 mb-24 mx-auto pt-20">
+    <article id="container-centre" class="column centre flex-1 mb-20 mx-auto pt-20">
 
-        <div class="mb-6 max-w-5xl">
+        <div class="mb-8 max-w-5xl">
             {% if featured_image %}
 
                 <figure class="">
-                    <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}" class="max-h-68 object-cover">
+                    <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}" class="max-h-68 max-w-4xl object-cover">
                 </figure>
 
             {% endif %}
 
-            <div class="md:px-20 relative pt-10 max-w-4xl mx-auto inner">
+            <div class="md:px-20 relative pt-10 max-w-3xl mx-auto inner">
               {% if tags %}
                 <div class="category absolute top-0 flex -my-4 -mx-1">
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <div class="px-1">
-                        <a href="/category/{{ item }}" class="px-2 py-1 bg-red-100 text-white font-semibold rounded block font-heading">{{ item | capitalize }}</a>
+                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-default leading-sm">{{ item | capitalize }}</a>
                       </div>
                     {%- endif -%}
                   {% endfor %}
@@ -36,12 +36,12 @@ related_articles: true
 
               <div class="flex">
 
-                <div class="mr-2 w-12">
+                <div class="mr-2 w-10">
                   <img src="../../images/blog/{{avatar}}" class="w-full object-cover rounded-50 block" />
                 </div>
 
                 <div class="my-auto">
-                  <p class="time text-blue-200 font-semibold text-0 leading-xs font-heading mb-1">{{ time }} read time</p>
+                  <p class="time text-blue-200 font-bold font-heading mb-1 text-default leading-sm">{{ time }} read time</p>
                   <div class="">
                     <p class="author text-black text-0 leading-xs">
                       By {{ author }}
@@ -57,15 +57,15 @@ related_articles: true
 
         </div>
 
-        <div class="content post md:px-20 max-w-4xl mx-auto inner">
+        <div class="content post md:px-20 max-w-3xl mx-auto inner">
 
             {{ content | safe }}
 
         </div>
 
-        <div class="mt-8 md:px-20 max-w-4xl mx-auto inner">
+        <div class="mt-10 md:px-20 max-w-3xl mx-auto inner">
 
-            <div class="border-t border-grey-300 pt-6">
+            <div class="border-t border-grey-300 pt-8">
 
             {% if tags %}
               <div>
@@ -73,7 +73,7 @@ related_articles: true
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <li class="mr-2">
-                          <a class="px-2 py-1 bg-red-100 text-white font-semibold rounded block font-heading" href="/category/{{ item }}">{{ item | capitalize }}</a>
+                          <a class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-default leading-sm" href="/category/{{ item }}">{{ item | capitalize }}</a>
                       </li>
                     {%- endif -%}
                   {% endfor %}
@@ -85,12 +85,12 @@ related_articles: true
                 <div class="mt-6">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
-                      <p class="text-black"><span class="font-heading text-black text-sm font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-base font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-base font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                   {% if prevPost %}
                     <div>
-                      <p class="text-black"><span class="font-heading text-black text-sm font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-sm font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-base font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-base font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                 </div>

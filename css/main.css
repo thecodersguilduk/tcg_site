@@ -638,7 +638,7 @@ html {
 }
 
 .max-h-68 {
-  max-height: 24rem;
+  max-height: 25rem;
 }
 
 .link {
@@ -747,20 +747,27 @@ span {
 }
 
 .content > p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .content > p:first-child {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.content > h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 2rem;
 }
 
 .content > blockquote {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   border-top-width: 1px;
   border-bottom-width: 1px;
   --border-opacity: 1;
@@ -776,7 +783,7 @@ span {
   margin-right: auto;
   margin-bottom: 1.5rem;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: center;
 }
@@ -801,11 +808,12 @@ span {
 .content > blockquote span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
+  line-height: 24px;
   text-align: center;
 }
 
 .content > figure {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .content > figure figcaption {
@@ -815,7 +823,6 @@ span {
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .container{
@@ -1120,7 +1127,7 @@ span {
 }
 
 .form .row label:after {
-  font-size: 20px;
+  font-size: 18px;
   --text-opacity: 1;
   color: #718096;
   color: rgba(113, 128, 150, var(--text-opacity));
@@ -6939,23 +6946,31 @@ span {
   font-size: 11px;
 }
 
+.text-default{
+  font-size: 14px;
+}
+
 .text-xs{
   font-size: 16px;
 }
 
 .text-sm{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .text-base{
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .text-lg{
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .text-xl{
+  font-size: 32px;
+}
+
+.text-xxl{
   font-size: 40px;
 }
 
@@ -6989,6 +7004,22 @@ span {
 
 .leading-xs{
   line-height: 16px;
+}
+
+.leading-sm{
+  line-height: 19px;
+}
+
+.leading-md{
+  line-height: 24px;
+}
+
+.leading-lg{
+  line-height: 30px;
+}
+
+.leading-xl{
+  line-height: 32px;
 }
 
 .leading-tight{
@@ -8264,11 +8295,11 @@ span {
 }
 
 .max-w-3xl{
-  max-width: 48rem;
+  max-width: 54rem;
 }
 
 .max-w-4xl{
-  max-width: 56rem;
+  max-width: 58rem;
 }
 
 .max-w-5xl{
@@ -13825,7 +13856,7 @@ span {
 }
 
 .shadow-primary{
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .shadow{
@@ -13861,7 +13892,7 @@ span {
 }
 
 .hover\:shadow-primary:hover{
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hover\:shadow:hover{
@@ -13897,7 +13928,7 @@ span {
 }
 
 .focus\:shadow-primary:focus{
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .focus\:shadow:focus{
@@ -24891,23 +24922,31 @@ span {
     font-size: 11px;
   }
 
+  .xs\:text-default{
+    font-size: 14px;
+  }
+
   .xs\:text-xs{
     font-size: 16px;
   }
 
   .xs\:text-sm{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .xs\:text-base{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .xs\:text-lg{
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .xs\:text-xl{
+    font-size: 32px;
+  }
+
+  .xs\:text-xxl{
     font-size: 40px;
   }
 
@@ -24941,6 +24980,22 @@ span {
 
   .xs\:leading-xs{
     line-height: 16px;
+  }
+
+  .xs\:leading-sm{
+    line-height: 19px;
+  }
+
+  .xs\:leading-md{
+    line-height: 24px;
+  }
+
+  .xs\:leading-lg{
+    line-height: 30px;
+  }
+
+  .xs\:leading-xl{
+    line-height: 32px;
   }
 
   .xs\:leading-tight{
@@ -26216,11 +26271,11 @@ span {
   }
 
   .xs\:max-w-3xl{
-    max-width: 48rem;
+    max-width: 54rem;
   }
 
   .xs\:max-w-4xl{
-    max-width: 56rem;
+    max-width: 58rem;
   }
 
   .xs\:max-w-5xl{
@@ -31777,7 +31832,7 @@ span {
   }
 
   .xs\:shadow-primary{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xs\:shadow{
@@ -31813,7 +31868,7 @@ span {
   }
 
   .xs\:hover\:shadow-primary:hover{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xs\:hover\:shadow:hover{
@@ -31849,7 +31904,7 @@ span {
   }
 
   .xs\:focus\:shadow-primary:focus{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xs\:focus\:shadow:focus{
@@ -42844,23 +42899,31 @@ span {
     font-size: 11px;
   }
 
+  .sm\:text-default{
+    font-size: 14px;
+  }
+
   .sm\:text-xs{
     font-size: 16px;
   }
 
   .sm\:text-sm{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sm\:text-base{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .sm\:text-lg{
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .sm\:text-xl{
+    font-size: 32px;
+  }
+
+  .sm\:text-xxl{
     font-size: 40px;
   }
 
@@ -42894,6 +42957,22 @@ span {
 
   .sm\:leading-xs{
     line-height: 16px;
+  }
+
+  .sm\:leading-sm{
+    line-height: 19px;
+  }
+
+  .sm\:leading-md{
+    line-height: 24px;
+  }
+
+  .sm\:leading-lg{
+    line-height: 30px;
+  }
+
+  .sm\:leading-xl{
+    line-height: 32px;
   }
 
   .sm\:leading-tight{
@@ -44169,11 +44248,11 @@ span {
   }
 
   .sm\:max-w-3xl{
-    max-width: 48rem;
+    max-width: 54rem;
   }
 
   .sm\:max-w-4xl{
-    max-width: 56rem;
+    max-width: 58rem;
   }
 
   .sm\:max-w-5xl{
@@ -49730,7 +49809,7 @@ span {
   }
 
   .sm\:shadow-primary{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .sm\:shadow{
@@ -49766,7 +49845,7 @@ span {
   }
 
   .sm\:hover\:shadow-primary:hover{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .sm\:hover\:shadow:hover{
@@ -49802,7 +49881,7 @@ span {
   }
 
   .sm\:focus\:shadow-primary:focus{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .sm\:focus\:shadow:focus{
@@ -60797,23 +60876,31 @@ span {
     font-size: 11px;
   }
 
+  .md\:text-default{
+    font-size: 14px;
+  }
+
   .md\:text-xs{
     font-size: 16px;
   }
 
   .md\:text-sm{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .md\:text-base{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .md\:text-lg{
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .md\:text-xl{
+    font-size: 32px;
+  }
+
+  .md\:text-xxl{
     font-size: 40px;
   }
 
@@ -60847,6 +60934,22 @@ span {
 
   .md\:leading-xs{
     line-height: 16px;
+  }
+
+  .md\:leading-sm{
+    line-height: 19px;
+  }
+
+  .md\:leading-md{
+    line-height: 24px;
+  }
+
+  .md\:leading-lg{
+    line-height: 30px;
+  }
+
+  .md\:leading-xl{
+    line-height: 32px;
   }
 
   .md\:leading-tight{
@@ -62122,11 +62225,11 @@ span {
   }
 
   .md\:max-w-3xl{
-    max-width: 48rem;
+    max-width: 54rem;
   }
 
   .md\:max-w-4xl{
-    max-width: 56rem;
+    max-width: 58rem;
   }
 
   .md\:max-w-5xl{
@@ -67683,7 +67786,7 @@ span {
   }
 
   .md\:shadow-primary{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .md\:shadow{
@@ -67719,7 +67822,7 @@ span {
   }
 
   .md\:hover\:shadow-primary:hover{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .md\:hover\:shadow:hover{
@@ -67755,7 +67858,7 @@ span {
   }
 
   .md\:focus\:shadow-primary:focus{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .md\:focus\:shadow:focus{
@@ -78750,23 +78853,31 @@ span {
     font-size: 11px;
   }
 
+  .lg\:text-default{
+    font-size: 14px;
+  }
+
   .lg\:text-xs{
     font-size: 16px;
   }
 
   .lg\:text-sm{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .lg\:text-base{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .lg\:text-lg{
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .lg\:text-xl{
+    font-size: 32px;
+  }
+
+  .lg\:text-xxl{
     font-size: 40px;
   }
 
@@ -78800,6 +78911,22 @@ span {
 
   .lg\:leading-xs{
     line-height: 16px;
+  }
+
+  .lg\:leading-sm{
+    line-height: 19px;
+  }
+
+  .lg\:leading-md{
+    line-height: 24px;
+  }
+
+  .lg\:leading-lg{
+    line-height: 30px;
+  }
+
+  .lg\:leading-xl{
+    line-height: 32px;
   }
 
   .lg\:leading-tight{
@@ -80075,11 +80202,11 @@ span {
   }
 
   .lg\:max-w-3xl{
-    max-width: 48rem;
+    max-width: 54rem;
   }
 
   .lg\:max-w-4xl{
-    max-width: 56rem;
+    max-width: 58rem;
   }
 
   .lg\:max-w-5xl{
@@ -85636,7 +85763,7 @@ span {
   }
 
   .lg\:shadow-primary{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .lg\:shadow{
@@ -85672,7 +85799,7 @@ span {
   }
 
   .lg\:hover\:shadow-primary:hover{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .lg\:hover\:shadow:hover{
@@ -85708,7 +85835,7 @@ span {
   }
 
   .lg\:focus\:shadow-primary:focus{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .lg\:focus\:shadow:focus{
@@ -96703,23 +96830,31 @@ span {
     font-size: 11px;
   }
 
+  .xl\:text-default{
+    font-size: 14px;
+  }
+
   .xl\:text-xs{
     font-size: 16px;
   }
 
   .xl\:text-sm{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .xl\:text-base{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .xl\:text-lg{
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .xl\:text-xl{
+    font-size: 32px;
+  }
+
+  .xl\:text-xxl{
     font-size: 40px;
   }
 
@@ -96753,6 +96888,22 @@ span {
 
   .xl\:leading-xs{
     line-height: 16px;
+  }
+
+  .xl\:leading-sm{
+    line-height: 19px;
+  }
+
+  .xl\:leading-md{
+    line-height: 24px;
+  }
+
+  .xl\:leading-lg{
+    line-height: 30px;
+  }
+
+  .xl\:leading-xl{
+    line-height: 32px;
   }
 
   .xl\:leading-tight{
@@ -98028,11 +98179,11 @@ span {
   }
 
   .xl\:max-w-3xl{
-    max-width: 48rem;
+    max-width: 54rem;
   }
 
   .xl\:max-w-4xl{
-    max-width: 56rem;
+    max-width: 58rem;
   }
 
   .xl\:max-w-5xl{
@@ -103589,7 +103740,7 @@ span {
   }
 
   .xl\:shadow-primary{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xl\:shadow{
@@ -103625,7 +103776,7 @@ span {
   }
 
   .xl\:hover\:shadow-primary:hover{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xl\:hover\:shadow:hover{
@@ -103661,7 +103812,7 @@ span {
   }
 
   .xl\:focus\:shadow-primary:focus{
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .xl\:focus\:shadow:focus{
