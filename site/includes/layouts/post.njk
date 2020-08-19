@@ -12,7 +12,7 @@ related_articles: true
             {% if featured_image %}
 
                 <figure class="">
-                    <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}" class="max-h-68 max-w-4xl object-cover">
+                    <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}" class="max-h-68 max-w-4xl h-40 sm:h-56 md:h-auto object-cover">
                 </figure>
 
             {% endif %}
@@ -23,7 +23,7 @@ related_articles: true
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <div class="px-1">
-                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-default leading-sm">{{ item | capitalize }}</a>
+                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item | capitalize }}</a>
                       </div>
                     {%- endif -%}
                   {% endfor %}
@@ -41,12 +41,12 @@ related_articles: true
                 </div>
 
                 <div class="my-auto">
-                  <p class="time text-blue-200 font-bold font-heading mb-1 text-default leading-sm">{{ time }} read time</p>
+                  <p class="time text-blue-200 font-bold font-heading mb-1 text-sm leading-sm">{{ time }} read time</p>
                   <div class="">
-                    <p class="author text-black text-0 leading-xs">
+                    <p class="author text-black text-xs leading-xs">
                       By {{ author }}
-                      <span class="text-black text-0 leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ date }}" class="text-black text-0 my-auto">
+                      <span class="text-black text-xs leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ date }}" class="text-black text-xs my-auto">
                         {{ date | dateDisplay }}
                       </time>
                     </p>
@@ -73,7 +73,7 @@ related_articles: true
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <li class="mr-2">
-                          <a class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-default leading-sm" href="/category/{{ item }}">{{ item | capitalize }}</a>
+                          <a class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm" href="/category/{{ item }}">{{ item | capitalize }}</a>
                       </li>
                     {%- endif -%}
                   {% endfor %}
@@ -85,12 +85,12 @@ related_articles: true
                 <div class="mt-6">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
-                      <p class="text-black"><span class="font-heading text-black text-base font-bold">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-base font-bold border-b-2 border-blue-100 pb-1">{{ nextPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 leading-lg">{{ nextPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                   {% if prevPost %}
                     <div>
-                      <p class="text-black"><span class="font-heading text-black text-base font-bold">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-base font-bold border-b-2 border-blue-100 pb-1">{{ prevPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-lg">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 leading-lg">{{ prevPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                 </div>

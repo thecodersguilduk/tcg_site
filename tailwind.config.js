@@ -334,8 +334,9 @@ module.exports = {
       lg: '26px',
       xl: '30px',
       '2xl': '32px',
-      '3xl': '40px',
-      '4xl': '48px'
+      '3xl': '34px',
+      '4xl': '40px',
+      '5xl': '48px'
     },
     listStyleType: {
       none: 'none',

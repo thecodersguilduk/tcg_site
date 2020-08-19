@@ -6,7 +6,7 @@
   <div class="relative max-w-7xl mx-auto">
     <div class="">
       {% if related_articles %}
-      <h2 class="mb-10 title text-lg leading-xl">Related Articles</h2>
+      <h2 class="mb-10 title text-2xl leading-2xl">Related Articles</h2>
       {% else %}
         <h2 class="mb-12 title">
           Our latest news
@@ -31,7 +31,7 @@
                   {% for item in post.data.tags %}
                     {% if item != "blog" %}
                       <div class="px-1">
-                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-default leading-sm">{{ item | capitalize }}</a>
+                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item | capitalize }}</a>
                       </div>
                     {% endif %}
                   {% endfor %}
@@ -39,7 +39,7 @@
               {% endif %}
               <a href="#" class="block">
                 <a href="{{ post.url }}" class="block"><h3 class="text-blue-200 max-w-90 mb-4">{{ post.data.title }}</h3></a>
-                <p class="mb-4 text-default leading-md">{{ post.data.excerpt }}</p>
+                <p class="mb-4 text-sm leading-md">{{ post.data.excerpt }}</p>
               </a>
             </div>
             <div class="flex">
@@ -48,13 +48,13 @@
               </div>
 
               <div class="my-auto">
-                <p class="time text-blue-200 font-bold font-heading mb-1 text-default leading-sm">{{ post.data.time }} read time</p>
+                <p class="time text-blue-200 font-bold font-heading mb-1 text-sm leading-sm">{{ post.data.time }} read time</p>
                 
                 <div class="">
-                    <p class="author text-black text-0 leading-xs">
+                    <p class="author text-black text-xs leading-xs">
                       By {{ post.data.author }}
-                      <span class="text-black text-0 leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ post.data.date }}" class="text-black text-0 my-auto">
+                      <span class="text-black text-xs leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ post.data.date }}" class="text-black text-xs my-auto">
                         {{ post.data.date | dateDisplay }}
                       </time>
                     </p>
