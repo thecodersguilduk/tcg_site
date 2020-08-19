@@ -754,13 +754,13 @@ span {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .content > h2 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 26px;
   margin-bottom: 2rem;
 }
 
@@ -782,7 +782,7 @@ span {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: center;
@@ -807,7 +807,7 @@ span {
 
 .content > blockquote span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 16px;
+  font-size: 11px;
   line-height: 24px;
   text-align: center;
 }
@@ -1127,7 +1127,7 @@ span {
 }
 
 .form .row label:after {
-  font-size: 18px;
+  font-size: 14px;
   --text-opacity: 1;
   color: #718096;
   color: rgba(113, 128, 150, var(--text-opacity));
@@ -6942,60 +6942,36 @@ span {
   height: 100vh;
 }
 
-.text-0{
+.text-xs{
   font-size: 11px;
 }
 
-.text-default{
+.text-sm{
   font-size: 14px;
 }
 
-.text-xs{
+.text-md{
   font-size: 16px;
 }
 
-.text-sm{
+.text-lg{
   font-size: 18px;
 }
 
-.text-base{
+.text-xl{
   font-size: 20px;
 }
 
-.text-lg{
+.text-2xl{
   font-size: 24px;
 }
 
-.text-xl{
+.text-3xl{
   font-size: 32px;
 }
 
-.text-xxl{
-  font-size: 40px;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-}
-
 .text-4xl{
-  font-size: 2.25rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-}
-
-.text-6xl{
-  font-size: 4rem;
-}
-
-.text-xxs{
-  font-size: 0.65rem;
+  font-size: 40px;
 }
 
 .leading-none{
@@ -7015,31 +6991,23 @@ span {
 }
 
 .leading-lg{
-  line-height: 30px;
+  line-height: 26px;
 }
 
 .leading-xl{
+  line-height: 30px;
+}
+
+.leading-2xl{
   line-height: 32px;
 }
 
-.leading-tight{
-  line-height: 1.25;
+.leading-3xl{
+  line-height: 40px;
 }
 
-.leading-snug{
-  line-height: 1.375;
-}
-
-.leading-normal{
-  line-height: 1.5;
-}
-
-.leading-relaxed{
-  line-height: 1.625;
-}
-
-.leading-loose{
-  line-height: 2;
+.leading-4xl{
+  line-height: 48px;
 }
 
 .list-inside{
@@ -24918,60 +24886,36 @@ span {
     height: 100vh;
   }
 
-  .xs\:text-0{
+  .xs\:text-xs{
     font-size: 11px;
   }
 
-  .xs\:text-default{
+  .xs\:text-sm{
     font-size: 14px;
   }
 
-  .xs\:text-xs{
+  .xs\:text-md{
     font-size: 16px;
   }
 
-  .xs\:text-sm{
+  .xs\:text-lg{
     font-size: 18px;
   }
 
-  .xs\:text-base{
+  .xs\:text-xl{
     font-size: 20px;
   }
 
-  .xs\:text-lg{
+  .xs\:text-2xl{
     font-size: 24px;
   }
 
-  .xs\:text-xl{
+  .xs\:text-3xl{
     font-size: 32px;
   }
 
-  .xs\:text-xxl{
-    font-size: 40px;
-  }
-
-  .xs\:text-2xl{
-    font-size: 1.5rem;
-  }
-
-  .xs\:text-3xl{
-    font-size: 1.875rem;
-  }
-
   .xs\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .xs\:text-5xl{
-    font-size: 3rem;
-  }
-
-  .xs\:text-6xl{
-    font-size: 4rem;
-  }
-
-  .xs\:text-xxs{
-    font-size: 0.65rem;
+    font-size: 40px;
   }
 
   .xs\:leading-none{
@@ -24991,31 +24935,23 @@ span {
   }
 
   .xs\:leading-lg{
-    line-height: 30px;
+    line-height: 26px;
   }
 
   .xs\:leading-xl{
+    line-height: 30px;
+  }
+
+  .xs\:leading-2xl{
     line-height: 32px;
   }
 
-  .xs\:leading-tight{
-    line-height: 1.25;
+  .xs\:leading-3xl{
+    line-height: 40px;
   }
 
-  .xs\:leading-snug{
-    line-height: 1.375;
-  }
-
-  .xs\:leading-normal{
-    line-height: 1.5;
-  }
-
-  .xs\:leading-relaxed{
-    line-height: 1.625;
-  }
-
-  .xs\:leading-loose{
-    line-height: 2;
+  .xs\:leading-4xl{
+    line-height: 48px;
   }
 
   .xs\:list-inside{
@@ -42895,60 +42831,36 @@ span {
     height: 100vh;
   }
 
-  .sm\:text-0{
+  .sm\:text-xs{
     font-size: 11px;
   }
 
-  .sm\:text-default{
+  .sm\:text-sm{
     font-size: 14px;
   }
 
-  .sm\:text-xs{
+  .sm\:text-md{
     font-size: 16px;
   }
 
-  .sm\:text-sm{
+  .sm\:text-lg{
     font-size: 18px;
   }
 
-  .sm\:text-base{
+  .sm\:text-xl{
     font-size: 20px;
   }
 
-  .sm\:text-lg{
+  .sm\:text-2xl{
     font-size: 24px;
   }
 
-  .sm\:text-xl{
+  .sm\:text-3xl{
     font-size: 32px;
   }
 
-  .sm\:text-xxl{
-    font-size: 40px;
-  }
-
-  .sm\:text-2xl{
-    font-size: 1.5rem;
-  }
-
-  .sm\:text-3xl{
-    font-size: 1.875rem;
-  }
-
   .sm\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .sm\:text-5xl{
-    font-size: 3rem;
-  }
-
-  .sm\:text-6xl{
-    font-size: 4rem;
-  }
-
-  .sm\:text-xxs{
-    font-size: 0.65rem;
+    font-size: 40px;
   }
 
   .sm\:leading-none{
@@ -42968,31 +42880,23 @@ span {
   }
 
   .sm\:leading-lg{
-    line-height: 30px;
+    line-height: 26px;
   }
 
   .sm\:leading-xl{
+    line-height: 30px;
+  }
+
+  .sm\:leading-2xl{
     line-height: 32px;
   }
 
-  .sm\:leading-tight{
-    line-height: 1.25;
+  .sm\:leading-3xl{
+    line-height: 40px;
   }
 
-  .sm\:leading-snug{
-    line-height: 1.375;
-  }
-
-  .sm\:leading-normal{
-    line-height: 1.5;
-  }
-
-  .sm\:leading-relaxed{
-    line-height: 1.625;
-  }
-
-  .sm\:leading-loose{
-    line-height: 2;
+  .sm\:leading-4xl{
+    line-height: 48px;
   }
 
   .sm\:list-inside{
@@ -60872,60 +60776,36 @@ span {
     height: 100vh;
   }
 
-  .md\:text-0{
+  .md\:text-xs{
     font-size: 11px;
   }
 
-  .md\:text-default{
+  .md\:text-sm{
     font-size: 14px;
   }
 
-  .md\:text-xs{
+  .md\:text-md{
     font-size: 16px;
   }
 
-  .md\:text-sm{
+  .md\:text-lg{
     font-size: 18px;
   }
 
-  .md\:text-base{
+  .md\:text-xl{
     font-size: 20px;
   }
 
-  .md\:text-lg{
+  .md\:text-2xl{
     font-size: 24px;
   }
 
-  .md\:text-xl{
+  .md\:text-3xl{
     font-size: 32px;
   }
 
-  .md\:text-xxl{
-    font-size: 40px;
-  }
-
-  .md\:text-2xl{
-    font-size: 1.5rem;
-  }
-
-  .md\:text-3xl{
-    font-size: 1.875rem;
-  }
-
   .md\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .md\:text-5xl{
-    font-size: 3rem;
-  }
-
-  .md\:text-6xl{
-    font-size: 4rem;
-  }
-
-  .md\:text-xxs{
-    font-size: 0.65rem;
+    font-size: 40px;
   }
 
   .md\:leading-none{
@@ -60945,31 +60825,23 @@ span {
   }
 
   .md\:leading-lg{
-    line-height: 30px;
+    line-height: 26px;
   }
 
   .md\:leading-xl{
+    line-height: 30px;
+  }
+
+  .md\:leading-2xl{
     line-height: 32px;
   }
 
-  .md\:leading-tight{
-    line-height: 1.25;
+  .md\:leading-3xl{
+    line-height: 40px;
   }
 
-  .md\:leading-snug{
-    line-height: 1.375;
-  }
-
-  .md\:leading-normal{
-    line-height: 1.5;
-  }
-
-  .md\:leading-relaxed{
-    line-height: 1.625;
-  }
-
-  .md\:leading-loose{
-    line-height: 2;
+  .md\:leading-4xl{
+    line-height: 48px;
   }
 
   .md\:list-inside{
@@ -78849,60 +78721,36 @@ span {
     height: 100vh;
   }
 
-  .lg\:text-0{
+  .lg\:text-xs{
     font-size: 11px;
   }
 
-  .lg\:text-default{
+  .lg\:text-sm{
     font-size: 14px;
   }
 
-  .lg\:text-xs{
+  .lg\:text-md{
     font-size: 16px;
   }
 
-  .lg\:text-sm{
+  .lg\:text-lg{
     font-size: 18px;
   }
 
-  .lg\:text-base{
+  .lg\:text-xl{
     font-size: 20px;
   }
 
-  .lg\:text-lg{
+  .lg\:text-2xl{
     font-size: 24px;
   }
 
-  .lg\:text-xl{
+  .lg\:text-3xl{
     font-size: 32px;
   }
 
-  .lg\:text-xxl{
-    font-size: 40px;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-  }
-
-  .lg\:text-3xl{
-    font-size: 1.875rem;
-  }
-
   .lg\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .lg\:text-5xl{
-    font-size: 3rem;
-  }
-
-  .lg\:text-6xl{
-    font-size: 4rem;
-  }
-
-  .lg\:text-xxs{
-    font-size: 0.65rem;
+    font-size: 40px;
   }
 
   .lg\:leading-none{
@@ -78922,31 +78770,23 @@ span {
   }
 
   .lg\:leading-lg{
-    line-height: 30px;
+    line-height: 26px;
   }
 
   .lg\:leading-xl{
+    line-height: 30px;
+  }
+
+  .lg\:leading-2xl{
     line-height: 32px;
   }
 
-  .lg\:leading-tight{
-    line-height: 1.25;
+  .lg\:leading-3xl{
+    line-height: 40px;
   }
 
-  .lg\:leading-snug{
-    line-height: 1.375;
-  }
-
-  .lg\:leading-normal{
-    line-height: 1.5;
-  }
-
-  .lg\:leading-relaxed{
-    line-height: 1.625;
-  }
-
-  .lg\:leading-loose{
-    line-height: 2;
+  .lg\:leading-4xl{
+    line-height: 48px;
   }
 
   .lg\:list-inside{
@@ -96826,60 +96666,36 @@ span {
     height: 100vh;
   }
 
-  .xl\:text-0{
+  .xl\:text-xs{
     font-size: 11px;
   }
 
-  .xl\:text-default{
+  .xl\:text-sm{
     font-size: 14px;
   }
 
-  .xl\:text-xs{
+  .xl\:text-md{
     font-size: 16px;
   }
 
-  .xl\:text-sm{
+  .xl\:text-lg{
     font-size: 18px;
   }
 
-  .xl\:text-base{
+  .xl\:text-xl{
     font-size: 20px;
   }
 
-  .xl\:text-lg{
+  .xl\:text-2xl{
     font-size: 24px;
   }
 
-  .xl\:text-xl{
+  .xl\:text-3xl{
     font-size: 32px;
   }
 
-  .xl\:text-xxl{
-    font-size: 40px;
-  }
-
-  .xl\:text-2xl{
-    font-size: 1.5rem;
-  }
-
-  .xl\:text-3xl{
-    font-size: 1.875rem;
-  }
-
   .xl\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .xl\:text-5xl{
-    font-size: 3rem;
-  }
-
-  .xl\:text-6xl{
-    font-size: 4rem;
-  }
-
-  .xl\:text-xxs{
-    font-size: 0.65rem;
+    font-size: 40px;
   }
 
   .xl\:leading-none{
@@ -96899,31 +96715,23 @@ span {
   }
 
   .xl\:leading-lg{
-    line-height: 30px;
+    line-height: 26px;
   }
 
   .xl\:leading-xl{
+    line-height: 30px;
+  }
+
+  .xl\:leading-2xl{
     line-height: 32px;
   }
 
-  .xl\:leading-tight{
-    line-height: 1.25;
+  .xl\:leading-3xl{
+    line-height: 40px;
   }
 
-  .xl\:leading-snug{
-    line-height: 1.375;
-  }
-
-  .xl\:leading-normal{
-    line-height: 1.5;
-  }
-
-  .xl\:leading-relaxed{
-    line-height: 1.625;
-  }
-
-  .xl\:leading-loose{
-    line-height: 2;
+  .xl\:leading-4xl{
+    line-height: 48px;
   }
 
   .xl\:list-inside{
