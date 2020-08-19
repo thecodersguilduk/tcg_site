@@ -295,7 +295,8 @@ module.exports = {
       xl: '20px',
       '2xl': '24px',
       '3xl': '32px',
-      '4xl': '40px'
+      '4xl': '30px',
+      '5xl': '40px'
     },
     fontWeight: {
       hairline: '100',
@@ -329,7 +330,7 @@ module.exports = {
     lineHeight: {
       none: '1',
       xs: '16px',
-      sm: '19px',
+      sm: '20px',
       md: '24px',
       lg: '26px',
       xl: '30px',

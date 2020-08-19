@@ -50,7 +50,11 @@ span {
 
 	// paragraph
 	& > p {
-    @apply mb-8;
+    @apply mb-10;
+
+    @media (min-width: 640px){
+      @apply mb-8;
+    }
 
     // intro paragraph
 		&:first-child {
@@ -59,7 +63,11 @@ span {
   }
 
   & > h2 {
-    @apply text-2xl leading-2xl mb-8;
+    @apply text-2xl leading-2xl mb-10;
+
+    @media (min-width: 640px){
+      @apply mb-8;
+    }
   }
 
   & > blockquote {
@@ -67,6 +75,7 @@ span {
 
     & > p {
       @apply text-blue-200 mx-auto mb-6 text-2xl leading-3xl font-bold font-heading text-center;
+
 
       &::first-letter {
         margin-left: 10px;
@@ -96,7 +105,11 @@ span {
     @apply mb-8;
     
     figcaption {
-      @apply text-xs leading-xs text-black mt-2;
+      @apply text-sm leading-sm text-black mt-2;
+
+      @media (min-width: 640px){
+        @apply text-xs leading-xs;
+      }
     }
   }
 }

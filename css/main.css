@@ -710,7 +710,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 40px;
-  line-height: 53px;
+  line-height: 48px;
 }
 
 h2 {
@@ -747,21 +747,33 @@ span {
 }
 
 .content > p {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .content > p {
+    margin-bottom: 2rem;
+  }
 }
 
 .content > p:first-child {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .content > h2 {
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .content > h2 {
+    margin-bottom: 2rem;
+  }
 }
 
 .content > blockquote {
@@ -782,7 +794,8 @@ span {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
-  font-size: 18px;
+  font-size: 24px;
+  line-height: 34px;
   font-weight: 700;
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: center;
@@ -807,8 +820,8 @@ span {
 
 .content > blockquote span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 11px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 32px;
   text-align: center;
 }
 
@@ -817,12 +830,19 @@ span {
 }
 
 .content > figure figcaption {
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
   --text-opacity: 1;
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
   margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .content > figure figcaption {
+    font-size: 11px;
+    line-height: 16px;
+  }
 }
 
 .container{
@@ -6971,6 +6991,10 @@ span {
 }
 
 .text-4xl{
+  font-size: 30px;
+}
+
+.text-5xl{
   font-size: 40px;
 }
 
@@ -6983,7 +7007,7 @@ span {
 }
 
 .leading-sm{
-  line-height: 19px;
+  line-height: 20px;
 }
 
 .leading-md{
@@ -7003,10 +7027,14 @@ span {
 }
 
 .leading-3xl{
-  line-height: 40px;
+  line-height: 34px;
 }
 
 .leading-4xl{
+  line-height: 40px;
+}
+
+.leading-5xl{
   line-height: 48px;
 }
 
@@ -24915,6 +24943,10 @@ span {
   }
 
   .xs\:text-4xl{
+    font-size: 30px;
+  }
+
+  .xs\:text-5xl{
     font-size: 40px;
   }
 
@@ -24927,7 +24959,7 @@ span {
   }
 
   .xs\:leading-sm{
-    line-height: 19px;
+    line-height: 20px;
   }
 
   .xs\:leading-md{
@@ -24947,10 +24979,14 @@ span {
   }
 
   .xs\:leading-3xl{
-    line-height: 40px;
+    line-height: 34px;
   }
 
   .xs\:leading-4xl{
+    line-height: 40px;
+  }
+
+  .xs\:leading-5xl{
     line-height: 48px;
   }
 
@@ -42860,6 +42896,10 @@ span {
   }
 
   .sm\:text-4xl{
+    font-size: 30px;
+  }
+
+  .sm\:text-5xl{
     font-size: 40px;
   }
 
@@ -42872,7 +42912,7 @@ span {
   }
 
   .sm\:leading-sm{
-    line-height: 19px;
+    line-height: 20px;
   }
 
   .sm\:leading-md{
@@ -42892,10 +42932,14 @@ span {
   }
 
   .sm\:leading-3xl{
-    line-height: 40px;
+    line-height: 34px;
   }
 
   .sm\:leading-4xl{
+    line-height: 40px;
+  }
+
+  .sm\:leading-5xl{
     line-height: 48px;
   }
 
@@ -60805,6 +60849,10 @@ span {
   }
 
   .md\:text-4xl{
+    font-size: 30px;
+  }
+
+  .md\:text-5xl{
     font-size: 40px;
   }
 
@@ -60817,7 +60865,7 @@ span {
   }
 
   .md\:leading-sm{
-    line-height: 19px;
+    line-height: 20px;
   }
 
   .md\:leading-md{
@@ -60837,10 +60885,14 @@ span {
   }
 
   .md\:leading-3xl{
-    line-height: 40px;
+    line-height: 34px;
   }
 
   .md\:leading-4xl{
+    line-height: 40px;
+  }
+
+  .md\:leading-5xl{
     line-height: 48px;
   }
 
@@ -78750,6 +78802,10 @@ span {
   }
 
   .lg\:text-4xl{
+    font-size: 30px;
+  }
+
+  .lg\:text-5xl{
     font-size: 40px;
   }
 
@@ -78762,7 +78818,7 @@ span {
   }
 
   .lg\:leading-sm{
-    line-height: 19px;
+    line-height: 20px;
   }
 
   .lg\:leading-md{
@@ -78782,10 +78838,14 @@ span {
   }
 
   .lg\:leading-3xl{
-    line-height: 40px;
+    line-height: 34px;
   }
 
   .lg\:leading-4xl{
+    line-height: 40px;
+  }
+
+  .lg\:leading-5xl{
     line-height: 48px;
   }
 
@@ -96695,6 +96755,10 @@ span {
   }
 
   .xl\:text-4xl{
+    font-size: 30px;
+  }
+
+  .xl\:text-5xl{
     font-size: 40px;
   }
 
@@ -96707,7 +96771,7 @@ span {
   }
 
   .xl\:leading-sm{
-    line-height: 19px;
+    line-height: 20px;
   }
 
   .xl\:leading-md{
@@ -96727,10 +96791,14 @@ span {
   }
 
   .xl\:leading-3xl{
-    line-height: 40px;
+    line-height: 34px;
   }
 
   .xl\:leading-4xl{
+    line-height: 40px;
+  }
+
+  .xl\:leading-5xl{
     line-height: 48px;
   }
 

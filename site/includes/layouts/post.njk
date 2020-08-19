@@ -6,9 +6,9 @@ related_articles: true
 {# a post layout #}
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-    <article id="container-centre" class="column centre flex-1 mb-20 mx-auto pt-20">
+    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
 
-        <div class="mb-8 max-w-5xl">
+        <div class="mb-10 sm:mb-8 max-w-5xl">
             {% if featured_image %}
 
                 <figure class="">
@@ -17,7 +17,7 @@ related_articles: true
 
             {% endif %}
 
-            <div class="md:px-20 relative pt-10 max-w-3xl mx-auto inner">
+            <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
               {% if tags %}
                 <div class="category absolute top-0 flex -my-4 -mx-1">
                   {% for item in tags %}
@@ -31,7 +31,7 @@ related_articles: true
               {% endif %}
 
               <header>
-                  <h1 class="text-blue-200">{{ title }}</h1>
+                <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ title }}</h1>
               </header>
 
               <div class="flex">
@@ -41,12 +41,12 @@ related_articles: true
                 </div>
 
                 <div class="my-auto">
-                  <p class="time text-blue-200 font-bold font-heading mb-1 text-sm leading-sm">{{ time }} read time</p>
+                  <p class="time text-blue-200 font-bold font-heading mb-1 text-md sm:text-sm leading-sm">{{ time }} read time</p>
                   <div class="">
-                    <p class="author text-black text-xs leading-xs">
+                    <p class="author text-black text-sm sm:text-xs leading-xs">
                       By {{ author }}
-                      <span class="text-black text-xs leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ date }}" class="text-black text-xs my-auto">
+                      <span class="text-black text-sm sm:text-xs leading-xs my-auto">&#8210;</span>
+                      <time datetime="{{ date }}" class="text-black text-sm sm:text-xs my-auto">
                         {{ date | dateDisplay }}
                       </time>
                     </p>
@@ -82,15 +82,15 @@ related_articles: true
 
             {% endif %}
               {% if prevPost or nextPost %}
-                <div class="mt-6">
+                <div class="mt-8 sm:mt-6">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
-                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 leading-lg">{{ nextPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ nextPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                   {% if prevPost %}
                     <div>
-                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-lg">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 leading-lg">{{ prevPost.data.title }}</a></p>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ prevPost.data.title }}</a></p>
                     </div>
                   {% endif %}
                 </div>
