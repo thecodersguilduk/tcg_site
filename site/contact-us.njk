@@ -40,7 +40,7 @@ title: Contact Us
               </dt>
               <dd class="flex mb-4">
                 <object type="image/svg+xml" data="../images/icons/noun_contact_1995626.svg" class=""></object>
-                <span class="ml-3 my-auto text-blue-200 font-bold text-md leading-2xl">{{ site.contact.phone }}</span>
+                <span class="ml-3 my-auto"><a href="tel:{{ site.contact.phone }}" class="text-blue-200 font-bold text-md leading-2xl">{{ site.contact.phone }}</a></span>
               </dd>
             </div>
             <div class="mt-3">
@@ -48,7 +48,7 @@ title: Contact Us
               </dt>
               <dd class="flex">
                 <object type="image/svg+xml" data="../images/icons/noun_contact_1995626.svg" class=""></object>
-                <span class="ml-3 my-auto text-blue-200 font-bold text-md leading-2xl">{{ site.contact.email }}</span>
+                <span class="ml-3 my-auto"><a href="mailto:{{ site.contact.email }}" class="text-blue-200 font-bold text-md leading-2xl">{{ site.contact.email }}</a></span>
               </dd>
             </div>
           </dl>
