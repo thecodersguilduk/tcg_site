@@ -674,6 +674,23 @@ html {
   color: #16aedb;
 }
 
+.form-input-field {
+  --border-opacity: 1;
+  border-color: #2574a9;
+  border-color: rgba(37, 116, 169, var(--border-opacity));
+}
+
+.form-input-field--invalid {
+  --border-opacity: 1;
+  border-color: #c94b62;
+  border-color: rgba(201, 75, 98, var(--border-opacity));
+  outline-color: #c94b62;
+}
+
+.required-pop-up {
+  bottom: 100%;
+}
+
 a {
   --text-opacity: 1;
   color: #21183c;
@@ -746,7 +763,7 @@ span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-input {
+input, textarea {
   font-size: 14px;
 }
 

@@ -61,3 +61,19 @@ html {
 #contact-us a[href="/contact-us"] {
   color: #16aedb;
 }
+
+// Contact form input fields 
+
+.form-input-field {
+  @apply border-blue-200;
+
+  &--invalid {
+    @apply border-red-100;
+    outline-color: #c94b62;
+  }
+}
+
+// Form 'Required' pop up
+.required-pop-up {
+  bottom: 100%;
+}
