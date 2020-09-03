@@ -99,11 +99,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/show-hide */ "./resources/js/modules/show-hide/index.js");
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @modules/header */ "./resources/js/modules/header/index.js");
+/* harmony import */ var _modules_form_validating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @modules/form-validating */ "./resources/js/modules/form-validating/index.js");
 // Import local modules
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/form-validating/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/modules/form-validating/index.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+ // Function to check if  error message exists
+
+function messageExists(el, attr) {
+  return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
+}
+
+var validateForm = function validateForm() {
+  var input, regex, invalidInputs, errorMessage, errorContainer;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
+    input = e.target.closest('.form-input-field');
+    if (!input) return;
+
+    if (messageExists(input, 'data-message')) {
+      errorContainer = input.nextElementSibling;
+      errorMessage = input.nextElementSibling.getAttribute('data-message');
+    }
+
+    if (input.hasAttribute('data-regex')) {
+      regex = RegExp(input.getAttribute('data-regex'));
+    }
+
+    if (input.hasAttribute('data-regex')) {
+      if (regex.test(input.value)) {
+        input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
+        input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
+
+        if (messageExists(input, 'data-message')) {
+          errorContainer.textContent === errorMessage ? errorContainer.textContent = null : null;
+          errorContainer.setAttribute('aria-hidden', 'false');
+        }
+      } else if (!input.value && e.which === 9 || e.which === 8 || e.which >= 37 && e.which <= 40) {
+        return;
+      } else if (input === _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].emailInput) {
+        return;
+      } else {
+        input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
+        input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
+
+        if (messageExists(input, 'data-message')) {
+          errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
+          errorContainer.setAttribute('aria-hidden', 'true');
+        }
+      }
+    }
+
+    invalidInputs = this.querySelectorAll('[data-valid="false"]');
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length ? true : false;
+  });
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('focusout', function (e) {
+    input = e.target.closest('.form-input-field');
+    if (!input) return;
+
+    if (input.hasAttribute('data-regex')) {
+      regex = RegExp(input.getAttribute('data-regex'));
+    }
+
+    if (messageExists(input, 'data-message')) {
+      errorContainer = e.target.nextElementSibling;
+      errorMessage = e.target.nextElementSibling.getAttribute('data-message');
+    }
+
+    if (!input.value && input.classList.contains('required')) {
+      input.classList.contains('border-red-100') ? null : input.classList.add('border-red-100');
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].requiredPopUp.classList.contains('hidden') ? _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].requiredPopUp.classList.remove('hidden') : null;
+    } else {
+      input.classList.contains('border-red-100') ? input.classList.remove('border-red-100') : null;
+    }
+
+    if (input === _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].emailInput && input.hasAttribute('data-regex') && !regex.test(e.target.value) && input.value) {
+      input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
+
+      if (messageExists(input, 'data-message')) {
+        errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
+        errorContainer.setAttribute('aria-hidden', 'false');
+      }
+    }
+
+    invalidInputs = this.querySelectorAll('[data-valid="false"]');
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length ? true : false;
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (validateForm);
 
 /***/ }),
 
@@ -335,7 +433,18 @@ var $$ = {
   navLinks: document.getElementById('nav-links'),
   navToggle: document.getElementById('nav-toggle'),
   mobileNavContainer: document.querySelector('.mobile-nav-container'),
-  toggleShowHide: document.querySelectorAll('.toggle-show-hide')
+  toggleShowHide: document.querySelectorAll('.toggle-show-hide'),
+  contactForm: document.getElementById('contact-form'),
+  inputFields: document.querySelectorAll('.form-input-field'),
+  nameInput: document.getElementById('name'),
+  emailInput: document.getElementById('email'),
+  phoneNumberInput: document.getElementById('phone'),
+  messageInput: document.getElementById('message'),
+  formError: document.querySelectorAll('.form-error'),
+  requiredFields: document.querySelectorAll('.required'),
+  requiredPopUp: document.querySelector('.required-pop-up'),
+  submitBtn: document.getElementById('submit'),
+  regexInputs: document.querySelectorAll('[data-regex]')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
