@@ -142,6 +142,7 @@ module.exports = {
       '8': '2rem',
       '10': '2.5rem',
       '12': '3rem',
+      '14': '3.5rem',
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',
@@ -354,7 +355,7 @@ module.exports = {
       screen: '100vh',
     },
     maxWidth: {
-      xs: '20rem',
+      xs: '22rem',
       sm: '24rem',
       md: '28rem',
       lg: '32rem',
@@ -362,8 +363,9 @@ module.exports = {
       '2xl': '42rem',
       '3xl': '54rem',
       '4xl': '58rem',
-      '5xl': '64rem',
-      '6xl': '72rem',
+      '5xl': '60rem',
+      '6xl': '64rem',
+      '7xl': '72rem',
       full: '100%',
     },
     minHeight: {

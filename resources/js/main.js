@@ -4,4 +4,5 @@ import '@modules/mobile-nav'
 import '@modules/lazyload'
 import '@modules/show-hide'
 import '@modules/header'
+import '@modules/form-validating'
 

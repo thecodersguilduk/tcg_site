@@ -606,7 +606,7 @@ video {
 
 .inner {
   width: 100%;
-  max-width: 72rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -672,6 +672,23 @@ html {
 
 #contact-us a[href="/contact-us"] {
   color: #16aedb;
+}
+
+.form-input-field {
+  --border-opacity: 1;
+  border-color: #2574a9;
+  border-color: rgba(37, 116, 169, var(--border-opacity));
+}
+
+.form-input-field--invalid {
+  --border-opacity: 1;
+  border-color: #c94b62;
+  border-color: rgba(201, 75, 98, var(--border-opacity));
+  outline-color: #c94b62;
+}
+
+.required-pop-up {
+  bottom: 100%;
 }
 
 a {
@@ -744,6 +761,10 @@ p {
 
 span {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+input, textarea {
+  font-size: 14px;
 }
 
 .content > p {
@@ -1402,6 +1423,18 @@ span {
   margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
 }
 
+.space-y-14 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(3.5rem * var(--space-y-reverse));
+}
+
+.space-x-14 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(3.5rem * var(--space-x-reverse));
+  margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+}
+
 .space-y-16 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -1628,6 +1661,18 @@ span {
   --space-x-reverse: 0;
   margin-right: calc(-3rem * var(--space-x-reverse));
   margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-14 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+}
+
+.-space-x-14 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-3.5rem * var(--space-x-reverse));
+  margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
 }
 
 .-space-y-16 > :not(template) ~ :not(template){
@@ -6910,6 +6955,10 @@ span {
   height: 3rem;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -7098,6 +7147,10 @@ span {
   margin: 3rem;
 }
 
+.m-14{
+  margin: 3.5rem;
+}
+
 .m-16{
   margin: 4rem;
 }
@@ -7176,6 +7229,10 @@ span {
 
 .-m-12{
   margin: -3rem;
+}
+
+.-m-14{
+  margin: -3.5rem;
 }
 
 .-m-16{
@@ -7316,6 +7373,16 @@ span {
 .mx-12{
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.my-14{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.mx-14{
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
 }
 
 .my-16{
@@ -7516,6 +7583,16 @@ span {
 .-mx-12{
   margin-left: -3rem;
   margin-right: -3rem;
+}
+
+.-my-14{
+  margin-top: -3.5rem;
+  margin-bottom: -3.5rem;
+}
+
+.-mx-14{
+  margin-left: -3.5rem;
+  margin-right: -3.5rem;
 }
 
 .-my-16{
@@ -7776,6 +7853,22 @@ span {
 
 .ml-12{
   margin-left: 3rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
+.mr-14{
+  margin-right: 3.5rem;
+}
+
+.mb-14{
+  margin-bottom: 3.5rem;
+}
+
+.ml-14{
+  margin-left: 3.5rem;
 }
 
 .mt-16{
@@ -8098,6 +8191,22 @@ span {
   margin-left: -3rem;
 }
 
+.-mt-14{
+  margin-top: -3.5rem;
+}
+
+.-mr-14{
+  margin-right: -3.5rem;
+}
+
+.-mb-14{
+  margin-bottom: -3.5rem;
+}
+
+.-ml-14{
+  margin-left: -3.5rem;
+}
+
 .-mt-16{
   margin-top: -4rem;
 }
@@ -8267,7 +8376,7 @@ span {
 }
 
 .max-w-xs{
-  max-width: 20rem;
+  max-width: 22rem;
 }
 
 .max-w-sm{
@@ -8299,10 +8408,14 @@ span {
 }
 
 .max-w-5xl{
-  max-width: 64rem;
+  max-width: 60rem;
 }
 
 .max-w-6xl{
+  max-width: 64rem;
+}
+
+.max-w-7xl{
   max-width: 72rem;
 }
 
@@ -8524,6 +8637,10 @@ span {
   padding: 3rem;
 }
 
+.p-14{
+  padding: 3.5rem;
+}
+
 .p-16{
   padding: 4rem;
 }
@@ -8662,6 +8779,16 @@ span {
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.px-14{
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .py-16{
@@ -8922,6 +9049,22 @@ span {
 
 .pl-12{
   padding-left: 3rem;
+}
+
+.pt-14{
+  padding-top: 3.5rem;
+}
+
+.pr-14{
+  padding-right: 3.5rem;
+}
+
+.pb-14{
+  padding-bottom: 3.5rem;
+}
+
+.pl-14{
+  padding-left: 3.5rem;
 }
 
 .pt-16{
@@ -16544,6 +16687,10 @@ span {
   width: 3rem;
 }
 
+.w-14{
+  width: 3.5rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -16778,6 +16925,11 @@ span {
   gap: 3rem;
 }
 
+.gap-14{
+  grid-gap: 3.5rem;
+  gap: 3.5rem;
+}
+
 .gap-16{
   grid-gap: 4rem;
   gap: 4rem;
@@ -16888,6 +17040,12 @@ span {
        column-gap: 3rem;
 }
 
+.col-gap-14{
+  grid-column-gap: 3.5rem;
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+}
+
 .col-gap-16{
   grid-column-gap: 4rem;
   -moz-column-gap: 4rem;
@@ -16996,6 +17154,11 @@ span {
 .row-gap-12{
   grid-row-gap: 3rem;
   row-gap: 3rem;
+}
+
+.row-gap-14{
+  grid-row-gap: 3.5rem;
+  row-gap: 3.5rem;
 }
 
 .row-gap-16{
@@ -17965,6 +18128,10 @@ span {
   --transform-translate-x: 3rem;
 }
 
+.translate-x-14{
+  --transform-translate-x: 3.5rem;
+}
+
 .translate-x-16{
   --transform-translate-x: 4rem;
 }
@@ -18039,6 +18206,10 @@ span {
 
 .-translate-x-12{
   --transform-translate-x: -3rem;
+}
+
+.-translate-x-14{
+  --transform-translate-x: -3.5rem;
 }
 
 .-translate-x-16{
@@ -18137,6 +18308,10 @@ span {
   --transform-translate-y: 3rem;
 }
 
+.translate-y-14{
+  --transform-translate-y: 3.5rem;
+}
+
 .translate-y-16{
   --transform-translate-y: 4rem;
 }
@@ -18211,6 +18386,10 @@ span {
 
 .-translate-y-12{
   --transform-translate-y: -3rem;
+}
+
+.-translate-y-14{
+  --transform-translate-y: -3.5rem;
 }
 
 .-translate-y-16{
@@ -18309,6 +18488,10 @@ span {
   --transform-translate-x: 3rem;
 }
 
+.hover\:translate-x-14:hover{
+  --transform-translate-x: 3.5rem;
+}
+
 .hover\:translate-x-16:hover{
   --transform-translate-x: 4rem;
 }
@@ -18383,6 +18566,10 @@ span {
 
 .hover\:-translate-x-12:hover{
   --transform-translate-x: -3rem;
+}
+
+.hover\:-translate-x-14:hover{
+  --transform-translate-x: -3.5rem;
 }
 
 .hover\:-translate-x-16:hover{
@@ -18481,6 +18668,10 @@ span {
   --transform-translate-y: 3rem;
 }
 
+.hover\:translate-y-14:hover{
+  --transform-translate-y: 3.5rem;
+}
+
 .hover\:translate-y-16:hover{
   --transform-translate-y: 4rem;
 }
@@ -18555,6 +18746,10 @@ span {
 
 .hover\:-translate-y-12:hover{
   --transform-translate-y: -3rem;
+}
+
+.hover\:-translate-y-14:hover{
+  --transform-translate-y: -3.5rem;
 }
 
 .hover\:-translate-y-16:hover{
@@ -18653,6 +18848,10 @@ span {
   --transform-translate-x: 3rem;
 }
 
+.focus\:translate-x-14:focus{
+  --transform-translate-x: 3.5rem;
+}
+
 .focus\:translate-x-16:focus{
   --transform-translate-x: 4rem;
 }
@@ -18727,6 +18926,10 @@ span {
 
 .focus\:-translate-x-12:focus{
   --transform-translate-x: -3rem;
+}
+
+.focus\:-translate-x-14:focus{
+  --transform-translate-x: -3.5rem;
 }
 
 .focus\:-translate-x-16:focus{
@@ -18825,6 +19028,10 @@ span {
   --transform-translate-y: 3rem;
 }
 
+.focus\:translate-y-14:focus{
+  --transform-translate-y: 3.5rem;
+}
+
 .focus\:translate-y-16:focus{
   --transform-translate-y: 4rem;
 }
@@ -18899,6 +19106,10 @@ span {
 
 .focus\:-translate-y-12:focus{
   --transform-translate-y: -3rem;
+}
+
+.focus\:-translate-y-14:focus{
+  --transform-translate-y: -3.5rem;
 }
 
 .focus\:-translate-y-16:focus{
@@ -19354,6 +19565,18 @@ span {
     margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xs\:space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--space-y-reverse));
+  }
+
+  .xs\:space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xs\:space-y-16 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -19580,6 +19803,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-3rem * var(--space-x-reverse));
     margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xs\:-space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+  }
+
+  .xs\:-space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-3.5rem * var(--space-x-reverse));
+    margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xs\:-space-y-16 > :not(template) ~ :not(template){
@@ -24862,6 +25097,10 @@ span {
     height: 3rem;
   }
 
+  .xs\:h-14{
+    height: 3.5rem;
+  }
+
   .xs\:h-16{
     height: 4rem;
   }
@@ -25050,6 +25289,10 @@ span {
     margin: 3rem;
   }
 
+  .xs\:m-14{
+    margin: 3.5rem;
+  }
+
   .xs\:m-16{
     margin: 4rem;
   }
@@ -25128,6 +25371,10 @@ span {
 
   .xs\:-m-12{
     margin: -3rem;
+  }
+
+  .xs\:-m-14{
+    margin: -3.5rem;
   }
 
   .xs\:-m-16{
@@ -25268,6 +25515,16 @@ span {
   .xs\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .xs\:my-14{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .xs\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .xs\:my-16{
@@ -25468,6 +25725,16 @@ span {
   .xs\:-mx-12{
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .xs\:-my-14{
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .xs\:-mx-14{
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
   }
 
   .xs\:-my-16{
@@ -25728,6 +25995,22 @@ span {
 
   .xs\:ml-12{
     margin-left: 3rem;
+  }
+
+  .xs\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .xs\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .xs\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .xs\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .xs\:mt-16{
@@ -26050,6 +26333,22 @@ span {
     margin-left: -3rem;
   }
 
+  .xs\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
+  .xs\:-mr-14{
+    margin-right: -3.5rem;
+  }
+
+  .xs\:-mb-14{
+    margin-bottom: -3.5rem;
+  }
+
+  .xs\:-ml-14{
+    margin-left: -3.5rem;
+  }
+
   .xs\:-mt-16{
     margin-top: -4rem;
   }
@@ -26219,7 +26518,7 @@ span {
   }
 
   .xs\:max-w-xs{
-    max-width: 20rem;
+    max-width: 22rem;
   }
 
   .xs\:max-w-sm{
@@ -26251,10 +26550,14 @@ span {
   }
 
   .xs\:max-w-5xl{
-    max-width: 64rem;
+    max-width: 60rem;
   }
 
   .xs\:max-w-6xl{
+    max-width: 64rem;
+  }
+
+  .xs\:max-w-7xl{
     max-width: 72rem;
   }
 
@@ -26476,6 +26779,10 @@ span {
     padding: 3rem;
   }
 
+  .xs\:p-14{
+    padding: 3.5rem;
+  }
+
   .xs\:p-16{
     padding: 4rem;
   }
@@ -26614,6 +26921,16 @@ span {
   .xs\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xs\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .xs\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .xs\:py-16{
@@ -26874,6 +27191,22 @@ span {
 
   .xs\:pl-12{
     padding-left: 3rem;
+  }
+
+  .xs\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .xs\:pr-14{
+    padding-right: 3.5rem;
+  }
+
+  .xs\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+
+  .xs\:pl-14{
+    padding-left: 3.5rem;
   }
 
   .xs\:pt-16{
@@ -34496,6 +34829,10 @@ span {
     width: 3rem;
   }
 
+  .xs\:w-14{
+    width: 3.5rem;
+  }
+
   .xs\:w-16{
     width: 4rem;
   }
@@ -34730,6 +35067,11 @@ span {
     gap: 3rem;
   }
 
+  .xs\:gap-14{
+    grid-gap: 3.5rem;
+    gap: 3.5rem;
+  }
+
   .xs\:gap-16{
     grid-gap: 4rem;
     gap: 4rem;
@@ -34840,6 +35182,12 @@ span {
          column-gap: 3rem;
   }
 
+  .xs\:col-gap-14{
+    grid-column-gap: 3.5rem;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .xs\:col-gap-16{
     grid-column-gap: 4rem;
     -moz-column-gap: 4rem;
@@ -34948,6 +35296,11 @@ span {
   .xs\:row-gap-12{
     grid-row-gap: 3rem;
     row-gap: 3rem;
+  }
+
+  .xs\:row-gap-14{
+    grid-row-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 
   .xs\:row-gap-16{
@@ -35917,6 +36270,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xs\:translate-x-14{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xs\:translate-x-16{
     --transform-translate-x: 4rem;
   }
@@ -35991,6 +36348,10 @@ span {
 
   .xs\:-translate-x-12{
     --transform-translate-x: -3rem;
+  }
+
+  .xs\:-translate-x-14{
+    --transform-translate-x: -3.5rem;
   }
 
   .xs\:-translate-x-16{
@@ -36089,6 +36450,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xs\:translate-y-14{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xs\:translate-y-16{
     --transform-translate-y: 4rem;
   }
@@ -36163,6 +36528,10 @@ span {
 
   .xs\:-translate-y-12{
     --transform-translate-y: -3rem;
+  }
+
+  .xs\:-translate-y-14{
+    --transform-translate-y: -3.5rem;
   }
 
   .xs\:-translate-y-16{
@@ -36261,6 +36630,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xs\:hover\:translate-x-14:hover{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xs\:hover\:translate-x-16:hover{
     --transform-translate-x: 4rem;
   }
@@ -36335,6 +36708,10 @@ span {
 
   .xs\:hover\:-translate-x-12:hover{
     --transform-translate-x: -3rem;
+  }
+
+  .xs\:hover\:-translate-x-14:hover{
+    --transform-translate-x: -3.5rem;
   }
 
   .xs\:hover\:-translate-x-16:hover{
@@ -36433,6 +36810,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xs\:hover\:translate-y-14:hover{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xs\:hover\:translate-y-16:hover{
     --transform-translate-y: 4rem;
   }
@@ -36507,6 +36888,10 @@ span {
 
   .xs\:hover\:-translate-y-12:hover{
     --transform-translate-y: -3rem;
+  }
+
+  .xs\:hover\:-translate-y-14:hover{
+    --transform-translate-y: -3.5rem;
   }
 
   .xs\:hover\:-translate-y-16:hover{
@@ -36605,6 +36990,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xs\:focus\:translate-x-14:focus{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xs\:focus\:translate-x-16:focus{
     --transform-translate-x: 4rem;
   }
@@ -36679,6 +37068,10 @@ span {
 
   .xs\:focus\:-translate-x-12:focus{
     --transform-translate-x: -3rem;
+  }
+
+  .xs\:focus\:-translate-x-14:focus{
+    --transform-translate-x: -3.5rem;
   }
 
   .xs\:focus\:-translate-x-16:focus{
@@ -36777,6 +37170,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xs\:focus\:translate-y-14:focus{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xs\:focus\:translate-y-16:focus{
     --transform-translate-y: 4rem;
   }
@@ -36851,6 +37248,10 @@ span {
 
   .xs\:focus\:-translate-y-12:focus{
     --transform-translate-y: -3rem;
+  }
+
+  .xs\:focus\:-translate-y-14:focus{
+    --transform-translate-y: -3.5rem;
   }
 
   .xs\:focus\:-translate-y-16:focus{
@@ -37307,6 +37708,18 @@ span {
     margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .sm\:space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .sm\:space-y-16 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -37533,6 +37946,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-3rem * var(--space-x-reverse));
     margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-3.5rem * var(--space-x-reverse));
+    margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:-space-y-16 > :not(template) ~ :not(template){
@@ -42815,6 +43240,10 @@ span {
     height: 3rem;
   }
 
+  .sm\:h-14{
+    height: 3.5rem;
+  }
+
   .sm\:h-16{
     height: 4rem;
   }
@@ -43003,6 +43432,10 @@ span {
     margin: 3rem;
   }
 
+  .sm\:m-14{
+    margin: 3.5rem;
+  }
+
   .sm\:m-16{
     margin: 4rem;
   }
@@ -43081,6 +43514,10 @@ span {
 
   .sm\:-m-12{
     margin: -3rem;
+  }
+
+  .sm\:-m-14{
+    margin: -3.5rem;
   }
 
   .sm\:-m-16{
@@ -43221,6 +43658,16 @@ span {
   .sm\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .sm\:my-14{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .sm\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .sm\:my-16{
@@ -43421,6 +43868,16 @@ span {
   .sm\:-mx-12{
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .sm\:-my-14{
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .sm\:-mx-14{
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
   }
 
   .sm\:-my-16{
@@ -43681,6 +44138,22 @@ span {
 
   .sm\:ml-12{
     margin-left: 3rem;
+  }
+
+  .sm\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .sm\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .sm\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .sm\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .sm\:mt-16{
@@ -44003,6 +44476,22 @@ span {
     margin-left: -3rem;
   }
 
+  .sm\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
+  .sm\:-mr-14{
+    margin-right: -3.5rem;
+  }
+
+  .sm\:-mb-14{
+    margin-bottom: -3.5rem;
+  }
+
+  .sm\:-ml-14{
+    margin-left: -3.5rem;
+  }
+
   .sm\:-mt-16{
     margin-top: -4rem;
   }
@@ -44172,7 +44661,7 @@ span {
   }
 
   .sm\:max-w-xs{
-    max-width: 20rem;
+    max-width: 22rem;
   }
 
   .sm\:max-w-sm{
@@ -44204,10 +44693,14 @@ span {
   }
 
   .sm\:max-w-5xl{
-    max-width: 64rem;
+    max-width: 60rem;
   }
 
   .sm\:max-w-6xl{
+    max-width: 64rem;
+  }
+
+  .sm\:max-w-7xl{
     max-width: 72rem;
   }
 
@@ -44429,6 +44922,10 @@ span {
     padding: 3rem;
   }
 
+  .sm\:p-14{
+    padding: 3.5rem;
+  }
+
   .sm\:p-16{
     padding: 4rem;
   }
@@ -44567,6 +45064,16 @@ span {
   .sm\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .sm\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .sm\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .sm\:py-16{
@@ -44827,6 +45334,22 @@ span {
 
   .sm\:pl-12{
     padding-left: 3rem;
+  }
+
+  .sm\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .sm\:pr-14{
+    padding-right: 3.5rem;
+  }
+
+  .sm\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+
+  .sm\:pl-14{
+    padding-left: 3.5rem;
   }
 
   .sm\:pt-16{
@@ -52449,6 +52972,10 @@ span {
     width: 3rem;
   }
 
+  .sm\:w-14{
+    width: 3.5rem;
+  }
+
   .sm\:w-16{
     width: 4rem;
   }
@@ -52683,6 +53210,11 @@ span {
     gap: 3rem;
   }
 
+  .sm\:gap-14{
+    grid-gap: 3.5rem;
+    gap: 3.5rem;
+  }
+
   .sm\:gap-16{
     grid-gap: 4rem;
     gap: 4rem;
@@ -52793,6 +53325,12 @@ span {
          column-gap: 3rem;
   }
 
+  .sm\:col-gap-14{
+    grid-column-gap: 3.5rem;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .sm\:col-gap-16{
     grid-column-gap: 4rem;
     -moz-column-gap: 4rem;
@@ -52901,6 +53439,11 @@ span {
   .sm\:row-gap-12{
     grid-row-gap: 3rem;
     row-gap: 3rem;
+  }
+
+  .sm\:row-gap-14{
+    grid-row-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 
   .sm\:row-gap-16{
@@ -53870,6 +54413,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .sm\:translate-x-14{
+    --transform-translate-x: 3.5rem;
+  }
+
   .sm\:translate-x-16{
     --transform-translate-x: 4rem;
   }
@@ -53944,6 +54491,10 @@ span {
 
   .sm\:-translate-x-12{
     --transform-translate-x: -3rem;
+  }
+
+  .sm\:-translate-x-14{
+    --transform-translate-x: -3.5rem;
   }
 
   .sm\:-translate-x-16{
@@ -54042,6 +54593,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .sm\:translate-y-14{
+    --transform-translate-y: 3.5rem;
+  }
+
   .sm\:translate-y-16{
     --transform-translate-y: 4rem;
   }
@@ -54116,6 +54671,10 @@ span {
 
   .sm\:-translate-y-12{
     --transform-translate-y: -3rem;
+  }
+
+  .sm\:-translate-y-14{
+    --transform-translate-y: -3.5rem;
   }
 
   .sm\:-translate-y-16{
@@ -54214,6 +54773,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .sm\:hover\:translate-x-14:hover{
+    --transform-translate-x: 3.5rem;
+  }
+
   .sm\:hover\:translate-x-16:hover{
     --transform-translate-x: 4rem;
   }
@@ -54288,6 +54851,10 @@ span {
 
   .sm\:hover\:-translate-x-12:hover{
     --transform-translate-x: -3rem;
+  }
+
+  .sm\:hover\:-translate-x-14:hover{
+    --transform-translate-x: -3.5rem;
   }
 
   .sm\:hover\:-translate-x-16:hover{
@@ -54386,6 +54953,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .sm\:hover\:translate-y-14:hover{
+    --transform-translate-y: 3.5rem;
+  }
+
   .sm\:hover\:translate-y-16:hover{
     --transform-translate-y: 4rem;
   }
@@ -54460,6 +55031,10 @@ span {
 
   .sm\:hover\:-translate-y-12:hover{
     --transform-translate-y: -3rem;
+  }
+
+  .sm\:hover\:-translate-y-14:hover{
+    --transform-translate-y: -3.5rem;
   }
 
   .sm\:hover\:-translate-y-16:hover{
@@ -54558,6 +55133,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .sm\:focus\:translate-x-14:focus{
+    --transform-translate-x: 3.5rem;
+  }
+
   .sm\:focus\:translate-x-16:focus{
     --transform-translate-x: 4rem;
   }
@@ -54632,6 +55211,10 @@ span {
 
   .sm\:focus\:-translate-x-12:focus{
     --transform-translate-x: -3rem;
+  }
+
+  .sm\:focus\:-translate-x-14:focus{
+    --transform-translate-x: -3.5rem;
   }
 
   .sm\:focus\:-translate-x-16:focus{
@@ -54730,6 +55313,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .sm\:focus\:translate-y-14:focus{
+    --transform-translate-y: 3.5rem;
+  }
+
   .sm\:focus\:translate-y-16:focus{
     --transform-translate-y: 4rem;
   }
@@ -54804,6 +55391,10 @@ span {
 
   .sm\:focus\:-translate-y-12:focus{
     --transform-translate-y: -3rem;
+  }
+
+  .sm\:focus\:-translate-y-14:focus{
+    --transform-translate-y: -3.5rem;
   }
 
   .sm\:focus\:-translate-y-16:focus{
@@ -55260,6 +55851,18 @@ span {
     margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .md\:space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .md\:space-y-16 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -55486,6 +56089,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-3rem * var(--space-x-reverse));
     margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-3.5rem * var(--space-x-reverse));
+    margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:-space-y-16 > :not(template) ~ :not(template){
@@ -60768,6 +61383,10 @@ span {
     height: 3rem;
   }
 
+  .md\:h-14{
+    height: 3.5rem;
+  }
+
   .md\:h-16{
     height: 4rem;
   }
@@ -60956,6 +61575,10 @@ span {
     margin: 3rem;
   }
 
+  .md\:m-14{
+    margin: 3.5rem;
+  }
+
   .md\:m-16{
     margin: 4rem;
   }
@@ -61034,6 +61657,10 @@ span {
 
   .md\:-m-12{
     margin: -3rem;
+  }
+
+  .md\:-m-14{
+    margin: -3.5rem;
   }
 
   .md\:-m-16{
@@ -61174,6 +61801,16 @@ span {
   .md\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .md\:my-14{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .md\:my-16{
@@ -61374,6 +62011,16 @@ span {
   .md\:-mx-12{
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .md\:-my-14{
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .md\:-mx-14{
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
   }
 
   .md\:-my-16{
@@ -61634,6 +62281,22 @@ span {
 
   .md\:ml-12{
     margin-left: 3rem;
+  }
+
+  .md\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .md\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .md\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .md\:mt-16{
@@ -61956,6 +62619,22 @@ span {
     margin-left: -3rem;
   }
 
+  .md\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
+  .md\:-mr-14{
+    margin-right: -3.5rem;
+  }
+
+  .md\:-mb-14{
+    margin-bottom: -3.5rem;
+  }
+
+  .md\:-ml-14{
+    margin-left: -3.5rem;
+  }
+
   .md\:-mt-16{
     margin-top: -4rem;
   }
@@ -62125,7 +62804,7 @@ span {
   }
 
   .md\:max-w-xs{
-    max-width: 20rem;
+    max-width: 22rem;
   }
 
   .md\:max-w-sm{
@@ -62157,10 +62836,14 @@ span {
   }
 
   .md\:max-w-5xl{
-    max-width: 64rem;
+    max-width: 60rem;
   }
 
   .md\:max-w-6xl{
+    max-width: 64rem;
+  }
+
+  .md\:max-w-7xl{
     max-width: 72rem;
   }
 
@@ -62382,6 +63065,10 @@ span {
     padding: 3rem;
   }
 
+  .md\:p-14{
+    padding: 3.5rem;
+  }
+
   .md\:p-16{
     padding: 4rem;
   }
@@ -62520,6 +63207,16 @@ span {
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .md\:py-16{
@@ -62780,6 +63477,22 @@ span {
 
   .md\:pl-12{
     padding-left: 3rem;
+  }
+
+  .md\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .md\:pr-14{
+    padding-right: 3.5rem;
+  }
+
+  .md\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:pl-14{
+    padding-left: 3.5rem;
   }
 
   .md\:pt-16{
@@ -70402,6 +71115,10 @@ span {
     width: 3rem;
   }
 
+  .md\:w-14{
+    width: 3.5rem;
+  }
+
   .md\:w-16{
     width: 4rem;
   }
@@ -70636,6 +71353,11 @@ span {
     gap: 3rem;
   }
 
+  .md\:gap-14{
+    grid-gap: 3.5rem;
+    gap: 3.5rem;
+  }
+
   .md\:gap-16{
     grid-gap: 4rem;
     gap: 4rem;
@@ -70746,6 +71468,12 @@ span {
          column-gap: 3rem;
   }
 
+  .md\:col-gap-14{
+    grid-column-gap: 3.5rem;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .md\:col-gap-16{
     grid-column-gap: 4rem;
     -moz-column-gap: 4rem;
@@ -70854,6 +71582,11 @@ span {
   .md\:row-gap-12{
     grid-row-gap: 3rem;
     row-gap: 3rem;
+  }
+
+  .md\:row-gap-14{
+    grid-row-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 
   .md\:row-gap-16{
@@ -71823,6 +72556,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .md\:translate-x-14{
+    --transform-translate-x: 3.5rem;
+  }
+
   .md\:translate-x-16{
     --transform-translate-x: 4rem;
   }
@@ -71897,6 +72634,10 @@ span {
 
   .md\:-translate-x-12{
     --transform-translate-x: -3rem;
+  }
+
+  .md\:-translate-x-14{
+    --transform-translate-x: -3.5rem;
   }
 
   .md\:-translate-x-16{
@@ -71995,6 +72736,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .md\:translate-y-14{
+    --transform-translate-y: 3.5rem;
+  }
+
   .md\:translate-y-16{
     --transform-translate-y: 4rem;
   }
@@ -72069,6 +72814,10 @@ span {
 
   .md\:-translate-y-12{
     --transform-translate-y: -3rem;
+  }
+
+  .md\:-translate-y-14{
+    --transform-translate-y: -3.5rem;
   }
 
   .md\:-translate-y-16{
@@ -72167,6 +72916,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .md\:hover\:translate-x-14:hover{
+    --transform-translate-x: 3.5rem;
+  }
+
   .md\:hover\:translate-x-16:hover{
     --transform-translate-x: 4rem;
   }
@@ -72241,6 +72994,10 @@ span {
 
   .md\:hover\:-translate-x-12:hover{
     --transform-translate-x: -3rem;
+  }
+
+  .md\:hover\:-translate-x-14:hover{
+    --transform-translate-x: -3.5rem;
   }
 
   .md\:hover\:-translate-x-16:hover{
@@ -72339,6 +73096,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .md\:hover\:translate-y-14:hover{
+    --transform-translate-y: 3.5rem;
+  }
+
   .md\:hover\:translate-y-16:hover{
     --transform-translate-y: 4rem;
   }
@@ -72413,6 +73174,10 @@ span {
 
   .md\:hover\:-translate-y-12:hover{
     --transform-translate-y: -3rem;
+  }
+
+  .md\:hover\:-translate-y-14:hover{
+    --transform-translate-y: -3.5rem;
   }
 
   .md\:hover\:-translate-y-16:hover{
@@ -72511,6 +73276,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .md\:focus\:translate-x-14:focus{
+    --transform-translate-x: 3.5rem;
+  }
+
   .md\:focus\:translate-x-16:focus{
     --transform-translate-x: 4rem;
   }
@@ -72585,6 +73354,10 @@ span {
 
   .md\:focus\:-translate-x-12:focus{
     --transform-translate-x: -3rem;
+  }
+
+  .md\:focus\:-translate-x-14:focus{
+    --transform-translate-x: -3.5rem;
   }
 
   .md\:focus\:-translate-x-16:focus{
@@ -72683,6 +73456,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .md\:focus\:translate-y-14:focus{
+    --transform-translate-y: 3.5rem;
+  }
+
   .md\:focus\:translate-y-16:focus{
     --transform-translate-y: 4rem;
   }
@@ -72757,6 +73534,10 @@ span {
 
   .md\:focus\:-translate-y-12:focus{
     --transform-translate-y: -3rem;
+  }
+
+  .md\:focus\:-translate-y-14:focus{
+    --transform-translate-y: -3.5rem;
   }
 
   .md\:focus\:-translate-y-16:focus{
@@ -73213,6 +73994,18 @@ span {
     margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .lg\:space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .lg\:space-y-16 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -73439,6 +74232,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-3rem * var(--space-x-reverse));
     margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-3.5rem * var(--space-x-reverse));
+    margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:-space-y-16 > :not(template) ~ :not(template){
@@ -78721,6 +79526,10 @@ span {
     height: 3rem;
   }
 
+  .lg\:h-14{
+    height: 3.5rem;
+  }
+
   .lg\:h-16{
     height: 4rem;
   }
@@ -78909,6 +79718,10 @@ span {
     margin: 3rem;
   }
 
+  .lg\:m-14{
+    margin: 3.5rem;
+  }
+
   .lg\:m-16{
     margin: 4rem;
   }
@@ -78987,6 +79800,10 @@ span {
 
   .lg\:-m-12{
     margin: -3rem;
+  }
+
+  .lg\:-m-14{
+    margin: -3.5rem;
   }
 
   .lg\:-m-16{
@@ -79127,6 +79944,16 @@ span {
   .lg\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .lg\:my-14{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .lg\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .lg\:my-16{
@@ -79327,6 +80154,16 @@ span {
   .lg\:-mx-12{
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .lg\:-my-14{
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .lg\:-mx-14{
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
   }
 
   .lg\:-my-16{
@@ -79587,6 +80424,22 @@ span {
 
   .lg\:ml-12{
     margin-left: 3rem;
+  }
+
+  .lg\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .lg\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .lg\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .lg\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .lg\:mt-16{
@@ -79909,6 +80762,22 @@ span {
     margin-left: -3rem;
   }
 
+  .lg\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
+  .lg\:-mr-14{
+    margin-right: -3.5rem;
+  }
+
+  .lg\:-mb-14{
+    margin-bottom: -3.5rem;
+  }
+
+  .lg\:-ml-14{
+    margin-left: -3.5rem;
+  }
+
   .lg\:-mt-16{
     margin-top: -4rem;
   }
@@ -80078,7 +80947,7 @@ span {
   }
 
   .lg\:max-w-xs{
-    max-width: 20rem;
+    max-width: 22rem;
   }
 
   .lg\:max-w-sm{
@@ -80110,10 +80979,14 @@ span {
   }
 
   .lg\:max-w-5xl{
-    max-width: 64rem;
+    max-width: 60rem;
   }
 
   .lg\:max-w-6xl{
+    max-width: 64rem;
+  }
+
+  .lg\:max-w-7xl{
     max-width: 72rem;
   }
 
@@ -80335,6 +81208,10 @@ span {
     padding: 3rem;
   }
 
+  .lg\:p-14{
+    padding: 3.5rem;
+  }
+
   .lg\:p-16{
     padding: 4rem;
   }
@@ -80473,6 +81350,16 @@ span {
   .lg\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .lg\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .lg\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .lg\:py-16{
@@ -80733,6 +81620,22 @@ span {
 
   .lg\:pl-12{
     padding-left: 3rem;
+  }
+
+  .lg\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .lg\:pr-14{
+    padding-right: 3.5rem;
+  }
+
+  .lg\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+
+  .lg\:pl-14{
+    padding-left: 3.5rem;
   }
 
   .lg\:pt-16{
@@ -88355,6 +89258,10 @@ span {
     width: 3rem;
   }
 
+  .lg\:w-14{
+    width: 3.5rem;
+  }
+
   .lg\:w-16{
     width: 4rem;
   }
@@ -88589,6 +89496,11 @@ span {
     gap: 3rem;
   }
 
+  .lg\:gap-14{
+    grid-gap: 3.5rem;
+    gap: 3.5rem;
+  }
+
   .lg\:gap-16{
     grid-gap: 4rem;
     gap: 4rem;
@@ -88699,6 +89611,12 @@ span {
          column-gap: 3rem;
   }
 
+  .lg\:col-gap-14{
+    grid-column-gap: 3.5rem;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .lg\:col-gap-16{
     grid-column-gap: 4rem;
     -moz-column-gap: 4rem;
@@ -88807,6 +89725,11 @@ span {
   .lg\:row-gap-12{
     grid-row-gap: 3rem;
     row-gap: 3rem;
+  }
+
+  .lg\:row-gap-14{
+    grid-row-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 
   .lg\:row-gap-16{
@@ -89776,6 +90699,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .lg\:translate-x-14{
+    --transform-translate-x: 3.5rem;
+  }
+
   .lg\:translate-x-16{
     --transform-translate-x: 4rem;
   }
@@ -89850,6 +90777,10 @@ span {
 
   .lg\:-translate-x-12{
     --transform-translate-x: -3rem;
+  }
+
+  .lg\:-translate-x-14{
+    --transform-translate-x: -3.5rem;
   }
 
   .lg\:-translate-x-16{
@@ -89948,6 +90879,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .lg\:translate-y-14{
+    --transform-translate-y: 3.5rem;
+  }
+
   .lg\:translate-y-16{
     --transform-translate-y: 4rem;
   }
@@ -90022,6 +90957,10 @@ span {
 
   .lg\:-translate-y-12{
     --transform-translate-y: -3rem;
+  }
+
+  .lg\:-translate-y-14{
+    --transform-translate-y: -3.5rem;
   }
 
   .lg\:-translate-y-16{
@@ -90120,6 +91059,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .lg\:hover\:translate-x-14:hover{
+    --transform-translate-x: 3.5rem;
+  }
+
   .lg\:hover\:translate-x-16:hover{
     --transform-translate-x: 4rem;
   }
@@ -90194,6 +91137,10 @@ span {
 
   .lg\:hover\:-translate-x-12:hover{
     --transform-translate-x: -3rem;
+  }
+
+  .lg\:hover\:-translate-x-14:hover{
+    --transform-translate-x: -3.5rem;
   }
 
   .lg\:hover\:-translate-x-16:hover{
@@ -90292,6 +91239,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .lg\:hover\:translate-y-14:hover{
+    --transform-translate-y: 3.5rem;
+  }
+
   .lg\:hover\:translate-y-16:hover{
     --transform-translate-y: 4rem;
   }
@@ -90366,6 +91317,10 @@ span {
 
   .lg\:hover\:-translate-y-12:hover{
     --transform-translate-y: -3rem;
+  }
+
+  .lg\:hover\:-translate-y-14:hover{
+    --transform-translate-y: -3.5rem;
   }
 
   .lg\:hover\:-translate-y-16:hover{
@@ -90464,6 +91419,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .lg\:focus\:translate-x-14:focus{
+    --transform-translate-x: 3.5rem;
+  }
+
   .lg\:focus\:translate-x-16:focus{
     --transform-translate-x: 4rem;
   }
@@ -90538,6 +91497,10 @@ span {
 
   .lg\:focus\:-translate-x-12:focus{
     --transform-translate-x: -3rem;
+  }
+
+  .lg\:focus\:-translate-x-14:focus{
+    --transform-translate-x: -3.5rem;
   }
 
   .lg\:focus\:-translate-x-16:focus{
@@ -90636,6 +91599,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .lg\:focus\:translate-y-14:focus{
+    --transform-translate-y: 3.5rem;
+  }
+
   .lg\:focus\:translate-y-16:focus{
     --transform-translate-y: 4rem;
   }
@@ -90710,6 +91677,10 @@ span {
 
   .lg\:focus\:-translate-y-12:focus{
     --transform-translate-y: -3rem;
+  }
+
+  .lg\:focus\:-translate-y-14:focus{
+    --transform-translate-y: -3.5rem;
   }
 
   .lg\:focus\:-translate-y-16:focus{
@@ -91166,6 +92137,18 @@ span {
     margin-left: calc(3rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xl\:space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(3.5rem * var(--space-x-reverse));
+    margin-left: calc(3.5rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xl\:space-y-16 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--space-y-reverse)));
@@ -91392,6 +92375,18 @@ span {
     --space-x-reverse: 0;
     margin-right: calc(-3rem * var(--space-x-reverse));
     margin-left: calc(-3rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-14 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-3.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-3.5rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-14 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-3.5rem * var(--space-x-reverse));
+    margin-left: calc(-3.5rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:-space-y-16 > :not(template) ~ :not(template){
@@ -96674,6 +97669,10 @@ span {
     height: 3rem;
   }
 
+  .xl\:h-14{
+    height: 3.5rem;
+  }
+
   .xl\:h-16{
     height: 4rem;
   }
@@ -96862,6 +97861,10 @@ span {
     margin: 3rem;
   }
 
+  .xl\:m-14{
+    margin: 3.5rem;
+  }
+
   .xl\:m-16{
     margin: 4rem;
   }
@@ -96940,6 +97943,10 @@ span {
 
   .xl\:-m-12{
     margin: -3rem;
+  }
+
+  .xl\:-m-14{
+    margin: -3.5rem;
   }
 
   .xl\:-m-16{
@@ -97080,6 +98087,16 @@ span {
   .xl\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .xl\:my-14{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .xl\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .xl\:my-16{
@@ -97280,6 +98297,16 @@ span {
   .xl\:-mx-12{
     margin-left: -3rem;
     margin-right: -3rem;
+  }
+
+  .xl\:-my-14{
+    margin-top: -3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .xl\:-mx-14{
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
   }
 
   .xl\:-my-16{
@@ -97540,6 +98567,22 @@ span {
 
   .xl\:ml-12{
     margin-left: 3rem;
+  }
+
+  .xl\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .xl\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .xl\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .xl\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .xl\:mt-16{
@@ -97862,6 +98905,22 @@ span {
     margin-left: -3rem;
   }
 
+  .xl\:-mt-14{
+    margin-top: -3.5rem;
+  }
+
+  .xl\:-mr-14{
+    margin-right: -3.5rem;
+  }
+
+  .xl\:-mb-14{
+    margin-bottom: -3.5rem;
+  }
+
+  .xl\:-ml-14{
+    margin-left: -3.5rem;
+  }
+
   .xl\:-mt-16{
     margin-top: -4rem;
   }
@@ -98031,7 +99090,7 @@ span {
   }
 
   .xl\:max-w-xs{
-    max-width: 20rem;
+    max-width: 22rem;
   }
 
   .xl\:max-w-sm{
@@ -98063,10 +99122,14 @@ span {
   }
 
   .xl\:max-w-5xl{
-    max-width: 64rem;
+    max-width: 60rem;
   }
 
   .xl\:max-w-6xl{
+    max-width: 64rem;
+  }
+
+  .xl\:max-w-7xl{
     max-width: 72rem;
   }
 
@@ -98288,6 +99351,10 @@ span {
     padding: 3rem;
   }
 
+  .xl\:p-14{
+    padding: 3.5rem;
+  }
+
   .xl\:p-16{
     padding: 4rem;
   }
@@ -98426,6 +99493,16 @@ span {
   .xl\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xl\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .xl\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   .xl\:py-16{
@@ -98686,6 +99763,22 @@ span {
 
   .xl\:pl-12{
     padding-left: 3rem;
+  }
+
+  .xl\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .xl\:pr-14{
+    padding-right: 3.5rem;
+  }
+
+  .xl\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+
+  .xl\:pl-14{
+    padding-left: 3.5rem;
   }
 
   .xl\:pt-16{
@@ -106308,6 +107401,10 @@ span {
     width: 3rem;
   }
 
+  .xl\:w-14{
+    width: 3.5rem;
+  }
+
   .xl\:w-16{
     width: 4rem;
   }
@@ -106542,6 +107639,11 @@ span {
     gap: 3rem;
   }
 
+  .xl\:gap-14{
+    grid-gap: 3.5rem;
+    gap: 3.5rem;
+  }
+
   .xl\:gap-16{
     grid-gap: 4rem;
     gap: 4rem;
@@ -106652,6 +107754,12 @@ span {
          column-gap: 3rem;
   }
 
+  .xl\:col-gap-14{
+    grid-column-gap: 3.5rem;
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .xl\:col-gap-16{
     grid-column-gap: 4rem;
     -moz-column-gap: 4rem;
@@ -106760,6 +107868,11 @@ span {
   .xl\:row-gap-12{
     grid-row-gap: 3rem;
     row-gap: 3rem;
+  }
+
+  .xl\:row-gap-14{
+    grid-row-gap: 3.5rem;
+    row-gap: 3.5rem;
   }
 
   .xl\:row-gap-16{
@@ -107729,6 +108842,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xl\:translate-x-14{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xl\:translate-x-16{
     --transform-translate-x: 4rem;
   }
@@ -107803,6 +108920,10 @@ span {
 
   .xl\:-translate-x-12{
     --transform-translate-x: -3rem;
+  }
+
+  .xl\:-translate-x-14{
+    --transform-translate-x: -3.5rem;
   }
 
   .xl\:-translate-x-16{
@@ -107901,6 +109022,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xl\:translate-y-14{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xl\:translate-y-16{
     --transform-translate-y: 4rem;
   }
@@ -107975,6 +109100,10 @@ span {
 
   .xl\:-translate-y-12{
     --transform-translate-y: -3rem;
+  }
+
+  .xl\:-translate-y-14{
+    --transform-translate-y: -3.5rem;
   }
 
   .xl\:-translate-y-16{
@@ -108073,6 +109202,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xl\:hover\:translate-x-14:hover{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xl\:hover\:translate-x-16:hover{
     --transform-translate-x: 4rem;
   }
@@ -108147,6 +109280,10 @@ span {
 
   .xl\:hover\:-translate-x-12:hover{
     --transform-translate-x: -3rem;
+  }
+
+  .xl\:hover\:-translate-x-14:hover{
+    --transform-translate-x: -3.5rem;
   }
 
   .xl\:hover\:-translate-x-16:hover{
@@ -108245,6 +109382,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xl\:hover\:translate-y-14:hover{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xl\:hover\:translate-y-16:hover{
     --transform-translate-y: 4rem;
   }
@@ -108319,6 +109460,10 @@ span {
 
   .xl\:hover\:-translate-y-12:hover{
     --transform-translate-y: -3rem;
+  }
+
+  .xl\:hover\:-translate-y-14:hover{
+    --transform-translate-y: -3.5rem;
   }
 
   .xl\:hover\:-translate-y-16:hover{
@@ -108417,6 +109562,10 @@ span {
     --transform-translate-x: 3rem;
   }
 
+  .xl\:focus\:translate-x-14:focus{
+    --transform-translate-x: 3.5rem;
+  }
+
   .xl\:focus\:translate-x-16:focus{
     --transform-translate-x: 4rem;
   }
@@ -108491,6 +109640,10 @@ span {
 
   .xl\:focus\:-translate-x-12:focus{
     --transform-translate-x: -3rem;
+  }
+
+  .xl\:focus\:-translate-x-14:focus{
+    --transform-translate-x: -3.5rem;
   }
 
   .xl\:focus\:-translate-x-16:focus{
@@ -108589,6 +109742,10 @@ span {
     --transform-translate-y: 3rem;
   }
 
+  .xl\:focus\:translate-y-14:focus{
+    --transform-translate-y: 3.5rem;
+  }
+
   .xl\:focus\:translate-y-16:focus{
     --transform-translate-y: 4rem;
   }
@@ -108663,6 +109820,10 @@ span {
 
   .xl\:focus\:-translate-y-12:focus{
     --transform-translate-y: -3rem;
+  }
+
+  .xl\:focus\:-translate-y-14:focus{
+    --transform-translate-y: -3.5rem;
   }
 
   .xl\:focus\:-translate-y-16:focus{

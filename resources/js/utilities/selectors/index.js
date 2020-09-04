@@ -27,7 +27,29 @@ const $$ = {
 
     mobileNavContainer  : document.querySelector('.mobile-nav-container'),
 
-    toggleShowHide      : document.querySelectorAll('.toggle-show-hide')
+    toggleShowHide      : document.querySelectorAll('.toggle-show-hide'),
+
+    contactForm         : document.getElementById('contact-form'),
+
+    inputFields         : document.querySelectorAll('.form-input-field'),
+
+    nameInput           : document.getElementById('name'),
+
+    emailInput          : document.getElementById('email'),
+
+    phoneNumberInput    : document.getElementById('phone'),
+
+    messageInput        : document.getElementById('message'),
+
+    formError           : document.querySelectorAll('.form-error'),
+
+    requiredFields      : document.querySelectorAll('.required'),
+
+    requiredPopUp       : document.querySelector('.required-pop-up'),
+
+    submitBtn           : document.getElementById('submit'),
+
+    regexInputs         : document.querySelectorAll('[data-regex]')
 
 }
 

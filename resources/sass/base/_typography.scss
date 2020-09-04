@@ -45,6 +45,10 @@ span {
   @apply font-paragraph;
 }
 
+input, textarea {
+  @apply text-sm;
+}
+
 // content
 .content {
 
