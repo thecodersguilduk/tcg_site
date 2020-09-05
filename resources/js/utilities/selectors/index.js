@@ -49,7 +49,15 @@ const $$ = {
 
     submitBtn           : document.getElementById('submit'),
 
-    regexInputs         : document.querySelectorAll('[data-regex]')
+    regexInputs         : document.querySelectorAll('[data-regex]'),
+
+    postContainer       : document.getElementById('posts-container'),
+
+    blogPostList        : document.querySelectorAll('[data-post]'),
+
+    loadMoreBtn         : document.getElementById('load-more'),
+
+    scrollTopBtn        : document.getElementById('scroll-top')
 
 }
 
