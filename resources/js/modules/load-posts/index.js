@@ -1,10 +1,8 @@
 import $$ from '@utilities/selectors'
 
-function displayPost(arr, attr, hiddenClass, limit) {
-  arr.splice(0, limit).forEach(el => {
-    el.classList.contains(hiddenClass) ? el.classList.remove(hiddenClass) : null;
-    el.hasAttribute(attr) ? el.setAttribute(attr, 'false') : null;
-  })
+function displayEl(el, attr, hiddenClass) {
+  el.classList.contains(hiddenClass) ? el.classList.remove(hiddenClass) : null;
+  el.hasAttribute(attr) ? el.setAttribute(attr, 'false') : null;
 }
 
 const loadMorePosts = function loadMorePosts() {
@@ -15,13 +13,17 @@ const loadMorePosts = function loadMorePosts() {
 
   if (!$$.postContainer) { return; }
 
-  displayPost(blogPostsArray, attr, hiddenClass, maxItems);
+  blogPostsArray.splice(0, maxItems).forEach(el => {
+    displayEl(el, attr, hiddenClass);
+  })
 
-  $$.loadMoreBtn.addEventListener('click', function(e) {
+  $$.loadMoreBtn.addEventListener('click', function() {
 
-    displayPost(blogPostsArray, attr, hiddenClass, maxItems);
+    blogPostsArray.splice(0, maxItems).forEach(el => {
+      displayEl(el, attr, hiddenClass);
+    })
 
-    $$.scrollTopBtn.classList.contains('hidden') ? $$.scrollTopBtn.classList.remove('hidden') : null;
+    displayEl($$.scrollTopBtn, attr, hiddenClass);
 
     if (!blogPostsArray.length) {
       this.classList.add(hiddenClass);

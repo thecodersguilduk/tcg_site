@@ -322,11 +322,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
 
-function displayPost(arr, attr, hiddenClass, limit) {
-  arr.splice(0, limit).forEach(function (el) {
-    el.classList.contains(hiddenClass) ? el.classList.remove(hiddenClass) : null;
-    el.hasAttribute(attr) ? el.setAttribute(attr, 'false') : null;
-  });
+function displayEl(el, attr, hiddenClass) {
+  el.classList.contains(hiddenClass) ? el.classList.remove(hiddenClass) : null;
+  el.hasAttribute(attr) ? el.setAttribute(attr, 'false') : null;
 }
 
 var loadMorePosts = function loadMorePosts() {
@@ -339,10 +337,14 @@ var loadMorePosts = function loadMorePosts() {
     return;
   }
 
-  displayPost(blogPostsArray, attr, hiddenClass, maxItems);
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].loadMoreBtn.addEventListener('click', function (e) {
-    displayPost(blogPostsArray, attr, hiddenClass, maxItems);
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].scrollTopBtn.classList.contains('hidden') ? _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].scrollTopBtn.classList.remove('hidden') : null;
+  blogPostsArray.splice(0, maxItems).forEach(function (el) {
+    displayEl(el, attr, hiddenClass);
+  });
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].loadMoreBtn.addEventListener('click', function () {
+    blogPostsArray.splice(0, maxItems).forEach(function (el) {
+      displayEl(el, attr, hiddenClass);
+    });
+    displayEl(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].scrollTopBtn, attr, hiddenClass);
 
     if (!blogPostsArray.length) {
       this.classList.add(hiddenClass);
