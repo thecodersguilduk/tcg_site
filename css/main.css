@@ -1303,6 +1303,13 @@ input, textarea {
   line-height: 26px;
 }
 
+.policy-item:hover p:first-child, .policy-item:focus p:first-child {
+  text-decoration: underline;
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+}
+
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -6663,6 +6670,10 @@ input, textarea {
 
 .flex-1{
   flex: 1 1 0%;
+}
+
+.flex-2{
+  flex: 2 1 0%;
 }
 
 .flex-auto{
@@ -24805,6 +24816,10 @@ input, textarea {
 
   .xs\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .xs\:flex-2{
+    flex: 2 1 0%;
   }
 
   .xs\:flex-auto{
@@ -42950,6 +42965,10 @@ input, textarea {
     flex: 1 1 0%;
   }
 
+  .sm\:flex-2{
+    flex: 2 1 0%;
+  }
+
   .sm\:flex-auto{
     flex: 1 1 auto;
   }
@@ -61091,6 +61110,10 @@ input, textarea {
 
   .md\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .md\:flex-2{
+    flex: 2 1 0%;
   }
 
   .md\:flex-auto{
@@ -79236,6 +79259,10 @@ input, textarea {
     flex: 1 1 0%;
   }
 
+  .lg\:flex-2{
+    flex: 2 1 0%;
+  }
+
   .lg\:flex-auto{
     flex: 1 1 auto;
   }
@@ -97377,6 +97404,10 @@ input, textarea {
 
   .xl\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .xl\:flex-2{
+    flex: 2 1 0%;
   }
 
   .xl\:flex-auto{
