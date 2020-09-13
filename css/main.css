@@ -606,7 +606,7 @@ video {
 
 .inner {
   width: 100%;
-  max-width: 64rem;
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -689,6 +689,24 @@ html {
 
 .required-pop-up {
   bottom: 100%;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  --bg-opacity: 1;
+  background-color: #c94b62;
+  background-color: rgba(201, 75, 98, var(--bg-opacity));
+}
+
+.section-rounded {
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 }
 
 a {
@@ -1303,6 +1321,89 @@ input, textarea {
   line-height: 26px;
 }
 
+#apprenticeships .hero-desktop {
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  #apprenticeships .hero-desktop {
+    display: none;
+  }
+}
+
+#apprenticeships .hero-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0% 85%);
+          clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0% 85%);
+}
+
+#apprenticeships .hero-inner::after {
+  --bg-opacity: 1;
+  background-color: #2574a9;
+  background-color: rgba(37, 116, 169, var(--bg-opacity));
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+}
+
+#apprenticeships .hero-inner img {
+  height: 100%;
+  width: 100%;
+  -o-object-position: center center;
+     object-position: center center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#apprenticeships .hero-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  #apprenticeships .hero-mobile {
+    display: block;
+  }
+}
+
+#apprenticeships .apprenticeships__cta a {
+  text-align: center;
+  min-width: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  #apprenticeships .apprenticeships__cta a {
+    min-width: calc(390px + 24px + 24px);
+  }
+}
+
+#apprenticeships .pattern-1, #apprenticeships .pattern-2, #apprenticeships .pattern-3, #apprenticeships .pattern-4 {
+  z-index: 0;
+}
+
+#apprenticeships .pattern-1, #apprenticeships .pattern-3 {
+  right: -200px;
+}
+
+#apprenticeships .pattern-2 {
+  left: -200px;
+}
+
+#apprenticeships .pattern-3 {
+  top: 6rem;
+}
+
+#apprenticeships .pattern-4 {
+  margin-bottom: 1rem;
+}
+
 .policy-item:hover p:first-child, .policy-item:focus p:first-child {
   text-decoration: underline;
   --text-opacity: 1;
@@ -1550,16 +1651,28 @@ input, textarea {
   margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
 }
 
-.space-y-px > :not(template) ~ :not(template){
+.space-y-1px > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(1px * var(--space-y-reverse));
 }
 
-.space-x-px > :not(template) ~ :not(template){
+.space-x-1px > :not(template) ~ :not(template){
   --space-x-reverse: 0;
   margin-right: calc(1px * var(--space-x-reverse));
   margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+}
+
+.space-y-2px > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(2px * var(--space-y-reverse));
+}
+
+.space-x-2px > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(2px * var(--space-x-reverse));
+  margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
 }
 
 .-space-y-1 > :not(template) ~ :not(template){
@@ -1790,16 +1903,28 @@ input, textarea {
   margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
 }
 
-.-space-y-px > :not(template) ~ :not(template){
+.-space-y-1px > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(-1px * var(--space-y-reverse));
 }
 
-.-space-x-px > :not(template) ~ :not(template){
+.-space-x-1px > :not(template) ~ :not(template){
   --space-x-reverse: 0;
   margin-right: calc(-1px * var(--space-x-reverse));
   margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-2px > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-2px * var(--space-y-reverse));
+}
+
+.-space-x-2px > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-2px * var(--space-x-reverse));
+  margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
 }
 
 .space-y-reverse > :not(template) ~ :not(template){
@@ -7010,8 +7135,12 @@ input, textarea {
   height: auto;
 }
 
-.h-px{
+.h-1px{
   height: 1px;
+}
+
+.h-2px{
+  height: 2px;
 }
 
 .h-full{
@@ -7202,8 +7331,12 @@ input, textarea {
   margin: auto;
 }
 
-.m-px{
+.m-1px{
   margin: 1px;
+}
+
+.m-2px{
+  margin: 2px;
 }
 
 .-m-1{
@@ -7282,8 +7415,12 @@ input, textarea {
   margin: -24rem;
 }
 
-.-m-px{
+.-m-1px{
   margin: -1px;
+}
+
+.-m-2px{
+  margin: -2px;
 }
 
 .my-0{
@@ -7496,14 +7633,24 @@ input, textarea {
   margin-right: auto;
 }
 
-.my-px{
+.my-1px{
   margin-top: 1px;
   margin-bottom: 1px;
 }
 
-.mx-px{
+.mx-1px{
   margin-left: 1px;
   margin-right: 1px;
+}
+
+.my-2px{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.mx-2px{
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .-my-1{
@@ -7696,14 +7843,24 @@ input, textarea {
   margin-right: -24rem;
 }
 
-.-my-px{
+.-my-1px{
   margin-top: -1px;
   margin-bottom: -1px;
 }
 
-.-mx-px{
+.-mx-1px{
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.-my-2px{
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.-mx-2px{
+  margin-left: -2px;
+  margin-right: -2px;
 }
 
 .mt-0{
@@ -8042,20 +8199,36 @@ input, textarea {
   margin-left: auto;
 }
 
-.mt-px{
+.mt-1px{
   margin-top: 1px;
 }
 
-.mr-px{
+.mr-1px{
   margin-right: 1px;
 }
 
-.mb-px{
+.mb-1px{
   margin-bottom: 1px;
 }
 
-.ml-px{
+.ml-1px{
   margin-left: 1px;
+}
+
+.mt-2px{
+  margin-top: 2px;
+}
+
+.mr-2px{
+  margin-right: 2px;
+}
+
+.mb-2px{
+  margin-bottom: 2px;
+}
+
+.ml-2px{
+  margin-left: 2px;
 }
 
 .-mt-1{
@@ -8362,20 +8535,36 @@ input, textarea {
   margin-left: -24rem;
 }
 
-.-mt-px{
+.-mt-1px{
   margin-top: -1px;
 }
 
-.-mr-px{
+.-mr-1px{
   margin-right: -1px;
 }
 
-.-mb-px{
+.-mb-1px{
   margin-bottom: -1px;
 }
 
-.-ml-px{
+.-ml-1px{
   margin-left: -1px;
+}
+
+.-mt-2px{
+  margin-top: -2px;
+}
+
+.-mr-2px{
+  margin-right: -2px;
+}
+
+.-mb-2px{
+  margin-bottom: -2px;
+}
+
+.-ml-2px{
+  margin-left: -2px;
 }
 
 .max-h-full{
@@ -8688,8 +8877,12 @@ input, textarea {
   padding: 24rem;
 }
 
-.p-px{
+.p-1px{
   padding: 1px;
+}
+
+.p-2px{
+  padding: 2px;
 }
 
 .py-0{
@@ -8892,14 +9085,24 @@ input, textarea {
   padding-right: 24rem;
 }
 
-.py-px{
+.py-1px{
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
-.px-px{
+.px-1px{
   padding-left: 1px;
   padding-right: 1px;
+}
+
+.py-2px{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.px-2px{
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .pt-0{
@@ -9222,20 +9425,36 @@ input, textarea {
   padding-left: 24rem;
 }
 
-.pt-px{
+.pt-1px{
   padding-top: 1px;
 }
 
-.pr-px{
+.pr-1px{
   padding-right: 1px;
 }
 
-.pb-px{
+.pb-1px{
   padding-bottom: 1px;
 }
 
-.pl-px{
+.pl-1px{
   padding-left: 1px;
+}
+
+.pt-2px{
+  padding-top: 2px;
+}
+
+.pr-2px{
+  padding-right: 2px;
+}
+
+.pb-2px{
+  padding-bottom: 2px;
+}
+
+.pl-2px{
+  padding-left: 2px;
 }
 
 .placeholder-transparent::-moz-placeholder{
@@ -16742,8 +16961,12 @@ input, textarea {
   width: auto;
 }
 
-.w-px{
+.w-1px{
   width: 1px;
+}
+
+.w-2px{
+  width: 2px;
 }
 
 .w-1\/2{
@@ -16986,9 +17209,14 @@ input, textarea {
   gap: 24rem;
 }
 
-.gap-px{
+.gap-1px{
   grid-gap: 1px;
   gap: 1px;
+}
+
+.gap-2px{
+  grid-gap: 2px;
+  gap: 2px;
 }
 
 .col-gap-0{
@@ -17111,10 +17339,16 @@ input, textarea {
        column-gap: 24rem;
 }
 
-.col-gap-px{
+.col-gap-1px{
   grid-column-gap: 1px;
   -moz-column-gap: 1px;
        column-gap: 1px;
+}
+
+.col-gap-2px{
+  grid-column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
 }
 
 .row-gap-0{
@@ -17217,9 +17451,14 @@ input, textarea {
   row-gap: 24rem;
 }
 
-.row-gap-px{
+.row-gap-1px{
   grid-row-gap: 1px;
   row-gap: 1px;
+}
+
+.row-gap-2px{
+  grid-row-gap: 2px;
+  row-gap: 2px;
 }
 
 .grid-flow-row{
@@ -18179,8 +18418,12 @@ input, textarea {
   --transform-translate-x: 24rem;
 }
 
-.translate-x-px{
+.translate-x-1px{
   --transform-translate-x: 1px;
+}
+
+.translate-x-2px{
+  --transform-translate-x: 2px;
 }
 
 .-translate-x-1{
@@ -18259,8 +18502,12 @@ input, textarea {
   --transform-translate-x: -24rem;
 }
 
-.-translate-x-px{
+.-translate-x-1px{
   --transform-translate-x: -1px;
+}
+
+.-translate-x-2px{
+  --transform-translate-x: -2px;
 }
 
 .-translate-x-full{
@@ -18359,8 +18606,12 @@ input, textarea {
   --transform-translate-y: 24rem;
 }
 
-.translate-y-px{
+.translate-y-1px{
   --transform-translate-y: 1px;
+}
+
+.translate-y-2px{
+  --transform-translate-y: 2px;
 }
 
 .-translate-y-1{
@@ -18439,8 +18690,12 @@ input, textarea {
   --transform-translate-y: -24rem;
 }
 
-.-translate-y-px{
+.-translate-y-1px{
   --transform-translate-y: -1px;
+}
+
+.-translate-y-2px{
+  --transform-translate-y: -2px;
 }
 
 .-translate-y-full{
@@ -18539,8 +18794,12 @@ input, textarea {
   --transform-translate-x: 24rem;
 }
 
-.hover\:translate-x-px:hover{
+.hover\:translate-x-1px:hover{
   --transform-translate-x: 1px;
+}
+
+.hover\:translate-x-2px:hover{
+  --transform-translate-x: 2px;
 }
 
 .hover\:-translate-x-1:hover{
@@ -18619,8 +18878,12 @@ input, textarea {
   --transform-translate-x: -24rem;
 }
 
-.hover\:-translate-x-px:hover{
+.hover\:-translate-x-1px:hover{
   --transform-translate-x: -1px;
+}
+
+.hover\:-translate-x-2px:hover{
+  --transform-translate-x: -2px;
 }
 
 .hover\:-translate-x-full:hover{
@@ -18719,8 +18982,12 @@ input, textarea {
   --transform-translate-y: 24rem;
 }
 
-.hover\:translate-y-px:hover{
+.hover\:translate-y-1px:hover{
   --transform-translate-y: 1px;
+}
+
+.hover\:translate-y-2px:hover{
+  --transform-translate-y: 2px;
 }
 
 .hover\:-translate-y-1:hover{
@@ -18799,8 +19066,12 @@ input, textarea {
   --transform-translate-y: -24rem;
 }
 
-.hover\:-translate-y-px:hover{
+.hover\:-translate-y-1px:hover{
   --transform-translate-y: -1px;
+}
+
+.hover\:-translate-y-2px:hover{
+  --transform-translate-y: -2px;
 }
 
 .hover\:-translate-y-full:hover{
@@ -18899,8 +19170,12 @@ input, textarea {
   --transform-translate-x: 24rem;
 }
 
-.focus\:translate-x-px:focus{
+.focus\:translate-x-1px:focus{
   --transform-translate-x: 1px;
+}
+
+.focus\:translate-x-2px:focus{
+  --transform-translate-x: 2px;
 }
 
 .focus\:-translate-x-1:focus{
@@ -18979,8 +19254,12 @@ input, textarea {
   --transform-translate-x: -24rem;
 }
 
-.focus\:-translate-x-px:focus{
+.focus\:-translate-x-1px:focus{
   --transform-translate-x: -1px;
+}
+
+.focus\:-translate-x-2px:focus{
+  --transform-translate-x: -2px;
 }
 
 .focus\:-translate-x-full:focus{
@@ -19079,8 +19358,12 @@ input, textarea {
   --transform-translate-y: 24rem;
 }
 
-.focus\:translate-y-px:focus{
+.focus\:translate-y-1px:focus{
   --transform-translate-y: 1px;
+}
+
+.focus\:translate-y-2px:focus{
+  --transform-translate-y: 2px;
 }
 
 .focus\:-translate-y-1:focus{
@@ -19159,8 +19442,12 @@ input, textarea {
   --transform-translate-y: -24rem;
 }
 
-.focus\:-translate-y-px:focus{
+.focus\:-translate-y-1px:focus{
   --transform-translate-y: -1px;
+}
+
+.focus\:-translate-y-2px:focus{
+  --transform-translate-y: -2px;
 }
 
 .focus\:-translate-y-full:focus{
@@ -19696,16 +19983,28 @@ input, textarea {
     margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .xs\:space-y-px > :not(template) ~ :not(template){
+  .xs\:space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(1px * var(--space-y-reverse));
   }
 
-  .xs\:space-x-px > :not(template) ~ :not(template){
+  .xs\:space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(1px * var(--space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xs\:space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(2px * var(--space-y-reverse));
+  }
+
+  .xs\:space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(2px * var(--space-x-reverse));
+    margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
   }
 
   .xs\:-space-y-1 > :not(template) ~ :not(template){
@@ -19936,16 +20235,28 @@ input, textarea {
     margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .xs\:-space-y-px > :not(template) ~ :not(template){
+  .xs\:-space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(-1px * var(--space-y-reverse));
   }
 
-  .xs\:-space-x-px > :not(template) ~ :not(template){
+  .xs\:-space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(-1px * var(--space-x-reverse));
     margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xs\:-space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-2px * var(--space-y-reverse));
+  }
+
+  .xs\:-space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-2px * var(--space-x-reverse));
+    margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
   }
 
   .xs\:space-y-reverse > :not(template) ~ :not(template){
@@ -25156,8 +25467,12 @@ input, textarea {
     height: auto;
   }
 
-  .xs\:h-px{
+  .xs\:h-1px{
     height: 1px;
+  }
+
+  .xs\:h-2px{
+    height: 2px;
   }
 
   .xs\:h-full{
@@ -25348,8 +25663,12 @@ input, textarea {
     margin: auto;
   }
 
-  .xs\:m-px{
+  .xs\:m-1px{
     margin: 1px;
+  }
+
+  .xs\:m-2px{
+    margin: 2px;
   }
 
   .xs\:-m-1{
@@ -25428,8 +25747,12 @@ input, textarea {
     margin: -24rem;
   }
 
-  .xs\:-m-px{
+  .xs\:-m-1px{
     margin: -1px;
+  }
+
+  .xs\:-m-2px{
+    margin: -2px;
   }
 
   .xs\:my-0{
@@ -25642,14 +25965,24 @@ input, textarea {
     margin-right: auto;
   }
 
-  .xs\:my-px{
+  .xs\:my-1px{
     margin-top: 1px;
     margin-bottom: 1px;
   }
 
-  .xs\:mx-px{
+  .xs\:mx-1px{
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .xs\:my-2px{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .xs\:mx-2px{
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .xs\:-my-1{
@@ -25842,14 +26175,24 @@ input, textarea {
     margin-right: -24rem;
   }
 
-  .xs\:-my-px{
+  .xs\:-my-1px{
     margin-top: -1px;
     margin-bottom: -1px;
   }
 
-  .xs\:-mx-px{
+  .xs\:-mx-1px{
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .xs\:-my-2px{
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .xs\:-mx-2px{
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .xs\:mt-0{
@@ -26188,20 +26531,36 @@ input, textarea {
     margin-left: auto;
   }
 
-  .xs\:mt-px{
+  .xs\:mt-1px{
     margin-top: 1px;
   }
 
-  .xs\:mr-px{
+  .xs\:mr-1px{
     margin-right: 1px;
   }
 
-  .xs\:mb-px{
+  .xs\:mb-1px{
     margin-bottom: 1px;
   }
 
-  .xs\:ml-px{
+  .xs\:ml-1px{
     margin-left: 1px;
+  }
+
+  .xs\:mt-2px{
+    margin-top: 2px;
+  }
+
+  .xs\:mr-2px{
+    margin-right: 2px;
+  }
+
+  .xs\:mb-2px{
+    margin-bottom: 2px;
+  }
+
+  .xs\:ml-2px{
+    margin-left: 2px;
   }
 
   .xs\:-mt-1{
@@ -26508,20 +26867,36 @@ input, textarea {
     margin-left: -24rem;
   }
 
-  .xs\:-mt-px{
+  .xs\:-mt-1px{
     margin-top: -1px;
   }
 
-  .xs\:-mr-px{
+  .xs\:-mr-1px{
     margin-right: -1px;
   }
 
-  .xs\:-mb-px{
+  .xs\:-mb-1px{
     margin-bottom: -1px;
   }
 
-  .xs\:-ml-px{
+  .xs\:-ml-1px{
     margin-left: -1px;
+  }
+
+  .xs\:-mt-2px{
+    margin-top: -2px;
+  }
+
+  .xs\:-mr-2px{
+    margin-right: -2px;
+  }
+
+  .xs\:-mb-2px{
+    margin-bottom: -2px;
+  }
+
+  .xs\:-ml-2px{
+    margin-left: -2px;
   }
 
   .xs\:max-h-full{
@@ -26834,8 +27209,12 @@ input, textarea {
     padding: 24rem;
   }
 
-  .xs\:p-px{
+  .xs\:p-1px{
     padding: 1px;
+  }
+
+  .xs\:p-2px{
+    padding: 2px;
   }
 
   .xs\:py-0{
@@ -27038,14 +27417,24 @@ input, textarea {
     padding-right: 24rem;
   }
 
-  .xs\:py-px{
+  .xs\:py-1px{
     padding-top: 1px;
     padding-bottom: 1px;
   }
 
-  .xs\:px-px{
+  .xs\:px-1px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .xs\:py-2px{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .xs\:px-2px{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .xs\:pt-0{
@@ -27368,20 +27757,36 @@ input, textarea {
     padding-left: 24rem;
   }
 
-  .xs\:pt-px{
+  .xs\:pt-1px{
     padding-top: 1px;
   }
 
-  .xs\:pr-px{
+  .xs\:pr-1px{
     padding-right: 1px;
   }
 
-  .xs\:pb-px{
+  .xs\:pb-1px{
     padding-bottom: 1px;
   }
 
-  .xs\:pl-px{
+  .xs\:pl-1px{
     padding-left: 1px;
+  }
+
+  .xs\:pt-2px{
+    padding-top: 2px;
+  }
+
+  .xs\:pr-2px{
+    padding-right: 2px;
+  }
+
+  .xs\:pb-2px{
+    padding-bottom: 2px;
+  }
+
+  .xs\:pl-2px{
+    padding-left: 2px;
   }
 
   .xs\:placeholder-transparent::-moz-placeholder{
@@ -34888,8 +35293,12 @@ input, textarea {
     width: auto;
   }
 
-  .xs\:w-px{
+  .xs\:w-1px{
     width: 1px;
+  }
+
+  .xs\:w-2px{
+    width: 2px;
   }
 
   .xs\:w-1\/2{
@@ -35132,9 +35541,14 @@ input, textarea {
     gap: 24rem;
   }
 
-  .xs\:gap-px{
+  .xs\:gap-1px{
     grid-gap: 1px;
     gap: 1px;
+  }
+
+  .xs\:gap-2px{
+    grid-gap: 2px;
+    gap: 2px;
   }
 
   .xs\:col-gap-0{
@@ -35257,10 +35671,16 @@ input, textarea {
          column-gap: 24rem;
   }
 
-  .xs\:col-gap-px{
+  .xs\:col-gap-1px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
          column-gap: 1px;
+  }
+
+  .xs\:col-gap-2px{
+    grid-column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
   }
 
   .xs\:row-gap-0{
@@ -35363,9 +35783,14 @@ input, textarea {
     row-gap: 24rem;
   }
 
-  .xs\:row-gap-px{
+  .xs\:row-gap-1px{
     grid-row-gap: 1px;
     row-gap: 1px;
+  }
+
+  .xs\:row-gap-2px{
+    grid-row-gap: 2px;
+    row-gap: 2px;
   }
 
   .xs\:grid-flow-row{
@@ -36325,8 +36750,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xs\:translate-x-px{
+  .xs\:translate-x-1px{
     --transform-translate-x: 1px;
+  }
+
+  .xs\:translate-x-2px{
+    --transform-translate-x: 2px;
   }
 
   .xs\:-translate-x-1{
@@ -36405,8 +36834,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xs\:-translate-x-px{
+  .xs\:-translate-x-1px{
     --transform-translate-x: -1px;
+  }
+
+  .xs\:-translate-x-2px{
+    --transform-translate-x: -2px;
   }
 
   .xs\:-translate-x-full{
@@ -36505,8 +36938,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xs\:translate-y-px{
+  .xs\:translate-y-1px{
     --transform-translate-y: 1px;
+  }
+
+  .xs\:translate-y-2px{
+    --transform-translate-y: 2px;
   }
 
   .xs\:-translate-y-1{
@@ -36585,8 +37022,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xs\:-translate-y-px{
+  .xs\:-translate-y-1px{
     --transform-translate-y: -1px;
+  }
+
+  .xs\:-translate-y-2px{
+    --transform-translate-y: -2px;
   }
 
   .xs\:-translate-y-full{
@@ -36685,8 +37126,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xs\:hover\:translate-x-px:hover{
+  .xs\:hover\:translate-x-1px:hover{
     --transform-translate-x: 1px;
+  }
+
+  .xs\:hover\:translate-x-2px:hover{
+    --transform-translate-x: 2px;
   }
 
   .xs\:hover\:-translate-x-1:hover{
@@ -36765,8 +37210,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xs\:hover\:-translate-x-px:hover{
+  .xs\:hover\:-translate-x-1px:hover{
     --transform-translate-x: -1px;
+  }
+
+  .xs\:hover\:-translate-x-2px:hover{
+    --transform-translate-x: -2px;
   }
 
   .xs\:hover\:-translate-x-full:hover{
@@ -36865,8 +37314,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xs\:hover\:translate-y-px:hover{
+  .xs\:hover\:translate-y-1px:hover{
     --transform-translate-y: 1px;
+  }
+
+  .xs\:hover\:translate-y-2px:hover{
+    --transform-translate-y: 2px;
   }
 
   .xs\:hover\:-translate-y-1:hover{
@@ -36945,8 +37398,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xs\:hover\:-translate-y-px:hover{
+  .xs\:hover\:-translate-y-1px:hover{
     --transform-translate-y: -1px;
+  }
+
+  .xs\:hover\:-translate-y-2px:hover{
+    --transform-translate-y: -2px;
   }
 
   .xs\:hover\:-translate-y-full:hover{
@@ -37045,8 +37502,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xs\:focus\:translate-x-px:focus{
+  .xs\:focus\:translate-x-1px:focus{
     --transform-translate-x: 1px;
+  }
+
+  .xs\:focus\:translate-x-2px:focus{
+    --transform-translate-x: 2px;
   }
 
   .xs\:focus\:-translate-x-1:focus{
@@ -37125,8 +37586,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xs\:focus\:-translate-x-px:focus{
+  .xs\:focus\:-translate-x-1px:focus{
     --transform-translate-x: -1px;
+  }
+
+  .xs\:focus\:-translate-x-2px:focus{
+    --transform-translate-x: -2px;
   }
 
   .xs\:focus\:-translate-x-full:focus{
@@ -37225,8 +37690,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xs\:focus\:translate-y-px:focus{
+  .xs\:focus\:translate-y-1px:focus{
     --transform-translate-y: 1px;
+  }
+
+  .xs\:focus\:translate-y-2px:focus{
+    --transform-translate-y: 2px;
   }
 
   .xs\:focus\:-translate-y-1:focus{
@@ -37305,8 +37774,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xs\:focus\:-translate-y-px:focus{
+  .xs\:focus\:-translate-y-1px:focus{
     --transform-translate-y: -1px;
+  }
+
+  .xs\:focus\:-translate-y-2px:focus{
+    --transform-translate-y: -2px;
   }
 
   .xs\:focus\:-translate-y-full:focus{
@@ -37843,16 +38316,28 @@ input, textarea {
     margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .sm\:space-y-px > :not(template) ~ :not(template){
+  .sm\:space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(1px * var(--space-y-reverse));
   }
 
-  .sm\:space-x-px > :not(template) ~ :not(template){
+  .sm\:space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(1px * var(--space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(2px * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(2px * var(--space-x-reverse));
+    margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:-space-y-1 > :not(template) ~ :not(template){
@@ -38083,16 +38568,28 @@ input, textarea {
     margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .sm\:-space-y-px > :not(template) ~ :not(template){
+  .sm\:-space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(-1px * var(--space-y-reverse));
   }
 
-  .sm\:-space-x-px > :not(template) ~ :not(template){
+  .sm\:-space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(-1px * var(--space-x-reverse));
     margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-2px * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-2px * var(--space-x-reverse));
+    margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:space-y-reverse > :not(template) ~ :not(template){
@@ -43303,8 +43800,12 @@ input, textarea {
     height: auto;
   }
 
-  .sm\:h-px{
+  .sm\:h-1px{
     height: 1px;
+  }
+
+  .sm\:h-2px{
+    height: 2px;
   }
 
   .sm\:h-full{
@@ -43495,8 +43996,12 @@ input, textarea {
     margin: auto;
   }
 
-  .sm\:m-px{
+  .sm\:m-1px{
     margin: 1px;
+  }
+
+  .sm\:m-2px{
+    margin: 2px;
   }
 
   .sm\:-m-1{
@@ -43575,8 +44080,12 @@ input, textarea {
     margin: -24rem;
   }
 
-  .sm\:-m-px{
+  .sm\:-m-1px{
     margin: -1px;
+  }
+
+  .sm\:-m-2px{
+    margin: -2px;
   }
 
   .sm\:my-0{
@@ -43789,14 +44298,24 @@ input, textarea {
     margin-right: auto;
   }
 
-  .sm\:my-px{
+  .sm\:my-1px{
     margin-top: 1px;
     margin-bottom: 1px;
   }
 
-  .sm\:mx-px{
+  .sm\:mx-1px{
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .sm\:my-2px{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .sm\:mx-2px{
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .sm\:-my-1{
@@ -43989,14 +44508,24 @@ input, textarea {
     margin-right: -24rem;
   }
 
-  .sm\:-my-px{
+  .sm\:-my-1px{
     margin-top: -1px;
     margin-bottom: -1px;
   }
 
-  .sm\:-mx-px{
+  .sm\:-mx-1px{
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .sm\:-my-2px{
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .sm\:-mx-2px{
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .sm\:mt-0{
@@ -44335,20 +44864,36 @@ input, textarea {
     margin-left: auto;
   }
 
-  .sm\:mt-px{
+  .sm\:mt-1px{
     margin-top: 1px;
   }
 
-  .sm\:mr-px{
+  .sm\:mr-1px{
     margin-right: 1px;
   }
 
-  .sm\:mb-px{
+  .sm\:mb-1px{
     margin-bottom: 1px;
   }
 
-  .sm\:ml-px{
+  .sm\:ml-1px{
     margin-left: 1px;
+  }
+
+  .sm\:mt-2px{
+    margin-top: 2px;
+  }
+
+  .sm\:mr-2px{
+    margin-right: 2px;
+  }
+
+  .sm\:mb-2px{
+    margin-bottom: 2px;
+  }
+
+  .sm\:ml-2px{
+    margin-left: 2px;
   }
 
   .sm\:-mt-1{
@@ -44655,20 +45200,36 @@ input, textarea {
     margin-left: -24rem;
   }
 
-  .sm\:-mt-px{
+  .sm\:-mt-1px{
     margin-top: -1px;
   }
 
-  .sm\:-mr-px{
+  .sm\:-mr-1px{
     margin-right: -1px;
   }
 
-  .sm\:-mb-px{
+  .sm\:-mb-1px{
     margin-bottom: -1px;
   }
 
-  .sm\:-ml-px{
+  .sm\:-ml-1px{
     margin-left: -1px;
+  }
+
+  .sm\:-mt-2px{
+    margin-top: -2px;
+  }
+
+  .sm\:-mr-2px{
+    margin-right: -2px;
+  }
+
+  .sm\:-mb-2px{
+    margin-bottom: -2px;
+  }
+
+  .sm\:-ml-2px{
+    margin-left: -2px;
   }
 
   .sm\:max-h-full{
@@ -44981,8 +45542,12 @@ input, textarea {
     padding: 24rem;
   }
 
-  .sm\:p-px{
+  .sm\:p-1px{
     padding: 1px;
+  }
+
+  .sm\:p-2px{
+    padding: 2px;
   }
 
   .sm\:py-0{
@@ -45185,14 +45750,24 @@ input, textarea {
     padding-right: 24rem;
   }
 
-  .sm\:py-px{
+  .sm\:py-1px{
     padding-top: 1px;
     padding-bottom: 1px;
   }
 
-  .sm\:px-px{
+  .sm\:px-1px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .sm\:py-2px{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .sm\:px-2px{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .sm\:pt-0{
@@ -45515,20 +46090,36 @@ input, textarea {
     padding-left: 24rem;
   }
 
-  .sm\:pt-px{
+  .sm\:pt-1px{
     padding-top: 1px;
   }
 
-  .sm\:pr-px{
+  .sm\:pr-1px{
     padding-right: 1px;
   }
 
-  .sm\:pb-px{
+  .sm\:pb-1px{
     padding-bottom: 1px;
   }
 
-  .sm\:pl-px{
+  .sm\:pl-1px{
     padding-left: 1px;
+  }
+
+  .sm\:pt-2px{
+    padding-top: 2px;
+  }
+
+  .sm\:pr-2px{
+    padding-right: 2px;
+  }
+
+  .sm\:pb-2px{
+    padding-bottom: 2px;
+  }
+
+  .sm\:pl-2px{
+    padding-left: 2px;
   }
 
   .sm\:placeholder-transparent::-moz-placeholder{
@@ -53035,8 +53626,12 @@ input, textarea {
     width: auto;
   }
 
-  .sm\:w-px{
+  .sm\:w-1px{
     width: 1px;
+  }
+
+  .sm\:w-2px{
+    width: 2px;
   }
 
   .sm\:w-1\/2{
@@ -53279,9 +53874,14 @@ input, textarea {
     gap: 24rem;
   }
 
-  .sm\:gap-px{
+  .sm\:gap-1px{
     grid-gap: 1px;
     gap: 1px;
+  }
+
+  .sm\:gap-2px{
+    grid-gap: 2px;
+    gap: 2px;
   }
 
   .sm\:col-gap-0{
@@ -53404,10 +54004,16 @@ input, textarea {
          column-gap: 24rem;
   }
 
-  .sm\:col-gap-px{
+  .sm\:col-gap-1px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
          column-gap: 1px;
+  }
+
+  .sm\:col-gap-2px{
+    grid-column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
   }
 
   .sm\:row-gap-0{
@@ -53510,9 +54116,14 @@ input, textarea {
     row-gap: 24rem;
   }
 
-  .sm\:row-gap-px{
+  .sm\:row-gap-1px{
     grid-row-gap: 1px;
     row-gap: 1px;
+  }
+
+  .sm\:row-gap-2px{
+    grid-row-gap: 2px;
+    row-gap: 2px;
   }
 
   .sm\:grid-flow-row{
@@ -54472,8 +55083,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .sm\:translate-x-px{
+  .sm\:translate-x-1px{
     --transform-translate-x: 1px;
+  }
+
+  .sm\:translate-x-2px{
+    --transform-translate-x: 2px;
   }
 
   .sm\:-translate-x-1{
@@ -54552,8 +55167,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .sm\:-translate-x-px{
+  .sm\:-translate-x-1px{
     --transform-translate-x: -1px;
+  }
+
+  .sm\:-translate-x-2px{
+    --transform-translate-x: -2px;
   }
 
   .sm\:-translate-x-full{
@@ -54652,8 +55271,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .sm\:translate-y-px{
+  .sm\:translate-y-1px{
     --transform-translate-y: 1px;
+  }
+
+  .sm\:translate-y-2px{
+    --transform-translate-y: 2px;
   }
 
   .sm\:-translate-y-1{
@@ -54732,8 +55355,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .sm\:-translate-y-px{
+  .sm\:-translate-y-1px{
     --transform-translate-y: -1px;
+  }
+
+  .sm\:-translate-y-2px{
+    --transform-translate-y: -2px;
   }
 
   .sm\:-translate-y-full{
@@ -54832,8 +55459,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .sm\:hover\:translate-x-px:hover{
+  .sm\:hover\:translate-x-1px:hover{
     --transform-translate-x: 1px;
+  }
+
+  .sm\:hover\:translate-x-2px:hover{
+    --transform-translate-x: 2px;
   }
 
   .sm\:hover\:-translate-x-1:hover{
@@ -54912,8 +55543,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .sm\:hover\:-translate-x-px:hover{
+  .sm\:hover\:-translate-x-1px:hover{
     --transform-translate-x: -1px;
+  }
+
+  .sm\:hover\:-translate-x-2px:hover{
+    --transform-translate-x: -2px;
   }
 
   .sm\:hover\:-translate-x-full:hover{
@@ -55012,8 +55647,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .sm\:hover\:translate-y-px:hover{
+  .sm\:hover\:translate-y-1px:hover{
     --transform-translate-y: 1px;
+  }
+
+  .sm\:hover\:translate-y-2px:hover{
+    --transform-translate-y: 2px;
   }
 
   .sm\:hover\:-translate-y-1:hover{
@@ -55092,8 +55731,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .sm\:hover\:-translate-y-px:hover{
+  .sm\:hover\:-translate-y-1px:hover{
     --transform-translate-y: -1px;
+  }
+
+  .sm\:hover\:-translate-y-2px:hover{
+    --transform-translate-y: -2px;
   }
 
   .sm\:hover\:-translate-y-full:hover{
@@ -55192,8 +55835,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .sm\:focus\:translate-x-px:focus{
+  .sm\:focus\:translate-x-1px:focus{
     --transform-translate-x: 1px;
+  }
+
+  .sm\:focus\:translate-x-2px:focus{
+    --transform-translate-x: 2px;
   }
 
   .sm\:focus\:-translate-x-1:focus{
@@ -55272,8 +55919,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .sm\:focus\:-translate-x-px:focus{
+  .sm\:focus\:-translate-x-1px:focus{
     --transform-translate-x: -1px;
+  }
+
+  .sm\:focus\:-translate-x-2px:focus{
+    --transform-translate-x: -2px;
   }
 
   .sm\:focus\:-translate-x-full:focus{
@@ -55372,8 +56023,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .sm\:focus\:translate-y-px:focus{
+  .sm\:focus\:translate-y-1px:focus{
     --transform-translate-y: 1px;
+  }
+
+  .sm\:focus\:translate-y-2px:focus{
+    --transform-translate-y: 2px;
   }
 
   .sm\:focus\:-translate-y-1:focus{
@@ -55452,8 +56107,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .sm\:focus\:-translate-y-px:focus{
+  .sm\:focus\:-translate-y-1px:focus{
     --transform-translate-y: -1px;
+  }
+
+  .sm\:focus\:-translate-y-2px:focus{
+    --transform-translate-y: -2px;
   }
 
   .sm\:focus\:-translate-y-full:focus{
@@ -55990,16 +56649,28 @@ input, textarea {
     margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .md\:space-y-px > :not(template) ~ :not(template){
+  .md\:space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(1px * var(--space-y-reverse));
   }
 
-  .md\:space-x-px > :not(template) ~ :not(template){
+  .md\:space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(1px * var(--space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(2px * var(--space-y-reverse));
+  }
+
+  .md\:space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(2px * var(--space-x-reverse));
+    margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:-space-y-1 > :not(template) ~ :not(template){
@@ -56230,16 +56901,28 @@ input, textarea {
     margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .md\:-space-y-px > :not(template) ~ :not(template){
+  .md\:-space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(-1px * var(--space-y-reverse));
   }
 
-  .md\:-space-x-px > :not(template) ~ :not(template){
+  .md\:-space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(-1px * var(--space-x-reverse));
     margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-2px * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-2px * var(--space-x-reverse));
+    margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:space-y-reverse > :not(template) ~ :not(template){
@@ -61450,8 +62133,12 @@ input, textarea {
     height: auto;
   }
 
-  .md\:h-px{
+  .md\:h-1px{
     height: 1px;
+  }
+
+  .md\:h-2px{
+    height: 2px;
   }
 
   .md\:h-full{
@@ -61642,8 +62329,12 @@ input, textarea {
     margin: auto;
   }
 
-  .md\:m-px{
+  .md\:m-1px{
     margin: 1px;
+  }
+
+  .md\:m-2px{
+    margin: 2px;
   }
 
   .md\:-m-1{
@@ -61722,8 +62413,12 @@ input, textarea {
     margin: -24rem;
   }
 
-  .md\:-m-px{
+  .md\:-m-1px{
     margin: -1px;
+  }
+
+  .md\:-m-2px{
+    margin: -2px;
   }
 
   .md\:my-0{
@@ -61936,14 +62631,24 @@ input, textarea {
     margin-right: auto;
   }
 
-  .md\:my-px{
+  .md\:my-1px{
     margin-top: 1px;
     margin-bottom: 1px;
   }
 
-  .md\:mx-px{
+  .md\:mx-1px{
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .md\:my-2px{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .md\:mx-2px{
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .md\:-my-1{
@@ -62136,14 +62841,24 @@ input, textarea {
     margin-right: -24rem;
   }
 
-  .md\:-my-px{
+  .md\:-my-1px{
     margin-top: -1px;
     margin-bottom: -1px;
   }
 
-  .md\:-mx-px{
+  .md\:-mx-1px{
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .md\:-my-2px{
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .md\:-mx-2px{
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .md\:mt-0{
@@ -62482,20 +63197,36 @@ input, textarea {
     margin-left: auto;
   }
 
-  .md\:mt-px{
+  .md\:mt-1px{
     margin-top: 1px;
   }
 
-  .md\:mr-px{
+  .md\:mr-1px{
     margin-right: 1px;
   }
 
-  .md\:mb-px{
+  .md\:mb-1px{
     margin-bottom: 1px;
   }
 
-  .md\:ml-px{
+  .md\:ml-1px{
     margin-left: 1px;
+  }
+
+  .md\:mt-2px{
+    margin-top: 2px;
+  }
+
+  .md\:mr-2px{
+    margin-right: 2px;
+  }
+
+  .md\:mb-2px{
+    margin-bottom: 2px;
+  }
+
+  .md\:ml-2px{
+    margin-left: 2px;
   }
 
   .md\:-mt-1{
@@ -62802,20 +63533,36 @@ input, textarea {
     margin-left: -24rem;
   }
 
-  .md\:-mt-px{
+  .md\:-mt-1px{
     margin-top: -1px;
   }
 
-  .md\:-mr-px{
+  .md\:-mr-1px{
     margin-right: -1px;
   }
 
-  .md\:-mb-px{
+  .md\:-mb-1px{
     margin-bottom: -1px;
   }
 
-  .md\:-ml-px{
+  .md\:-ml-1px{
     margin-left: -1px;
+  }
+
+  .md\:-mt-2px{
+    margin-top: -2px;
+  }
+
+  .md\:-mr-2px{
+    margin-right: -2px;
+  }
+
+  .md\:-mb-2px{
+    margin-bottom: -2px;
+  }
+
+  .md\:-ml-2px{
+    margin-left: -2px;
   }
 
   .md\:max-h-full{
@@ -63128,8 +63875,12 @@ input, textarea {
     padding: 24rem;
   }
 
-  .md\:p-px{
+  .md\:p-1px{
     padding: 1px;
+  }
+
+  .md\:p-2px{
+    padding: 2px;
   }
 
   .md\:py-0{
@@ -63332,14 +64083,24 @@ input, textarea {
     padding-right: 24rem;
   }
 
-  .md\:py-px{
+  .md\:py-1px{
     padding-top: 1px;
     padding-bottom: 1px;
   }
 
-  .md\:px-px{
+  .md\:px-1px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .md\:py-2px{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .md\:px-2px{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .md\:pt-0{
@@ -63662,20 +64423,36 @@ input, textarea {
     padding-left: 24rem;
   }
 
-  .md\:pt-px{
+  .md\:pt-1px{
     padding-top: 1px;
   }
 
-  .md\:pr-px{
+  .md\:pr-1px{
     padding-right: 1px;
   }
 
-  .md\:pb-px{
+  .md\:pb-1px{
     padding-bottom: 1px;
   }
 
-  .md\:pl-px{
+  .md\:pl-1px{
     padding-left: 1px;
+  }
+
+  .md\:pt-2px{
+    padding-top: 2px;
+  }
+
+  .md\:pr-2px{
+    padding-right: 2px;
+  }
+
+  .md\:pb-2px{
+    padding-bottom: 2px;
+  }
+
+  .md\:pl-2px{
+    padding-left: 2px;
   }
 
   .md\:placeholder-transparent::-moz-placeholder{
@@ -71182,8 +71959,12 @@ input, textarea {
     width: auto;
   }
 
-  .md\:w-px{
+  .md\:w-1px{
     width: 1px;
+  }
+
+  .md\:w-2px{
+    width: 2px;
   }
 
   .md\:w-1\/2{
@@ -71426,9 +72207,14 @@ input, textarea {
     gap: 24rem;
   }
 
-  .md\:gap-px{
+  .md\:gap-1px{
     grid-gap: 1px;
     gap: 1px;
+  }
+
+  .md\:gap-2px{
+    grid-gap: 2px;
+    gap: 2px;
   }
 
   .md\:col-gap-0{
@@ -71551,10 +72337,16 @@ input, textarea {
          column-gap: 24rem;
   }
 
-  .md\:col-gap-px{
+  .md\:col-gap-1px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
          column-gap: 1px;
+  }
+
+  .md\:col-gap-2px{
+    grid-column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
   }
 
   .md\:row-gap-0{
@@ -71657,9 +72449,14 @@ input, textarea {
     row-gap: 24rem;
   }
 
-  .md\:row-gap-px{
+  .md\:row-gap-1px{
     grid-row-gap: 1px;
     row-gap: 1px;
+  }
+
+  .md\:row-gap-2px{
+    grid-row-gap: 2px;
+    row-gap: 2px;
   }
 
   .md\:grid-flow-row{
@@ -72619,8 +73416,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .md\:translate-x-px{
+  .md\:translate-x-1px{
     --transform-translate-x: 1px;
+  }
+
+  .md\:translate-x-2px{
+    --transform-translate-x: 2px;
   }
 
   .md\:-translate-x-1{
@@ -72699,8 +73500,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .md\:-translate-x-px{
+  .md\:-translate-x-1px{
     --transform-translate-x: -1px;
+  }
+
+  .md\:-translate-x-2px{
+    --transform-translate-x: -2px;
   }
 
   .md\:-translate-x-full{
@@ -72799,8 +73604,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .md\:translate-y-px{
+  .md\:translate-y-1px{
     --transform-translate-y: 1px;
+  }
+
+  .md\:translate-y-2px{
+    --transform-translate-y: 2px;
   }
 
   .md\:-translate-y-1{
@@ -72879,8 +73688,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .md\:-translate-y-px{
+  .md\:-translate-y-1px{
     --transform-translate-y: -1px;
+  }
+
+  .md\:-translate-y-2px{
+    --transform-translate-y: -2px;
   }
 
   .md\:-translate-y-full{
@@ -72979,8 +73792,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .md\:hover\:translate-x-px:hover{
+  .md\:hover\:translate-x-1px:hover{
     --transform-translate-x: 1px;
+  }
+
+  .md\:hover\:translate-x-2px:hover{
+    --transform-translate-x: 2px;
   }
 
   .md\:hover\:-translate-x-1:hover{
@@ -73059,8 +73876,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .md\:hover\:-translate-x-px:hover{
+  .md\:hover\:-translate-x-1px:hover{
     --transform-translate-x: -1px;
+  }
+
+  .md\:hover\:-translate-x-2px:hover{
+    --transform-translate-x: -2px;
   }
 
   .md\:hover\:-translate-x-full:hover{
@@ -73159,8 +73980,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .md\:hover\:translate-y-px:hover{
+  .md\:hover\:translate-y-1px:hover{
     --transform-translate-y: 1px;
+  }
+
+  .md\:hover\:translate-y-2px:hover{
+    --transform-translate-y: 2px;
   }
 
   .md\:hover\:-translate-y-1:hover{
@@ -73239,8 +74064,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .md\:hover\:-translate-y-px:hover{
+  .md\:hover\:-translate-y-1px:hover{
     --transform-translate-y: -1px;
+  }
+
+  .md\:hover\:-translate-y-2px:hover{
+    --transform-translate-y: -2px;
   }
 
   .md\:hover\:-translate-y-full:hover{
@@ -73339,8 +74168,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .md\:focus\:translate-x-px:focus{
+  .md\:focus\:translate-x-1px:focus{
     --transform-translate-x: 1px;
+  }
+
+  .md\:focus\:translate-x-2px:focus{
+    --transform-translate-x: 2px;
   }
 
   .md\:focus\:-translate-x-1:focus{
@@ -73419,8 +74252,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .md\:focus\:-translate-x-px:focus{
+  .md\:focus\:-translate-x-1px:focus{
     --transform-translate-x: -1px;
+  }
+
+  .md\:focus\:-translate-x-2px:focus{
+    --transform-translate-x: -2px;
   }
 
   .md\:focus\:-translate-x-full:focus{
@@ -73519,8 +74356,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .md\:focus\:translate-y-px:focus{
+  .md\:focus\:translate-y-1px:focus{
     --transform-translate-y: 1px;
+  }
+
+  .md\:focus\:translate-y-2px:focus{
+    --transform-translate-y: 2px;
   }
 
   .md\:focus\:-translate-y-1:focus{
@@ -73599,8 +74440,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .md\:focus\:-translate-y-px:focus{
+  .md\:focus\:-translate-y-1px:focus{
     --transform-translate-y: -1px;
+  }
+
+  .md\:focus\:-translate-y-2px:focus{
+    --transform-translate-y: -2px;
   }
 
   .md\:focus\:-translate-y-full:focus{
@@ -74137,16 +74982,28 @@ input, textarea {
     margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .lg\:space-y-px > :not(template) ~ :not(template){
+  .lg\:space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(1px * var(--space-y-reverse));
   }
 
-  .lg\:space-x-px > :not(template) ~ :not(template){
+  .lg\:space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(1px * var(--space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(2px * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(2px * var(--space-x-reverse));
+    margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:-space-y-1 > :not(template) ~ :not(template){
@@ -74377,16 +75234,28 @@ input, textarea {
     margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .lg\:-space-y-px > :not(template) ~ :not(template){
+  .lg\:-space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(-1px * var(--space-y-reverse));
   }
 
-  .lg\:-space-x-px > :not(template) ~ :not(template){
+  .lg\:-space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(-1px * var(--space-x-reverse));
     margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-2px * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-2px * var(--space-x-reverse));
+    margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:space-y-reverse > :not(template) ~ :not(template){
@@ -79597,8 +80466,12 @@ input, textarea {
     height: auto;
   }
 
-  .lg\:h-px{
+  .lg\:h-1px{
     height: 1px;
+  }
+
+  .lg\:h-2px{
+    height: 2px;
   }
 
   .lg\:h-full{
@@ -79789,8 +80662,12 @@ input, textarea {
     margin: auto;
   }
 
-  .lg\:m-px{
+  .lg\:m-1px{
     margin: 1px;
+  }
+
+  .lg\:m-2px{
+    margin: 2px;
   }
 
   .lg\:-m-1{
@@ -79869,8 +80746,12 @@ input, textarea {
     margin: -24rem;
   }
 
-  .lg\:-m-px{
+  .lg\:-m-1px{
     margin: -1px;
+  }
+
+  .lg\:-m-2px{
+    margin: -2px;
   }
 
   .lg\:my-0{
@@ -80083,14 +80964,24 @@ input, textarea {
     margin-right: auto;
   }
 
-  .lg\:my-px{
+  .lg\:my-1px{
     margin-top: 1px;
     margin-bottom: 1px;
   }
 
-  .lg\:mx-px{
+  .lg\:mx-1px{
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .lg\:my-2px{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .lg\:mx-2px{
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .lg\:-my-1{
@@ -80283,14 +81174,24 @@ input, textarea {
     margin-right: -24rem;
   }
 
-  .lg\:-my-px{
+  .lg\:-my-1px{
     margin-top: -1px;
     margin-bottom: -1px;
   }
 
-  .lg\:-mx-px{
+  .lg\:-mx-1px{
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .lg\:-my-2px{
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .lg\:-mx-2px{
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .lg\:mt-0{
@@ -80629,20 +81530,36 @@ input, textarea {
     margin-left: auto;
   }
 
-  .lg\:mt-px{
+  .lg\:mt-1px{
     margin-top: 1px;
   }
 
-  .lg\:mr-px{
+  .lg\:mr-1px{
     margin-right: 1px;
   }
 
-  .lg\:mb-px{
+  .lg\:mb-1px{
     margin-bottom: 1px;
   }
 
-  .lg\:ml-px{
+  .lg\:ml-1px{
     margin-left: 1px;
+  }
+
+  .lg\:mt-2px{
+    margin-top: 2px;
+  }
+
+  .lg\:mr-2px{
+    margin-right: 2px;
+  }
+
+  .lg\:mb-2px{
+    margin-bottom: 2px;
+  }
+
+  .lg\:ml-2px{
+    margin-left: 2px;
   }
 
   .lg\:-mt-1{
@@ -80949,20 +81866,36 @@ input, textarea {
     margin-left: -24rem;
   }
 
-  .lg\:-mt-px{
+  .lg\:-mt-1px{
     margin-top: -1px;
   }
 
-  .lg\:-mr-px{
+  .lg\:-mr-1px{
     margin-right: -1px;
   }
 
-  .lg\:-mb-px{
+  .lg\:-mb-1px{
     margin-bottom: -1px;
   }
 
-  .lg\:-ml-px{
+  .lg\:-ml-1px{
     margin-left: -1px;
+  }
+
+  .lg\:-mt-2px{
+    margin-top: -2px;
+  }
+
+  .lg\:-mr-2px{
+    margin-right: -2px;
+  }
+
+  .lg\:-mb-2px{
+    margin-bottom: -2px;
+  }
+
+  .lg\:-ml-2px{
+    margin-left: -2px;
   }
 
   .lg\:max-h-full{
@@ -81275,8 +82208,12 @@ input, textarea {
     padding: 24rem;
   }
 
-  .lg\:p-px{
+  .lg\:p-1px{
     padding: 1px;
+  }
+
+  .lg\:p-2px{
+    padding: 2px;
   }
 
   .lg\:py-0{
@@ -81479,14 +82416,24 @@ input, textarea {
     padding-right: 24rem;
   }
 
-  .lg\:py-px{
+  .lg\:py-1px{
     padding-top: 1px;
     padding-bottom: 1px;
   }
 
-  .lg\:px-px{
+  .lg\:px-1px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .lg\:py-2px{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .lg\:px-2px{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .lg\:pt-0{
@@ -81809,20 +82756,36 @@ input, textarea {
     padding-left: 24rem;
   }
 
-  .lg\:pt-px{
+  .lg\:pt-1px{
     padding-top: 1px;
   }
 
-  .lg\:pr-px{
+  .lg\:pr-1px{
     padding-right: 1px;
   }
 
-  .lg\:pb-px{
+  .lg\:pb-1px{
     padding-bottom: 1px;
   }
 
-  .lg\:pl-px{
+  .lg\:pl-1px{
     padding-left: 1px;
+  }
+
+  .lg\:pt-2px{
+    padding-top: 2px;
+  }
+
+  .lg\:pr-2px{
+    padding-right: 2px;
+  }
+
+  .lg\:pb-2px{
+    padding-bottom: 2px;
+  }
+
+  .lg\:pl-2px{
+    padding-left: 2px;
   }
 
   .lg\:placeholder-transparent::-moz-placeholder{
@@ -89329,8 +90292,12 @@ input, textarea {
     width: auto;
   }
 
-  .lg\:w-px{
+  .lg\:w-1px{
     width: 1px;
+  }
+
+  .lg\:w-2px{
+    width: 2px;
   }
 
   .lg\:w-1\/2{
@@ -89573,9 +90540,14 @@ input, textarea {
     gap: 24rem;
   }
 
-  .lg\:gap-px{
+  .lg\:gap-1px{
     grid-gap: 1px;
     gap: 1px;
+  }
+
+  .lg\:gap-2px{
+    grid-gap: 2px;
+    gap: 2px;
   }
 
   .lg\:col-gap-0{
@@ -89698,10 +90670,16 @@ input, textarea {
          column-gap: 24rem;
   }
 
-  .lg\:col-gap-px{
+  .lg\:col-gap-1px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
          column-gap: 1px;
+  }
+
+  .lg\:col-gap-2px{
+    grid-column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
   }
 
   .lg\:row-gap-0{
@@ -89804,9 +90782,14 @@ input, textarea {
     row-gap: 24rem;
   }
 
-  .lg\:row-gap-px{
+  .lg\:row-gap-1px{
     grid-row-gap: 1px;
     row-gap: 1px;
+  }
+
+  .lg\:row-gap-2px{
+    grid-row-gap: 2px;
+    row-gap: 2px;
   }
 
   .lg\:grid-flow-row{
@@ -90766,8 +91749,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .lg\:translate-x-px{
+  .lg\:translate-x-1px{
     --transform-translate-x: 1px;
+  }
+
+  .lg\:translate-x-2px{
+    --transform-translate-x: 2px;
   }
 
   .lg\:-translate-x-1{
@@ -90846,8 +91833,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .lg\:-translate-x-px{
+  .lg\:-translate-x-1px{
     --transform-translate-x: -1px;
+  }
+
+  .lg\:-translate-x-2px{
+    --transform-translate-x: -2px;
   }
 
   .lg\:-translate-x-full{
@@ -90946,8 +91937,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .lg\:translate-y-px{
+  .lg\:translate-y-1px{
     --transform-translate-y: 1px;
+  }
+
+  .lg\:translate-y-2px{
+    --transform-translate-y: 2px;
   }
 
   .lg\:-translate-y-1{
@@ -91026,8 +92021,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .lg\:-translate-y-px{
+  .lg\:-translate-y-1px{
     --transform-translate-y: -1px;
+  }
+
+  .lg\:-translate-y-2px{
+    --transform-translate-y: -2px;
   }
 
   .lg\:-translate-y-full{
@@ -91126,8 +92125,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .lg\:hover\:translate-x-px:hover{
+  .lg\:hover\:translate-x-1px:hover{
     --transform-translate-x: 1px;
+  }
+
+  .lg\:hover\:translate-x-2px:hover{
+    --transform-translate-x: 2px;
   }
 
   .lg\:hover\:-translate-x-1:hover{
@@ -91206,8 +92209,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .lg\:hover\:-translate-x-px:hover{
+  .lg\:hover\:-translate-x-1px:hover{
     --transform-translate-x: -1px;
+  }
+
+  .lg\:hover\:-translate-x-2px:hover{
+    --transform-translate-x: -2px;
   }
 
   .lg\:hover\:-translate-x-full:hover{
@@ -91306,8 +92313,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .lg\:hover\:translate-y-px:hover{
+  .lg\:hover\:translate-y-1px:hover{
     --transform-translate-y: 1px;
+  }
+
+  .lg\:hover\:translate-y-2px:hover{
+    --transform-translate-y: 2px;
   }
 
   .lg\:hover\:-translate-y-1:hover{
@@ -91386,8 +92397,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .lg\:hover\:-translate-y-px:hover{
+  .lg\:hover\:-translate-y-1px:hover{
     --transform-translate-y: -1px;
+  }
+
+  .lg\:hover\:-translate-y-2px:hover{
+    --transform-translate-y: -2px;
   }
 
   .lg\:hover\:-translate-y-full:hover{
@@ -91486,8 +92501,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .lg\:focus\:translate-x-px:focus{
+  .lg\:focus\:translate-x-1px:focus{
     --transform-translate-x: 1px;
+  }
+
+  .lg\:focus\:translate-x-2px:focus{
+    --transform-translate-x: 2px;
   }
 
   .lg\:focus\:-translate-x-1:focus{
@@ -91566,8 +92585,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .lg\:focus\:-translate-x-px:focus{
+  .lg\:focus\:-translate-x-1px:focus{
     --transform-translate-x: -1px;
+  }
+
+  .lg\:focus\:-translate-x-2px:focus{
+    --transform-translate-x: -2px;
   }
 
   .lg\:focus\:-translate-x-full:focus{
@@ -91666,8 +92689,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .lg\:focus\:translate-y-px:focus{
+  .lg\:focus\:translate-y-1px:focus{
     --transform-translate-y: 1px;
+  }
+
+  .lg\:focus\:translate-y-2px:focus{
+    --transform-translate-y: 2px;
   }
 
   .lg\:focus\:-translate-y-1:focus{
@@ -91746,8 +92773,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .lg\:focus\:-translate-y-px:focus{
+  .lg\:focus\:-translate-y-1px:focus{
     --transform-translate-y: -1px;
+  }
+
+  .lg\:focus\:-translate-y-2px:focus{
+    --transform-translate-y: -2px;
   }
 
   .lg\:focus\:-translate-y-full:focus{
@@ -92284,16 +93315,28 @@ input, textarea {
     margin-left: calc(24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .xl\:space-y-px > :not(template) ~ :not(template){
+  .xl\:space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(1px * var(--space-y-reverse));
   }
 
-  .xl\:space-x-px > :not(template) ~ :not(template){
+  .xl\:space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(1px * var(--space-x-reverse));
     margin-left: calc(1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(2px * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(2px * var(--space-x-reverse));
+    margin-left: calc(2px * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:-space-y-1 > :not(template) ~ :not(template){
@@ -92524,16 +93567,28 @@ input, textarea {
     margin-left: calc(-24rem * calc(1 - var(--space-x-reverse)));
   }
 
-  .xl\:-space-y-px > :not(template) ~ :not(template){
+  .xl\:-space-y-1px > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(-1px * calc(1 - var(--space-y-reverse)));
     margin-bottom: calc(-1px * var(--space-y-reverse));
   }
 
-  .xl\:-space-x-px > :not(template) ~ :not(template){
+  .xl\:-space-x-1px > :not(template) ~ :not(template){
     --space-x-reverse: 0;
     margin-right: calc(-1px * var(--space-x-reverse));
     margin-left: calc(-1px * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-2px > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-2px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-2px * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-2px > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-2px * var(--space-x-reverse));
+    margin-left: calc(-2px * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:space-y-reverse > :not(template) ~ :not(template){
@@ -97744,8 +98799,12 @@ input, textarea {
     height: auto;
   }
 
-  .xl\:h-px{
+  .xl\:h-1px{
     height: 1px;
+  }
+
+  .xl\:h-2px{
+    height: 2px;
   }
 
   .xl\:h-full{
@@ -97936,8 +98995,12 @@ input, textarea {
     margin: auto;
   }
 
-  .xl\:m-px{
+  .xl\:m-1px{
     margin: 1px;
+  }
+
+  .xl\:m-2px{
+    margin: 2px;
   }
 
   .xl\:-m-1{
@@ -98016,8 +99079,12 @@ input, textarea {
     margin: -24rem;
   }
 
-  .xl\:-m-px{
+  .xl\:-m-1px{
     margin: -1px;
+  }
+
+  .xl\:-m-2px{
+    margin: -2px;
   }
 
   .xl\:my-0{
@@ -98230,14 +99297,24 @@ input, textarea {
     margin-right: auto;
   }
 
-  .xl\:my-px{
+  .xl\:my-1px{
     margin-top: 1px;
     margin-bottom: 1px;
   }
 
-  .xl\:mx-px{
+  .xl\:mx-1px{
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .xl\:my-2px{
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .xl\:mx-2px{
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .xl\:-my-1{
@@ -98430,14 +99507,24 @@ input, textarea {
     margin-right: -24rem;
   }
 
-  .xl\:-my-px{
+  .xl\:-my-1px{
     margin-top: -1px;
     margin-bottom: -1px;
   }
 
-  .xl\:-mx-px{
+  .xl\:-mx-1px{
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .xl\:-my-2px{
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .xl\:-mx-2px{
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .xl\:mt-0{
@@ -98776,20 +99863,36 @@ input, textarea {
     margin-left: auto;
   }
 
-  .xl\:mt-px{
+  .xl\:mt-1px{
     margin-top: 1px;
   }
 
-  .xl\:mr-px{
+  .xl\:mr-1px{
     margin-right: 1px;
   }
 
-  .xl\:mb-px{
+  .xl\:mb-1px{
     margin-bottom: 1px;
   }
 
-  .xl\:ml-px{
+  .xl\:ml-1px{
     margin-left: 1px;
+  }
+
+  .xl\:mt-2px{
+    margin-top: 2px;
+  }
+
+  .xl\:mr-2px{
+    margin-right: 2px;
+  }
+
+  .xl\:mb-2px{
+    margin-bottom: 2px;
+  }
+
+  .xl\:ml-2px{
+    margin-left: 2px;
   }
 
   .xl\:-mt-1{
@@ -99096,20 +100199,36 @@ input, textarea {
     margin-left: -24rem;
   }
 
-  .xl\:-mt-px{
+  .xl\:-mt-1px{
     margin-top: -1px;
   }
 
-  .xl\:-mr-px{
+  .xl\:-mr-1px{
     margin-right: -1px;
   }
 
-  .xl\:-mb-px{
+  .xl\:-mb-1px{
     margin-bottom: -1px;
   }
 
-  .xl\:-ml-px{
+  .xl\:-ml-1px{
     margin-left: -1px;
+  }
+
+  .xl\:-mt-2px{
+    margin-top: -2px;
+  }
+
+  .xl\:-mr-2px{
+    margin-right: -2px;
+  }
+
+  .xl\:-mb-2px{
+    margin-bottom: -2px;
+  }
+
+  .xl\:-ml-2px{
+    margin-left: -2px;
   }
 
   .xl\:max-h-full{
@@ -99422,8 +100541,12 @@ input, textarea {
     padding: 24rem;
   }
 
-  .xl\:p-px{
+  .xl\:p-1px{
     padding: 1px;
+  }
+
+  .xl\:p-2px{
+    padding: 2px;
   }
 
   .xl\:py-0{
@@ -99626,14 +100749,24 @@ input, textarea {
     padding-right: 24rem;
   }
 
-  .xl\:py-px{
+  .xl\:py-1px{
     padding-top: 1px;
     padding-bottom: 1px;
   }
 
-  .xl\:px-px{
+  .xl\:px-1px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .xl\:py-2px{
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .xl\:px-2px{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .xl\:pt-0{
@@ -99956,20 +101089,36 @@ input, textarea {
     padding-left: 24rem;
   }
 
-  .xl\:pt-px{
+  .xl\:pt-1px{
     padding-top: 1px;
   }
 
-  .xl\:pr-px{
+  .xl\:pr-1px{
     padding-right: 1px;
   }
 
-  .xl\:pb-px{
+  .xl\:pb-1px{
     padding-bottom: 1px;
   }
 
-  .xl\:pl-px{
+  .xl\:pl-1px{
     padding-left: 1px;
+  }
+
+  .xl\:pt-2px{
+    padding-top: 2px;
+  }
+
+  .xl\:pr-2px{
+    padding-right: 2px;
+  }
+
+  .xl\:pb-2px{
+    padding-bottom: 2px;
+  }
+
+  .xl\:pl-2px{
+    padding-left: 2px;
   }
 
   .xl\:placeholder-transparent::-moz-placeholder{
@@ -107476,8 +108625,12 @@ input, textarea {
     width: auto;
   }
 
-  .xl\:w-px{
+  .xl\:w-1px{
     width: 1px;
+  }
+
+  .xl\:w-2px{
+    width: 2px;
   }
 
   .xl\:w-1\/2{
@@ -107720,9 +108873,14 @@ input, textarea {
     gap: 24rem;
   }
 
-  .xl\:gap-px{
+  .xl\:gap-1px{
     grid-gap: 1px;
     gap: 1px;
+  }
+
+  .xl\:gap-2px{
+    grid-gap: 2px;
+    gap: 2px;
   }
 
   .xl\:col-gap-0{
@@ -107845,10 +109003,16 @@ input, textarea {
          column-gap: 24rem;
   }
 
-  .xl\:col-gap-px{
+  .xl\:col-gap-1px{
     grid-column-gap: 1px;
     -moz-column-gap: 1px;
          column-gap: 1px;
+  }
+
+  .xl\:col-gap-2px{
+    grid-column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
   }
 
   .xl\:row-gap-0{
@@ -107951,9 +109115,14 @@ input, textarea {
     row-gap: 24rem;
   }
 
-  .xl\:row-gap-px{
+  .xl\:row-gap-1px{
     grid-row-gap: 1px;
     row-gap: 1px;
+  }
+
+  .xl\:row-gap-2px{
+    grid-row-gap: 2px;
+    row-gap: 2px;
   }
 
   .xl\:grid-flow-row{
@@ -108913,8 +110082,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xl\:translate-x-px{
+  .xl\:translate-x-1px{
     --transform-translate-x: 1px;
+  }
+
+  .xl\:translate-x-2px{
+    --transform-translate-x: 2px;
   }
 
   .xl\:-translate-x-1{
@@ -108993,8 +110166,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xl\:-translate-x-px{
+  .xl\:-translate-x-1px{
     --transform-translate-x: -1px;
+  }
+
+  .xl\:-translate-x-2px{
+    --transform-translate-x: -2px;
   }
 
   .xl\:-translate-x-full{
@@ -109093,8 +110270,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xl\:translate-y-px{
+  .xl\:translate-y-1px{
     --transform-translate-y: 1px;
+  }
+
+  .xl\:translate-y-2px{
+    --transform-translate-y: 2px;
   }
 
   .xl\:-translate-y-1{
@@ -109173,8 +110354,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xl\:-translate-y-px{
+  .xl\:-translate-y-1px{
     --transform-translate-y: -1px;
+  }
+
+  .xl\:-translate-y-2px{
+    --transform-translate-y: -2px;
   }
 
   .xl\:-translate-y-full{
@@ -109273,8 +110458,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xl\:hover\:translate-x-px:hover{
+  .xl\:hover\:translate-x-1px:hover{
     --transform-translate-x: 1px;
+  }
+
+  .xl\:hover\:translate-x-2px:hover{
+    --transform-translate-x: 2px;
   }
 
   .xl\:hover\:-translate-x-1:hover{
@@ -109353,8 +110542,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xl\:hover\:-translate-x-px:hover{
+  .xl\:hover\:-translate-x-1px:hover{
     --transform-translate-x: -1px;
+  }
+
+  .xl\:hover\:-translate-x-2px:hover{
+    --transform-translate-x: -2px;
   }
 
   .xl\:hover\:-translate-x-full:hover{
@@ -109453,8 +110646,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xl\:hover\:translate-y-px:hover{
+  .xl\:hover\:translate-y-1px:hover{
     --transform-translate-y: 1px;
+  }
+
+  .xl\:hover\:translate-y-2px:hover{
+    --transform-translate-y: 2px;
   }
 
   .xl\:hover\:-translate-y-1:hover{
@@ -109533,8 +110730,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xl\:hover\:-translate-y-px:hover{
+  .xl\:hover\:-translate-y-1px:hover{
     --transform-translate-y: -1px;
+  }
+
+  .xl\:hover\:-translate-y-2px:hover{
+    --transform-translate-y: -2px;
   }
 
   .xl\:hover\:-translate-y-full:hover{
@@ -109633,8 +110834,12 @@ input, textarea {
     --transform-translate-x: 24rem;
   }
 
-  .xl\:focus\:translate-x-px:focus{
+  .xl\:focus\:translate-x-1px:focus{
     --transform-translate-x: 1px;
+  }
+
+  .xl\:focus\:translate-x-2px:focus{
+    --transform-translate-x: 2px;
   }
 
   .xl\:focus\:-translate-x-1:focus{
@@ -109713,8 +110918,12 @@ input, textarea {
     --transform-translate-x: -24rem;
   }
 
-  .xl\:focus\:-translate-x-px:focus{
+  .xl\:focus\:-translate-x-1px:focus{
     --transform-translate-x: -1px;
+  }
+
+  .xl\:focus\:-translate-x-2px:focus{
+    --transform-translate-x: -2px;
   }
 
   .xl\:focus\:-translate-x-full:focus{
@@ -109813,8 +111022,12 @@ input, textarea {
     --transform-translate-y: 24rem;
   }
 
-  .xl\:focus\:translate-y-px:focus{
+  .xl\:focus\:translate-y-1px:focus{
     --transform-translate-y: 1px;
+  }
+
+  .xl\:focus\:translate-y-2px:focus{
+    --transform-translate-y: 2px;
   }
 
   .xl\:focus\:-translate-y-1:focus{
@@ -109893,8 +111106,12 @@ input, textarea {
     --transform-translate-y: -24rem;
   }
 
-  .xl\:focus\:-translate-y-px:focus{
+  .xl\:focus\:-translate-y-1px:focus{
     --transform-translate-y: -1px;
+  }
+
+  .xl\:focus\:-translate-y-2px:focus{
+    --transform-translate-y: -2px;
   }
 
   .xl\:focus\:-translate-y-full:focus{

@@ -77,3 +77,23 @@ html {
 .required-pop-up {
   bottom: 100%;
 }
+
+// Custom underline for links
+.link-underline {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    @apply bg-red-100;
+  }
+}
+
+// Rounded section
+.section-rounded {
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
