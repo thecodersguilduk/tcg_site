@@ -1,16 +1,54 @@
-<div class="md:flex my-12 md:justify-evenly">
-  <div class="mx-auto mb-10 md:mb-0 md:mx-0">
-    <h3 class="font-semibold">Software Developer Level 4</h3>
-    <ul class="products_drop_content">
-      <li class="mb-3">I want to <a href="/employer-software-dev">hire</a> a developer</li>
-      <li>I want to <a href="/applicant-software-dev">be</a> a developer</li>
-    </ul>
-  </div>
-  <div class="mx-auto md:mx-0">
-    <h3 class="font-semibold">Software Tester Level 4</h3>
-    <ul class="products_drop_content">
-      <li class="mb-3">I want to <a>hire</a> a tester</li>
-      <li>I want to <a>be</a> a tester</li>
-    </ul>
-  </div>
-</div>
+
+{% for apprenticeship in apprenticeships %}
+  {% if apprenticeship.active %}
+    <h2 class="text-white mb-12">Our Apprenticeships</h2>
+    <div class="flex flex-wrap -mx-4 mb-4">
+      {% for item in  apprenticeship.active %}
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full">
+              <div class="flex flex-col items-start h-full">
+                <object type="image/svg+xml" data="../images/icons/noun_contact_1995626.svg" class="mb-2"></object>
+                <h3 class="text-xl leading-lg mb-2">{{ item.title }}</h3>
+                <div class="mt-auto">
+                  <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
+                  <div class="mb-4">
+                    <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded">Be a Developer</a>
+                  </div>
+                  <div>
+                    <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded">Hire a Developer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+
+  {% endif %}
+
+  {% if apprenticeship.coming_soon %}
+    <h2 class="text-white mb-12">Coming Soon</h2>
+    <div class="flex flex-wrap -mx-4">
+    {% for item in apprenticeship.coming_soon %}
+      <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+        <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full">
+          <div class="flex flex-col items-start h-full">
+            <object type="image/svg+xml" data="../images/icons/noun_contact_1995626.svg" class="mb-2"></object>
+            <h3 class="text-xl leading-lg mb-2">{{ item.title }}</h3>
+            <div class="mt-auto opacity-25">
+              <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
+              <div class="mb-4">
+                <button class="inline-block bg-blue-200 py-2 px-6 rounded text-white font-heading font-bold text-md leading-sm" disabled>Be a Developer</button>
+              </div>
+              <div>
+                <button class="inline-block bg-red-100 py-2 px-6 rounded text-white font-heading font-bold text-md leading-sm" disabled>Hire a Developer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+
