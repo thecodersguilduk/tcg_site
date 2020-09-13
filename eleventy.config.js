@@ -8,6 +8,11 @@ module.exports = eleventyConfig => {
     // Add a HTML timestamp formatter filter to Nunjucks
     eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
+    // Add a limit filter for collections to Nunjucks 
+    eleventyConfig.addFilter('limit', function(array, limit) {
+      return array.slice(0, limit);
+    });
+
     // Minify our HTML
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
         if ( outputPath.endsWith(".html") )

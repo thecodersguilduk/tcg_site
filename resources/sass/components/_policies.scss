@@ -1,0 +1,8 @@
+.policy-item {
+  &:hover,
+  &:focus {
+    p:first-child {
+      @apply underline text-blue-200;
+    }
+  }
+}
