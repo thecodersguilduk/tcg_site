@@ -606,7 +606,7 @@ video {
 
 .inner {
   width: 100%;
-  max-width: 64rem;
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -1308,6 +1308,16 @@ input, textarea {
   --text-opacity: 1;
   color: #2574a9;
   color: rgba(37, 116, 169, var(--text-opacity));
+}
+
+.footer-dropdown-content {
+  max-height: none;
+}
+
+@media screen and (max-width: 640px) {
+  .footer-dropdown-content {
+    max-height: 0;
+  }
 }
 
 .space-y-0 > :not(template) ~ :not(template){

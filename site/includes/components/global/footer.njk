@@ -1,20 +1,20 @@
 <footer class="border-t-2 border-grey-100">
-  <div class="py-12 inner sm:px-4 lg:px-8 lg:max-w-screen-xl">
+  <div class="md:pt-12 pt-6 md:pb-14 pb-8 inner sm:px-4 lg:px-8">
     <div class="flex justify-between flex-wrap sm:-mx-3 lg:mx-auto">
 
-      <div class="lg:w-auto mb-6 sm:mb-12 lg:mb-0 w-full sm:w-1/2 sm:px-6 lg:px-0">
-        <div class="mb-5">
-          <img src="../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" class="block h-16" />
+      <div class="lg:w-auto mb-6 sm:mb-12 lg:mb-0 w-full lg:w-1/4 sm:w-1/2 sm:px-6 lg:px-0">
+        <div class="md:mb-5 mb-6">
+          <img src="../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" class="block md:h-16 h-14" />
         </div>
-        <p>Industry led, community driven.</p>
+        <p class="text-md md:text-sm leading-lg md:leading-sm">Industry led, community driven.</p>
       </div>
 
-      <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0 lg:ml-auto">
+      <div class="lg:pt-10 mb-8 sm:mb-12 lg:mb-0 lg:w-1/4 w-full sm:w-1/2 sm:px-6 lg:px-0 lg:ml-auto">
         <div class="">
-          <h5 class="uppercase text-blue-200 font-semibold">Contact us</h5>
-          <p class="">Duke Studios, 3 Sheaf St</p>
-          <p class="mb-4">Leeds LS10 1HD</p>
-          <p class="mb-4 font-semibold text-blue-200">0113 460 1024</p>
+          <h5 class="uppercase text-blue-200 font-bold md:mb-5 mb-4 text-xl leading-lg md:text-md md:leading-sm">Contact us</h5>
+          <p class="text-md md:text-sm leading-lg md:leading-sm">Duke Studios, 3 Sheaf St</p>
+          <p class="text-md md:text-sm leading-lg md:leading-sm mb-4">Leeds LS10 1HD</p>
+          <p class="text-md md:text-sm leading-lg md:leading-sm mb-4 font-bold text-blue-200">0113 460 1024</p>
           <ul class="flex -mx-1">
             {% for social in navigation.social_links %}
               <li class="px-1">
@@ -29,17 +29,17 @@
       </div>
 
       {% for group in navigation.footer %}
-        <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-3/12 w-full sm:w-1/2 sm:px-6 lg:px-0">
+        <div class="lg:pt-10 mb-6 sm:mb-0 lg:w-1/4 w-full sm:w-1/2 sm:px-6 lg:px-0">
           <div class="border-b-2 border-grey-100 sm:border-none">
             <button class="sm:hidden flex justify-between items-center w-full footer-dropdown relative toggle-show-hide mb-3">
-              <h5 class="uppercase text-blue-200 font-semibold mb-0">{{ group.title }}</h5>
+              <h5 class="uppercase text-blue-200 font-bold mb-0 sm:mb-5 text-xl leading-lg md:text-md md:leading-sm">{{ group.title }}</h5>
               <i class="fas fa-angle-down text-blue-200"></i>
             </button>
-            <h5 class="hidden sm:block uppercase text-blue-200 font-semibold">{{ group.title }}</h5>
+            <h5 class="hidden sm:block uppercase text-blue-200 font-bold">{{ group.title }}</h5>
             <ul class="footer-dropdown-content h-auto max-h-0 opacity-0 sm:opacity-100 transition-all ease-in duration-150">
               {% for link in group.links %}
                 <li class="mb-2">
-                  <a href="{{ link.url }}" class="block text-black">{{ link.label }}</a>
+                  <a href="{{ link.url }}" class="text-md md:text-sm leading-lg md:leading-sm block text-black">{{ link.label }}</a>
                 </li>
               {% endfor %}
             </ul>
@@ -47,7 +47,7 @@
         </div>
       {% endfor %}
 
-      <div class="lg:py-10 mb-6 sm:mb-12 lg:mb-0 lg:w-auto w-full bg-white sm:w-1/2 sm:px-6 lg:px-0">
+      <div class="lg:pt-10 mb-6 sm:mb-0 lg:w-1/4 w-full bg-white sm:w-1/2 sm:px-6 lg:px-0">
         <div class="flex flex-wrap sm:block lg:mx-0">
           <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
             <img src="../../images/apprenticeships-logo.png" alt="" class="h-12 w-auto block relative" />
@@ -67,9 +67,9 @@
   <div class="bg-blue-200">
     <div class="inner sm:px-4 lg:px-8 lg:max-w-screen-xl py-2">
       <div class="flex -mx-6 flex-wrap">
-        <div class="text-white lg:text-xs px-6 mb-1 md:mb-0 text-xs">&copy; 2020 Workflow, Inc. All rights reserved.</div>
-        <div class="text-white lg:text-xs px-6 mb-1 md:mb-0 text-xs">Reg England and Wales: 9622444</div>
-        <div class="text-white lg:text-xs px-6 text-xs">UKPRN 10058030</div>
+        <div class="text-white px-6 mb-1 md:mb-0 text-xs md:text-sm">&copy; 2020 The Coders Guild ltd. All rights reserved.</div>
+        <div class="text-white px-6 mb-1 md:mb-0 text-xs md:text-sm">Reg England and Wales: 9622444</div>
+        <div class="text-white px-6 text-xs md:text-sm">UKPRN 10058030</div>
       </div>
     </div>
   </div>
