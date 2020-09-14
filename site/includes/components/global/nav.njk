@@ -10,13 +10,13 @@
       <nav id="mobile-nav" class="inner">
         <ul class="py-24">
         {% for nav_link in navigation.main %}
-          <li class="my-2 text-center">
-            <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold font-heading text-grey-200 capitalize text-base">{{ nav_link.label | safe }}
+          <li class="my-8 text-center">
+            <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}
             </a>
           </li>
         {% endfor %}
           <li class="mt-6 text-center">
-            <a href="" class="block py-2 font-semibold bg-blue-200 text-white rounded font-heading text-base">Book a Call</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fionathecodersguild/quick-call?hide_event_type_details=1'});return false;" class="block sm:inline-block sm:px-24 py-2 font-bold bg-blue-200 text-white rounded font-heading text-2xl leading-2xl">Book a Call</a>
           </li>
         </ul>
       </nav>
@@ -29,12 +29,12 @@
       <ul class="flex -mx-3">
       {% for nav_link in navigation.main %}
         <li class="px-4">
-          <a href="{{ nav_link.url | safe }}" class="block py-2 font-semibold text-grey-200 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
+          <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
           </a>
         </li>
       {% endfor %}
         <li class="px-3">
-          <a href="" class="block py-2 px-6 font-semibold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Book a Call</a>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fionathecodersguild/quick-call?hide_event_type_details=1'});return false;" class="block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Book a Call</a>
         </li>
       </ul>
     </div>
