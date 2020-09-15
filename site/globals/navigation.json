@@ -20,24 +20,36 @@
 
   "footer": [
     {
-      "title": "Policies",
+      "title": "Quick Links",
       "links": [
 
         {
-          "label": "Full list",
-          "url": "/policies"
+          "label": "Sitemap",
+          "url": "/sitemap.xml"
         },
         {
-          "label": "E&D",
-          "url": "/"
+          "label": "Terms and Conditions",
+          "url": "/pdf/tcg_terms_and_conditions.pdf"
         },
         {
           "label": "Complaints",
-          "url": "/"
+          "url": "/pdf/tcg_complaints_policy.pdf"
+        },
+        {
+          "label": "Cookies",
+          "url": "/pdf/tcg_cookie_policy.pdf"
+        },
+        {
+          "label": "Privacy",
+          "url": "/pdf/tcg_privacy_policy.pdf"
         },
         {
           "label": "Modern Slavery",
-          "url": "/"
+          "url": "/pdf/tcg_modern_slavery.pdf"
+        },
+        {
+          "label": "All Policies",
+          "url": "/policies"
         }
       ]
     }

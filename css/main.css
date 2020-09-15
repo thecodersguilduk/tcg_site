@@ -1411,6 +1411,16 @@ input, textarea {
   color: rgba(37, 116, 169, var(--text-opacity));
 }
 
+.footer-dropdown-content {
+  max-height: none;
+}
+
+@media screen and (max-width: 640px) {
+  .footer-dropdown-content {
+    max-height: 0;
+  }
+}
+
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
