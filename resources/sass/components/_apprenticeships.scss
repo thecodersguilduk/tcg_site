@@ -1,52 +1,5 @@
 #apprenticeships {
 
-  .hero {
-
-    &-desktop {
-      display: block;
-
-      @media screen and (max-width: 640px) {
-        display: none;
-      }
-
-    }
-    
-    &-inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% 70%, 90% 100%, 10% 100%, 0 70%, 0% 85%);
-
-      &::after {
-        @apply bg-blue-200;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0.75;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-position: center center;
-        object-fit: cover;
-      }
-    }
-
-    &-mobile {
-      display: none;
-
-      @media screen and (max-width: 640px) {
-        display: block;
-      }
-    }
-  }
-
   .apprenticeships__cta {
     a {
       text-align: center;
