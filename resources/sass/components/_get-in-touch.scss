@@ -1,0 +1,11 @@
+.get-in-touch {
+  .cta {
+    &__text {
+      max-width: 70%;
+
+      @media (max-width: 640px){
+        max-width: 100%;
+      }
+    }
+  }
+}

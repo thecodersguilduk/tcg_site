@@ -1332,7 +1332,11 @@ input, textarea {
   }
 }
 
-#apprenticeships .pattern-1, #apprenticeships .pattern-2, #apprenticeships .pattern-3, #apprenticeships .pattern-4 {
+#apprenticeships .pattern-1, #apprenticeships .pattern-2 {
+  z-index: -1;
+}
+
+#apprenticeships .pattern-3, #apprenticeships .pattern-4 {
   z-index: 0;
 }
 
@@ -1350,6 +1354,63 @@ input, textarea {
 
 #apprenticeships .pattern-4 {
   margin-bottom: 1rem;
+}
+
+#apprenticeship-employer .pattern-5 {
+  top: -85px;
+  left: -235px;
+}
+
+#apprenticeship-employer .pattern-6 {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -222px;
+}
+
+#apprenticeship-employer .pattern-7 {
+  top: 34px;
+  right: -185px;
+}
+
+#apprenticeship-employer .pattern-8 {
+  bottom: 0;
+  left: -135px;
+  z-index: -1;
+}
+
+#apprenticeship-employer .pattern-9 {
+  top: 100px;
+  left: -195px;
+  z-index: -1;
+}
+
+#apprenticeship-employer .pattern-10 {
+  bottom: 0;
+  right: -310px;
+  z-index: -1;
+}
+
+#apprenticeship-employer .pattern-11, #apprenticeship-employer .pattern-12 {
+  bottom: -65px;
+  z-index: -1;
+}
+
+#apprenticeship-employer .pattern-11 {
+  left: 80px;
+}
+
+#apprenticeship-employer .pattern-12 {
+  right: 80px;
+}
+
+@media screen and (min-width: 1024px) {
+  #apprenticeship-employer .fixed-bg {
+    background-image: url("../images/chevrons.png");
+    background-position-x: 20%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
 
 .policy-item:hover p:first-child, .policy-item:focus p:first-child {
@@ -1398,6 +1459,137 @@ input, textarea {
   top: -4rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.roadmap__item {
+  position: relative;
+}
+
+.roadmap__item:first-child .roadmap__title::before {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #2574a9;
+  border-color: rgba(37, 116, 169, var(--border-opacity));
+  top: 0px;
+  transform: none;
+  left: -2.5px;
+  height: 25px;
+  width: 25px;
+  border-width: 4px;
+}
+
+.roadmap__item:not(:last-child)::before {
+  --bg-opacity: 1;
+  background-color: #2574a9;
+  background-color: rgba(37, 116, 169, var(--bg-opacity));
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  height: 100%;
+  width: 4px;
+}
+
+.roadmap__title {
+  position: relative;
+}
+
+.roadmap__title::before {
+  --bg-opacity: 1;
+  background-color: #2574a9;
+  background-color: rgba(37, 116, 169, var(--bg-opacity));
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+#apprenticeship-employer .testimonials .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+#apprenticeship-employer .testimonials .slick-dots button {
+  --bg-opacity: 1;
+  background-color: #dedede;
+  background-color: rgba(222, 222, 222, var(--bg-opacity));
+  font-size: 0;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+#apprenticeship-employer .testimonials .slick-dots .slick-active button {
+  --bg-opacity: 1;
+  background-color: #16aedb;
+  background-color: rgba(22, 174, 219, var(--bg-opacity));
+}
+
+#apprenticeship-employer .testimonials .slick-dots li {
+  display: flex;
+  justify-content: center;
+}
+
+#apprenticeship-employer .testimonials .slick-arrow {
+  --bg-opacity: 1;
+  background-color: #2574a9;
+  background-color: rgba(37, 116, 169, var(--bg-opacity));
+  font-size: 0;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: block;
+}
+
+#apprenticeship-employer .testimonials .slick-slide > div {
+  border-radius: 10px;
+}
+
+#apprenticeship-employer .testimonials__author {
+  border-width: 4px;
+  --border-opacity: 1;
+  border-color: #16aedb;
+  border-color: rgba(22, 174, 219, var(--border-opacity));
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  flex: 1 0 110px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#apprenticeship-employer .testimonials__author::before {
+  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  font-size: 153px;
+  line-height: 0;
+  content: "\201C";
+}
+
+.get-in-touch .cta__text {
+  max-width: 70%;
+}
+
+@media (max-width: 640px) {
+  .get-in-touch .cta__text {
+    max-width: 100%;
+  }
 }
 
 .space-y-0 > :not(template) ~ :not(template){
