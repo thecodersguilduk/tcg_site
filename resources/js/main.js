@@ -6,4 +6,6 @@ import '@modules/show-hide'
 import '@modules/header'
 import '@modules/form-validating'
 import '@modules/load-posts'
+import '@modules/slider'
+
 
