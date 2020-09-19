@@ -1,0 +1,10 @@
+.case-studies {
+  margin-top: 4rem;
+  
+  &__img {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

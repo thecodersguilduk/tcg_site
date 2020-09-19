@@ -1,0 +1,53 @@
+.roadmap {
+
+  &__item {
+    @apply relative;
+
+    &:first-child {
+      .roadmap__title {
+        &::before {
+          @apply bg-white border-blue-200;
+          top: 0px;
+          transform: none;
+          left: -2.5px;
+          height: 25px;
+          width: 25px;
+          border-width: 4px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      &::before {
+        @apply bg-blue-200;
+
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        height: 100%;
+        width: 4px;
+
+      }
+    }
+
+  }
+
+  &__title {
+    @apply relative;
+
+    &::before {
+      @apply bg-blue-200;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+
+      transform: translateY(-50%);
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      
+    }
+  }
+}
