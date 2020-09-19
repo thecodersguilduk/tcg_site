@@ -1,21 +1,43 @@
-<section class="py-12 bg-grey-50 overflow-hidden md:py-20 lg:py-24">
-  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+{% if body_class == "apprenticeship-employer" and testimonials %}
+  <section class="relative md:pt-16 pt-14 testimonials">
+    <div class="inner relative z-10">
+      <div class="max-w-3xl mx-auto md:px-16">
+        <h2 class="text-center mb-8 md:mb-14">What our partners say about us</h2>
+        
+        <div class="testimonials__slider">
+          {% for testimonial in testimonials %}
+            <div class="p-4">
+              <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                <div class="sm:flex sm:items-center">
+                  <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.img_url }}');"></div>
+                  <div class="relative testimonials__quote">
+                    <h3 class="mb-2px">{{ testimonial.author }}</h3>
+                    <span class="text-md leading-sm font-heading font-bold mb-2 block">Digital Director at Access</span>
+                    <p class="text-sm leading-lg">{{ testimonial.text }}</p>
+                  </div>
+                </div>
 
-    <div class="relative">
-      <blockquote class="mt-8">
-        <div class="max-w-3xl mx-auto text-center leading-9 font-medium text-grey-900">
-          <p>
-            &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.&rdquo;
-          </p>
-        </div>
-        <footer class="mt-8">
-          <div class="md:flex md:items-center md:justify-center">
-            <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-              <div class="leading-6 font-medium text-grey-900">Judith Black <span class="ext-base leading-6 font-medium text-grey-500">CEO, Workcation</span></div>
+              </div>
             </div>
-          </div>
-        </footer>
-      </blockquote>
+          {% endfor %}
+        </div>
+        <div class="flex justify-center items-center mt-8">
+          <button type="button" class="prev mr-6">
+            <img src="../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
+          </button>
+          <div class="dots"></div>
+          <button type="button" class="next ml-6">
+            <img src="../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
+          </button>
+        </div>
+      </div>
+
+      <div class="md:my-24 my-14">
+        {% include "components/global/get-in-touch-cta.njk" %}
+      </div>
+
+      <object type="image/svg+xml" data="../images/patterns/11.svg" class="hidden md:block absolute pattern pattern-11"></object>
+      <object type="image/svg+xml" data="../images/patterns/12.svg" class="hidden md:block absolute pattern pattern-12"></object>
     </div>
-  </div>
-</section>
+  </section>
+{% endif %}
