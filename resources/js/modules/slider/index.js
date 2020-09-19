@@ -2,7 +2,6 @@ import $$ from '@utilities/selectors';
 
 $('.testimonials__slider').slick({
   dots: true,
-  infinite: false,
   prevArrow: $('.prev'),
   nextArrow: $('.next'),
   appendDots: $('.dots'),
