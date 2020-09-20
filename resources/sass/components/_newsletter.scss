@@ -1,0 +1,32 @@
+.newsletter {
+  background-image: url('../images/newsletter.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    &::placeholder {
+      color: black;
+    }
+
+    @media screen and (max-width: 767px) {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    @media screen and (max-width: 767px) {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+}
