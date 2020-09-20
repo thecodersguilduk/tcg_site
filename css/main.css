@@ -713,6 +713,11 @@ html {
   border-bottom-left-radius: 40px;
 }
 
+.section-rounded-t {
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
 a {
   --text-opacity: 1;
   color: #21183c;
@@ -1645,6 +1650,48 @@ input, textarea {
   }
 }
 
+#about .apprenticeships__item {
+  width: 251px;
+}
+
+#about .pattern-1 {
+  top: 50px;
+  right: -260px;
+  z-index: -1;
+}
+
+#about .pattern-2 {
+  top: 300px;
+  left: -240px;
+  z-index: -1;
+}
+
+#about .pattern-3 {
+  top: 12px;
+  left: -260px;
+  z-index: -1;
+}
+
+#about .pattern-4 {
+  bottom: 90px;
+  right: -90px;
+  z-index: -1;
+}
+
+#about .pattern-5 {
+  bottom: 10px;
+  right: 70px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 640px) {
+  .team__member {
+    max-width: 251px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .faq .faq-btn--active {
   --text-opacity: 1;
   color: #2574a9;
@@ -1922,6 +1969,18 @@ input, textarea {
   margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
 }
 
+.space-y-35 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(8.75rem * var(--space-y-reverse));
+}
+
+.space-x-35 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(8.75rem * var(--space-x-reverse));
+  margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+}
+
 .space-y-40 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -2196,6 +2255,18 @@ input, textarea {
   --space-x-reverse: 0;
   margin-right: calc(-8rem * var(--space-x-reverse));
   margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-35 > :not(template) ~ :not(template){
+  --space-y-reverse: 0;
+  margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+}
+
+.-space-x-35 > :not(template) ~ :not(template){
+  --space-x-reverse: 0;
+  margin-right: calc(-8.75rem * var(--space-x-reverse));
+  margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
 }
 
 .-space-y-40 > :not(template) ~ :not(template){
@@ -7502,6 +7573,10 @@ input, textarea {
   height: 8rem;
 }
 
+.h-35{
+  height: 8.75rem;
+}
+
 .h-40{
   height: 10rem;
 }
@@ -7706,6 +7781,10 @@ input, textarea {
   margin: 8rem;
 }
 
+.m-35{
+  margin: 8.75rem;
+}
+
 .m-40{
   margin: 10rem;
 }
@@ -7800,6 +7879,10 @@ input, textarea {
 
 .-m-32{
   margin: -8rem;
+}
+
+.-m-35{
+  margin: -8.75rem;
 }
 
 .-m-40{
@@ -7998,6 +8081,16 @@ input, textarea {
 .mx-32{
   margin-left: 8rem;
   margin-right: 8rem;
+}
+
+.my-35{
+  margin-top: 8.75rem;
+  margin-bottom: 8.75rem;
+}
+
+.mx-35{
+  margin-left: 8.75rem;
+  margin-right: 8.75rem;
 }
 
 .my-40{
@@ -8238,6 +8331,16 @@ input, textarea {
 .-mx-32{
   margin-left: -8rem;
   margin-right: -8rem;
+}
+
+.-my-35{
+  margin-top: -8.75rem;
+  margin-bottom: -8.75rem;
+}
+
+.-mx-35{
+  margin-left: -8.75rem;
+  margin-right: -8.75rem;
 }
 
 .-my-40{
@@ -8580,6 +8683,22 @@ input, textarea {
 
 .ml-32{
   margin-left: 8rem;
+}
+
+.mt-35{
+  margin-top: 8.75rem;
+}
+
+.mr-35{
+  margin-right: 8.75rem;
+}
+
+.mb-35{
+  margin-bottom: 8.75rem;
+}
+
+.ml-35{
+  margin-left: 8.75rem;
 }
 
 .mt-40{
@@ -8964,6 +9083,22 @@ input, textarea {
 
 .-ml-32{
   margin-left: -8rem;
+}
+
+.-mt-35{
+  margin-top: -8.75rem;
+}
+
+.-mr-35{
+  margin-right: -8.75rem;
+}
+
+.-mb-35{
+  margin-bottom: -8.75rem;
+}
+
+.-ml-35{
+  margin-left: -8.75rem;
 }
 
 .-mt-40{
@@ -9380,6 +9515,10 @@ input, textarea {
   padding: 8rem;
 }
 
+.p-35{
+  padding: 8.75rem;
+}
+
 .p-40{
   padding: 10rem;
 }
@@ -9576,6 +9715,16 @@ input, textarea {
 .px-32{
   padding-left: 8rem;
   padding-right: 8rem;
+}
+
+.py-35{
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
+}
+
+.px-35{
+  padding-left: 8.75rem;
+  padding-right: 8.75rem;
 }
 
 .py-40{
@@ -9918,6 +10067,22 @@ input, textarea {
 
 .pl-32{
   padding-left: 8rem;
+}
+
+.pt-35{
+  padding-top: 8.75rem;
+}
+
+.pr-35{
+  padding-right: 8.75rem;
+}
+
+.pb-35{
+  padding-bottom: 8.75rem;
+}
+
+.pl-35{
+  padding-left: 8.75rem;
 }
 
 .pt-40{
@@ -17576,6 +17741,10 @@ input, textarea {
   width: 8rem;
 }
 
+.w-35{
+  width: 8.75rem;
+}
+
 .w-40{
   width: 10rem;
 }
@@ -17833,6 +18002,11 @@ input, textarea {
   gap: 8rem;
 }
 
+.gap-35{
+  grid-gap: 8.75rem;
+  gap: 8.75rem;
+}
+
 .gap-40{
   grid-gap: 10rem;
   gap: 10rem;
@@ -17970,6 +18144,12 @@ input, textarea {
        column-gap: 8rem;
 }
 
+.col-gap-35{
+  grid-column-gap: 8.75rem;
+  -moz-column-gap: 8.75rem;
+       column-gap: 8.75rem;
+}
+
 .col-gap-40{
   grid-column-gap: 10rem;
   -moz-column-gap: 10rem;
@@ -18095,6 +18275,11 @@ input, textarea {
 .row-gap-32{
   grid-row-gap: 8rem;
   row-gap: 8rem;
+}
+
+.row-gap-35{
+  grid-row-gap: 8.75rem;
+  row-gap: 8.75rem;
 }
 
 .row-gap-40{
@@ -19077,6 +19262,10 @@ input, textarea {
   --transform-translate-x: 8rem;
 }
 
+.translate-x-35{
+  --transform-translate-x: 8.75rem;
+}
+
 .translate-x-40{
   --transform-translate-x: 10rem;
 }
@@ -19167,6 +19356,10 @@ input, textarea {
 
 .-translate-x-32{
   --transform-translate-x: -8rem;
+}
+
+.-translate-x-35{
+  --transform-translate-x: -8.75rem;
 }
 
 .-translate-x-40{
@@ -19281,6 +19474,10 @@ input, textarea {
   --transform-translate-y: 8rem;
 }
 
+.translate-y-35{
+  --transform-translate-y: 8.75rem;
+}
+
 .translate-y-40{
   --transform-translate-y: 10rem;
 }
@@ -19371,6 +19568,10 @@ input, textarea {
 
 .-translate-y-32{
   --transform-translate-y: -8rem;
+}
+
+.-translate-y-35{
+  --transform-translate-y: -8.75rem;
 }
 
 .-translate-y-40{
@@ -19485,6 +19686,10 @@ input, textarea {
   --transform-translate-x: 8rem;
 }
 
+.hover\:translate-x-35:hover{
+  --transform-translate-x: 8.75rem;
+}
+
 .hover\:translate-x-40:hover{
   --transform-translate-x: 10rem;
 }
@@ -19575,6 +19780,10 @@ input, textarea {
 
 .hover\:-translate-x-32:hover{
   --transform-translate-x: -8rem;
+}
+
+.hover\:-translate-x-35:hover{
+  --transform-translate-x: -8.75rem;
 }
 
 .hover\:-translate-x-40:hover{
@@ -19689,6 +19898,10 @@ input, textarea {
   --transform-translate-y: 8rem;
 }
 
+.hover\:translate-y-35:hover{
+  --transform-translate-y: 8.75rem;
+}
+
 .hover\:translate-y-40:hover{
   --transform-translate-y: 10rem;
 }
@@ -19779,6 +19992,10 @@ input, textarea {
 
 .hover\:-translate-y-32:hover{
   --transform-translate-y: -8rem;
+}
+
+.hover\:-translate-y-35:hover{
+  --transform-translate-y: -8.75rem;
 }
 
 .hover\:-translate-y-40:hover{
@@ -19893,6 +20110,10 @@ input, textarea {
   --transform-translate-x: 8rem;
 }
 
+.focus\:translate-x-35:focus{
+  --transform-translate-x: 8.75rem;
+}
+
 .focus\:translate-x-40:focus{
   --transform-translate-x: 10rem;
 }
@@ -19983,6 +20204,10 @@ input, textarea {
 
 .focus\:-translate-x-32:focus{
   --transform-translate-x: -8rem;
+}
+
+.focus\:-translate-x-35:focus{
+  --transform-translate-x: -8.75rem;
 }
 
 .focus\:-translate-x-40:focus{
@@ -20097,6 +20322,10 @@ input, textarea {
   --transform-translate-y: 8rem;
 }
 
+.focus\:translate-y-35:focus{
+  --transform-translate-y: 8.75rem;
+}
+
 .focus\:translate-y-40:focus{
   --transform-translate-y: 10rem;
 }
@@ -20187,6 +20416,10 @@ input, textarea {
 
 .focus\:-translate-y-32:focus{
   --transform-translate-y: -8rem;
+}
+
+.focus\:-translate-y-35:focus{
+  --transform-translate-y: -8.75rem;
 }
 
 .focus\:-translate-y-40:focus{
@@ -20714,6 +20947,18 @@ input, textarea {
     margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xs\:space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(8.75rem * var(--space-y-reverse));
+  }
+
+  .xs\:space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(8.75rem * var(--space-x-reverse));
+    margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xs\:space-y-40 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -20988,6 +21233,18 @@ input, textarea {
     --space-x-reverse: 0;
     margin-right: calc(-8rem * var(--space-x-reverse));
     margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xs\:-space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+  }
+
+  .xs\:-space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-8.75rem * var(--space-x-reverse));
+    margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xs\:-space-y-40 > :not(template) ~ :not(template){
@@ -26294,6 +26551,10 @@ input, textarea {
     height: 8rem;
   }
 
+  .xs\:h-35{
+    height: 8.75rem;
+  }
+
   .xs\:h-40{
     height: 10rem;
   }
@@ -26498,6 +26759,10 @@ input, textarea {
     margin: 8rem;
   }
 
+  .xs\:m-35{
+    margin: 8.75rem;
+  }
+
   .xs\:m-40{
     margin: 10rem;
   }
@@ -26592,6 +26857,10 @@ input, textarea {
 
   .xs\:-m-32{
     margin: -8rem;
+  }
+
+  .xs\:-m-35{
+    margin: -8.75rem;
   }
 
   .xs\:-m-40{
@@ -26790,6 +27059,16 @@ input, textarea {
   .xs\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .xs\:my-35{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
+
+  .xs\:mx-35{
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
   }
 
   .xs\:my-40{
@@ -27030,6 +27309,16 @@ input, textarea {
   .xs\:-mx-32{
     margin-left: -8rem;
     margin-right: -8rem;
+  }
+
+  .xs\:-my-35{
+    margin-top: -8.75rem;
+    margin-bottom: -8.75rem;
+  }
+
+  .xs\:-mx-35{
+    margin-left: -8.75rem;
+    margin-right: -8.75rem;
   }
 
   .xs\:-my-40{
@@ -27372,6 +27661,22 @@ input, textarea {
 
   .xs\:ml-32{
     margin-left: 8rem;
+  }
+
+  .xs\:mt-35{
+    margin-top: 8.75rem;
+  }
+
+  .xs\:mr-35{
+    margin-right: 8.75rem;
+  }
+
+  .xs\:mb-35{
+    margin-bottom: 8.75rem;
+  }
+
+  .xs\:ml-35{
+    margin-left: 8.75rem;
   }
 
   .xs\:mt-40{
@@ -27756,6 +28061,22 @@ input, textarea {
 
   .xs\:-ml-32{
     margin-left: -8rem;
+  }
+
+  .xs\:-mt-35{
+    margin-top: -8.75rem;
+  }
+
+  .xs\:-mr-35{
+    margin-right: -8.75rem;
+  }
+
+  .xs\:-mb-35{
+    margin-bottom: -8.75rem;
+  }
+
+  .xs\:-ml-35{
+    margin-left: -8.75rem;
   }
 
   .xs\:-mt-40{
@@ -28172,6 +28493,10 @@ input, textarea {
     padding: 8rem;
   }
 
+  .xs\:p-35{
+    padding: 8.75rem;
+  }
+
   .xs\:p-40{
     padding: 10rem;
   }
@@ -28368,6 +28693,16 @@ input, textarea {
   .xs\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .xs\:py-35{
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+  }
+
+  .xs\:px-35{
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 
   .xs\:py-40{
@@ -28710,6 +29045,22 @@ input, textarea {
 
   .xs\:pl-32{
     padding-left: 8rem;
+  }
+
+  .xs\:pt-35{
+    padding-top: 8.75rem;
+  }
+
+  .xs\:pr-35{
+    padding-right: 8.75rem;
+  }
+
+  .xs\:pb-35{
+    padding-bottom: 8.75rem;
+  }
+
+  .xs\:pl-35{
+    padding-left: 8.75rem;
   }
 
   .xs\:pt-40{
@@ -36368,6 +36719,10 @@ input, textarea {
     width: 8rem;
   }
 
+  .xs\:w-35{
+    width: 8.75rem;
+  }
+
   .xs\:w-40{
     width: 10rem;
   }
@@ -36625,6 +36980,11 @@ input, textarea {
     gap: 8rem;
   }
 
+  .xs\:gap-35{
+    grid-gap: 8.75rem;
+    gap: 8.75rem;
+  }
+
   .xs\:gap-40{
     grid-gap: 10rem;
     gap: 10rem;
@@ -36762,6 +37122,12 @@ input, textarea {
          column-gap: 8rem;
   }
 
+  .xs\:col-gap-35{
+    grid-column-gap: 8.75rem;
+    -moz-column-gap: 8.75rem;
+         column-gap: 8.75rem;
+  }
+
   .xs\:col-gap-40{
     grid-column-gap: 10rem;
     -moz-column-gap: 10rem;
@@ -36887,6 +37253,11 @@ input, textarea {
   .xs\:row-gap-32{
     grid-row-gap: 8rem;
     row-gap: 8rem;
+  }
+
+  .xs\:row-gap-35{
+    grid-row-gap: 8.75rem;
+    row-gap: 8.75rem;
   }
 
   .xs\:row-gap-40{
@@ -37869,6 +38240,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xs\:translate-x-35{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xs\:translate-x-40{
     --transform-translate-x: 10rem;
   }
@@ -37959,6 +38334,10 @@ input, textarea {
 
   .xs\:-translate-x-32{
     --transform-translate-x: -8rem;
+  }
+
+  .xs\:-translate-x-35{
+    --transform-translate-x: -8.75rem;
   }
 
   .xs\:-translate-x-40{
@@ -38073,6 +38452,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xs\:translate-y-35{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xs\:translate-y-40{
     --transform-translate-y: 10rem;
   }
@@ -38163,6 +38546,10 @@ input, textarea {
 
   .xs\:-translate-y-32{
     --transform-translate-y: -8rem;
+  }
+
+  .xs\:-translate-y-35{
+    --transform-translate-y: -8.75rem;
   }
 
   .xs\:-translate-y-40{
@@ -38277,6 +38664,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xs\:hover\:translate-x-35:hover{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xs\:hover\:translate-x-40:hover{
     --transform-translate-x: 10rem;
   }
@@ -38367,6 +38758,10 @@ input, textarea {
 
   .xs\:hover\:-translate-x-32:hover{
     --transform-translate-x: -8rem;
+  }
+
+  .xs\:hover\:-translate-x-35:hover{
+    --transform-translate-x: -8.75rem;
   }
 
   .xs\:hover\:-translate-x-40:hover{
@@ -38481,6 +38876,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xs\:hover\:translate-y-35:hover{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xs\:hover\:translate-y-40:hover{
     --transform-translate-y: 10rem;
   }
@@ -38571,6 +38970,10 @@ input, textarea {
 
   .xs\:hover\:-translate-y-32:hover{
     --transform-translate-y: -8rem;
+  }
+
+  .xs\:hover\:-translate-y-35:hover{
+    --transform-translate-y: -8.75rem;
   }
 
   .xs\:hover\:-translate-y-40:hover{
@@ -38685,6 +39088,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xs\:focus\:translate-x-35:focus{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xs\:focus\:translate-x-40:focus{
     --transform-translate-x: 10rem;
   }
@@ -38775,6 +39182,10 @@ input, textarea {
 
   .xs\:focus\:-translate-x-32:focus{
     --transform-translate-x: -8rem;
+  }
+
+  .xs\:focus\:-translate-x-35:focus{
+    --transform-translate-x: -8.75rem;
   }
 
   .xs\:focus\:-translate-x-40:focus{
@@ -38889,6 +39300,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xs\:focus\:translate-y-35:focus{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xs\:focus\:translate-y-40:focus{
     --transform-translate-y: 10rem;
   }
@@ -38979,6 +39394,10 @@ input, textarea {
 
   .xs\:focus\:-translate-y-32:focus{
     --transform-translate-y: -8rem;
+  }
+
+  .xs\:focus\:-translate-y-35:focus{
+    --transform-translate-y: -8.75rem;
   }
 
   .xs\:focus\:-translate-y-40:focus{
@@ -39507,6 +39926,18 @@ input, textarea {
     margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .sm\:space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(8.75rem * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(8.75rem * var(--space-x-reverse));
+    margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .sm\:space-y-40 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -39781,6 +40212,18 @@ input, textarea {
     --space-x-reverse: 0;
     margin-right: calc(-8rem * var(--space-x-reverse));
     margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-8.75rem * var(--space-x-reverse));
+    margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:-space-y-40 > :not(template) ~ :not(template){
@@ -45087,6 +45530,10 @@ input, textarea {
     height: 8rem;
   }
 
+  .sm\:h-35{
+    height: 8.75rem;
+  }
+
   .sm\:h-40{
     height: 10rem;
   }
@@ -45291,6 +45738,10 @@ input, textarea {
     margin: 8rem;
   }
 
+  .sm\:m-35{
+    margin: 8.75rem;
+  }
+
   .sm\:m-40{
     margin: 10rem;
   }
@@ -45385,6 +45836,10 @@ input, textarea {
 
   .sm\:-m-32{
     margin: -8rem;
+  }
+
+  .sm\:-m-35{
+    margin: -8.75rem;
   }
 
   .sm\:-m-40{
@@ -45583,6 +46038,16 @@ input, textarea {
   .sm\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .sm\:my-35{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
+
+  .sm\:mx-35{
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
   }
 
   .sm\:my-40{
@@ -45823,6 +46288,16 @@ input, textarea {
   .sm\:-mx-32{
     margin-left: -8rem;
     margin-right: -8rem;
+  }
+
+  .sm\:-my-35{
+    margin-top: -8.75rem;
+    margin-bottom: -8.75rem;
+  }
+
+  .sm\:-mx-35{
+    margin-left: -8.75rem;
+    margin-right: -8.75rem;
   }
 
   .sm\:-my-40{
@@ -46165,6 +46640,22 @@ input, textarea {
 
   .sm\:ml-32{
     margin-left: 8rem;
+  }
+
+  .sm\:mt-35{
+    margin-top: 8.75rem;
+  }
+
+  .sm\:mr-35{
+    margin-right: 8.75rem;
+  }
+
+  .sm\:mb-35{
+    margin-bottom: 8.75rem;
+  }
+
+  .sm\:ml-35{
+    margin-left: 8.75rem;
   }
 
   .sm\:mt-40{
@@ -46549,6 +47040,22 @@ input, textarea {
 
   .sm\:-ml-32{
     margin-left: -8rem;
+  }
+
+  .sm\:-mt-35{
+    margin-top: -8.75rem;
+  }
+
+  .sm\:-mr-35{
+    margin-right: -8.75rem;
+  }
+
+  .sm\:-mb-35{
+    margin-bottom: -8.75rem;
+  }
+
+  .sm\:-ml-35{
+    margin-left: -8.75rem;
   }
 
   .sm\:-mt-40{
@@ -46965,6 +47472,10 @@ input, textarea {
     padding: 8rem;
   }
 
+  .sm\:p-35{
+    padding: 8.75rem;
+  }
+
   .sm\:p-40{
     padding: 10rem;
   }
@@ -47161,6 +47672,16 @@ input, textarea {
   .sm\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .sm\:py-35{
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+  }
+
+  .sm\:px-35{
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 
   .sm\:py-40{
@@ -47503,6 +48024,22 @@ input, textarea {
 
   .sm\:pl-32{
     padding-left: 8rem;
+  }
+
+  .sm\:pt-35{
+    padding-top: 8.75rem;
+  }
+
+  .sm\:pr-35{
+    padding-right: 8.75rem;
+  }
+
+  .sm\:pb-35{
+    padding-bottom: 8.75rem;
+  }
+
+  .sm\:pl-35{
+    padding-left: 8.75rem;
   }
 
   .sm\:pt-40{
@@ -55161,6 +55698,10 @@ input, textarea {
     width: 8rem;
   }
 
+  .sm\:w-35{
+    width: 8.75rem;
+  }
+
   .sm\:w-40{
     width: 10rem;
   }
@@ -55418,6 +55959,11 @@ input, textarea {
     gap: 8rem;
   }
 
+  .sm\:gap-35{
+    grid-gap: 8.75rem;
+    gap: 8.75rem;
+  }
+
   .sm\:gap-40{
     grid-gap: 10rem;
     gap: 10rem;
@@ -55555,6 +56101,12 @@ input, textarea {
          column-gap: 8rem;
   }
 
+  .sm\:col-gap-35{
+    grid-column-gap: 8.75rem;
+    -moz-column-gap: 8.75rem;
+         column-gap: 8.75rem;
+  }
+
   .sm\:col-gap-40{
     grid-column-gap: 10rem;
     -moz-column-gap: 10rem;
@@ -55680,6 +56232,11 @@ input, textarea {
   .sm\:row-gap-32{
     grid-row-gap: 8rem;
     row-gap: 8rem;
+  }
+
+  .sm\:row-gap-35{
+    grid-row-gap: 8.75rem;
+    row-gap: 8.75rem;
   }
 
   .sm\:row-gap-40{
@@ -56662,6 +57219,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .sm\:translate-x-35{
+    --transform-translate-x: 8.75rem;
+  }
+
   .sm\:translate-x-40{
     --transform-translate-x: 10rem;
   }
@@ -56752,6 +57313,10 @@ input, textarea {
 
   .sm\:-translate-x-32{
     --transform-translate-x: -8rem;
+  }
+
+  .sm\:-translate-x-35{
+    --transform-translate-x: -8.75rem;
   }
 
   .sm\:-translate-x-40{
@@ -56866,6 +57431,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .sm\:translate-y-35{
+    --transform-translate-y: 8.75rem;
+  }
+
   .sm\:translate-y-40{
     --transform-translate-y: 10rem;
   }
@@ -56956,6 +57525,10 @@ input, textarea {
 
   .sm\:-translate-y-32{
     --transform-translate-y: -8rem;
+  }
+
+  .sm\:-translate-y-35{
+    --transform-translate-y: -8.75rem;
   }
 
   .sm\:-translate-y-40{
@@ -57070,6 +57643,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .sm\:hover\:translate-x-35:hover{
+    --transform-translate-x: 8.75rem;
+  }
+
   .sm\:hover\:translate-x-40:hover{
     --transform-translate-x: 10rem;
   }
@@ -57160,6 +57737,10 @@ input, textarea {
 
   .sm\:hover\:-translate-x-32:hover{
     --transform-translate-x: -8rem;
+  }
+
+  .sm\:hover\:-translate-x-35:hover{
+    --transform-translate-x: -8.75rem;
   }
 
   .sm\:hover\:-translate-x-40:hover{
@@ -57274,6 +57855,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .sm\:hover\:translate-y-35:hover{
+    --transform-translate-y: 8.75rem;
+  }
+
   .sm\:hover\:translate-y-40:hover{
     --transform-translate-y: 10rem;
   }
@@ -57364,6 +57949,10 @@ input, textarea {
 
   .sm\:hover\:-translate-y-32:hover{
     --transform-translate-y: -8rem;
+  }
+
+  .sm\:hover\:-translate-y-35:hover{
+    --transform-translate-y: -8.75rem;
   }
 
   .sm\:hover\:-translate-y-40:hover{
@@ -57478,6 +58067,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .sm\:focus\:translate-x-35:focus{
+    --transform-translate-x: 8.75rem;
+  }
+
   .sm\:focus\:translate-x-40:focus{
     --transform-translate-x: 10rem;
   }
@@ -57568,6 +58161,10 @@ input, textarea {
 
   .sm\:focus\:-translate-x-32:focus{
     --transform-translate-x: -8rem;
+  }
+
+  .sm\:focus\:-translate-x-35:focus{
+    --transform-translate-x: -8.75rem;
   }
 
   .sm\:focus\:-translate-x-40:focus{
@@ -57682,6 +58279,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .sm\:focus\:translate-y-35:focus{
+    --transform-translate-y: 8.75rem;
+  }
+
   .sm\:focus\:translate-y-40:focus{
     --transform-translate-y: 10rem;
   }
@@ -57772,6 +58373,10 @@ input, textarea {
 
   .sm\:focus\:-translate-y-32:focus{
     --transform-translate-y: -8rem;
+  }
+
+  .sm\:focus\:-translate-y-35:focus{
+    --transform-translate-y: -8.75rem;
   }
 
   .sm\:focus\:-translate-y-40:focus{
@@ -58300,6 +58905,18 @@ input, textarea {
     margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .md\:space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(8.75rem * var(--space-y-reverse));
+  }
+
+  .md\:space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(8.75rem * var(--space-x-reverse));
+    margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .md\:space-y-40 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -58574,6 +59191,18 @@ input, textarea {
     --space-x-reverse: 0;
     margin-right: calc(-8rem * var(--space-x-reverse));
     margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-8.75rem * var(--space-x-reverse));
+    margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:-space-y-40 > :not(template) ~ :not(template){
@@ -63880,6 +64509,10 @@ input, textarea {
     height: 8rem;
   }
 
+  .md\:h-35{
+    height: 8.75rem;
+  }
+
   .md\:h-40{
     height: 10rem;
   }
@@ -64084,6 +64717,10 @@ input, textarea {
     margin: 8rem;
   }
 
+  .md\:m-35{
+    margin: 8.75rem;
+  }
+
   .md\:m-40{
     margin: 10rem;
   }
@@ -64178,6 +64815,10 @@ input, textarea {
 
   .md\:-m-32{
     margin: -8rem;
+  }
+
+  .md\:-m-35{
+    margin: -8.75rem;
   }
 
   .md\:-m-40{
@@ -64376,6 +65017,16 @@ input, textarea {
   .md\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .md\:my-35{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
+
+  .md\:mx-35{
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
   }
 
   .md\:my-40{
@@ -64616,6 +65267,16 @@ input, textarea {
   .md\:-mx-32{
     margin-left: -8rem;
     margin-right: -8rem;
+  }
+
+  .md\:-my-35{
+    margin-top: -8.75rem;
+    margin-bottom: -8.75rem;
+  }
+
+  .md\:-mx-35{
+    margin-left: -8.75rem;
+    margin-right: -8.75rem;
   }
 
   .md\:-my-40{
@@ -64958,6 +65619,22 @@ input, textarea {
 
   .md\:ml-32{
     margin-left: 8rem;
+  }
+
+  .md\:mt-35{
+    margin-top: 8.75rem;
+  }
+
+  .md\:mr-35{
+    margin-right: 8.75rem;
+  }
+
+  .md\:mb-35{
+    margin-bottom: 8.75rem;
+  }
+
+  .md\:ml-35{
+    margin-left: 8.75rem;
   }
 
   .md\:mt-40{
@@ -65342,6 +66019,22 @@ input, textarea {
 
   .md\:-ml-32{
     margin-left: -8rem;
+  }
+
+  .md\:-mt-35{
+    margin-top: -8.75rem;
+  }
+
+  .md\:-mr-35{
+    margin-right: -8.75rem;
+  }
+
+  .md\:-mb-35{
+    margin-bottom: -8.75rem;
+  }
+
+  .md\:-ml-35{
+    margin-left: -8.75rem;
   }
 
   .md\:-mt-40{
@@ -65758,6 +66451,10 @@ input, textarea {
     padding: 8rem;
   }
 
+  .md\:p-35{
+    padding: 8.75rem;
+  }
+
   .md\:p-40{
     padding: 10rem;
   }
@@ -65954,6 +66651,16 @@ input, textarea {
   .md\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .md\:py-35{
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+  }
+
+  .md\:px-35{
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 
   .md\:py-40{
@@ -66296,6 +67003,22 @@ input, textarea {
 
   .md\:pl-32{
     padding-left: 8rem;
+  }
+
+  .md\:pt-35{
+    padding-top: 8.75rem;
+  }
+
+  .md\:pr-35{
+    padding-right: 8.75rem;
+  }
+
+  .md\:pb-35{
+    padding-bottom: 8.75rem;
+  }
+
+  .md\:pl-35{
+    padding-left: 8.75rem;
   }
 
   .md\:pt-40{
@@ -73954,6 +74677,10 @@ input, textarea {
     width: 8rem;
   }
 
+  .md\:w-35{
+    width: 8.75rem;
+  }
+
   .md\:w-40{
     width: 10rem;
   }
@@ -74211,6 +74938,11 @@ input, textarea {
     gap: 8rem;
   }
 
+  .md\:gap-35{
+    grid-gap: 8.75rem;
+    gap: 8.75rem;
+  }
+
   .md\:gap-40{
     grid-gap: 10rem;
     gap: 10rem;
@@ -74348,6 +75080,12 @@ input, textarea {
          column-gap: 8rem;
   }
 
+  .md\:col-gap-35{
+    grid-column-gap: 8.75rem;
+    -moz-column-gap: 8.75rem;
+         column-gap: 8.75rem;
+  }
+
   .md\:col-gap-40{
     grid-column-gap: 10rem;
     -moz-column-gap: 10rem;
@@ -74473,6 +75211,11 @@ input, textarea {
   .md\:row-gap-32{
     grid-row-gap: 8rem;
     row-gap: 8rem;
+  }
+
+  .md\:row-gap-35{
+    grid-row-gap: 8.75rem;
+    row-gap: 8.75rem;
   }
 
   .md\:row-gap-40{
@@ -75455,6 +76198,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .md\:translate-x-35{
+    --transform-translate-x: 8.75rem;
+  }
+
   .md\:translate-x-40{
     --transform-translate-x: 10rem;
   }
@@ -75545,6 +76292,10 @@ input, textarea {
 
   .md\:-translate-x-32{
     --transform-translate-x: -8rem;
+  }
+
+  .md\:-translate-x-35{
+    --transform-translate-x: -8.75rem;
   }
 
   .md\:-translate-x-40{
@@ -75659,6 +76410,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .md\:translate-y-35{
+    --transform-translate-y: 8.75rem;
+  }
+
   .md\:translate-y-40{
     --transform-translate-y: 10rem;
   }
@@ -75749,6 +76504,10 @@ input, textarea {
 
   .md\:-translate-y-32{
     --transform-translate-y: -8rem;
+  }
+
+  .md\:-translate-y-35{
+    --transform-translate-y: -8.75rem;
   }
 
   .md\:-translate-y-40{
@@ -75863,6 +76622,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .md\:hover\:translate-x-35:hover{
+    --transform-translate-x: 8.75rem;
+  }
+
   .md\:hover\:translate-x-40:hover{
     --transform-translate-x: 10rem;
   }
@@ -75953,6 +76716,10 @@ input, textarea {
 
   .md\:hover\:-translate-x-32:hover{
     --transform-translate-x: -8rem;
+  }
+
+  .md\:hover\:-translate-x-35:hover{
+    --transform-translate-x: -8.75rem;
   }
 
   .md\:hover\:-translate-x-40:hover{
@@ -76067,6 +76834,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .md\:hover\:translate-y-35:hover{
+    --transform-translate-y: 8.75rem;
+  }
+
   .md\:hover\:translate-y-40:hover{
     --transform-translate-y: 10rem;
   }
@@ -76157,6 +76928,10 @@ input, textarea {
 
   .md\:hover\:-translate-y-32:hover{
     --transform-translate-y: -8rem;
+  }
+
+  .md\:hover\:-translate-y-35:hover{
+    --transform-translate-y: -8.75rem;
   }
 
   .md\:hover\:-translate-y-40:hover{
@@ -76271,6 +77046,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .md\:focus\:translate-x-35:focus{
+    --transform-translate-x: 8.75rem;
+  }
+
   .md\:focus\:translate-x-40:focus{
     --transform-translate-x: 10rem;
   }
@@ -76361,6 +77140,10 @@ input, textarea {
 
   .md\:focus\:-translate-x-32:focus{
     --transform-translate-x: -8rem;
+  }
+
+  .md\:focus\:-translate-x-35:focus{
+    --transform-translate-x: -8.75rem;
   }
 
   .md\:focus\:-translate-x-40:focus{
@@ -76475,6 +77258,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .md\:focus\:translate-y-35:focus{
+    --transform-translate-y: 8.75rem;
+  }
+
   .md\:focus\:translate-y-40:focus{
     --transform-translate-y: 10rem;
   }
@@ -76565,6 +77352,10 @@ input, textarea {
 
   .md\:focus\:-translate-y-32:focus{
     --transform-translate-y: -8rem;
+  }
+
+  .md\:focus\:-translate-y-35:focus{
+    --transform-translate-y: -8.75rem;
   }
 
   .md\:focus\:-translate-y-40:focus{
@@ -77093,6 +77884,18 @@ input, textarea {
     margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .lg\:space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(8.75rem * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(8.75rem * var(--space-x-reverse));
+    margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .lg\:space-y-40 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -77367,6 +78170,18 @@ input, textarea {
     --space-x-reverse: 0;
     margin-right: calc(-8rem * var(--space-x-reverse));
     margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-8.75rem * var(--space-x-reverse));
+    margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:-space-y-40 > :not(template) ~ :not(template){
@@ -82673,6 +83488,10 @@ input, textarea {
     height: 8rem;
   }
 
+  .lg\:h-35{
+    height: 8.75rem;
+  }
+
   .lg\:h-40{
     height: 10rem;
   }
@@ -82877,6 +83696,10 @@ input, textarea {
     margin: 8rem;
   }
 
+  .lg\:m-35{
+    margin: 8.75rem;
+  }
+
   .lg\:m-40{
     margin: 10rem;
   }
@@ -82971,6 +83794,10 @@ input, textarea {
 
   .lg\:-m-32{
     margin: -8rem;
+  }
+
+  .lg\:-m-35{
+    margin: -8.75rem;
   }
 
   .lg\:-m-40{
@@ -83169,6 +83996,16 @@ input, textarea {
   .lg\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .lg\:my-35{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
+
+  .lg\:mx-35{
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
   }
 
   .lg\:my-40{
@@ -83409,6 +84246,16 @@ input, textarea {
   .lg\:-mx-32{
     margin-left: -8rem;
     margin-right: -8rem;
+  }
+
+  .lg\:-my-35{
+    margin-top: -8.75rem;
+    margin-bottom: -8.75rem;
+  }
+
+  .lg\:-mx-35{
+    margin-left: -8.75rem;
+    margin-right: -8.75rem;
   }
 
   .lg\:-my-40{
@@ -83751,6 +84598,22 @@ input, textarea {
 
   .lg\:ml-32{
     margin-left: 8rem;
+  }
+
+  .lg\:mt-35{
+    margin-top: 8.75rem;
+  }
+
+  .lg\:mr-35{
+    margin-right: 8.75rem;
+  }
+
+  .lg\:mb-35{
+    margin-bottom: 8.75rem;
+  }
+
+  .lg\:ml-35{
+    margin-left: 8.75rem;
   }
 
   .lg\:mt-40{
@@ -84135,6 +84998,22 @@ input, textarea {
 
   .lg\:-ml-32{
     margin-left: -8rem;
+  }
+
+  .lg\:-mt-35{
+    margin-top: -8.75rem;
+  }
+
+  .lg\:-mr-35{
+    margin-right: -8.75rem;
+  }
+
+  .lg\:-mb-35{
+    margin-bottom: -8.75rem;
+  }
+
+  .lg\:-ml-35{
+    margin-left: -8.75rem;
   }
 
   .lg\:-mt-40{
@@ -84551,6 +85430,10 @@ input, textarea {
     padding: 8rem;
   }
 
+  .lg\:p-35{
+    padding: 8.75rem;
+  }
+
   .lg\:p-40{
     padding: 10rem;
   }
@@ -84747,6 +85630,16 @@ input, textarea {
   .lg\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .lg\:py-35{
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+  }
+
+  .lg\:px-35{
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 
   .lg\:py-40{
@@ -85089,6 +85982,22 @@ input, textarea {
 
   .lg\:pl-32{
     padding-left: 8rem;
+  }
+
+  .lg\:pt-35{
+    padding-top: 8.75rem;
+  }
+
+  .lg\:pr-35{
+    padding-right: 8.75rem;
+  }
+
+  .lg\:pb-35{
+    padding-bottom: 8.75rem;
+  }
+
+  .lg\:pl-35{
+    padding-left: 8.75rem;
   }
 
   .lg\:pt-40{
@@ -92747,6 +93656,10 @@ input, textarea {
     width: 8rem;
   }
 
+  .lg\:w-35{
+    width: 8.75rem;
+  }
+
   .lg\:w-40{
     width: 10rem;
   }
@@ -93004,6 +93917,11 @@ input, textarea {
     gap: 8rem;
   }
 
+  .lg\:gap-35{
+    grid-gap: 8.75rem;
+    gap: 8.75rem;
+  }
+
   .lg\:gap-40{
     grid-gap: 10rem;
     gap: 10rem;
@@ -93141,6 +94059,12 @@ input, textarea {
          column-gap: 8rem;
   }
 
+  .lg\:col-gap-35{
+    grid-column-gap: 8.75rem;
+    -moz-column-gap: 8.75rem;
+         column-gap: 8.75rem;
+  }
+
   .lg\:col-gap-40{
     grid-column-gap: 10rem;
     -moz-column-gap: 10rem;
@@ -93266,6 +94190,11 @@ input, textarea {
   .lg\:row-gap-32{
     grid-row-gap: 8rem;
     row-gap: 8rem;
+  }
+
+  .lg\:row-gap-35{
+    grid-row-gap: 8.75rem;
+    row-gap: 8.75rem;
   }
 
   .lg\:row-gap-40{
@@ -94248,6 +95177,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .lg\:translate-x-35{
+    --transform-translate-x: 8.75rem;
+  }
+
   .lg\:translate-x-40{
     --transform-translate-x: 10rem;
   }
@@ -94338,6 +95271,10 @@ input, textarea {
 
   .lg\:-translate-x-32{
     --transform-translate-x: -8rem;
+  }
+
+  .lg\:-translate-x-35{
+    --transform-translate-x: -8.75rem;
   }
 
   .lg\:-translate-x-40{
@@ -94452,6 +95389,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .lg\:translate-y-35{
+    --transform-translate-y: 8.75rem;
+  }
+
   .lg\:translate-y-40{
     --transform-translate-y: 10rem;
   }
@@ -94542,6 +95483,10 @@ input, textarea {
 
   .lg\:-translate-y-32{
     --transform-translate-y: -8rem;
+  }
+
+  .lg\:-translate-y-35{
+    --transform-translate-y: -8.75rem;
   }
 
   .lg\:-translate-y-40{
@@ -94656,6 +95601,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .lg\:hover\:translate-x-35:hover{
+    --transform-translate-x: 8.75rem;
+  }
+
   .lg\:hover\:translate-x-40:hover{
     --transform-translate-x: 10rem;
   }
@@ -94746,6 +95695,10 @@ input, textarea {
 
   .lg\:hover\:-translate-x-32:hover{
     --transform-translate-x: -8rem;
+  }
+
+  .lg\:hover\:-translate-x-35:hover{
+    --transform-translate-x: -8.75rem;
   }
 
   .lg\:hover\:-translate-x-40:hover{
@@ -94860,6 +95813,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .lg\:hover\:translate-y-35:hover{
+    --transform-translate-y: 8.75rem;
+  }
+
   .lg\:hover\:translate-y-40:hover{
     --transform-translate-y: 10rem;
   }
@@ -94950,6 +95907,10 @@ input, textarea {
 
   .lg\:hover\:-translate-y-32:hover{
     --transform-translate-y: -8rem;
+  }
+
+  .lg\:hover\:-translate-y-35:hover{
+    --transform-translate-y: -8.75rem;
   }
 
   .lg\:hover\:-translate-y-40:hover{
@@ -95064,6 +96025,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .lg\:focus\:translate-x-35:focus{
+    --transform-translate-x: 8.75rem;
+  }
+
   .lg\:focus\:translate-x-40:focus{
     --transform-translate-x: 10rem;
   }
@@ -95154,6 +96119,10 @@ input, textarea {
 
   .lg\:focus\:-translate-x-32:focus{
     --transform-translate-x: -8rem;
+  }
+
+  .lg\:focus\:-translate-x-35:focus{
+    --transform-translate-x: -8.75rem;
   }
 
   .lg\:focus\:-translate-x-40:focus{
@@ -95268,6 +96237,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .lg\:focus\:translate-y-35:focus{
+    --transform-translate-y: 8.75rem;
+  }
+
   .lg\:focus\:translate-y-40:focus{
     --transform-translate-y: 10rem;
   }
@@ -95358,6 +96331,10 @@ input, textarea {
 
   .lg\:focus\:-translate-y-32:focus{
     --transform-translate-y: -8rem;
+  }
+
+  .lg\:focus\:-translate-y-35:focus{
+    --transform-translate-y: -8.75rem;
   }
 
   .lg\:focus\:-translate-y-40:focus{
@@ -95886,6 +96863,18 @@ input, textarea {
     margin-left: calc(8rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xl\:space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(8.75rem * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(8.75rem * var(--space-x-reverse));
+    margin-left: calc(8.75rem * calc(1 - var(--space-x-reverse)));
+  }
+
   .xl\:space-y-40 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
     margin-top: calc(10rem * calc(1 - var(--space-y-reverse)));
@@ -96160,6 +97149,18 @@ input, textarea {
     --space-x-reverse: 0;
     margin-right: calc(-8rem * var(--space-x-reverse));
     margin-left: calc(-8rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-35 > :not(template) ~ :not(template){
+    --space-y-reverse: 0;
+    margin-top: calc(-8.75rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-8.75rem * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-35 > :not(template) ~ :not(template){
+    --space-x-reverse: 0;
+    margin-right: calc(-8.75rem * var(--space-x-reverse));
+    margin-left: calc(-8.75rem * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:-space-y-40 > :not(template) ~ :not(template){
@@ -101466,6 +102467,10 @@ input, textarea {
     height: 8rem;
   }
 
+  .xl\:h-35{
+    height: 8.75rem;
+  }
+
   .xl\:h-40{
     height: 10rem;
   }
@@ -101670,6 +102675,10 @@ input, textarea {
     margin: 8rem;
   }
 
+  .xl\:m-35{
+    margin: 8.75rem;
+  }
+
   .xl\:m-40{
     margin: 10rem;
   }
@@ -101764,6 +102773,10 @@ input, textarea {
 
   .xl\:-m-32{
     margin: -8rem;
+  }
+
+  .xl\:-m-35{
+    margin: -8.75rem;
   }
 
   .xl\:-m-40{
@@ -101962,6 +102975,16 @@ input, textarea {
   .xl\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
+  }
+
+  .xl\:my-35{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
+
+  .xl\:mx-35{
+    margin-left: 8.75rem;
+    margin-right: 8.75rem;
   }
 
   .xl\:my-40{
@@ -102202,6 +103225,16 @@ input, textarea {
   .xl\:-mx-32{
     margin-left: -8rem;
     margin-right: -8rem;
+  }
+
+  .xl\:-my-35{
+    margin-top: -8.75rem;
+    margin-bottom: -8.75rem;
+  }
+
+  .xl\:-mx-35{
+    margin-left: -8.75rem;
+    margin-right: -8.75rem;
   }
 
   .xl\:-my-40{
@@ -102544,6 +103577,22 @@ input, textarea {
 
   .xl\:ml-32{
     margin-left: 8rem;
+  }
+
+  .xl\:mt-35{
+    margin-top: 8.75rem;
+  }
+
+  .xl\:mr-35{
+    margin-right: 8.75rem;
+  }
+
+  .xl\:mb-35{
+    margin-bottom: 8.75rem;
+  }
+
+  .xl\:ml-35{
+    margin-left: 8.75rem;
   }
 
   .xl\:mt-40{
@@ -102928,6 +103977,22 @@ input, textarea {
 
   .xl\:-ml-32{
     margin-left: -8rem;
+  }
+
+  .xl\:-mt-35{
+    margin-top: -8.75rem;
+  }
+
+  .xl\:-mr-35{
+    margin-right: -8.75rem;
+  }
+
+  .xl\:-mb-35{
+    margin-bottom: -8.75rem;
+  }
+
+  .xl\:-ml-35{
+    margin-left: -8.75rem;
   }
 
   .xl\:-mt-40{
@@ -103344,6 +104409,10 @@ input, textarea {
     padding: 8rem;
   }
 
+  .xl\:p-35{
+    padding: 8.75rem;
+  }
+
   .xl\:p-40{
     padding: 10rem;
   }
@@ -103540,6 +104609,16 @@ input, textarea {
   .xl\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .xl\:py-35{
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+  }
+
+  .xl\:px-35{
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
   }
 
   .xl\:py-40{
@@ -103882,6 +104961,22 @@ input, textarea {
 
   .xl\:pl-32{
     padding-left: 8rem;
+  }
+
+  .xl\:pt-35{
+    padding-top: 8.75rem;
+  }
+
+  .xl\:pr-35{
+    padding-right: 8.75rem;
+  }
+
+  .xl\:pb-35{
+    padding-bottom: 8.75rem;
+  }
+
+  .xl\:pl-35{
+    padding-left: 8.75rem;
   }
 
   .xl\:pt-40{
@@ -111540,6 +112635,10 @@ input, textarea {
     width: 8rem;
   }
 
+  .xl\:w-35{
+    width: 8.75rem;
+  }
+
   .xl\:w-40{
     width: 10rem;
   }
@@ -111797,6 +112896,11 @@ input, textarea {
     gap: 8rem;
   }
 
+  .xl\:gap-35{
+    grid-gap: 8.75rem;
+    gap: 8.75rem;
+  }
+
   .xl\:gap-40{
     grid-gap: 10rem;
     gap: 10rem;
@@ -111934,6 +113038,12 @@ input, textarea {
          column-gap: 8rem;
   }
 
+  .xl\:col-gap-35{
+    grid-column-gap: 8.75rem;
+    -moz-column-gap: 8.75rem;
+         column-gap: 8.75rem;
+  }
+
   .xl\:col-gap-40{
     grid-column-gap: 10rem;
     -moz-column-gap: 10rem;
@@ -112059,6 +113169,11 @@ input, textarea {
   .xl\:row-gap-32{
     grid-row-gap: 8rem;
     row-gap: 8rem;
+  }
+
+  .xl\:row-gap-35{
+    grid-row-gap: 8.75rem;
+    row-gap: 8.75rem;
   }
 
   .xl\:row-gap-40{
@@ -113041,6 +114156,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xl\:translate-x-35{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xl\:translate-x-40{
     --transform-translate-x: 10rem;
   }
@@ -113131,6 +114250,10 @@ input, textarea {
 
   .xl\:-translate-x-32{
     --transform-translate-x: -8rem;
+  }
+
+  .xl\:-translate-x-35{
+    --transform-translate-x: -8.75rem;
   }
 
   .xl\:-translate-x-40{
@@ -113245,6 +114368,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xl\:translate-y-35{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xl\:translate-y-40{
     --transform-translate-y: 10rem;
   }
@@ -113335,6 +114462,10 @@ input, textarea {
 
   .xl\:-translate-y-32{
     --transform-translate-y: -8rem;
+  }
+
+  .xl\:-translate-y-35{
+    --transform-translate-y: -8.75rem;
   }
 
   .xl\:-translate-y-40{
@@ -113449,6 +114580,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xl\:hover\:translate-x-35:hover{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xl\:hover\:translate-x-40:hover{
     --transform-translate-x: 10rem;
   }
@@ -113539,6 +114674,10 @@ input, textarea {
 
   .xl\:hover\:-translate-x-32:hover{
     --transform-translate-x: -8rem;
+  }
+
+  .xl\:hover\:-translate-x-35:hover{
+    --transform-translate-x: -8.75rem;
   }
 
   .xl\:hover\:-translate-x-40:hover{
@@ -113653,6 +114792,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xl\:hover\:translate-y-35:hover{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xl\:hover\:translate-y-40:hover{
     --transform-translate-y: 10rem;
   }
@@ -113743,6 +114886,10 @@ input, textarea {
 
   .xl\:hover\:-translate-y-32:hover{
     --transform-translate-y: -8rem;
+  }
+
+  .xl\:hover\:-translate-y-35:hover{
+    --transform-translate-y: -8.75rem;
   }
 
   .xl\:hover\:-translate-y-40:hover{
@@ -113857,6 +115004,10 @@ input, textarea {
     --transform-translate-x: 8rem;
   }
 
+  .xl\:focus\:translate-x-35:focus{
+    --transform-translate-x: 8.75rem;
+  }
+
   .xl\:focus\:translate-x-40:focus{
     --transform-translate-x: 10rem;
   }
@@ -113947,6 +115098,10 @@ input, textarea {
 
   .xl\:focus\:-translate-x-32:focus{
     --transform-translate-x: -8rem;
+  }
+
+  .xl\:focus\:-translate-x-35:focus{
+    --transform-translate-x: -8.75rem;
   }
 
   .xl\:focus\:-translate-x-40:focus{
@@ -114061,6 +115216,10 @@ input, textarea {
     --transform-translate-y: 8rem;
   }
 
+  .xl\:focus\:translate-y-35:focus{
+    --transform-translate-y: 8.75rem;
+  }
+
   .xl\:focus\:translate-y-40:focus{
     --transform-translate-y: 10rem;
   }
@@ -114151,6 +115310,10 @@ input, textarea {
 
   .xl\:focus\:-translate-y-32:focus{
     --transform-translate-y: -8rem;
+  }
+
+  .xl\:focus\:-translate-y-35:focus{
+    --transform-translate-y: -8.75rem;
   }
 
   .xl\:focus\:-translate-y-40:focus{
