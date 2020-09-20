@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Crispin",
+    "image": "../images/team/author.jpg",
+    "occupation": "Founder & Director",
+    "description": "Making sure everything we do is brilliant and always getting better. 20 years as a developer, now full time advocate for apprenticeships and equality.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Naomi",
+    "image": "../images/team/author.jpg",
+    "occupation": "Applications Manager",
+    "description": "Looking after all our learners and partners, keeping projects running smoothly. Working in apprenticeships since 2006, also heads up our social media channels - it’s Naomi you’re talking to on twitter and instagram.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Helen",
+    "image": "../images/team/author.jpg",
+    "occupation": "Head of Partnerships and Social Mission",
+    "description": "Keeping us on track with compliance and constantly improving the quality of our delivery. She’s also heading up our social mission.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Fiona",
+    "image": "../images/team/author.jpg",
+    "occupation": "Partnerships Development Manager",
+    "description": "First point of contact for our partners and customers, making sure everyone we work with shares our vision and gets the most out of apprenticeships and training.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Alex",
+    "image": "../images/team/author.jpg",
+    "occupation": "Lead Technical Trainer",
+    "description": "Devising, delivering monitoring and improving our technical training. Alex is a very experienced web developer and qualified trainer and assessor too.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Mark",
+    "image": "../images/team/author.jpg",
+    "occupation": "Lead Assessor",
+    "description": "Heads up progress reviews and on-course monitoring. Mark has been working in apprenticeships for xx years, our resident expert in all things ‘Apprenticeship Standards’ - delivery, quality, achievement and compliance.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Anna",
+    "image": "../images/team/author.jpg",
+    "occupation": "Safeguarding Lead",
+    "description": "Behaviour Analyst looking out for our neurodiverse clients. Anna also heads up our ongoing project to make our application and selection process as inclusive as possible.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Rachel",
+    "image": "../images/team/author.jpg",
+    "occupation": "Apprenticeships Manager",
+    "description": "We get A LOT of applicants. Rachel makes sure they are all looked after, signposted, helped and supported through the initial stages. Getting them ready to be put forward for employment.",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  }
+]
