@@ -1703,6 +1703,25 @@ input, textarea {
   }
 }
 
+.faq .faq-btn--active {
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+  transition: color 0.2s ease-out;
+}
+
+.faq .faq-btn--active i {
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));

@@ -57,7 +57,9 @@ const $$ = {
 
     loadMoreBtn         : document.getElementById('load-more'),
 
-    scrollTopBtn        : document.getElementById('scroll-top')
+    scrollTopBtn        : document.getElementById('scroll-top'),
+
+    faqSection        : document.querySelector('.faq')
 
 }
 

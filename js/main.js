@@ -102,6 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_form_validating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @modules/form-validating */ "./resources/js/modules/form-validating/index.js");
 /* harmony import */ var _modules_load_posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @modules/load-posts */ "./resources/js/modules/load-posts/index.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @modules/slider */ "./resources/js/modules/slider/index.js");
+/* harmony import */ var _modules_faqs_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @modules/faqs-accordion */ "./resources/js/modules/faqs-accordion/index.js");
 // Import local modules
 
 
@@ -110,6 +111,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/faqs-accordion/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/modules/faqs-accordion/index.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var faqAccordion = function faqAccordion() {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection) return;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection.addEventListener('click', function (e) {
+    var btn = e.target.closest('.faq-btn');
+    if (!btn) return;
+    var content = btn.nextElementSibling;
+    var angle = btn.querySelector('.fas');
+    btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
+
+    if (content.style.maxHeight) {
+      angle.classList.add('fa-angle-down');
+      angle.classList.remove('fa-angle-up');
+      content.style.maxHeight = null;
+    } else {
+      angle.classList.remove('fa-angle-down');
+      angle.classList.add('fa-angle-up');
+      content.style.maxHeight = "".concat(content.scrollHeight, "px");
+    }
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (faqAccordion);
 
 /***/ }),
 
@@ -549,7 +588,8 @@ var $$ = {
   postContainer: document.getElementById('posts-container'),
   blogPostList: document.querySelectorAll('[data-post]'),
   loadMoreBtn: document.getElementById('load-more'),
-  scrollTopBtn: document.getElementById('scroll-top')
+  scrollTopBtn: document.getElementById('scroll-top'),
+  faqSection: document.querySelector('.faq')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
