@@ -1,0 +1,50 @@
+#home {
+  .pattern {
+    z-index: -1;
+    &-1 {
+      left: -245px;
+      top: 95px;
+    }
+
+    &-2 {
+      right: -270px;
+      bottom: 95px;
+    }
+
+    &-3 {
+      right: -270px;
+      top: 20px;
+    }
+
+    &-4 {
+      left: -225px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &-5 {
+      right: -230px;
+      bottom: 10px;
+    }
+
+    &-6 {
+      left: -250px;
+      top: -65px;
+    }
+
+    &-7 {
+      right: -260px;
+      bottom: -50px;
+    }
+
+    &-8 {
+      left: -225px;
+      top: 80px;
+    }
+
+    &-9 {
+      right: -230px;
+      bottom: 55px;
+    }
+  }
+}
