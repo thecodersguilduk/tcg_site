@@ -44,16 +44,20 @@ title: Blog
                 <img src="../../images/blog/{{post.data.avatar}}" alt="{{post.data.avatar.alt}}" class="w-full object-cover rounded-50 block" />
               </div>
 
-              <div class="my-auto">
-                <p class="time text-blue-200 font-bold font-heading mb-1 text-md sm:text-sm leading-sm">{{ post.data.time }} read time</p>
+              <div class="{% if post.data.time %}my-auto{% else  %}mt-auto{% endif %}">
+                {% if post.data.time %}
+                  <p class="time text-blue-200 font-bold font-heading mb-1 text-md sm:text-sm leading-sm">{{ post.data.time }} read time</p>
+                {% endif %}
                 
                 <div class="">
                     <p class="author text-black text-sm leading-sm sm:text-xs sm:leading-xs">
                       By {{ post.data.author }}
-                      <span class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">&#8210;</span>
-                      <time datetime="{{ post.data.date }}" class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">
-                        {{ post.data.date | dateDisplay }}
-                      </time>
+                      {% if post.data.date %}
+                        <span class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">&#8210;</span>
+                        <time datetime="{{ post.data.date }}" class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">
+                          {{ post.data.date | dateDisplay }}
+                        </time>
+                      {% endif %}
                     </p>
                   </div>
               </div>
