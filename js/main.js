@@ -448,6 +448,7 @@ var displayModal = function displayModal() {
       return;
     }
 
+    e.preventDefault();
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
 
     if (!dataAttr) {
