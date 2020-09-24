@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="min-h-full antialiased overflow-x-hidden">
+<html lang="en" class="min-h-full antialiased">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,13 +102,15 @@
     
 </head>
 
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="overflow-x-hidden">
+<body {% if body_class %} id="{{ body_class }}"{% endif %}>
 
     <a class="sr-only" href="#main">Skip to content</a>
 
     <div id="wrapper" class="wrapper md:pb-0 flex flex-col relative min-h-screen">
       {% include "components/modals/book-a-call.njk" %}
       {% include "components/modals/send-info.njk" %}
+      {% include "components/modals/mailing-list.njk" %}
+
 
         {# include header #}
         {% include "components/global/header.njk" %}

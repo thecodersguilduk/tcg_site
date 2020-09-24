@@ -1,0 +1,30 @@
+<div id="mailing-list" class="modal">
+  <div class="modal-inner bg-white rounded shadow-secondary">
+    <button class="modal-close" aria-label="close" data-modal="mailing-list"></button>
+    <div class="modal-content px-6 md:px-8">
+      <div class="">
+        <h2 class="text-center mt-8">Stay in the loop by signing up to our mailing list</h2>
+        <p class="text-center mb-8">We only send updates once a month at most and we will never share your data or spam you</p>
+      </div>
+      <div class="">
+        <form action="https://formspree.io/mvovolen" method="POST">
+          <fieldset>
+            <div class="mb-4">
+              <label class="form-label sr-only" for="name">Full name</label>
+              <input id="name" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" type="text" placeholder="Full name" name="name" required="">
+            </div>
+            <div class="mb-4">
+              <label class="form-label sr-only" for="email">Your email</label> 
+              <input id="email" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" type="email" placeholder="Email" name="_replyto" required="">
+            </div>
+            <div class="mb-8">
+              <div class="mt-8">
+                <button type="submit" class="rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:border-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Send</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
