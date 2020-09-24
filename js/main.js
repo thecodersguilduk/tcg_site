@@ -99,6 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_lazyload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @modules/lazyload */ "./resources/js/modules/lazyload/index.js");
 /* harmony import */ var _modules_show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @modules/show-hide */ "./resources/js/modules/show-hide/index.js");
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @modules/header */ "./resources/js/modules/header/index.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_header__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_form_validating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @modules/form-validating */ "./resources/js/modules/form-validating/index.js");
 /* harmony import */ var _modules_load_posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @modules/load-posts */ "./resources/js/modules/load-posts/index.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @modules/slider */ "./resources/js/modules/slider/index.js");
@@ -277,25 +278,20 @@ var validateForm = function validateForm() {
 /*!**********************************************!*\
   !*** ./resources/js/modules/header/index.js ***!
   \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
-
-
-var headerScroll = function headerScroll() {
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.add('bg-white', 'shadow-md');
-    } else {
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.remove('bg-white', 'shadow-md');
-    }
-  });
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (headerScroll);
+// import $$ from '@utilities/selectors';
+// const headerScroll = function headerScroll() {
+//   window.addEventListener('scroll', function() {
+//     if ( window.scrollY > 0 ) {
+//       $$.header.classList.add('bg-white', 'border-grey-100', 'border-b-2');
+//     } else {
+//       $$.header.classList.remove('bg-white', 'border-grey-100', 'border-b-2');
+//     }
+//   });
+// }();
+// export default headerScroll;
 
 /***/ }),
 
