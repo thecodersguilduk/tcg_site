@@ -103,7 +103,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_load_posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @modules/load-posts */ "./resources/js/modules/load-posts/index.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @modules/slider */ "./resources/js/modules/slider/index.js");
 /* harmony import */ var _modules_faqs_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @modules/faqs-accordion */ "./resources/js/modules/faqs-accordion/index.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @modules/modals */ "./resources/js/modules/modals/index.js");
 // Import local modules
+
 
 
 
@@ -422,6 +424,47 @@ var mobileNav = function mobileNav() {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (mobileNav);
+
+/***/ }),
+
+/***/ "./resources/js/modules/modals/index.js":
+/*!**********************************************!*\
+  !*** ./resources/js/modules/modals/index.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var displayModal = function displayModal() {
+  var btn, dataAttr, modal;
+  document.addEventListener('click', function (e) {
+    btn = e.target.closest('[data-modal]');
+
+    if (!btn) {
+      return;
+    }
+
+    dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
+
+    if (!dataAttr) {
+      return;
+    }
+
+    modal = document.querySelector("#".concat(dataAttr));
+
+    if (!modal) {
+      return;
+    }
+
+    modal.classList.toggle('modal--active');
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (displayModal);
 
 /***/ }),
 

@@ -46,6 +46,60 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+<script>
+var config = {
+apiKey: 'a25f5f8a0882e29e8afb210360806da35e61ec2c',
+product: 'PRO',
+optionalCookies: [
+{
+name: 'analytics',
+label: 'Analytics',
+description: '',
+cookies: [],
+onAccept : function(){},
+onRevoke: function(){}
+},{
+name: 'marketing',
+label: 'Marketing',
+description: '',
+cookies: [],
+onAccept : function(){},
+onRevoke: function(){}
+},{
+name: 'preferences',
+label: 'Preferences',
+description: '',
+cookies: [],
+onAccept : function(){},
+onRevoke: function(){}
+}
+],
+
+    position: 'RIGHT',
+    theme: 'DARK',
+    branding: {
+        fontColor: "#FFF",
+        fontSizeTitle: "1.2em",
+        fontSizeIntro: "1em",
+        fontSizeHeaders: "1em",
+        fontSize: "0.8em",
+        backgroundColor: "#313147",
+        toggleText: "#fff",
+        toggleColor: "#2f2f5f",
+        toggleBackground: "#111125",
+        buttonIcon: null,
+        buttonIconWidth: "64px",
+        buttonIconHeight: "64px",
+        removeIcon: false,
+        removeAbout: false
+    }
+};
+
+CookieControl.load( config );
+</script>
     
     
 </head>
@@ -55,6 +109,8 @@
     <a class="sr-only" href="#main">Skip to content</a>
 
     <div id="wrapper" class="wrapper md:pb-0 flex flex-col relative min-h-screen">
+      {% include "components/modals/book-a-call.njk" %}
+      {% include "components/modals/send-info.njk" %}
 
         {# include header #}
         {% include "components/global/header.njk" %}
