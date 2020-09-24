@@ -11,6 +11,59 @@
         <meta name="robots" content="index,follow" />
     {% endif %}
 
+    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+    <script>
+    var config = {
+    apiKey: 'a25f5f8a0882e29e8afb210360806da35e61ec2c',
+    product: 'PRO',
+    optionalCookies: [
+    {
+    name: 'analytics',
+    label: 'Analytics',
+    description: '',
+    cookies: [],
+    onAccept : function(){},
+    onRevoke: function(){}
+    },{
+    name: 'marketing',
+    label: 'Marketing',
+    description: '',
+    cookies: [],
+    onAccept : function(){},
+    onRevoke: function(){}
+    },{
+    name: 'preferences',
+    label: 'Preferences',
+    description: '',
+    cookies: [],
+    onAccept : function(){},
+    onRevoke: function(){}
+    }
+    ],
+
+        position: 'RIGHT',
+        theme: 'DARK',
+        branding: {
+            fontColor: "#FFF",
+            fontSizeTitle: "1.2em",
+            fontSizeIntro: "1em",
+            fontSizeHeaders: "1em",
+            fontSize: "0.8em",
+            backgroundColor: "#313147",
+            toggleText: "#fff",
+            toggleColor: "#2f2f5f",
+            toggleBackground: "#111125",
+            buttonIcon: null,
+            buttonIconWidth: "64px",
+            buttonIconHeight: "64px",
+            removeIcon: false,
+            removeAbout: false
+        }
+    };
+
+    CookieControl.load( config );
+    </script>
+
     {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
     {# include main.css if in development mode #}
     {% if helpers.environment === "development" %}
