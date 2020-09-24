@@ -121,4 +121,8 @@ input, textarea {
     @apply pl-6 mb-6;
     list-style: disc;
   }
+
+  a {
+    @apply text-blue-200 font-bold border-none;
+  }
 }

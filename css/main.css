@@ -899,6 +899,14 @@ input, textarea {
   list-style: disc;
 }
 
+.content a {
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+  font-weight: 700;
+  border-style: none;
+}
+
 .container{
   width: 100%;
 }
