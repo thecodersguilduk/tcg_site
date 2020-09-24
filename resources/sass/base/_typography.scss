@@ -116,4 +116,9 @@ input, textarea {
       }
     }
   }
+
+  ul {
+    @apply pl-6 mb-6;
+    list-style: disc;
+  }
 }
