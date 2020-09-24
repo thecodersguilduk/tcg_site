@@ -66,9 +66,11 @@ title: Blog
         </div>
       </div>
     {% endfor %}
-    <div class="w-full mt-2">
-      <button id="load-more" class="block mx-auto bg-blue-200 text-sm leading-sm text-white text-center font-heading font-bold rounded px-3 py-2">Load more articles</button>
-    </div>
+    {% if collections.blog.length > 9 %}
+      <div class="w-full mt-2"> 
+        <button id="load-more" class="block mx-auto bg-blue-200 text-sm leading-sm text-white text-center font-heading font-bold rounded px-3 py-2">Load more articles</button>
+      </div>
+    {% endif %}
   </div>
   <div id="scroll-top" class="hidden" aria-hidden="true">
     <button class="mb-10 mr-10 absolute bottom-0 right-0 block font-heading text-md leading-sm font-bold">Scroll to top
