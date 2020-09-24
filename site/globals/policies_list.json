@@ -1,46 +1,75 @@
 {
   "all": [
     {
-        "label": "Modern Slavery",
-        "pdf": "/pdf/tcg_modern_slavery.pdf",
-        "version": "Version 1.1",
-        "last_update": "23 May 2020",
-        "author": "Helen Shackleton"
+        "label": "Modern Slavery Policy",
+        "pdf": "/pdf/Modern Slavery Act v1.2.pdf",
+        "version": "V1.2",
+        "last_update": "13 Sept 2020",
+        "author": "Crispin Read"
     },
     {
       "label": "Complaints Policy",
-      "pdf": "/pdf/tcg_complaints_policy.pdf",
-      "version": "Version 1.1",
-      "last_update": "23 May 2020",
-      "author": "Helen Shackleton"
+      "pdf": "/pdf/Complaints Policy v1.2.pdf",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
     },
     {
-      "label": "Safeguarding Policy",
-      "pdf": "",
-      "version": "Version 1.1",
-      "last_update": "23 May 2020",
-      "author": "Anna Cooper"
+      "label": "Health and Safety Policy",
+      "pdf": "/pdf/Health and Safety Policy V1.2.pdf",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
     },
     {
-      "label": "Quality Procedure",
-      "pdf": "",
-      "version": "Version 1.1",
-      "last_update": "23 May 2020",
-      "author": "Helen Shackleton"
+      "label": "Equality, Diversity and Inclusion Policy",
+      "pdf": "/pdf/Equality, Diversity and Inclusion Policy V1.2.pdf",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
     },
     {
-      "label": "Equality and Diversity",
-      "pdf": "/pdf/tcg_equality_diversity_policy.pdf",
-      "version": "Version 1.1",
-      "last_update": "23 May 2020",
-      "author": "Helen Shackleton"
+      "label": "Equal Opportunities Policy",
+      "pdf": "/pdf/Equal Opportunities Policy v1.2.pdf",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
     },
     {
       "label": "Privacy Policy",
       "pdf": "/pdf/tcg_privacy_policy.pdf",
-      "version": "Version 1.1",
-      "last_update": "23 May 2020",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
+    },
+    {
+      "label": "Cookie Policy",
+      "pdf": "/pdf/Cookie Policy V1.1.pdf",
+      "version": "V1.1",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
+    },
+    {
+      "label": "Website T&Cs",
+      "pdf": "/pdf/Website Terms and Conditions V1.1.pdf",
+      "version": "V1.1",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
+    },
+    {
+      "label": "GDPR and Data Protection Policy",
+      "pdf": "/pdf/GDPR and Data Protection Policy V1.2.pdf",
+      "version": "V1.2",
+      "last_update": "13 Sept 2020",
+      "author": "Crispin Read"
+    },
+    {
+      "label": "Whistleblowing Policy",
+      "pdf": "/pdf/Whistleblowing Policy 1.1.pdf",
+      "version": "V1.1",
+      "last_update": "13 Sept 2020",
       "author": "Crispin Read"
     }
+    
   ]
 }
