@@ -893,10 +893,17 @@ input, textarea {
   }
 }
 
-.content ul {
+.content ul, .content ol {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.content ul {
   list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
 }
 
 .content a {

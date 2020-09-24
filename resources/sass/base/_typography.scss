@@ -117,10 +117,13 @@ input, textarea {
     }
   }
 
-  ul {
+  ul, ol {
     @apply pl-6 mb-6;
-    list-style: disc;
   }
+
+  ul { list-style: disc; }
+
+  ol { list-style: decimal; }
 
   a {
     @apply text-blue-200 font-bold border-none;
