@@ -893,6 +893,27 @@ input, textarea {
   }
 }
 
+.content ul, .content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content ul {
+  list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
+}
+
+.content a {
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+  font-weight: 700;
+  border-style: none;
+}
+
 .container{
   width: 100%;
 }

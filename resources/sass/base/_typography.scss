@@ -116,4 +116,16 @@ input, textarea {
       }
     }
   }
+
+  ul, ol {
+    @apply pl-6 mb-6;
+  }
+
+  ul { list-style: disc; }
+
+  ol { list-style: decimal; }
+
+  a {
+    @apply text-blue-200 font-bold border-none;
+  }
 }
