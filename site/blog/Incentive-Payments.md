@@ -1,6 +1,8 @@
 ---
-author: Crispin Read
-avatar: ../team/crispin.jpeg
+time: 2min
+date: 2020-09-13
+author: Naomi
+avatar: ../team/naomi.jpeg
 title: 'Employers get paid £2k to take on apprentices'
 meta_title: 'Employers get paid £2k to take on apprentices'
 meta_description: There has never been a better time to take on an apprentice.
@@ -8,6 +10,7 @@ featured_image: /images/blog/interviews.jpg
 excerpt: There has never been a better time to take on an apprentice. Last month, further financial incentives were announced by the UK Government for businesses recruiting new Apprentices.
 tags:
     - blog
+    - apprenticeships
 ---
 
 There has never been a better time to take on an apprentice. Last month, further financial incentives were announced by the UK Government for businesses recruiting new Apprentices.

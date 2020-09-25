@@ -1,5 +1,7 @@
 ---
-author: Crispin Read
+time: 2min
+date: 2020-09-18
+author: Crispin
 avatar: ../team/crispin.jpeg
 title: '30th Sept: Celebrating Neurodiversity in Tech'
 meta_title: 'Event: Celebrating Neurodiversity in Tech'
@@ -8,6 +10,7 @@ featured_image: /images/blog/Neurodivercity.jpg
 excerpt: A heads up to invite you to the event we are hosting as part of Leeds digital Festival. A celebration of neurodiversity in tech.
 tags:
     - blog
+    - News & Events
 ---
 
 We’d like to invite you to the event we are hosting as part of Leeds digital Festival.
