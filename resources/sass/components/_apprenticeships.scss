@@ -97,3 +97,13 @@
     }
   }
 }
+
+.apprenticeships_slider {
+  .slick-slide {
+    max-width: calc(251px + 28px);
+  }
+}
+
+.apprenticeships__item {
+  max-width: 251px;
+}

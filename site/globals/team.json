@@ -5,8 +5,9 @@
     "occupation": "Founder & Director",
     "description": "Making sure everything we do is brilliant and always getting better. 20 years as a developer, now full time advocate for apprenticeships and equality.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "https://www.linkedin.com/in/crispinread",
+      "twitter": "https://twitter.com/crispin_read",
+      "github": "https://github.com/crispinread"
     }
   },
   {
@@ -15,8 +16,7 @@
     "occupation": "Applications Manager",
     "description": "Looking after all our learners and partners, keeping projects running smoothly. Working in apprenticeships since 2006, also heads up our social media channels - it’s Naomi you’re talking to on twitter and instagram.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "https://www.linkedin.com/in/naomi-harker-4913ab150/"
     }
   },
   {
@@ -25,8 +25,7 @@
     "occupation": "Head of Partnerships and Social Mission",
     "description": "Keeping us on track with compliance and constantly improving the quality of our delivery. She’s also heading up our social mission.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "https://www.linkedin.com/in/helen-marie-shackleton-mba-6a55995/"
     }
   },
   {
@@ -35,8 +34,7 @@
     "occupation": "Partnerships Development Manager",
     "description": "First point of contact for our partners and customers, making sure everyone we work with shares our vision and gets the most out of apprenticeships and training.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "https://www.linkedin.com/in/bishopfionaadministration/"
     }
   },
   {
@@ -45,8 +43,7 @@
     "occupation": "Lead Technical Trainer",
     "description": "Devising, delivering monitoring and improving our technical training. Alex is a very experienced web developer and qualified trainer and assessor too.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "github": "https://github.com/alexcreode"
     }
   },
   {
@@ -55,8 +52,25 @@
     "occupation": "Lead Assessor",
     "description": "Heads up progress reviews and on-course monitoring. Mark has been working in apprenticeships for xx years, our resident expert in all things ‘Apprenticeship Standards’ - delivery, quality, achievement and compliance.",
     "social": {
-      "linkedin": "#",
-      "twitter": "#"
+      "linkedin": "https://www.linkedin.com/in/mark-palmer-b171b35/"
+    }
+  },
+  {
+    "name": "Rachel",
+    "image": "../images/team/rachel.jpeg",
+    "occupation": "Apprenticeships Manager",
+    "description": "We get A LOT of applicants. Rachel makes sure they are all looked after, signposted, helped and supported through the initial stages. Getting them ready to be put forward for employment.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/rachel-walker-3578ab165/"
+    }
+  },
+  {
+    "name": "Hannah",
+    "image": "../images/team/hannah.jpeg",
+    "occupation": "Industry Liaison",
+    "description": "Hannah heads up our connection to businesses, creating and nurturing strategic partnerships. She’s super passionate about sustainability, social impact and value striving to make positive changes to the way we all work.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/hannah-oldfield-3732b2177/"
     }
   }
 ]

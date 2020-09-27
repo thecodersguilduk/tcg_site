@@ -1,7 +1,8 @@
 {
-  "active" : [
+   "active" : [
     {
-      "title": "Software Developer Level 4",
+      "title": "Software Developer",
+      "qualification": "Level 4",
       "employer_link": "/employer-software-dev",
       "apprentice_link": "/applicant-software-dev"
     }
@@ -9,28 +10,20 @@
 
   "coming_soon" : [
     {
-      "title": "Software Tester Level 4"
+      "title": "Digital Marketing",
+      "qualification": "Level 4"
     },
     {
-      "title": "Intro Course Level 2 - COMING SOON"
+      "title": "Cyber Security",
+      "qualification": "Level 4"
     },
     {
-      "title": "Intro Course Level 3 - COMING SOON"
+      "title": "Data Analyst",
+      "qualification": "Level 4"
     },
     {
-      "title": "Degree Level Apprenticeships"
-    },
-    {
-      "title": "Data Analysis"
-    },
-    {
-      "title": "Digital Marketing"
-    },
-    {
-      "title": "User Experience Design"
-    },
-    {
-      "title": "Cyber Security"
+      "title": "Software Tester",
+      "qualification": "Level 4"
     }
   ]
 }

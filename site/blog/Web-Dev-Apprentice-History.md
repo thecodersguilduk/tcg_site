@@ -1,5 +1,7 @@
 ---
-author: Crispin Read
+time: 6min
+date: 2020-09-22
+author: Crispin
 avatar: ../team/crispin.jpeg
 title: Web Dev Apprentice - Our Story
 meta_title: Web Dev Apprentice - Our Story
@@ -8,6 +10,7 @@ featured_image: /images/blog/apprentice-history.jpg
 excerpt: Back in 2012 I got together with a bunch of developers to solve a problem - or, as it turned out - a few problems. We were about to create the first industry led digital apprenticeship and we had organised a hack day to thrash out some ideas.
 tags:
     - blog
+    - apprenticeships
 ---
 
 Back in 2012 I got together with a bunch of developers to solve a problem - or, as it turned out - a few problems. We were about to create the first industry led digital apprenticeship and we had organised a hack day to thrash out some ideas. 
