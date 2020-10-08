@@ -50,7 +50,7 @@
     "name": "Mark",
     "image": "../images/team/mark.jpeg",
     "occupation": "Lead Assessor",
-    "description": "Heads up progress reviews and on-course monitoring. Mark wrote is first bit of JavaScript in 1996 and it is still live. He has been working in technical apprenticeships for 8 years, our resident expert in all things ‘Apprenticeship Standards’ - delivery, quality and achievement.",
+    "description": "Heads up progress reviews and on-course monitoring. Mark wrote is first bit of JavaScript in 1996 and it is <strong>still live</strong>. He has been working in technical apprenticeships for 8 years, our resident expert in all things ‘Apprenticeship Standards’ - delivery, quality and achievement.",
     "social": {
       "linkedin": "https://www.linkedin.com/in/mark-palmer-b171b35/"
     }
