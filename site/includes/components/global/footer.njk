@@ -1,4 +1,4 @@
-<footer class="border-t-2 border-grey-100 overflow-hidden">
+<footer class="footer border-t-2 border-grey-100 overflow-hidden">
   <div class="md:pt-12 pt-6 md:pb-14 pb-8 inner sm:px-4 lg:px-8">
     <div class="flex justify-between flex-wrap sm:-mx-3 lg:mx-auto">
 
@@ -48,16 +48,27 @@
       {% endfor %}
 
       <div class="lg:pt-10 mb-6 sm:mb-0 lg:w-1/4 w-full bg-white sm:w-1/2 sm:px-6 lg:px-0">
-        <div class="flex flex-wrap sm:block lg:mx-0">
+        <div class="block lg:mx-0">
           <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
             <img src="../../images/apprenticeships-logo.png" alt="" class="h-12 w-auto block relative" />
           </div>
           <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
             <img src="../../images/european-structural-investment-funds.png" alt="" class="h-12 w-auto block relative" />
           </div>
-          <div class="">
+          <div class="mb-4 pr-6 sm:pr-0 sm:mb-4">
             <img src="../../images/dcc.png" alt="" class="h-12 w-auto block relative" />
           </div>
+          {% if page.url != '/contact-us/' %}
+            <!--START OF TRUSTist REVIEWer CODE - DO NOT CHANGE-->
+            <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
+            <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
+            <!--END OF TRUSTist REVIEWer CODE-->
+          {% else %}
+            <!--START OF TRUSTist REVIEWer CODE - DO NOT CHANGE-->
+            <script src="https://widget.trustist.com/eEtNYvDPNUCgGxnXqyliBw/trustistreviewer.js"></script>
+            <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
+            <!--END OF TRUSTist REVIEWer CODE-->
+          {% endif %}
         </div>
       </div>
 

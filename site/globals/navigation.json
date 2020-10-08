@@ -50,6 +50,10 @@
         {
           "label": "All Policies",
           "url": "/policies"
+        },
+        {
+          "label": "Reviews",
+          "url": "/reviews"
         }
       ]
     }

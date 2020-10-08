@@ -1,0 +1,25 @@
+.reviews-component {
+  .ts-reviewLogo {
+    display: none !important;
+  }
+
+  .ts-reviewTitle {
+    a {
+      font-weight: 700 !important;
+    }
+  }
+
+  .ts-reviewText {
+    font-size: 16px !important;
+    line-height: 21px !important;
+  }
+
+  .ts-reviewTitle,
+  .ts-verified {
+    margin-bottom: 10px !important;
+  }
+
+  .ts-reviewContent {
+    margin-bottom: 24px !important;
+  }
+}

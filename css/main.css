@@ -1458,14 +1458,18 @@ input, textarea {
   color: rgba(37, 116, 169, var(--text-opacity));
 }
 
-.footer-dropdown-content {
+.footer .footer-dropdown-content {
   max-height: none;
 }
 
 @media screen and (max-width: 640px) {
-  .footer-dropdown-content {
+  .footer .footer-dropdown-content {
     max-height: 0;
   }
+}
+
+.footer .cleanslate.ts-widget {
+  height: 3rem;
 }
 
 #apprenticeships .hero-desktop {
@@ -1879,6 +1883,28 @@ input, textarea {
   width: 16px;
   height: 2px;
   transform: rotate(-45deg);
+}
+
+.reviews-component .ts-reviewLogo {
+  display: none !important;
+}
+
+.reviews-component .ts-reviewTitle a {
+  font-weight: 700 !important;
+}
+
+.reviews-component .ts-reviewText {
+  font-size: 16px !important;
+  line-height: 21px !important;
+}
+
+.reviews-component .ts-reviewTitle,
+.reviews-component .ts-verified {
+  margin-bottom: 10px !important;
+}
+
+.reviews-component .ts-reviewContent {
+  margin-bottom: 24px !important;
 }
 
 .space-y-0 > :not(template) ~ :not(template){
