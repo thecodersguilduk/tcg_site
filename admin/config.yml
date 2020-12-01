@@ -20,8 +20,13 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Description", name: "meta_description", widget: "string" }
+      - { label: "Read Time", name: "time", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
+      - { label: "Avatar", name: "avatar", widget: "string" }
+      - { label: "Featured Image", name: "featured_image", widget: "image" }
+      - { label: "Excerpt", name: "excerpt", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
