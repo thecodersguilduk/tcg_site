@@ -17,8 +17,6 @@ tags:
 
 ![West Yorkshire Combined Authority Logo](/images/blog/logo-wyca.png "WYCA")
 
-
-
 ## Web Development With The JAMStack 
 
 Javascript, APIs and Markup - it is the new HOT way to build web sites. If you have dabbled in HTML and CSS or want to fast track your dev career then this is the course for you.
