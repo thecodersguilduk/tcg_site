@@ -40,12 +40,18 @@ Could you be a software tester?
 Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software Testing could be your way of improving your experiences. If you are a curious person with good attention to detail a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester giving you essential skills and knowledge to apply or progress in this interesting and rewarding area. 
 
 You do not need a technical background or proven academic success but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you will gain an understanding of what testing means and why it is important, then you will gain practical experience and fundamental knowledge around best practices and common workflows.
+<div class="flex justify-center mt-6 -mx-3">
+          <a href="" class="sendinfo-btn text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded md:mx-3 mx-1 whitespace-no-wrap modal-btn" data-modal="register-interest">Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+        </div>
 
 ## UX Professional
 
 Maybe you’ve heard these terms bandied around your office, or read about this exciting career - fulfilling work interacting directly with the real people who use digital products. Perhaps you’re already a designer or a project/product manager or some other connected role where gaining a better understanding of user needs and service design would be a benefit? 
 
 You’ll learn about User experience and customer experience, about accessibility and usability. You’ll also learn about research, planning, testing and measurement - how do we actually know whether something has been improved or needs to be? How can we design and develop better services, features and products and deliver more value to our users, our customers and our clients.
+<div class="flex justify-center mt-6 -mx-3">
+          <a href="" class="sendinfo-btn text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded md:mx-3 mx-1 whitespace-no-wrap modal-btn" data-modal="register-interest">Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+        </div>
 
 <div id="register-interest" class="modal">
   <div class="modal-inner bg-white rounded shadow-secondary">
