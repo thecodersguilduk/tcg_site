@@ -22,7 +22,7 @@ tags:
 Javascript, APIs and Markup - it is the new HOT way to build web sites. If you have dabbled in HTML and CSS or want to fast track your dev career then this is the course for you.
 
 “Jamstack is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”
-
+ - [JAMStack.org](https://jamstack.org/)
 We will be recapping the fundamentals of HTML and CSS, accessibility and responsive design principles. Then we’ll look at solving problems with JavaScript and explore the tools and frameworks of modern web and app development.
 
 This is a programme for people wanting to get into or switch to web/app/software development as a career or junior/mid level developers looking to branch out into a new way of working.  A basic understanding of HTML and CSS is expected but we can provide additional learning materials if you have only just started.
