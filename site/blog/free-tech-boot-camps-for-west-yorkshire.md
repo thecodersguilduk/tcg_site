@@ -11,6 +11,7 @@ excerpt: "We’re delighted to announce the launch of three exciting new trainin
 date: 2020-12-02T13:21:37.194Z
 tags:
   - News & Events
+  - blog
 ---
 **We’re delighted to announce the launch of three exciting new training courses, exclusively open to people in West Yorkshire. The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021 - register your interest at the links below.**
 
