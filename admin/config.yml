@@ -34,7 +34,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Apprenticeships", "Digital Skills", "News & Events", "Opinion"]
+        options: ["blog", "Apprenticeships", "Digital Skills", "News & Events", "Opinion"]
   - label: "Settings"
     name: "settings"
     editor:
