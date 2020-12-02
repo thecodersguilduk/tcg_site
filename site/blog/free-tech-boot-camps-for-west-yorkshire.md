@@ -5,10 +5,10 @@ meta_description: test
 time: 2 mins
 author: Crispin
 avatar: /images/blog/crispinread.jpg
-featured_image: /images/blog/img_1417-1-.jpg
+featured_image: /images/blog/training.jpg
 excerpt: "We’re delighted to announce the launch of three exciting new training
   courses, exclusively open to people in West Yorkshire.  "
-date: 2020-12-02T13:21:37.194Z
+date: 2020-12-02T11:21:00.000Z
 tags:
   - News & Events
   - blog
