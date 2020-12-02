@@ -41,7 +41,7 @@ Do you ever get frustrated using the web or apps? Do you use assistive technolog
 
 You do not need a technical background or proven academic success but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you will gain an understanding of what testing means and why it is important, then you will gain practical experience and fundamental knowledge around best practices and common workflows.
 <div class="flex justify-center mt-6 -mx-3">
-          <a href="" class="sendinfo-btn text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded md:mx-3 mx-1 whitespace-no-wrap modal-btn" data-modal="register-interest">Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+          <a href="#register-interest" class="register-interest-btn block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" data->Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
         </div>
 
 ## UX Professional
