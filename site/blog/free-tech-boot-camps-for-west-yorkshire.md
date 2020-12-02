@@ -40,9 +40,10 @@ Could you be a software tester?
 Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software Testing could be your way of improving your experiences. If you are a curious person with good attention to detail a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester giving you essential skills and knowledge to apply or progress in this interesting and rewarding area. 
 
 You do not need a technical background or proven academic success but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you will gain an understanding of what testing means and why it is important, then you will gain practical experience and fundamental knowledge around best practices and common workflows.
+
 <div class="flex justify-center mt-6 -mx-3">
           <a href="#register-interest" class="register-interest-btn block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" data->Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
-        </div>
+</div>
 
 ## UX Professional
 
@@ -53,13 +54,11 @@ You’ll learn about User experience and customer experience, about accessibilit
           <a href="" class="sendinfo-btn text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded md:mx-3 mx-1 whitespace-no-wrap modal-btn" data-modal="register-interest">Register Interest<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
         </div>
 
-<div id="register-interest" class="modal">
+<div id="register-interest">
   <div class="modal-inner bg-white rounded shadow-secondary">
-    <button class="modal-close" aria-label="close" data-modal="register-interest"></button>
-    <div class="modal-content px-6 md:px-8">
       <div class="center-content">
         <h2 class="text-center mt-8">WYCA Tech Bootcamps</h2>
-        <p class="text-center mb-8">Let us know your name and email and we will send you an invite link as soon as teh applications open</p>
+        <p class="text-center mb-8">Let us know your name and email and we will send you an invite link as soon as the applications open</p>
       </div>
       <div class="">
         <form action="https://formspree.io/mknpvqqv" method="POST">
