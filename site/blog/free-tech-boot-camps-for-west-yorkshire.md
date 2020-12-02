@@ -5,7 +5,7 @@ meta_description: "We’re delighted to announce the launch of three exciting ne
   training courses, exclusively open to people in West Yorkshire.  "
 time: 2 mins
 author: Crispin
-avatar: ../images/team/crispin.jpeg
+avatar: ../team/crispin.jpeg
 featured_image: /images/blog/training.jpg
 excerpt: "We’re delighted to announce the launch of three exciting new training
   courses, exclusively open to people in West Yorkshire.  "
