@@ -1,7 +1,8 @@
 ---
 title: Free Tech Boot Camps for West Yorkshire
-meta_title: test
-meta_description: test
+meta_title: Free Tech Boot Camps for West Yorkshire
+meta_description: "We’re delighted to announce the launch of three exciting new
+  training courses, exclusively open to people in West Yorkshire.  "
 time: 2 mins
 author: Crispin
 avatar: /images/blog/crispinread.jpg
