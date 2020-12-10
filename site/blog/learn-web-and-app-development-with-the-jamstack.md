@@ -7,8 +7,8 @@ meta_description: "Our web and app development boot camp is a one-of-a-kind
   rewarding career. "
 time: 5 mins
 author: Crispin
-avatar: ../team/crispin.jpg
-featured_image: /images/blog/social-3.jpg
+avatar: ../images/team/crispin.jpeg
+featured_image: /images/blog/wyca2.jpg
 excerpt: "Our web and app development boot camp is a one-of-a-kind opportunity
   to learn new digital skills which will allow you to create job opportunities,
   boost your employability, and put you on the path to a more rewarding career.
@@ -24,7 +24,9 @@ The entire course is completely free, delivered remotely (lockdown-safe), taught
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-APPLY NOW
+[APPLY NOW](https://skills-bootcamp-jamstack.tcg.camp/)
+
+![Looking for your next opportunity? A woman works at her laptop](/images/blog/social-3.jpg)
 
 ## Why You Need to Apply
 
@@ -42,7 +44,7 @@ In addition to direct access to those employers, participants on this course wil
 * Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
 * A high-demand digital skill-set needed by employers today, which is also emerging as a very popular way to do web development 
 
-APPLY NOW
+[APPLY NOW](https://skills-bootcamp-jamstack.tcg.camp/)
 
 ## What You’ll Learn  
 
@@ -91,4 +93,4 @@ This is a course for people wanting to move to the next level in coding to launc
 
 We know times are tough right now. But we can help you learn valuable new digital skills to allow you to discover exciting new career opportunities. 
 
-Register for this free digital skills training boot camp here.
+[Register for this free digital skills training boot camp here.](https://skills-bootcamp-jamstack.tcg.camp/)
