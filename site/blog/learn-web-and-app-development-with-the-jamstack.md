@@ -7,7 +7,7 @@ meta_description: "Our web and app development boot camp is a one-of-a-kind
   rewarding career. "
 time: 5 mins
 author: Crispin
-avatar: ../images/team/crispin.jpeg
+avatar: ../team/crispin.jpeg
 featured_image: /images/blog/wyca2.jpg
 excerpt: "Our web and app development boot camp is a one-of-a-kind opportunity
   to learn new digital skills which will allow you to create job opportunities,
