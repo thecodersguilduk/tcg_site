@@ -1,23 +1,23 @@
 ---
 title: "Try Yourself Out as a Software Testing Professional "
 meta_title: "Try Yourself Out as a Software Testing Professional "
-meta_description: "Our software testing boot camp is a one-of-a-kind opportunity
-  to learn new digital skills which will allow you to create job opportunities,
+meta_description: "Our software testing boot camp is a one-of-a-kind chance to
+  learn new digital skills which will allow you to create job opportunities,
   boost your employability, and put you on the path to a more rewarding career.
   "
 time: 6 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/4.jpg
-excerpt: "Our software testing boot camp is a one-of-a-kind opportunity to learn
-  new digital skills which will allow you to create job opportunities, boost
-  your employability, and put you on the path to a more rewarding career. "
+excerpt: "Our software testing boot camp is a one-of-a-kind chance to learn new
+  digital skills which will allow you to create job opportunities, boost your
+  employability, and put you on the path to a more rewarding career. "
 date: 2020-12-10T21:52:58.775Z
 tags:
   - blog
   - Digital Skills
 ---
-Our software testing boot camp is a one-of-a-kind opportunity to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
+Our software testing boot camp is a one-of-a-kind chance to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), taught by experienced professionals, and available from January. This is your chance to put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
