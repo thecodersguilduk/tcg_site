@@ -23,7 +23,7 @@ The entire course is completely free, delivered remotely (lockdown-safe), taught
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-[APPLY NOW](https://skills-bootcamp-software-testing.tcg.camp/)
+[APPLY NOW](https://skills-bootcamp-software-testing.tcg.camp/apply)
 
 ### Why You Need to Apply
 
@@ -87,4 +87,4 @@ What else will you learn? 
 
 We know times are tough right now. But we can help you learn valuable new digital skills to allow you to discover exciting new career opportunities. 
 
-[Register for this free digital skills training boot camp here. ](https://skills-bootcamp-software-testing.tcg.camp/)
+[Register for this free digital skills training boot camp here. ](https://skills-bootcamp-software-testing.tcg.camp/apply)
