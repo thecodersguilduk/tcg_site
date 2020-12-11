@@ -22,155 +22,41 @@ tags:
 
 ## Our Courses
 
-<section class="relative pt-16 pb-18 z-10 overflow-hidden">
-  <object
-    type="image/svg+xml"
-    data="../images/patterns/3.svg"
-    class="absolute pattern pattern-3"
-  ></object>
-  <object
-    type="image/svg+xml"
-    data="../images/patterns/4.svg"
-    class="absolute pattern pattern-4"
-  ></object>
-  <div class="inner">
-    
-    
-    <div class="md:flex md:mb-16 mb-14">
-      <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
-        <h3 class="text-white">Free Skills BootCamps</h3>
-        <p class="text-white mb-6">
-          Kick-start your new career with proper training and support from
-          industry experts.
-        </p>
-        <a
-          href="/apprenticeships"
-          class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap"
-          >See <strong>all</strong> the Skills Boot Camps<i
-            class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"
-            aria-hidden="true"
-          ></i
-        ></a>
-      </div>
-      <div>
-        <div class="flex -mx-4">
-          <div class="px-4">
-            <div
-              class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item"
-            >
-              <div class="flex flex-col items-start h-full">
-                <object
-                  type="image/svg+xml"
-                  data="../images/icons/Group-79.svg"
-                  class="mb-2"
-                ></object>
-                <h3 class="text-xl leading-lg mb-0">Web/ App Development</h3>
-                <h3 class="text-xl leading-lg mb-2">JAMStack</h3>
-                <div class="mt-auto">
-                  <p class="font-bold leading-sm font-heading mb-4">
-                    JavasScript, APIs and Markup
-                  </p>
-                  <div class="mb-4">
-                    <a
-                      href="/applicant-software-dev"
-                      class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >More Info</a
-                    >
-                  </div>
-                  <div>
-                    <a
-                      href="/employer-software-dev"
-                      class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >Apply NOW</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex -mx-4">
-          <div class="px-4">
-            <div
-              class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item"
-            >
-              <div class="flex flex-col items-start h-full">
-                <object
-                  type="image/svg+xml"
-                  data="../images/icons/Group-79.svg"
-                  class="mb-2"
-                ></object>
-                <h3 class="text-xl leading-lg mb-0">Web/ App Development</h3>
-                <h3 class="text-xl leading-lg mb-2">JAMStack</h3>
-                <div class="mt-auto">
-                  <p class="font-bold leading-sm font-heading mb-4">
-                    JavasScript, APIs and Markup
-                  </p>
-                  <div class="mb-4">
-                    <a
-                      href="/applicant-software-dev"
-                      class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >More Info</a
-                    >
-                  </div>
-                  <div>
-                    <a
-                      href="/employer-software-dev"
-                      class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >Apply NOW</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex -mx-4">
-          <div class="px-4">
-            <div
-              class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item"
-            >
-              <div class="flex flex-col items-start h-full">
-                <object
-                  type="image/svg+xml"
-                  data="../images/icons/Group-79.svg"
-                  class="mb-2"
-                ></object>
-                <h3 class="text-xl leading-lg mb-0">Web/ App Development</h3>
-                <h3 class="text-xl leading-lg mb-2">JAMStack</h3>
-                <div class="mt-auto">
-                  <p class="font-bold leading-sm font-heading mb-4">
-                    JavasScript, APIs and Markup
-                  </p>
-                  <div class="mb-4">
-                    <a
-                      href="/applicant-software-dev"
-                      class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >More Info</a
-                    >
-                  </div>
-                  <div>
-                    <a
-                      href="/employer-software-dev"
-                      class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap"
-                      >Apply NOW</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <object
-    type="image/svg+xml"
-    data="../images/patterns/16.svg"
-    class="absolute pattern pattern-5"
-  ></object>
-</section>
+### Free Skills BootCamps
+
+Kick-start your new career with proper training and support from industry experts.
+
+[See **all** the Skills Boot Camps](/apprenticeships)
+
+### Web/ App Development
+
+### JAMStack
+
+JavasScript, APIs and Markup
+
+[More Info](/applicant-software-dev)
+
+[Apply NOW](/employer-software-dev)
+
+### Web/ App Development
+
+### JAMStack
+
+JavasScript, APIs and Markup
+
+[More Info](/applicant-software-dev)
+
+[Apply NOW](/employer-software-dev)
+
+### Web/ App Development
+
+### JAMStack
+
+JavasScript, APIs and Markup
+
+[More Info](/applicant-software-dev)
+
+[Apply NOW](/employer-software-dev)
 
 ## Web Development With the JAMStack 
 
@@ -179,12 +65,9 @@ Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you'v
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
 > [JAMStack.org](https://jamstack.org/)
 
-
 We will be recapping the fundamentals of HTML and CSS, accessibility, and responsive design principles. Then we’ll look at solving problems with JavaScript, and explore the tools and frameworks of modern web and app development.
 
 This is a programme for people wanting to get into or switch to web/app/software development as a career, or junior/mid-level developers looking to branch out into a new way of working. A basic understanding of HTML and CSS is expected, but we can provide additional learning materials if you've only just started.
-
-
 
 ## Introduction to Software Testing
 
