@@ -1,23 +1,22 @@
 ---
 title: "Free Course: Discover User Experience Design "
 meta_title: "Discover User Experience Design "
-meta_description: Our user experience (UX) boot camp is a one-of-a-kind
-  opportunity to learn new digital skills which will allow you to create job
-  opportunities, boost your employability, and put you on the path to a more
-  rewarding caree
+meta_description: Our user experience (UX) boot camp is a one-of-a-kind chance
+  to learn new digital skills which will allow you to create job opportunities,
+  boost your employability, and put you on the path to a more rewarding caree
 time: 6 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/4.jpg
-excerpt: Our user experience (UX) boot camp is a one-of-a-kind opportunity to
-  learn new digital skills which will allow you to create job opportunities,
-  boost your employability, and put you on the path to a more rewarding caree
+excerpt: Our user experience (UX) boot camp is a one-of-a-kind chance to learn
+  new digital skills which will allow you to create job opportunities, boost
+  your employability, and put you on the path to a more rewarding caree
 date: 2020-12-10T21:45:42.511Z
 tags:
   - blog
   - Digital Skills
 ---
-Our user experience (UX) boot camp is a one-of-a-kind opportunity to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
+Our user experience (UX) boot camp is a one-of-a-kind chance to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), taught by experienced professionals, and available from January. This is your chance to put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
