@@ -1,6 +1,6 @@
 ---
-title: Free Tech Boot Camps for West Yorkshire
-meta_title: Free Tech Boot Camps for West Yorkshire
+title: Free Tech Skills Boot Camps for West Yorkshire
+meta_title: Free Tech Skills Boot Camps for West Yorkshire
 meta_description: "We’re delighted to announce the launch of three exciting new
   training courses, exclusively open to people in West Yorkshire.  "
 time: 2 mins
@@ -16,22 +16,47 @@ tags:
 ---
 **We’re delighted to announce the launch of three exciting new training courses, exclusively open to people in West Yorkshire.** 
 
-**The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021 - register your interest at the links below.**
+**The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021 - Apply or find out more at the links below.**
 
-![West Yorkshire Combined Authority Logo](/images/blog/logo-wyca.png "WYCA")
+![FutureGoals 'Skills Bootcamp', LEP, and West Yorkshire Combined Authority Logos](/images/blog/wycafooter-dk.png "FutureGoals Skills Bootcamps")
+
+## Our Courses
+
+### Free Skills BootCamps
+
+Kick-start your new career with proper training and support from industry experts.
+
+### Web/ App Development
+
+JavaScript, APIs and Markup
+
+[More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
+
+[Apply NOW](/https://skills-bootcamp-jamstack.tcg.camp/apply/)
+
+### Software Testing
+
+[More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
+
+[Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+
+### User Experience Professional
+
+[More Info](/blog/free-course-discover-user-experience-design/)
+
+[Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
 
 ## Web Development With the JAMStack 
 
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you.
 
-“Jamstack is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”
+> “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
+> [JAMStack.org](https://jamstack.org/)
 
-* [JAMStack.org](https://jamstack.org/)
-  We will be recapping the fundamentals of HTML and CSS, accessibility, and responsive design principles. Then we’ll look at solving problems with JavaScript, and explore the tools and frameworks of modern web and app development.
+We will be recapping the fundamentals of HTML and CSS, accessibility, and responsive design principles. Then we’ll look at solving problems with JavaScript, and explore the tools and frameworks of modern web and app development.
 
 This is a programme for people wanting to get into or switch to web/app/software development as a career, or junior/mid-level developers looking to branch out into a new way of working. A basic understanding of HTML and CSS is expected, but we can provide additional learning materials if you've only just started.
-
-**Register interest below**
+Web/App Dev Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
 
 ## Introduction to Software Testing
 
@@ -41,7 +66,7 @@ Do you ever get frustrated using the web or apps? Do you use assistive technolog
 
 You don't need a technical background or proven academic success, but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you'll gain an understanding of what testing means, and why it's important, then you'll gain practical experience and fundamental knowledge around best practices and common workflows.
 
-**Register interest below**
+### Software Testing Bootcamp: [Apply NOW](https://skills-bootcamp-software-tester.tcg.camp/apply/)
 
 ## UX Professional
 
@@ -49,8 +74,4 @@ UX design - maybe you’ve heard this term bandied around your office, or read a
 
 You’ll learn about user experience and customer experience, accessibility, and usability. You’ll also learn about research, planning, testing, and measurement. How do we actually know whether something has been improved or needs to be? How can we design and develop better services, features, and products, and deliver more value to our users, our customers, and our clients?
 
-**Register interest below**
-
-## Register Interest
-
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrqiysnLoLsRA150?backgroundColor=teal" frameborder="0" onmousewheel="" width="100%" height="733" style="background: transparent; border: 1px solid #ccc;"></iframe>
+### UX Bootcamp: [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
