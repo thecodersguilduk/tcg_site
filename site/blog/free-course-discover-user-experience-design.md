@@ -22,7 +22,7 @@ The entire course is completely free, delivered remotely (lockdown-safe), taught
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-[APPLY NOW](https://skills-bootcamp-ux.tcg.camp/)
+[APPLY NOW](https://skills-bootcamp-ux.tcg.camp/apply)
 
 ## Why You Need to Apply
 
@@ -54,7 +54,7 @@ You’ll gain a full understanding of how we design and develop better digital s
 
 Being well-versed in great UX design is a skill-set which is in high demand among employers right now, and that demand is only set to continue rising in 2021 and beyond.
 
-[APPLY NOW](https://skills-bootcamp-ux.tcg.camp/)
+[APPLY NOW](https://skills-bootcamp-ux.tcg.camp/apply)
 
 ## Course Details
 
@@ -84,4 +84,14 @@ When will the boot camps run?
 
 We know times are tough right now. But we can help you learn valuable new digital skills to allow you to discover exciting new career opportunities. 
 
-[Register for this free digital skills training boot camp here.](https://skills-bootcamp-ux.tcg.camp/)
+[Register for this free digital skills training boot camp here.](https://skills-bootcamp-ux.tcg.camp/apply)
+## More Free Skills Bootcamps
+  - Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+  - Web Dev with JavaScript and APIs (JAMStack) Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
+---
+
+## Even More Free Skills Bootcamps
+
+There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
+
+![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
