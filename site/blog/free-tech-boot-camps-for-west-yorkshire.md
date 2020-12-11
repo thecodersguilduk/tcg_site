@@ -20,35 +20,11 @@ tags:
 
 ![FutureGoals 'Skills Bootcamp', LEP, and West Yorkshire Combined Authority Logos](/images/blog/wycafooter-dk.png "FutureGoals Skills Bootcamps")
 
-## Our Courses
-
-### Free Skills BootCamps
-
-Kick-start your new career with proper training and support from industry experts.
-
-### Web/ App Development
-
-JavaScript, APIs and Markup
-
-[More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
-
-[Apply NOW](/https://skills-bootcamp-jamstack.tcg.camp/apply/)
-
-### Software Testing
-
-[More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
-
-[Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
-
-### User Experience Professional
-
-[More Info](/blog/free-course-discover-user-experience-design/)
-
-[Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
-
 ## Web Development With the JAMStack 
 
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you.
+
+[More Info](/blog/learn-web-and-app-development-with-the-jamstack/) // [Apply NOW](/https://skills-bootcamp-jamstack.tcg.camp/apply/)
 
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
 > [JAMStack.org](https://jamstack.org/)
@@ -62,6 +38,8 @@ Web/App Dev Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/appl
 
 Could you be a software tester?
 
+[More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+
 Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software testing could be your way of improving your experiences. If you're a curious person with good attention to detail, a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester, giving you essential skills and knowledge to progress in this interesting and rewarding area. 
 
 You don't need a technical background or proven academic success, but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you'll gain an understanding of what testing means, and why it's important, then you'll gain practical experience and fundamental knowledge around best practices and common workflows.
@@ -69,6 +47,8 @@ You don't need a technical background or proven academic success, but you will n
 ### Software Testing Bootcamp: [Apply NOW](https://skills-bootcamp-software-tester.tcg.camp/apply/)
 
 ## UX Professional
+
+[More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
 
 UX design - maybe you’ve heard this term bandied around your office, or read about this exciting career? Or perhaps you’re already a designer or a project/product manager, or some other connected role where gaining a better understanding of user needs and service design would be a benefit? Either way, this is fulfilling work interacting directly with the real people who use digital products.
 
