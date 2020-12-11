@@ -1,6 +1,6 @@
 ---
-title: "Free Course: Learn Web and App Development with the JAMStack "
-meta_title: "Learn Web and App Development with the JAMStack "
+title: "Free Course: Web and App Development with Javascript and APIs (JAMStack)"
+meta_title: Learn Web and App Development with Javascript and APIs (JAMStack)
 meta_description: "Our web and app development boot camp is a one-of-a-kind
   opportunity to learn new digital skills which will allow you to create job
   opportunities, boost your employability, and put you on the path to a more
