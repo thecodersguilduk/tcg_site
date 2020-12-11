@@ -88,3 +88,18 @@ What else will you learn? 
 We know times are tough right now. But we can help you learn valuable new digital skills to allow you to discover exciting new career opportunities. 
 
 [Register for this free digital skills training boot camp here. ](https://skills-bootcamp-software-testing.tcg.camp/apply)
+
+---
+
+## More Free Skills Bootcamps
+  - Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+  - User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+  - Web Dev with JavaScript and APIs (JAMStack) Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
+
+---
+
+## Even More Free Skills Bootcamps
+
+There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
+
+![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
