@@ -2,15 +2,15 @@
 title: "Free Course: Web and App Development with Javascript and APIs (JAMStack)"
 meta_title: Learn Web and App Development with Javascript and APIs (JAMStack)
 meta_description: "Our web and app development boot camp is a one-of-a-kind
-  opportunity to learn new digital skills which will allow you to create job
+  chance to learn new digital skills which will allow you to create job
   opportunities, boost your employability, and put you on the path to a more
   rewarding career. "
 time: 5 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/wyca2.jpg
-excerpt: "Our web and app development boot camp is a one-of-a-kind opportunity
-  to learn new digital skills which will allow you to create job opportunities,
+excerpt: "Our web and app development boot camp is a one-of-a-kind chance to
+  learn new digital skills which will allow you to create job opportunities,
   boost your employability, and put you on the path to a more rewarding career.
   "
 date: 2020-12-10T17:06:20.880Z
@@ -18,7 +18,7 @@ tags:
   - blog
   - Digital Skills
 ---
-Our web and app development boot camp is a one-of-a-kind opportunity to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
+Our web and app development boot camp is a one-of-a-kind chance to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), taught by experienced professionals, and available from January. This is your chance to put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
