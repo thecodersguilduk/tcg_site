@@ -40,7 +40,7 @@ In addition to direct access to those employers, participants on this course wil
 
 * Coaching in modern employability skills, and guidance through developer role-specific hiring processes
 * Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
-* A high-demand digital skill-set needed by employers today, which is also emerging as a very popular way to do web development 
+* A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development 
 
 [APPLY NOW](https://skills-bootcamp-jamstack.tcg.camp/)
 
