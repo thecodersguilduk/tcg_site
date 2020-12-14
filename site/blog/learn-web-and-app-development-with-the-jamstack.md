@@ -7,7 +7,7 @@ meta_description: Our web and app development boot camp is a one-of-a-kind
 time: 5 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/wyca2.jpg
+featured_image: /images/blog/jam.jpg
 excerpt: Our web and app development boot camp is a one-of-a-kind chance to
   learn new digital skills, create job opportunities, and boost your
   employability, putting you on the path to a more rewarding career.
@@ -22,7 +22,7 @@ The entire course is completely free, delivered remotely (lockdown-safe), and ta
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-[APPLY NOW](https://skills-bootcamp-jamstack.tcg.camp/)
+<a href="https://skills-bootcamp-jamstack.tcg.camp/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 ![Looking for your next opportunity? A woman works at her laptop](/images/blog/social-3.jpg)
 
@@ -42,15 +42,11 @@ In addition to direct access to those employers, participants on this course wil
 * Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
 * A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development 
 
-[APPLY NOW](https://skills-bootcamp-jamstack.tcg.camp/)
+<a href="https://skills-bootcamp-jamstack.tcg.camp/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 ## What You’ll Learn  
 
-* **J**avaScript
-
-  **A**PIs
-
-  **M**arkup
+!['The JAMStack' JavaScript, APIs and Markup](/images/blog/what-is-the-jamstack.jpg "What is 'The JAMStack'?")
 
 Being able to build apps using the JAMStack is a skill-set which is in high demand among employers right now, and that demand is only set to continue rising in 2021 and beyond.
 
@@ -91,7 +87,15 @@ This is a course for people wanting to move to the next level in coding to launc
 
 We know times are tough right now. But we can help you learn valuable new digital skills and discover exciting new career opportunities. 
 
-[Register for this free digital skills training boot camp here.](https://skills-bootcamp-jamstack.tcg.camp/)
+<div class="md:my-24 my-14">
+<div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
+Register for this FREE digital skills boot camp training here
+</p></div>
+<div class="lg:ml-auto"><a href="https://skills-bootcamp-jamstack.tcg.camp/" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
+Apply today
+<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
+
+
 
 ## More Free Skills Bootcamps
 
