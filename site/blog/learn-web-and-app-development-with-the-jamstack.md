@@ -1,26 +1,24 @@
 ---
 title: "Free Course: Web and App Development with Javascript and APIs (JAMStack)"
 meta_title: Learn Web and App Development with Javascript and APIs (JAMStack)
-meta_description: "Our web and app development boot camp is a one-of-a-kind
-  chance to learn new digital skills which will allow you to create job
-  opportunities, boost your employability, and put you on the path to a more
-  rewarding career. "
+meta_description: Our web and app development boot camp is a one-of-a-kind
+  chance to learn new digital skills, create job opportunities, and boost your
+  employability, putting you on the path to a more rewarding career.
 time: 5 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/wyca2.jpg
-excerpt: "Our web and app development boot camp is a one-of-a-kind chance to
-  learn new digital skills which will allow you to create job opportunities,
-  boost your employability, and put you on the path to a more rewarding career.
-  "
+excerpt: Our web and app development boot camp is a one-of-a-kind chance to
+  learn new digital skills, create job opportunities, and boost your
+  employability, putting you on the path to a more rewarding career.
 date: 2020-12-10T17:06:20.880Z
 tags:
   - blog
   - Digital Skills
 ---
-Our web and app development boot camp is a one-of-a-kind chance to learn new digital skills which will allow you to create job opportunities, boost your employability, and put you on the path to a more rewarding career. 
+Our web and app development boot camp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
 
-The entire course is completely free, delivered remotely (lockdown-safe), taught by experienced professionals, and available from January. This is your chance to put the challenges of 2020 behind you and get the new year off to a perfect start. 
+The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals. Starting in January, this will help put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
@@ -34,7 +32,7 @@ Now more than ever, digital skills training is a great way to open up new opport
 
 That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be a part of this programme. 
 
-Working in partnership with the West Yorkshire Combined Authority (WYCA), we’re providing FREE training courses to help you gain valuable, relevant digital skills, and support you in realising your full potential for a brighter future. 
+Working in partnership with the West Yorkshire Combined Authority (WYCA), we’re providing FREE training courses to help people in the local area gain valuable, relevant digital skills, and support you in realising your full potential for a brighter future. 
 
 We have a long list of businesses of all shapes and sizes across West Yorkshire who are actively looking to hire talented people like you through this programme, with the number of web and app developer jobs set to rise significantly in 2021.
 
@@ -73,7 +71,7 @@ This is a course for people wanting to move to the next level in coding to launc
 
 ### Where will they be held? 
 
-* These boot camps will be delivered entirely remotely, to help you continue to learn and develop despite the restrictions of lockdown 
+* These boot camps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
 * We will hold a mixture of instructor-led seminars, interactive group training sessions, more general webinars, and work to do in your own time
 
 ### How will you take part? 
@@ -86,19 +84,21 @@ This is a course for people wanting to move to the next level in coding to launc
 ### What else will you learn? 
 
 * In addition to the key languages, you’ll learn how to work with code, collaborate on projects, build cross-functional relationships, and deliver work to a high standard
-* In addition to employability skills, we’ll also provide help with job-specific interview preparation, real-world problem solving, and personal development. 
-* In other words, we’ll get you ready to land the job you’re looking for 
+* In addition to employability skills, we’ll also provide help with job-specific interview preparation, real-world problem solving, and personal development
+* In other words, we’ll get you ready to land the job you’re looking for! 
 
 ## Apply Here! 
 
-We know times are tough right now. But we can help you learn valuable new digital skills to allow you to discover exciting new career opportunities. 
+We know times are tough right now. But we can help you learn valuable new digital skills and discover exciting new career opportunities. 
 
 [Register for this free digital skills training boot camp here.](https://skills-bootcamp-jamstack.tcg.camp/)
 
 ## More Free Skills Bootcamps
-  - Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
-  - User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
----
+
+* Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+* User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+
+- - -
 
 ## Even More Free Skills Bootcamps
 
