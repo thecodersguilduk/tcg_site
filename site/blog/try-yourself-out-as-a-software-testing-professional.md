@@ -39,7 +39,7 @@ In addition to direct access to those employers, participants on this course wil
 
 * Coaching in modern employability skills, and guidance through testing role-specific hiring processes
 * Invitations to employer engagement events, and help finding a job where you can use the testing skills you’ll have learned 
-* A high-demand digital skill-set needed by XX% of employers, which is applicable across almost every industry and sector today
+* A high-demand digital skill-set needed by employers, which is applicable across almost every industry and sector today
 
 ### What You’ll Learn 
 
@@ -89,14 +89,15 @@ We know times are tough right now. But we can help you learn valuable new digita
 
 [Register for this free digital skills training boot camp here. ](https://skills-bootcamp-software-testing.tcg.camp/apply)
 
----
+- - -
 
 ## More Free Skills Bootcamps
-  - Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
-  - User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
-  - Web Dev with JavaScript and APIs (JAMStack) Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
 
----
+* Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+* User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
+* Web Dev with JavaScript and APIs (JAMStack) Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
+
+- - -
 
 ## Even More Free Skills Bootcamps
 
