@@ -38,7 +38,7 @@ In addition to direct access to those employers, participants on this course wil
 
 * Coaching in modern employability skills, and guidance through testing role-specific hiring processes
 * Invitations to employer engagement events, and help finding a job where you can use the testing skills you’ll have learned 
-* A high-demand digital skill-set needed by employers, which you can use across almost every industry and sector today
+* A high-demand digital skill-set needed by employers across almost every industry and sector today
 
 ### What You’ll Learn 
 
@@ -60,24 +60,24 @@ In the first part of this course you’ll learn what testing means and why it’
 
 ### Course Details 
 
-**When will the boot camps run?**
+#### When will the boot camps run?
 
 * These boot camps will run between January 2021 and March 2021 
 * Each boot camp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
 
-**Where will they be held?** 
+#### Where will they be held? 
 
-* These boot camps will be delivered entirely remotely, to help you continue to learn and develop despite the restrictions of lockdown 
+* These boot camps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
 * We'll hold a mixture of instructor-led seminars, interactive group training sessions, more general webinars, and work to do in your own time
 
-**How will you take part?** 
+#### How will you take part? 
 
 * A mixture of teaching and training in small groups 
 * Some work to be done in your own time 
 * Challenge-based problem solving applicable in future jobs 
 * Primarily self-driven learning for your own long-term benefit
 
-**What else will you learn?** 
+#### What else will you learn? 
 
 * In addition to employability skills, we’ll also provide help with job-specific interview preparation, real-world problem solving, and personal development 
 * In other words, we’ll get you ready to land the job you’re looking for!
