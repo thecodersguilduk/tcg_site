@@ -32,7 +32,7 @@ That’s why the government is investing £2.5 billion for the National Skills F
 
 Working in partnership with the West Yorkshire Combined Authority (WYCA), we’re providing FREE training courses to help people in the local area gain valuable, relevant digital skills, and support you in realising your full potential for a brighter future. 
 
-We have a long list of businesses of all shapes and sizes across West Yorkshire who are actively looking to hire talented people like you through this programme, with the number of web and app developer jobs set to rise significantly in 2021.
+We have a long list of businesses of all shapes and sizes across West Yorkshire who are actively looking to hire talented people like you through this programme, with the number of software testing jobs set to rise significantly in 2021.
 
 In addition to direct access to those employers, participants on this course will also come away with: 
 
