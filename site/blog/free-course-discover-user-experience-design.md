@@ -24,6 +24,8 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 <a href="https://skills-bootcamp-ux.tcg.camp/apply" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
+![Looking to get back on your feet? WYCA Skills Bootcamps - Man studies from his laptop](/images/blog/4.jpg "WYCA Skills Bootcamps")
+
 ## Why You Need to Apply
 
 Now more than ever, digital skills training is a great way to open up new opportunities, and give yourself a better chance of enjoying a long, successful career in a digital-first world.
