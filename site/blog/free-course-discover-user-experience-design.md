@@ -7,7 +7,7 @@ meta_description: Our user experience (UX) boot camp is a one-of-a-kind chance
 time: 6 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/4.jpg
+featured_image: /images/blog/ux.jpg
 excerpt: Our user experience (UX) boot camp is a one-of-a-kind chance to learn
   new digital skills, create job opportunities, and boost your employability,
   putting you on the path to a more rewarding career.
@@ -22,7 +22,7 @@ The entire course is completely free, delivered remotely (lockdown-safe), and ta
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-[APPLY NOW](https://skills-bootcamp-ux.tcg.camp/apply)
+<a href="https://skills-bootcamp-ux.tcg.camp/apply" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 ## Why You Need to Apply
 
