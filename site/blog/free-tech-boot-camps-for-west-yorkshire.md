@@ -24,11 +24,9 @@ tags:
 
 ![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/jam.jpg "Dan Munday teaches React")
 
-Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you.
+Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you. [More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
 <a href="https://skills-bootcamp-jamstack.tcg.camp/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
-
-[More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
 > **[JAMStack.org](https://jamstack.org/)**
@@ -39,7 +37,7 @@ This is a programme for people wanting to get into or switch to web/app/software
 
 <div class="md:my-24 my-14">
 <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
-Web/App Dev Skills Bootcamp - <a class="text-white" href="/blog/learn-web-and-app-development-with-the-jamstack/">More Info</a>
+Web/App Dev Skills Bootcamp - <a style="color:white" href="/blog/learn-web-and-app-development-with-the-jamstack/">More Info</a>
 </p></div>
 <div class="lg:ml-auto"><a href="https://skills-bootcamp-jamstack.tcg.camp/apply" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
 Apply Today
@@ -49,11 +47,9 @@ Apply Today
 
 ![a young man and young woman work on laptops](/images/blog/testing.jpg)
 
-### Could you be a software tester?
+**Could you be a software tester?** [More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
 
 <a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-software-tester.tcg.camp/apply/ bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
-
-[More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
 
 Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software testing could be your way of improving your experiences. If you're a curious person with good attention to detail, a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester, giving you essential skills and knowledge to progress in this interesting and rewarding area. 
 
@@ -61,7 +57,7 @@ You don't need a technical background or proven academic success, but you will n
 
 <div class="md:my-24 my-14">
 <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
-Software Tester Skills Bootcamp - <a class="text-white" href="/blog/try-yourself-out-as-a-software-testing-professional/">More Info</a>
+Software Tester Skills Bootcamp - <a style="color:white" href="/blog/try-yourself-out-as-a-software-testing-professional/">More Info</a>
 </p></div>
 <div class="lg:ml-auto"><a href="https://skills-bootcamp-software-tester.tcg.camp/apply/" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
 Apply Today
@@ -73,15 +69,13 @@ Apply Today
 
 <a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-ux.tcg.camp/apply/ bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
 
-[More Info](/blog/free-course-discover-user-experience-design/)
-
-UX design - maybe you’ve heard this term bandied around your office, or read about this exciting career? Or perhaps you’re already a designer or a project/product manager, or some other connected role where gaining a better understanding of user needs and service design would be a benefit? Either way, this is fulfilling work interacting directly with the real people who use digital products.
+UX design - maybe you’ve heard this term bandied around your office, or read about this exciting career? Or perhaps you’re already a designer or a project/product manager, or some other connected role where gaining a better understanding of user needs and service design would be a benefit? Either way, this is fulfilling work interacting directly with the real people who use digital products. [More Info](/blog/free-course-discover-user-experience-design/)
 
 You’ll learn about user experience and customer experience, accessibility, and usability. You’ll also learn about research, planning, testing, and measurement. How do we actually know whether something has been improved or needs to be? How can we design and develop better services, features, and products, and deliver more value to our users, our customers, and our clients?
 
 <div class="md:my-24 my-14">
 <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
-User Experience Skills Bootcamp - <a class="text-white" href="blog/free-course-discover-user-experience-design/">More Info</a>
+User Experience Skills Bootcamp - <a style="color:white" href="blog/free-course-discover-user-experience-design/">More Info</a>
 </p></div>
 <div class="lg:ml-auto"><a href="https://skills-bootcamp-ux.tcg.camp/apply/" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
 Apply Today
