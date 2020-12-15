@@ -22,18 +22,26 @@ tags:
 
 ## Web Development With the JAMStack 
 
+![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/jam.jpg "Dan Munday teaches React")
+
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you.
 
-[More Info](/blog/learn-web-and-app-development-with-the-jamstack/) // [Apply NOW](/https://skills-bootcamp-jamstack.tcg.camp/apply/)
+<a href="https://skills-bootcamp-jamstack.tcg.camp/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> [More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
-> [JAMStack.org](https://jamstack.org/)
+> **[JAMStack.org](https://jamstack.org/)**
 
 We will be recapping the fundamentals of HTML and CSS, accessibility, and responsive design principles. Then we’ll look at solving problems with JavaScript, and explore the tools and frameworks of modern web and app development.
 
 This is a programme for people wanting to get into or switch to web/app/software development as a career, or junior/mid-level developers looking to branch out into a new way of working. A basic understanding of HTML and CSS is expected, but we can provide additional learning materials if you've only just started.
 
-### Web/App Dev Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
+<div class="md:my-24 my-14">
+<div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
+Web/App Dev Skills Bootcamp - <a href="/blog/learn-web-and-app-development-with-the-jamstack/">More Info</a>
+</p></div>
+<div class="lg:ml-auto"><a href="https://skills-bootcamp-jamstack.tcg.camp/apply" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
+Apply Today
+<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
 - - -
 
@@ -49,7 +57,7 @@ You don't need a technical background or proven academic success, but you will n
 
 ### Software Testing Bootcamp: [Apply NOW](https://skills-bootcamp-software-tester.tcg.camp/apply/)
 
----
+- - -
 
 ## UX Professional
 
@@ -61,7 +69,7 @@ You’ll learn about user experience and customer experience, accessibility, and
 
 ### UX Bootcamp: [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
 
----
+- - -
 
 ## More Courses
 
