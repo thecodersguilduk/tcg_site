@@ -40,7 +40,7 @@ This is a programme for people wanting to get into or switch to web/app/software
 Web/App Dev Skills Bootcamp - <a href="/blog/learn-web-and-app-development-with-the-jamstack/">More Info</a>
 </p></div>
 <div class="lg:ml-auto"><a href="https://skills-bootcamp-jamstack.tcg.camp/apply" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
-Apply today
+Apply Today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
 - - -
