@@ -24,6 +24,8 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 <a href="https://skills-bootcamp-software-testing.tcg.camp/apply" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
+![Traits of a good software tester - keen observer, creative mind, time management, out of the box thinking, presence of mind, skeptical attitude, constant learning, user oriented, open listener, optimistic](/images/blog/tcg-software-testing-article-image-1-2x.png "What makes a good Software Tester?")
+
 ### Why You Need to Apply
 
 Now more than ever, digital skills training is a great way to open up new opportunities, and give yourself a better chance of enjoying a long, successful career in a digital-first world.
@@ -88,7 +90,6 @@ In the first part of this course you’ll learn what testing means and why it’
 
 We know times are tough right now. But we can help you learn valuable new digital skills and discover exciting new career opportunities. 
 
-
 <div class="md:my-24 my-14">
 <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
 Register for this FREE digital skills boot camp training here
@@ -97,12 +98,10 @@ Register for this FREE digital skills boot camp training here
 Apply today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
-
 - - -
 
 ## More Free Skills Bootcamps
 
-* Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
 * User Experience Bootcamp: [More Info](/blog/free-course-discover-user-experience-design/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
 * Web Dev with JavaScript and APIs (JAMStack) Bootcamp: [Apply NOW](https://skills-bootcamp-jamstack.tcg.camp/apply/)
 
