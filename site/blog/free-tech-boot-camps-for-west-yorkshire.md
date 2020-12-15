@@ -73,6 +73,8 @@ Apply Today
 
 ## UX Professional
 
+![People discussing a project while moving sticky notes on the wall](/images/blog/ux.jpg)
+
 <a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-ux.tcg.camp/apply/ bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
 
 [More Info](/blog/free-course-discover-user-experience-design/)
