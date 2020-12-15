@@ -48,6 +48,8 @@ You’ve probably heard the term “UX" before, but what does it really mean? �
 
 This is your chance to learn not just what UX is all about, but also how to design a great UX yourself, and make this part of your future career path. 
 
+![User Experience (UX) Vs User Interface Design (UI) UX is things like objectives, research, testing, usability, personas - UI design is interaction, layouts, colour, graphics, typography](/images/blog/ux-ui.png)
+
 UX is all about interacting directly with people who use digital products like mobile apps now, to create better technology for the future, and this course will teach you the skills to do exactly that.
 
 You’ll learn about user experience as well as customer experience, plus the principles of accessibility and usability. You’ll also learn about researching, planning, testing, and the measurement of technology. This will allow you to see how we actually know whether something works well, whether it needs to be improved, and the best ways to improve it. 
