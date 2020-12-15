@@ -26,7 +26,7 @@ tags:
 
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you. [More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-jamstack.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
 
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
 > **[JAMStack.org](https://jamstack.org/)**
