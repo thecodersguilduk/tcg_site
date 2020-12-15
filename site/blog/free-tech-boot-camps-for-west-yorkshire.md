@@ -22,7 +22,7 @@ tags:
 
 ## Web Development With the JAMStack 
 
-![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/jam.jpg "Dan Munday teaches React")
+![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/dan-munday-react-training.jpg "Dan Munday teaches React")
 
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you. [More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
