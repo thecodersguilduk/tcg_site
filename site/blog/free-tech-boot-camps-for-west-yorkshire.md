@@ -49,7 +49,7 @@ Apply Today
 
 **Could you be a software tester?** [More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-software-tester.tcg.camp/apply/ bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-software-tester.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
 
 Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software testing could be your way of improving your experiences. If you're a curious person with good attention to detail, a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester, giving you essential skills and knowledge to progress in this interesting and rewarding area. 
 
@@ -67,7 +67,7 @@ Apply Today
 
 ![People discussing a project while moving sticky notes on the wall](/images/blog/ux.jpg)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-ux.tcg.camp/apply/ bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-ux.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
 
 UX design - maybe you’ve heard this term bandied around your office, or read about this exciting career? Or perhaps you’re already a designer or a project/product manager, or some other connected role where gaining a better understanding of user needs and service design would be a benefit? Either way, this is fulfilling work interacting directly with the real people who use digital products. [More Info](/blog/free-course-discover-user-experience-design/)
 
