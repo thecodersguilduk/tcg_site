@@ -45,8 +45,6 @@ Web/App Dev Skills Bootcamp - <a class="text-white" href="/blog/learn-web-and-ap
 Apply Today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
-- - -
-
 ## Introduction to Software Testing
 
 ![a young man and young woman work on laptops](/images/blog/testing.jpg)
@@ -68,8 +66,6 @@ Software Tester Skills Bootcamp - <a class="text-white" href="/blog/try-yourself
 <div class="lg:ml-auto"><a href="https://skills-bootcamp-software-tester.tcg.camp/apply/" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
 Apply Today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
-
-- - -
 
 ## UX Professional
 
