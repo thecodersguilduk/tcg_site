@@ -15,12 +15,12 @@ tags:
 ## Intro
 
 
-## Enquiry form
+## Pledge Form
 <div class="overflow-hidden md:max-w-xs md:mx-auto">
   <div>
     <h2 class="leading-3xl text-2xl">Get Involved</h2>
   </div>
-  <form  method="POST" action="https://formspree.io/f/mknqeplz" id="contact-form" class="relative">
+  <form  method="POST" action="https://formspree.io/f/mzbkjqly" id="contact-form" class="relative">
     <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
     <div>
       <div class="mb-4">
