@@ -12,10 +12,10 @@ tags:
   - Digital Skills
   - blog
 ---
-Intro
+## Intro
 
 
-
+## Enquiry form
 <div class="overflow-hidden md:max-w-xs md:mx-auto">
   <div>
     <h2 class="leading-3xl text-2xl">Send us a message</h2>
@@ -28,6 +28,12 @@ Intro
         <div class="relative">
           <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required/>
           <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="org" >Organisation</label>
+        <div class="relative">
+          <input id="org" name="org" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Organisation Name*" maxlength="80" />
         </div>
       </div>
       <div class="mb-4">
@@ -44,17 +50,9 @@ Intro
           <span class="form-error text-xs leading-xs text-red-100" data-message="Only numeric values are allowed" aria-hidden="true" role="alert"></span>
         </div>
       </div>
-      <div class="mb-4">
-        <label for="message" class="sr-only">Message</label>
-        <div class="relative">
-          <textarea id="message" rows="4" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Message*" required name="message"></textarea>
-          <span class="form-error text-xs leading-xs text-red-100" aria-hidden="true"></span>
-        </div>
-      </div>
-    </div>
     <div>
       <button type="submit" id="submit" class="contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled>
-        Send Enquiry
+        Submit
       </button>
     </div>
   </form>
