@@ -88,3 +88,8 @@ Apply Today
 There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
 
 ![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
+
+---
+If you do not live in West Yorkshire, do not despair - We hope to be running similar programmes in other areas soon. To stay in the loop please sign up to our newsletter or follow us on your preferred social channel. Links below.
+
+{% include "components/global/newsletter.njk" %}
