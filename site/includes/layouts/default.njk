@@ -28,7 +28,7 @@
     {% endif %}
     <meta property="og:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
     <meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
-    <meta property="og:image" content="{{ featured_image }}">
+    <meta property="og:image" content="{{ site.url }}{{ featured_image }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
