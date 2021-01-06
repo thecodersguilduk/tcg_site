@@ -86,7 +86,7 @@ Spaces on the programme are limited and already filling up fast, so don’t hesi
         </div>
       </div>
       <div class="mb-4">
-        <label for="org" >Organisation</label>
+        <label for="org"  class="sr-only">Organisation</label>
         <div class="relative">
           <input id="org" name="org" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Organisation Name*" maxlength="80" />
         </div>
