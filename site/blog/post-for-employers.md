@@ -22,7 +22,7 @@ tags:
 
 Across all sectors, as the demand for digital services and solutions continues to increase, [technical employees are becoming far more valuable to our organisations](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/). But it’s crucial that these people are getting the right training so they're able to deliver what’s required. 
 
-That’s why the government is investing £2.5 billion for the National Skills Fund, because now more than ever digital skills training is crucial in driving workforce growth and diversity, and unlocking the full potential of the UK tech industry for the future. 
+That’s why the government is investing £2.5 billion for the National Skills Fund, because now more than ever digital skills training is crucial in driving workforce growth and diversity, and unlocking the full potential of the UK tech industry over the coming years. 
 
 That funding is being used to create [a range of free digital skills boot camps, to train people in need of new career opportunities and to help get businesses on the road to recovery from COVID-19](https://www.skillsbootcamps.com/).
 
@@ -32,7 +32,7 @@ From January to March, we’ll be coaching and preparing the next generation of 
 
 ## Take part in a unique project
 
-We’re extending an invitation for businesses like yours to support us in delivering this training in a variety of interactive ways. This is a unique chance to collaborate with some of the leading organisations in the local area, and to help define the employment and training agenda for the technology industry in the UK. 
+We’re extending an invitation for businesses like yours to support us in delivering this training in a variety of interactive ways. This is a unique chance to collaborate with some of the leading organisations in the local area, and to help define the employment and training agenda for the future of the technology industry in the UK. 
 
 These boot camps will close the current skills gap and provide clear pathways to more prosperous careers in tech for the BAME community, female candidates, and people recently made redundant or unemployed due to lockdown. 
 
@@ -81,7 +81,7 @@ Spaces on the programme are limited and already filling up fast, so don’t hesi
       <div class="mb-4">
         <label for="full_name" class="sr-only">Name</label>
         <div class="relative">
-          <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" data-regex="^\\\[a-zA-Z ]+$" data-valid="false" required/>
+          <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" data-regex="^\\\\[a-zA-Z ]+$" data-valid="false" required/>
           <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
         </div>
       </div>
@@ -101,7 +101,7 @@ Spaces on the programme are limited and already filling up fast, so don’t hesi
       <div class="mb-4">
         <label for="phone" class="sr-only">Phone</label>
         <div class="relative">
-          <input id="phone" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" maxlength="14" placeholder="Phone" data-valid="false" data-regex="^\\\[+0-9]+$"/>
+          <input id="phone" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" maxlength="14" placeholder="Phone" data-valid="false" data-regex="^\\\\[+0-9]+$"/>
           <span class="form-error text-xs leading-xs text-red-100" data-message="Only numeric values are allowed" aria-hidden="true" role="alert"></span>
         </div>
       </div>
