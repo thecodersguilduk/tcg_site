@@ -1,7 +1,10 @@
 ---
 title: Post for employers
 meta_title: "Join us in Shaping the Next Generation of Tech Talent in West Yorkshire "
-meta_description: "Join us in Shaping the Next Generation of Tech Talent in West Yorkshire "
+meta_description: "The Coders Guild is inviting businesses in West Yorkshire to
+  collaborate with us in delivering digital skills training to people in the
+  local area, to create a brighter future for the tech industry in 2021 and
+  beyond. "
 time: 7 mins
 author: Fiona
 avatar: ../team/fiona.jpg
