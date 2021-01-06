@@ -81,8 +81,7 @@ Spaces on the programme are limited and already filling up fast, so don’t hesi
       <div class="mb-4">
         <label for="full_name" class="sr-only">Name</label>
         <div class="relative">
-          <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" data-regex="^\\\\[a-zA-Z ]+$" data-valid="false" required/>
-          <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+          <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" required/>
         </div>
       </div>
       <div class="mb-4">
@@ -101,8 +100,7 @@ Spaces on the programme are limited and already filling up fast, so don’t hesi
       <div class="mb-4">
         <label for="phone" class="sr-only">Phone</label>
         <div class="relative">
-          <input id="phone" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" maxlength="14" placeholder="Phone" data-valid="false" data-regex="^\\\\[+0-9]+$"/>
-          <span class="form-error text-xs leading-xs text-red-100" data-message="Only numeric values are allowed" aria-hidden="true" role="alert"></span>
+          <input id="phone" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" maxlength="14" placeholder="Phone" />
         </div>
       </div>
     <div>
