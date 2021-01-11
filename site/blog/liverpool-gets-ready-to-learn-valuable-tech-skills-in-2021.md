@@ -16,9 +16,9 @@ tags:
   - Digital Skills
   - blog
 ---
-We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, exclusively open to people in Liverpool, launching at the end of January.
+We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, exclusively open to people in Liverpool, starting at the end of January.
 
-Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps, which will focus on front-end coding and web and app development. 
+Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps which will focus on front-end coding and software development. 
 
 **These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience.**
 
@@ -36,11 +36,11 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in our digital-first world.
 
-That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be a part of this programme.
+That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be part of this programme.
 
 As the country starts to get on the road to recovery from the pandemic, we’ve been tasked with helping people in Liverpool gain valuable, relevant digital skills, which will allow you to realise your full potential for a brighter future in 2021 and beyond.
 
-We have a long list of businesses of all shapes and sizes across the Liverpool area who are actively looking to hire talented people like you through this programme, with the number of coding and developer jobs set to keep rising over the next few years.
+We have a long list of businesses of all shapes and sizes across the Liverpool area who are actively looking to hire talented people like you through this programme, with the large number of coding and developer jobs set to keep rising over the next few years.
 
 In addition to direct access to those employers, participating in these courses will also give you:
 
@@ -82,13 +82,13 @@ In other words, we’ll get you ready to land the job you’re looking for!
 
 #### Introduction to Front-End Coding 
 
-This course will show you how the web works, and how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how we work with other people to create finished products. 
+This course will show you how the web works, as well as how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how to work as part of a team to create finished products. 
 
-We’ll be using the tools of the trade to teach you, so you’re prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide.
+We’ll be using the tools of the trade to teach you, so you’ll be prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide. You’ll also learn about things like version control and code editors to gain insight into all the processes involved in development. 
 
-This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in similar roles.
+This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in other roles with transferable skills.
 
-You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. You’ll also learn about things like version control and code editors to gain insight into the processes involved in development. 
+You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. 
 
 <!--
 #### Web and App Development with JavaScript and APIs 
