@@ -46,9 +46,9 @@ In addition to direct access to those employers, participating in these courses 
 
 * Coaching in modern employability skills, and guidance through developer role-specific hiring processes
 
-  Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
+* Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
 
-  A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development
+* A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
@@ -58,25 +58,25 @@ In addition to direct access to those employers, participating in these courses 
 
 * The boot camps will run between the end of January and March 
 
-  Each boot camp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
+* Each boot camp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
 
-  You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
+* You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
 
 #### Where will they be held?
 
 * These boot camps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
 
-  We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
+*  We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
 
 #### How will you take part?
 
 * A mixture of virtual classroom-based teaching and training in small groups 
 
-  There will be some work to be completed in your own time
+*  There will be some work to be completed in your own time
 
-  You’ll work on challenge-based problem solving which will be applicable in future jobs
+* You’ll work on challenge-based problem solving which will be applicable in future jobs
 
-  Courses are primarily self-driven learning, for your own long-term benefit
+* Courses are primarily self-driven learning, for your own long-term benefit
 
 #### What else will you learn?
 
