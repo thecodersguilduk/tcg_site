@@ -14,7 +14,7 @@ excerpt: The Coders Guild is offering free digital skills boot camps for people
 date: 2021-01-11T10:36:32.085Z
 tags:
   - Digital Skills
-  - News & Events
+  - blog
 ---
 We’re delighted to announce the launch of some new free tech skills training courses, exclusively open to people in Liverpool, launching at the end of January.
 
