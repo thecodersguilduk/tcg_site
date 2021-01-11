@@ -6,7 +6,7 @@ meta_description: The Coders Guild is offering free digital skills boot camps
   the Liverpool City Region Combined Authority.
 time: 4 minutes
 author: Crispin Read
-avatar: ../team/crispin.jpg
+avatar: ../images/team/crispin.jpg
 featured_image: /images/blog/fasttrack.jpg
 excerpt: The Coders Guild is offering free digital skills boot camps for people
   in Liverpool, launching at the end of January, in partnership with the
