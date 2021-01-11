@@ -16,13 +16,13 @@ tags:
   - Digital Skills
   - blog
 ---
-We’re delighted to announce the launch of some new free tech skills training courses, exclusively open to people in Liverpool, launching at the end of January.
+We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, exclusively open to people in Liverpool, launching at the end of January.
 
-Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps, which will teach front-end coding and web and app development. 
+Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps, which will focus on front-end coding and web and app development. 
 
-**These courses are completely free, delivered remotely (lockdown-safe), and taught by experienced professionals with years of experience.**
+**These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience.**
 
-The main purpose of this programme is to make jobs in tech more accessible for people in the BAME community, female candidates, and those from non-technical backgrounds who have recently been made redundant or unemployed due to lockdown. But we’re also looking to help people currently in entry-level tech roles progress up the ladder more quickly and easily, as well as introducing people with no experience at all to the wonderful world of coding.
+The main purpose of this programme is to make jobs in tech more accessible for people in the BAME community, female candidates, and those who have recently been made redundant or unemployed due to lockdown. But we’re also looking to help people currently in entry-level tech roles progress up the ladder more quickly and easily, as well as introducing people from non-technical backgrounds to the wonderful world of coding.
 
 If that sounds like you, this is the perfect way to put the challenges of 2020 behind you and get the new year off to a positive start.
 
@@ -34,7 +34,7 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 ## Why You Need to Apply
 
-Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in a digital-first world.
+Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in our digital-first world.
 
 That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be a part of this programme.
 
@@ -44,11 +44,9 @@ We have a long list of businesses of all shapes and sizes across the Liverpool a
 
 In addition to direct access to those employers, participating in these courses will also give you:
 
-* Coaching in modern employability skills, and guidance through developer role-specific hiring processes
-
-* Invitations to employer engagement events, and help finding a job where you can use the developer skills you’ll have learned
-
-* A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development
+* Coaching in modern employability skills, and guidance through hiring processes
+* Invitations to employer engagement events, and help finding a job where you can use the skills you’ll have learned
+* A high-demand digital skill-set needed by employers today 
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
@@ -57,32 +55,26 @@ In addition to direct access to those employers, participating in these courses 
 #### When will the boot camps run?
 
 * The boot camps will run between the end of January and March 
-
 * Each boot camp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
-
 * You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
 
 #### Where will they be held?
 
 * These boot camps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
-
-*  We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
+* We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
 
 #### How will you take part?
 
 * A mixture of virtual classroom-based teaching and training in small groups 
-
-*  There will be some work to be completed in your own time
-
+* There will be some work to be completed in your own time
 * You’ll work on challenge-based problem solving which will be applicable in future jobs
-
 * Courses are primarily self-driven learning, for your own long-term benefit
 
 #### What else will you learn?
 
-As well as the key languages, you’ll learn how to work well with code, collaborate on projects, build cross-functional relationships, and deliver work to a high standard
+As well as basic coding and key languages for software development, you’ll learn how to collaborate on projects, build cross-functional relationships, and deliver work to a high standard.
 
-In addition to employability skills, we’ll also help you with job-specific interview preparation, real-world problem solving, and your personal development
+And in addition to employability skills, we’ll also help you with job-specific interview preparation, real-world problem solving, and your personal development.
 
 In other words, we’ll get you ready to land the job you’re looking for!
 
