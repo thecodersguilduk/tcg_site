@@ -6,7 +6,7 @@ meta_description: The Coders Guild is offering free digital skills boot camps
   the Liverpool City Region Combined Authority.
 time: 4 minutes
 author: Crispin Read
-avatar: .
+avatar: ../team/crispin.jpg
 featured_image: /images/blog/fasttrack.jpg
 excerpt: The Coders Guild is offering free digital skills boot camps for people
   in Liverpool, launching at the end of January, in partnership with the
@@ -29,9 +29,9 @@ If that sounds like you, this is the perfect way to put the challenges of 2020 b
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-\[Insert Button]
+<p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
-### Why You Need to Apply
+## Why You Need to Apply
 
 Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in a digital-first world.
 
@@ -49,15 +49,15 @@ In addition to direct access to those employers, participating in these courses 
 
   A high-demand digital skill-set needed by employers today which is also emerging as a very popular way to do web development
 
-\[Insert Button] 
+<p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
-### Key Details
+## Key Details
 
 #### When will the boot camps run?
 
 * The boot camps will run between the end of January and March 
 
-  Each boot camp will last 12 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
+  Each boot camp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
 
   You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
 
@@ -85,7 +85,7 @@ In addition to employability skills, we’ll also help you with job-specific int
 
 In other words, we’ll get you ready to land the job you’re looking for!
 
-### Deep Dive into the Boot Camps 
+## Deep Dive into the Boot Camps 
 
 #### Introduction to Front-End Coding 
 
@@ -96,7 +96,7 @@ We’ll be using the tools of the trade to teach you, so you’re prepared for h
 This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in similar roles.
 
 You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. You’ll also learn about things like version control and code editors to gain insight into the processes involved in development. 
-
+<!--
 #### Web and App Development with JavaScript and APIs 
 
 The ability to build websites and applications using the JAMStack is something that is in high demand among employers right now, and that demand is only set to continue rising over the next few years. 
@@ -108,9 +108,9 @@ With that in mind, this course is ideal for anyone with a basic knowledge of HTM
 On this course, we’ll be recapping the fundamentals of HTML and CSS, as well as teaching accessibility and responsive design principles. We’ll also be looking at how to solve problems with JavaScript, and explore the tools and frameworks which you’ll use to master the skills of modern development.
 
 This is a course for people wanting to move to progress from beginner status coding to launch an exciting new career. Whether you’re just getting started and have dabbled in HTML and CSS before, or are already working in a basic developer role in different languages, this is a great opportunity to learn valuable new skills fast.
-
+-->
 ### Apply Here!
 
 We know times are tough right now, but we can help you learn valuable new digital skills and discover exciting new career opportunities. Register your interest below. 
 
-\[Insert Buttom/Form]
+<p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
