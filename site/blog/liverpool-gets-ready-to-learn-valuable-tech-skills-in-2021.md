@@ -30,6 +30,8 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
+![Logos: Liverpool City Region Combined Authority and Metro Mayor Liverpool City Region](/images/blog/lcrca-logo.jpg)
+
 ## Why You Need to Apply
 
 Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in a digital-first world.
@@ -84,7 +86,7 @@ In addition to employability skills, we’ll also help you with job-specific int
 
 In other words, we’ll get you ready to land the job you’re looking for!
 
-## Deep Dive into the Boot Camps 
+## Deep Dive into the Boot Camps
 
 #### Introduction to Front-End Coding 
 
@@ -95,6 +97,7 @@ We’ll be using the tools of the trade to teach you, so you’re prepared for h
 This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in similar roles.
 
 You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. You’ll also learn about things like version control and code editors to gain insight into the processes involved in development. 
+
 <!--
 #### Web and App Development with JavaScript and APIs 
 
@@ -108,6 +111,7 @@ On this course, we’ll be recapping the fundamentals of HTML and CSS, as well a
 
 This is a course for people wanting to move to progress from beginner status coding to launch an exciting new career. Whether you’re just getting started and have dabbled in HTML and CSS before, or are already working in a basic developer role in different languages, this is a great opportunity to learn valuable new skills fast.
 -->
+
 ### Apply Here!
 
 We know times are tough right now, but we can help you learn valuable new digital skills and discover exciting new career opportunities. Register your interest below. 
