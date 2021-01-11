@@ -82,13 +82,13 @@ In other words, we’ll get you ready to land the job you’re looking for!
 
 #### Introduction to Front-End Coding 
 
-This course will show you how the web works, and how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how we work with other people to create finished products. 
+This course will show you how the web works, as well as how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how to work as part of a team to create finished products. 
 
-We’ll be using the tools of the trade to teach you, so you’re prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide.
+We’ll be using the tools of the trade to teach you, so you’ll be prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide. You’ll also learn about things like version control and code editors to gain insight into all the processes involved in development. 
 
-This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in similar roles.
+This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in other roles with transferable skills.
 
-You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. You’ll also learn about things like version control and code editors to gain insight into the processes involved in development. 
+You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. 
 
 <!--
 #### Web and App Development with JavaScript and APIs 
