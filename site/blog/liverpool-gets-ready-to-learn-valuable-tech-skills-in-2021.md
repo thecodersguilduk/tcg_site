@@ -16,9 +16,9 @@ tags:
   - Digital Skills
   - blog
 ---
-We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, exclusively open to people in Liverpool, launching at the end of January.
+We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, exclusively open to people in Liverpool, starting at the end of January.
 
-Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps, which will focus on front-end coding and web and app development. 
+Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps which will focus on front-end coding and software development. 
 
 **These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience.**
 
@@ -36,11 +36,11 @@ Spaces are limited, so don’t hesitate to register your interest today!  
 
 Now more than ever, digital skills training is a great way to boost your employability and give yourself a better chance of enjoying a long, successful career in our digital-first world.
 
-That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be a part of this programme.
+That’s why the government is investing £2.5 billion for the National Skills Fund through the Department for Education, and The Coders Guild is excited to announce that we’ll be part of this programme.
 
 As the country starts to get on the road to recovery from the pandemic, we’ve been tasked with helping people in Liverpool gain valuable, relevant digital skills, which will allow you to realise your full potential for a brighter future in 2021 and beyond.
 
-We have a long list of businesses of all shapes and sizes across the Liverpool area who are actively looking to hire talented people like you through this programme, with the number of coding and developer jobs set to keep rising over the next few years.
+We have a long list of businesses of all shapes and sizes across the Liverpool area who are actively looking to hire talented people like you through this programme, with the large number of coding and developer jobs set to keep rising over the next few years.
 
 In addition to direct access to those employers, participating in these courses will also give you:
 
