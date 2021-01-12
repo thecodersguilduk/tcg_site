@@ -1,6 +1,6 @@
 ---
-title: "Liverpool Gets Ready to Learn Valuable Tech Skills in 2021 "
-meta_title: "Liverpool Gets Ready to Learn Valuable Tech Skills in 2021 "
+title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
+meta_title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
 meta_description: The Coders Guild is offering free digital skills boot camps
   for people in the Liverpool City Region, launching at the end of January, in
   partnership with the Liverpool City Region Combined Authority.
