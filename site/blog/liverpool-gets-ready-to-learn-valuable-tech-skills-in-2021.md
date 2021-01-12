@@ -1,14 +1,14 @@
 ---
 title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
 meta_title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
-meta_description: The Coders Guild is offering free digital skills boot camps
-  for people in the Liverpool City Region, launching at the end of January, in
+meta_description: The Coders Guild is offering free digital skills bootcamps for
+  people in the Liverpool City Region, launching at the end of January, in
   partnership with the Liverpool City Region Combined Authority.
 time: 4 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/fasttrack.jpg
-excerpt: The Coders Guild is offering free digital skills boot camps for people
+excerpt: The Coders Guild is offering free digital skills bootcamps for people
   in the Liverpool City Region, launching at the end of January, in partnership
   with the Liverpool City Region Combined Authority.
 date: 2021-01-11T15:03:49.515Z
@@ -18,7 +18,7 @@ tags:
 ---
 We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, open to people based in the Liverpool City Region, starting at the end of January.
 
-Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills boot camps which will focus on front-end coding and software development. 
+Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills bootcamps which will focus on front-end coding and software development. 
 
 **These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience. They're exclusively available for people aged 19 and over in Liverpool, Wirral, Sefton, Knowsley, St Helens, and Halton.** 
 
@@ -52,15 +52,15 @@ In addition to direct access to those employers, participating in these courses 
 
 ## Key Details
 
-#### When will the boot camps run?
+#### When will the bootcamps run?
 
-* The boot camps will run between the end of January and March 
-* Each boot camp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
+* The bootcamps will run between the end of January and March 
+* Each bootcamp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
 * You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
 
 #### Where will they be held?
 
-* These boot camps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
+* These bootcamps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
 * We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
 
 #### How will you take part?
@@ -78,7 +78,7 @@ And in addition to employability skills, we’ll also help you with job-specific
 
 In other words, we’ll get you ready to land the job you’re looking for!
 
-## Deep Dive into the Boot Camps
+## Deep Dive into the Bootcamps
 
 #### Introduction to Front-End Coding 
 
@@ -86,7 +86,7 @@ This course will show you how the web works, as well as how we design and develo
 
 We’ll be using the tools of the trade to teach you, so you’ll be prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide. You’ll also learn about things like version control and code editors to gain insight into all the processes involved in development. 
 
-This is an ideal pathway to a Level 4 apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in other roles with transferable skills.
+This is an ideal pathway to a Level 4 Apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in other roles with transferable skills.
 
 You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. 
 
