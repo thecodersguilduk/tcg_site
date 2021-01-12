@@ -1,6 +1,6 @@
 ---
-title: Free Tech Skills Boot Camps for West Yorkshire
-meta_title: Free Tech Skills Boot Camps for West Yorkshire
+title: Free Tech Skills Bootcamps for West Yorkshire
+meta_title: Free Tech Skills Bootcamps for West Yorkshire
 meta_description: "We’re delighted to announce the launch of three exciting new
   training courses, exclusively open to people in West Yorkshire.  "
 time: 2 mins
@@ -16,7 +16,7 @@ tags:
 ---
 **We’re delighted to announce the launch of three exciting new training courses, exclusively open to people in West Yorkshire.** 
 
-**The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021 - Apply or find out more at the links below.**
+**The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021. Apply or find out more at the links below.**
 
 ![FutureGoals 'Skills Bootcamp', LEP, and West Yorkshire Combined Authority Logos](/images/blog/wycafooter-dk.png "FutureGoals Skills Bootcamps")
 
@@ -63,7 +63,7 @@ Software Tester Skills Bootcamp - <a style="color:white" href="/blog/try-yoursel
 Apply Today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
-## UX Professional
+## UX Design
 
 ![People discussing a project while moving sticky notes on the wall](/images/blog/ux.jpg)
 
@@ -85,6 +85,6 @@ Apply Today
 
 ## More Courses
 
-There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
+There are more skills bootcamps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
 
 ![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
