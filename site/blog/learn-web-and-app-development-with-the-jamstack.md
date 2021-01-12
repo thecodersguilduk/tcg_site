@@ -1,22 +1,22 @@
 ---
 title: "Free Course: Web and App Development with Javascript and APIs (JAMStack)"
 meta_title: Learn Web and App Development with Javascript and APIs (JAMStack)
-meta_description: Our web and app development boot camp is a one-of-a-kind
-  chance to learn new digital skills, create job opportunities, and boost your
+meta_description: Our web and app development bootcamp is a one-of-a-kind chance
+  to learn new digital skills, create job opportunities, and boost your
   employability, putting you on the path to a more rewarding career.
 time: 5 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/jam.jpg
-excerpt: Our web and app development boot camp is a one-of-a-kind chance to
-  learn new digital skills, create job opportunities, and boost your
-  employability, putting you on the path to a more rewarding career.
+excerpt: Our web and app development bootcamp is a one-of-a-kind chance to learn
+  new digital skills, create job opportunities, and boost your employability,
+  putting you on the path to a more rewarding career.
 date: 2020-12-10T17:06:20.880Z
 tags:
   - blog
   - Digital Skills
 ---
-Our web and app development boot camp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
+Our web and app development bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals. Starting in January, this will help put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
@@ -60,14 +60,14 @@ This is a course for people wanting to move to the next level in coding to launc
 
 ## Course Details
 
-### When will the boot camps run?
+### When will the bootcamps run?
 
-* The boot camps will run between January 2021 and March 2021 
-* Each boot camp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
+* The bootcamps will run between January 2021 and March 2021 
+* Each bootcamp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
 
 ### Where will they be held? 
 
-* These boot camps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
+* These bootcamps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
 * We will hold a mixture of instructor-led seminars, interactive group training sessions, more general webinars, and work to do in your own time
 
 ### How will you take part? 
@@ -95,8 +95,6 @@ Register for this FREE digital skills boot camp training here
 Apply today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
-
-
 ## More Free Skills Bootcamps
 
 * Software Testing Bootcamp: [More Info](/blog/try-yourself-out-as-a-software-testing-professional/) // [Apply NOW](https://skills-bootcamp-ux.tcg.camp/apply/)
@@ -106,6 +104,6 @@ Apply today
 
 ## Even More Free Skills Bootcamps
 
-There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
+There are more skills bootcamps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
 
 ![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
