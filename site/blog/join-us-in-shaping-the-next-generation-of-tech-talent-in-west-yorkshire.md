@@ -24,7 +24,7 @@ Across all sectors, as the demand for digital services and solutions continues t
 
 That’s why the government is investing £2.5 billion for the National Skills Fund, because now more than ever digital skills training is crucial in driving workforce growth and diversity, and unlocking the full potential of the UK tech industry over the coming years. 
 
-That funding is being used to create [a range of free digital skills boot camps, to train people in need of new career opportunities and to help get businesses on the road to recovery from COVID-19](https://www.skillsbootcamps.com/).
+That funding is being used to create [a range of free digital skills bootcamps, to train people in need of new career opportunities and to help get businesses on the road to recovery from COVID-19](https://www.skillsbootcamps.com/).
 
 The Coders Guild is delighted to announce we’ll be part of this exciting new initiative, working in partnership with the West Yorkshire Combined Authority (WYCA), [providing comprehensive courses in software development, UX design, and software testing.](https://thecodersguild.org.uk/blog/free-tech-boot-camps-for-west-yorkshire/) 
 
@@ -34,14 +34,14 @@ From January to March, we’ll be coaching and preparing the next generation of 
 
 We’re extending an invitation for businesses like yours to support us in delivering this training in a variety of interactive ways. This is a unique chance to collaborate with some of the leading organisations in the local area, and to help define the employment and training agenda for the future of the technology industry in the UK. 
 
-These boot camps will close the current skills gap and provide clear pathways to more prosperous careers in tech for the BAME community, female candidates, and people recently made redundant or unemployed due to lockdown. 
+These bootcamps will close the current skills gap and provide clear pathways to more prosperous careers in tech for the BAME community, female candidates, and people recently made redundant or unemployed due to lockdown. 
 
 ## How to contribute 
 
 There are plenty of exciting options for you, or people from within your team, to participate, including:
 
 * Online engagement and support for our teachers and trainees
-* Upskill an existing employee by enrolling them into a boot camp 
+* Upskill an existing employee by enrolling them into a bootcamp 
 * Provide feedback and advice to trainees in one of our open Slack channels
 * Contribute to the training agenda with skills you think are important today
 * Help us prepare the trainees for hiring processes with employability guidance
@@ -55,7 +55,7 @@ It goes without saying that 2020 was a tough year for everyone, but we’re look
 
 ## Take your own business to the next level 
 
-These virtual boot camps will also give employers in West Yorkshire direct access to people trained in those in-demand skills, helping businesses like you find and hire the talent you need.
+These virtual bootcamps will also give employers in West Yorkshire direct access to people trained in those in-demand skills, helping businesses like you find and hire the talent you need.
 
 So, by working with us on this project, you’ll also be able to:
 
