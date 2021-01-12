@@ -1,14 +1,14 @@
 ---
 title: "Try Yourself Out as a Software Testing Professional "
 meta_title: "Try Yourself Out as a Software Testing Professional "
-meta_description: Our software testing boot camp is a one-of-a-kind chance to
+meta_description: Our software testing bootcamp is a one-of-a-kind chance to
   learn new digital skills, create job opportunities, and boost your
   employability, putting you on the path to a more rewarding career.
 time: 6 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/testing.jpg
-excerpt: Our software testing boot camp is a one-of-a-kind chance to learn new
+excerpt: Our software testing bootcamp is a one-of-a-kind chance to learn new
   digital skills, create job opportunities, and boost your employability,
   putting you on the path to a more rewarding career.
 date: 2020-12-10T21:52:58.775Z
@@ -16,7 +16,7 @@ tags:
   - blog
   - Digital Skills
 ---
-Our software testing boot camp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
+Our software testing bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals. Starting in January, this will help put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
@@ -64,14 +64,14 @@ In the first part of this course you’ll learn what testing means and why it’
 
 ### Course Details 
 
-#### When will the boot camps run?
+#### When will the bootcamps run?
 
-* These boot camps will run between January 2021 and March 2021 
-* Each boot camp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
+* These bootcamps will run between January 2021 and March 2021 
+* Each bootcamp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
 
 #### Where will they be held? 
 
-* These boot camps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
+* These bootcamps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
 * We'll hold a mixture of instructor-led seminars, interactive group training sessions, more general webinars, and work to do in your own time
 
 #### How will you take part? 
@@ -109,6 +109,6 @@ Apply today
 
 ## Even More Free Skills Bootcamps
 
-There are more skills boot camps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
+There are more skills bootcamps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
 
 ![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
