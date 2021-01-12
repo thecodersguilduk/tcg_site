@@ -1,14 +1,14 @@
 ---
 title: "Free Course: Discover User Experience Design "
 meta_title: "Discover User Experience Design "
-meta_description: Our user experience (UX) boot camp is a one-of-a-kind chance
-  to learn new digital skills, create job opportunities, and boost your
+meta_description: Our user experience (UX) bootcamp is a one-of-a-kind chance to
+  learn new digital skills, create job opportunities, and boost your
   employability, putting you on the path to a more rewarding career.
 time: 6 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/ux.jpg
-excerpt: Our user experience (UX) boot camp is a one-of-a-kind chance to learn
+excerpt: Our user experience (UX) bootcamp is a one-of-a-kind chance to learn
   new digital skills, create job opportunities, and boost your employability,
   putting you on the path to a more rewarding career.
 date: 2020-12-10T21:45:42.511Z
@@ -16,7 +16,7 @@ tags:
   - blog
   - Digital Skills
 ---
-Our user experience (UX) boot camp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
+Our user experience (UX) bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
 
 The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals. Starting in January, this will help put the challenges of 2020 behind you and get the new year off to a perfect start. 
 
@@ -62,14 +62,14 @@ Being well-versed in great UX design is a skill-set which is in high demand amon
 
 ## Course Details
 
-### **When will the boot camps run?**
+### **When will the bootcamps run?**
 
-* These boot camps will run between January 2021 and March 2021 
-* Each boot camp lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
+* These bootcamps will run between January 2021 and March 2021 
+* Each course lasts 12 weeks, and is part-time (roughly between 8 and 16 hours per week on average) 
 
 ### Where will they be held? 
 
-* These boot camps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
+* These bootcamps will be delivered entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown 
 * We will hold a mixture of instructor-led seminars, interactive group training sessions, more general webinars, and work to do in your own time
 
 ### How will you take part? 
