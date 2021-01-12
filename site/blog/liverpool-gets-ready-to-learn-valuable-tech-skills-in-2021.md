@@ -40,7 +40,7 @@ That’s why the government is investing £2.5 billion for the National Skills F
 
 As the country starts to get on the road to recovery from the pandemic, we’ve been tasked with helping people in Liverpool gain valuable, relevant digital skills, which will allow you to realise your full potential for a brighter future in 2021 and beyond.
 
-We have a long list of businesses of all shapes and sizes across the Liverpool City Region area who are actively looking to hire talented people like you through this programme, with the large number of coding and developer jobs set to keep rising over the next few years.
+We have a long list of businesses of all shapes and sizes across the Liverpool City Region who are actively looking to hire talented people like you through this programme, with the large number of coding and developer jobs set to keep rising over the next few years.
 
 In addition to direct access to those employers, participating in these courses will also give you:
 
