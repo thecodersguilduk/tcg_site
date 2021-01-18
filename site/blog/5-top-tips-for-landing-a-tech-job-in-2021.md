@@ -5,7 +5,7 @@ meta_description: In this article, we share our five top tips to help you
   successfully pursue an exciting new career in tech in 2021.
 time: 6 minutes
 author: Crispin Read
-avatar: .
+avatar: ../team/crispin.jpeg
 featured_image: /images/blog/training.jpg
 excerpt: In this article, we share our five top tips to help you successfully
   pursue an exciting new career in tech in 2021.
@@ -18,7 +18,7 @@ Despite 2020 presenting many unexpected challenges, the tech industry has contin
 
 The challenges of 2020 came thick and fast, with many people sadly losing jobs, being put on furlough, and businesses everywhere struggling to make ends meet. 
 
-But one industry which has continued to thrive is the tech industry, with digital skills like app development, UX design, and coding, all coming into higher demand than ever among employers.
+But [one industry which has continued to thrive is the tech industry, with digital skills like app development, UX design, and coding, all coming into higher demand](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/) than ever among employers.
 
 According to data from job search engine Adzuna and industry network Tech Nation, [UK tech employment has increased by 11% in two years](https://www-yorkshirepost-co-uk.cdn.ampproject.org/c/s/www.yorkshirepost.co.uk/business/how-leeds-tech-sector-attracted-435m-venture-capital-investment-2020-3085073?amp). 
 
@@ -26,13 +26,13 @@ That demand for developers and other technical employees is set to continue incr
 
 As people continue to distance, isolate, and learn to work remotely, technology is having to rapidly evolve to facilitate this ‘new normal’. We’ve seen businesses everywhere being forced to go digital, and the technology companies tasked with developing these apps and solutions have been busier than ever.
 
-### Our Top Tips 
+### Our Top Tips
 
 With that in mind, now is the perfect time to get into the tech industry for anyone looking for a fresh start or a change of pace, especially if your previous job has been compromised during the pandemic. 
 
 In this article, we’ll share our five top tips to help you successfully pursue an exciting new career in tech in 2021.
 
-#### 1 - Find a specific area of interest 
+#### 1 - Find a specific area of interest
 
 There are hundreds of different tech jobs out there these days. The industry is so vast and ever-expanding, so even if you’re training to become a developer there are a huge number of different languages and frameworks that you could specialise in. 
 
@@ -44,7 +44,7 @@ If you’re able to use creativity to solve problems, and have empathy for how o
 
 Of course, it’s always important to remain open and flexible to learn new things, and the more skills you have the easier you’ll find it to progress in your career. But if you’re just getting started it’s beneficial to aim for a specific area so you have a clear idea of what you’re trying to achieve in the short-term. 
 
-#### 2 - Be aware of how your existing skills can apply 
+#### 2 - Be aware of how your existing skills can apply
 
 Something that many beginners don’t realise is that even if you don’t have any past training or education in IT, **you probably still have plenty of existing skills that can help you excel in a new tech job**.
 
@@ -63,7 +63,7 @@ Play to your strengths and be aware of your existing capabilities. Even if your 
 
 Not only will this give you extra confidence in your own strength as a candidate, it will show your employers that you understand what they’re looking for and that you’ve proven you can deliver what they need. 
 
-#### 3 - Manage your digital reputation and networking 
+#### 3 - Manage your digital reputation and networking
 
 We’re all aware of how pervasive and accessible social media is today. Everyone has a voice online now, and many people are used to having open conversations about everything from TV shows to politics in the public arena. But it’s important to remember that everything you do and say online will stay there, and will be available for future employers and colleagues to see if they need to do a quick search. 
 
@@ -88,7 +88,7 @@ This is a great way to gain experience in the areas you’re looking to launch a
 
 This could actually mean that, when it comes to an interview, you’re able to differentiate yourself from all the other candidates and stand out from the crowd. You can show that you’re able to manage the same type of work that employers will be looking for without the incentive of getting paid to do it, which is an excellent way to boost your employability. 
 
-#### 5 - Keep yourself constantly learning 
+#### 5 - Keep yourself constantly learning
 
 With almost every IT job around today, you’ll find that you will always be learning on the job. Nothing ever stands still in tech. So, to get a job like that, you should try to demonstrate to employers that you’re someone who is actively learning all the time, and also show that you’re always looking ahead to what you’ll be learning next. 
 
@@ -110,7 +110,7 @@ Following our five tips will help you boost your employability and give you a gr
 
 Of course, **if you have any questions or need any more guidance, please [don’t hesitate to get in touch with us directly and we’ll be happy to help.](https://thecodersguild.org.uk/contact-us/)** 
 
-#### Take Your First Step Today 
+#### Take Your First Step Today
 
 At the Coders Guild, it’s our mission to ensure that tech education is as accessible as possible for everyone in the UK, regardless of education, background, prior experience, or anything else! 
 
