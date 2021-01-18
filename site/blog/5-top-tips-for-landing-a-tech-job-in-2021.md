@@ -114,7 +114,7 @@ Of course, **if you have any questions or need any more guidance, please [don’
 
 At the Coders Guild, it’s our mission to ensure that tech education is as accessible as possible for everyone in the UK, regardless of education, background, prior experience, or anything else! 
 
-We have a wide range of free training courses, apprenticeship programmes, and plenty of other exciting opportunities for people of all ages and abilities. 
+We have a wide range of free training courses, apprenticeship programmes, and plenty of other exciting opportunities for people of all ages and abilities. [](https://thecodersguild.org.uk/blog/liverpool-gets-ready-to-learn-valuable-tech-skills-in-2021/)
 
-* **[Free Digital Skills Training for Liverpool ](https://thecodersguild.org.uk/blog/liverpool-gets-ready-to-learn-valuable-tech-skills-in-2021/)**
-* **[Free Digital Skills Training for West Yorkshire](https://thecodersguild.org.uk/blog/free-tech-boot-camps-for-west-yorkshire/)**
+* **[Free Digital Skills Training for Liverpool City Region](https://thecodersguild.org.uk/blog/liverpool-gets-ready-to-learn-valuable-tech-skills-in-2021/)**
+* [](https://thecodersguild.org.uk/blog/liverpool-gets-ready-to-learn-valuable-tech-skills-in-2021/)**[Free Digital Skills Training for West Yorkshire](https://thecodersguild.org.uk/blog/free-tech-boot-camps-for-west-yorkshire/)**
