@@ -21,8 +21,6 @@ tags:
 
 .
 
-Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been forced to adapt their career path due to the ongoing lockdown, now is the perfect time to learn digital skills that will open up exciting new career opportunities. In this article, we’ll detail our five top tips to help you successfully pursue an exciting new career in tech in 2021.
-
 The challenges of 2020 came thick and fast, with many people sadly losing jobs, being put on furlough, and businesses everywhere struggling to make ends meet. 
 
 But [one industry which has continued to thrive is the tech industry, with digital skills like app development, UX design, and coding, all coming into higher demand](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/) than ever among employers.
