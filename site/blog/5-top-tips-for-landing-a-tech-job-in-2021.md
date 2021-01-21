@@ -15,9 +15,9 @@ tags:
   - Digital Skills
   - blog
 ---
-***Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been made redundant or forced to adapt their career plans due to the ongoing restrictions of lockdown, now is the perfect time to learn a digital skill that will present a whole host of exciting new career opportunities.*** 
+***Despite 2020 being full of unexpected challenges, the tech industry has continued to thrive. For anyone who has been made redundant or forced to adapt their career plans due to the ongoing restrictions of lockdown, now is the perfect time to learn a digital skill that will present a whole host of exciting new career opportunities.*** 
 
-***In this article, we'll detail our five top tips to help you successfully pursue a rewarding new career in tech in 2021.*** 
+***In this article, I've detailed my five top tips to help you successfully pursue a rewarding new career in tech in 2021.*** 
 
 - - -
 
@@ -27,13 +27,13 @@ But [one industry which has continued to thrive is the tech industry, with digit
 
 According to data from job search engine Adzuna and industry network Tech Nation, [UK tech employment has increased by 11% in two years](https://www-yorkshirepost-co-uk.cdn.ampproject.org/c/s/www.yorkshirepost.co.uk/business/how-leeds-tech-sector-attracted-435m-venture-capital-investment-2020-3085073?amp). 
 
-And that demand for developers and technical employees is set to continue increasing this year as businesses all over the country hold on to some of the new trends introduced as a result of lockdown, such as remote working. 
+And that demand for developers and technical employees is set to continue increasing this year as businesses all over the country hold on to some of the new trends introduced during lockdown, such as remote working. 
 
-As people continue to stay home, socially distance, and learn to work in innovative new ways, technology will have to keep evolving to facilitate this ‘new normal’. We’ve seen businesses of all shapes and sizes being forced to go digital, and as a result they're now on the lookout for new employees to help develop the apps and solutions they need.
+As we all continue to stay home, socially distance, and learn to work in innovative new ways, technology will have to keep evolving to facilitate this ‘new normal’. We’ve seen businesses of all shapes and sizes being forced to go digital, and as a result they're now on the lookout for new employees to help develop the apps and solutions they need.
 
 ### Our Top Tips
 
-With that in mind, now is the perfect time to start training for a job in tech, whether you're looking for a fresh start or a change of pace, or if your previous career has been compromised because of the pandemic. 
+With that in mind, now is the perfect time to start training for a job in tech, whether you're looking for a fresh start or a change of pace, or perhaps if your previous career has been compromised because of the pandemic. 
 
 In this article, we’ll share our five top tips to help you successfully pursue an exciting new career in tech in 2021.
 
@@ -41,7 +41,7 @@ In this article, we’ll share our five top tips to help you successfully pursue
 
 There are hundreds of different tech jobs out there these days. The industry is so vast and ever-expanding, so even if you train to become a developer there are a huge number of different languages and frameworks you could specialise in. 
 
-We’d suggest doing your research into the current tech landscape and decide what role you’d be most interested in, and try to stay focused on that. 
+Make sure to do your research into the current tech landscape first and decide what role you’d be most interested in, and try to stay focused on that. 
 
 For example, if you’re an observant, curious person with good attention to detail, or have a particularly process-driven way of thinking, chances are you’d make a great software tester. 
 
@@ -71,15 +71,15 @@ Not only will this give you extra confidence in your own strength as a candidate
 
 #### 3 - Take care with your digital reputation and network
 
-We’re all aware of how pervasive and accessible social media is today. Everyone has a voice online now, and many people are used to having open conversations with strangers in the public arena about anything from TV shows to politics. But it’s important to remember that everything you do and say online will stay there, and will be available for future employers and colleagues to see if they need to do a quick search into their applicants. 
+We’re all aware of how pervasive social media is today. Everyone has a voice online now, and many people are used to having open conversations with strangers in the public arena about anything from TV shows to politics. But it’s important to remember that everything you do and say online will stay there, and will be available for future employers and colleagues to see if they need to do a quick search into their applicants. 
 
 Your ‘personal branding’ and digital reputation are so important these days, even if you don’t feel like that’s something you have to worry about right now. Always be aware of how you’re presenting yourself to the world online.
 
-On a more positive note, this works just as well as an opportunity to put yourself in a good position for future jobs, by actively engaging in online discussions relevant to your career interests. Contributing to online communities in a constructive way will get you noticed, build valuable relationships, and could even make the difference between yourself and a less proactive candidate when applying for a tech job.
+On a more positive note, this works just as well as an opportunity to put yourself in a good position for future jobs, by actively engaging in online discussions relevant to your career interests. Contributing to online communities in a constructive way will get you noticed, build valuable relationships, and could even make the difference between you and a less proactive candidate when applying for a tech job.
 
-You can share your opinions and ideas, which will demonstrate your passion for the industry. This is a great way to show you’re willing to go the extra mile, which suggests you'll be fully invested in your role when you eventually begin work. 
+You can share your opinions and ideas, which will demonstrate your passion for the industry. This is a great way to show you’re willing to go the extra mile, and it will suggest to employers you'll be fully invested in your role when you eventually begin work. 
 
-You can also use this to build a strong support network. For example, if you engage and connect with people in similar roles to the one you’re applying for, you could ask for useful advice or tips that they found useful when they were in your position.
+You can also use this to build a strong support network. For example, if you engage and connect with people in similar roles to the one you’re applying for, you could ask for useful advice or tips that they found useful back when they were in your position.
 
 #### 4 - Get yourself a 'side-hustle'
 
