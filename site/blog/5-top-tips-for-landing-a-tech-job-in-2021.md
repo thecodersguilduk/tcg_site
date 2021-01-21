@@ -15,7 +15,9 @@ tags:
   - Digital Skills
   - blog
 ---
-***Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been forced to adapt their career plans due to the ongoing restrictions of lockdown, now is the perfect time to learn a digital skill which will open up exciting new career opportunities. In this article, we'll detail our five top tips to help you successfully pursue a rewarding new career in tech in 2021.*** 
+***Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been forced to adapt their career plans due to the ongoing restrictions of lockdown, now is the perfect time to learn a digital skill which will open up exciting new career opportunities.*** 
+
+***In this article, we'll detail our five top tips to help you successfully pursue a rewarding new career in tech in 2021.*** 
 
 - - -
 
