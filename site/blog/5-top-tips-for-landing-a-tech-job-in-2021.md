@@ -19,7 +19,7 @@ tags:
 
 - - -
 
-.
+
 
 The challenges of 2020 came thick and fast, with many people sadly losing jobs, being put on furlough, and businesses everywhere struggling to make ends meet. 
 
