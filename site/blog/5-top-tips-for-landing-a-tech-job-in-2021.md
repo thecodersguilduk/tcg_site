@@ -13,7 +13,14 @@ date: 2021-01-18T11:02:30.426Z
 tags:
   - Apprenticeships
   - Digital Skills
+  - blog
 ---
+***The COVID-19 lockdown has forced life to slow down in many ways, but some SMEs in the UK have found they’ve never been busier. This article will explain how finding the right developer apprentice can provide you with a talented new developer to ease the strain on your team, allowing your business to continue to grow and succeed during a global pandemic.***
+
+- - -
+
+.
+
 Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been forced to adapt their career path due to the ongoing lockdown, now is the perfect time to learn digital skills that will open up exciting new career opportunities. In this article, we’ll detail our five top tips to help you successfully pursue an exciting new career in tech in 2021.
 
 The challenges of 2020 came thick and fast, with many people sadly losing jobs, being put on furlough, and businesses everywhere struggling to make ends meet. 
