@@ -13,6 +13,7 @@ date: 2021-01-18T11:02:30.426Z
 tags:
   - Apprenticeships
   - Digital Skills
+  - blog
 ---
 Despite 2020 presenting many unexpected challenges, the tech industry has continued to thrive. For anyone who has been forced to adapt their career path due to the ongoing lockdown, now is the perfect time to learn digital skills that will open up exciting new career opportunities. In this article, we’ll detail our five top tips to help you successfully pursue an exciting new career in tech in 2021.
 
