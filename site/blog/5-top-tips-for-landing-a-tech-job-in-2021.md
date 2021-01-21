@@ -29,13 +29,13 @@ According to data from job search engine Adzuna and industry network Tech Nation
 
 And that demand for developers and technical employees is set to continue increasing this year as businesses all over the country hold on to some of the new trends introduced during lockdown, such as remote working. 
 
-As we all continue to stay home, socially distance, and learn to work in innovative new ways, technology will have to keep evolving to facilitate this ‘new normal’. We’ve seen businesses of all shapes and sizes being forced to go digital, and as a result they're now on the lookout for new employees to help develop the apps and solutions they need.
+As we all continue to stay home, socially distance, and learn to work in innovative new ways, technology will have to keep evolving to facilitate this ‘new normal’. Businesses of all shapes and sizes are being forced to go digital, and as a result they're now on the lookout for new employees to help develop the apps and solutions they need.
 
 ### Our Top Tips
 
 With that in mind, now is the perfect time to start training for a job in tech, whether you're looking for a fresh start or a change of pace, or perhaps if your previous career has been compromised because of the pandemic. 
 
-In this article, we’ll share our five top tips to help you successfully pursue an exciting new career in tech in 2021.
+In this article, I've shared five top tips to help you successfully pursue an exciting new career in tech in 2021.
 
 #### 1 - Find a specific area of interest
 
@@ -104,7 +104,7 @@ For example, here at The Coders Guild, we’re currently running a range of digi
 
 You just have to make the effort to show employers that you’re keen to learn, and that you're taking responsibility to grow as a person and a candidate. Remember, you’ll need those same values to succeed when it comes to actually progressing through your career in tech. 
 
-As a bonus tip, we’d advise that you have an actual plan for your learning mapped out, whether it’s over the next month or the next year. Set some realistic goals for yourself and make a list of all the training you want to take on while you’re job-hunting. 
+As a bonus tip, have an actual plan for your learning mapped out, whether it’s over the next month or the next year. Set some realistic goals for yourself and make a list of all the training you want to take on while you’re job-hunting. 
 
 ### We’re Always Happy to Help
 
@@ -112,7 +112,7 @@ At The Coders Guild, we believe that digital skills training is the key to unloc
 
 Whether you’re in need of a new job following the misfortune of the past year, or just considering a career change, now is the perfect time to take advantage of the growing need for tech employees among UK businesses.
 
-Following our five tips will help you boost your employability and give you a great chance of ensuring 2021 will be a year to remember. Of course, **if you have any questions or need any more guidance, please [don’t hesitate to get in touch with us directly and we’ll be happy to help.](https://thecodersguild.org.uk/contact-us/)** 
+Following these five tips will help you boost your employability and give you a great chance of ensuring 2021 will be a year to remember. Of course, **if you have any questions or need any more guidance, please [don’t hesitate to get in touch with us directly and we’ll be happy to help.](https://thecodersguild.org.uk/contact-us/)** 
 
 #### Take Your First Step Today
 
