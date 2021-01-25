@@ -9,7 +9,7 @@ avatar: ../team/crispin.jpeg
 featured_image: /images/blog/snag_28a29315.png
 excerpt: In this article, we share our five top tips to help you successfully
   pursue an exciting new career in tech in 2021.
-date: 2021-01-18T11:02:30.426Z
+date: 2021-01-22T11:02:30.426Z
 tags:
   - Apprenticeships
   - Digital Skills
