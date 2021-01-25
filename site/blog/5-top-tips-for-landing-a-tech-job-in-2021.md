@@ -23,7 +23,7 @@ tags:
 
 The challenges of 2020 came thick and fast, with many people sadly losing jobs, being put on furlough, and businesses everywhere struggling to make ends meet. 
 
-But [one industry which has continued to thrive is the tech industry, with digital skills like app development, UX design, and coding, all coming into higher demand](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/) than ever.
+But [one industry which has continued to thrive is the tech industry, with digital skills like coding, cyber security, software testing, UX, data analysis, and digital marketing all coming into higher demand](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/) than ever.
 
 According to data from job search engine Adzuna and industry network Tech Nation, [UK tech employment has increased by 11% in two years](https://www-yorkshirepost-co-uk.cdn.ampproject.org/c/s/www.yorkshirepost.co.uk/business/how-leeds-tech-sector-attracted-435m-venture-capital-investment-2020-3085073?amp). 
 
