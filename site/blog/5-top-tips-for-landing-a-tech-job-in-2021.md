@@ -6,7 +6,7 @@ meta_description: In this article, we share our five top tips to help you
 time: 7 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/snag_28a29315.png
+featured_image: /images/blog/adobestock_234092537-min.jpeg
 excerpt: In this article, we share our five top tips to help you successfully
   pursue an exciting new career in tech in 2021.
 date: 2021-01-22T11:02:30.426Z
@@ -81,6 +81,8 @@ You can share your opinions and ideas, which will demonstrate your passion for t
 
 You can also use this to build a strong support network. For example, if you engage and connect with people in similar roles to the one you’re applying for, you could ask for useful advice or tips that they found useful back when they were in your position.
 
+![](/images/blog/snag_28a29315.png)
+
 #### 4 - Get yourself a 'side-hustle'
 
 Lots of people these days have a personal project they work on in their own time, often without getting paid to do it. For example, building and running your own blog using a system like WordPress. 
@@ -100,7 +102,7 @@ With almost every IT job around today, you’ll find that you will always be lea
 
 The key here is that it shouldn’t be seen as difficult or daunting because there are infinite resources available to do this, and most of them can be done for free. **Don’t think that a learning or training activity has to come with a high cost to provide valuable learning for you.** 
 
-This has become easier than ever in recent years, with a great deal of training now taking place remotely online. This means you can attend great courses without being limited by your location, and modern technology makes the experience seamless. You can see a nice example of one of our own online training sessions in the header image of this article.
+This has become easier than ever in recent years, with a great deal of training now taking place remotely online. This means you can attend great courses without being limited by your location, and modern technology makes the experience seamless. 
 
 For example, here at The Coders Guild, we’re currently running a range of digital skills bootcamps open to people in Liverpool City Region and West Yorkshire, teaching 12 weeks of interactive learning in app development, UX, and software testing. These courses are all government-funded as a way of driving continued growth and optimisation of the tech sector in the UK, so they’re available to learners completely free. 
 
