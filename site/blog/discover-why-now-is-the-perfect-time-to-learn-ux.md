@@ -7,7 +7,7 @@ meta_description: We caught up with Helena Hill to ask her a few questions about
 time: 4 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/ux.jpg
+featured_image: /images/blog/ux-min.jpg
 excerpt: We caught up with Helena Hill to ask her a few questions about her
   experiences working in UX and how she draws on that to inform her approach to
   teaching.
@@ -16,15 +16,15 @@ tags:
   - Digital Skills
   - Apprenticeships
 ---
-*This interview is part of a series where we’ll be shining the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a big group of talented professionals from all walks of life to help us deliver tech education, and we’re taking this opportunity to thank them for all their hard work by sharing their unique insights.*
-
-
+***This interview is part of a series where we’ll be shining the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a big group of talented professionals from all walks of life to help us deliver tech education, and we’re taking this opportunity to thank them for all their hard work by sharing their unique insights.***
 
 Helena Hill is a UX consultant with over 10 years’ experience, currently [working with us here The Coders Guild to provide digital skills training to people in West Yorkshire by helping us teach our UX bootcamps](https://thecodersguild.org.uk/blog/free-course-discover-user-experience-design/). 
 
 We caught up with Helena to ask her a few questions about her experiences working in UX and how she draws on that to inform her approach to teaching.  
 
-#### 1. Why do you think people interested in working in tech would benefit from taking a UX course today? 
+
+
+#### 1. Why do you think people interested in working in tech would benefit from taking a UX course today?
 
 User Experience and related disciplines are skills that are in huge demand right now. The digital economy is one of the few sectors that hasn't been adversely affected by the Covid-19 pandemic as organisations, both large and small, have had to transform quickly and need help to do so. 
 
@@ -65,10 +65,10 @@ In other words, the light bulb has well and truly come on now. By taking a more 
 
 *UX and service design training is a core area of work for Helena. She regularly delivers in-house corporate workshops and training courses for ambitious and growth-focused start-ups, SMEs, and global companies.*
 
-
-
 Go and [follow Helena over on Twitter by clicking here](https://twitter.com/HelenaHillUXCX). 
 
 You can also [connect with Helena on LinkedIn by clicking here](https://www.linkedin.com/in/helenajhill/).
 
-To be the first to know about the latest opportunities to take advantage of free digital skills training like the bootcamps Helena is currently teaching, as well as apprenticeship and employment opportunities all across the UK, become a member of The Coders Guild community by clicking here.
+
+
+**To be the first to know about the latest opportunities to take advantage of free digital skills training like the bootcamps Helena is currently teaching, as well as apprenticeship and employment opportunities all across the UK, become a member of The Coders Guild community by clicking here.**
