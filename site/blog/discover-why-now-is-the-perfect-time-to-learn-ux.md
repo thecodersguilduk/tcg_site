@@ -21,9 +21,13 @@ tags:
 
 - - -
 
-Helena Hill is a UX consultant with over 10 years’ experience, currently [working with us here The Coders Guild to provide digital skills training to people in West Yorkshire by helping us teach our UX bootcamps](https://thecodersguild.org.uk/blog/free-course-discover-user-experience-design/). 
+
+
+*Helena Hill is a UX consultant with over 10 years’ experience, currently [working with us here The Coders Guild to provide digital skills training to people in West Yorkshire by helping us teach our UX bootcamps](https://thecodersguild.org.uk/blog/free-course-discover-user-experience-design/).* 
 
 We caught up with Helena to ask her a few questions about her experiences working in UX and how she draws on that to inform her approach to teaching.  
+
+
 
 #### 1. Why do you think people interested in working in tech would benefit from taking a UX course today?
 
@@ -57,6 +61,12 @@ In the words of a famous sports brand, just do it! Experience Design is an extre
 I'm not sure there's anything I wish I'd known, but I do wish that I'd started earlier than I did! Saying that, it's only really in the last five or 10 years that some organisations have started to approach UX as a strategic growth tool.
 
 In other words, the light bulb has well and truly come on now. By taking a more user-centric approach, businesses are now starting to reap the rewards, and so as more businesses realise that we will see continued rise in the demand for UX professionals. 
+
+
+
+- - -
+
+
 
 *[Helena Hill is a user experience and service design consultant](https://www.helenahill.com/) with expertise in digital transformation, customer and user-centric strategy, user interface design, and information architecture.*
 
