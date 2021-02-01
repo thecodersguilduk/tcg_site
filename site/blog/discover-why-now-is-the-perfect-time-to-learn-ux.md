@@ -71,4 +71,4 @@ You can also [connect with Helena on LinkedIn by clicking here](https://www.link
 
 
 
-**To be the first to know about the latest opportunities to take advantage of free digital skills training like the bootcamps Helena is currently teaching, as well as apprenticeship and employment opportunities all across the UK, become a member of The Coders Guild community by clicking here.**
+**To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Helena is currently teaching, as well as apprenticeship and employment opportunities all across the UK, become a member of The Coders Guild community by clicking here.**
