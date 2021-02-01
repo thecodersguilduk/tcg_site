@@ -6,8 +6,8 @@ meta_description: We caught up with Helena Hill to ask her a few questions about
   to teaching.
 time: 4 minutes
 author: Crispin Read
-avatar: .
-featured_image: /images/blog/4.jpg
+avatar: ../team/crispin.jpeg
+featured_image: /images/blog/ux.jpg
 excerpt: We caught up with Helena Hill to ask her a few questions about her
   experiences working in UX and how she draws on that to inform her approach to
   teaching.
