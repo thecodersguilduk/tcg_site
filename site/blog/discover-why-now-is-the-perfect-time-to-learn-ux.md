@@ -15,6 +15,7 @@ date: 2021-01-28T14:41:12.284Z
 tags:
   - Digital Skills
   - Apprenticeships
+  - blog
 ---
 ***This interview is part of a series where we’ll be shining the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a big group of talented professionals from all walks of life to help us deliver tech education, and we’re taking this opportunity to thank them for all their hard work by sharing their unique insights.***
 
