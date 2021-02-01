@@ -17,7 +17,7 @@ tags:
   - Apprenticeships
   - blog
 ---
-***This interview is part of a series where we’ll be shining the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a big group of talented professionals from all walks of life to help us deliver tech education, and we’re taking this opportunity to thank them for all their hard work by sharing their unique insights.***
+**This interview is part of a series where we’ll be shining the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a big group of talented professionals from all walks of life to help us deliver tech education, and we’re taking this opportunity to thank them for all their hard work by sharing their unique insights.**
 
 Helena Hill is a UX consultant with over 10 years’ experience, currently [working with us here The Coders Guild to provide digital skills training to people in West Yorkshire by helping us teach our UX bootcamps](https://thecodersguild.org.uk/blog/free-course-discover-user-experience-design/). 
 
@@ -66,9 +66,7 @@ In other words, the light bulb has well and truly come on now. By taking a more 
 
 *UX and service design training is a core area of work for Helena. She regularly delivers in-house corporate workshops and training courses for ambitious and growth-focused start-ups, SMEs, and global companies.*
 
-Go and [follow Helena over on Twitter by clicking here](https://twitter.com/HelenaHillUXCX). 
-
-You can also [connect with Helena on LinkedIn by clicking here](https://www.linkedin.com/in/helenajhill/).
+*Go and [follow Helena over on Twitter here](https://twitter.com/HelenaHillUXCX). You can also [connect with Helena on LinkedIn here](https://www.linkedin.com/in/helenajhill/).*
 
 
 
