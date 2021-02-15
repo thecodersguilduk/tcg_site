@@ -1,6 +1,6 @@
 ---
-title: Software Testing is More Than a Job, it's a Community
-meta_title: Software Testing is More Than a Job, it's a Community
+title: Software Testing is More Than a Job, it's Becoming Part of a Community
+meta_title: Software Testing is More Than a Job, it's Becoming Part of a Community
 meta_description: We asked Ady Stokes a few questions about his experiences
   working in software testing, and how he draws on that to inform his approach
   to teaching.
