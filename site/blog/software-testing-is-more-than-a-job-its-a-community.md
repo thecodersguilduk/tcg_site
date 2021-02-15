@@ -17,9 +17,9 @@ tags:
   - Apprenticeships
   - blog
 ---
-#### This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we are taking this opportunity to thank them for all their hard work by telling their unique stories.
+#### This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we're taking this opportunity to thank them for all their hard work by telling their unique stories.
 
-*Ady Stokes is an experienced Test Engineer and Accessibility Specialist, currently based in West Yorkshire. He is currently working with us to provide digital skills training to local future apprentices by helping us teach [our software testing bootcamps](https://thecodersguild.org.uk/blog/try-yourself-out-as-a-software-testing-professional/).* 
+*Ady Stokes is an experienced Test Engineer and Accessibility Specialist based in West Yorkshire. He is currently working with us to provide digital skills training to a group of talented learners from the local area by helping us teach [our software testing bootcamps](https://thecodersguild.org.uk/blog/try-yourself-out-as-a-software-testing-professional/).* 
 
 We caught up with Ady to ask him a few questions about his experiences working in software testing, and how he draws on that to inform his approach to teaching.
 
@@ -29,11 +29,11 @@ You mean other than to meet me and all the other wonderful trainers working with
 
 Testing is such a rewarding craft, as it means you get to contribute to the way people experience software, mobile apps, and the Internet. Ever been frustrated trying to do something online? By learning to become a tester you can be the person to solve those problems! 
 
-I have to also mention the tremendous community that has built up around software testing. It’s not just a job; I have friends I’ve made, both in real life and online, from all round the world through my time in software testing, and that has been so helpful during these difficult times. 
+I have to also mention the tremendous community that has built up around software testing as well. It’s not just a job; I have friends I’ve made, both in real life and online, from all round the world through my time in software testing, and that has been so helpful during the difficulties of lockdown. 
 
 #### 2. What key things have people been learning on your course with us here at The Coders Guild?
 
-Firstly, they're answering the question, "what is software testing?" It’s easy to think that anyone can test. To an extent, that is true, but to do this professionally you need knowledge, discipline, an open mind, and the ability to think from many different perspectives. This course is the beginning of all that, and I’ve been delighted to see our excellent participants so eager to learn. 
+Firstly, they're answering the question, "what is software testing?" It’s easy to think that anyone can test. To an extent that is true, but to do this professionally you need knowledge, discipline, an open mind, and the ability to think from many different perspectives. This course is the beginning of all that, and I’ve been delighted to see our excellent participants so eager to learn. 
 
 These trainees are also getting an understanding of the size of the testing universe, as well as all the different ways software can be tested and the different areas and specialisms that can be learnt. And, of course, how fantastically awesome the craft is!
 
@@ -49,8 +49,10 @@ I think it’s also important to point out that you don’t need to know how to 
 
 Absolutely. I’m passionate about accessibility, exploring, and testing as part of the creation and development of software. I strongly believe in collaborative methods and using different thought techniques and people perspectives to look at things from many angles.
 
-I now have my own blog at The Big Test Theory where I share my thoughts, occasional poetry, and my Periodic Table of Testing, which is a visual heuristic showing the breadth of the testing universe.
+I now have my own blog at [The Big Test Theory](https://www.thebigtesttheory.com/) where I share my thoughts, occasional poetry, and my Periodic Table of Testing, which is a visual heuristic showing the breadth of the testing universe.
 
-You can [follow Ady on Twitter here @CricketRulz](https://twitter.com/CricketRulz) and you can also [connect with him on LinkedIn as well](https://www.linkedin.com/in/adystokes/). 
+*You can [follow Ady on Twitter here @CricketRulz](https://twitter.com/CricketRulz) and you can also [connect with him on LinkedIn as well](https://www.linkedin.com/in/adystokes/).* 
+
+
 
 ***To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Ady is currently teaching, as well as apprenticeship and employment opportunities all across the UK, [don't hesitate to get in touch with a member of our team today](https://thecodersguild.org.uk/contact-us/).***
