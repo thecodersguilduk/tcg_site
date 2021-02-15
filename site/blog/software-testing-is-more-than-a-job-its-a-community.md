@@ -1,6 +1,6 @@
 ---
-title: Software Testing is More Than a Job, it's Becoming Part of a Community
-meta_title: Software Testing is More Than a Job, it's Becoming Part of a Community
+title: Software Testing is More Than a Job, it's a Community
+meta_title: Software Testing is More Than a Job, it's a Community
 meta_description: We asked Ady Stokes a few questions about his experiences
   working in the software testing community, and how he draws on that to inform
   his approach to teaching.
@@ -17,7 +17,7 @@ tags:
   - Apprenticeships
   - blog
 ---
-##### This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we are taking this opportunity to thank them for all their hard work by telling their unique stories.
+#### This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we are taking this opportunity to thank them for all their hard work by telling their unique stories.
 
 *Ady Stokes is an experienced Test Engineer and Accessibility Specialist, currently based in West Yorkshire. He is currently working with us to provide digital skills training to local future apprentices by helping us teach [our software testing bootcamps](https://thecodersguild.org.uk/blog/try-yourself-out-as-a-software-testing-professional/).* 
 
@@ -51,10 +51,6 @@ Absolutely. I’m passionate about accessibility, exploring, and testing as part
 
 I now have my own blog at The Big Test Theory where I share my thoughts, occasional poetry, and my Periodic Table of Testing, which is a visual heuristic showing the breadth of the testing universe.
 
-You can [follow me on Twitter here @CricketRulz](https://twitter.com/CricketRulz) and you can also [connect with me on LinkedIn as well](https://www.linkedin.com/in/adystokes/). 
-
-
-
-
+You can [follow Ady on Twitter here @CricketRulz](https://twitter.com/CricketRulz) and you can also [connect with him on LinkedIn as well](https://www.linkedin.com/in/adystokes/). 
 
 ***To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Ady is currently teaching, as well as apprenticeship and employment opportunities all across the UK, [don't hesitate to get in touch with a member of our team today](https://thecodersguild.org.uk/contact-us/).***
