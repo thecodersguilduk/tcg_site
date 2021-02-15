@@ -55,4 +55,6 @@ You can [follow me on Twitter here @CricketRulz](https://twitter.com/CricketRulz
 
 
 
+
+
 ***To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Ady is currently teaching, as well as apprenticeship and employment opportunities all across the UK, [don't hesitate to get in touch with a member of our team today](https://thecodersguild.org.uk/contact-us/).***
