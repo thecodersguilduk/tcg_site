@@ -2,26 +2,28 @@
 title: Software Testing is More Than a Job, it's Becoming Part of a Community
 meta_title: Software Testing is More Than a Job, it's Becoming Part of a Community
 meta_description: We asked Ady Stokes a few questions about his experiences
-  working in software testing, and how he draws on that to inform his approach
-  to teaching.
+  working in the software testing community, and how he draws on that to inform
+  his approach to teaching.
 time: 5 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/dan-munday-react-training.jpg
+featured_image: /images/blog/patrick-tomasso-fmnti8haab8-unsplash-min.jpg
 excerpt: We asked Ady Stokes a few questions about his experiences working in
-  software testing, and how he draws on that to inform his approach to teaching.
+  the software testing community, and how he draws on that to inform his
+  approach to teaching.
 date: 2021-02-15T09:49:58.396Z
 tags:
   - Digital Skills
   - Apprenticeships
+  - blog
 ---
-This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we are taking this opportunity to thank them for all their hard work by telling their unique stories.
+##### This interview is part of a series of articles where we shine the spotlight on our wonderful community of teachers, trainers, instructors, and mentors. We work with a number of talented tech professionals from all walks of life, and we are taking this opportunity to thank them for all their hard work by telling their unique stories.
 
 *Ady Stokes is an experienced Test Engineer and Accessibility Specialist, currently based in West Yorkshire. He is currently working with us to provide digital skills training to local future apprentices by helping us teach [our software testing bootcamps](https://thecodersguild.org.uk/blog/try-yourself-out-as-a-software-testing-professional/).* 
 
 We caught up with Ady to ask him a few questions about his experiences working in software testing, and how he draws on that to inform his approach to teaching.
 
-#### 1. Why do you think people interested in working in tech would benefit from taking a software testing course today? 
+#### 1. Why do you think people interested in working in tech would benefit from taking a software testing course today?
 
 You mean other than to meet me and all the other wonderful trainers working with The Coders Guild? Well, software testing is a brilliant way to get into the technology industry and, as everyone has seen over the last year, it’s an industry that can only keep growing. 
 
@@ -43,7 +45,7 @@ I came from an impoverished background, and in education there was little guidan
 
 I think it’s also important to point out that you don’t need to know how to write code or create software to be able to test it. If you want to learn software testing, you don’t necessarily have to be very technical to bring value to these roles. Although I should say it is useful to understand code and how software architecture works, but it’s not vital and that too can always be learned. 
 
-#### 4. Finally, can you share a bit more about your background, and where our readers can hear more from you? 
+#### 4. Finally, can you share a bit more about your background, and where our readers can hear more from you?
 
 Absolutely. I’m passionate about accessibility, exploring, and testing as part of the creation and development of software. I strongly believe in collaborative methods and using different thought techniques and people perspectives to look at things from many angles.
 
@@ -53,4 +55,4 @@ You can [follow me on Twitter here @CricketRulz](https://twitter.com/CricketRulz
 
 
 
-**To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Ady is currently teaching, as well as apprenticeship and employment opportunities all across the UK, [don't hesitate to get in touch with a member of our team today](https://thecodersguild.org.uk/contact-us/).**
+***To be the first to know about the latest opportunities to take advantage of free digital skills training, like the bootcamps Ady is currently teaching, as well as apprenticeship and employment opportunities all across the UK, [don't hesitate to get in touch with a member of our team today](https://thecodersguild.org.uk/contact-us/).***
