@@ -2,14 +2,14 @@
 title: Yorkshire is the Driving Force Behind the Future of the UK Tech Industry
 meta_title: Yorkshire is the Driving Force Behind the Future of the UK Tech Industry
 meta_description: Take advantage of a unique opportunity to close the gap in
-  your team’s digital skillset, promote diversity and equality within the
+  your team’s digital skill-set, promote diversity and equality within the
   workplace, and drive growth and success for the local tech industry.
 time: 3 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/illiya-vjestica-kpcqtd4h6ca-unsplash-min.jpg
 excerpt: Take advantage of a unique opportunity to close the gap in your team’s
-  digital skillset, promote diversity and equality within the workplace, and
+  digital skill-set, promote diversity and equality within the workplace, and
   drive growth and success for the local tech industry.
 date: 2021-02-22T06:52:40.449Z
 tags:
