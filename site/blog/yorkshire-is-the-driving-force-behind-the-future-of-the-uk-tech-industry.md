@@ -59,6 +59,8 @@ tags:
   </form>
 </div>
 
+&nbsp;
+
 Yorkshire has been chosen as the base for an exciting project to make tech education more accessible, create career opportunities for people from under-represented groups, and close the digital skills gap for local businesses.
 
 Since the start of this year, we’ve been providing comprehensive digital skills training to 135 talented people from the local area. Over 50% of those learners are female, and a large contingent come from the BAME community, with an emphasis on using this project to promote greater diversity and equality within the local tech industry. 
@@ -117,9 +119,11 @@ Join us in unlocking the full potential of the local community and help Yorkshir
   </form>
 </div>
 
-> The Coders Guild trained our first apprentice from 2018 to summer 2020. He’s now a full-time member of our in-house dev team, and has been a huge success. We’re now recruiting for our next apprentice, with all training to be provided by The Coders Guild. From start to finish, The Coders Guild has given us first-class service and personalised developer training, providing us with the exact skills we needed.
+&nbsp;
 
- **Jim Semlyen, Owner and MD of Castlegate IT**
+> The Coders Guild trained our first apprentice from 2018 to summer 2020. He’s now a full-time member of our in-house dev team, and has been a huge success. We’re now recruiting for our next apprentice, with all training to be provided by The Coders Guild. From start to finish, The Coders Guild has given us first-class service and personalised developer training, providing us with the exact skills we needed. 
+>
+>  **Jim Semlyen, Owner and MD of Castlegate IT**
 
 We're extremely proud to have been [chosen for this important project, as one of a select few providers, by West Yorkshire Combined Authority](https://thecodersguild.org.uk/blog/join-us-in-shaping-the-next-generation-of-tech-talent-in-west-yorkshire/) and the Department for Education.
 
