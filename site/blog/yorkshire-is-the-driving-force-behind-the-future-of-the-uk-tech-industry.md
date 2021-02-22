@@ -128,6 +128,6 @@ Join us in unlocking the full potential of the local community and help Yorkshir
 
 “The Coders Guild trained our first apprentice from 2018 to summer 2020. He’s now a full-time member of our in-house dev team, and has been a huge success. We’re now recruiting for our next apprentice, with all training to be provided by The Coders Guild. From start to finish, The Coders Guild has given us first-class service and personalised developer training, providing us with the exact skills we needed.” Jim Semlyen, Owner and MD of Castlegate IT
 
-We're extremely proud to have been chosen for this important project, as one of a select few providers, by West Yorkshire Combined Authority and the Department for Education.
+We're extremely proud to have been [chosen for this important project, as one of a select few providers, by West Yorkshire Combined Authority](https://thecodersguild.org.uk/blog/join-us-in-shaping-the-next-generation-of-tech-talent-in-west-yorkshire/) and the Department for Education.
 
-Please don’t hesitate to get in touch if you have any questions or would like some more information about this project.
+Please [don’t hesitate to get in touch if you have any questions or would like some more information](https://thecodersguild.org.uk/contact-us/) about this project.
