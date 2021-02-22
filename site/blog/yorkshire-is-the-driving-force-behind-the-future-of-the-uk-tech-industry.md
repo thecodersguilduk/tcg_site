@@ -15,6 +15,7 @@ date: 2021-02-22T06:52:40.449Z
 tags:
   - Digital Skills
   - Apprenticeships
+  - blog
 ---
 #### Looking for your next tech superstar? Hire an expertly-trained apprentice and add today’s most in-demand digital and professional skills to your team.
 
