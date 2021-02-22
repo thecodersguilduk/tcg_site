@@ -18,8 +18,6 @@ tags:
 ---
 #### Looking for your next tech superstar? Hire an expertly-trained apprentice and add today’s most in-demand digital and professional skills to your team.
 
-
-
 <div class="overflow-hidden md:max-w-xs md:mx-auto">
   <div>
     <h2 class="leading-3xl text-2xl">Get Involved</h2>
@@ -59,8 +57,6 @@ tags:
     </div>
   </form>
 </div>
-
-
 
 Yorkshire has been chosen as the base for an exciting project to make tech education more accessible for everyone, create career opportunities for people from under-represented groups, and close the digital skills gap for local businesses in the process.
 
@@ -82,8 +78,6 @@ If you hire one of these course graduates as an apprentice, not only will you ga
 
 Join us in unlocking the full potential of the local community and help Yorkshire continue to drive the UK tech sector into the future. 
 
-
-
 <div class="overflow-hidden md:max-w-xs md:mx-auto">
   <div>
     <h2 class="leading-3xl text-2xl">Get Involved</h2>
@@ -126,7 +120,9 @@ Join us in unlocking the full potential of the local community and help Yorkshir
 
 
 
-“The Coders Guild trained our first apprentice from 2018 to summer 2020. He’s now a full-time member of our in-house dev team, and has been a huge success. We’re now recruiting for our next apprentice, with all training to be provided by The Coders Guild. From start to finish, The Coders Guild has given us first-class service and personalised developer training, providing us with the exact skills we needed.” Jim Semlyen, Owner and MD of Castlegate IT
+> The Coders Guild trained our first apprentice from 2018 to summer 2020. He’s now a full-time member of our in-house dev team, and has been a huge success. We’re now recruiting for our next apprentice, with all training to be provided by The Coders Guild. From start to finish, The Coders Guild has given us first-class service and personalised developer training, providing us with the exact skills we needed.
+
+ **Jim Semlyen, Owner and MD of Castlegate IT**
 
 We're extremely proud to have been [chosen for this important project, as one of a select few providers, by West Yorkshire Combined Authority](https://thecodersguild.org.uk/blog/join-us-in-shaping-the-next-generation-of-tech-talent-in-west-yorkshire/) and the Department for Education.
 
