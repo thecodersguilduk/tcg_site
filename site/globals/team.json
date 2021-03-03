@@ -43,7 +43,7 @@
     "occupation": "Lead Technical Trainer",
     "description": "Devising, delivering monitoring and improving our technical training. Alex is a very experienced web developer and qualified trainer and assessor too.",
     "social": {
-      "github": "https://github.com/alexcreode"
+      "github": "https://github.com/alexseymourdev"
     }
   },
   {
@@ -53,24 +53,6 @@
     "description": "Heads up progress reviews and on-course monitoring. Mark wrote is first bit of JavaScript in 1996 and it is <strong>still live</strong>. He has been working in technical apprenticeships for 8 years, our resident expert in all things ‘Apprenticeship Standards’ - delivery, quality and achievement.",
     "social": {
       "linkedin": "https://www.linkedin.com/in/mark-palmer-b171b35/"
-    }
-  },
-  {
-    "name": "Rachel",
-    "image": "../images/team/rachel.jpeg",
-    "occupation": "Apprenticeships Manager",
-    "description": "We get A LOT of applicants. Rachel makes sure they are all looked after, signposted, helped and supported through the initial stages. Getting them ready to be put forward for employment.",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/rachel-walker-3578ab165/"
-    }
-  },
-  {
-    "name": "Hannah",
-    "image": "../images/team/hannah.jpeg",
-    "occupation": "Industry Liaison",
-    "description": "Hannah heads up our connection to businesses, creating and nurturing strategic partnerships. She’s super passionate about sustainability, social impact and value striving to make positive changes to the way we all work.",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/hannah-oldfield-3732b2177/"
     }
   }
 ]
