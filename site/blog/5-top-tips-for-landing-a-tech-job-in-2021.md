@@ -92,7 +92,7 @@ This is a great way to gain experience in the areas you’re looking to launch a
 **This is so important these days for two reasons:** 
 
 1. Firstly, it’s a great story to discuss with potential employers, as it shows your own initiative, determination, and ability to work autonomously. It will give you examples of your skills, and you’ll be able to talk about what you learned, how you did it, and so on. This will probably be something you’re passionate about too, so it will also make the learning more interesting, enjoyable as a bonus for you.
-2. Secondly, it will give you learning and challenges to solve that you won’t face in training courses. These will be hands-on, real-world examples of problems you’ll faced that you can show evidence of solving to future employers. For example, adding a Shopify store to your website and figuring out how to use it to sell products.
+2. Secondly, it will give you learning and challenges to solve that you won’t face in training courses. These will be hands-on, real-world examples of problems you’ll have faced that you can show evidence of solving to future employers. For example, adding a Shopify store to your website and figuring out how to use it to sell products.
 
 This could actually mean that, when it comes to a job interview, you’re able to really stand out from the crowd. You can show that you’re able to manage the same type of work that employers will be looking for without the incentive of getting paid to do it, which is an excellent way to boost your employability. 
 
