@@ -16,7 +16,9 @@ tags:
   - blog
   - Digital Skills
 ---
-#### Our web and app development bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals.
+#### Our web and app development bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
+
+#### The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals.
 
 **We’re very pleased to announce that we have already run one course between January and March, which was an overwhelming success. As a result, we’re excited to confirm that we'll be extending this programme to run additional courses between April and July 2021.** 
 
