@@ -71,7 +71,7 @@ Course participants have been trained by experienced professionals in digital sk
 
 If you take advantage of this unique opportunity to hire one of these course graduates as an apprentice, not only will you add an extremely valuable new member to your team, you’ll also gain a range of additional benefits, including: 
 
-* **£2,000 government funding per apprentice** 
+* **Up to £4,000 government funding per apprentice** 
 * **Competitive differentiation** 
 * **Free industry-led training**
 * **Support through the hiring process**
