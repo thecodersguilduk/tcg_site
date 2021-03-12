@@ -24,7 +24,7 @@ tags:
 
 Spaces are limited, so don’t hesitate to register your interest today!  
 
-<a href="https://skills-bootcamp-ux.tcg.camp/apply" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
+<a href="https://skills-bootcamp-ux.tcg.camp" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 ![Looking to get back on your feet? WYCA Skills Bootcamps - Man studies from his laptop](/images/blog/4.jpg "WYCA Skills Bootcamps")
 
@@ -60,7 +60,7 @@ You’ll gain a full understanding of how we design and develop better digital s
 
 Being well-versed in great UX design is a skill-set which is in high demand among employers right now, and that demand is only set to continue rising in 2021 and beyond.
 
-<a href="https://skills-bootcamp-ux.tcg.camp/apply" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
+<a href="https://skills-bootcamp-ux.tcg.camp" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 ## Course Details
 
@@ -94,7 +94,7 @@ We know times are tough right now. But we can help you learn valuable new digita
 <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center"><div class="lg:mr-4 lg:mb-0 mb-6"><img class="h-10 w-10 block" alt="" src="/images/logo/TGC_Square_Logo_White.svg"></div><div class="cta__text"><p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">
 Register for this FREE digital skills boot camp training here
 </p></div>
-<div class="lg:ml-auto"><a href="https://skills-bootcamp-ux.tcg.camp/apply" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
+<div class="lg:ml-auto"><a href="https://skills-bootcamp-ux.tcg.camp" class=" text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" >
 Apply today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
