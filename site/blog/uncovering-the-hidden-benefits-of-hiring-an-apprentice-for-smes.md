@@ -2,13 +2,14 @@
 title: Uncovering the Hidden Benefits of Hiring an Apprentice Developer for SMEs
 meta_title: Uncovering the Hidden Benefits of Hiring an Apprentice Developer for SMEs
 meta_description: In this article, we’ll uncover some of the lesser known
-  business benefits that can be achieved by hiring an apprentice for SMEs.
+  business benefits that can be achieved by hiring an apprentice developer for
+  SMEs.
 time: 6 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/testing.jpg
 excerpt: In this article, we’ll uncover some of the lesser known business
-  benefits that can be achieved by hiring an apprentice for SMEs.
+  benefits that can be achieved by hiring an apprentice developer for SMEs.
 date: 2021-03-29T10:08:14.316Z
 tags:
   - Apprenticeships
