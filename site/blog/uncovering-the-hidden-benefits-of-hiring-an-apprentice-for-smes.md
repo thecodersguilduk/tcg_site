@@ -1,6 +1,6 @@
 ---
-title: Uncovering the Hidden Benefits of Hiring an Apprentice Developer for SMEs
-meta_title: Uncovering the Hidden Benefits of Hiring an Apprentice Developer for SMEs
+title: "The Hidden Benefits of Hiring an Apprentice Every Business Needs to Know "
+meta_title: "The Hidden Benefits of Hiring an Apprentice Every Business Needs to Know "
 meta_description: In this article, we’ll uncover some of the lesser known
   business benefits that can be achieved by hiring an apprentice developer for
   SMEs.
@@ -103,6 +103,4 @@ You’ll likely appreciate that you simply don’t have the time or headspace to
 
 We’ve been working with businesses like yours for almost 10 years, helping mentor their talented apprentices, as we believe that this kind of digital skills training is the key to unlocking the full potential of the technology industry in the UK. 
 
-In that time, we’ve seen apprentices make significant differences to the teams they’ve joined, improving quality of work, contributing new ideas, and bolstering output, all while learning as they go.
-
-If you’re interested in learning more about the ways in which we work with SMEs to create bespoke programmes which deliver on specific business needs, [read our article here for additional info](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/).
+In that time, we’ve seen apprentices make significant differences to the teams they’ve joined, improving quality of work, contributing new ideas, and bolstering output, all while learning as they go. To learn more about the ways in which we work with SMEs to create bespoke programmes which deliver on specific business needs, [read our article here for additional info](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/).
