@@ -16,19 +16,18 @@ tags:
   - Digital Skills
   - blog
 ---
-#### On top of the well known advantages businesses gain when they hire an apprentice developer, there are also plenty of hidden benefits which only begin to take shape once you actually start working with one yourself. In this article, we’ll uncover some of the lesser known benefits that can be achieved when hiring an apprentice developer for SMEs. 
+#### On top of the well known advantages businesses gain when they hire an apprentice developer, there are also plenty of hidden benefits which only begin to take shape once you actually start working with one yourself. In this article, we’ll uncover some of the lesser known benefits that can be achieved when hiring an apprentice developer for SMEs.
 
-### TL;DR
+### This article, at a glance
 
 *If you’re in a hurry, the seven key hidden benefits an apprentice developer can create for SMEs are:*
 
-\    1️⃣  *Better staff retention*
-     2️⃣ * Existing staff gaining managerial experience*
-     3️⃣ * Existing staff gaining teaching and mentoring experience*
-     4️⃣ * Freeing up additional time for your best developers*
-     5️⃣ * Greater team culture and core skills*
-     6️⃣ * Improved documentation*
-     7️⃣ * And more incentives to follow best practices.*
+➡️ * Better staff retentionExisting staff gaining managerial experience*
+➡️  *Existing staff gaining teaching and mentoring experience*
+➡️  *Freeing up additional time for your best developers*
+➡️  *Greater team culture and core skills*
+➡️  *Improved documentation*
+➡️  *And more incentives to follow best practices.*
 
 *Come back and read more about how each one can have a positive impact on your own team when you have more time!* 
 
@@ -54,19 +53,19 @@ Apprenticeships have proven to be incredibly valuable investments for SMEs. They
 
 Most notably, taking on an apprentice allows you to achieve the same benefits of gaining an additional team member at a significantly lower cost. The government pays 95% of the apprenticeship training costs, and you’ll also receive up to £4,000 in additional funding for each apprentice you hire, making it a very cost-effective, worthwhile investment.
 
-Some of the other advantages an apprentice offers are: 
+Some of the other advantages an apprentice offers include: 
 
-\    ✅  A new team member who is more eager and more hungry to learn
+✅  A new team member who is more eager and more hungry to learn
 
-\    ✅  Cognitive diversity and a fresh perspective from someone with no bad habits 
+✅  Cognitive diversity and a fresh perspective from someone with no bad habits 
 
-\    ✅  Someone trained in the specific skills, languages, and frameworks your team actually needs.
+✅  Someone trained in the specific skills, languages, and frameworks your team actually needs.
 
 ### The hidden benefits of hiring an apprentice
 
 What you’ll also find is that, once you’ve gone through the experience of recruiting, hiring, and working with an apprentice for the first time, you’ll begin to uncover a number of hidden benefits which add even greater value to their team as a whole. 
 
-##### The lesser known, hidden benefits of hiring an apprentice for SMEs are:
+**The lesser know, often hidden benefits of hiring an apprentice for SMEs are:** 
 
 💡  **Better staff retention -** We’ve found that apprentices who are successfully trained, and who have a positive experience within the business, end up becoming far more loyal. They often feel compelled to give back to the business that gave them their opportunity and invested in their development as an employee. 
 
