@@ -36,7 +36,7 @@ tags:
 
 ➡️  *And more incentives to follow best practices.*
 
-*Come back and read more about how each one can have a positive impact on your own team when you have more time!* 
+*Skip ahead to read our detailed exploration of each one, or come back and read more about how these benefits can have a positive impact on your own team when you have more time!* 
 
 ### How do apprenticeships work?
 
