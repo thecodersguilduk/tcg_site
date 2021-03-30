@@ -22,11 +22,18 @@ tags:
 
 *If you’re in a hurry, the seven key hidden benefits an apprentice developer can create for SMEs are:*
 
-➡️ * Better staff retentionExisting staff gaining managerial experience*
+➡️  *Better staff retention*
+
+➡️  *Existing staff gaining managerial experience*
+
 ➡️  *Existing staff gaining teaching and mentoring experience*
+
 ➡️  *Freeing up additional time for your best developers*
+
 ➡️  *Greater team culture and core skills*
+
 ➡️  *Improved documentation*
+
 ➡️  *And more incentives to follow best practices.*
 
 *Come back and read more about how each one can have a positive impact on your own team when you have more time!* 
@@ -51,7 +58,7 @@ Yes, you’ll need to onboard them, manage them, train them, and pay them, and y
 
 Apprenticeships have proven to be incredibly valuable investments for SMEs. They deliver the positive impact of having a talented new employee while bypassing many of the challenges associated with recruiting and onboarding more experienced new staff. 
 
-Most notably, taking on an apprentice allows you to achieve the same benefits of gaining an additional team member at a significantly lower cost. The government pays 95% of the apprenticeship training costs, and you’ll also receive up to £4,000 in additional funding for each apprentice you hire, making it a very cost-effective, worthwhile investment.
+Most notably, taking on an apprentice allows you to achieve the same benefits of gaining an additional team member at a significantly lower cost. **The government pays 95% of the apprenticeship training costs, and you’ll also receive up to £4,000 in additional funding for each apprentice you hire, making it a very cost-effective, worthwhile investment.**
 
 Some of the other advantages an apprentice offers include: 
 
