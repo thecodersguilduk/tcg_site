@@ -45,7 +45,7 @@ Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web
 
 #### “The bootcamp is interactive and I’ve learnt so much from some incredible coaches. I’ve also really enjoyed connecting with other people, spending time with other students on Zoom calls, sharing screens and working collaboratively to solve problems together.”
 
-Huge congratulations is in order for everyone who has taken part in this project. Everyone here at The Coders Guild has been so impressed with all the effort and hard work over the past few months.
+Huge congratulations to everyone who has taken part in this project. The team here at The Coders Guild has been so impressed with all the effort and hard work of the trainees over the past few months.
 
 Needless to say, massive thanks are also in order for our outstanding trainers and mentors for their help in making this project happen. We’re so lucky to have such a dedicated, experienced team of experts delivering this training with us. 
 
