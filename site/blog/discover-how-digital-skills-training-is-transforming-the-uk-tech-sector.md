@@ -41,7 +41,7 @@ The industry-led curriculum, hands-on learning, and community-driven support net
 
 Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web and App Development with JAMStack Bootcamp because the COVID-19 lockdowns put him in a position where he needed to make a career change. Gary said:
 
-#### “The JAMstack Bootcamp has been amazing. I’ve really benefitted from how flexible the course is and being able to learn from home is a real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
+#### “The JAMstack Bootcamp has been amazing. I’ve really benefited from how flexible the course is and being able to learn from home is a real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
 
 #### “The bootcamp is interactive and I’ve learnt so much from some incredible coaches. I’ve also really enjoyed connecting with other people, spending time with other students on Zoom calls, sharing screens and working collaboratively to solve problems together.”
 
