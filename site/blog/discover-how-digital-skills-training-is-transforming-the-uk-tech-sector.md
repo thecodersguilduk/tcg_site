@@ -41,9 +41,9 @@ The industry-led curriculum, hands-on learning, and community-driven support net
 
 Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web and App Development with JAMStack Bootcamp because the COVID-19 lockdowns put him in a position where he needed to make a career change. Gary said:
 
-##### “The JAMstack Bootcamp has been amazing. I’ve really benefited from how flexible the course is and being able to learn from home is another real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
+#### “The JAMstack Bootcamp has been amazing. I’ve really benefited from how flexible the course is and being able to learn from home is another real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
 
-##### “The bootcamp is interactive and I’ve learnt so much from some incredible coaches. I’ve also really enjoyed connecting with other people, spending time with other students on Zoom calls, sharing screens and working collaboratively to solve problems together.”
+#### “The bootcamp is interactive and I’ve learnt so much from some incredible coaches. I’ve also really enjoyed connecting with other people, spending time with other students on Zoom calls, sharing screens and working collaboratively to solve problems together.”
 
 Huge congratulations is in order for everyone who has taken part in this project. Everyone here at The Coders Guild has been so impressed with all the effort and hard work over the past few months.
 
@@ -55,9 +55,9 @@ This project is a perfect example of how crucial digital skills training can be 
 
 Suman Bala, QA Lead at Sky, who helped us teach the bootcamps, said: 
 
-##### “I was amazed to see the learners’ aptitude and attitude. You can teach people skills, but you can’t teach them how to be passionate. The learners on these bootcamps have all been passionate, hardworking, and full of energy.”
+#### “I was amazed to see the learners’ aptitude and attitude. You can teach people skills, but you can’t teach them how to be passionate. The learners on these bootcamps have all been passionate, hardworking, and full of energy.”
 
-##### “All of the learners on the Software Testing Bootcamp, for instance, now have a strong foundation of testing. They've come a long way, and I’m 100% sure they’ll be adding quality to any team they join with the tester’s mindset. I can’t wait to see them grow and shine in their testing careers, and I can highly recommend every single one of them!”
+#### “All of the learners on the Software Testing Bootcamp, for instance, now have a strong foundation of testing. They've come a long way, and I’m 100% sure they’ll be adding quality to any team they join with the tester’s mindset. I can’t wait to see them grow and shine in their testing careers, and I can highly recommend every single one of them!”
 
 As of today, a new generation of future tech superstars are trained and ready to make an impact in their next roles. For any readers from a business currently looking to hire new talent, [find out more about the unique value these bootcamp graduates can add to your team by reading on here](https://thecodersguild.org.uk/blog/yorkshire-is-the-driving-force-behind-the-future-of-the-uk-tech-industry/).
 
