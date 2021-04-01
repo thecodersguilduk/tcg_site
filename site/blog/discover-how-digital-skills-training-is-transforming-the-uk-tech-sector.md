@@ -16,6 +16,7 @@ tags:
   - Digital Skills
   - Apprenticeships
   - News & Events
+  - blog
 ---
 #### Since the start of this year, The Coders Guild has been providing free digital skills training in web and app development, UX, and software testing for 135 learners here in Yorkshire.
 
