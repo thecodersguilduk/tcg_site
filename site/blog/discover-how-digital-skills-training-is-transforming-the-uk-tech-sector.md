@@ -19,9 +19,9 @@ tags:
 ---
 #### Since the start of this year, The Coders Guild has been providing free digital skills training in web and app development, UX, and software testing for 135 learners here in Yorkshire.
 
-These training courses are part of an innovative new project led by West Yorkshire Combined Authority (WYCA) and the Department for Education, following a £2.5 billion investment into the National Skills Fund. 
+These training courses are part of an innovative project led by West Yorkshire Combined Authority (WYCA) and the Department for Education, following a £2.5 billion investment into the National Skills Fund. 
 
-Now, we're incredibly proud to congratulate all those 135 participants for completing their training this week, marking their successful graduation from these bootcamps! 
+Today, we're incredibly proud to congratulate all those 135 participants for completing their training, marking their successful graduation from these bootcamps! 
 
 ### An important project paves the way for a brighter future
 
@@ -31,7 +31,7 @@ These courses were completely free for people from our local community, as part 
 
 The project has also promoted greater diversity and equality within the tech industry, with over 50% of the trainees being female, as well as a large contingent coming from the BAME community and other under-represented groups.
 
-This is a big step in the right direction for making career opportunities in tech equally available for everyone, regardless of gender, race, or background. 
+This is a big step in the right direction, making career opportunities in tech equally available for everyone regardless of gender, race, or background. 
 
 ### Congratulations to our graduates
 
@@ -41,7 +41,7 @@ The industry-led curriculum, hands-on learning, and community-driven support net
 
 Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web and App Development with JAMStack Bootcamp because the COVID-19 lockdowns put him in a position where he needed to make a career change. Gary said:
 
-#### “The JAMstack Bootcamp has been amazing. I’ve really benefited from how flexible the course is and being able to learn from home is another real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
+#### “The JAMstack Bootcamp has been amazing. I’ve really benefitted from how flexible the course is and being able to learn from home is a real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
 
 #### “The bootcamp is interactive and I’ve learnt so much from some incredible coaches. I’ve also really enjoyed connecting with other people, spending time with other students on Zoom calls, sharing screens and working collaboratively to solve problems together.”
 
@@ -59,7 +59,7 @@ Suman Bala, QA Lead at Sky, who helped us teach the bootcamps, said:
 
 #### “All of the learners on the Software Testing Bootcamp, for instance, now have a strong foundation of testing. They've come a long way, and I’m 100% sure they’ll be adding quality to any team they join with the tester’s mindset. I can’t wait to see them grow and shine in their testing careers, and I can highly recommend every single one of them!”
 
-As of today, a new generation of future tech superstars are trained and ready to make an impact in their next roles. For any readers from a business currently looking to hire new talent, [find out more about the unique value these bootcamp graduates can add to your team by reading on here](https://thecodersguild.org.uk/blog/yorkshire-is-the-driving-force-behind-the-future-of-the-uk-tech-industry/).
+As of today, this new generation of future tech superstars are trained and ready to make an impact in their next roles. For any readers from a business currently looking to hire new talent, [find out more about the unique value these bootcamp graduates can add to your team by reading on here](https://thecodersguild.org.uk/blog/yorkshire-is-the-driving-force-behind-the-future-of-the-uk-tech-industry/).
 
 ### What comes next?
 
@@ -73,6 +73,6 @@ The extension is a testament to the amazing effort of this first round of partic
 
 It’s been a pleasure delivering this training for the WYCA and the Department for Education, and we’re looking forward to continuing that for new groups of participants over the coming weeks and months! 
 
-By making digital skills training and tech education more easily available, we’re developing a brighter future for UK businesses and employees alike.
+By making digital skills training more easily available, we’re developing a brighter future for UK businesses and employees alike.
 
 For anyone interested in learning a new digital skill or pursuing a change in career, we have a range of opportunities available right now. **[Get in touch with us directly to discover the options for digital skills training, tech education, and apprenticeship programmes](https://thecodersguild.org.uk/contact-us/) to progress your own career.**
