@@ -40,7 +40,7 @@ After 12 weeks of hard work, all the grads who have completed this training are 
 
 The industry-led curriculum, hands-on learning, and community-driven support network provided by the project have all been very well received by everyone involved.
 
-Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web and App Development with JAMStack Bootcamp because the COVID-19 lockdowns put him in a position where he needed to make a career change. Gary said:
+Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web and App Development with JAMStack Bootcamp because the COVID-19 lockdowns put him in a position where he needed to consider a career change. Gary said:
 
 #### “The JAMstack Bootcamp has been amazing. I’ve really benefited from how flexible the course is and being able to learn from home is a real advantage. I’ve loved the remote classes and being able to learn through Zoom has been great."
 
