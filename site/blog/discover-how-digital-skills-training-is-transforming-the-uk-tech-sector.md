@@ -1,16 +1,16 @@
 ---
 title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
 meta_title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
-meta_description: The Coders Guild team is incredibly proud to congratulate 135
-  participants for successfully graduating from our digital skills training
-  bootcamps this week!
+meta_description: The Coders Guild team is incredibly proud to congratulate all
+  the participants for successfully graduating from our Digital Skills Bootcamps
+  this week!
 time: 4 mins
 author: Crispin Read
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/ux-indonesia-pqzrfbhd9r0-unsplash.jpg
-excerpt: The Coders Guild team is incredibly proud to congratulate 135
-  participants for successfully graduating from our digital skills training
-  bootcamps this week!
+excerpt: The Coders Guild team is incredibly proud to congratulate all the
+  participants for successfully graduating from our Digital Skills Bootcamps
+  this week!
 date: 2021-04-01T12:22:22.804Z
 tags:
   - Digital Skills
@@ -18,11 +18,11 @@ tags:
   - News & Events
   - blog
 ---
-#### Since the start of this year, The Coders Guild has been providing free digital skills training in web and app development, UX, and software testing for 135 learners here in Yorkshire.
+#### Since the start of this year, The Coders Guild has been providing free digital skills training in web and app development, UX, and software testing for over 100 learners here in Yorkshire.
 
 These training courses are part of an innovative project led by West Yorkshire Combined Authority (WYCA) and the Department for Education, following a £2.5 billion investment into the National Skills Fund. 
 
-Today, we're incredibly proud to congratulate all those 135 participants for completing their training, marking their successful graduation from these bootcamps! 
+Today, we're incredibly proud to congratulate all those participants for completing their training, marking their successful graduation from these bootcamps! 
 
 ### An important project paves the way for a brighter future
 
