@@ -2,7 +2,7 @@
 title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
 meta_title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
 meta_description: The Coders Guild team is incredibly proud to congratulate all
-  participants for successfully graduating from our Digital Skills Bootcamps
+  the participants for successfully graduating from our Digital Skills Bootcamps
   this week!
 time: 4 mins
 author: Crispin Read
