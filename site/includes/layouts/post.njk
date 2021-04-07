@@ -21,7 +21,7 @@ meta_description: {{ meta_description }}
 
             <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
               {% if tags %}
-                <div class="category absolute top-0 flex -my-4 -mx-1">
+                <div class="category absolute top-0 flex -my-4 -mx-1 not-on-print">
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <div class="px-1">
@@ -75,7 +75,7 @@ meta_description: {{ meta_description }}
 
             {% if tags %}
               <div>
-                <ul class="flex">
+                <ul class="flex not-on-print">
                   {% for item in tags %}
                     {%- if item != "blog" -%}
                       <li class="mr-2">
@@ -88,7 +88,7 @@ meta_description: {{ meta_description }}
 
             {% endif %}
               {% if prevPost or nextPost %}
-                <div class="mt-8 sm:mt-6">
+                <div class="mt-8 sm:mt-6 not-on-print">
                   {% if nextPost %}
                     <div {% if prevPost %}class="mb-4"{% endif %}>
                       <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ nextPost.data.title }}</a></p>
