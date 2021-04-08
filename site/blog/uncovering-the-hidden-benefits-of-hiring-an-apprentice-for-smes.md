@@ -96,7 +96,7 @@ This is a great incentive to update your documentation, which often gets ignored
 
 💡  **It will encourage your team to follow processes and best practices -** Similar to what we said above, by having a new team member who is learning from scratch, your other devs will need to make extra effort to stop taking risky shortcuts and stick to the script more often. This is important as your apprentice will need to learn how to do things properly based on best practices and the correct processes.
 
-This is a great chance to ensure your code standards are being followed, your devs are logging commit messages in the proper format, that commenting code is being used properly, and so on. If the apprentice is doing these things then the rest of the team will naturally follow suit.
+This is a great chance to review your code standards and ensure they're being followed by all developers within the business. If the apprentice is doing these things then the rest of the team will naturally follow suit, as they will be working closely together and supporting each other.
 
 ### Is hiring an apprentice right for you?
 
