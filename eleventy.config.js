@@ -12,6 +12,11 @@ module.exports = eleventyConfig => {
     eleventyConfig.addFilter('limit', function(array, limit) {
       return array.slice(0, limit);
     });
+    
+    // Skips first post with limit
+    eleventyConfig.addFilter('skipFirst', function(array, limit) {
+        return array.slice(1, limit);
+    });
 
     // Minify our HTML
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
