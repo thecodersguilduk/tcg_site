@@ -1,48 +1,46 @@
 <section class="relative md:py-20 pt-12 pb-16">
-  <div class="inner">
-    <div class="md:flex md:mb-16 mb-14">
-      <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
-        <h3 class="text-white">Our Available Apprenticeships</h3>
-        <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts.</p>
-        <a href="/apprenticeships" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">See all our apprenticeships<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
-      </div>
-
-      <div>
-
-        {% if apprenticeships.active %}
-          <div class="flex -mx-4">
-            {% for item in apprenticeships.active %}
-            <div class="px-4">
-              <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
-                <div class="flex flex-col items-start h-full">
-                  <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                  <h3 class="text-xl leading-lg mb-0">{{ item.title }}</h3>
-                  <h3 class="text-xl leading-lg mb-2">{{ item.qualification }}</h3>
-                  <div class="mt-auto">
-                    <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
-                    <div class="mb-4">
-                      <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a Developer</a>
-                    </div>
-                    <div>
-                      <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a Developer</a>
-                    </div>
+              <div class="inner">
+                <div class="md:flex md:mb-16 mb-14">
+                  <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
+                    <h3 class="text-white">Our Available Apprenticeships</h3>
+                    <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts.</p>
+                    <a href="/apprenticeships" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap not-on-print">See all our apprenticeships<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i>
+                    </a>
+                  </div>
+                  <div>
+                    {% if apprenticeships.active %}
+                      <div class="flex -mx-4">
+                        {% for item in apprenticeships.active %}
+                          <div class="px-4">
+                            <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
+                              <div class="flex flex-col items-start h-full">
+                                <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
+                                <h3 class="text-xl leading-lg mb-0">{{ item.title }}</h3>
+                                <h3 class="text-xl leading-lg mb-2">{{ item.qualification }}</h3>
+                                <div class="mt-auto not-on-print">
+                                  <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
+                                  <div class="mb-4">
+                                    <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a Developer</a>
+                                  </div>
+                                  <div>
+                                    <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a Developer</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-white mb-4 md:mb-8">Employability and Tech Skills</h3>
+                  <div class="md:flex md:items-center">
+                    <p class="text-white max-w-3xl mr-8 mb-8 md:mb-0">Got a techy outreach project? Know of an organisation that is looking to upskill marginalised or underrepresented groups? Get in touch - let’s have a chat to see if we can help.</p>
+                    <a href="/contact-us" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap not-on-print">Contact Us<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
-    </div>
-
-    <div>
-      <h3 class="text-white mb-4 md:mb-8">Employability and Tech Skills</h3>
-      <div class="md:flex md:items-center">
-        <p class="text-white max-w-3xl mr-8 mb-8 md:mb-0">Got a techy outreach project? Know of an organisation that is looking to upskill marginalised or underrepresented groups? Get in touch - let’s have a chat to see if we can help.</p>
-        <a href="/contact-us" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">Contact Us<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
-      </div>
-    </div>
-
-  </div>
-</section>
+            </section>
