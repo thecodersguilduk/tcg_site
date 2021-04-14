@@ -1,82 +1,85 @@
-<section class="relative pt-16 pb-18 z-10 overflow-hidden">
-  <object type="image/svg+xml" data="../images/patterns/3.svg" class="absolute pattern pattern-3"></object>
-  <object type="image/svg+xml" data="../images/patterns/4.svg" class="absolute pattern pattern-4"></object>
+---
+layout: default
+meta_title: ""
+meta_description: ""
+body_class: apprenticeships
+title: Software Development Apprenticeships from the Coders Guild
+---
 
-  <div class="inner">
-    <h2 class="text-white mb-10">Apprenticeships</h2>
-
-    <div class="md:flex -mx-8">
-      <div class="md:w-1/3 px-8 md:mb-0 mb-12">
-        <h3 class="text-white">No one knows the landscape better</h3>
-        <p class="text-white">We started the first industry-led digital apprenticeship back in 2012, revolutionising the way modern technical vocations are learned. Since then we’ve continually improved our courses and are now transferring our know-how to new areas.</p>
-      </div>
-      <div class="md:w-1/3 px-8 md:mb-0 mb-12">
-        <h3 class="text-white">Billable within weeks</h3>
-        <p class="text-white">We know learning on the job is the best way to learn the skills and knowledge necessary to succeed. Our apprentices are confidently applying their skills to real-world projects in a matter of weeks.</p>
-      </div>
-      <div class="md:w-1/3 px-8 md:mb-0 mb-12">
-        <h3 class="text-white">Devised and delivered by pro developers</h3>
-        <p class="text-white">All our courses are devised and delivered by industry professionals; many of them experts in their field.</p>
-      </div>
-    </div>
-
-    <div class="mt-12 md:mb-16 mb-8">
-      <div class="rounded bg-white lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center">
-        <div class="lg:mr-4 lg:mb-0 mb-6">
-          <img class="h-10 w-10 block" alt="" src="../images/logo/TCG-logo.svg"/>
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white overflow-y-hidden">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="md:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image" class="md:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 pt-20 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-md mx-auto mb-4 px-4 lg:mb-8 lg:mt-20 mt-8">
+          <h1 class="text-center text-white mb-0 text-4xl leading-4xl md:text-5xl md:leading-5xl">Apprenticeships with The Coders Guild</h1>
         </div>
-        <div class="cta__text">
-          <p class="text-lg leading-xl font-bold text-blue-200 text-center lg:text-left lg:mb-0 mb-6">If you’re looking for a training provider with a real understanding of the industry.</p>
-        </div>
-        <div class="lg:ml-auto">
-          <a href="/contact-us" class="bookacall-f-btn text-md leading-sm text-white bg-blue-200 py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">Get in touch today<i class="fas fa-angle-right text-md leading-sm text-white ml-2"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="md:flex md:mb-16 mb-14">
-      <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
-        <h3 class="text-white">Our Available Apprenticeships</h3>
-        <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts.</p>
-        <a href="/apprenticeships" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">See all our apprenticeships<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
-      </div>
-
-      <div>
-        {% if apprenticeships.active %}
-          <div class="flex -mx-4">
-            {% for item in apprenticeships.active %}
-            <div class="px-4">
-              <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
-                <div class="flex flex-col items-start h-full">
-                  <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                  <h3 class="text-xl leading-lg mb-0">{{ item.title }}</h3>
-                  <h3 class="text-xl leading-lg mb-2">{{ item.qualification }}</h3>
-                  <div class="mt-auto">
-                    <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
-                    <div class="mb-4">
-                      <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a Developer</a>
-                    </div>
-                    <div>
-                      <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a Developer</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
+        <div class="sm:flex md:mb-24 mb-16">
+          <div class="px-4 apprenticeships__cta mb-4 md:mb-0">
+            <a href="/employer-software-dev" class="block py-2 lg:py-4 px-4 bg-white text-blue-200 font-bold text-lg lg:text-2xl lg:leading-2xl leading-2xl rounded-lg font-heading text-sm">I want to <span class="text-md lg:text-2xl lg:leading-2xl inline-block uppercase link-underline font-heading relative">hire</span> an apprentice</a>
           </div>
-        {% endif %}
-      </div>
-    </div>
-
-    <div>
-      <h3 class="text-white">More coming soon</h3>
-      <div class="md:flex md:items-center">
-        <p class="text-white md:mb-0 mb-6">Through our training development team we are continually adding more digital apprenticeships and training programs. Stay in the loop by signing up to our mailing list.</p>
-        <a href="" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" data-modal="mailing-list">Join Mailing List<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+          <div class="px-4 apprenticeships__cta">
+            <a href="/applicant-software-dev" class="block py-2 lg:py-4 px-4 bg-white text-blue-200 font-bold text-lg lg:text-2xl lg:leading-2xl leading-2xl rounded-lg font-heading text-sm">I want to <span class="text-md lg:text-2xl lg:leading-2xl inline-block uppercase link-underline font-heading relative">be</span> an apprentice</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <object type="image/svg+xml" data="../images/patterns/16.svg" class="absolute pattern pattern-5"></object>
 
-</section>
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-blue-200 overflow-hidden" tabindex="-1">
+
+  <div class="bg-white section-rounded">
+
+    <section class="bg-white relative z-10 overflow-hidden">
+    <object type="image/svg+xml" data="../images/patterns/1.svg" class="hidden md:block absolute pattern pattern-1"></object>
+      <div class="inner max-w-3xl mx-auto mt-16 sm:px-16 mb-16 relative">
+        <h2 class="text-center max-w-lg mx-auto text-4xl sm:text-3xl leading-4xl mb-8">Not all apprenticeships are equal, choose the best training provider.</h2>
+        <p class="text-center">We have over 8 years experience delivering modern technical
+        apprenticeships - way before apprenticeships were cool.
+        We firmly believe they are the key to the future of the digital
+        industry in this country.</p>
+      </div>
+    </section>
+
+    <section class="pb-24 relative z-10 overflow-hidden">
+    <object type="image/svg+xml" data="../images/patterns/2.svg" class="hidden md:block absolute pattern pattern-2"></object>
+      <div class="inner max-w-6xl relative">
+        <h2 class="sm:text-center text-4xl sm:text-3xl leading-4xl mb-10">Web/App/Software Developer</h2>
+        <div class="flex flex-col md:flex-row -mx-4">
+
+          <div class="px-4 mb-6 md:mb-0">
+            <div class="shadow-primary py-8 px-8 sm:px-14 flex flex-col items-center rounded-lg bg-white md:h-full max-w-md mx-auto">
+              <h3 class="text-center sm:text-3xl text-4xl leading-3xl mb-0">Employers</h3>
+              <span class="block bg-red-100 h-2px w-full my-4 rounded"></span>
+              <h4 class="text-center text-xl leading-lg mb-4">ROI within weeks</h4>
+              <p class="text-center mb-4">We’ll help you recruit, select and develop the right candidate for your team.</p>
+              <a href="/employer-software-dev" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded">Find out more <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md"></i></a>
+            </div>
+          </div>
+
+          <div class="px-4 mb-6 md:mb-0">
+            <div class="shadow-primary py-8 px-8 sm:px-14 flex flex-col items-center rounded-lg bg-white md:h-full max-w-md mx-auto">
+              <h3 class="text-center sm:text-3xl text-4xl leading-3xl mb-0">Future Coders</h3>
+              <span class="block bg-red-100 h-2px w-full my-4 rounded"></span>
+              <h4 class="text-center text-xl leading-lg mb-4">Earn while you learn</h4>
+              <p class="text-center mb-4">Kick-start your new career with proper training and support from industry experts.</p>
+              <a href="/applicant-software-dev" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded">Find out more <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <section class="relative overflow-hidden">
+    <object type="image/svg+xml" data="../images/patterns/3.svg" class="hidden md:block absolute pattern pattern-3"></object>
+      <div class="inner relative z-10">
+        <div class="mt-24 mb-32">
+          {% include "components/apprenticeships/apprenticeships-component.njk" %}
+        </div>
+      </div>
+      <object type="image/svg+xml" data="../images/patterns/4.svg" class="hidden md:block absolute bottom-0 pattern pattern-4"></object>
+    </section>
+  </main>
+</div>
