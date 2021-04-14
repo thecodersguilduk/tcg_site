@@ -16,7 +16,7 @@ tags:
   - blog
   - Digital Skills
 ---
-#### Our web and app development bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
+#### Our UX bootcamp is a one-of-a-kind chance to learn new digital skills, create job opportunities, and boost your employability, putting you on the path to a more rewarding career. 
 
 #### The entire course is completely free, delivered remotely (lockdown-safe), and taught by experienced professionals.
 
