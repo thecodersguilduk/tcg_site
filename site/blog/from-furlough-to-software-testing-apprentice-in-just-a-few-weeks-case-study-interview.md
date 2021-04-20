@@ -1,8 +1,8 @@
 ---
 title: "From Furlough to Software Testing Apprenticeship in Just a Few Months |
-  Case Study Interview "
+  Case Study "
 meta_title: "From Furlough to Software Testing Apprenticeship in Just a Few
-  Months | Case Study Interview "
+  Months | Case Study  "
 meta_description: "Discover how digital skills training with The Coders Guild
   helped Ben Palmer progress from furlough in lockdown to an exciting software
   testing apprenticeship at Ascensor in just a few months. "
