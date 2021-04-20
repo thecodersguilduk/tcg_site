@@ -38,15 +38,6 @@
     }
   },
   {
-    "name": "Alex",
-    "image": "../images/team/alex.jpg",
-    "occupation": "Lead Technical Trainer",
-    "description": "Devising, delivering monitoring and improving our technical training. Alex is a very experienced web developer and qualified trainer and assessor too.",
-    "social": {
-      "github": "https://github.com/alexseymourdev"
-    }
-  },
-  {
     "name": "Mark",
     "image": "../images/team/mark.jpeg",
     "occupation": "Lead Assessor",
