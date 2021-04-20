@@ -38,12 +38,40 @@
     }
   },
   {
-    "name": "Alex",
-    "image": "../images/team/alex.jpg",
-    "occupation": "Lead Technical Trainer",
-    "description": "Devising, delivering monitoring and improving our technical training. Alex is a very experienced web developer and qualified trainer and assessor too.",
+    "name": "Paul",
+    "image": "../images/team/paul-linkedin.jpeg",
+    "occupation": "Project Manager",
+    "description": "Project Manager",
     "social": {
-      "github": "https://github.com/alexseymourdev"
+      "linkedin": "https://www.linkedin.com/in/paul-tebbatt-773aaa70/",
+      "github": "https://github.com/paultcg"
+    }
+  },
+  {
+    "name": "Emma",
+    "image": "../images/team/emma-linkedin.jpeg",
+    "occupation": "PA to the Director",
+    "description": "PA to the Director",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/emma-higginson-55060814/"
+    }
+  },
+  {
+    "name": "Megan",
+    "image": "../images/team/megan-linkedin.jpeg",
+    "occupation": "Social Media Manager",
+    "description": "Social Media Manager",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/megan-brown-63494515b/"
+    }
+  },
+  {
+    "name": "Robbie",
+    "image": "../images/team/robbie-linkedin.jpeg",
+    "occupation": "Content Manager",
+    "description": "Content Manager",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/robbie-westacott-16aa8b54/"
     }
   },
   {
