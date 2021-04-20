@@ -1,8 +1,8 @@
 ---
-title: "From Furloughed to Software Testing Apprentice in Just a Few Months |
+title: "From Furlough to Software Testing Apprenticeship in Just a Few Months |
   Case Study Interview "
-meta_title: "From Furloughed to Software Testing Apprentice in Just a Few Months
-  | Case Study Interview "
+meta_title: "From Furlough to Software Testing Apprenticeship in Just a Few
+  Months | Case Study Interview "
 meta_description: "Discover how digital skills training with The Coders Guild
   helped Ben Palmer progress from furlough in lockdown to an exciting software
   testing apprenticeship at Ascensor in just a few months. "
@@ -20,11 +20,11 @@ tags:
 ---
 ### At the end of March, over 100 talented participants graduated from our West Yorkshire Digital Skills Bootcamps, having spent 12 weeks training in areas like UX, web development, and software testing.
 
-### And we’re now thrilled to announce that one of those grads, Ben Palmer, has already been selected as an apprentice software tester for our partner Ascensor.
+### And we’re now thrilled to announce that the first of those grads, Ben Palmer, has already been selected as an apprentice software tester for our partner Ascensor.
 
-Ascensor is a digital marketing agency based in Leeds, who has been providing innovative web design and online advertising services for more than 10 years. Needless to say, with such an impressive track record, Ascensor has a very successful team already in place, so we’re incredibly proud of Ben for this achievement. 
+Ascensor is a digital marketing agency based in Leeds. They've been providing innovative web design and online advertising services for more than 10 years. Needless to say then, with such an impressive track record, Ascensor has a very successful team already in place, so we’re incredibly proud of Ben for this achievement!
 
-We caught up with Ben to learn more about his journey from being put on furlough in lockdown to becoming a promising software testing professional at a leading agency. Here’s what he had to say: 
+We had a chat with Ben to learn more about his journey from being put on furlough in lockdown to being chosen for an exciting software testing apprenticeship at a leading agency. Here’s what he had to say: 
 
 #### Have you always been interested in IT, or was this a new area of learning for you?
 
@@ -32,7 +32,7 @@ We caught up with Ben to learn more about his journey from being put on furlough
 
 I was working in the events sector, and all my work was put on hold due to the COVID-19 lockdowns throughout 2020 and going into 2021, so I had to find something else to do.
 
-I quickly found from some online research that there was so much out there to learn in the tech sector, which really excited me!”
+I quickly found, from some online research, that there was so much out there to learn in the tech sector, which really excited me!”
 
 #### What made you decide to take this training course in software testing with The Coders Guild?
 
@@ -70,7 +70,7 @@ Leading on from some of the latter sessions in the bootcamp, I’m also very exc
 
 The Coders Guild bootcamp has provided me with the starting points to learn so much, as well as the direction needed to continue with my study.”
 
-On behalf of the whole team here at The Coders Guild, we have no doubt Ben will go from strength-to-strength in his new role. Like so many of our recent grads, his attitude and eagerness to learn will help him progress quickly as a software tester.
+**On behalf of the whole team here at The Coders Guild, we have no doubt Ben will go from strength-to-strength in his new role. Like so many of our recent grads, his attitude and eagerness to learn will help him progress quickly as a software tester.**
 
 We were also fortunate enough to catch up with **Rob Dunn, Production Manager at Ascensor**, who recruited Ben to join as their new apprentice.
 
@@ -86,9 +86,7 @@ Ben particularly stood out as his focus of study had specific examples of testin
 
 #### Do you have any final thoughts to share for other businesses considering apprentices right now?
 
-"We’re really pleased with our decision, as the service we received through the recruitment process, the value of the candidates, and the ongoing commitment from Fiona and The Coders Guild team have all been fantastic."
-
-
+"Just that we’re really pleased with our decision. The service we received through the recruitment process, the value of the candidates, and the ongoing commitment from Fiona and The Coders Guild team have all been fantastic."
 
 
 
