@@ -88,6 +88,14 @@ Ben particularly stood out as his focus of study had specific examples of testin
 
 "We’re really pleased with our decision, as the service we received through the recruitment process, the value of the candidates, and the ongoing commitment from Fiona and The Coders Guild team have all been fantastic."
 
+
+
+
+
+- - -
+
+
+
 ***If you’re a business currently looking to hire promising, expertly-trained talent, and would like [to learn more about our current apprenticeship opportunities, please click here](https://thecodersguild.org.uk/apprenticeships/).*** 
 
 ***If you’d like [to apply for a similar digital skills training course as a learner, you can register your interest here](https://thecodersguild.org.uk/contact-us/).*** 
