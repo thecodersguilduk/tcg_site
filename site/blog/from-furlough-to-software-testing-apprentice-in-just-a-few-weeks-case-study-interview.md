@@ -3,16 +3,16 @@ title: "From Furloughed to Software Testing Apprentice in Just a Few Months |
   Case Study Interview "
 meta_title: "From Furloughed to Software Testing Apprentice in Just a Few Months
   | Case Study Interview "
-meta_description: "We spoke to Ben Palmer about his impressive journey from
-  furlough during lockdown to joining leading agency Ascensor as a software
-  testing apprentice. "
+meta_description: "Discover how digital skills training with The Coders Guild
+  helped Ben Palmer progress from furlough in lockdown to an exciting software
+  testing apprenticeship at Ascensor in just a few months. "
 time: 4 minutes
 author: Fiona Bishop
 avatar: ../team/fiona.jpg
 featured_image: /images/blog/sigmund-aiic6wcqkqc-unsplash.jpg
-excerpt: "We spoke to Ben Palmer about his impressive journey from furlough
-  during lockdown to joining leading agency Ascensor as a software testing
-  apprentice. "
+excerpt: "Discover how digital skills training with The Coders Guild helped Ben
+  Palmer progress from furlough in lockdown to an exciting software testing
+  apprenticeship at Ascensor in just a few months. "
 date: 2021-04-20T14:46:54.657Z
 tags:
   - Apprenticeships
