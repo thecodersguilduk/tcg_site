@@ -9,7 +9,7 @@ meta_description: "We spoke to Ben Palmer about his impressive journey from
 time: 4 minutes
 author: Fiona Bishop
 avatar: ../team/fiona.jpg
-featured_image: /images/blog/patrick-tomasso-fmnti8haab8-unsplash-min.jpg
+featured_image: /images/blog/interviews2.jpg
 excerpt: "We spoke to Ben Palmer about his impressive journey from furlough
   during lockdown to joining leading agency Ascensor as a software testing
   apprentice. "
