@@ -39,12 +39,9 @@
   },
   {
     "name": "Gareth",
-    "image": "../images/team/fiona.jpg",
+    "image": "../images/team/gareth-slack.jpeg",
     "occupation": "Lead Technical Trainer",
-    "description": "Gareth is here to oversee all our training, and to ensure our industry-led curriculum is always evolving to stay ahead of the curve. This means Gareth helps to ensure that our training remains as relevant and valuable as possible for all our learners and partners alike. With over 15 years’ experience as a successful software developer, Gareth’s certainly the right man for the job.",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/bishopfionaadministration/"
-    }
+    "description": "Gareth is here to oversee all our training, and to ensure our industry-led curriculum is always evolving to stay ahead of the curve. This means Gareth helps to ensure that our training remains as relevant and valuable as possible for all our learners and partners alike. With over 15 years’ experience as a successful software developer, Gareth’s certainly the right man for the job."
   },
   {
     "name": "Mark",
