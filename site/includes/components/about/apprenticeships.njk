@@ -1,6 +1,6 @@
 <section class="relative md:py-20 pt-12 pb-16">
               <div class="inner">
-                <div class="md:flex md:mb-16 mb-14">
+                <div class="md:flex flex-wrap md:mb-16 mb-14">
                   <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
                   <h3 class="text-white">Work with Us</h3>
                     <h3 class="text-white">Apprenticeships</h3>
@@ -9,9 +9,9 @@
                   </div>
                   <div>
                     {% if apprenticeships.active %}
-                      <div class="flex -mx-4">
+                      <div class="flex flex-wrap -mx-4">
                         {% for item in apprenticeships.active %}
-                          <div class="px-4">
+                          <div class="px-4 xs:mb-10">
                             <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
                               <div class="flex flex-col items-start h-full">
                                 <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
