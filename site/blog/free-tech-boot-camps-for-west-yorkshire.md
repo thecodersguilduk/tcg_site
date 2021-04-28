@@ -1,32 +1,33 @@
 ---
 title: Free Tech Skills Bootcamps for West Yorkshire
 meta_title: Free Tech Skills Bootcamps for West Yorkshire
-meta_description: "We’re delighted to announce the launch of three exciting new
-  training courses, exclusively open to people in West Yorkshire.  "
+meta_description: 'We’re delighted to announce the launch of three exciting new
+  training courses, exclusively open to people in West Yorkshire.  '
 time: 2 mins
 author: Crispin
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/training.jpg
-excerpt: "We’re delighted to announce the launch of three exciting new training
-  courses, exclusively open to people in West Yorkshire.  "
+excerpt: 'We’re delighted to announce the launch of three exciting new training
+  courses, exclusively open to people in West Yorkshire.  '
 date: 2020-12-02T11:21:00.000Z
 tags:
   - News & Events
   - blog
 ---
-**We’re delighted to announce the launch of three exciting new training courses, exclusively open to people in West Yorkshire.** 
+
+**We’re delighted to announce the launch of three exciting new training courses, exclusively open to people in West Yorkshire.**
 
 **The courses in web development, UX design, and software testing are brought to you by The Coders Guild in partnership with the West Yorkshire Combined Authority (WYCA). The courses are 100% FREE and run for 12 weeks starting in Jan 2021. Apply or find out more at the links below.**
 
-![FutureGoals 'Skills Bootcamp', LEP, and West Yorkshire Combined Authority Logos](/images/blog/wycafooter-dk.png "FutureGoals Skills Bootcamps")
+![FutureGoals 'Skills Bootcamp', LEP, and West Yorkshire Combined Authority Logos](/images/blog/wycafooter-dk.png 'FutureGoals Skills Bootcamps')
 
 ## Web Development With the JAMStack 
 
-![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/dan-munday-react-training.jpg "Dan Munday teaches React")
+![Dan Munday stands in front of a whiteboard and large screen teaching React, he is pointing at JavaScript code example](/images/blog/dan-munday-react-training.jpg 'Dan Munday teaches React')
 
 Javascript, APIs, and Markup - it's the new HOT way to build web sites. If you've dabbled in HTML and CSS, or want to fast-track your dev career, then this is the course for you. [More Info](/blog/learn-web-and-app-development-with-the-jamstack/)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-jamstack.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 > “**JAMStack** is an architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the tools and workflows which developers love, and which bring maximum productivity.”\
 > **[JAMStack.org](https://jamstack.org/)**
@@ -49,9 +50,9 @@ Apply Today
 
 **Could you be a software tester?** [More Info](/blog/try-yourself-out-as-a-software-testing-professional/)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-software-testing.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-software-testing.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
-Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software testing could be your way of improving your experiences. If you're a curious person with good attention to detail, a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester, giving you essential skills and knowledge to progress in this interesting and rewarding area. 
+Do you ever get frustrated using the web or apps? Do you use assistive technologies? Software testing could be your way of improving your experiences. If you're a curious person with good attention to detail, a career in software testing could be just the ticket. This course is a pathway to beginning a career as software or QA tester, giving you essential skills and knowledge to progress in this interesting and rewarding area.
 
 You don't need a technical background or proven academic success, but you will need to be comfortable using a computer and learning how to use new applications. In the first part of the course you'll gain an understanding of what testing means, and why it's important, then you'll gain practical experience and fundamental knowledge around best practices and common workflows.
 
@@ -67,7 +68,7 @@ Apply Today
 
 ![People discussing a project while moving sticky notes on the wall](/images/blog/ux.jpg)
 
-<a href="https://skills-bootcamp-jamstack.tcg.camp/https://skills-bootcamp-ux.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a> 
+<a href="https://skills-bootcamp-ux.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
 UX design - maybe you’ve heard this term bandied around your office, or read about this exciting career? Or perhaps you’re already a designer or a project/product manager, or some other connected role where gaining a better understanding of user needs and service design would be a benefit? Either way, this is fulfilling work interacting directly with the real people who use digital products. [More Info](/blog/free-course-discover-user-experience-design/)
 
@@ -81,10 +82,10 @@ User Experience Skills Bootcamp - <a style="color:white" href="/blog/free-course
 Apply Today
 <i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2" aria-hidden="true"></i></a></div></div></div>
 
-- - -
+---
 
 ## More Courses
 
 There are more skills bootcamps available from other providers - please see [SkillsBootCamps.com](https://www.skillsbootcamps.com/) for more info.
 
-![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png "Skills Bootcamps from WYCA")
+![Woman looks thoughtful while listening to headphones "Boost your Digital and Technical skills with FREE boot camps](/images/blog/screenshot-2020-12-11-at-15.36.46.png 'Skills Bootcamps from WYCA')
