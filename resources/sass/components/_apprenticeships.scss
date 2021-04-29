@@ -1,10 +1,9 @@
 #apprenticeships {
-
   .apprenticeships__cta {
     a {
       text-align: center;
       min-width: 0;
-      
+
       @media screen and (min-width: 1024px) {
         min-width: calc(390px + 24px + 24px);
       }
@@ -27,17 +26,22 @@
       right: -200px;
     }
 
-    &-2 { left: -200px; }
+    &-2 {
+      left: -200px;
+    }
 
-    &-3 { top: 6rem; }
+    &-3 {
+      top: 6rem;
+    }
 
-    &-4 { margin-bottom: 1rem; }
+    &-4 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 #apprenticeship-employer {
   .pattern {
-
     &-5 {
       top: -85px;
       left: -235px;
@@ -105,5 +109,5 @@
 }
 
 .apprenticeships__item {
-  max-width: 251px;
+  min-width: 251px;
 }
