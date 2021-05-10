@@ -59,12 +59,9 @@
             <script>
               const form = document.getElementById('contact-form');
 
-              console.log(form.action);
-
               form.addEventListener('change', function(e){
                 const target = e.target;
-                console.log(target.value);
-
+  
                 switch(target.value){
                   case "I'm looking to hire an apprentice":
                    form.action = "https://formspree.io/f/mknqeplz";
@@ -84,8 +81,6 @@
                    default:
                     form.action = "https://formspree.io/f/mknqeplz";         
                 }
-
-                console.log(form.action);
               })
 
             </script>
