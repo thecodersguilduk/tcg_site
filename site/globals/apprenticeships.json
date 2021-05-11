@@ -5,6 +5,12 @@
       "qualification": "Level 4",
       "employer_link": "/employer-software-dev",
       "apprentice_link": "/applicant-software-dev"
+    },
+    {
+      "title": "Software Tester",
+      "qualification": "Level 4",
+      "employer_link": "/employer-software-test",
+      "apprentice_link": "/applicant-software-test"
     }
   ],
 
@@ -19,10 +25,6 @@
     },
     {
       "title": "Data Analyst",
-      "qualification": "Level 4"
-    },
-    {
-      "title": "Software Tester",
       "qualification": "Level 4"
     }
   ]

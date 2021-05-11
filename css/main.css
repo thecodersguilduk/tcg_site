@@ -1448,7 +1448,7 @@ input, textarea {
 }
 
 .apprenticeships__item {
-  max-width: 251px;
+  min-width: 251px;
 }
 
 .policy-item:hover p:first-child, .policy-item:focus p:first-child {
@@ -1625,7 +1625,7 @@ input, textarea {
 }
 
 .get-in-touch .cta__text {
-  max-width: 70%;
+  max-width: 60%;
 }
 
 @media (max-width: 640px) {
