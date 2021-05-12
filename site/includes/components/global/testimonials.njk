@@ -33,7 +33,11 @@
       </div>
 
       <div class="md:my-24 my-14">
+      {% if title != "Software Testing Apprenticeship | The Coders Guild" %}
         {% include "components/global/get-in-touch-cta.njk" %}
+        {% else %}
+        {% include "components/employer/get-in-touch-cta.njk" %}
+      {% endif %}
       </div>
 
       <object type="image/svg+xml" data="../images/patterns/11.svg" class="hidden md:block absolute pattern pattern-11"></object>

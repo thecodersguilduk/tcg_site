@@ -17,6 +17,7 @@ date: 2021-04-20T14:46:54.657Z
 tags:
   - Apprenticeships
   - Digital Skills
+  - blog
 ---
 ### At the end of March, over 100 talented participants graduated from our West Yorkshire Digital Skills Bootcamps, having spent 12 weeks training in areas like UX, web development, and software testing.
 

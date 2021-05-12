@@ -1,9 +1,9 @@
 .get-in-touch {
   .cta {
     &__text {
-      max-width: 70%;
+      max-width: 60%;
 
-      @media (max-width: 640px){
+      @media (max-width: 640px) {
         max-width: 100%;
       }
     }

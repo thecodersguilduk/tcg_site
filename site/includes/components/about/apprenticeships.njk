@@ -1,6 +1,6 @@
 <section class="relative md:py-20 pt-12 pb-16">
               <div class="inner">
-                <div class="md:flex md:mb-16 mb-14">
+                <div class="md:flex md:flex-wrap md:mb-16 mb-14">
                   <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
                     <h3 class="text-white">Our Available Apprenticeships</h3>
                     <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts.</p>
@@ -9,9 +9,9 @@
                   </div>
                   <div>
                     {% if apprenticeships.active %}
-                      <div class="flex -mx-4">
+                      <div class="flex flex-wrap md:mt-16 -mx-4">
                         {% for item in apprenticeships.active %}
-                          <div class="px-4">
+                          <div class="px-4 mb-6">
                             <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
                               <div class="flex flex-col items-start h-full">
                                 <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
@@ -20,10 +20,10 @@
                                 <div class="mt-auto not-on-print">
                                   <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
                                   <div class="mb-4">
-                                    <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a Developer</a>
+                                    <a href="{{ item.apprentice_link }}" class="inline-block bg-blue-200 text-white font-heading font-bold text-sm leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a {{item.title}}</a>
                                   </div>
                                   <div>
-                                    <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a Developer</a>
+                                    <a href="{{ item.employer_link }}" class="inline-block bg-red-100 text-white font-heading font-bold text-sm leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a {{item.title}}</a>
                                   </div>
                                 </div>
                               </div>
