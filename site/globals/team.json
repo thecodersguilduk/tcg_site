@@ -62,16 +62,6 @@
     }
   },
   {
-    "name": "Robbie",
-    "image": "../images/team/robbie-linkedin.jpeg",
-    "occupation": "Marketing & Communications Manager",
-    "description": "Robbie is here to support our community with a wide range of communications, content, and other interesting updates. This includes producing insightful, informative resources to further educate our learners, as well as ensuring that our partners and other relevant organisations understand the value of the opportunities we provide. ",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/robbie-westacott-16aa8b54/",
-      "twitter": "https://twitter.com/Bob_The_Goat"
-    }
-  },
-  {
     "name": "Emma",
     "image": "../images/team/emma-linkedin.jpeg",
     "occupation": "PA to Crispin Read",
