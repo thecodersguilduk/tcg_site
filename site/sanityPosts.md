@@ -6,8 +6,9 @@ pagination:
 tags: ['blog'],
 layout: 'post',
 eleventyComputed: {
-title: data => data.post.title,
-description: data => data.post.blogPortableText,
+author: post.data.authors,
+excerpt: data => data.post.excerpt,
+date: '2021-05-02',
 
 # permalink: data => `/blog/${data.post.slug.current}/index.html`
 

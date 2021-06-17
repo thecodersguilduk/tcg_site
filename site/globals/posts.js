@@ -1,6 +1,10 @@
 const blocksToMd = require('@sanity/block-content-to-markdown')
 const sanityClient = require('@sanity/client')
-const query = `*[_type == "blog"] | order(_createdAt desc)`
+const query = `*[_type == "blog"]{
+    title,
+    authors,
+    excerpt
+  } | order(_createdAt desc)`
 
 module.exports = async function() {
     // Fetches data
