@@ -8,11 +8,11 @@ layout: 'post',
 eleventyComputed: {
 title: data => data.post.title,
 body: data => data.post.blogPortableText,
-featuredImage: data => `data.post.mainImage.asset.\_ref`,
-author: data => data.post.authors['name'],
+featured_image: data => data.post.mainImage,
+author: data => data.post.authors[0].name,
 excerpt: data => data.post.excerpt,
 date: data => data.post.date,
-avatar: data => data.post.authors.image,
+avatar: data => data.post.avatar,
 permalink: data => `/blog/${data.post.slug.current}/index.html`
 
 },
