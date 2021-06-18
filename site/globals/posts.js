@@ -1,17 +1,13 @@
 const blocksToMd = require('@sanity/block-content-to-markdown')
 const sanityClient = require('@sanity/client')
-const query = `*[_type == "blog"]{
-    title,
-    authors,
-    excerpt
-  } | order(_createdAt desc)`
+const query = `*[_type == "blog"] | order(_createdAt desc)`
 
 module.exports = async function() {
     // Fetches data
     const client = sanityClient({
         projectId: 'wd1bon7z',
         dataset: 'production',
-        apiVersion: '2021-06-16', // use current UTC date - see "specifying API version"!
+        apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
         token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
         useCdn: false, // `false` if you want to ensure fresh data
     })

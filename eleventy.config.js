@@ -35,7 +35,7 @@ module.exports = eleventyConfig => {
     // Collections
     eleventyConfig.addCollection('blog', collection => {
 
-        const blogs = collection.getFilteredByTag('blog')
+        let blogs = collection.getFilteredByTag('blog')
 
         for( let i = 0; i < blogs.length; i++ ) {
 
@@ -47,8 +47,18 @@ module.exports = eleventyConfig => {
 
         }
 
-        return blogs.reverse()
+        const blogsWithUpdatedDates = blogs.map(blog => {
+            // If the item has a data.post object (from external Data)
+            // Then set a new date based on the date property
+            // Else return the original date (takes care of the Markdown)
+            blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
+            return blog
+        })
+        // Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
+        blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
+        // Make sortedPosts the array for the collection
 
+        return blogs.reverse();
     })
 
     // Layout aliases

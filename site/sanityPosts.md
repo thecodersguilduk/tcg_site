@@ -1,4 +1,4 @@
----
+---js
 
 {
 pagination:
@@ -6,11 +6,14 @@ pagination:
 tags: ['blog'],
 layout: 'post',
 eleventyComputed: {
-author: post.data.authors,
+title: data => data.post.title,
+body: data => data.post.blogPortableText,
+featuredImage: data => `data.post.mainImage.asset.\_ref`,
+author: data => data.post.authors['name'],
 excerpt: data => data.post.excerpt,
-date: '2021-05-02',
-
-# permalink: data => `/blog/${data.post.slug.current}/index.html`
+date: data => data.post.date,
+avatar: data => data.post.authors.image,
+permalink: data => `/blog/${data.post.slug.current}/index.html`
 
 },
 }
