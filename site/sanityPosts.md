@@ -12,7 +12,7 @@ featured_image: data => data.post.mainImage,
 author: data => data.post.authors[0].name,
 excerpt: data => data.post.excerpt,
 date: data => data.post.date,
-avatar: data => data.post.avatar,
+avatar: data => data.post.avatar[0],
 permalink: data => `/blog/${data.post.slug.current}/index.html`
 
 },

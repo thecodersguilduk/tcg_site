@@ -1,12 +1,12 @@
 ---
-title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
-meta_title: "Discover How Digital Skills Training is Transforming the UK Tech Sector "
+title: 'Discover How Digital Skills Training is Transforming the UK Tech Sector '
+meta_title: 'Discover How Digital Skills Training is Transforming the UK Tech Sector '
 meta_description: The Coders Guild team is incredibly proud to congratulate all
   the participants for successfully graduating from our Digital Skills Bootcamps
   this week!
 time: 4 mins
 author: Crispin Read
-avatar: ../team/crispin.jpeg
+avatar: ../images/team/crispin.jpeg
 featured_image: /images/blog/ux-indonesia-pqzrfbhd9r0-unsplash.jpg
 excerpt: The Coders Guild team is incredibly proud to congratulate all the
   participants for successfully graduating from our Digital Skills Bootcamps
@@ -18,11 +18,12 @@ tags:
   - News & Events
   - blog
 ---
+
 #### Since the start of this year, The Coders Guild has been providing free digital skills training in web and app development, UX, and software testing for over 100 learners here in Yorkshire.
 
-These training courses are part of an innovative project led by West Yorkshire Combined Authority (WYCA) and the Department for Education, following a £2.5 billion investment into the National Skills Fund. 
+These training courses are part of an innovative project led by West Yorkshire Combined Authority (WYCA) and the Department for Education, following a £2.5 billion investment into the National Skills Fund.
 
-Today, we're incredibly proud to congratulate all those participants for completing their training, marking their successful graduation from these bootcamps! 
+Today, we're incredibly proud to congratulate all those participants for completing their training, marking their successful graduation from these bootcamps!
 
 ### An important project paves the way for a brighter future
 
@@ -32,11 +33,11 @@ These courses were completely free for people from our local community, as part 
 
 The project has also promoted greater diversity and equality in the tech industry, with over 50% of the trainees being female, and a large number of participants also coming from the BAME community and other under-represented groups.
 
-This is a big step in the right direction, making career opportunities in tech equally available for everyone regardless of gender, race, or background. 
+This is a big step in the right direction, making career opportunities in tech equally available for everyone regardless of gender, race, or background.
 
 ### Congratulations to our graduates
 
-After 12 weeks of hard work, all the grads who have completed their training are now up to speed with some of the most sought-after skills for employers in the current digital-first business landscape. 
+After 12 weeks of hard work, all the grads who have completed their training are now up to speed with some of the most sought-after skills for employers in the current digital-first business landscape.
 
 We're also happy to report that the industry-led curriculum, hands-on learning, and community-driven support network provided by the project have all been really well received by everyone involved.
 
@@ -48,13 +49,13 @@ Gary Tate, a self-employed events co-ordinator by trade, decided to take the Web
 
 Huge congratulations to everyone who has taken part in this project. The team here at The Coders Guild has been so impressed with all the effort and hard work of the trainees over the past few months.
 
-Needless to say, massive thanks are also in order for our outstanding trainers and mentors for their help in making this project happen. We’re so lucky to have such a dedicated, experienced team of experts delivering this training with us. 
+Needless to say, massive thanks are also in order for our outstanding trainers and mentors for their help in making this project happen. We’re so lucky to have such a dedicated, experienced team of experts delivering this training with us.
 
 ### A unique opportunity for employers
 
 This project is a perfect example of how influential digital skills training can be in unlocking the full potential of the tech industry in a post-pandemic world.
 
-Suman Bala, QA Lead at Sky, who helped us teach the bootcamps, said: 
+Suman Bala, QA Lead at Sky, who helped us teach the bootcamps, said:
 
 #### “I was amazed to see the learners’ aptitude and attitude. You can teach people skills, but you can’t teach them how to be passionate. The learners on these bootcamps have all been passionate, hardworking, and full of energy.”
 
@@ -64,7 +65,7 @@ As of today, this new generation of future tech superstars are trained and ready
 
 ### What comes next?
 
-We’re excited to announce that the project has been so successful that we’ve now been given an extension to continue teaching right through to the summer. 
+We’re excited to announce that the project has been so successful that we’ve now been given an extension to continue teaching right through to the summer.
 
 This is fantastic news, because it means we'll be able to continue making tech education more accessible, create more career opportunities within the local community, and provide businesses with the skills and qualities they need to carry them into the future.
 
@@ -72,6 +73,6 @@ The extension is a testament to the amazing effort of this first round of partic
 
 ### Thanks to all involved
 
-It’s been a genuine pleasure delivering this training for the WYCA and the Department for Education, and we’re looking forward to keeping that going for the next group of participants over the coming weeks and months! 
+It’s been a genuine pleasure delivering this training for the WYCA and the Department for Education, and we’re looking forward to keeping that going for the next group of participants over the coming weeks and months!
 
 For anyone interested in learning a new digital skill or pursuing a change in career, we have a range of opportunities available right now. **[Get in touch with us directly to discover the options for digital skills training, tech education, and apprenticeship programmes](https://thecodersguild.org.uk/contact-us/) to progress your own career.**

@@ -6,7 +6,7 @@ const query = `*[_type == "blog"] {
     "mainImage": mainImage.asset->url,
     excerpt,
     authors[]->{name},
-    "avatar": authors[].image->url,
+    "avatar": authors[]->image.asset->url,
     categories[]->{name},
     blogPortableText,
 } | order(_createdAt desc)`

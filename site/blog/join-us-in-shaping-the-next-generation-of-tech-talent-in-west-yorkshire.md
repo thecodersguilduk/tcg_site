@@ -1,55 +1,56 @@
 ---
-title: "Join us in Shaping the Next Generation of Tech Talent in West Yorkshire "
-meta_title: "Join us in Shaping the Next Generation of Tech Talent in West Yorkshire "
-meta_description: "The Coders Guild is inviting businesses in West Yorkshire to
+title: 'Join us in Shaping the Next Generation of Tech Talent in West Yorkshire '
+meta_title: 'Join us in Shaping the Next Generation of Tech Talent in West Yorkshire '
+meta_description: 'The Coders Guild is inviting businesses in West Yorkshire to
   collaborate with us in delivering digital skills training to people in the
   local area, to create a brighter future for the tech industry in 2021 and
-  beyond. "
+  beyond. '
 time: 7 mins
 author: Fiona
-avatar: ../team/fiona.jpg
+avatar: ../images/team/fiona.jpg
 featured_image: /images/blog/interviews.jpg
-excerpt: "The Coders Guild is inviting businesses in West Yorkshire to
+excerpt: 'The Coders Guild is inviting businesses in West Yorkshire to
   collaborate with us in delivering digital skills training to people in the
   local area, to create a brighter future for the tech industry in 2021 and
-  beyond. "
+  beyond. '
 date: 2021-01-06T14:30:25.743Z
 tags:
   - blog
   - Digital Skills
 ---
+
 **Like many businesses that have been forced to adapt to the ongoing challenges of the pandemic this past year, you’ll likely have experienced a growing need for digital skills within your team to support new trends like remote working brought on by the UK lockdowns.**
 
-Across all sectors, as the demand for digital services and solutions continues to increase, [technical employees are becoming far more valuable to our organisations](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/). But it’s crucial that these people are getting the right training so they're able to deliver what’s required. 
+Across all sectors, as the demand for digital services and solutions continues to increase, [technical employees are becoming far more valuable to our organisations](https://thecodersguild.org.uk/blog/hiring-developer-apprentice-sme-thrive-2021/). But it’s crucial that these people are getting the right training so they're able to deliver what’s required.
 
-That’s why the government is investing £2.5 billion for the National Skills Fund, because now more than ever digital skills training is crucial in driving workforce growth and diversity, and unlocking the full potential of the UK tech industry over the coming years. 
+That’s why the government is investing £2.5 billion for the National Skills Fund, because now more than ever digital skills training is crucial in driving workforce growth and diversity, and unlocking the full potential of the UK tech industry over the coming years.
 
 That funding is being used to create [a range of free digital skills bootcamps, to train people in need of new career opportunities and to help get businesses on the road to recovery from COVID-19](https://www.skillsbootcamps.com/).
 
-The Coders Guild is delighted to announce we’ll be part of this exciting new initiative, working in partnership with the West Yorkshire Combined Authority (WYCA), [providing comprehensive courses in software development, UX design, and software testing.](https://thecodersguild.org.uk/blog/free-tech-boot-camps-for-west-yorkshire/) 
+The Coders Guild is delighted to announce we’ll be part of this exciting new initiative, working in partnership with the West Yorkshire Combined Authority (WYCA), [providing comprehensive courses in software development, UX design, and software testing.](https://thecodersguild.org.uk/blog/free-tech-boot-camps-for-west-yorkshire/)
 
-From January to March, we’ll be coaching and preparing the next generation of tech talent in West Yorkshire and we’d like you to get involved as well. 
+From January to March, we’ll be coaching and preparing the next generation of tech talent in West Yorkshire and we’d like you to get involved as well.
 
 ## Take part in a unique project
 
-We’re extending an invitation for businesses like yours to support us in delivering this training in a variety of interactive ways. This is a unique chance to collaborate with some of the leading organisations in the local area, and to help define the employment and training agenda for the future of the technology industry in the UK. 
+We’re extending an invitation for businesses like yours to support us in delivering this training in a variety of interactive ways. This is a unique chance to collaborate with some of the leading organisations in the local area, and to help define the employment and training agenda for the future of the technology industry in the UK.
 
-These bootcamps will close the current skills gap and provide clear pathways to more prosperous careers in tech for the BAME community, female candidates, and people recently made redundant or unemployed due to lockdown. 
+These bootcamps will close the current skills gap and provide clear pathways to more prosperous careers in tech for the BAME community, female candidates, and people recently made redundant or unemployed due to lockdown.
 
 ## How to contribute 
 
 There are plenty of exciting options for you, or people from within your team, to participate, including:
 
-* Online engagement and support for our teachers and trainees
-* Upskill an existing employee by enrolling them into a bootcamp 
-* Provide feedback and advice to trainees in one of our open Slack channels
-* Contribute to the training agenda with skills you think are important today
-* Help us prepare the trainees for hiring processes with employability guidance
-* Sit down to help trainees with practice interviews 
-* Work with us to endorse the course material and content
-* Recommend relevant job opportunities and openings to candidates
-* Give an online interview about your own background and career in tech
-* Join the community and take part in online events via social media. 
+- Online engagement and support for our teachers and trainees
+- Upskill an existing employee by enrolling them into a bootcamp
+- Provide feedback and advice to trainees in one of our open Slack channels
+- Contribute to the training agenda with skills you think are important today
+- Help us prepare the trainees for hiring processes with employability guidance
+- Sit down to help trainees with practice interviews
+- Work with us to endorse the course material and content
+- Recommend relevant job opportunities and openings to candidates
+- Give an online interview about your own background and career in tech
+- Join the community and take part in online events via social media.
 
 It goes without saying that 2020 was a tough year for everyone, but we’re looking forward to making 2021 a year to remember for our digital skills trainees from West Yorkshire who are ready and willing to make their mark on the ever-expanding tech industry.
 
@@ -59,11 +60,11 @@ These virtual bootcamps will also give employers in West Yorkshire direct access
 
 So, by working with us on this project, you’ll also be able to:
 
-* Take advantage of the free training to reskill or upskill some of your existing staff 
-* Find new employees to grow and diversify your workforce 
-* Create career opportunities for undiscovered and under-represented local talent
-* Close the digital skills gap to make the UK workforce more capable and effective
-* Open a new pathway for future growth and long-term success.
+- Take advantage of the free training to reskill or upskill some of your existing staff
+- Find new employees to grow and diversify your workforce
+- Create career opportunities for undiscovered and under-represented local talent
+- Close the digital skills gap to make the UK workforce more capable and effective
+- Open a new pathway for future growth and long-term success.
 
 ## Don’t miss out!
 

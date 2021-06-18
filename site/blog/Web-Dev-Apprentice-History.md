@@ -2,7 +2,7 @@
 time: 6min
 date: 2020-09-22
 author: Crispin
-avatar: ../team/crispin.jpeg
+avatar: ../images/team/crispin.jpeg
 title: Web Dev Apprentice - Our Story
 meta_title: Web Dev Apprentice - Our Story
 meta_description: The history of this industry led apprenticeship scheme

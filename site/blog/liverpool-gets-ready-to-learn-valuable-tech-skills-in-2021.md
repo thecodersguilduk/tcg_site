@@ -1,12 +1,12 @@
 ---
-title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
-meta_title: "Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 "
+title: 'Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 '
+meta_title: 'Liverpool City Region Gets Ready to Learn Valuable Tech Skills in 2021 '
 meta_description: The Coders Guild is offering free digital skills bootcamps for
   people in the Liverpool City Region, launching at the end of January, in
   partnership with the Liverpool City Region Combined Authority.
 time: 4 minutes
 author: Crispin Read
-avatar: ../team/crispin.jpeg
+avatar: ../images/team/crispin.jpeg
 featured_image: /images/blog/fasttrack.jpg
 excerpt: The Coders Guild is offering free digital skills bootcamps for people
   in the Liverpool City Region, launching at the end of January, in partnership
@@ -16,17 +16,18 @@ tags:
   - Digital Skills
   - blog
 ---
+
 We’re delighted to announce the launch of some new free training courses which will teach valuable tech skills, open to people based in the Liverpool City Region, starting at the end of January.
 
-Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills bootcamps which will focus on front-end coding and software development. 
+Working in partnership with the Liverpool City Region Combined Authority, we'd like to invite you to apply to these fantastic digital skills bootcamps which will focus on front-end coding and software development.
 
-**These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience. They're exclusively available for people aged 19 and over in Liverpool, Wirral, Sefton, Knowsley, St Helens, and Halton.** 
+**These courses are completely free, delivered remotely (lockdown-friendly), and taught by experienced professionals with years of experience. They're exclusively available for people aged 19 and over in Liverpool, Wirral, Sefton, Knowsley, St Helens, and Halton.**
 
 The main purpose of this programme is to make jobs in tech more accessible for people in the BAME community, female candidates, and those who have recently been made redundant or unemployed due to lockdown. But we’re also looking to help people currently in entry-level tech roles progress up the ladder more quickly and easily, as well as introducing people from non-technical backgrounds to the wonderful world of coding.
 
 If that sounds like you, this is the perfect way to put the challenges of 2020 behind you and get the new year off to a positive start.
 
-Spaces are limited, so don’t hesitate to register your interest today!  
+Spaces are limited, so don’t hesitate to register your interest today!
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
@@ -44,9 +45,9 @@ We have a long list of businesses of all shapes and sizes across the Liverpool C
 
 In addition to direct access to those employers, participating in these courses will also give you:
 
-* Coaching in modern employability skills, and guidance through hiring processes
-* Invitations to employer engagement events, and help finding a job where you can use the skills you’ll have learned
-* A high-demand digital skill-set needed by employers today 
+- Coaching in modern employability skills, and guidance through hiring processes
+- Invitations to employer engagement events, and help finding a job where you can use the skills you’ll have learned
+- A high-demand digital skill-set needed by employers today
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
 
@@ -54,21 +55,21 @@ In addition to direct access to those employers, participating in these courses 
 
 #### When will the bootcamps run?
 
-* The bootcamps will run between the end of January and March 
-* Each bootcamp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
-* You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling 
+- The bootcamps will run between the end of January and March
+- Each bootcamp will last 8 weeks, and will be part-time (roughly between 8 and 16 hours per week on average)
+- You can do the work with flexibility, so you can still take part around your current job and any childcare or home-schooling
 
 #### Where will they be held?
 
-* These bootcamps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
-* We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
+- These bootcamps take place entirely remotely, helping you continue to learn and develop despite the restrictions of lockdown
+- We’ll hold a variety of instructor-led seminars, interactive group sessions, more general webinars, and work to do in your own time
 
 #### How will you take part?
 
-* A mixture of virtual classroom-based teaching and training in small groups 
-* There will be some work to be completed in your own time
-* You’ll work on challenge-based problem solving which will be applicable in future jobs
-* Courses are primarily self-driven learning, for your own long-term benefit
+- A mixture of virtual classroom-based teaching and training in small groups
+- There will be some work to be completed in your own time
+- You’ll work on challenge-based problem solving which will be applicable in future jobs
+- Courses are primarily self-driven learning, for your own long-term benefit
 
 #### What else will you learn?
 
@@ -82,13 +83,13 @@ In other words, we’ll get you ready to land the job you’re looking for!
 
 #### Introduction to Front-End Coding 
 
-This course will show you how the web works, as well as how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how to work as part of a team to create finished products. 
+This course will show you how the web works, as well as how we design and develop websites and applications for different devices and screen sizes. It will also cover how we make things work for assistive technologies like screen readers and how to work as part of a team to create finished products.
 
-We’ll be using the tools of the trade to teach you, so you’ll be prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide. You’ll also learn about things like version control and code editors to gain insight into all the processes involved in development. 
+We’ll be using the tools of the trade to teach you, so you’ll be prepared for hands-on jobs in the near future. We’ll also be building websites with WordPress, the system that powers 62% of all content-managed websites worldwide. You’ll also learn about things like version control and code editors to gain insight into all the processes involved in development.
 
 This is an ideal pathway to a Level 4 Apprenticeship in software development or a related industry, but could even be used to upskill designers, marketers, or people in other roles with transferable skills.
 
-You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications. 
+You won’t need any previous experience with code to do this course. We’ll be starting right at the very beginning, although you should be comfortable using a computer and using online applications.
 
 <!--
 #### Web and App Development with JavaScript and APIs 
@@ -106,6 +107,6 @@ This is a course for people wanting to move to progress from beginner status cod
 
 ### Apply Here!
 
-We know times are tough right now, but we can help you learn valuable new digital skills and discover exciting new career opportunities. Register your interest below. 
+We know times are tough right now, but we can help you learn valuable new digital skills and discover exciting new career opportunities. Register your interest below.
 
 <p><a href="https://lcr-front-end.tcg.camp/apply/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a></p>
