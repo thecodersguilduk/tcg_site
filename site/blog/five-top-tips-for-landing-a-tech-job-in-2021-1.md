@@ -23,11 +23,7 @@ tags:
 
 ### *What steps can you take to help create a more diverse workforce across the tech industry?*
 
-
-
 - - -
-
-
 
 ### Talk highlights
 
@@ -50,7 +46,6 @@ In our experience, SMEs and small businesses that have taken on apprentices see 
 
 This is an amazing opportunity for brands to take on rising stars in the tech world, address skill shortages, champion diversity in the workplace and support our government backed programme.
 
-#### \
 Jumpstart the careers of our tech graduates today
 
 If you’re a business who can help us with our mission to break down all barriers to the tech sector and nurture top talent, then take action today.
