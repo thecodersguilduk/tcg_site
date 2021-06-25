@@ -15,7 +15,7 @@ tags:
 ---
 ### The COVID-19 pandemic has had a huge impact on everyone, with lots of people losing their jobs and facing unemployment uncertainty. In particular, these challenges are affecting the same groups who continue to be marginalised in the tech industry.
 
-### Breaking down those roadblocks is a huge part of what we do at The Coders Guild. 
+### Breaking down those roadblocks is a huge part of what we do at The Coders Guild.
 
 ### So, what steps can you take to help create a more diverse workforce across the tech industry?
 
@@ -25,11 +25,9 @@ As part of the Leeds Digital Forum in May 2021, The Coders Guild was invited to 
 
 We spoke about our social mission and continued dedication to increase diversity, promoting inclusion and removing barriers to careers in tech.
 
-
-
 ## Talk highlights
 
-My talk at the Leeds Digital Forum brought together key points around the work we are doing to promote inclusion and champion the development of people from all walks of life:
+The talk brought together key points around the work we are doing to promote inclusion and champion the development of people from all walks of life:
 
 * We’ve been delighted to work with the Department for Education through the [Liverpool City Region Combined Authority Council](https://thecodersguild.org.uk/blog/liverpool-city-region-to-receive-an-extension-of-digital-skills-courses-into-the-summer-of-2021/) and Yorkshire Combined Authority to train over 200 people and build their skills in web development, software testing and UX.
 * Our courses are led by industry professionals who are dedicated to giving apprentices the skills they need to be successful across various tech roles.
