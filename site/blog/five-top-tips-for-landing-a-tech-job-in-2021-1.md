@@ -25,7 +25,7 @@ tags:
 
 - - -
 
-### Talk highlights
+#### Talk highlights
 
 We shared key points around the work we are doing to promote inclusion and champion the development of people from all walks of life:
 
