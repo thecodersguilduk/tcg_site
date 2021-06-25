@@ -13,21 +13,19 @@ date: 2021-06-25T15:59:15.768Z
 tags:
   - Digital Skills
 ---
-### As part of the Leeds Digital Forum, I was invited to take part in a [webinar that focused on creating better connections](https://www.youtube.com/watch?v=rXeMoDGCgEw) in Leeds for people working in the tech sector.
-
 ### The COVID-19 pandemic has had a huge impact on everyone, with lots of people losing their jobs and facing unemployment uncertainty. In particular, these challenges are affecting the same groups who continue to be marginalised in the tech industry.
 
-### Breaking down those roadblocks is a huge part of what we do at The Coders Guild. So, what steps can you take to help create a more diverse workforce across the tech industry?
+### Breaking down those roadblocks is a huge part of what we do at The Coders Guild. 
+
+### So, what steps can you take to help create a more diverse workforce across the tech industry?
 
 - - -
 
-As part of the Leeds Digital Forum in May 2021, I was invited to take part in a [webinar that focused on creating better connections](https://www.youtube.com/watch?v=rXeMoDGCgEw) in Leeds for people working in the tech sector.
+As part of the Leeds Digital Forum in May 2021, The Coders Guild was invited to take part in a [webinar that focused on creating better connections](https://www.youtube.com/watch?v=rXeMoDGCgEw) in Leeds for people working in the tech sector.
 
-I  spoke about our social mission and our continued dedication to increasing diversity, promoting inclusion and removing barriers to careers in tech.
+We spoke about our social mission and continued dedication to increase diversity, promoting inclusion and removing barriers to careers in tech.
 
-The COVID-19 pandemic has had a huge impact on everyone, with lots of people losing their jobs and facing unemployment uncertainty. In particular, these challenges are affecting the same groups who continue to be marginalised in the tech industry.
 
-Breaking down those roadblocks is a huge part of what we do at The Coders Guild. So, what steps can you take to help create a more diverse workforce across the tech industry?
 
 ## Talk highlights
 
@@ -38,8 +36,6 @@ My talk at the Leeds Digital Forum brought together key points around the work w
 * We’ve placed a lot of emphasis on making courses valuable to everyone, from Leeds businesses through to our trainees. We’ve [armed our graduates](https://thecodersguild.org.uk/apprenticeships/) with the knowledge they need to make an immediate impact and collaborated with brands who can continue to nurture this talent. 
 
 But there’s more we can do, and we need your help to create a more diverse workforce in tech businesses throughout the UK.
-
-
 
 ## Jumpstart the careers of our tech graduates today
 
