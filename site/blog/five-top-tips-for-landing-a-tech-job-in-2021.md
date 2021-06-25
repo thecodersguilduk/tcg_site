@@ -11,9 +11,7 @@ excerpt: In this article, we talk about ways to help foster diversity in tech.
   tech industry?
 date: 2021-06-25T15:59:15.768Z
 tags:
-  - Apprenticeships
   - Digital Skills
-  - blog
 ---
 ### As part of the Leeds Digital Forum, I was invited to take part in a [webinar that focused on creating better connections](https://www.youtube.com/watch?v=rXeMoDGCgEw) in Leeds for people working in the tech sector.
 
