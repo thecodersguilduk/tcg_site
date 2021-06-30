@@ -5,6 +5,7 @@ const query = `*[_type == "blog"] {
     slug,
     "mainImage": mainImage.asset->url,
     excerpt,
+    time,
     authors[]->{name},
     "avatar": authors[]->image.asset->url,
     categories[]->{name},

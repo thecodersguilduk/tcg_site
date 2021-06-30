@@ -58,6 +58,12 @@ export default {
         ]
       },
       {
+        name: 'time',
+        title: 'Time to Read',
+        type: 'string',
+        description: 'Just enter the number of minutes here!'
+      },
+      {
         name: 'categories',
         type: 'array',
         title: 'Categories',
