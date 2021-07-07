@@ -9,6 +9,10 @@
           "url": "/apprenticeships"
       },
       {
+        "label": "course directory",
+        "url": "/course-directory"
+    },
+      {
         "label": "blog",
         "url": "/blog"
       },
