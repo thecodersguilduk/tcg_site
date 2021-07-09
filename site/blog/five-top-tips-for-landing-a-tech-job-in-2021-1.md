@@ -6,16 +6,17 @@ meta_description: In this article, we share work we are doing to promote
 time: 5 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
-featured_image: /images/blog/christina-wocintechchat-com-fvgecvtjlbq-unsplash.jpg
+featured_image: /images/blog/img_1417-1-.jpg
 excerpt: The COVID-19 pandemic has had a huge impact on everyone, with lots of
   people losing their jobs and facing unemployment uncertainty. In particular,
   these challenges are affecting the same groups who continue to be marginalised
   in the tech industry.### Breaking down those roadblocks is a huge part of what
   we do at The Coders Guild.
-date: 2021-06-25T17:01:23.916Z
+date: 2021-07-09T07:09:53.569Z
 tags:
   - Digital Skills
   - News & Events
+  - blog
 ---
 ### As part of the Leeds Digital Forum in May 2021, The Coders Guild was  invited to take part in a [webinar that focused on creating better connections](https://www.youtube.com/watch?v=rXeMoDGCgEw) in Leeds for people working in the tech sector.
 
