@@ -12,7 +12,7 @@ excerpt: The COVID-19 pandemic has had a huge impact on everyone, with lots of
   these challenges are affecting the same groups who continue to be marginalised
   in the tech industry.### Breaking down those roadblocks is a huge part of what
   we do at The Coders Guild.
-date: 2021-06-25T17:01:23.916Z
+date: 2021-07-09T07:09:53.569Z
 tags:
   - Digital Skills
   - News & Events
