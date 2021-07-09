@@ -7,6 +7,7 @@ time: 5 minutes
 author: Crispin Read
 avatar: ../team/crispin.jpeg
 featured_image: /images/blog/img_1417-1-.jpg
+permalink: "creating-diverse-tech-workforce-leeds-and-beyond"
 excerpt: The COVID-19 pandemic has had a huge impact on everyone, with lots of
   people losing their jobs and facing unemployment uncertainty. In particular,
   these challenges are affecting the same groups who continue to be marginalised
