@@ -13,7 +13,7 @@ excerpt: Thanks to  the success of our industry led Software Testing bootcamp
   courses, we are thrilled to announce that we are launching a new   Software
   Testing Apprenticeship. We are looking for forward thinking employers to join
   us in developing the emerging talent our sector needs.
-date: 2021-07-11T10:47:21.661Z
+date: 2021-07-11T10:47:00.000Z
 tags:
   - blog
   - Apprenticeships
