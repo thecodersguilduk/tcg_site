@@ -1,6 +1,6 @@
 ---
 title: Delete me
-meta_title: Creating A Diverse Tech Workforce In Leeds And Beyond
+meta_title: Delete me
 meta_description: In this article, we talk about ways to help foster diversity in tech
 time: 5 minutes
 author: Crispin Read
