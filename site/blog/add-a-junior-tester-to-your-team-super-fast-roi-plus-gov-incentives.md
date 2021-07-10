@@ -22,7 +22,7 @@ Thanks to  the success of our [industry led Software Testing bootcamp courses](
 
 <div class="overflow-hidden md:max-w-xs md:mx-auto" id="pledge">
   <div>
-    <h2 class="leading-3xl text-2xl">Get Involved</h2>
+    <h2 class="leading-3xl text-2xl">Get in touch</h2>
   </div>
   <form  method="POST" action="https://formspree.io/f/mzbkjqly" id="contact-form" class="relative">
     <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
