@@ -62,11 +62,11 @@ Thanks to  the success of our [industry led Software Testing bootcamp courses](
 
 ## Industry Led, Community Driven
 
-The course has been developed to meet industry needs whilst addressing social issues such as improving diversity and solving the digital skills shortage. This is our MO.
+The course has been developed to **meet industry needs whilst addressing social issues** such as improving diversity and solving the digital skills shortage. This is our MO.
 
-The course content has been developed by highly regarded Software Testing professionals taking insight and direction from employers and team leaders on the exact knowledge and skills they need now.  This brand new apprenticeship will be delivered by the same  incredible trainers who taught in our Digital Skills Bootcamp Courses, with a real focus on super fast ROI developing skills that bring immediate benefit and efficiency to technical teams. 
+The course content has been developed by **highly regarded Software Testing professionals** taking insight and direction from employers and team leaders on the exact knowledge and skills they need now.  This **brand new apprenticeship** will be delivered by the same  incredible trainers who taught in our Digital Skills Bootcamp Courses, with a real focus on **super fast ROI developing skills that bring immediate benefit** and efficiency to technical teams. 
 
-We fully recognise the value of core skills such as collaboration, problem-solving, communication, time management, best practices and teamwork.  These core skills form the backbone of the curriculum as learners improve their skills and technical knowledge around software testing tools and technique.
+We fully recognise the value of core skills such as **collaboration, problem-solving, communication, time management, best practices and teamwork**.  These core skills form the backbone of the curriculum as learners improve their skills and technical knowledge around **software testing tools and technique**.
 
 ## Super Fast ROI
 
