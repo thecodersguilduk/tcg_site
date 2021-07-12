@@ -653,8 +653,8 @@ var $$ = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jodiemarks/Documents/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /Users/jodiemarks/Documents/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /home/steve/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /home/steve/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })

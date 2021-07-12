@@ -3,6 +3,7 @@ const sanityClient = require('@sanity/client')
 const query = `*[_type == "blog"] {
     title,
     slug,
+    publishedAt,
     "mainImage": mainImage.asset->url,
     excerpt,
     time,

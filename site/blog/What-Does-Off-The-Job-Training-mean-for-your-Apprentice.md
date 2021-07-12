@@ -2,7 +2,7 @@
 time: 3min
 date: 2020-09-12
 author: Naomi
-avatar: ../images/images/team/naomi.jpeg
+avatar: ../images/team/naomi.jpeg
 title: What Does Off The Job Training Mean for your Apprentice?
 meta_title: What Does Off The Job Training Mean for your Apprentice?
 meta_description: One of the first questions you likely had when considering an Apprenticeship programme was ‘How much time will the apprenticeship take up?"...and this is a really valid question!

@@ -78,8 +78,21 @@ export default {
       },
       {
         name: 'blogPortableText',
-        type: 'text',
-        title: 'Body'
+        type: 'array',
+        title: 'Body',
+        of: [
+          {
+            type: 'block',
+            marks: {
+              decorators: [
+                { title: 'Strong', value: 'strong' },
+                { title: 'Emphasis', value: 'em' },
+                { title: 'Code', value: 'code' },
+                { title: 'Highlight', value: 'highlight' }
+              ]
+            }
+          }
+        ] 
       }
     ],
     orderings: [
