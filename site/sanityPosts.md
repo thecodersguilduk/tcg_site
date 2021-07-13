@@ -15,14 +15,12 @@ tags: data => {
 
     return arr;
 },
+meta_title: data => data.post.title,
 title: data => data.post.title,
 featured_image: data => data.post.mainImage,
 author: data => data.post.authors[0].name,
 excerpt: data => data.post.excerpt,
-date: data => {
-    const fullDate = data.post.publishedAt; <!-- YYYY-MM-DD format -->
-    return fullDate.split('T')[0];
-}, 
+date: data => data.post.date, 
 avatar: data => data.post.avatar[0],
 time: data => data.post.time + ' mins ',
 permalink: data => `/blog/${data.post.slug.current}/index.html`
@@ -30,5 +28,5 @@ permalink: data => `/blog/${data.post.slug.current}/index.html`
 },
 }
 
----{{ date }}
+---{{ post.blogPortableText }}
 

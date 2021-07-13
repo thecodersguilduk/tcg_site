@@ -58,7 +58,7 @@ module.exports = eleventyConfig => {
         blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
         // Make sortedPosts the array for the collection
 
-        return blogs.reverse();
+        return blogs;
     })
 
     // Layout aliases
