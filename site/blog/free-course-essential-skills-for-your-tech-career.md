@@ -13,7 +13,7 @@ excerpt: Exciting new course 100% FREE for ANYONE in West Yorkshire looking to
   start or progress their career in tech.   The course is designed to bolster
   your skill set and supercharge your career prospects adding instant value to
   your team.
-date: 2021-07-13T20:44:09.658Z
+date: 2021-07-14T07:00:00.000Z
 tags:
   - blog
   - Digital Skills
