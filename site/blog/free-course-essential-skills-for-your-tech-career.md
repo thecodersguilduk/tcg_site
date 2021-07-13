@@ -73,7 +73,7 @@ To be eligible for this course you **must live in West Yorkshire** or work at a 
 
 ## Super-charge your career now
 
-If you are ready to up-skill, re-skill or top up your skills and knowledge click the button below and apply today.
+If you are ready to up-skill, re-skill or top up your skills and knowledge click the button below and apply today. Don't delay, spaces are limited and time is tight - first come first served - Don't miss out!
 
 <a href="http://applyntc.thecodersguild.org.uk/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
