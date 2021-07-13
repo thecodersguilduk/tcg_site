@@ -7,7 +7,7 @@ meta_description: Exciting new course 100% FREE for ANYONE in West Yorkshire
   value to your team.
 time: 3 mins
 author: Fiona Bishop
-avatar: ../team/fiona.jpeg
+avatar: ../team/fiona.jpg
 featured_image: /images/blog/danielle-macinnes-iulgi9pwetu-unsplash.jpeg
 excerpt: Exciting new course 100% FREE for ANYONE in West Yorkshire looking to
   start or progress their career in tech.   The course is designed to bolster
