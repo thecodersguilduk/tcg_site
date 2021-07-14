@@ -8,7 +8,7 @@ meta_description: The importance of good recruitment, finding people with a
   underestimated.
 time: 7 minutes
 author: Fiona Bishop
-avatar: ../../fiona.jpg
+avatar: ../team/fiona.jpg
 featured_image: /images/blog/illiya-vjestica-kpcqtd4h6ca-unsplash-min.jpg
 excerpt: The importance of good recruitment, finding people with a willingness
   to learn and an aptitude to grow into roles, was something we’d
