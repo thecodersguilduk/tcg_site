@@ -24,7 +24,7 @@ The course is designed to **bolster your skill set** and supercharge your career
 
 Based on insight and feedback from employers and team leaders we work with, we have designed a crash course covering **essential skills and knowledge**. All these skills are vital to progressing or accelerating your tech career. Hot subjects like **Cyber Security**, **Accessibility** and **User Focus**; fundamental concepts like **Agile** **Planning** and Defining an **MVP**; as well as core skills in **communication** and **presentation**.
 
-The 4 week course will be delivered in short online sessions over lunch time to minimise disruption to your working day.  We only have a few spaces left and we are starting on 26th July so don’t delay - Apply Today
+The course will run over **3 weeks**, delivered in 2-3 short online sessions each week. The sessions will run over lunch time to minimise disruption to your working day.  We only have a few spaces left and we are starting on **26th July** so don’t delay - Apply Today
 
 <a href="http://applyntc.thecodersguild.org.uk/" class="mt-auto inline-block py-2 px-4 bg-blue-200 text-white text-md font-bold font-heading rounded text-white" style="color: white">APPLY NOW <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
 
