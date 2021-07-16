@@ -13,7 +13,7 @@ featured_image: /images/blog/castlegate-it-new-office-pic-1170x500.jpeg
 excerpt: The importance of good recruitment, finding people with a willingness
   to learn and an aptitude to grow into roles, was something we’d
   underestimated.
-date: 2021-07-10T11:16:44.639Z
+date: 2021-07-22T08:16:44.639Z
 tags:
   - blog
   - Apprenticeships
