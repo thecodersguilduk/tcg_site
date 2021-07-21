@@ -23,10 +23,13 @@ excerpt: data => data.post.excerpt,
 date: data => data.post.date, 
 avatar: data => data.post.avatar[0],
 time: data => data.post.time + ' mins ',
-permalink: data => `/blog/${data.post.slug.current}/index.html`
+permalink: data => `/blog/${data.post.slug.current}/index.html`,
+body: data => data.post.body
 
 },
 }
 
----{{ post.blogPortableText }}
+---
+
+{{ post.body }}
 

@@ -14,6 +14,11 @@ export default {
     ],
     fields: [
       {
+        name: 'order',
+        type: 'number',
+        title: 'Order'
+      },
+      {
         name: 'name',
         type: 'string',
         title: 'Name'
@@ -27,6 +32,11 @@ export default {
           source: 'name',
           maxLength: 96
         }
+      },
+      {
+        name: 'occupation',
+        type: 'string',
+        title: 'Job Title'
       },
       {
         name: 'image',

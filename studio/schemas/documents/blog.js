@@ -1,12 +1,3 @@
-// featured image
-// category(ies) - sep schema
-// title
-// read time
-// author & avatar - sep schema
-// published Date
-// excerpt/lead paragraph
-// content
-
 export default {
     name: 'blog',
     type: 'document',
@@ -32,7 +23,7 @@ export default {
         name: 'publishedAt',
         type: 'datetime',
         title: 'Published at',
-        description: 'This can be used to schedule post for publishing'
+        description: 'The date the post was written - note - this does not yet control when the post will be visible'
       },
       {
         name: 'mainImage',
@@ -81,17 +72,9 @@ export default {
         type: 'array',
         title: 'Body',
         of: [
-          {
-            type: 'block',
-            marks: {
-              decorators: [
-                { title: 'Strong', value: 'strong' },
-                { title: 'Emphasis', value: 'em' },
-                { title: 'Code', value: 'code' },
-                { title: 'Highlight', value: 'highlight' }
-              ]
-            }
-          }
+          { type: 'block'},
+          { type: 'imageSection'},
+          { type: 'applyBtn' }
         ] 
       }
     ],
