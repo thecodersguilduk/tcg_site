@@ -107,5 +107,8 @@ meta_description: {{ meta_description }}
     </article>
 
     {% include "components/blog/blog-section.njk" %}
-
+  <script>
+    const styledDiv = document.querySelector('.content > div');
+    styledDiv.classList.add('content');
+  </script>
 </main>
