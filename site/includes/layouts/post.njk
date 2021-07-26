@@ -39,7 +39,7 @@ meta_description: {{ meta_description }}
               <div class="flex">
 
                 <div class="mr-2 w-10 h-10">
-                  <img src="../../images/blog/{{avatar}}" alt="{{avatar_alt}}" class="w-full h-full object-cover rounded-50 block" />
+                  <img src="{{avatar}}" alt="{{avatar_alt}}" class="w-full h-full object-cover rounded-50 block" />
                 </div>
 
                 <div class="{% if time %}my-auto{% else  %}mt-auto{% endif %}">
@@ -107,5 +107,8 @@ meta_description: {{ meta_description }}
     </article>
 
     {% include "components/blog/blog-section.njk" %}
-
+  <script>
+    const styledDiv = document.querySelector('.content > div');
+    styledDiv.classList.add('content');
+  </script>
 </main>
