@@ -2,9 +2,11 @@
 import createSchema from 'part:@sanity/base/schema-creator'
 import blog from './documents/blog'
 import team from './documents/team'
+import testimonial from './documents/testimonials'
 import categories from './documents/categories'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
+import callModal from './documents/components/callModal'
 
 
 // Then import schema types from any plugins that might expose them
@@ -20,8 +22,10 @@ export default createSchema({
     /* Your types here! */
     blog,
     team,
+    testimonial,
     categories,
     imageSection,
-    applyBtn
+    applyBtn,
+    callModal
   ]),
 })
