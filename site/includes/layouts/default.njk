@@ -42,7 +42,7 @@
   {% endif %}
   <meta property="og:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
   <meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
-  <meta property="og:image" content="{{ featured_image }}">
+  <meta property="og:image" content="{{ featured_image }}?w=1200&h=680">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -50,10 +50,10 @@
   <meta name="twitter:creator" content="@the_codersguild">
   <meta name="twitter:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
   <meta name="twitter:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
-  <meta name="twitter:image" content="{{ featured_image }}">
-  <meta name="image" content="{{ site.url }}{{ featured_image }}">
-  <meta name="og:image" content="{{ featured_image }}">
-  <meta name="twitter:image:src" content="{{ site.url }}{{ featured_image }}">
+  <meta name="twitter:image" content="{{ featured_image }}?w=1200&h=680">
+  <meta name="image" content="{{ featured_image }}?w=1200&h=680">
+  <meta name="og:image" content="{{ featured_image }}?w=1200&h=680">
+  <meta name="twitter:image:src" content="{{ featured_image }}?w=1200&h=680">
 
   <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
   <script>
