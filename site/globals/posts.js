@@ -47,7 +47,7 @@ function prepPost(data) {
     // Adjusts where our date lives (for convenience)
     data.date = data.publishedAt.split('T')[0];
     // Returns back to our main function
-    console.log(data.body);
+    // console.log(data.body);
     return data
 }
 
