@@ -4,7 +4,6 @@ export default {
     type: 'object',
     initialValue: {
         title: 'Book a Call',
-        modalType: 'data-modal="book-a-call"'
     },
     fields: [
         {
@@ -12,12 +11,6 @@ export default {
             type: 'string',
             title: 'Title',
             description: 'Default value is Book a call'
-        },
-        {
-            name: 'modalType',
-            type: 'string',
-            title: 'Modal Type',
-            hidden: false
         }
     ]
 }
