@@ -1548,6 +1548,11 @@
     slate "^0.58.4"
     styled-components "^5.0.0"
 
+"@sanity/production-preview@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.npmjs.org/@sanity/production-preview/-/production-preview-2.13.0.tgz#b56a1a55180eb6235966c2f8744e14c3a297d35b"
+  integrity sha512-KBn1yQcvkMtyDNjk+PdHzDALx4Esi+824lyBG/p0rW01Yeu1+rhSE6bsLBUD7R7dPEUBgETSbVf79jBEhSNxhw==
+
 "@sanity/react-hooks@2.11.0":
   version "2.11.0"
   resolved "https://registry.npmjs.org/@sanity/react-hooks/-/react-hooks-2.11.0.tgz#4dd69e595f108f8e7672395df29053311a099021"
