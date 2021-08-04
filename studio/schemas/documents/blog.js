@@ -74,7 +74,8 @@ export default {
         of: [
           { type: 'block'},
           { type: 'imageSection'},
-          { type: 'applyBtn' }
+          { type: 'applyBtn' },
+          { type: 'callModal' }
         ] 
       }
     ],
