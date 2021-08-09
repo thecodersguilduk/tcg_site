@@ -1071,6 +1071,14 @@
     "@reach/utils" "0.15.0"
     tslib "^2.1.0"
 
+"@reach/auto-id@^0.15.3":
+  version "0.15.3"
+  resolved "https://registry.npmjs.org/@reach/auto-id/-/auto-id-0.15.3.tgz#23b6ae8de3bf7520044c95a85c992ae46cdcef9c"
+  integrity sha512-lbLUI9mrn74qVis141ib0Rsyhgk+gzUMtpplRmjy06cUWDFZyiBATNWMUxN5T+0fU4tpfgcjkAuPeTCCGThKtQ==
+  dependencies:
+    "@reach/utils" "0.15.3"
+    tslib "^2.3.0"
+
 "@reach/utils@0.13.2":
   version "0.13.2"
   resolved "https://registry.npmjs.org/@reach/utils/-/utils-0.13.2.tgz#87e8fef8ebfe583fa48250238a1a3ed03189fcc8"
@@ -1087,6 +1095,14 @@
   dependencies:
     tiny-warning "^1.0.3"
     tslib "^2.1.0"
+
+"@reach/utils@0.15.3":
+  version "0.15.3"
+  resolved "https://registry.npmjs.org/@reach/utils/-/utils-0.15.3.tgz#200f42adba9d1463b1c6a75ee2aaf9f0cba84f9d"
+  integrity sha512-HFyjw8LZ4/RRk5bcMpDAeEc3aOeLR/vWRDsljlE3cHI5GfFlZcG3DDLSW8C2ba74RCFp/4X3Nz0nOrd4JdkZ1w==
+  dependencies:
+    tiny-warning "^1.0.3"
+    tslib "^2.3.0"
 
 "@restart/hooks@^0.3.12":
   version "0.3.27"
@@ -1198,6 +1214,11 @@
   resolved "https://registry.npmjs.org/@sanity/color/-/color-2.1.2.tgz#a5fd77d18d02e715809e2e99fd329f70611ee3ca"
   integrity sha512-6WE14xdSWMPfWHGs9kzZyK3eCUVc37U94R4hpqTwMbAYyxvpq6KEEqWh3lsrqrxUk97MQCoWyzCpfGjMmOfpCw==
 
+"@sanity/color@^2.1.3":
+  version "2.1.4"
+  resolved "https://registry.npmjs.org/@sanity/color/-/color-2.1.4.tgz#f66f38c352352378e7eb0b1168b66417a16009fb"
+  integrity sha512-qE043GzfnoM9PQ4SYtT20d14lCgpTnxgn5aZlSJUffUiwqXbu3RcPxxkM5P7pyMXpIu0sIWqenegpkA2Ocbz7w==
+
 "@sanity/components@^2.2.6":
   version "2.2.6"
   resolved "https://registry.npmjs.org/@sanity/components/-/components-2.2.6.tgz#d1d6d1017a53ebb413ef026eabd5dd0b4a1bcdad"
@@ -1277,6 +1298,18 @@
     postcss-modules-values "^1.3.0"
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
+
+"@sanity/dashboard@^2.13.1":
+  version "2.13.1"
+  resolved "https://registry.npmjs.org/@sanity/dashboard/-/dashboard-2.13.1.tgz#b79f8d3acb02e4c9cc338cd0dc4eabb948164995"
+  integrity sha512-o6rTdduhx3RySXV5hK/iovz5FDiCUpROVY+yMhPcc+JLVCmo9zm4VYJU891ype0R93QHn64zkVo8kMEaxFvEVQ==
+  dependencies:
+    "@sanity/icons" "^1.1.3"
+    "@sanity/image-url" "^0.140.19"
+    "@sanity/ui" "0.34.5"
+    lodash "^4.17.15"
+    rxjs "^6.5.3"
+    styled-components "^5.2.1"
 
 "@sanity/data-aspects@2.2.6":
   version "2.2.6"
@@ -1452,6 +1485,11 @@
   version "1.1.2"
   resolved "https://registry.npmjs.org/@sanity/icons/-/icons-1.1.2.tgz#9ad5e24c8b0c744879c69463091070eaea56b735"
   integrity sha512-Ti9qn76hrA/LNPjxzK8BRroudNqGrT1bqfUq0HJt1wIW+pCG0EVvyRqdBlW0HGIoUhlMit6lypyhAvwe637BKg==
+
+"@sanity/icons@^1.1.3":
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/@sanity/icons/-/icons-1.1.4.tgz#a5cc5709b1f29b13da982a7bf9eb2597b0c01604"
+  integrity sha512-nQrz+GXma0fwa8lEAagujyX6LnJbxEAp7HJBnIkX1v48vLXit+pwtt/acL95p0VXslOdHUIxk+TdRMzZL8lR1w==
 
 "@sanity/image-url@^0.140.19":
   version "0.140.22"
@@ -1687,6 +1725,22 @@
     "@types/react" "^17.0.0"
     rxjs "^6.5.3"
 
+"@sanity/ui@0.34.5":
+  version "0.34.5"
+  resolved "https://registry.npmjs.org/@sanity/ui/-/ui-0.34.5.tgz#3e37d7afe49c492961ca4233251f4093d7005505"
+  integrity sha512-UJcRa6+wxpxZrx1CNKKusrHKZyNJba9z+ASwSJ0RyTfALfPbb1zaxMyUf9Veu2Xto/XSV2UuqF4rERrM8B0vIg==
+  dependencies:
+    "@juggle/resize-observer" "^3.3.1"
+    "@popperjs/core" "^2.9.2"
+    "@reach/auto-id" "^0.15.3"
+    "@sanity/color" "^2.1.3"
+    "@sanity/icons" "^1.1.3"
+    framer-motion "^4.1.17"
+    popper-max-size-modifier "^0.2.0"
+    react-is "^17.0.2"
+    react-popper "^2.2.5"
+    react-refractor "^2.1.4"
+
 "@sanity/ui@^0.34.3":
   version "0.34.4"
   resolved "https://registry.npmjs.org/@sanity/ui/-/ui-0.34.4.tgz#cb01ea9384c355b9ce8fd2c834424668d5769565"
@@ -1897,6 +1951,13 @@ abab@^2.0.0:
   version "2.0.5"
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
   integrity sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==
+
+abort-controller@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/abort-controller/-/abort-controller-2.0.3.tgz#b174827a732efadff81227ed4b8d1cc569baf20a"
+  integrity sha512-EPSq5wr2aFyAZ1PejJB32IX9Qd4Nwus+adnp7STYFM5/23nLPBazqZ1oor6ZqbH+4otaaGXTlC8RN5hq3C8w9Q==
+  dependencies:
+    event-target-shim "^5.0.0"
 
 accepts@~1.3.7:
   version "1.3.7"
@@ -4131,6 +4192,11 @@ event-emitter@~0.3.5:
   dependencies:
     d "1"
     es5-ext "~0.10.14"
+
+event-target-shim@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
 events@^3.0.0:
   version "3.3.0"
@@ -8484,7 +8550,7 @@ rxjs-report-usage@~1.0.4:
     glob "~7.1.6"
     prompts "~2.3.2"
 
-rxjs@^6.4.0, rxjs@^6.5.3:
+rxjs@^6.0.0, rxjs@^6.4.0, rxjs@^6.5.3:
   version "6.6.7"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
   integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
@@ -8534,6 +8600,15 @@ sanity-plugin-content-calendar@^1.1.2:
     date-fns "^2.16.1"
     dlv "^1.1.3"
     react-big-calendar "^0.28.6"
+
+sanity-plugin-dashboard-widget-netlify@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-netlify/-/sanity-plugin-dashboard-widget-netlify-1.1.0.tgz#cc8218e5345eff08d7336d0612824336feb1c816"
+  integrity sha512-HzEK7TZx7xn75OBbFxF4qVzX2tM8yxcEm2k1T+Gbj9oIP0I7RxZsgwfFTr5+PclonQsnKx8ng+IN6sIGLaaYpg==
+  dependencies:
+    abort-controller "^2.0.3"
+    react-props-stream "^1.0.0"
+    rxjs "^6.0.0"
 
 sax@~1.2.4:
   version "1.2.4"
@@ -9386,7 +9461,7 @@ tslib@^1.9.0, tslib@^1.9.3:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.1.0:
+tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==

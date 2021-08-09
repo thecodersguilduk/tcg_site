@@ -14,7 +14,9 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "content-calendar",
-    "@sanity/production-preview"
+    "@sanity/production-preview",
+    "@sanity/dashboard",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {
@@ -31,6 +33,10 @@
     {
       "implements": "part:@sanity/production-preview/resolve-production-url",
       "path": "./resolveProductionUrl.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboardConfig.js"
     }
   ]
 }
