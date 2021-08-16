@@ -23,7 +23,7 @@ export default {
         name: 'publishedAt',
         type: 'datetime',
         title: 'Published at',
-        description: 'The date the post was written - note - this does not yet control when the post will be visible'
+        description: 'Please ensure this is set (and not a placeholder!)'
       },
       {
         name: 'mainImage',
@@ -74,7 +74,8 @@ export default {
         of: [
           { type: 'block'},
           { type: 'imageSection'},
-          { type: 'applyBtn' }
+          { type: 'applyBtn' },
+          { type: 'callModal' }
         ] 
       }
     ],

@@ -75,8 +75,15 @@ const serializers = {
                 className: 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white',
                 innerHTML: btnText + rightArrow,
                 style: 'color: white;'
-            })
-        }
+                })
+            },
+        callModal: ({ node: { title }}) => h('a', {
+           href: "#",
+           'data-modal': "book-a-call",
+           className:"bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
+           innerHTML: title,
+           style: 'color: white;',
+        })
         // code: props => '```' + props.node.language + '\n' + props.node.code + '\n```'
     }
 }
