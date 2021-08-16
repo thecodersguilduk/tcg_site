@@ -1,4 +1,4 @@
 export default function resolveProductionUrl(document) {
     console.log(document)
-    return `https://localhost:8080/previews/`
+    return `https://thecodersguild.org.uk/blog/${document.slug.current}/`
   }
