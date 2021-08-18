@@ -16,6 +16,7 @@ tags: data => {
     return arr;
 },
 meta_title: data => data.post.title,
+meta_description: data => data.post.excerpt,
 title: data => data.post.title,
 featured_image: data => data.post.mainImage,
 author: data => data.post.authors[0].name,
