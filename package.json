@@ -32,7 +32,6 @@
     "@sanity/block-content-to-html": "^2.0.0",
     "@sanity/block-content-to-markdown": "0.0.5",
     "@sanity/client": "^2.11.0",
-    "eleventy-plugin-metagen": "^1.4.0",
     "sanity": "^2.2.6"
   }
 }
