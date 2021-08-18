@@ -7,6 +7,7 @@ import categories from './documents/categories'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
+import trainers from './documents/components/trainers'
 
 
 // Then import schema types from any plugins that might expose them
