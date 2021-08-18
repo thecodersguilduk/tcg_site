@@ -2,11 +2,6 @@ const htmlmin = require("html-minifier")
 
 module.exports = eleventyConfig => {
     
-    // add social media meta tag generator plugin
-    const metagen = require('eleventy-plugin-metagen')
-
-    eleventyConfig.addPlugin(metagen)
-
     // Add a readable date formatter filter to Nunjucks
     eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 
