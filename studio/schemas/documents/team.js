@@ -10,7 +10,8 @@ export default {
     type: 'document',
     title: 'Team',
     fieldsets: [
-      {name: 'social', title: 'Social media handles'}
+      {name: 'social', title: 'Social media handles'},
+      {name: 'staffType', title: 'Staff Type'}
     ],
     fields: [
       {
@@ -22,6 +23,24 @@ export default {
         name: 'name',
         type: 'string',
         title: 'Name'
+      },
+      {
+        name: 'core',
+        type: 'boolean',
+        title: 'Core Team',
+        fieldset: 'staffType'
+      },
+      {
+        name: 'softwareDevTrainer',
+        type: 'boolean',
+        title: 'Software Dev Trainer',
+        fieldset: 'staffType'
+      },
+      {
+        name: 'softwareTestTrainer',
+        type: 'boolean',
+        title: 'Software Testing Trainer',
+        fieldset: 'staffType'
       },
       {
         name: 'slug',
