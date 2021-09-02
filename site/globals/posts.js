@@ -47,7 +47,7 @@ function prepPost(data) {
     // Adjusts where our date lives (for convenience)
     data.date = data.publishedAt.split('T')[0];
     // Returns back to our main function
-    // console.log(data.body);
+    console.log(data.image);
     return data
 }
 
@@ -66,7 +66,7 @@ const serializers = {
             )
           ),
         imageSection: ({ node: { asset, width } }) => h("img", {
-            src: urlFor(asset),
+            src: urlFor(asset).url(),
             }),
         applyBtn: ({ node: { btnText, btnLink } }) => {
             const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
