@@ -1,7 +1,5 @@
 # tcg_site
 
-test
-
 Website for The coders guild built with 11ty SSG and Tailwind CSS
 
 ## Requirements
