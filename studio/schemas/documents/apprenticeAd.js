@@ -37,6 +37,31 @@ export default {
       name: 'qualification',
       title: 'Qualification',
       type: 'string'
+    },
+    {
+      name: 'salary',
+      title: 'Salary',
+      type: 'string'
+    },
+    {
+      name: 'desiredSkills',
+      title: 'Desired Skills',
+      type: 'string'
+    },
+    {
+      name: 'personalQualities',
+      title: 'Personal Qualities',
+      type: 'string'
+    },
+    {
+      name: 'trainingProvided',
+      title: 'Training to be Provided',
+      type: 'string'
+    },
+    {
+      name: 'support',
+      title: 'How we will support you as an apprentice',
+      type: 'string'
     }
   ]
 }
