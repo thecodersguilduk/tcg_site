@@ -11,7 +11,7 @@ const config = {
     useCdn: false // `false` if you want to ensure fresh data
 }
 const query = `*[_type == "courseTypes"] {
-    courseType
+    'courseTypes': courseTypes
 
 }`
 
@@ -37,7 +37,7 @@ function prepPost(data) {
     //     serializers: serializers
     // })
     
-    console.log(data.courseType);
+    console.log(data);
     return data
 }
 

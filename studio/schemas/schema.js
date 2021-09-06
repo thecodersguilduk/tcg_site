@@ -4,6 +4,8 @@ import blog from './documents/blog'
 import team from './documents/team'
 import testimonial from './documents/testimonials'
 import categories from './documents/categories'
+import courses from './documents/course'
+import courseTypes from './documents/courseTypes'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
@@ -24,6 +26,8 @@ export default createSchema({
     team,
     testimonial,
     categories,
+    courses,
+    courseTypes,
     imageSection,
     applyBtn,
     callModal
