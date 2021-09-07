@@ -1,12 +1,12 @@
 export default {
-  name: 'ApprenticeJobAd',
+  name: 'ApprenticeJobAds',
   type: 'document',
   title: 'Apprentice Job Post',
   fields: [
     {
       name: 'employerLogo',
       title: 'Employer Logo',
-      type: 'file'
+      type: 'image',
     },
     {
       name: 'employerName',
@@ -31,7 +31,9 @@ export default {
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'string'
+      type: 'string',
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
       name: 'qualification',
