@@ -10,8 +10,9 @@ const config = {
     token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
-const query = `*[_type == "courses"] {
-    ...
+const query = `*[_type == "course"] {
+    ...,
+    courseType[]->{courseType}
 
 }`
 
@@ -36,10 +37,9 @@ function prepPost(data) {
     //     blocks: data.coursePortableText,
     //     serializers: serializers
     // })
-    
+    data.courseType = data.courseType[0].courseType;
     // console.log(data);
-    data.courseTypes = data.courseType
-    // console.log(data.courseTypes);
+   
     return data
 }
 

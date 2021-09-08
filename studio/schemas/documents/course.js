@@ -1,3 +1,15 @@
+const sanityClient = require('@sanity/client')
+
+
+const config = { 
+    projectId: 'wd1bon7z',
+    dataset: 'production',
+    apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
+    token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
+    useCdn: false // `false` if you want to ensure fresh data
+}
+
+
 export default {
     name: 'course',
     type: 'document',
@@ -17,15 +29,14 @@ export default {
         name: 'courseType',
         type: 'array',
         description: 'Please select one',
-        of: [{type: 'string'}],
-        options: {
-          list: [
-            {title: 'Two Day Workshop', value: 'twoDayWorkshop'},
-            {title: '3 Week Fast Track Course', value: 'threeWeek'},
-            {title: 'Upskill/ReSkill Course', value: 'upskill'},
-            {title: 'Apprenticeships', value: 'apprenticeships'}
-          ]
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseTypes'
+            }
         }
+        ],
       },
       {
         name: 'slug',
@@ -33,9 +44,9 @@ export default {
         title: 'Slug',
         description: 'Some frontends will require a slug to be set to be able to show the post',
         options: {
-          source: (doc, options) => `${doc.courseType}-${doc.title}`,
+          source: 'title'    
+          },
           maxLength: 96
-        }
       },
       {
         name: 'qualification',
