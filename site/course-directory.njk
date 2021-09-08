@@ -1,11 +1,26 @@
 ---
-meta_title: The Coders Guild - About Us, Mission and Vision
-meta_description: The UK’s gold standard for tech education, delivering the industry’s future innovators from society’s most underrepresented groups.
-body_class: about
-
+layout: default
 ---
 
-{% for course in courses.courseType %}
-   <h2> {{ course }}</h2>
-{% endfor %}
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="sm:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/group-13.png" alt="Apprenticeships hero image" class="sm:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Course Directory</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
+    <div class="bg-white">
+      {% for course in courseTypes %}
+         <h2>{{ course.courseType }}</h2>
+      {% endfor %}
+      </div>
+   </main>
+</div>
 

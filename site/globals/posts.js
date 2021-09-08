@@ -48,7 +48,7 @@ function prepPost(data) {
     data.date = data.publishedAt.split('T')[0];
     // Returns back to our main function
 
-    // console.log(data.image);
+    // console.log(data.categories);
 
     return data
 }
