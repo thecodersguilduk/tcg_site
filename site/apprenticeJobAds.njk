@@ -2,14 +2,26 @@
 layout: "layouts/default.njk"
 title: Apprentice Job Adverts
 ---
-<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-  <div class="inner max-w-5xl pt-20 mb-14 md:mb-20">
-    <div class="my-14">
-      {% for job in apprenticeJobAds %}
-      <h1>{{job.employerName}}</h1>
-      <h2>{{job.jobTitle}}</h2>
-      <h2>{{job.jobDescription}}</h2>
-      {% endfor %}
-    </div>
+
+<div class="p-8 mt-24 flex flex-row flex-wrap">
+  {% for job in apprenticeJobAds %}
+  <div class="flex flex-col p-3 m-3 rounded-lg shadow-lg w-1/3">
+    <h1>{{job.employerName}}</h1>
+    <h2>{{job.jobTitle}}</h2>
+    <h5>Job Description</h5>
+    <p>{{job.jobDescription}}</p>
+    <br />
+    <h5>Desired Skills</h5>
+    <p>{{job.desiredSkills}}</p>
+    <br />
+    <h5>Personal Qualities</h5>
+    <p>{{job.personalQualities}}</p>
+    <br />
+    <h5>Training to be provided</h5>
+    <p>{{job.trainingProvided}}</p>
+    <br />
+    <h5>How we will support you as an apprentice</h5>
+    <p>{{job.support}}</p>
   </div>
-</main>
+  {% endfor %}
+</div>
