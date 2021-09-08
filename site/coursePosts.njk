@@ -1,0 +1,22 @@
+---js
+
+{
+pagination:
+{ data: 'courses', size: 1, alias: 'course', addAllPagesToCollections: true },
+layout: 'post',
+eleventyComputed: {
+meta_title: data => data.post.title,
+meta_description: data => data.post.excerpt,
+title: data => data.post.title,
+featured_image: data => data.post.mainImage,
+excerpt: data => data.post.excerpt,
+permalink: data => `/course-directory/${data.post.slug.current}/index.html`,
+body: data => data.post.body
+
+},
+}
+
+---
+
+{{ post.body | safe  }}
+
