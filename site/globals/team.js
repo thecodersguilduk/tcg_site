@@ -19,7 +19,7 @@ module.exports = async function() {
 
     // Modifies the data to fit our needs
     const preppedData = data.map(prepPost)
-    console.log(data.image)
+    // console.log(data.image)
     // returns this to the 11ty data cascade
     return preppedData
 }
