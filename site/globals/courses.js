@@ -10,8 +10,9 @@ const config = {
     token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
-const query = `*[_type == "courseTypes"] {
-    courseType
+const query = `*[_type == "course"] {
+    ...,
+    courseType[]->{courseType}
 
 }`
 
@@ -31,13 +32,14 @@ module.exports = async function() {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
-    // Converts Portable Text to markdown
-    //     data.body = blocksToHtml({
-    //     blocks: data.coursePortableText,
-    //     serializers: serializers
-    // })
-    
-    console.log(data.courseType);
+    // Converts Portable Text to HTML
+    data.body = blocksToHtml({
+        blocks: data.coursePortableText,
+        serializers: serializers
+    })
+    data.courseType = data.courseType[0].courseType;
+    console.log(data.title);
+   
     return data
 }
 
@@ -49,5 +51,11 @@ function urlFor(source) {
 // This is a way of converting our custom blocks from Portable Text to html
 const serializers = {
     // Creates the code blocks how html and 11ty want them
-
+    types: {
+        code: node => (
+            h('pre', {className: node.node.language},
+                h('code', node.node.code)
+            )
+        ),
+    }
 }

@@ -36,7 +36,7 @@ function prepPost(data) {
     //     blocks: data.coursePortableText,
     //     serializers: serializers
     // })
-    console.log(data);
+    // console.log(data);
     return data
 }
 
