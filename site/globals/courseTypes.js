@@ -29,24 +29,7 @@ module.exports = async function() {
 
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
-
-    // Converts Portable Text to markdown
-    //     data.body = blocksToHtml({
-    //     blocks: data.coursePortableText,
-    //     serializers: serializers
-    // })
     
-    console.log(data);
+    // console.log(data);
     return data
-}
-
-function urlFor(source) {
-    const imageBuilder = imageUrlBuilder(sanityClient(config));
-    return imageBuilder.image(source);
-  }
-
-// This is a way of converting our custom blocks from Portable Text to html
-const serializers = {
-    // Creates the code blocks how html and 11ty want them
-
 }

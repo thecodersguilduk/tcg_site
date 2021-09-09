@@ -1,22 +1,11 @@
----js
-
-{
+---
+layout: course
+tag: ['course']
 pagination:
-{ data: 'courses', size: 1, alias: 'course', addAllPagesToCollections: true },
-layout: 'post',
-eleventyComputed: {
-meta_title: data => data.post.title,
-meta_description: data => data.post.excerpt,
-title: data => data.post.title,
-featured_image: data => data.post.mainImage,
-excerpt: data => data.post.excerpt,
-permalink: data => `/course-directory/${data.post.slug.current}/index.html`,
-body: data => data.post.body
-
-},
-}
+    data: courses
+    size: 1
+    alias: course
+permalink: "/course-directory/{{ course.slug.current }}/index.html"
 
 ---
-
-{{ post.body | safe  }}
 

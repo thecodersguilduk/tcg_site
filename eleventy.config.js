@@ -61,7 +61,7 @@ module.exports = eleventyConfig => {
         return blogs;
     })
 
-    eleventyConfig.addCollection('blog', collection => {
+    eleventyConfig.addCollection('courses', collection => {
         let courses = collection.getFilteredByTag('course');
 
         return courses
@@ -71,6 +71,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
     eleventyConfig.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
+    eleventyConfig.addLayoutAlias('course', 'layouts/course.njk')
 
 
     // Include our static assets

@@ -1,0 +1,80 @@
+---
+layout: default
+related_articles: true
+meta_title: {{ course.title }}
+meta_description: {{ course.excerpt }}
+---
+
+{# a post layout #}
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+
+    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
+
+        <div class="mb-10 sm:mb-8 max-w-6xl">
+            {% if featured_image %}
+
+                <figure class="">
+                    <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="max-h-96 max-w-4xl h-40 sm:h-56 md:h-auto object-cover">
+                </figure>
+
+            {% endif %}
+
+            <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
+
+              <header>
+                <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ course.title }}</h1>
+              </header>
+
+              
+
+        </div>
+
+        <div class="content post md:px-20 max-w-3xl mx-auto inner">
+
+            {{ course.body | safe }}
+
+        </div>
+
+        <div class="mt-10 md:px-20 max-w-3xl mx-auto inner">
+
+            <div class="border-t border-grey-300 pt-8">
+
+            {% if tags %}
+              <div>
+                <ul class="flex not-on-print">
+                  {% for item in tags %}
+                    {%- if item != "blog" -%}
+                      <li class="mr-2">
+                          <a class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm" href="/category/{{ item }}">{{ item | capitalize }}</a>
+                      </li>
+                    {%- endif -%}
+                  {% endfor %}
+                </ul>
+              </div>
+
+            {% endif %}
+              {% if prevPost or nextPost %}
+                <div class="mt-8 sm:mt-6 not-on-print">
+                  {% if nextPost %}
+                    <div {% if prevPost %}class="mb-4"{% endif %}>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ nextPost.data.title }}</a></p>
+                    </div>
+                  {% endif %}
+                  {% if prevPost %}
+                    <div>
+                      <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ prevPost.data.title }}</a></p>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+        </div>
+
+    </article>
+
+    {% include "components/blog/blog-section.njk" %}
+  <script>
+    const styledDiv = document.querySelector('.content > div');
+    styledDiv.classList.add('content');
+  </script>
+</main>
