@@ -1,7 +1,7 @@
 export default {
   name: 'course',
   type: 'document',
-  title: 'Courses',
+  title: 'Course Directory',
   fieldsets: [
       {name: 'courseType', title: 'Course Type'}
     ],
