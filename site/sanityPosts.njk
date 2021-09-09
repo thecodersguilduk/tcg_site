@@ -25,7 +25,7 @@ date: data => data.post.date,
 avatar: data => data.post.avatar[0],
 time: data => data.post.time + ' mins ',
 permalink: function(data) {
-    console.log(data.post.slug.current)
+    console.log(`/blog/${data.post.slug.current}`)
     return `/blog/${data.post.slug.current}/index.html`
 },
 body: data => data.post.body
