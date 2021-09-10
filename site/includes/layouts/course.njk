@@ -1,8 +1,8 @@
 ---
 layout: default
 related_articles: true
-meta_title: {{ course.title }}
-meta_description: {{ course.excerpt }}
+meta_title: {{ title }}
+meta_description: {{ excerpt }}
 ---
 
 {# a post layout #}
@@ -72,7 +72,7 @@ meta_description: {{ course.excerpt }}
 
     </article>
 
-    {% include "components/blog/blog-section.njk" %}
+    {% include "components/course-directory/course-section.njk" %}
   <script>
     const styledDiv = document.querySelector('.content > div');
     styledDiv.classList.add('content');
