@@ -14,60 +14,68 @@ layout: default
         </div>
       </div>
     </div>
-  </div>
-  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
-    <div class="bg-white">
-      <div class="inner">
-         {% for course in courseTypes %}
-            <h2>{{ course.courseType }}</h2>
-             <div class="mt-12 max-w-3xl mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {% for item in courses %}
-               {% if item.courseType === course.courseType %}
-               <a href='{{ item.slug.current }}'>
-                  <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                     <div class="flex-shrink-0">
-                        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
-                     </div>
-                     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                        <div class="flex-1">
-                           <a href="{{item.slug.current}}" class="block mt-2">
-                           <p class="text-xl font-semibold text-blue-200">
-                              {{item.title}}
-                           </p>
-                           <p class="mt-3 text-base text-gray-500">
-                             {{ item.excerpt }}
-                           </p>
-                           </a>
-                        </div>
-                        <div class="mt-6 flex items-center">
-                           <div class="flex-shrink-0">
-                           <a href="#">
-                              <span class="sr-only">{{item.qualification}}</span>
-                           </a>
-                           </div>
-                           <div class="ml-3">
-                           {% if item.level %}
-                           <p class="text-sm font-medium text-gray-900">
-                              <a href="#" class="hover:underline">
-                                 Level {{item.level}}
-                              </a>
-                           </p>
-                           {% endif %}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </a>
-               {% endif %}
-            {% endfor %}
-            </div>
-         {% endfor %}
-      </div>
-    </div>
+</div>
 
-    <section>
-    {% include "components/apprenticeships/apprenticeships-component.njk" %}
-    </section>
+
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+      <section class="bg-white section-rounded pb-24">
+         <div class="inner">
+               <h2>Short Courses</h2>
+               <div class="mt-12  mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+               {% for item in courses %}
+                  {% if item.isActive and item.courseType !== 'Apprenticeships' %}
+                        
+                           <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                              <a href='{{ item.slug.current }}'>
+                              <div class="flex-shrink-0">
+                                 <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+                              </div>
+                              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                                 <div class="flex-1">
+                                    <a href="{{item.slug.current}}" class="block mt-2">
+                                    <p class="text-xl font-semibold text-blue-200">
+                                       {{item.title}}
+                                    </p>
+                                    <p class="mt-3 text-base text-gray-500">
+                                    {{ item.excerpt }}
+                                    </p>
+                                    </a>
+                                 </div>
+                                 <div class="mt-6 flex items-center">
+                                    <div class="flex-shrink-0">
+                                    <a href="#">
+                                       <span class="sr-only">{{item.qualification}}</span>
+                                    </a>
+                                    </div>
+                                    <div class="ml-3">
+                                    {% if item.level %}
+                                    <p class="text-sm font-medium text-gray-900">
+                                       <a href="#" class="hover:underline">
+                                          Level {{item.level}}
+                                       </a>
+                                    </p>
+                                    {% endif %}
+                                    </div>
+                                 </div>
+                              </div>
+                              </a>
+                           </div>
+                        
+                  {% endif %}
+               {% endfor %}
+               </div>
+         </div>
+      </section>
+
+      <section class="relative overflow-hidden bg-blue-200">
+         <object type="image/svg+xml" data="../images/patterns/3.svg" class="hidden md:block absolute pattern pattern-3"></object>
+            <div class="inner relative z-10">
+            <div class="mt-24 mb-32">
+               {% include "components/apprenticeships/apprenticeships-component.njk" %}
+            </div>
+            </div>
+         <object type="image/svg+xml" data="../images/patterns/4.svg" class="hidden md:block absolute bottom-0 pattern pattern-4"></object>
+      </section>
    </main>
 </div>
 
