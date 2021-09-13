@@ -7,6 +7,11 @@ export default {
     ],
   fields: [
     {
+      name: 'isActive',
+      type: 'Boolean',
+      title: 'Active',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',
