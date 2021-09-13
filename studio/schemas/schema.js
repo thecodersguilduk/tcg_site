@@ -9,8 +9,6 @@ import courseTypes from './documents/courseTypes'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
-import courses from './documents/course'
-import courseTypes from './documents/courseTypes'
 
 
 // Then import schema types from any plugins that might expose them
