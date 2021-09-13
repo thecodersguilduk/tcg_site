@@ -37,10 +37,8 @@ function prepPost(data) {
         blocks: data.coursePortableText,
         serializers: serializers
     })
-
     data.courseType = data.courseType[0].courseType;
-    console.log(data);
-   
+ 
     return data
 }
 
