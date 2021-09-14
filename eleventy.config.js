@@ -8,6 +8,17 @@ module.exports = eleventyConfig => {
     // Add a HTML timestamp formatter filter to Nunjucks
     eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
+    //add capitalize functtion to nunjucks
+    eleventyConfig.addFilter('capitalize', function(string) {
+        const wordsArray = string.split(" ");
+
+        for (let i = 0; i < wordsArray.length; i++) {
+            wordsArray[i] = wordsArray[i][0].toUpperCase() + wordsArray[i].substr(1);
+        }
+
+        return wordsArray.join(" ");
+      });
+
     // Add a limit filter for collections to Nunjucks 
     eleventyConfig.addFilter('limit', function(array, limit) {
       return array.slice(0, limit);
@@ -72,7 +83,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
     eleventyConfig.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
     eleventyConfig.addLayoutAlias('course', 'layouts/course.njk')
-
+    eleventyConfig.addLayoutAlias('applicant', 'layouts/applicant.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy("css")

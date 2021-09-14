@@ -5,6 +5,7 @@ meta_title: {{ title }}
 meta_description: {{ excerpt }}
 ---
 
+
     <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
         <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
@@ -34,11 +35,11 @@ meta_description: {{ excerpt }}
 
             </div>
 
+            {% include '../components/global/apply-cta.njk' %}
+
+            {% if tags %}
             <div class="mt-10 md:px-20 max-w-3xl mx-auto inner">
-
                 <div class="border-t border-grey-300 pt-8">
-
-                {% if tags %}
                   <div>
                     <ul class="flex not-on-print">
                       {% for item in tags %}
@@ -52,21 +53,6 @@ meta_description: {{ excerpt }}
                   </div>
 
                 {% endif %}
-                  {% if prevPost or nextPost %}
-                    <div class="mt-8 sm:mt-6 not-on-print">
-                      {% if nextPost %}
-                        <div {% if prevPost %}class="mb-4"{% endif %}>
-                          <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Next article:</span> <a href="{{ nextPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ nextPost.data.title }}</a></p>
-                        </div>
-                      {% endif %}
-                      {% if prevPost %}
-                        <div>
-                          <p class="text-black"><span class="font-heading text-black text-xl font-bold leading-xl sm:leading-lg">Previous article:</span> <a href="{{ prevPost.url }}" class="text-black font-heading text-xl font-bold border-b-2 border-blue-100 pb-1 sm:leading-lg leading-xl">{{ prevPost.data.title }}</a></p>
-                        </div>
-                      {% endif %}
-                    </div>
-                  {% endif %}
-
             </div>
 
         </article>

@@ -54,6 +54,11 @@ export default {
         title: 'Level'
       },
       {
+        name: 'duration',
+        type: 'string',
+        title: 'Duration'
+      },
+      {
         name: 'featuredImage',
         type: 'image',
         title: 'Featured image'

@@ -1,5 +1,6 @@
 ---
 layout: default
+meta_title: 'Course Directory'
 ---
 
 
@@ -28,7 +29,7 @@ layout: default
                            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                               <a href='{{ item.slug.current }}'>
                               <div class="flex-shrink-0">
-                                 <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+                                 <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                               </div>
                               <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                                  <div class="flex-1">
@@ -43,18 +44,37 @@ layout: default
                                  </div>
                                  <div class="mt-6 flex items-center">
                                     <div class="flex-shrink-0">
-                                    <a href="#">
-                                       <span class="sr-only">{{item.qualification}}</span>
-                                    </a>
+                                    
+                                       <span class="sr-only">Qualification Here</span>
+                                   
                                     </div>
                                     <div class="ml-3">
-                                    {% if item.level %}
+                                    
                                     <p class="text-sm font-medium text-gray-900">
-                                       <a href="#" class="hover:underline">
-                                          Level {{item.level}}
-                                       </a>
+                                       
+                                          Level here {{item.level}}
+                                      
                                     </p>
-                                    {% endif %}
+                                   
+                                    </div>
+
+                                    <div class="ml-3">
+                                   
+                                    <p class="text-sm font-medium text-gray-900">
+                                       
+                                          Duration {{item.level}}
+                                      
+                                    </p>
+                                     
+                                    </div>
+                                    <div class="ml-3">
+                                   
+                                    <p class="text-sm font-medium text-gray-900">
+                                       
+                                          {{item.courseType}}
+                                      
+                                    </p>
+                                     
                                     </div>
                                  </div>
                               </div>
