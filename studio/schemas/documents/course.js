@@ -8,7 +8,7 @@ export default {
   fields: [
     {
       name: 'isActive',
-      type: 'Boolean',
+      type: 'boolean',
       title: 'Active',
     },
     {
