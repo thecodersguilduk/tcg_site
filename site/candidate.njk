@@ -5,9 +5,9 @@ pagination: {
     size: 1,
     alias: 'course'
     },
-layout: 'applicant',
+layout: 'candidate',
 tag: ['course'],
-permalink: "/course-directory/{{ course.slug.current }}/applicant/index.html",
+permalink: "/course-directory/{{ course.slug.current }}/candidate/index.html",
 eleventyComputed: {
     meta_title: data => data.course.title,
     excerpt: data => data.course.excerpt,

@@ -83,7 +83,8 @@ module.exports = eleventyConfig => {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
     eleventyConfig.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
     eleventyConfig.addLayoutAlias('course', 'layouts/course.njk')
-    eleventyConfig.addLayoutAlias('applicant', 'layouts/applicant.njk')
+    eleventyConfig.addLayoutAlias('applicant', 'layouts/candidate.njk')
+    eleventyConfig.addLayoutAlias('employer', 'layouts/employer.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy("css")
