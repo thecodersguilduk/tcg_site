@@ -31,7 +31,5 @@ export default createSchema({
     imageSection,
     applyBtn,
     callModal,
-    courses,
-    courseTypes
   ]),
 })

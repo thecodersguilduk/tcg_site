@@ -93,6 +93,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy("pdf")
     eleventyConfig.addPassthroughCopy("admin")
     eleventyConfig.addPassthroughCopy("robots.txt")
+    eleventyConfig.addPassthroughCopy("_redirects")
 
     return {
         templateFormats: ["md", "njk"],
