@@ -1,4 +1,5 @@
 const sanityClient = require('@sanity/client')
+const imageUrlBuilder = require('@sanity/image-url')
 //block not required?
 //image url not required
 
@@ -15,8 +16,10 @@ const config = {
 //spead operator {...} to get all data key values.
 //query path can be found in sanity via inspect. 
 // you can then test the path in sanity via vision
+//employerLogo is a object key set in the schema, we include this to access the url path of the image
 const query = ` *[ _type == "ApprenticeJobAds"]{
-    ...
+  ...,
+"employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {
   // Fetches data
@@ -26,7 +29,8 @@ module.exports = async function () {
   // console.log(data)
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
-  console.log(preppedData)
+
+
 
   // returns this to the 11ty data cascade
   return preppedData
@@ -34,10 +38,15 @@ module.exports = async function () {
 
 // prepPost function is passed as an argument into preppedData 
 function prepPost(data) {
-
+  // data.employerLogo = urlFor(data.employerLogo)
+  console.log(data.employerLogo)
   return data
 }
-
+//urlFor is a function used create a url from sanity.
+function urlFor(source) {
+  const imageBuilder = imageUrlBuilder(sanityClient(config));
+  return imageBuilder.image(source);
+}
 
 
 
