@@ -1,7 +1,6 @@
 const sanityClient = require('@sanity/client')
 const imageUrlBuilder = require('@sanity/image-url')
 //block not required?
-//image url not required
 
 const config = {
   projectId: 'wd1bon7z',
@@ -13,7 +12,7 @@ const config = {
 
 // query the data from sanity using sanity's own language - GROQ *[_type == 'name-of-schema-file] with the field names we want - title etc. 
 
-//spead operator {...} to get all data key values.
+//spread operator {...} to get all data key values.
 //query path can be found in sanity via inspect. 
 // you can then test the path in sanity via vision
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
@@ -42,7 +41,7 @@ function prepPost(data) {
   console.log(data.employerLogo)
   return data
 }
-//urlFor is a function used create a url from sanity.
+//urlFor is a function used to create a url from sanity.
 function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));
   return imageBuilder.image(source);
