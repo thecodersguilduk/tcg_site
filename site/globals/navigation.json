@@ -1,19 +1,19 @@
 {
   "main": [
       {
-          "label": "about",
-          "url": "/about"
-      },
-      {
           "label": "apprenticeships",
           "url": "/apprenticeships"
       },
       {
         "label": "courses",
         "url": "/course-directory"
-    },
+      },
       {
-        "label": "blog",
+          "label": "about",
+          "url": "/about"
+      },
+      {
+        "label": "News & Events",
         "url": "/blog"
       },
       {
