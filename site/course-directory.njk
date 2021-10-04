@@ -1,80 +1,62 @@
 ---
 layout: default
 meta_title: 'Course Directory'
+title: 'Course Directory'
 ---
 
 
-<div class="container max-w-full md:pt-22 pt-20">
-  <div class="hero relative bg-white">
-    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="sm:block hidden h-full w-full hero-desktop"/>
-    <img src="../images/group-13.png" alt="Apprenticeships hero image" class="sm:hidden block h-full w-full hero-mobile"/>
-    <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
-        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Course Directory</h1>
-        </div>
-      </div>
-    </div>
-</div>
-
-
-  <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-      <section class="bg-white section-rounded pb-24">
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+      <section class="bg-white section-rounded pt-64 pb-24">
          <div class="inner">
-               <h2>Short Courses</h2>
-               <div class="mt-12  mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            <div>
+               <h2 class="my-8">{{title}}</h2>
+               <span>Jump to:</span> <a href="#">Courses</a> <a href="#">Apprenticeships</a>
+            </div>
+            <div class="filters-sidebar">
+               filters
+            </div>
+            <div class="main-content">
+               <div class="mt-12  mx-auto lg:max-w-none">
                {% for item in courses %}
                   {% if item.isActive and item.courseType !== 'Apprenticeships' %}
                         
-                           <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                              <a href='{{ item.slug.current }}'>
+                           <div class="flex rounded-lg shadow-lg overflow-hidden my-6">
+                              <a class="border-none" href='{{ item.slug.current }}'>
                               <div class="flex-shrink-0">
                                  <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                               </div>
-                              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                                 <div class="flex-1">
+                              <div class="bg-white flex flex-col justify-around ml-8 py-4 w-9/12">
+                                 <div>
+                                    <div class="px-1 flex">
+                                       <a href="#" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">Coding</a>
+                                    </div>
                                     <a href="{{item.slug.current}}" class="block mt-2">
                                     <p class="text-xl font-semibold text-blue-200">
                                        {{item.title}}
                                     </p>
-                                    <p class="mt-3 text-base text-gray-500">
-                                    {{ item.excerpt }}
-                                    </p>
                                     </a>
                                  </div>
-                                 <div class="mt-6 flex items-center">
-                                    <div class="flex-shrink-0">
-                                    
-                                       <span class="sr-only">Qualification Here</span>
-                                   
-                                    </div>
-                                    <div class="ml-3">
-                                    
-                                    <p class="text-sm font-medium text-gray-900">
-                                       
-                                          Level here {{item.level}}
-                                      
-                                    </p>
-                                   
-                                    </div>
-
-                                    <div class="ml-3">
-                                   
-                                    <p class="text-sm font-medium text-gray-900">
-                                       
-                                          Duration {{item.level}}
-                                      
-                                    </p>
-                                     
-                                    </div>
-                                    <div class="ml-3">
-                                   
-                                    <p class="text-sm font-medium text-gray-900">
-                                       
+                                 <div class="flex items-center w-full flex-wrap">
+                                    <div class="w-6/12">
+                                       <p class=" flex text-sm font-medium text-gray-900">
+                                       <span class="mr-2"><img style="height: 25px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
                                           {{item.courseType}}
-                                      
-                                    </p>
-                                     
+                                       </p>
+                                    </div>
+                                    <div class="w-6/12">
+                                       <p class="text-sm font-medium text-gray-900">
+                                       Duration {{item.level}}
+                                       </p>
+                                   </div>
+                                    <div class="w-6/12">                                   
+                                       <p class="text-sm font-medium text-gray-900">
+                                          {{item.courseType}}
+                                       </p>
+                                    </div>
+                                    <div class="w-6/12">                                   
+                                       <p class="text-sm font-medium text-gray-900">
+                                          Full Time
+                                       </p>
                                     </div>
                                  </div>
                               </div>
@@ -84,6 +66,7 @@ meta_title: 'Course Directory'
                   {% endif %}
                {% endfor %}
                </div>
+            </div>
          </div>
       </section>
 
