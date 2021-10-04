@@ -21,7 +21,7 @@ title: 'Course Directory'
                   {% if item.isActive and item.courseType !== 'Apprenticeships' %}
                         
                            <div class="flex rounded-lg shadow-lg overflow-hidden my-6">
-                              <a class="border-none" href='{{ item.slug.current }}'>
+                              
                               <div class="flex-shrink-0">
                                  <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                               </div>
@@ -30,11 +30,11 @@ title: 'Course Directory'
                                     <div class="px-1 flex">
                                        <a href="#" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">Coding</a>
                                     </div>
-                                    <a href="{{item.slug.current}}" class="block mt-2">
+                                    
                                     <p class="text-xl font-semibold text-blue-200">
                                        {{item.title}}
                                     </p>
-                                    </a>
+                                    
                                  </div>
                                  <div class="flex items-center w-full flex-wrap">
                                     <div class="w-6/12">
@@ -63,7 +63,7 @@ title: 'Course Directory'
                                     </div>
                                  </div>
                               </div>
-                              </a>
+                              
                            </div>
                         
                   {% endif %}
