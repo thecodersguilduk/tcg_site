@@ -8,15 +8,15 @@ title: 'Course Directory'
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
       <section class="bg-white section-rounded pt-64 pb-24">
          <div class="inner">
+         <h2 class="my-8">{{title}}</h2>
             <div>
-               <h2 class="my-8">{{title}}</h2>
-               <span>Jump to:</span> <a href="#">Courses</a> <a href="#">Apprenticeships</a>
+               <span>Jump to:</span> <a href="#courses">Courses</a> <a href="#apprenticeships">Apprenticeships</a>
             </div>
-            <div class="filters-sidebar">
+            <div class="filters-sidebar d-none">
                filters
             </div>
             <div class="main-content">
-               <div class="mt-12  mx-auto lg:max-w-none">
+               <div id="courses" class="mt-12  mx-auto lg:max-w-none">
                {% for item in courses %}
                   {% if item.isActive and item.courseType !== 'Apprenticeships' %}
                         
@@ -38,23 +38,26 @@ title: 'Course Directory'
                                  </div>
                                  <div class="flex items-center w-full flex-wrap">
                                     <div class="w-6/12">
-                                       <p class=" flex text-sm font-medium text-gray-900">
-                                       <span class="mr-2"><img style="height: 25px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
+                                       <p class=" flex items-center text-sm font-medium text-gray-900">
+                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
                                           {{item.courseType}}
                                        </p>
                                     </div>
                                     <div class="w-6/12">
-                                       <p class="text-sm font-medium text-gray-900">
-                                       Duration {{item.level}}
+                                       <p class="flex items-center text-sm font-medium text-gray-900">
+                                          <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
+                                          Remote
                                        </p>
                                    </div>
                                     <div class="w-6/12">                                   
-                                       <p class="text-sm font-medium text-gray-900">
+                                       <p class="flex items-center text-sm font-medium text-gray-900">
+                                          <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
                                           {{item.courseType}}
                                        </p>
                                     </div>
                                     <div class="w-6/12">                                   
-                                       <p class="text-sm font-medium text-gray-900">
+                                       <p class=" flex items-center text-sm font-medium text-gray-900">
+                                          <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
                                           Full Time
                                        </p>
                                     </div>
@@ -70,7 +73,7 @@ title: 'Course Directory'
          </div>
       </section>
 
-      <section class="relative overflow-hidden bg-blue-200">
+      <section id="apprenticeships" class="relative overflow-hidden bg-blue-200">
          <object type="image/svg+xml" data="../images/patterns/3.svg" class="hidden md:block absolute pattern pattern-3"></object>
             <div class="inner relative z-10">
             <div class="mt-24 mb-32">
