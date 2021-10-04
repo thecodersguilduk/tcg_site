@@ -16,7 +16,28 @@
 // TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
 @tailwind utilities;
 
-// ul li {
-//   background: url(images/Chevron-Left.svg) no-repeat left;
-//   margin-right: 1.5rem;
-// }
+//css for blog ul and ol li styling
+
+article {
+  ul {
+    li {
+      list-style: none;
+    }
+
+    li::before {
+      content: url("/images/Chevron-Left-list.svg");
+      margin-right: 1.5rem;
+    }
+  }
+
+  ol {
+    li {
+      list-style: none;
+    }
+
+    li::before {
+      content: "XX";
+      margin-right: 1.5rem;
+    }
+  }
+}

@@ -75,6 +75,7 @@ export default {
       description:
         'This is for the leading paragraph so that i can be styled independently to the main body.'
     },
+    //////
     {
       name: 'blogPortableText',
       type: 'array',

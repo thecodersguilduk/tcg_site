@@ -20,11 +20,12 @@ slug: {{job.jobTitle}}
 
     <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-full">
     {% for job in apprenticeJobAds %}
-       <a href="/jobAdSingle/{{ job.slug.current }}/index.html" class="block mt-2">
+ 
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden my-8">
         <div class="flex-shrink-0">
           <img class="h-48 w-full object-cover" src="{{job.employerLogo}}" alt="">
         </div>
+        <a href="/jobAdSingle/{{ job.slug.current }}/index.html" class="block mt-2">
         <div class="flex-1 bg-white p-6 flex flex-col justify-between my-8 hover:bg-grey-100">
           <div class="flex-1">
             <p class="text-xl font-semibold text-indigo-600">

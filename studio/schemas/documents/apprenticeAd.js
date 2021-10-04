@@ -75,18 +75,7 @@ export default
         name: 'support',
         title: 'How we will support you as an apprentice',
         type: 'string'
-      },
-      // {
-      //   name: 'jobPortableText',
-      //   type: 'array',
-      //   title: 'Body',
-      //   of: [
-      //     { type: 'block' },
-      //     { type: 'imageSection' },
-      //     { type: 'applyBtn' },
-      //     { type: 'callModal' }
-      //   ]
-      // },
+      }
     ]
   }
 
