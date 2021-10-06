@@ -8,6 +8,10 @@ import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
 import apprenticeAd from './documents/apprenticeAd'
+import leadSentence from './documents/components/leadSentence.js'
+import styledHeading from './documents/components/styledHeading.js'
+import supportingSentence from './documents/components/supportingSentence.js'
+
 
 
 // Then import schema types from any plugins that might expose them
@@ -28,6 +32,9 @@ export default createSchema({
     imageSection,
     applyBtn,
     callModal,
-    apprenticeAd
+    apprenticeAd,
+    leadSentence,
+    styledHeading,
+    supportingSentence
   ]),
 })

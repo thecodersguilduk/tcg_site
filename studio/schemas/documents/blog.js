@@ -67,15 +67,6 @@ export default {
         }
       ]
     },
-    //added by craig for lead paragraph to assist with additional blog styling
-    {
-      name: 'leadPara',
-      type: 'text',
-      title: 'Lead Paragraph',
-      description:
-        'This is for the leading paragraph so that i can be styled independently to the main body.'
-    },
-    //////
     {
       name: 'blogPortableText',
       type: 'array',
@@ -84,7 +75,11 @@ export default {
         { type: 'block' },
         { type: 'imageSection' },
         { type: 'applyBtn' },
-        { type: 'callModal' }
+        { type: 'callModal' },
+        { type: 'leadSentence' },
+        { type: 'supportingSentence' },
+        { type: 'styledHeading' }
+
       ]
     }
   ],
