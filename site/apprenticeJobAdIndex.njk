@@ -1,0 +1,118 @@
+---
+layout: "layouts/default.njk"
+title: Apprentice Job Ad Index
+---
+
+<div class="container max-w-full md:pt-22 pt-2">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image"
+      class="md:block hidden h-full w-full hero-desktop" />
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image"
+      class="md:hidden block h-full w-full hero-mobile" />
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
+            Apprenticeship</h1>
+        </div>
+        {# search bar - inheriting width class from parent, need to overwite to achieve desired width #}
+
+        <div>
+          <div class="mt-4 flex rounded-md shadow-sm w-ful">
+            <div class="relative flex items-stretch flex-grow w-full">
+              <input type="text" name="email" id="email" class="block w-full rounded-l-lg pl-2 sm:text-sm"
+                placeholder="Search a keyword...">
+            </div>
+            <button type="button" id="searchBtnJobIndex"
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
+            </button>
+          </div>
+        </div>
+        {#search bar end #}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# 2 column layout #}
+{#col 1 #}
+<div class="flex flex-row w-full h-screen mx-4">
+  <div class="flex flex-col w-1/4">
+    <div class="flex flex-row justify-between mt-4">
+      <h5>Filters</h5>
+      <h5>Reset Filters</h5>
+    </div>
+    <hr />
+    <div class="filter-form mt-4">
+      <p class="font-bold">Type of employment</p>
+      <div>
+        <input type="checkbox" id="apprenticeship" name="apprenticeship" value="apprenticeship">
+        <label for="apprenticeship">Apprenticeship</label>
+      </div>
+      <p class="font-bold">Location</p>
+      <div>
+        <input type="checkbox" id="location" name="location" value="yorkshire & humberside">
+        <label for="location">Yorkshire & Humbersides</label>
+      </div>
+      <p class="font-bold">Apprenticeship Standard</p>
+      <div>
+        <input type="checkbox" id="apprentince standard" name="apprentince standard" value="software developer level 4">
+        <label for="apprentince standard">Software developer level 4</label>
+      </div>
+      <div>
+        <input type="checkbox" id="apprentince standard" name="apprentince standard" value="software developer level 3">
+        <label for="apprentince standard">Software developer level 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="apprentince standard" name="apprentince standard" value="software tester level 3">
+        <label for="apprentince standard">Software tester level 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="apprentince standard" name="apprentince standard"
+          value="accessibilty specialist level 4">
+        <label for="apprentince standard">Accessibilty specialist level 4</label>
+      </div>
+      <div>
+        <input type="checkbox" id="apprentince standard" name="apprentince standard" value="data analyst level 4">
+        <label for="apprentince standard">Data analyst level 4</label>
+      </div>
+      <div>
+        {#needs to by dymanic with js#}
+        <p class="font-bold">Salary Range</p>
+        <label for="salary range">£24k-£36k</label>
+        <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18" max="100"
+          step="1" value="18" />
+        <div class="flex flex-row justify-between">
+          <p class="flex">£18k</p>
+          <p class="flex">100k</p>
+        </div>
+      </div>
+      <p class="font-bold">Disability confident employer</p>
+      <div>
+        <input type="checkbox" id="disability confident employer" name="disability confident employer" value="yes">
+        <label for="disability confident employer">Yes</label>
+      </div>
+      <div>
+        <input type="checkbox" id="disability confident employer" name="disability confident employer" value="no">
+        <label for="disability confident employer">No</label>
+      </div>
+      <div>
+        <input type="checkbox" id="disability confident employer" name="disability confident employer"
+          value="in progress">
+        <label for="disability confident employer">In Progress</label>
+      </div>
+    </div>
+
+  </div>
+  {#col 2#}
+  <div class="flex flex-col w-3/4 ml-4 mt-4">
+    <div>
+      <h5>Showing 16 jobs</h5>
+    </div>
+    <hr />
+    <div class="mx-4 mt-4">
+      <div class="w-3/4 bg-grey-200 h-96 rounded-lg shadow-lg flex">
+        1</div>
+    </div>
+  </div>
+</div>
