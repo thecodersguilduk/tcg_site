@@ -154,6 +154,7 @@ title: 'Course Directory'
       const resetBtn = document.querySelector('.reset-filters');
       let numberCourses = document.querySelector('.numberCourses');
       let fieldArray = [];
+      let lastSelected;
       numberCourses.textContent = '0';
 
       filters.addEventListener('change', e => {
@@ -164,8 +165,11 @@ title: 'Course Directory'
             const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
             
            if(!optionsText.some(item => fieldArray.includes(item))){
-              //fieldArray.push(e.target.value);
-           } //else if (one of the options is in the array but not the one we are clicking) {
+               fieldArray.push(e.target.value);
+               lastSelected = e.target.value;
+           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(e.target.value)) { //one of the options is in the array but not the one we are clicking) 
+              console.log('ok this worked')
+              
               //remove the option already there (by index)
               //replace with option being clicked
            }
