@@ -23,9 +23,9 @@ title: 'Course Directory'
                      <div class="my-4">
                         <p class="heading"><strong>Topics</strong></p>
                         <select class="w-full">
-                           {% for item in courseTypes %}
+                           {% for item in courses %}
                            {% if item.courseType != 'Apprenticeships' %}
-                              <option value="{{item.courseType}}">{{ item.courseType }}</option>
+                              <option value="{{ item.title }}">{{ item.title }}</option>
                            {% endif %}
                            {% endfor %}
                         </select>
@@ -160,16 +160,15 @@ title: 'Course Directory'
          const nodeName = e.target.nodeName.toLowerCase();
 
          if(nodeName === 'select'){
-            //const optionsText = [];
-            //const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
+            const optionsText = [];
+            const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
             
-            if(fieldArray.indexOf(e.target.value)){
-               const index = fieldArray.indexOf(e.target.value);
-               console.log(index);
-               fieldArray.splice(index, 1);
-            } else {
-               fieldArray.push(e.target.value)
-            }
+           if(!optionsText.some(item => fieldArray.includes(item))){
+              //fieldArray.push(e.target.value);
+           } //else if (one of the options is in the array but not the one we are clicking) {
+              //remove the option already there (by index)
+              //replace with option being clicked
+           }
          }
 
          if(nodeName === 'input' && e.target.checked){
