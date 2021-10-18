@@ -13,10 +13,10 @@ title: 'Course Directory'
             <span class="text-blue-200 font-medium mr-6">Jump to:</span> <a class="font-bold mr-6 no-border" href="#courses">Courses</a> <a class="font-bold mr-6 no-border" href="#apprenticeships">Apprenticeships</a>
          </div>
          <div class="main-content flex mt-12">
-            <div class="filters-sidebar w-3/12 px-6">
+            <div class="filters-sidebar md:w-full w-3/12 px-6">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
                   <h3 class="text-blue-200 mb-0">Filters</h3>
-                  <p class="mb-0 text-xs">Reset Filters</span>
+                  <p class="mb-0 text-xs reset-filters">Reset Filters</span>
                </div>
                <div>
                   <form class="filters-form">
@@ -37,47 +37,47 @@ title: 'Course Directory'
                         <p class="heading">Course Type</label>
                         {% for item in courseTypes %}
                            <div class="flex align-center my-2">
-                              <input type="checkbox" />
-                              <label>{{ item.courseType | truncate(25) }}</label>
+                              <input id="{{ item.courseType }}" type="checkbox" value="{{ item.courseType }}" />
+                              <label for="{{ item.courseType }}">{{ item.courseType | truncate(25) }}</label>
                            </div>
                         {% endfor %}
                      </div>
                      <div class="my-4">
                         <p class="heading">Attendance</p>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" />
+                           <input type="checkbox" value="Full Time" />
                            <label>Full Time</label>
                         </div>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" />
+                           <input type="checkbox" value="Part Time" />
                            <label>Part Time</label>
                         </div>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" />
+                           <input type="checkbox" value="On Demand" />
                            <label>On Demand</label>
                         </div>
                      </div>
                      <div class="my-4">
                         <p class="heading">Course Length</p>
                            <div class="flex justify-between align-center my-2">
-                              <input type="checkbox" />
+                              <input type="checkbox" value="2 Days" />
                               <label>2 Days</label>
                            </div>
                            <div class="flex justify-between align-center my-2">
-                              <input type="checkbox" />
+                              <input type="checkbox" value="5 Days" />
                               <label>5 Days</label>
                            </div>
                            <div class="flex justify-between align-center my-2">
-                              <input type="checkbox" />
+                              <input type="checkbox" value="Other" />
                               <label>Other</label>
                            </div>
                      </div>
                   </form>
                </div>
             </div>
-            <div id="courses" class="w-9/12  mx-auto lg:max-w-none pl-6">
+            <div class="md:w-full w-9/12  mx-auto lg:max-w-none pl-6">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
-                  <h3 class="text-blue-200 mb-0">X Courses Found</h3>
+                  <h3 class="text-blue-200 mb-0"><span class="numberCourses">X</span> Courses Found</h3>
                   <p class="mb-0"><strong>Sort By</strong></span>
                </div>
             {% for item in courses %}
@@ -142,5 +142,15 @@ title: 'Course Directory'
          <object type="image/svg+xml" data="../images/patterns/4.svg" class="hidden md:block absolute bottom-0 pattern pattern-4"></object>
       </section>
    </main>
+
+   <script>
+      const filters = document.querySelector('.filters-form');
+      const resetBtn = document.querySelector('.reset-filters');
+
+      filters.addEventListener('change', e => {
+         console.log(e.target.value);
+         
+      })
+   </script>
 </div>
 
