@@ -24,22 +24,28 @@ title: 'Course Directory'
                         <p class="heading"><strong>Topics</strong></p>
                         <select class="w-full">
                            {% for item in courseTypes %}
-                              <option>{{ item.courseType }}</option>
+                           {% if item.courseType != 'Apprenticeships' %}
+                              <option value="{{item.courseType}}">{{ item.courseType }}</option>
+                           {% endif %}
                            {% endfor %}
                         </select>
                      </div>
                      <div class="my-4">
                         <p class="heading">Location</p>
                         <select class="w-full">
+                           <option>Remote</option>
+                           <option>Leeds</option>
                         </select>
                      </div>
                      <div class="my-4">
                         <p class="heading">Course Type</label>
                         {% for item in courseTypes %}
-                           <div class="flex align-center my-2">
-                              <input id="{{ item.courseType }}" type="checkbox" value="{{ item.courseType }}" />
-                              <label for="{{ item.courseType }}">{{ item.courseType | truncate(25) }}</label>
-                           </div>
+                           {% if item.courseType !== 'Apprenticeships' %}
+                              <div class="flex align-center my-2">
+                                 <input id="{{ item.courseType }}" type="checkbox" value="{{ item.courseType }}" />
+                                 <label for="{{ item.courseType }}">{{ item.courseType | truncate(25) }}</label>
+                              </div>
+                           {% endif %}
                         {% endfor %}
                      </div>
                      <div class="my-4">
@@ -146,10 +152,35 @@ title: 'Course Directory'
    <script>
       const filters = document.querySelector('.filters-form');
       const resetBtn = document.querySelector('.reset-filters');
+      let numberCourses = document.querySelector('.numberCourses');
+      let fieldArray = [];
+      numberCourses.textContent = '0';
 
       filters.addEventListener('change', e => {
-         console.log(e.target.value);
-         
+         const nodeName = e.target.nodeName.toLowerCase();
+
+         if(nodeName === 'select'){
+            //const optionsText = [];
+            //const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
+            
+            if(fieldArray.indexOf(e.target.value)){
+               const index = fieldArray.indexOf(e.target.value);
+               console.log(index);
+               fieldArray.splice(index, 1);
+            } else {
+               fieldArray.push(e.target.value)
+            }
+         }
+
+         if(nodeName === 'input' && e.target.checked){
+            fieldArray.push(e.target.value);
+            console.log(fieldArray);
+         } else if (nodeName === 'input' && !e.target.checked) {
+            let index = fieldArray.indexOf(e.target.value);
+            fieldArray.splice(index, 1);
+         }
+
+         console.log(fieldArray);
       })
    </script>
 </div>
