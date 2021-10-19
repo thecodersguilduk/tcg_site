@@ -4,7 +4,7 @@ title: Apprentice Job Ad Index
 slug: {{job.jobTitle}}
 ---
 
-<div class="container max-w-full">
+<div class="container w-full mx-auto">
   <div class="hero relative bg-white">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
@@ -41,7 +41,7 @@ slug: {{job.jobTitle}}
             <h5 class="">Reset Filters</h5>
           </div>
         </div>
-        <div class="flex-col mx-4">
+        <div class="flex-col mr-4">
           <div class="filter-form mt-4">
             <p class="font-bold">Type of employment</p>
             <div>
@@ -111,12 +111,12 @@ slug: {{job.jobTitle}}
           </div>
         </div>
       </div>
-      <div class="flex-row bg-red-400 w-4/5 h-full">
+      <div class="flex-row w-4/5 h-full">
         <div class="flex justify-between mt-4">
           <h5 class="">Showing 'x' results</h5>
           <div class="flex">
             <h5 class="">Sort By</h5>
-            <select name="sort-by" class="mx-4 w-48 rounded-lg">
+            <select name="sort-by" class="mx-4 w-48 rounded-lg border-2 border-blue-300">
               <option value="A-Z">A-Z</option>
               <option value="location">location</option>
               <option value="salary">Salary</option>
@@ -155,11 +155,7 @@ slug: {{job.jobTitle}}
               </div>
             </div>
             <div class="w-4/5 h-20 mx-2 my-2 overflow-hidden">
-              <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut
-                aliquip ex ea commodo consequat </p>
+              <p class="truncate">{{job.excerpt}} </p>
               <div class="mb-4 mt-2 flex flex-row">
                 <div class="flex">
                   <button class="w-auto h-auto bg-blue-300 rounded-sm p-2 mx-1"> Apply Now</button>
