@@ -1,3 +1,8 @@
+const blocksToHtml = require('@sanity/block-content-to-html')
+const h = blocksToHtml.h
+const imageUrlBuilder = require('@sanity/image-url')
+const sanityClient = require('@sanity/client')
+
 const config = { 
     projectId: 'wd1bon7z',
     dataset: 'production',
@@ -5,12 +10,10 @@ const config = {
     token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
-const imageUrlBuilder = require('@sanity/image-url');
-const sanityClient = require('@sanity/client');
-const query = `*[_type == "team" && !(_id in path("drafts.**"))] {
-    "image": image.asset->url,
-    ...
-} | order(order asc)`
+const query = `*[_type == "course"] {
+    courseTypes[]->{courseType}
+
+}`
 
 module.exports = async function() {
     // Fetches data
@@ -19,9 +22,22 @@ module.exports = async function() {
 
     // Modifies the data to fit our needs
     const preppedData = data.map(prepPost)
-    console.log(data.image)
+
     // returns this to the 11ty data cascade
     return preppedData
+}
+
+
+// This is mostly Sanity specific, but is a good function idea for preparing data
+function prepPost(data) {
+
+    // Converts Portable Text to markdown
+    //     data.body = blocksToHtml({
+    //     blocks: data.coursePortableText,
+    //     serializers: serializers
+    // })
+    // console.log(data);
+    return data
 }
 
 function urlFor(source) {
@@ -29,13 +45,8 @@ function urlFor(source) {
     return imageBuilder.image(source);
   }
 
-// This is mostly Sanity specific, but is a good function idea for preparing data
-function prepPost(data) {
-    // Returns back to our main function
-    data.image = urlFor(data.image)
-    data.github = data.github ? 'https://www.github.com/' + data.github : ''
-    data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
-    data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
-    console.log(data);
-    return data
+// This is a way of converting our custom blocks from Portable Text to html
+const serializers = {
+    // Creates the code blocks how html and 11ty want them
+
 }
