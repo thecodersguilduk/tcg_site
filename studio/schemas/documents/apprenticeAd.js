@@ -35,6 +35,18 @@ export default
         type: 'string'
       },
       {
+        name: 'closingDate',
+        title: 'Closing Date',
+        type: 'string',
+        description: 'eg 01/01/2021'
+      },
+      {
+        name: 'contract',
+        title: 'Contract',
+        type: 'string',
+        description: 'eg full-time, part-time'
+      },
+      {
         name: 'jobDescription',
         title: 'Job Description',
         type: 'string'

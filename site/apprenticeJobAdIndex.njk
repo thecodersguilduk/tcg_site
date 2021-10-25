@@ -113,7 +113,7 @@ slug: {{job.jobTitle}}
       </div>
       <div class="flex-row w-4/5 h-full">
         <div class="flex justify-between mt-4">
-          <h5 class="">Showing 'x' results</h5>
+          <h5 class="">Showing {arr.length} results</h5>
           <div class="flex">
             <h5 class="">Sort By</h5>
             <select name="sort-by" class="mx-4 w-48 rounded-lg border-2 border-blue-300">
@@ -127,9 +127,9 @@ slug: {{job.jobTitle}}
         </div>
         {% for job in apprenticeJobAds %}
         <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg">
-          <div class="bg-green-300 w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl">
-            <div class="bg-red-100 w-full h-auto rounded-t-lg flex flex-row">
-              <div class="bg-red-300 mx-2 my-2 w-1/5 flex justify-center">
+          <div class="w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl">
+            <div class="w-full h-auto rounded-t-lg flex flex-row">
+              <div class="mx-2 my-2 w-1/5 flex justify-center">
                 <img class="flex" src="{{job.employerLogo}}">
               </div>
               <div class="w-4/5 mx-2 my-2">
@@ -141,7 +141,7 @@ slug: {{job.jobTitle}}
                 <div class="flex flex-row justify-between">
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                    <p class="flex">Full-time</p>
+                    <p class="flex">{{job.contract}}</p>
                   </div>
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/place_black_24dp.svg">
@@ -149,7 +149,7 @@ slug: {{job.jobTitle}}
                   </div>
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                    <p clas="flex">Closing date: 01/01/1111</p>
+                    <p clas="flex">Closing date: {{job.closingDate}}</p>
                   </div>
                 </div>
               </div>
@@ -158,8 +158,10 @@ slug: {{job.jobTitle}}
               <p class="truncate">{{job.excerpt}} </p>
               <div class="mb-4 mt-2 flex flex-row">
                 <div class="flex">
-                  <button class="w-auto h-auto bg-blue-300 rounded-sm p-2 mx-1"> Apply Now</button>
-                  <button class="w-auto h-auto bg-blue-300 rounded-sm p-2 mx-1"> Find out more</button>
+                  <button class="w-auto h-auto bg-blue-200 text-white rounded-sm p-2 mx-1"> Apply Now</button>
+                   <a href="/jobAdSingle/{{ job.slug.current }}/index.html">
+                  <button class="w-auto h-auto bg-blue-200 text-white rounded-sm p-2 mx-1"> Find out more</button>
+                  </a>
                 </div>
               </div>
             </div>
