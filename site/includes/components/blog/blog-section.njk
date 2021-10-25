@@ -21,7 +21,6 @@
         {% for post in collections.blog %}
           {% if page.url !=  post.url %}
             {% set blogPosts = (blogPosts.push(post), blogPosts)%}
-            <script> console.log({{ blogPosts }}) </script>
           {% endif %}
         {% endfor %}
 

@@ -2,7 +2,7 @@ const config = {
   projectId: 'wd1bon7z',
   dataset: 'production',
   apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
-  token: 'k5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
+  token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
   useCdn: false // `false` if you want to ensure fresh data
 }
 const imageUrlBuilder = require('@sanity/image-url');
@@ -36,6 +36,6 @@ function prepPost(data) {
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
   data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
-
+  console.log(data);
   return data
 }
