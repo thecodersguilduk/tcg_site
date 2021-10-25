@@ -653,9 +653,8 @@ var $$ = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/craigclement/Desktop/Code./Coders-Guild/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /Users/craigclement/Desktop/Code./Coders-Guild/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
-
+__webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 /***/ })
 
