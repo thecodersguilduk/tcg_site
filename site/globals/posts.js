@@ -6,7 +6,7 @@ const sanityClient = require('@sanity/client')
 const config = { 
     projectId: 'wd1bon7z',
     dataset: 'production',
-    apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
+    apiVersion: 'v2021-10-21', // use current UTC date - see "specifying API version"!
     token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
