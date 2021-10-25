@@ -16,6 +16,10 @@
 
   "coming_soon" : [
     {
+      "title": "Software Developer",
+      "qualification": "Level 3"
+    },
+    {
       "title": "Digital Marketing",
       "qualification": "Level 4"
     },
@@ -24,7 +28,27 @@
       "qualification": "Level 4"
     },
     {
+      "title": "Cyber Security",
+      "qualification": "Level 3"
+    },
+    {
       "title": "Data Analyst",
+      "qualification": "Level 4"
+    },
+    {
+      "title": "Accessibility Specialist",
+      "qualification": "Level 4"
+    },
+    {
+      "title": "Digital Marketer",
+      "qualification": "Level 3"
+    },
+    {
+      "title": "Leadership and Management",
+      "qualification": "Level 3"
+    },
+    {
+      "title": "Dev Ops Engineer",
       "qualification": "Level 4"
     }
   ]

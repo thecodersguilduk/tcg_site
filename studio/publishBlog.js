@@ -3,7 +3,7 @@ const client = sanityClient({
   projectId: 'your-project-id',
   dataset: 'your-dataset-name',
   // Need a write token in order to read schedule metadata and publish documents
-  token: 'your-write-token',
+  token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra',
   useCdn: false,
 })
 
