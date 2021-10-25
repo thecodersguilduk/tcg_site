@@ -7,7 +7,7 @@ const config = {
   projectId: 'wd1bon7z',
   dataset: 'production',
   apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
-  token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
+  token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
   useCdn: false // `false` if you want to ensure fresh data
 }
 const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
