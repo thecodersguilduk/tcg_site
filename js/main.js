@@ -656,7 +656,6 @@ var $$ = {
 __webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
 module.exports = __webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
-
 /***/ })
 
 /******/ });

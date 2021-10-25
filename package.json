@@ -31,7 +31,8 @@
   "dependencies": {
     "@sanity/block-content-to-html": "^2.0.0",
     "@sanity/block-content-to-markdown": "0.0.5",
+    "@sanity/cli": "^2.17.1",
     "@sanity/client": "^2.11.0",
-    "sanity": "^2.2.6"
+    "sanity": "^2.14.0"
   }
 }

@@ -1,0 +1,10 @@
+<svg id="restart_alt_black_24dp" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Group_277" data-name="Group 277">
+    <path id="Path_151" data-name="Path 151" d="M0,0H16V16H0Z" fill="none"/>
+  </g>
+  <g id="Group_279" data-name="Group 279" transform="translate(2.667 1.667)">
+    <g id="Group_278" data-name="Group 278">
+      <path id="Path_152" data-name="Path 152" d="M5.333,9.5A3.986,3.986,0,0,1,6.507,6.673L5.56,5.727a5.333,5.333,0,0,0,3.107,9.06V13.44A4,4,0,0,1,5.333,9.5Zm9.333,0A5.332,5.332,0,0,0,9.333,4.167c-.04,0-.08.007-.12.007l.727-.727L9,2.5,6.667,4.833,9,7.167l.94-.94-.72-.72c.04,0,.08-.007.113-.007A4,4,0,0,1,10,13.44v1.347A5.326,5.326,0,0,0,14.667,9.5Z" transform="translate(-4 -2.5)" fill="#16aedb"/>
+    </g>
+  </g>
+</svg>
