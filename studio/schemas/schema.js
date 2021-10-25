@@ -29,6 +29,10 @@ export default createSchema({
     imageSection,
     applyBtn,
     callModal,
+    apprenticeAd,
+    leadSentence,
+    styledHeading,
+    supportingSentence,
     courses,
     courseTypes
   ]),

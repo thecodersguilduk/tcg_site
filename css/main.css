@@ -19958,10 +19958,13 @@ input, textarea {
   background-color: #f2f2f2;
 }
 
+<<<<<<< HEAD
 .pdf-image a {
   text-decoration: none;
 }
 
+=======
+>>>>>>> 0a8029fa6143ad04a11fd7816d8cdbef6beeffbe
 @media (min-width: 320px){
   .xs\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
