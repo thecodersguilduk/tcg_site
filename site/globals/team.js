@@ -19,7 +19,7 @@ module.exports = async function () {
 
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
-  console.log(data.image)
+  // console.log(data.image)
   // returns this to the 11ty data cascade
   return preppedData
 }
@@ -36,6 +36,6 @@ function prepPost(data) {
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
   data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
-  console.log(data);
+  // console.log(data);
   return data
 }
