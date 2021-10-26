@@ -176,14 +176,21 @@ slug: {{job.jobTitle}}
       </div>
     </div>
   </div>
+  
 </div>
 
 <script>
 
-{% for job in apprenticeJobAd %}
-let jobTitle = {{job.jobTitle}}
-console.log(jobTitle)
+let job = [
+  {name: 'test', age:'20'},
+  {name: 'test2', age:'22'}
+]
+
+{% for job in apprenticeJobAds %}
+console.log(job.map(job => job.name))
+console.log(job.length)
 {% endfor %}
+
 
 
 
@@ -232,8 +239,5 @@ employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
 function filterJobs() {
 
 }
-
-
-
 
 </script>
