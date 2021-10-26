@@ -7,7 +7,7 @@ const config = {
     projectId: 'wd1bon7z',
     dataset: 'production',
     apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
-    token: 'skTnm7yIyLzamcagFnbDmSfkLSwsS4aIetPXInE0VY2pn0DzbZ2uYzixx3UrVAGrAX8Q16KNxF5cPq5kd', // or leave blank for unauthenticated usage
+    token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
 const query = `*[_type == "course"] {
@@ -32,7 +32,7 @@ module.exports = async function() {
 
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
-
+    
     // Converts Portable Text to HTML
     data.body = blocksToHtml({
         blocks: data.coursePortableText,
@@ -40,7 +40,6 @@ function prepPost(data) {
     })
     data.courseType = data.courseType[0].courseType
     data.featuredImage = data.featuredImage? data.featuredImage : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
-    console.log(data.featuredImage)
  
     return data
 }
