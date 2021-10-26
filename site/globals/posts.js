@@ -3,12 +3,14 @@ const h = blocksToHtml.h
 const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
 
+
 const config = {
   projectId: 'wd1bon7z',
   dataset: 'production',
-  apiVersion: 'v2021-10-21', // use current UTC date - see "specifying API version"!
+  apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
   token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
   useCdn: false // `false` if you want to ensure fresh data
+
 }
 const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     title,
@@ -47,7 +49,7 @@ function prepPost(data) {
   // Adjusts where our date lives (for convenience)
   data.date = data.publishedAt.split('T')[0];
   // Returns back to our main function
-  // console.log(data.image);
+  console.log(data.image);
   return data
 }
 
