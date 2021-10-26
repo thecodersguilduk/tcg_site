@@ -4,14 +4,15 @@ title: Apprentice Job Ad Index
 slug: {{job.jobTitle}}
 ---
 
-<div class="container w-full mx-auto">
-  <div class="hero relative bg-white">
+{# <div class="container w-full mx-auto"> #}
+{# banner #}
+  <div class="hero relative bg-white w-full">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
     <img src="../images/banner-2.png" alt="Apprenticeships hero image"
       class="md:hidden block h-full w-full hero-mobile" />
     <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+      <div class="flex flex-col justify-center items-center w-full h-full">
         <div class="max-w-2xl mx-auto px-4 lg:mb-8">
           <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
             Apprenticeship</h1>
@@ -19,11 +20,11 @@ slug: {{job.jobTitle}}
         <div>
           <div class="mt-4 flex rounded-md shadow-sm w-ful">
             <div class="relative flex items-stretch flex-grow w-full">
-              <input type="text" name="search" id="search" class="block w-full rounded-l-lg pl-2 sm:text-sm"
+              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-2 sm:text-sm"
                 placeholder="Search a keyword...">
             </div>
             <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg" id="searchBtn" onClick="resetFilter">Search
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
             </button>
           </div>
         </div>
@@ -31,14 +32,13 @@ slug: {{job.jobTitle}}
     </div>
   </div>
 
-  <div class="container w-full h-full">
+  <div class="w-full h-full">
     <div class="flex flex-row justify-center">
       <div class="flex-row w-full md:w-1/5 h-full">
         <div class="flex justify-between mt-4 mx-1">
           <h5 class="text-xs">Filters</h5>
           <div class="resetIcon flex">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w-8
- pb-14">
+            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w-8 pb-14">
             <h5 class="text-xs">Reset Filters</h5>
           </div>
         </div>
@@ -131,20 +131,20 @@ slug: {{job.jobTitle}}
         
         <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg">
           <div class="w-full md:w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl">
-            <div class="w-full h-auto rounded-t-lg flex flex-col">
-              <div class="mx-2 my-2 w-full md:w-1/5 flex justify-center">
-                <img class="flex" src="{{job.employerLogo}}">
+            <div class="w-full h-auto rounded-t-lg flex flex-row">
+              <div class="mx-2 flex justify-center pt-6 h-20 w-20">
+                <img class="flex h-10 w-10" src="{{job.employerLogo}}">
               </div>
-              <div class="w-full md:w-4/5 mx-2 my-2">
+              <div class="md:w-4/5 mx-2 my-2">
                 <div class="flex justify-between ml-1">
                   <p class="flex text-xs">{{job.jobTitle}}</p>
                   <p class="flex text-xs mr-2">£{{job.salary}}</p>
                 </div>
                 <p class="ml-1 text-xs">{{job.employerName}}</p>
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row">
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                    <p class="flex text-xs">{{job.contract}}</p>
+                    <p class="text-xs">{{job.contract}}</p>
                   </div>
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/place_black_24dp.svg">
@@ -177,7 +177,7 @@ slug: {{job.jobTitle}}
     </div>
   </div>
   
-</div>
+{# </div> #}
 
 <script>
 
@@ -191,24 +191,34 @@ console.log(job.map(job => job.name))
 console.log(job.length)
 {% endfor %}
 
+//how to get data from apprentice jobs to use in scripts
+// condtionally check if seachTerm and/or selected values are === job details
 
 
+
+let filterArray = []
+let searchString = ''
 
 const searchBar = document.querySelector('#search')
 searchBar.addEventListener('keyup', e => {
 let searchString = e.target.value.toLowerCase()
-console.log(searchString)
+userInput = searchString
+console.log(userInput)
 })
 
-const searchBtn = document.querySelector('#searchBtn')
-searchBar.addEventListener('click', e => {
-console.log(searchString)
+const searchBtn = document.querySelector('#searchBtnJobIndex')
+searchBtn.addEventListener('click', e => {
+  searchString = userInput
+console.log('userInput:', searchString)
 })
 
 const standardCheckbox = document.querySelectorAll('.apprentince-standard')
 standardCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedStandardValue = e.target.value
+  filterArray.push(selectedStandardValue)
   console.log(selectedStandardValue)
+  console.log(filterArray)
+
 }))
 
 const disabiltyCheckbox = document.querySelectorAll('.disability-confident-employer')
@@ -236,8 +246,5 @@ employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
     console.log('clicked')
   })
 
-function filterJobs() {
-
-}
 
 </script>
