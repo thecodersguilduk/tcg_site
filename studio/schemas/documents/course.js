@@ -2,9 +2,9 @@ export default {
   name: 'course',
   type: 'document',
   title: 'Course Directory',
-  fieldsets: [
-      {name: 'courseType', title: 'Course Type'}
-    ],
+  initialValue: {
+    attendance: 'Full Time'
+  },
     fields: [
       {
         name: 'isActive',
@@ -42,6 +42,18 @@ export default {
             }
           }
         ]
+      },
+      {
+        title: 'Attendance',
+        name: 'attendance',
+        type: 'string',
+        options: {
+          list: [
+            { title: 'Full Time', value: 'full' },
+            { title: 'Part Time', value: 'part' },
+            { title: 'On Demand', value: 'demand' },
+          ],
+        },
       },
       {
         name: 'slug',

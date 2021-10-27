@@ -23,6 +23,7 @@ export default {
         name: 'publishedAt',
         type: 'datetime',
         title: 'Published at',
+        validation: Rule => Rule.required(),
         description: 'Please ensure this is set (and not a placeholder!)'
       },
       {
