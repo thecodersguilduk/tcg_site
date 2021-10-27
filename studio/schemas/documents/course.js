@@ -1,43 +1,10 @@
 export default {
-<<<<<<< HEAD
-    name: 'course',
-    type: 'document',
-    title: 'Courses',
-    fieldsets: [
-        {name: 'courseType', title: 'Course Type'}
-=======
   name: 'course',
   type: 'document',
   title: 'Course Directory',
   fieldsets: [
       {name: 'courseType', title: 'Course Type'}
     ],
-  fields: [
-    {
-      name: 'isActive',
-      type: 'boolean',
-      title: 'Active',
-    },
-    {
-      name: 'title',
-      type: 'string',
-      title: 'Title',
-      description: 'Titles should be catchy, descriptive, and not too long'
-    },
-    {
-      title: 'Course Type',
-      name: 'courseType',
-      type: 'array',
-      description: 'Please select one',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'courseTypes'
-          }
-      }
->>>>>>> 2dee56e04307be72148d816a463a63438b54619b
-      ],
     fields: [
       {
         name: 'isActive',
@@ -51,8 +18,8 @@ export default {
         description: 'Titles should be catchy, descriptive, and not too long'
       },
       {
-        title: 'Course Type',
         name: 'courseType',
+        title: 'Course Type',
         type: 'array',
         description: 'Please select one',
         of: [
@@ -61,8 +28,20 @@ export default {
             to: {
               type: 'courseTypes'
             }
-        }
+          }
         ],
+      },
+      {
+        name: 'duration',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseDuration'
+            }
+          }
+        ]
       },
       {
         name: 'slug',
@@ -87,11 +66,6 @@ export default {
         title: 'Level'
       },
       {
-        name: 'duration',
-        type: 'string',
-        title: 'Duration'
-      },
-      {
         name: 'featuredImage',
         type: 'image',
         title: 'Featured image'
@@ -112,4 +86,4 @@ export default {
         ] 
       }
     ]
-  }
+}

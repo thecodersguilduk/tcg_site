@@ -6,6 +6,7 @@ import testimonial from './documents/testimonials'
 import categories from './documents/categories'
 import courses from './documents/course'
 import courseTypes from './documents/courseTypes'
+import courseDurations from './documents/courseDuration'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
@@ -28,6 +29,7 @@ export default createSchema({
     categories,
     courses,
     courseTypes,
+    courseDurations,
     imageSection,
     applyBtn,
     callModal,
