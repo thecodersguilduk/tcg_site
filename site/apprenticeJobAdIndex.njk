@@ -181,15 +181,30 @@ slug: {{job.jobTitle}}
 
 <script>
 
-let job = [
-  {name: 'test', age:'20'},
-  {name: 'test2', age:'22'}
-]
 
-{% for job in apprenticeJobAds %}
-console.log(job.map(job => job.name))
-console.log(job.length)
-{% endfor %}
+const jobAd = [{% for jobAd in apprenticeJobAds %}
+  {
+    title: '{{ jobAd.jobTitle }}',
+    location: '{{jobAd.location}}',
+    employer: '{{jobAd.employerName}}'
+  },
+{% endfor %}];
+
+console.log(jobAd)
+
+const filtered = jobAd.filter(job => job.length > 10);
+
+console.log(filtered)
+
+const apprenticeAdList = [{% for jobAd in apprenticeJobAds %}
+{ 
+  [key]: '{{ jobAd.`{value}`}}'
+}]
+
+jobAd.filter(searchTerm => jobAd.includes(searchTerm))
+console.log(jobAd)
+
+
 
 //how to get data from apprentice jobs to use in scripts
 // condtionally check if seachTerm and/or selected values are === job details
@@ -208,7 +223,7 @@ console.log(userInput)
 
 const searchBtn = document.querySelector('#searchBtnJobIndex')
 searchBtn.addEventListener('click', e => {
-  searchString = userInput
+searchString = userInput
 console.log('userInput:', searchString)
 })
 
