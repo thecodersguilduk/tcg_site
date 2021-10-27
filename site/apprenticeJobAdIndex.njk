@@ -180,9 +180,8 @@ slug: {{job.jobTitle}}
 {# </div> #}
 
 <script>
-
-
-const jobAd = [{% for jobAd in apprenticeJobAds %}
+let searchString = ''
+let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
     title: '{{ jobAd.jobTitle }}',
     location: '{{jobAd.location}}',
@@ -190,40 +189,25 @@ const jobAd = [{% for jobAd in apprenticeJobAds %}
   },
 {% endfor %}];
 
+let filteredAds = []
 console.log(jobAd)
 
-const filtered = jobAd.filter(job => job.length > 10);
-
-console.log(filtered)
-
-const apprenticeAdList = [{% for jobAd in apprenticeJobAds %}
-{ 
-  [key]: '{{ jobAd.`{value}`}}'
-}]
-
-jobAd.filter(searchTerm => jobAd.includes(searchTerm))
-console.log(jobAd)
-
-
-
-//how to get data from apprentice jobs to use in scripts
-// condtionally check if seachTerm and/or selected values are === job details
-
-
-
-let filterArray = []
-let searchString = ''
+let mappedArray = jobAd.map(job => (
+  console.log(job.title)
+))
 
 const searchBar = document.querySelector('#search')
+
 searchBar.addEventListener('keyup', e => {
-let searchString = e.target.value.toLowerCase()
-userInput = searchString
-console.log(userInput)
+searchString = e.target.value.toLowerCase()
+console.log(searchString)
 })
+
+
+
 
 const searchBtn = document.querySelector('#searchBtnJobIndex')
 searchBtn.addEventListener('click', e => {
-searchString = userInput
 console.log('userInput:', searchString)
 })
 
@@ -257,7 +241,6 @@ employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
 
   const resetIcon = document.querySelector('.resetIcon')
   resetIcon.addEventListener('click', e => {
-   
     console.log('clicked')
   })
 
