@@ -19,6 +19,10 @@ module.exports = eleventyConfig => {
         return wordsArray.join(" ");
       });
 
+    eleventyConfig.addFilter('join', function(string) {
+        return string.replace(/\s+/g, '-').toLowerCase();
+      });
+
     // Add a limit filter for collections to Nunjucks 
     eleventyConfig.addFilter('limit', function(array, limit) {
       return array.slice(0, limit);

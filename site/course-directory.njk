@@ -85,10 +85,9 @@ title: 'Course Directory'
                   <h3 class="text-blue-200 mb-0"><span class="numberCourses">X</span> Courses Found</h3>
                   <p class="mb-0"><strong>Sort By</strong></span>
                </div>
-               <div id="courseContent">
             {% for item in courses %}
                {% if item.isActive and item.courseType !== 'Apprenticeships' %}
-                  <div class="flex rounded-lg shadow-lg overflow-hidden mb-6">
+                  <div class="course-item flex rounded-lg shadow-lg overflow-hidden mb-6 {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
                      <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                      </div>
@@ -134,7 +133,6 @@ title: 'Course Directory'
                {% endif %}
             {% endfor %}
             </div>
-            </div>
          </div>
       </div>
    </section>
@@ -150,21 +148,12 @@ title: 'Course Directory'
       </section>
    </main>
 
-    
-
-<script>
-      const courseContent = document.getElementById('course-content');
+   <script>
       const filters = document.querySelector('.filters-form');
       const resetBtn = document.querySelector('.reset-filters');
       let numberCourses = document.querySelector('.numberCourses');
+      const courses = document.querySelectorAll('.course-item');
       let fieldArray = [];
-      let lastSelected;
-      const courses = [{% for item in courses %}{
-         title: '{{ item.title }}',
-         courseType: '{{item.courseType}}'
-      },{% endfor %}];
-      console.log(courses);
-      numberCourses.textContent = courses.length || 0;
 
       filters.addEventListener('change', e => {
          const nodeName = e.target.nodeName.toLowerCase();
@@ -174,88 +163,35 @@ title: 'Course Directory'
             const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
             
            if(!optionsText.some(item => fieldArray.includes(item))){
-               fieldArray.push(e.target.value);
-               lastSelected = e.target.value;
-           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(e.target.value)) { //one of the options is in the array but not the one we are clicking) 
-              fieldArray.forEach(field => {
-                 if(optionsText.some(item => fieldArray.includes(item))){
-                    const index = fieldArray.indexOf(field);
-                    fieldArray.splice(index, 1);
-                    fieldArray.push(e.target.value);
-                 };
-              })   
+               fieldArray.push(join(e.target.value));
+           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking) 
+              console.log('ok this worked')
+              
+              //remove the option already there (by index)
+              //replace with option being clicked
            }
          }
-
          if(nodeName === 'input' && e.target.checked){
-            fieldArray.push(e.target.value);
+            fieldArray.push(join(e.target.value));
+            console.log(fieldArray);
          } else if (nodeName === 'input' && !e.target.checked) {
-            let index = fieldArray.indexOf(e.target.value);
+            let index = fieldArray.indexOf(join(e.target.value));
             fieldArray.splice(index, 1);
          }
 
-         //compare contents of field array with contents of courses array
-         courses.forEach(course => {
-            applyFilter(course);
-            displayHTML();
+         courses.forEach(course => {       
+           if(fieldArray.every(item => Array.from(course.classList).includes(item))){
+            course.classList.remove('hidden');
+           } else {
+            course.classList.add('hidden');
+           }
          })
-         
-         //when there are match, display a result.
 
-         function applyFilter(arr1, arr2){
-            const values = Object.values(arr1);
-            console.log(values);
+         //console.log(fieldArray);
+
+         function join(string){
+            return string.replace(/\s+/g, '-').toLowerCase();
          }
-
-         function displayHTML(){
-            const html = `<div class="flex rounded-lg shadow-lg overflow-hidden mb-6">
-                           <div class="flex-shrink-0">
-                              <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
-                           </div>
-                           <div class="bg-white flex flex-col justify-around ml-8 py-4 w-9/12">
-                              <div>
-                                 <div class="px-1 flex">
-                                    <a href="#" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">Coding</a>
-                                 </div>
-                                 
-                                 <p class="text-xl font-semibold text-blue-200">
-                                    {{item.title}}
-                                 </p>
-                                 
-                              </div>
-                              <div class="flex items-center w-full flex-wrap">
-                                 <div class="w-6/12">
-                                    <p class=" flex items-center text-sm font-medium text-gray-900">
-                                    <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
-                                       {{item.courseType}}
-                                    </p>
-                                 </div>
-                                 <div class="w-6/12">
-                                    <p class="flex items-center text-sm font-medium text-gray-900">
-                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
-                                       Remote
-                                    </p>
-                                 </div>
-                                 <div class="w-6/12">                                   
-                                    <p class="flex items-center text-sm font-medium text-gray-900">
-                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
-                                       {% if item.courseType === '2 Day Workshop Events' %} 2 Days {% elseif item.courseType === '5 Day Intensive Courses' %} 5 days {% else %} Flexible Schedule {% endif %}
-                                    </p>
-                                 </div>
-                                 <div class="w-6/12">                                   
-                                    <p class=" flex items-center text-sm font-medium text-gray-900">
-                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
-                                       Full Time
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>`
-            courseContent.innerHTML = '';
-            courseContent.insertAdjacentHTML('beforeend', html);
-         }
-
-         console.log(fieldArray);
       })
    </script>
 </div>
