@@ -16,7 +16,7 @@ title: 'Course Directory'
             <div class="filters-sidebar w-full md:w-3/12 px-6">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
                   <h3 class="text-blue-200 mb-0">Filters</h3>
-                  <p class="mb-0 text-xs reset-filters">Reset Filters</span>
+                  <button class="mb-0 text-xs reset-filters cursor-pointer">Reset Filters</span>
                </div>
                <div>
                   <form class="filters-form">
@@ -151,26 +151,35 @@ title: 'Course Directory'
    <script>
       const filters = document.querySelector('.filters-form');
       const resetBtn = document.querySelector('.reset-filters');
+      const courses = Array.from(document.querySelectorAll('.course-item'));
       let numberCourses = document.querySelector('.numberCourses');
-      const courses = document.querySelectorAll('.course-item');
+      numberCourses.textContent = courses.length;
       let fieldArray = [];
+     
 
       filters.addEventListener('change', e => {
          const nodeName = e.target.nodeName.toLowerCase();
 
          if(nodeName === 'select'){
             const optionsText = [];
-            const options = Array.from(e.target.options).forEach(option => optionsText.push(option.innerText));
+            const options = Array.from(e.target.options).forEach(option => optionsText.push(join(option.innerText)));
             
            if(!optionsText.some(item => fieldArray.includes(item))){
                fieldArray.push(join(e.target.value));
+               console.log(fieldArray);
            } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking) 
-              console.log('ok this worked')
-              
-              //remove the option already there (by index)
-              //replace with option being clicked
+              fieldArray.forEach(field => {
+                 if(optionsText.some(item => fieldArray.includes(item))){
+                    const index = fieldArray.indexOf(field);
+                    fieldArray.splice(index, 1);
+                    fieldArray.push(join(e.target.value));
+                    console.log(fieldArray, 'it worked');
+                 };
+              })   
+            
            }
          }
+         
          if(nodeName === 'input' && e.target.checked){
             fieldArray.push(join(e.target.value));
             console.log(fieldArray);
@@ -182,16 +191,38 @@ title: 'Course Directory'
          courses.forEach(course => {       
            if(fieldArray.every(item => Array.from(course.classList).includes(item))){
             course.classList.remove('hidden');
+            course.classList.add('flex');          
            } else {
             course.classList.add('hidden');
+            course.classList.remove('flex');
            }
          })
 
-         //console.log(fieldArray);
+        displayNumCourses();
 
-         function join(string){
-            return string.replace(/\s+/g, '-').toLowerCase();
-         }
+         
       })
+
+      resetBtn.addEventListener('click', e => {
+         fieldArray = [];
+         courses.forEach(course => {
+            course.classList.remove('hidden');
+            course.classList.add('flex');  
+         })
+
+         displayNumCourses();
+      
+      })
+
+      function displayNumCourses(){
+         const coursesShown = Array.from(document.querySelectorAll('.course-item.flex'));
+         return numberCourses.textContent = coursesShown.length;
+      }
+
+      function join(string){
+         return string.replace(/\s+/g, '-').toLowerCase();
+      }
+
+      console.log(fieldArray);
    </script>
 </div>
