@@ -3,14 +3,12 @@ const h = blocksToHtml.h
 const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
 
-
 const config = {
   projectId: 'wd1bon7z',
   dataset: 'production',
-  apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
+  apiVersion: 'v2021-10-21', // use current UTC date - see "specifying API version"!
   token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
   useCdn: false // `false` if you want to ensure fresh data
-
 }
 const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     title,
@@ -49,9 +47,8 @@ function prepPost(data) {
   // Adjusts where our date lives (for convenience)
   data.date = data.publishedAt.split('T')[0];
   // Returns back to our main function
-  // console.log(data.body);
+  console.log(data.image);
   return data
-
 }
 
 function urlFor(source) {
@@ -69,7 +66,7 @@ const serializers = {
       )
     ),
     imageSection: ({ node: { asset, width } }) => h("img", {
-      src: urlFor(asset),
+      src: urlFor(asset).url(),
     }),
     applyBtn: ({ node: { btnText, btnLink } }) => {
       const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
@@ -80,26 +77,6 @@ const serializers = {
         style: 'color: white;'
       })
     },
-    leadSentence: ({ node: { leadSentence } }) => (
-      h('h2', {
-        innerHTML: leadSentence,
-        style: 'font-size: 30px'
-      })
-    ),
-    supportingSentence: ({ node: { supportingSentence } }) => (
-      h('h4', {
-        innerHTML: supportingSentence,
-        style: 'color:black'
-      })
-    ),
-    styledHeading: ({ node: { styledHeading } }) => (
-      h('h2', {
-        innerHTML: styledHeading,
-        style: 'font-size: 30px'
-      })
-    ),
-
-
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
       'data-modal': "book-a-call",
@@ -109,5 +86,4 @@ const serializers = {
     })
     // code: props => '```' + props.node.language + '\n' + props.node.code + '\n```'
   }
-
 }
