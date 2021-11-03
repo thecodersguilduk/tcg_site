@@ -23,6 +23,7 @@ title: 'Course Directory'
                      <div class="my-4">
                         <p class="heading"><strong>Topics</strong></p>
                         <select class="w-full">
+                           <option value=null selected>Select a topic</option>
                            {% for item in topics %}
                               <option value="{{ item.name }}">{{ item.name }}</option>
                            {% endfor %}
@@ -91,8 +92,10 @@ title: 'Course Directory'
                      </div>
                      <div class="bg-white flex flex-col justify-around ml-8 py-4 w-9/12">
                         <div>
-                           <div class="px-1 flex">
-                              <a href="#" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">Coding</a>
+                           <div class="flex mb-1">
+                           {% for item in item.courseTopics%}
+                              <a href="#" class="mr-2 p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{item.name}}</a>
+                           {% endfor %}
                            </div>
                            
                            <p class="text-xl font-semibold text-blue-200">
