@@ -115,7 +115,7 @@ slug: {{job.jobTitle}}
       </div>
       <div class="flex-row w-full md:w-4/5 h-full">
         <div class="flex justify-between mt-4">
-          <h5 class="text-xs">Showing x results</h5>
+          <h5 class="text-xs">Showing results</h5>
           <div class="flex">
             <h5 class=" flex text-xs">Sort By</h5>
             <select name="sort-by" class="mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
@@ -207,25 +207,35 @@ let filteredAds = []
 console.log(jobAd)
 
 
+//function to filter jobs based on input search string, which is called onlick of search button.
 
-let filteredJobs = jobAd.filter(job => {
-  return (jobAd.includes(`${searchString}`))
-})
-console.log('this is filtered:', filteredJobs)
+function filteredJobs() {
+  const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString))
+  filteredAds.push(filtered)
+  console.log(filtered)
+}
+{# console.log(filteredJobs(jobAd)) #}
 
 
+// use the user input to update the searchString variable
 searchBar.addEventListener('keyup', e => {
-return searchString = e.target.value
-console.log(searchString) 
+searchString = e.target.value
+return searchString
 })
 
+
+// call filteredJobs function on click of the search button. 
 searchBtn.addEventListener('click', e => {
+  filteredJobs()
 console.log('searchString:', searchString)
 })
 
 standardCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedStandardValue = e.target.value
-  filterArray.push(selectedStandardValue)
+  selectedStandardValue = e.target.value
+  SelectedStandardValue = searchString
+  filteredJobs()
+  filteredAds.push(selectedStandardValue)
+  
 }))
 
 disabiltyCheckbox.forEach(box => box.addEventListener('click', e => {
