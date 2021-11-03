@@ -14,6 +14,8 @@ const query = `*[_type == "course"] {
     ...,
     courseType[]->{courseType},
     "featuredImage": featuredImage.asset->url,
+    courseTopics[]->{name},
+    duration[]->{name}
 
 }`
 
@@ -40,7 +42,9 @@ function prepPost(data) {
     })
     data.courseType = data.courseType[0].courseType
     data.featuredImage = data.featuredImage? data.featuredImage : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
- 
+    if(data.duration){
+        console.log(data.duration);
+    }
     return data
 }
 

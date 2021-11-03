@@ -9,13 +9,13 @@ export default {
       {
         name: 'isActive',
         type: 'boolean',
-        title: 'Active'
+        title: 'Active',
+        description: 'Switch on when course is available'
       },
       {
         name: 'title',
         type: 'string',
-        title: 'Title',
-        description: 'Titles should be catchy, descriptive, and not too long'
+        title: 'Course Name'
       },
       {
         name: 'courseType',
@@ -32,7 +32,22 @@ export default {
         ],
       },
       {
+        name: 'courseTopics',
+        type: 'array',
+        description: 'Select as many as you like - what is the course relevant to?',
+        title: 'Course Topic(s)',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseTopics'
+            }
+          }
+        ]
+      },
+      {
         name: 'duration',
+        description: 'Non-apprenticeship courses only',
         type: 'array',
         of: [
           {
@@ -45,6 +60,7 @@ export default {
       },
       {
         title: 'Attendance',
+        description: 'Non-apprenticeship courses only - only one can be selected - please contact the administrator for more details',
         name: 'attendance',
         type: 'string',
         options: {
@@ -74,6 +90,7 @@ export default {
       },
       {
         name: 'level',
+        description: 'If applicable',
         type: 'string',
         title: 'Level'
       },

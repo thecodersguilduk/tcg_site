@@ -4,9 +4,10 @@ import blog from './documents/blog'
 import team from './documents/team'
 import testimonial from './documents/testimonials'
 import categories from './documents/categories'
-import courses from './documents/course'
-import courseTypes from './documents/courseTypes'
-import courseDurations from './documents/courseDuration'
+import courses from './documents/courseSchemas/course'
+import courseTypes from './documents/courseSchemas/courseTypes'
+import courseDurations from './documents/courseSchemas/courseDuration'
+import courseTopics from './documents/courseSchemas/courseTopics'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
@@ -30,6 +31,7 @@ export default createSchema({
     courses,
     courseTypes,
     courseDurations,
+    courseTopics,
     imageSection,
     applyBtn,
     callModal,

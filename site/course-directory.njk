@@ -23,10 +23,8 @@ title: 'Course Directory'
                      <div class="my-4">
                         <p class="heading"><strong>Topics</strong></p>
                         <select class="w-full">
-                           {% for item in courses %}
-                           {% if item.courseType != 'Apprenticeships' %}
-                              <option value="{{ item.title }}">{{ item.title }}</option>
-                           {% endif %}
+                           {% for item in topics %}
+                              <option value="{{ item.name }}">{{ item.name }}</option>
                            {% endfor %}
                         </select>
                      </div>
@@ -50,22 +48,22 @@ title: 'Course Directory'
                      <div class="my-4">
                         <p class="heading">Attendance</p>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" value="Full Time" />
+                           <input type="checkbox" value="full" />
                            <label>Full Time</label>
                         </div>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" value="Part Time" />
+                           <input type="checkbox" value="part" />
                            <label>Part Time</label>
                         </div>
                         <div class="flex justify-between align-center my-2">
-                           <input type="checkbox" value="On Demand" />
+                           <input type="checkbox" value="demand" />
                            <label>On Demand</label>
                         </div>
                      </div>
                      <div class="my-4">
                         <p class="heading">Course Length</p>
                            <div class="flex justify-between align-center my-2">
-                              <input type="checkbox" value="2 Days" />
+                              <input type="checkbox" value="2 Days" class="fancy-check" />
                               <label>2 Days</label>
                            </div>
                            <div class="flex justify-between align-center my-2">
@@ -87,7 +85,7 @@ title: 'Course Directory'
                </div>
             {% for item in courses %}
                {% if item.isActive and item.courseType !== 'Apprenticeships' %}
-                  <div class="course-item flex rounded-lg shadow-lg overflow-hidden mb-6 {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
+                  <div class="course-item flex rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
                      <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                      </div>
@@ -118,7 +116,7 @@ title: 'Course Directory'
                            <div class="w-6/12">                                   
                               <p class="flex items-center text-sm font-medium text-gray-900">
                                  <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
-                                 {% if item.courseType === '2 Day Workshop Events' %} 2 Days {% elseif item.courseType === '5 Day Intensive Courses' %} 5 days {% else %} Flexible Schedule {% endif %}
+                                   {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
                               </p>
                            </div>
                            <div class="w-6/12">                                   
@@ -158,6 +156,7 @@ title: 'Course Directory'
      
 
       filters.addEventListener('change', e => {
+      
          const nodeName = e.target.nodeName.toLowerCase();
 
          if(nodeName === 'select'){
@@ -173,23 +172,23 @@ title: 'Course Directory'
                     const index = fieldArray.indexOf(field);
                     fieldArray.splice(index, 1);
                     fieldArray.push(join(e.target.value));
-                    console.log(fieldArray, 'it worked');
                  };
               })   
             
            }
          }
-         
+
          if(nodeName === 'input' && e.target.checked){
             fieldArray.push(join(e.target.value));
             console.log(fieldArray);
          } else if (nodeName === 'input' && !e.target.checked) {
             let index = fieldArray.indexOf(join(e.target.value));
             fieldArray.splice(index, 1);
+            console.log(fieldArray)
          }
 
          courses.forEach(course => {       
-           if(fieldArray.every(item => Array.from(course.classList).includes(item))){
+           if(fieldArray.some(item => Array.from(course.classList).includes(item))){
             course.classList.remove('hidden');
             course.classList.add('flex');          
            } else {
@@ -200,19 +199,24 @@ title: 'Course Directory'
 
         displayNumCourses();
 
-         
+        if(fieldArray.length === 0){
+         reset()
+        }
+        
       })
 
-      resetBtn.addEventListener('click', e => {
+      resetBtn.addEventListener('click', reset);
+
+      function reset(){
          fieldArray = [];
-         courses.forEach(course => {
+         const courseItems = Array.from(document.querySelectorAll('.course-item'));
+         courseItems.forEach(course => {
             course.classList.remove('hidden');
             course.classList.add('flex');  
          })
 
          displayNumCourses();
-      
-      })
+      }
 
       function displayNumCourses(){
          const coursesShown = Array.from(document.querySelectorAll('.course-item.flex'));
@@ -223,6 +227,6 @@ title: 'Course Directory'
          return string.replace(/\s+/g, '-').toLowerCase();
       }
 
-      console.log(fieldArray);
+      
    </script>
 </div>

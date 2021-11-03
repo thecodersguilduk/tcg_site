@@ -1273,10 +1273,9 @@ input, textarea {
   margin-right: 5px;
 }
 
-.filters-form input[type=checkbox]:checked:after {
-  font-family: "Font Awesome 5 Free";
+.filters-form input[type=checkbox]:checked::before {
   font-weight: 900;
-  content: "\F2C5";
+  content: "X";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
