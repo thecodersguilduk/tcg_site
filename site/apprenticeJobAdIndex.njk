@@ -4,6 +4,18 @@ title: Apprentice Job Ad Index
 slug: {{job.jobTitle}}
 ---
 
+{# 1. using filter function to render jobs based on searchString
+   2. use filtered array to conditionally render -> job ? job.includes(searchString) : job 
+   3. call functions within nunjucks {{function()}}
+   4. need to clear check boxes on reset
+   5. need to use the value from check boxes for filtering too
+   6. sort by filter needs implementing jobAd.jobTitle.sort()
+   7. implement grid view (stretch goal for now)
+   8. Array.length for showing: 
+   
+    #}
+
+
 {# <div class="container w-full mx-auto"> #}
 {# banner #}
   <div class="hero relative bg-white w-full">
@@ -115,7 +127,7 @@ slug: {{job.jobTitle}}
       </div>
       <div class="flex-row w-full md:w-4/5 h-full">
         <div class="flex justify-between mt-4">
-          <h5 class="text-xs">Showing results</h5>
+          <h5 class="text-xs showing"></h5>
           <div class="flex">
             <h5 class=" flex text-xs">Sort By</h5>
             <select name="sort-by" class="mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
@@ -128,6 +140,7 @@ slug: {{job.jobTitle}}
           </div>
         </div>
         {% for job in apprenticeJobAds %}
+
         
         <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg">
           <div class="w-full md:w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl">
@@ -172,6 +185,7 @@ slug: {{job.jobTitle}}
           <div>
           </div>
         </div>
+      
         {% endfor %}
       </div>
     </div>
@@ -190,7 +204,8 @@ let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
     title: '{{ jobAd.jobTitle }}',
     location: '{{jobAd.location}}',
-    employer: '{{jobAd.employerName}}'
+    employer: '{{jobAd.employerName}}',
+    standard: '{{jobAd.standard}}'
   },
 {% endfor %}];
 
@@ -201,18 +216,24 @@ const disabiltyCheckbox = document.querySelectorAll('.disability-confident-emplo
 const locationCheckbox = document.querySelectorAll('.location')
 const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
 const resetIcon = document.querySelector('.resetIcon')
+const numberOfJobs = document.querySelector('.showing')
+
 
 let searchString = ''
 let filteredAds = []
+let fiteredbyCheckbox = []
 console.log(jobAd)
 
 
 //function to filter jobs based on input search string, which is called onlick of search button.
 
 function filteredJobs() {
-  const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString))
+  const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString) || job.standard.includes(searchString))
   filteredAds.push(filtered)
+  
+ 
   console.log(filtered)
+
 }
 {# console.log(filteredJobs(jobAd)) #}
 
@@ -231,11 +252,8 @@ console.log('searchString:', searchString)
 })
 
 standardCheckbox.forEach(box => box.addEventListener('click', e => {
-  selectedStandardValue = e.target.value
-  SelectedStandardValue = searchString
-  filteredJobs()
-  filteredAds.push(selectedStandardValue)
-  
+  let selectedStandardValue = e.target.value
+console.log('selectedStandardValue:', selectedStandardValue)
 }))
 
 disabiltyCheckbox.forEach(box => box.addEventListener('click', e => {
@@ -254,11 +272,28 @@ employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
 }))
 
 resetIcon.addEventListener('click', e => {
+  reset()
 console.log('clicked')
   })
 
 let mappedArray = jobAd.map(job => (
   console.log(job.title)
 ))
+
+
+function displayNumCourses(){
+let numCourses = Array.from(jobAd)
+numberOfJobs.innerHTML = `showing: ${numCourses.length}`
+console.log('numCourses:', numCourses.length)
+}
+
+displayNumCourses()
+
+function reset(){
+  let filteredAds = jobAd
+
+  console.log(filteredAds)
+
+}
 
 </script>

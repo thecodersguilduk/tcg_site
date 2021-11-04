@@ -9,6 +9,10 @@ import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
 import courses from './documents/course'
 import courseTypes from './documents/courseTypes'
+import apprenticeAd from './documents/apprenticeAd'
+import leadSentence from './documents/components/leadSentence'
+import styledHeading from './documents/components/styledHeading'
+import supportingSentence from './documents/components/supportingSentence'
 
 
 // Then import schema types from any plugins that might expose them
@@ -30,6 +34,10 @@ export default createSchema({
     applyBtn,
     callModal,
     courses,
-    courseTypes
+    courseTypes,
+    apprenticeAd,
+    styledHeading,
+    leadSentence,
+    supportingSentence
   ]),
 })

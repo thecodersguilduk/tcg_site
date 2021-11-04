@@ -59,9 +59,10 @@ export default
           'This ends up on summary pages, on Google, when people share your post in social media.'
       },
       {
-        name: 'qualification',
-        title: 'Qualification',
-        type: 'string'
+        name: 'standard',
+        title: 'Standard',
+        type: 'string',
+        description: 'eg. software developer level 4, data analyst level 4'
       },
       {
         name: 'salary',
