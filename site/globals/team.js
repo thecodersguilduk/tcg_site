@@ -1,9 +1,10 @@
+require('dotenv').config()
 
 const config = {
-  projectId: 'wd1bon7z',
-  dataset: 'production',
-  apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
-  token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
+  apiVersion: process.env.SANITY_API, // use current UTC date - see "specifying API version"!
+  token: process.env.SANITY_TOKEN, // or leave blank for unauthenticated usage
 }
 const imageUrlBuilder = require('@sanity/image-url');
 const sanityClient = require('@sanity/client');
@@ -19,7 +20,7 @@ module.exports = async function () {
 
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
-  console.log(data.image)
+  //console.log(data.image)
   // returns this to the 11ty data cascade
   return preppedData
 }
@@ -36,6 +37,6 @@ function prepPost(data) {
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
   data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
-  console.log(data);
+  //console.log(data);
   return data
 }
