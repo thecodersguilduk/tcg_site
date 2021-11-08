@@ -39,7 +39,7 @@ module.exports = async function () {
 // prepPost function is passed as an argument into preppedData 
 function prepPost(data) {
   // data.employerLogo = urlFor(data.employerLogo)
-  console.log(data.employerLogo)
+  
   return data
 }
 //urlFor is a function used to create a url from sanity.
