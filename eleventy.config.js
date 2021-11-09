@@ -2,19 +2,20 @@ const htmlmin = require("html-minifier")
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
-async function imageShortcode(src, alt) {
-    let sizes = "(min-width: 1024px) 100vw, 50vw"
-    // let srcPrefix = `./src/img/`
-    // src = srcPrefix + src
-    //console.log(`Generating image(s) from:  ${src}`)
+async function imageShortcode(src, alt, classNames) {
+    let sizes = "342px, 100vw, 50vw"
+    let srcPrefix = `./images/`
+    let classes = [classNames]
+    src = srcPrefix + src
+    console.log(`Generating image(s) from:  ${src}`)
     if(alt === undefined) {
       // Throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`)
     }
     let metadata = await Image(src, {
-      widths: [400, 600, 900, 1500],
+      widths: [null],
       formats: ['webp', 'jpeg'],
-      urlPath: "./img/",
+      urlPath: "../images/",
       outputDir: "./dist/images/",
       /* =====
       Now we'll make sure each resulting file's name will
@@ -38,7 +39,8 @@ async function imageShortcode(src, alt) {
         src="${lowsrc.url}"
         alt="${alt}"
         loading="lazy"
-        decoding="async">
+        decoding="async"
+        class="${classes}">
     </picture>`
   }
 
