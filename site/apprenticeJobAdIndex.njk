@@ -221,7 +221,7 @@ const numberOfJobs = document.querySelector('.showing')
 
 let searchString = ''
 let filteredAds = []
-let fiteredbyCheckbox = []
+let filteredbyCheckbox = []
 console.log(jobAd)
 
 
@@ -230,12 +230,21 @@ console.log(jobAd)
 function filteredJobs() {
   const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString) || job.standard.includes(searchString))
   filteredAds.push(filtered)
-  
- 
   console.log(filtered)
-
 }
-{# console.log(filteredJobs(jobAd)) #}
+
+function filterByCheck() {
+  standardCheckbox.forEach(box => box.addEventListener('click', e => {
+  let selectedStandardValue = e.target.value
+console.log('selectedStandardValue:', selectedStandardValue)
+if(jobAd.includes(selectedStandardValue))
+console.log(jobAd)
+filteredbyCheckbox.push(selectedStandardValue)
+console.log(filteredbyCheckbox)
+}))
+}
+
+filterByCheck()
 
 
 // use the user input to update the searchString variable

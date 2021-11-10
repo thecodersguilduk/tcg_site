@@ -15,6 +15,12 @@ export default
         type: 'string'
       },
       {
+        name: 'disabilityConfident',
+        title: 'Disabily Confident',
+        type: 'string',
+        description: 'eg. Yes'
+      },
+      {
         name: 'jobTitle',
         title: 'Job Title',
         type: 'string'
@@ -49,6 +55,11 @@ export default
       {
         name: 'jobDescription',
         title: 'Job Description',
+        type: 'string'
+      },
+      {
+        name: 'briefOverview',
+        title: 'Brief overview of the role',
         type: 'string'
       },
       {
