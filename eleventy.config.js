@@ -18,6 +18,9 @@ module.exports = eleventyConfig => {
     return array.slice(1, limit);
   });
 
+  eleventyConfig.addFilter('log', function (value) {
+    return console.log(value)
+  })
   // Minify our HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (outputPath.endsWith(".html")) {
