@@ -41,104 +41,102 @@ layout: 'default'
                     <input id="cN" type="hidden" name="cN" value="" />
                     <div>
                         <p>
-                            <label for="name" class="form-label">Your Name: <input type="text" name="name" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>   
+                            <label for="name" class="sr-only">Your Name:</label>
+                            <input type="text" name="name" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Name" required />   
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="email" class="form-label">Your Email: <input type="email" name="email" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>
+                            <label for="email" class="sr-only">Your Email:</label>
+                            <input type="email" name="email" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Email" required />
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="postcode" class="form-label">Your Postcode: <input type="text" name="postcode" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>
+                            <label for="postcode" class="sr-only">Your Postcode:</label>
+                             <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required />
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="phone" class="form-label">Your Phone Number: <input type="text" name="phone" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>
+                            <label for="phone" class="sr-only">Your Phone Number: <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" /></label>
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="why_this_course" class="form-label">Why have you chosen this course:
-                            <textarea row="5" name="why_this_course" class="form-textarea mt-1 mb-1 block w-full placeholder-muted"></textarea>
-                            </label>
+                            <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
+                            <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
+                            
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="gender" class="form-label">Which of the following most accurately describes you? 
-                                <select name="gender" class="form-select mt-1 mb-1 block w-full placeholder-muted">
-                                    <option selected>Please Select</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Non-Binary">Non-Binary</option>
-                                    <option value="Transgender">Transgender</option>
-                                    <option value="Intersex">Intersex</option>
-                                    <option value="Not-disclosed">I prefer not to say</option>
-                                </select>
-                            </label>
+                            <label for="gender" class="">Which of the following most accurately describes you? </label>
+                            <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" >
+                                <option selected>Please Select an Option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Non-Binary">Non-Binary</option>
+                                <option value="Transgender">Transgender</option>
+                                <option value="Intersex">Intersex</option>
+                                <option value="Not-disclosed">I prefer not to say</option>
+                            </select>
                         </p>
                     </div>
                     <div class="mt-8">
                          <p>
-                            <label for="disability" class="form-label">Do you have a disability which may require adjustments to be made to allow you to perform your job role? 
-                                <select name="disability" class="form-select mt-1 mb-1 block w-full placeholder-muted">
-                                    <option selected>Please Select</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                            </label>
+                            <label for="disability" class="">Do you have a disability which may require adjustments to be made to allow you to perform your job role? </label>
+                            <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                <option selected>Please Select an Option</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="sexuality" class="form-label">With which of these do you most closely identify with? 
-                                <select name="sexuality" class="form-select mt-1 mb-1 block w-full placeholder-muted">
-                                    <option selected>Please Select</option>
-                                    <option value="Heterosexual">Heterosexual</option>
-                                    <option value="Homosexual">Homosexual</option>
-                                    <option value="Bisexual">Bisexual</option>
-                                    <option value="Pansexual">Pansexual</option>
-                                    <option value="Not_disclosed">Prefer not to say</option>
-                                </select>
-                            </label>
+                            <label for="sexuality" class="">With which of these do you most closely identify with? </label>
+                            <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                <option selected>Please Select an Option</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Homosexual">Homosexual</option>
+                                <option value="Bisexual">Bisexual</option>
+                                <option value="Pansexual">Pansexual</option>
+                                <option value="Not_disclosed">Prefer not to say</option>
+                            </select>
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="ethnicity" class="form-label">What is your Ethnicity? 
-                                <select name="ethnicity" class="form-select mt-1 mb-1 block w-full placeholder-muted">
-                                    <option selected>Please Select</option>
-                                    <option value="white-british">White British</option>
-                                    <option value="other-white">Other White</option>
-                                    <option value="mixed">Mixed/Multiple Ethnic Groups</option>
-                                    <option value="asian-asian-british">Asian/Asian British</option>
-                                    <option value="black-african-caribbean-black-british">Black/African/Caribbean/Black British</option>
-                                    <option value="other">Other</option>
-                                    <option value="Not_disclosed">Prefer not to say</option>
-                                </select>
-                            </label>
+                            <label for="ethnicity" class="">What is your Ethnicity? </label>
+                            <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                <option selected>Please Select an Option</option>
+                                <option value="white-british">White British</option>
+                                <option value="other-white">Other White</option>
+                                <option value="mixed">Mixed/Multiple Ethnic Groups</option>
+                                <option value="asian-asian-british">Asian/Asian British</option>
+                                <option value="black-african-caribbean-black-british">Black/African/Caribbean/Black British</option>
+                                <option value="other">Other</option>
+                                <option value="Not_disclosed">Prefer not to say</option>
+                            </select>
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="employment_status" class="form-label">What is your current employment status? 
-                                <select name="employment_status" class="form-select mt-1 mb-1 block w-full placeholder-muted">
-                                    <option selected>Please Select</option>
-                                    <option value="Full-Time">Full Time Employed</option>
-                                    <option value="Part-Time">Part Time Employed</option>
-                                    <option value="Self-Employed">Self Employed</option>
-                                    <option value="student">Student</option>
-                                    <option value="unemployed">Not currently employed</option>
-                                </select>
-                            </label>
+                            <label for="employment_status" class="">What is your current employment status? </label>
+                            <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                <option selected>Please Select an Option</option>
+                                <option value="Full-Time">Full Time Employed</option>
+                                <option value="Part-Time">Part Time Employed</option>
+                                <option value="Self-Employed">Self Employed</option>
+                                <option value="student">Student</option>
+                                <option value="unemployed">Not currently employed</option>
+                            </select>
                         </p>
                     </div>
                     <div class="mt-8">
                         <p>
-                            <label for="rtw_status" class="form-label">Are you able to provide valid documentation of your right to work in the UK? </label>
+                            <label for="rtw_status" class="">Are you able to provide valid documentation of your right to work in the UK? </label>
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
                                         <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
