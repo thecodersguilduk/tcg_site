@@ -15,10 +15,9 @@ slug: {{job.jobTitle}}
    
     #}
 
-
-{# <div class="container w-full mx-auto"> #}
 {# banner #}
-  <div class="hero relative bg-white w-full">
+<div class="bg-grey-100 h-full">
+  <div class="hero relative bg-grey-100 w-full mx-auto">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
     <img src="../images/banner-2.png" alt="Apprenticeships hero image"
@@ -45,12 +44,7 @@ slug: {{job.jobTitle}}
   </div>
 
 <main class="mx-8">
-  <div class="container w-full h-full">
     <div class="flex flex-row justify-center">
-    
-
-
-
       <div class="flex-row w-full md:w-1/5 h-full">
         <div class="flex justify-between mt-6">
           <h5 class="text-lg">Filters</h5>
@@ -140,7 +134,7 @@ slug: {{job.jobTitle}}
         </div> #}
         </div>
       </div> 
-      <div class="flex-row w-full md:w-4/5 h-full">
+      <div class="flex-row w-full h-full">
         {# <div class="flex justify-between mt-4">
           <h5 class="text-xs showing"></h5>
           <div class="flex">
@@ -157,10 +151,11 @@ slug: {{job.jobTitle}}
         {% for job in apprenticeJobAds %}
 
         
-        <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4">
-          <div class="w-full md:w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 border-1">
+        {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
+        <div class="flex align-middle">
+          <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
             <div class="w-full h-auto rounded-t-lg flex flex-row">
-              <div class="mx-2 flex justify-center mt-4 pt-6 h-20 w-20 border-grey-200 border-2 rounded-lg">
+              <div class="mx-2 flex justify-center pt-6 h-20 w-20 border-grey-200 border-2 rounded-lg">
                 <img class="flex h-10 w-10" src="{{job.employerLogo}}">
               </div>
               <div class="md:w-4/5 mx-2 my-2">
@@ -204,9 +199,8 @@ slug: {{job.jobTitle}}
         {% endfor %}
       </div>
     </div>
-  </div>
   </main>
-{# </div> #}
+</div>
 
 
 
