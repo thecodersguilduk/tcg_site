@@ -18,6 +18,40 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
+      name: 'courseCode',
+      type: 'string',
+      title: 'Course Code',
+      description: 'eg. 2dw-? 5di-? upsk-? rsk-? appr-?'
+    },
+    {
+      title: 'Course Lead',
+      name: 'courseLead',
+      type: 'array',
+      description: 'Please select one',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'lead'
+          }
+      }
+      ],
+    },
+    {
+      title: 'Course Project',
+      name: 'courseProject',
+      type: 'array',
+      description: 'Please select one',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'project'
+          }
+      }
+      ],
+    },
+    {
       title: 'Course Type',
       name: 'courseType',
       type: 'array',

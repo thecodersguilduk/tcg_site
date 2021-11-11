@@ -29,10 +29,10 @@ layout: 'default'
                       <p class="hidden">
                         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
-                    <input type="hidden" name="project" value="" />
-                    <input type="hidden" name="lead" value="" />
-                    <input type="hidden" name="funder" value="" />
-                    <input type="hidden" name="courseName" value="" />
+                    <input id="project" type="hidden" name="project" value="" />
+                    <input id="lead" type="hidden" name="lead" value="" />
+                    <input id="funder" type="hidden" name="funder" value="" />
+                    <input id="courseName" type="hidden" name="courseName" value="" />
                     <div>
                         <p>
                             <label for="name" class="form-label">Your Name: <input type="text" name="name" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>   
@@ -169,3 +169,11 @@ layout: 'default'
         </div>
       </div>
     </div>
+
+    <script>
+    const url = new URL(window.location.href)
+    url.searchParams.forEach((x, y) => {
+        document.getElementById(y).value = x
+    })
+    
+    </script>

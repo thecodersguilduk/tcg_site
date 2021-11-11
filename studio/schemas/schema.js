@@ -13,6 +13,9 @@ import styledHeading from './documents/components/styledHeading.js'
 import supportingSentence from './documents/components/supportingSentence.js'
 import courses from './documents/course'
 import courseTypes from './documents/courseTypes'
+import project from './documents/project'
+import funder from './documents/funder'
+import lead from './documents/lead'
 
 
 
@@ -39,6 +42,9 @@ export default createSchema({
     styledHeading,
     supportingSentence,
     courses,
-    courseTypes
+    courseTypes,
+    lead,
+    project,
+    funder
   ]),
 })
