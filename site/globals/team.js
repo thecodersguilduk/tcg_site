@@ -1,4 +1,3 @@
-
 const config = {
   projectId: 'wd1bon7z',
   dataset: 'production',

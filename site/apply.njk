@@ -24,15 +24,21 @@ layout: 'default'
             <div class="bg-white section-rounded">
                 <section class="relative md:w-4/6 mx-auto md:py-20 py-14 z-10 overflow-hidden">
                     <h2 class="text-center text-blue-200">Application Form</h2>
-                    <p class="mb-6">As part of our mission to remove barriers to entry into the tech industry, it is important to collect data to monitor how we are doing, and how we can do it better. See our full privacy policy by <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">clicking here.</p>
-                    <form name="course-apply" method="POST" netlify netlify-honeypot="bot-field">
+                    <p class="mb-6">The Coders Guild is 100% committed to promoting inclusion, eliminating discrimination and encouraging diversity
+                     across all areas of our work. Our aim is that applications to courses and services will be truly representative of all sections
+                     of society. As part of our monitoring processes we ask for your cooperation in completing the questions on this form. We have a 
+                     very inclusive application process, this data will be anonymised for our tracking purposes.
+                     No applicant will be discriminated against regardless of their age, colour, disability, ethnicity, gender or gender identity, race,
+                     religion or belief and / or sexual orientation or if you do not wish to complete this form. For full details please see our data and
+                      <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policies</a>.</p>
+                    <form name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto">
                       <p class="hidden">
                         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
-                    <input id="project" type="hidden" name="project" value="" />
-                    <input id="lead" type="hidden" name="lead" value="" />
-                    <input id="funder" type="hidden" name="funder" value="" />
-                    <input id="courseName" type="hidden" name="courseName" value="" />
+                    <input id="pj" type="hidden" name="pj" value="" />
+                    <input id="ld" type="hidden" name="ld" value="" />
+                    <input id="f" type="hidden" name="f" value="" />
+                    <input id="cN" type="hidden" name="cN" value="" />
                     <div>
                         <p>
                             <label for="name" class="form-label">Your Name: <input type="text" name="name" class="form-input mt-1 mb-1 block w-full placeholder-muted" /></label>   

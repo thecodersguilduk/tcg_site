@@ -7,16 +7,12 @@ import categories from './documents/categories'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
-import apprenticeAd from './documents/apprenticeAd'
-import leadSentence from './documents/components/leadSentence.js'
-import styledHeading from './documents/components/styledHeading.js'
-import supportingSentence from './documents/components/supportingSentence.js'
 import courses from './documents/course'
 import courseTypes from './documents/courseTypes'
-import project from './documents/project'
-import funder from './documents/funder'
-import lead from './documents/lead'
-
+import apprenticeAd from './documents/apprenticeAd'
+import leadSentence from './documents/components/leadSentence'
+import styledHeading from './documents/components/styledHeading'
+import supportingSentence from './documents/components/supportingSentence'
 
 
 // Then import schema types from any plugins that might expose them
@@ -37,14 +33,11 @@ export default createSchema({
     imageSection,
     applyBtn,
     callModal,
-    apprenticeAd,
-    leadSentence,
-    styledHeading,
-    supportingSentence,
     courses,
     courseTypes,
-    lead,
-    project,
-    funder
+    apprenticeAd,
+    styledHeading,
+    leadSentence,
+    supportingSentence
   ]),
 })
