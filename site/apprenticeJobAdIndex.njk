@@ -29,7 +29,7 @@ slug: {{job.jobTitle}}
           <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
             Apprenticeship</h1>
         </div>
-        <div>
+        {# <div>
           <div class="mt-4 flex rounded-md shadow-sm w-ful">
             <div class="relative flex items-stretch flex-grow w-full">
               <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-2 sm:text-sm"
@@ -39,7 +39,7 @@ slug: {{job.jobTitle}}
               class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
             </button>
           </div>
-        </div>
+        </div> #}
       </div>
     </div>
   </div>
@@ -47,30 +47,44 @@ slug: {{job.jobTitle}}
 <main class="mx-8">
   <div class="container w-full h-full">
     <div class="flex flex-row justify-center">
+    
+
+
+
       <div class="flex-row w-full md:w-1/5 h-full">
-        <div class="flex justify-between mt-4 mx-1">
+        <div class="flex justify-between mt-6">
           <h5 class="text-lg">Filters</h5>
-          <div class="resetIcon flex">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w-8 h-8 p-2">
+          {# <div class="resetIcon flex">
+            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w- h-8 p-2">
             <h5 class="text-xs">Reset Filters</h5>
-          </div>
+          </div> #}
         </div>
         <div class="w-full filterOptions"> 
-        <div class="flex-col mr-4">
+        {# <div class="flex-col mr-4">
           <div class="filter-form mt-4">
             <p class="font-bold text-xs">Type of employment</p>
             <div>
               <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
                 class="transform scale-150">
               <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
-            </div>
+            </div> #}
             <p class="font-bold text-xs">Location</p>
             <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
               <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
             </div>
-            <p class="font-bold text-xs">Apprenticeship Standard</p>
+             <div>
+              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+            </div>
+            <div>
+              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+            </div>
+            {# <p class="font-bold text-xs">Apprenticeship Standard</p>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                 value="software developer level 4" class="transform scale-150">
@@ -123,11 +137,11 @@ slug: {{job.jobTitle}}
               <label for="disability confident employer" class="ml-1 text-xs"> In Progress</label>
             </div>
           </div>
+        </div> #}
         </div>
-        </div>
-      </div>
+      </div> 
       <div class="flex-row w-full md:w-4/5 h-full">
-        <div class="flex justify-between mt-4">
+        {# <div class="flex justify-between mt-4">
           <h5 class="text-xs showing"></h5>
           <div class="flex">
             <h5 class=" flex text-xs">Sort By</h5>
@@ -139,34 +153,34 @@ slug: {{job.jobTitle}}
             <img class="w-8" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
             <img src="../images/apprenticeJobAd/list_black_24dp.svg">
           </div>
-        </div>
+        </div> #}
         {% for job in apprenticeJobAds %}
 
         
-        <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg">
-          <div class="w-full md:w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl">
+        <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4">
+          <div class="w-full md:w-4/5 h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 border-1">
             <div class="w-full h-auto rounded-t-lg flex flex-row">
-              <div class="mx-2 flex justify-center pt-6 h-20 w-20">
+              <div class="mx-2 flex justify-center mt-4 pt-6 h-20 w-20 border-grey-200 border-2 rounded-lg">
                 <img class="flex h-10 w-10" src="{{job.employerLogo}}">
               </div>
               <div class="md:w-4/5 mx-2 my-2">
                 <div class="flex justify-between ml-1">
-                  <p class="flex text-xs">{{job.jobTitle}}</p>
-                  <p class="flex text-xs mr-2">£{{job.salary}}</p>
+                  <h5 class="flex text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
+                  <p class="flex text-xs font-bold mr-2">£{{job.salary}}</p>
                 </div>
-                <p class="ml-1 text-xs">{{job.employerName}}</p>
+                <p class="ml-1 text-xs font-bold text-blue-700">{{job.employerName}}</p>
                 <div class="flex flex-row">
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/schedule_black_24dp.svg">
                     <p class="text-xs">{{job.contract}}</p>
                   </div>
-                  <div class="flex">
+                  <div class="flex ml-8">
                     <img src="../images/apprenticeJobAd/place_black_24dp.svg">
                     <p class="flex text-xs">{{job.location}}</p>
                   </div>
-                  <div class="flex">
+                  <div class="flex ml-8">
                     <img src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                    <p class="flex text-xs">Closing date: {{job.closingDate}}</p>
+                    <p class="flex text-xs"><span class="font-bold">Closing date: </span> {{job.closingDate}}</p>
                   </div>
                 </div>
               </div>
@@ -175,9 +189,9 @@ slug: {{job.jobTitle}}
               <p class="truncate text-xs">{{job.excerpt}} </p>
               <div class="mb-4 mt-2 flex flex-row">
                 <div class="flex">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-sm p-2 mx-1"> Apply Now</button>
+                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
                    <a href="/jobAdSingle/{{ job.slug.current }}/index.html">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-sm p-2 mx-1"> Find out more</button>
+                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
                   </a>
                 </div>
               </div>
