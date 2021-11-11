@@ -81,8 +81,7 @@ title: 'Course Directory'
             </div>
             <div class="w-full md:w-9/12  mx-auto lg:max-w-none pl-6">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
-                  <h3 class="text-blue-200 mb-0"><span class="numberCourses">X</span> Courses Found</h3>
-                  <p class="mb-0"><strong>Sort By</strong></span>
+                  <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
                </div>
             {% for item in courses %}
                {% if item.isActive and item.courseType !== 'Apprenticeships' %}
@@ -99,7 +98,9 @@ title: 'Course Directory'
                            </div>
                            
                            <p class="text-xl font-semibold text-blue-200">
-                              {{item.title}}
+                              <a href="{{item.slug.current}}">
+                                 {{item.title}}
+                              </a>
                            </p>
                            
                         </div>

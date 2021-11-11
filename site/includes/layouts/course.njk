@@ -14,7 +14,7 @@ meta_description: {{ excerpt }}
                 {% if featured_image %}
 
                     <figure class="">
-                        <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="max-h-96 max-w-4xl h-40 sm:h-56 md:h-auto object-cover">
+                        <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
                     </figure>
 
                 {% endif %}
@@ -57,7 +57,7 @@ meta_description: {{ excerpt }}
 
         </article>
 
-        {% include "components/course-directory/course-section.njk" %}
+        {# {% include "components/course-directory/course-section.njk" %} #}
       <script>
         const styledDiv = document.querySelector('.content > div');
         styledDiv.classList.add('content');
