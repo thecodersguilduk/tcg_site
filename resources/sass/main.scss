@@ -111,6 +111,19 @@
 
 ///Apprentice Job Index
 
+#ApplyBtn {
+  background-color: #3586bb;
+  @apply font-heading;
+  color: #fff;
+  font-weight: bold;
+}
+#FindOutMoreBtn {
+  background-color: white;
+  @apply font-heading;
+  color: #3586bb;
+  font-weight: bold;
+}
+
 #searchBtnJobIndex {
   background-color: #86ba90;
   @apply font-heading;

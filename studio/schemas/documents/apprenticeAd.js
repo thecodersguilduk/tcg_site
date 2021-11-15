@@ -99,6 +99,22 @@ export default
         name: 'support',
         title: 'How we will support you as an apprentice',
         type: 'string'
+      },
+      {
+        name: 'ApprenticeAdPortableText',
+        type: 'array',
+        title: 'Benefits',
+        description: 'for bullet point styling',
+        of: [
+          { type: 'block' },
+          { type: 'imageSection' },
+          { type: 'applyBtn' },
+          { type: 'callModal' },
+          { type: 'leadSentence' },
+          { type: 'supportingSentence' },
+          { type: 'styledHeading' }
+
+        ]
       }
     ]
   }

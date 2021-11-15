@@ -19,6 +19,7 @@ const config = {
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
 const query = ` *[ _type == "ApprenticeJobAds"]{
   ...,
+  ApprenticeAdPortableText,
 "employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {

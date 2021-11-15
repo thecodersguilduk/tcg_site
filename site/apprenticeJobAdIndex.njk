@@ -4,19 +4,10 @@ title: Apprentice Job Ad Index
 slug: {{job.jobTitle}}
 ---
 
-{# 1. using filter function to render jobs based on searchString
-   2. use filtered array to conditionally render -> job ? job.includes(searchString) : job 
-   3. call functions within nunjucks {{function()}}
-   4. need to clear check boxes on reset
-   5. need to use the value from check boxes for filtering too
-   6. sort by filter needs implementing jobAd.jobTitle.sort()
-   7. implement grid view (stretch goal for now)
-   8. Array.length for showing: 
-   
-    #}
+
 
 {# banner #}
-<div class="bg-grey-100 h-full">
+<div class="bg-grey-100 h-full w-full">
   <div class="hero relative bg-grey-100 w-full mx-auto">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
@@ -25,168 +16,80 @@ slug: {{job.jobTitle}}
     <div class="absolute top-0 w-full h-full">
       <div class="flex flex-col justify-center items-center w-full h-full">
         <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
-            Apprenticeship</h1>
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">
+          Find Your Dream Apprenticeship</h1>
         </div>
-        {# <div>
-          <div class="mt-4 flex rounded-md shadow-sm w-ful">
-            <div class="relative flex items-stretch flex-grow w-full">
-              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-2 sm:text-sm"
-                placeholder="Search a keyword...">
-            </div>
-            <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
-            </button>
-          </div>
-        </div> #}
+      
       </div>
     </div>
   </div>
 
-<main class="mx-8">
-    <div class="flex flex-row justify-center">
+<main class="main inner flex flex-1 flex-col focus:outline-none bg-grey-100 mt-4" tabindex="-1">
+    <div class="flex flex-row justify-center flex-wrap lg:flex-no-wrap md:flex-no-wrap">
       <div class="flex-row w-full md:w-1/5 h-full">
-        <div class="flex justify-between mt-6">
-          <h5 class="text-lg">Filters</h5>
-          {# <div class="resetIcon flex">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w- h-8 p-2">
-            <h5 class="text-xs">Reset Filters</h5>
-          </div> #}
-        </div>
+          <h5 class="text-lg lg:text-xl">Filters</h5>
+         
+       
+
         <div class="w-full filterOptions"> 
-        {# <div class="flex-col mr-4">
-          <div class="filter-form mt-4">
-            <p class="font-bold text-xs">Type of employment</p>
-            <div>
-              <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
-                class="transform scale-150">
-              <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
-            </div> #}
-            <p class="font-bold text-xs">Location</p>
+      
+            <p class="font-bold text-xs lg:text-md">Location</p>
             <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-xs lg:text-md"> Yorkshire & Humbersides</label>
             </div>
              <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-xs lg:text-md"> Yorkshire & Humbersides</label>
             </div>
             <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-xs lg:text-md"> Yorkshire & Humbersides</label>
             </div>
-            {# <p class="font-bold text-xs">Apprenticeship Standard</p>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 4</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software tester level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software tester level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="accessibilty specialist level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Accessibilty specialist level 4</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
-                class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Data analyst level 4</label>
-            </div>
-            <div>
-              
-              <p class="font-bold text-xs">Salary Range</p>
-              <label for="salary range" class="text-xs">£24k-£36k</label>
-              <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
-                max="100" step="1" value="18" />
-              <div class="flex flex-row justify-between">
-                <p class="flex text-xs">£18k</p>
-                <p class="flex text-xs">100k</p>
-              </div>
-            </div>
-            <p class="font-bold text-xs">Disability confident employer</p>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="yes"
-                class="transform scale-150">
-              <label for="disability-confident-employer" class="ml-1 text-xs"> Yes</label>
-            </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="no"
-                class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-xs"> No</label>
-            </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="in progress" class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-xs"> In Progress</label>
-            </div>
-          </div>
-        </div> #}
         </div>
-      </div> 
-      <div class="flex-row w-full h-full">
-        {# <div class="flex justify-between mt-4">
-          <h5 class="text-xs showing"></h5>
-          <div class="flex">
-            <h5 class=" flex text-xs">Sort By</h5>
-            <select name="sort-by" class="mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
-              <option value="A-Z">A-Z</option>
-              <option value="location">location</option>
-              <option value="salary">Salary</option>
-            </select>
-            <img class="w-8" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img src="../images/apprenticeJobAd/list_black_24dp.svg">
-          </div>
-        </div> #}
-        {% for job in apprenticeJobAds %}
 
-        
-        {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
+      </div> 
+
+      <div class="flex-row w-full h-full">
+      {% for job in apprenticeJobAds %}
         <div class="flex align-middle">
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
             <div class="w-full h-auto rounded-t-lg flex flex-row">
-              <div class="mx-2 flex justify-center pt-6 h-20 w-20 border-grey-200 border-2 rounded-lg">
-                <img class="flex h-10 w-10" src="{{job.employerLogo}}">
+              <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg">
+                <img class="flex h-full w-full" src="{{job.employerLogo}}">
               </div>
               <div class="md:w-4/5 mx-2 my-2">
                 <div class="flex justify-between ml-1">
-                  <h5 class="flex text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
-                  <p class="flex text-xs font-bold mr-2">£{{job.salary}}</p>
+                  <h5 class="flex text-lg lg:text-2xl text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
+                  <p class="flex text-lg font-bold mr-2">£{{job.salary}}</p>
                 </div>
-                <p class="ml-1 text-xs font-bold text-blue-700">{{job.employerName}}</p>
+                <p class="ml-1 text-xs lg:text-md font-bold text-blue-700">{{job.employerName}}</p>
                 <div class="flex flex-row">
                   <div class="flex">
                     <img src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                    <p class="text-xs">{{job.contract}}</p>
+                    <p class="text-xs lg:text-md">{{job.contract}}</p>
                   </div>
                   <div class="flex ml-8">
                     <img src="../images/apprenticeJobAd/place_black_24dp.svg">
-                    <p class="flex text-xs">{{job.location}}</p>
+                    <p class="flex text-xs lg:text-md">{{job.location}}</p>
                   </div>
                   <div class="flex ml-8">
                     <img src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                    <p class="flex text-xs"><span class="font-bold">Closing date: </span> {{job.closingDate}}</p>
+                    <p class="flex text-xs lg:text-md"><span class="">Closing date: </span> {{job.closingDate}}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class=" w-full md:w-4/5 h-20 mx-2 my-2 overflow-hidden">
-              <p class="truncate text-xs">{{job.excerpt}} </p>
+            <div class=" w-full md:w-4/5 h-26 mx-2 my-2 overflow-hidden">
+              <p class="overflow-clip text-xs lg:text-md">{{job.excerpt}} </p>
               <div class="mb-4 mt-2 flex flex-row">
-                <div class="flex">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
-                   <a href="/jobAdSingle/{{ job.slug.current }}/index.html">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
+                <div class="flex h-full">
+                  <button id="ApplyBtn" class="bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
+                   <a href="/jobAdSingle/{{ job.slug.current }}/index.html" class="no-underline">
+                  <button id="FindOutMoreBtn" class="bg-white  text-blue-200 border-solid border-2 border-blue-200 rounded-lg p-2 justify-center align-items-center">Find out more</button>
                   </a>
                 </div>
               </div>
@@ -195,8 +98,8 @@ slug: {{job.jobTitle}}
           <div>
           </div>
         </div>
-      
         {% endfor %}
+        </div>
       </div>
     </div>
   </main>
