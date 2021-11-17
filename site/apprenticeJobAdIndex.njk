@@ -43,11 +43,11 @@ slug: {{job.jobTitle}}
 
       <div class="flex-row w-full h-full">
       {% for job in apprenticeJobAds %}
-      {% if (job.location === 'Leeds')%}
-        <div class="flex align-middle">
+      {# {% if (job.location === 'Leeds')%} #}
+        <div class="flex align-middle {{job.location}}">\\for each job job.location loop over jobloaction array retun each location
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
             <div class="w-full h-auto rounded-t-lg lg:flex lg:flex-row">
-              <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg">
+              <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg overflow-hidden">
                 <img class="flex h-full w-full" src="{{job.employerLogo}}">
               </div>
               <div class="md:w-4/5 mx-2 my-2">
@@ -87,9 +87,9 @@ slug: {{job.jobTitle}}
           <div>
           </div>
         </div>
-        {% else %}
+        {# {% else %}
         <div class="hidden"></div>
-        {% endif %}
+        {% endif %} #}
         {% endfor %}
         </div>
       </div>
@@ -108,14 +108,13 @@ const locationCheckbox = document.querySelectorAll('.location')
 
 locationCheckbox.forEach(box => box.addEventListener('click', e => { 
   let selectedLocation = e.target.value
-  console.log(selectedLocation)
+  return(selectedLocation)
+
 }))
 
 {# let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
-    title: '{{ jobAd.jobTitle }}',
-    location: '{{jobAd.location}}',
-    employer: '{{jobAd.employerName}}',
+   location: '{{jobAd.location}}',
     standard: '{{jobAd.standard}}'
   },
 {% endfor %}]; #}

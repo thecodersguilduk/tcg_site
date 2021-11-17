@@ -3,10 +3,10 @@ layout: default
 title: {{job.jobTitle}}
 ---
 
-<main class="mx-8 my-2">
+<main class="mx-8 my-2 w-full">
 
-<div class="bg-blue-100 h-64 mt-20 relative" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg)">
-<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg"><img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full rounded-lg"></div>
+<div class="bg-blue-100 h-64 mt-20 relative w-full" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg)">
+<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg overflow-hidden"><img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full"></div>
 </div>
 
 <div class="mx-16 mt-16">
@@ -79,14 +79,14 @@ title: {{job.jobTitle}}
 <p class="text-sm">
 {{job.duties}}</p>
 </div>
-
+{% if job.body%}
 <div class="mx-16 my-8 w-full">
-<p class="font-bold text-md text-blue-200">Benifits:</p>
+<p class="font-bold text-md text-blue-200">Benefits:</p>
 <p class="text-sm">
-{{job.blogPortableText}}
+{{job.body}}
 </p>
 </div>
-
+{%endif%}
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">We will support you as an apprentice</p>
 <p class="text-sm">
@@ -112,19 +112,19 @@ title: {{job.jobTitle}}
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">Qualifcations required</p>
 <p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{job.requiredQualifications}}</p>
 </div>
 
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">Future prospects</p>
 <p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{job.futureProspects}}</p>
 </div>
 
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">Things to consider</p>
 <p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{job.thingsToConsider}}</p>
 </div>
 
 <div class="mx-16 w- h-20 rounded flex flex-row relative" style="background-color:#86BA90">
@@ -139,15 +139,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </button>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
 </main>
 
 

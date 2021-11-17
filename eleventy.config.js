@@ -19,7 +19,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('log', function (value) {
-    return console.log(value)
+    // return console.log(value)
   })
   // Minify our HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {

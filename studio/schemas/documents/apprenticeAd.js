@@ -123,12 +123,19 @@ export default
       {
         name: 'blogPortableText',
         type: 'array',
-        title: 'Benefits',
-        description: 'for bullet point styling',
+        title: 'body',
         of: [
           { type: 'block' },
+          { type: 'imageSection' },
+          { type: 'applyBtn' },
+          { type: 'callModal' },
+          { type: 'leadSentence' },
+          { type: 'supportingSentence' },
+          { type: 'styledHeading' }
+
         ]
       }
+
     ]
   }
 

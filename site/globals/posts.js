@@ -49,7 +49,7 @@ function prepPost(data) {
   // Adjusts where our date lives (for convenience)
   data.date = data.publishedAt.split('T')[0];
   // Returns back to our main function
-  console.log(data.image);
+  // console.log(data.image);
   return data
 }
 
@@ -57,6 +57,7 @@ function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));
   return imageBuilder.image(source);
 }
+
 
 // This is a way of converting our custom blocks from Portable Text to html
 const serializers = {
@@ -68,7 +69,7 @@ const serializers = {
       )
     ),
     imageSection: ({ node: { asset, width } }) => h("img", {
-      src: urlFor(asset).url(),
+      src: urlFor(asset),
     }),
     applyBtn: ({ node: { btnText, btnLink } }) => {
       const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
@@ -79,6 +80,26 @@ const serializers = {
         style: 'color: white;'
       })
     },
+    leadSentence: ({ node: { leadSentence } }) => (
+      h('h2', {
+        innerHTML: leadSentence,
+        style: 'font-size: 30px'
+      })
+    ),
+    supportingSentence: ({ node: { supportingSentence } }) => (
+      h('h4', {
+        innerHTML: supportingSentence,
+        style: 'color:black'
+      })
+    ),
+    styledHeading: ({ node: { styledHeading } }) => (
+      h('h2', {
+        innerHTML: styledHeading,
+        style: 'font-size: 30px'
+      })
+    ),
+
+
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
       'data-modal': "book-a-call",
