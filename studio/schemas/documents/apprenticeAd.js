@@ -91,6 +91,11 @@ export default
         type: 'string'
       },
       {
+        name: 'requiredQualifications',
+        title: 'Required Qualifications',
+        type: 'string'
+      },
+      {
         name: 'trainingProvided',
         title: 'Training to be Provided',
         type: 'string'
@@ -101,19 +106,27 @@ export default
         type: 'string'
       },
       {
-        name: 'ApprenticeAdPortableText',
+        name: 'duties',
+        title: 'list of duties',
+        type: 'string'
+      },
+      {
+        name: 'futureProspects',
+        title: 'Future Prospects',
+        type: 'string'
+      },
+      {
+        name: 'thingsToConsider',
+        title: 'This to consider',
+        type: 'string'
+      },
+      {
+        name: 'blogPortableText',
         type: 'array',
         title: 'Benefits',
         description: 'for bullet point styling',
         of: [
           { type: 'block' },
-          { type: 'imageSection' },
-          { type: 'applyBtn' },
-          { type: 'callModal' },
-          { type: 'leadSentence' },
-          { type: 'supportingSentence' },
-          { type: 'styledHeading' }
-
         ]
       }
     ]

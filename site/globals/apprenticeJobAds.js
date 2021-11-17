@@ -1,5 +1,7 @@
 const sanityClient = require('@sanity/client')
 const imageUrlBuilder = require('@sanity/image-url')
+// const blocksToHtml = require('@sanity/block-content-to-html')
+// const h = blocksToHtml.h
 //block not required?
 
 const config = {
@@ -19,7 +21,7 @@ const config = {
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
 const query = ` *[ _type == "ApprenticeJobAds"]{
   ...,
-  ApprenticeAdPortableText,
+  blogPortableText,
 "employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {
@@ -39,6 +41,11 @@ module.exports = async function () {
 
 // prepPost function is passed as an argument into preppedData 
 function prepPost(data) {
+
+  // data.body = blocksToHtml({
+  //   blocks: data.blogPortableText,
+  //   serializers: serializers
+  // })
   // data.employerLogo = urlFor(data.employerLogo)
   // console.log(data.employerLogo)
   return data
@@ -48,6 +55,38 @@ function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));
   return imageBuilder.image(source);
 }
+
+// This is a way of converting our custom blocks from Portable Text to html
+// const serializers = {
+//   // Creates the code blocks how html and 11ty want them
+//   types: {
+//     code: node => (
+//       h('pre', { className: node.node.language },
+//         h('code', node.node.code)
+//       )
+//     ),
+//     imageSection: ({ node: { asset, width } }) => h("img", {
+//       src: urlFor(asset).url(),
+//     }),
+//     applyBtn: ({ node: { btnText, btnLink } }) => {
+//       const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
+//       return h("a", {
+//         href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
+//         className: 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white',
+//         innerHTML: btnText + rightArrow,
+//         style: 'color: white;'
+//       })
+//     },
+//     callModal: ({ node: { title } }) => h('a', {
+//       href: "#",
+//       'data-modal': "book-a-call",
+//       className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
+//       innerHTML: title,
+//       style: 'color: white;',
+//     })
+//     // code: props => '```' + props.node.language + '\n' + props.node.code + '\n```'
+//   }
+// }
 
 
 
