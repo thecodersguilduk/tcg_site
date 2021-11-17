@@ -446,7 +446,6 @@ var displayModal = function displayModal() {
 
     e.preventDefault();
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
-    
 
     if (!dataAttr) {
       return;
