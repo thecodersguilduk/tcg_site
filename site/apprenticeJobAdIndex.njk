@@ -33,18 +33,59 @@ slug: {{job.jobTitle}}
       
             <p class="font-bold text-xs lg:text-md">Location</p>
             <div>
-              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+              <input type="checkbox" class="location" name="location" value="Greater London"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs lg:text-md"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-xs lg:text-md">Greater London</label>
             </div>
+            <div>
+              <input type="checkbox" class="location" name="location" value="South East England"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">South East England</label>
+            </div>
+             <div>
+              <input type="checkbox" class="location" name="location" value="South West England"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">South West England</label>
+            </div>
+              <div>
+              <input type="checkbox" class="location" name="location" value="West Midlands"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">West Midlands</label>
+            </div>
+             <div>
+              <input type="checkbox" class="location" name="location" value="East Midland"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">East Midlands</label>
+            </div>
+              <div>
+              <input type="checkbox" class="location" name="location" value="North West England"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">North West England</label>
+            </div>
+               <div>
+              <input type="checkbox" class="location" name="location" value="West East England"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">North East England</label>
+            </div>
+            <div>
+              <input type="checkbox" class="location" name="location" value="East of England"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">East of England</label>
+            </div>
+            <div>
+              <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
+                class="transform scale-150">
+              <label for="location" class="ml-1 text-xs lg:text-md">Yorkshire and the Humber</label>
+            </div>
+      
         </div>
 
       </div> 
 
       <div class="flex-row w-full h-full">
       {% for job in apprenticeJobAds %}
-      {# {% if (job.location === 'Leeds')%} #}
-        <div class="flex align-middle {{job.location}}">\\for each job job.location loop over jobloaction array retun each location
+    
+        <div class="flex align-middle {{job.location}}">
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
             <div class="w-full h-auto rounded-t-lg lg:flex lg:flex-row">
               <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg overflow-hidden">
@@ -87,9 +128,6 @@ slug: {{job.jobTitle}}
           <div>
           </div>
         </div>
-        {# {% else %}
-        <div class="hidden"></div>
-        {% endif %} #}
         {% endfor %}
         </div>
       </div>

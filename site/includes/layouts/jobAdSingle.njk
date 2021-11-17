@@ -32,7 +32,7 @@ title: {{job.jobTitle}}
 <p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate}}</p>
 </div>
 <div class="mx-16">
-<p class="font-bold text-sm">Disability Confident Employer:</p><p>{{job.disabilityConfident}}</p>
+<p class="font-bold text-sm">Disability Confident Employer: {{job.disabilityConfident}}</p>
 </div>
 
 <div class="mx-16 flex flex-row">
@@ -79,14 +79,14 @@ title: {{job.jobTitle}}
 <p class="text-sm">
 {{job.duties}}</p>
 </div>
-{% if job.body%}
+
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">Benefits:</p>
 <p class="text-sm">
 {{job.body}}
 </p>
 </div>
-{%endif%}
+
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">We will support you as an apprentice</p>
 <p class="text-sm">
