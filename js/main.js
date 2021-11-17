@@ -446,13 +446,14 @@ var displayModal = function displayModal() {
 
     e.preventDefault();
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
+    console.log(dataAttr);
 
     if (!dataAttr) {
       return;
     }
 
     modal = document.querySelector("#".concat(dataAttr));
-
+    console.log(modal);
     if (!modal) {
       return;
     }

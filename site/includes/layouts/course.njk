@@ -35,24 +35,7 @@ meta_description: {{ excerpt }}
 
             </div>
 
-            {% include '../components/global/apply-cta.njk' %}
-
-            {% if tags %}
-            <div class="mt-10 md:px-20 max-w-3xl mx-auto inner">
-                <div class="border-t border-grey-300 pt-8">
-                  <div>
-                    <ul class="flex not-on-print">
-                      {% for item in tags %}
-                        {%- if item != "blog" -%}
-                          <li class="mr-2">
-                              <a class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm" href="/category/{{ item }}">{{ item | capitalize }}</a>
-                          </li>
-                        {%- endif -%}
-                      {% endfor %}
-                    </ul>
-                  </div>
-
-                {% endif %}
+            {% include '../components/course-directory/apply-cta.njk' %}
             </div>
 
         </article>

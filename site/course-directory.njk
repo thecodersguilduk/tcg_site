@@ -29,7 +29,7 @@ title: 'Course Directory'
                            {% endfor %}
                         </select>
                      </div>
-                     <div class="my-4">
+                     {# <div class="my-4">
                         <p class="heading">Location</p>
                         <select class="w-full">
                            <option>Remote</option>
@@ -75,7 +75,7 @@ title: 'Course Directory'
                               <input type="checkbox" value="Other" />
                               <label>Other</label>
                            </div>
-                     </div>
+                     </div> #}
                   </form>
                </div>
             </div>
@@ -98,9 +98,9 @@ title: 'Course Directory'
                            </div>
                            
                            <p class="text-xl font-semibold text-blue-200">
-                              <a href="{{item.slug.current}}">
+                              <a href="{{item.slug.current}}"> 
                                  {{item.title}}
-                              </a>
+                              </a> 
                            </p>
                            
                         </div>
