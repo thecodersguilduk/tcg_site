@@ -4,8 +4,6 @@ title: Apprentice Job Ad Index
 slug: {{job.jobTitle}}
 ---
 
-
-
 {# banner #}
 <div class="bg-grey-100 h-full w-full">
   <div class="hero relative bg-grey-100 w-full mx-auto">
@@ -56,7 +54,7 @@ slug: {{job.jobTitle}}
       <div class="flex-row w-full h-full">
       {% for job in apprenticeJobAds %}
         <div class="flex align-middle">
-          <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
+          <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white" id="job-card">
             <div class="w-full h-auto rounded-t-lg flex flex-row">
               <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg">
                 <img class="flex h-full w-full" src="{{job.employerLogo}}">
@@ -112,40 +110,41 @@ slug: {{job.jobTitle}}
 
 <script>
 
-let jobAd = [{% for jobAd in apprenticeJobAds %}
+{# let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
     title: '{{ jobAd.jobTitle }}',
     location: '{{jobAd.location}}',
     employer: '{{jobAd.employerName}}',
     standard: '{{jobAd.standard}}'
   },
-{% endfor %}];
+{% endfor %}]; #}
 
-const searchBar = document.querySelector('#search')
+{# const searchBar = document.querySelector('#search')
 const searchBtn = document.querySelector('#searchBtnJobIndex')
 const standardCheckbox = document.querySelectorAll('.apprentince-standard')
-const disabiltyCheckbox = document.querySelectorAll('.disability-confident-employer')
+const disabiltyCheckbox = document.querySelectorAll('.disability-confident-employer') #}
 const locationCheckbox = document.querySelectorAll('.location')
-const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
+const jobCard = document.getElementById('job-card')
+{# const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
 const resetIcon = document.querySelector('.resetIcon')
-const numberOfJobs = document.querySelector('.showing')
+const numberOfJobs = document.querySelector('.showing') #}
 
 
-let searchString = ''
+{# let searchString = ''
 let filteredAds = []
 let filteredbyCheckbox = []
-console.log(jobAd)
+console.log(jobAd) #}
 
 
 //function to filter jobs based on input search string, which is called onlick of search button.
 
-function filteredJobs() {
+{# function filteredJobs() {
   const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString) || job.standard.includes(searchString))
   filteredAds.push(filtered)
   console.log(filtered)
-}
+} #}
 
-function filterByCheck() {
+{# function filterByCheck() {
   standardCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedStandardValue = e.target.value
 console.log('selectedStandardValue:', selectedStandardValue)
@@ -154,55 +153,57 @@ console.log(jobAd)
 filteredbyCheckbox.push(selectedStandardValue)
 console.log(filteredbyCheckbox)
 }))
-}
+} #}
 
-filterByCheck()
+{# filterByCheck() #}
 
 
 // use the user input to update the searchString variable
-searchBar.addEventListener('keyup', e => {
+{# searchBar.addEventListener('keyup', e => {
 searchString = e.target.value
 return searchString
-})
+}) #}
 
 
 // call filteredJobs function on click of the search button. 
-searchBtn.addEventListener('click', e => {
+{# searchBtn.addEventListener('click', e => {
   filteredJobs()
 console.log('searchString:', searchString)
-})
+}) #}
 
-standardCheckbox.forEach(box => box.addEventListener('click', e => {
+{# standardCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedStandardValue = e.target.value
 console.log('selectedStandardValue:', selectedStandardValue)
-}))
+})) #}
 
-disabiltyCheckbox.forEach(box => box.addEventListener('click', e => {
+{# disabiltyCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedDisabilityValue = e.target.value
   console.log(selectedDisabilityValue)
-}))
+})) #}
 
-locationCheckbox.forEach(box => box.addEventListener('click', e => {
+locationCheckbox.forEach(box => box.addEventListener('click', e => { 
   let selectedLocation = e.target.value
+  jobCard.removeAttr('class')
+  jobCard.classList.add('hide')
   console.log(selectedLocation)
 }))
 
-employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
+{# employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedEmploymentType = e.target.value
   console.log(selectedEmploymentType)
-}))
+})) #}
 
-resetIcon.addEventListener('click', e => {
+{# resetIcon.addEventListener('click', e => {
   reset()
 console.log('clicked')
-  })
+  }) #}
 
-let mappedArray = jobAd.map(job => (
+{# let mappedArray = jobAd.map(job => (
   console.log(job.title)
-))
+)) #}
 
 
-function displayNumCourses(){
+{# function displayNumCourses(){
 let numCourses = Array.from(jobAd)
 numberOfJobs.innerHTML = `showing: ${numCourses.length}`
 console.log('numCourses:', numCourses.length)
@@ -213,8 +214,8 @@ displayNumCourses()
 function reset(){
   let filteredAds = jobAd
 
-  console.log(filteredAds)
+  console.log(filteredAds) #}
 
-}
+{# } #}
 
 </script>
