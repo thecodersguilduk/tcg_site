@@ -38,7 +38,7 @@ function prepPost(data) {
     serializers: serializers
   })
   data.courseType = data.courseType[0].courseType;
-  // console.log(data.title);
+  // console.log(data.body);
 
   return data
 }

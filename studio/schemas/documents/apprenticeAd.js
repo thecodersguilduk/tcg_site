@@ -38,19 +38,35 @@ export default
       {
         name: 'location',
         title: 'Location',
-        type: 'string'
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'location'
+            }
+          }
+        ],
       },
       {
         name: 'closingDate',
         title: 'Closing Date',
-        type: 'string',
-        description: 'eg 01/01/2021'
+        type: 'date'
       },
       {
         name: 'contract',
         title: 'Contract',
-        type: 'string',
-        description: 'eg full-time, part-time'
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'contractType'
+            }
+          }
+        ],
       },
       {
         name: 'jobDescription',

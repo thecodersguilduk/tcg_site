@@ -117,7 +117,10 @@ slug: {{job.jobTitle}}
               <p class="overflow-clip text-xs lg:text-md">{{job.excerpt}} </p>
               <div class="mb-4 mt-2 flex flex-row">
                 <div class="flex h-full">
+             
                   <button id="ApplyBtn" class="bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
+               
+
                    <a href="/jobAdSingle/{{ job.slug.current }}/index.html" class="no-underline">
                   <button id="FindOutMoreBtn" class="bg-white  text-blue-200 border-solid border-2 border-blue-200 rounded-lg p-2 justify-center align-items-center">Find out more</button>
                   </a>
@@ -142,13 +145,13 @@ slug: {{job.jobTitle}}
 
 <script>
 
-const locationCheckbox = document.querySelectorAll('.location')
+{# const locationCheckbox = document.querySelectorAll('.location')
 
 locationCheckbox.forEach(box => box.addEventListener('click', e => { 
   let selectedLocation = e.target.value
   return(selectedLocation)
 
-}))
+})) #}
 
 {# let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
@@ -209,10 +212,10 @@ console.log('selectedStandardValue:', selectedStandardValue)
   console.log(selectedDisabilityValue)
 })) #}
 
-locationCheckbox.forEach(box => box.addEventListener('click', e => { 
+{# locationCheckbox.forEach(box => box.addEventListener('click', e => { 
   let selectedLocation = e.target.value
   console.log(selectedLocation)
-}))
+})) #}
 
 {# employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
   let selectedEmploymentType = e.target.value

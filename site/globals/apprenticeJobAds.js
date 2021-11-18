@@ -1,8 +1,7 @@
-const sanityClient = require('@sanity/client')
-const imageUrlBuilder = require('@sanity/image-url')
-
 const blocksToHtml = require('@sanity/block-content-to-html')
 const h = blocksToHtml.h
+const imageUrlBuilder = require('@sanity/image-url')
+const sanityClient = require('@sanity/client')
 
 //block not required?
 
@@ -23,7 +22,6 @@ const config = {
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
 const query = ` *[ _type == "ApprenticeJobAds"]{
   ...,
-
 "employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {
@@ -34,6 +32,7 @@ module.exports = async function () {
   // console.log(data)
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
+
   // returns this to the 11ty data cascade
   return preppedData
 }
@@ -41,14 +40,16 @@ module.exports = async function () {
 // data is passed as an argument into preppedData function
 function prepPost(data) {
 
-  // data.body = blocksToHtml({
-  //   blocks: data.blogPortableText,
-  //   serializers: serializers
-  // })
-  // data.employerLogo = urlFor(data.employerLogo)
+  data.body = blocksToHtml({
+    blocks: data.blogPortableText,
+    serializers: serializers
+  })
+  data.employerLogo = urlFor(data.employerLogo)
   console.log(data.body)
+
   return data
 }
+
 //urlFor is a function used to create a url from sanity.
 function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));
