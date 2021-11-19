@@ -85,7 +85,7 @@ title: 'Course Directory'
                </div>
             {% for item in courses %}
                {% if item.isActive and item.courseType !== 'Apprenticeships' %}
-                  <div class="course-item flex rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
+                  <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
                      <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="{{item.featuredImage}}" alt="">
                      </div>
