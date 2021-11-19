@@ -110,6 +110,7 @@ module.exports = eleventyConfig => {
       blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
       return blog
     })
+    return blogsWithUpdatedDates
   })
 
     eleventyConfig.addCollection('courses', collection => {
@@ -125,6 +126,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addLayoutAlias('course', 'layouts/course.njk')
     eleventyConfig.addLayoutAlias('candidate', 'layouts/candidate.njk')
     eleventyConfig.addLayoutAlias('employer', 'layouts/employer.njk')
+    eleventyConfig.addLayoutAlias('jobAdSingle', 'layouts/jobAdSingle.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy("css")
