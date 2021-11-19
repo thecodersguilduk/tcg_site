@@ -17,7 +17,9 @@ title: {{job.jobTitle}}
 <h6 class="mb-0">{{job.employerName}}</h6>
 
 <div class="flex">
-<img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg"><p class="text-sm ml-2">{{job.location}}</p>
+<img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg">
+{% for location in job.location%}<p class="text-sm ml-2">{{location.location}}</p>
+{% endfor %}
 </div>
 </div>
 
@@ -26,7 +28,9 @@ title: {{job.jobTitle}}
 <p class="font-bold text-sm mr-14">{{job.salary}}</p>
 
 <img class="flex mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
-<p class="font-bold text-sm mr-14">{{job.contract}}</p>
+ {% for contract in job.contract%}
+ <p class="font-bold text-sm mr-14">{{contract.contractType}}</p>
+ {% endfor %}
 
 <img class="flex mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
 <p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate}}</p>

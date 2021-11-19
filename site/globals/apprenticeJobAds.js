@@ -22,6 +22,10 @@ const config = {
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
 const query = ` *[ _type == "ApprenticeJobAds"]{
   ...,
+  contract[]->{contractType},
+  location[]->{location},
+  blogPortableText,
+
 "employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {
@@ -45,7 +49,7 @@ function prepPost(data) {
     serializers: serializers
   })
   data.employerLogo = urlFor(data.employerLogo)
-  console.log(data.body)
+  // console.log(data.body)
   console.log(data.contract)
 
   return data
