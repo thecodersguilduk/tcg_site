@@ -1,0 +1,17 @@
+---js
+{
+pagination: {
+    data: 'courses',
+    size: 1,
+    alias: 'course'
+    },
+layout: 'candidate',
+tag: ['course'],
+permalink: "/course-directory/{{ course.slug.current }}/candidate/index.html",
+eleventyComputed: {
+    meta_title: data => data.course.title,
+    excerpt: data => data.course.excerpt,
+    featured_image: data => data.course.featuredImage
+    }
+}
+---

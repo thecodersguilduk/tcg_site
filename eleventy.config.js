@@ -1,6 +1,60 @@
 const htmlmin = require("html-minifier")
 
 module.exports = eleventyConfig => {
+    
+    // Add a readable date formatter filter to Nunjucks
+    eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
+
+    // Add a HTML timestamp formatter filter to Nunjucks
+    eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
+
+    //add function to split an array into joined strings
+    // eleventyConfig.addFilter('explode', function(arr){
+    //     function join(string){
+    //         return string.replace(/\s+/g, '-').toLowerCase();
+    //     }
+
+    //     return join(arr.values().value);
+    // })
+
+    //add capitalize functtion to nunjucks
+    eleventyConfig.addFilter('capitalize', function(string) {
+        const wordsArray = string.split(" ");
+
+        for (let i = 0; i < wordsArray.length; i++) {
+            wordsArray[i] = wordsArray[i][0].toUpperCase() + wordsArray[i].substr(1);
+        }
+
+        return wordsArray.join(" ");
+      });
+
+    eleventyConfig.addFilter('join', function(string) {
+        return string.replace(/\s+/g, '-').toLowerCase();
+      });
+
+    // Add a limit filter for collections to Nunjucks 
+    eleventyConfig.addFilter('limit', function(array, limit) {
+      return array.slice(0, limit);
+    });
+    
+    // Skips first post with limit
+    eleventyConfig.addFilter('skipFirst', function(array, limit) {
+        return array.slice(1, limit);
+    });
+
+    // Minify our HTML
+    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+        if ( outputPath.endsWith(".html") )
+        {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            })
+            return minified
+        }
+        return content
+    })
 
   // Add a readable date formatter filter to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
@@ -56,40 +110,45 @@ module.exports = eleventyConfig => {
       blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
       return blog
     })
-    // Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
-    blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
-    // Make sortedPosts the array for the collection
-
-    return blogs;
+    return blogsWithUpdatedDates
   })
 
-  // Layout aliases
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
-  eleventyConfig.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
-  eleventyConfig.addLayoutAlias('jobAdSingle', 'layouts/jobAdSingle.njk')
+    eleventyConfig.addCollection('courses', collection => {
+        let courses = collection.getFilteredByTag('course');
 
+        return courses
+    })
 
-  // Include our static assets
-  eleventyConfig.addPassthroughCopy("css")
-  eleventyConfig.addPassthroughCopy("js")
-  eleventyConfig.addPassthroughCopy("images")
-  eleventyConfig.addPassthroughCopy("pdf")
-  eleventyConfig.addPassthroughCopy("admin")
-  eleventyConfig.addPassthroughCopy("robots.txt")
+    // Layout aliases
+    eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
+    eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+    eleventyConfig.addLayoutAlias('thank-you', 'layouts/thank-you.njk')
+    eleventyConfig.addLayoutAlias('course', 'layouts/course.njk')
+    eleventyConfig.addLayoutAlias('candidate', 'layouts/candidate.njk')
+    eleventyConfig.addLayoutAlias('employer', 'layouts/employer.njk')
+    eleventyConfig.addLayoutAlias('jobAdSingle', 'layouts/jobAdSingle.njk')
 
-  return {
-    templateFormats: ["md", "njk"],
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
-    passthroughFileCopy: true,
+    // Include our static assets
+    eleventyConfig.addPassthroughCopy("css")
+    eleventyConfig.addPassthroughCopy("js")
+    eleventyConfig.addPassthroughCopy("images")
+    eleventyConfig.addPassthroughCopy("pdf")
+    eleventyConfig.addPassthroughCopy("admin")
+    eleventyConfig.addPassthroughCopy("robots.txt")
+    eleventyConfig.addPassthroughCopy("_redirects")
 
-    dir: {
-      input: 'site',
-      output: 'dist',
-      includes: 'includes',
-      data: 'globals'
+    return {
+        templateFormats: ["md", "njk"],
+        markdownTemplateEngine: 'njk',
+        htmlTemplateEngine: 'njk',
+        passthroughFileCopy: true,
+
+        dir: {
+            input: 'site',
+            output: 'dist',
+            includes: 'includes',
+            data: 'globals'
+        }
     }
   }
 
-}

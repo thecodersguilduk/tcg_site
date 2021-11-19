@@ -13,7 +13,10 @@ const config = {
 }
 const query = `*[_type == "course"] {
     ...,
-    courseType[]->{courseType}
+    courseType[]->{courseType},
+    "featuredImage": featuredImage.asset->url,
+    courseTopics[]->{name},
+    duration[]->{name}
 
 }`
 
@@ -32,14 +35,15 @@ module.exports = async function () {
 
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
-
-  // Converts Portable Text to HTML
-  data.body = blocksToHtml({
-    blocks: data.coursePortableText,
-    serializers: serializers
-  })
-  data.courseType = data.courseType[0].courseType;
-   return data
+    
+    // Converts Portable Text to HTML
+    data.body = blocksToHtml({
+        blocks: data.coursePortableText,
+        serializers: serializers
+    })
+    data.courseType = data.courseType[0].courseType
+    data.featuredImage = data.featuredImage? data.featuredImage : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+    return data
 }
 
 function urlFor(source) {

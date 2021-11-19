@@ -4,11 +4,13 @@ import blog from './documents/blog'
 import team from './documents/team'
 import testimonial from './documents/testimonials'
 import categories from './documents/categories'
+import courses from './documents/courseSchemas/course'
+import courseTypes from './documents/courseSchemas/courseTypes'
+import courseDurations from './documents/courseSchemas/courseDuration'
+import courseTopics from './documents/courseSchemas/courseTopics'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
-import courses from './documents/course'
-import courseTypes from './documents/courseTypes'
 import apprenticeAd from './documents/apprenticeAd'
 import leadSentence from './documents/components/leadSentence'
 import styledHeading from './documents/components/styledHeading'
@@ -30,11 +32,13 @@ export default createSchema({
     team,
     testimonial,
     categories,
+    courses,
+    courseTypes,
+    courseDurations,
+    courseTopics,
     imageSection,
     applyBtn,
     callModal,
-    courses,
-    courseTypes,
     apprenticeAd,
     styledHeading,
     leadSentence,
