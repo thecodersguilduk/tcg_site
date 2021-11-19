@@ -109,8 +109,12 @@ module.exports = eleventyConfig => {
       // Else return the original date (takes care of the Markdown)
       blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
       return blog
-    })
-    return blogsWithUpdatedDates
+      })
+      // Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
+      blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
+      // Make sortedPosts the array for the collection
+
+      return blogs;
   })
 
     eleventyConfig.addCollection('courses', collection => {
