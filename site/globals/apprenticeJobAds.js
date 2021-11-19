@@ -46,6 +46,7 @@ function prepPost(data) {
   })
   data.employerLogo = urlFor(data.employerLogo)
   console.log(data.body)
+  console.log(data.contract)
 
   return data
 }
@@ -94,8 +95,6 @@ const serializers = {
         style: 'font-size: 30px'
       })
     ),
-
-
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
       'data-modal': "book-a-call",
