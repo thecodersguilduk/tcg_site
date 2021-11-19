@@ -2,6 +2,8 @@ const htmlmin = require("html-minifier")
 
 module.exports = eleventyConfig => {
 
+  eleventyConfig.addFilter('join', function (string) { return string.replace(/\s+/g, '-').toLowerCase(); });
+
   // Add a readable date formatter filter to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 
