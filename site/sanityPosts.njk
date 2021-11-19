@@ -1,11 +1,15 @@
 ---js
 
 {
-pagination:
-{ data: 'posts', size: 1, alias: 'post', addAllPagesToCollections: true },
-layout: 'post',
-eleventyComputed: {
-tags: data => {
+pagination: { 
+  data: 'posts', 
+  size: 1, 
+  alias: 'post', 
+  addAllPagesToCollections: true 
+  },
+  layout: 'post',
+  eleventyComputed: {
+  tags: data => {
     const arr = ['blog'];
     const categories = data.post.categories;
 

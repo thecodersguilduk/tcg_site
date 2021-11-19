@@ -1,22 +1,128 @@
-
 //==========  Imports  ==========//
 
 // Import Tailwind preflight
 @tailwind base;
 
-
 // Import our custom base styles
-@import 'base/all';
-
+@import "base/all";
 
 // Import Tailwind components
 @tailwind components;
 
-
 // Import our custom component styles
-@import 'components/all';
-
+@import "components/all";
 
 // Import Tailwind utilities
 // TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
 @tailwind utilities;
+
+//CSS Rules for blog ul and ol li styling
+.content {
+  ul {
+    li {
+      list-style: none;
+      font-weight: bold;
+      font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+      line-height: 26px;
+      margin-bottom: 1rem;
+    }
+
+    li::before {
+      content: url("/images/Chevron-Left-list.svg");
+      margin-right: 1rem;
+    }
+  }
+
+  ol {
+    li {
+      z-index: 1;
+      font-weight: bold;
+      font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+      line-height: 26px;
+      margin-bottom: 1rem;
+    }
+
+    li::marker {
+      font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+      font-size: 32px;
+      margin-top: 40px;
+      // margin-bottom: 1rem;
+      color: #2574a9;
+      line-height: 26px;
+      font-weight: bold;
+    }
+
+    li::before {
+      content: "";
+      background-image: url("/images/patterns/Numbered_List_Pattern.svg");
+      width: 100%;
+      height: 43px;
+      position: absolute;
+      z-index: -1;
+      display: block;
+      background-size: auto;
+      margin-left: -40px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+//CSS for application progress bar option 1
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.progress-container {
+  background-color: rgba(150, 150, 150, 0.6);
+  height: 10px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #2196f3;
+  height: 10px;
+  width: 0%;
+}
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+/// CSS for conditional 'other field' in apprentice application form.
+
+.other {
+  display: none;
+}
+
+///Apprentice Job Index
+
+#searchBtnJobIndex {
+  background-color: #86ba90;
+  @apply font-heading;
+  color: #fff;
+}
+
+#apprentice-index-main {
+  background-color: #f2f2f2;
+}
+
+.pdf-image {
+  a {
+    text-decoration: none;
+  }
+}

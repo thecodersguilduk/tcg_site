@@ -35,27 +35,3 @@ function urlFor(source) {
     return imageBuilder.image(source);
   }
 
-
-
-
-// [
-//     {
-//       "author" : "Mark Hope",
-//       "img_url": "../images/testimonials/mark.jpg",
-//       "occupation": "Digital Director at Access",
-//       "text": "The scheme is one of the very best. The assessment process, pre-start bootcamp and knowledgeable trainers mean we get engaged, motivated apprentices contributing to our business from day one."
-//     },
-//     {
-//       "author" : "Jon Stutfield",
-//       "img_url": "../images/testimonials/jon.jpg",
-//       "occupation": "CEO at Bliss",
-//       "text": "Taking on an apprentice has been a fantastic experience. We have an excellent new team member, and have been really well supported all the way."
-//     },
-//     {
-//       "author" : "Ben Colchester",
-//       "img_url": "../images/testimonials/ben.jpg",
-//       "occupation": "Managing Director at Bonsai Tiger",
-//       "text": "Made the process of taking on an apprentice a joy. We were very impressed by the pre-apprentice training they provided and the calibre of the candidates themselves. We would not hesitate to recommend them."
-//     }
-  
-//   ]

@@ -56,34 +56,61 @@ module.exports = eleventyConfig => {
         return content
     })
 
-    // Collections
-    eleventyConfig.addCollection('blog', collection => {
+  // Add a readable date formatter filter to Nunjucks
+  eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 
-        let blogs = collection.getFilteredByTag('blog')
+  // Add a HTML timestamp formatter filter to Nunjucks
+  eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
-        for( let i = 0; i < blogs.length; i++ ) {
+  // Add a limit filter for collections to Nunjucks 
+  eleventyConfig.addFilter('limit', function (array, limit) {
+    return array.slice(0, limit);
+  });
 
-            const prevPost = blogs[i - 1]
-            const nextPost = blogs[i + 1]
+  // Skips first post with limit
+  eleventyConfig.addFilter('skipFirst', function (array, limit) {
+    return array.slice(1, limit);
+  });
 
-            blogs[i].data["prevPost"] = prevPost
-            blogs[i].data["nextPost"] = nextPost
+  eleventyConfig.addFilter('log', function (value) {
+    return console.log(value)
+  })
+  // Minify our HTML
+  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+    if (outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+      return minified
+    }
+    return content
+  })
 
-        }
+  // Collections
+  eleventyConfig.addCollection('blog', collection => {
 
-        const blogsWithUpdatedDates = blogs.map(blog => {
-            // If the item has a data.post object (from external Data)
-            // Then set a new date based on the date property
-            // Else return the original date (takes care of the Markdown)
-            blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
-            return blog
-        })
-        // Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
-        blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
-        // Make sortedPosts the array for the collection
+    let blogs = collection.getFilteredByTag('blog')
 
-        return blogs;
+    for (let i = 0; i < blogs.length; i++) {
+
+      const prevPost = blogs[i - 1]
+      const nextPost = blogs[i + 1]
+
+      blogs[i].data["prevPost"] = prevPost
+      blogs[i].data["nextPost"] = nextPost
+
+    }
+
+    const blogsWithUpdatedDates = blogs.map(blog => {
+      // If the item has a data.post object (from external Data)
+      // Then set a new date based on the date property
+      // Else return the original date (takes care of the Markdown)
+      blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
+      return blog
     })
+  })
 
     eleventyConfig.addCollection('courses', collection => {
         let courses = collection.getFilteredByTag('course');
@@ -121,5 +148,5 @@ module.exports = eleventyConfig => {
             data: 'globals'
         }
     }
+  }
 
-}
