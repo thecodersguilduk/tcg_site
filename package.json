@@ -12,7 +12,7 @@
   },
   "engines": {
     "node": ">=12.13.0 <15"
-  }
+  },
   "author": "Joseph Dyer",
   "license": "MIT",
   "devDependencies": {
