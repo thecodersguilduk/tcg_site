@@ -7,6 +7,11 @@ export default {
     ],
   fields: [
     {
+      name: 'isGMCA',
+      type: 'boolean',
+      title: 'Is GMCA?',
+    },
+    {
       name: 'isActive',
       type: 'boolean',
       title: 'Active',
