@@ -20,7 +20,7 @@ const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     excerpt,
     time,
     authors[]->{name},
-    "avatar": authors[]->image.asset->url,
+    "avatar": authors[]->image.asset,
     categories[]->{name},
     blogPortableText,
 } | order(_createdAt desc)`
@@ -49,6 +49,8 @@ function prepPost(data) {
   // Adjusts where our date lives (for convenience)
   data.date = data.publishedAt.split('T')[0];
   // Returns back to our main function
+  // data.avatar = urlFor(data.avatar);
+  data.avatar = urlFor(data.avatar[0]).width(100).url();
   return data
 }
 
