@@ -145,6 +145,7 @@ slug: {{job.jobTitle}}
 
 const filterOptions = document.querySelector('.filterOptions')
 console.log(`filter Options = ${filterOptions}`)
+//filter options is the conatiner div for all the location check boxes
 
 const singleAd = Array.from(document.querySelectorAll('.singleAd'))
 console.log(`singleAd: ${singleAd}`) 
@@ -157,24 +158,37 @@ let locationArray = []
 function join(string){
     return string.replace(/\s+/g, '-').toLowerCase()
 }
+//a function to replace any white space with a '-' and then make lowercase.this is so when we add a class using the location any locations with more than one word is used as one class and not two. Eg. South West will be 'south-west' and not 'South' 'West'
 
 filterOptions.addEventListener('change', e => {
+  //filter options is the container div for all the checkboxes.the event listener listens for any change, check/uncheck
 let selectedLocation = join(e.target.value)
+//create a variable to pull the value of the selected check box which is passed into our join function
   if(e.target.checked) {
+    //the condition for if a check box is checked
   locationArray.push(selectedLocation)
+  //push the location to the location array declared above
   console.log(locationArray)
    } else if (!e.target.checked){
+     //condition for when the target is unchecked
     let index = locationArray.indexOf(selectedLocation)
+    // index variable gives us the index of the selected location in the array
     locationArray.splice(index, 1)
+    //which we then splice at the index, by one
     console.log(locationArray)
     } 
     singleAd.forEach(job => {
+      //loop over each job(singleAd which is a class added to the container div for one job)
       if(locationArray.some(item => Array.from(job.classList).includes(item))){
+        //some() is used to check if the class is included in the location array
+        // make an array from the jobs classes to be able to compare location array to job.classList
         job.classList.remove('hidden')
         job.classList.add('flex')
+        //show if there is a match in the two arrays
       }else{ 
          job.classList.add('hidden')
         job.classList.remove('flex')
+        //hide if not
       }
     })
 })

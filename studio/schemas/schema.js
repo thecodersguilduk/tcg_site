@@ -15,6 +15,7 @@ import styledHeading from './documents/components/styledHeading'
 import supportingSentence from './documents/components/supportingSentence'
 import location from './documents/location'
 import contractType from './documents/contractType'
+import apprenticeshipStandard from './documents/standard'
 
 
 // Then import schema types from any plugins that might expose them
@@ -42,7 +43,8 @@ export default createSchema({
     leadSentence,
     supportingSentence,
     location,
-    contractType
+    contractType,
+    apprenticeshipStandard
 
   ]),
 })

@@ -24,6 +24,7 @@ const query = ` *[ _type == "ApprenticeJobAds"]{
   ...,
   contract[]->{contractType},
   location[]->{location},
+  standard[]->{apprenticeshipStandard},
   blogPortableText,
 
 "employerLogo": employerLogo.asset->url
@@ -99,6 +100,8 @@ const serializers = {
         style: 'font-size: 30px'
       })
     ),
+
+
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
       'data-modal': "book-a-call",
@@ -109,7 +112,6 @@ const serializers = {
     // code: props => '```' + props.node.language + '\n' + props.node.code + '\n```'
   }
 }
-
 
 
 

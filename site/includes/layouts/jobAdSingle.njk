@@ -33,7 +33,7 @@ title: {{job.jobTitle}}
  {% endfor %}
 
 <img class="flex mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
-<p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate}}</p>
+<p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate | dateDisplay}}</p>
 </div>
 <div class="mx-16">
 <p class="font-bold text-sm">Disability Confident Employer: {{job.disabilityConfident}}</p>

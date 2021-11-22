@@ -87,9 +87,17 @@ export default
       },
       {
         name: 'standard',
-        title: 'Standard',
-        type: 'string',
-        description: 'eg. software developer level 4, data analyst level 4'
+        title: 'Apprenticeship Standard',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'standard'
+            }
+          }
+        ],
       },
       {
         name: 'salary',
@@ -151,6 +159,22 @@ export default
 
         ]
       }
+
+      // {
+      //   name: 'blogPortableText',
+      //   type: 'array',
+      //   title: 'Body',
+      //   of: [
+      //     { type: 'block' },
+      //     { type: 'imageSection' },
+      //     { type: 'applyBtn' },
+      //     { type: 'callModal' },
+      //     { type: 'leadSentence' },
+      //     { type: 'supportingSentence' },
+      //     { type: 'styledHeading' }
+
+      //   ]
+      // }
 
     ]
   }
