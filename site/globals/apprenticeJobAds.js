@@ -51,7 +51,7 @@ function prepPost(data) {
     serializers: serializers
   })
   data.employerLogo = urlFor(data.employerLogo)
-  console.log(data.apprenticeApplyUrl)
+  console.log(data)
 
 
   return data
