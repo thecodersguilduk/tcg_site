@@ -4,6 +4,10 @@ import blog from './documents/blog'
 import team from './documents/team'
 import testimonial from './documents/testimonials'
 import categories from './documents/categories'
+import courses from './documents/courseSchemas/course'
+import courseTypes from './documents/courseSchemas/courseTypes'
+import courseDurations from './documents/courseSchemas/courseDuration'
+import courseTopics from './documents/courseSchemas/courseTopics'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
@@ -32,10 +36,15 @@ export default createSchema({
     team,
     testimonial,
     categories,
+    courses,
+    courseTypes,
+    courseDurations,
+    courseTopics,
     imageSection,
     applyBtn,
     callModal,
     apprenticeAd,
+<<<<<<< HEAD
     leadSentence,
     styledHeading,
     supportingSentence,
@@ -43,5 +52,10 @@ export default createSchema({
     courseTypes
 
 
+=======
+    styledHeading,
+    leadSentence,
+    supportingSentence
+>>>>>>> aea9c3e42e02827f65d5fcdd2b639ca7b4dd1c3c
   ]),
 })

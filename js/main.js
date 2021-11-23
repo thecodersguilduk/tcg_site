@@ -9,14 +9,14 @@
 /******/ 		if (installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
       /******/
-}
+    }
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
       /******/
-};
+    };
 /******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -27,7 +27,7 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
     /******/
-}
+  }
 /******/
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -41,19 +41,19 @@
 /******/ 		if (!__webpack_require__.o(exports, name)) {
 /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
       /******/
-}
+    }
     /******/
-};
+  };
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function (exports) {
 /******/ 		if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
       /******/
-}
+    }
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
     /******/
-};
+  };
 /******/
 /******/ 	// create a fake namespace object
 /******/ 	// mode & 1: value is a module id, require it
@@ -70,7 +70,7 @@
 /******/ 		if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) { return value[key]; }.bind(null, key));
 /******/ 		return ns;
     /******/
-};
+  };
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function (module) {
@@ -80,7 +80,7 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
     /******/
-};
+  };
 /******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function (object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
@@ -127,7 +127,7 @@
 
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/faqs-accordion/index.js":
 /*!******************************************************!*\
@@ -165,7 +165,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (faqAccordion);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/form-validating/index.js":
 /*!*******************************************************!*\
@@ -285,7 +285,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (validateForm);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/header/index.js":
 /*!**********************************************!*\
@@ -307,7 +307,7 @@
       // export default headerScroll;
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/lazyload/index.js":
 /*!************************************************!*\
@@ -362,7 +362,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (Lazyload);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/load-posts/index.js":
 /*!**************************************************!*\
@@ -414,7 +414,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (loadMorePosts);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/mobile-nav/index.js":
 /*!**************************************************!*\
@@ -438,7 +438,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (mobileNav);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/modals/index.js":
 /*!**********************************************!*\
@@ -481,7 +481,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (displayModal);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/show-hide/index.js":
 /*!*************************************************!*\
@@ -541,7 +541,7 @@
 /* harmony default export */ __webpack_exports__["default"] = (ShowHide);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/modules/slider/index.js":
 /*!**********************************************!*\
@@ -565,7 +565,7 @@
       });
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/utilities/helpers/index.js":
 /*!*************************************************!*\
@@ -609,7 +609,7 @@
 
 
       /***/
-}),
+    }),
 
 /***/ "./resources/js/utilities/selectors/index.js":
 /*!***************************************************!*\
@@ -655,7 +655,7 @@
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
       /***/
-}),
+    }),
 
 /***/ "./resources/sass/main.scss":
 /*!**********************************!*\
@@ -667,7 +667,7 @@
       // removed by extract-text-webpack-plugin
 
       /***/
-}),
+    }),
 
 /***/ 0:
 /*!***************************************************************!*\
@@ -676,11 +676,12 @@
 /*! no static exports found */
 /***/ (function (module, exports, __webpack_require__) {
 
-      __webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
-      module.exports = __webpack_require__(/*! /Users/jodiemarks/Desktop/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+      __webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/js/main.js */"./resources/js/main.js");
+      module.exports = __webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+
 
       /***/
-})
+    })
 
   /******/
 });

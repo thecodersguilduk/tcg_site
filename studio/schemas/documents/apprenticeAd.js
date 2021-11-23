@@ -15,6 +15,12 @@ export default
         type: 'string'
       },
       {
+        name: 'disabilityConfident',
+        title: 'Disabily Confident',
+        type: 'string',
+        description: 'eg. Yes'
+      },
+      {
         name: 'jobTitle',
         title: 'Job Title',
         type: 'string'
@@ -35,8 +41,25 @@ export default
         type: 'string'
       },
       {
+        name: 'closingDate',
+        title: 'Closing Date',
+        type: 'string',
+        description: 'eg 01/01/2021'
+      },
+      {
+        name: 'contract',
+        title: 'Contract',
+        type: 'string',
+        description: 'eg full-time, part-time'
+      },
+      {
         name: 'jobDescription',
         title: 'Job Description',
+        type: 'string'
+      },
+      {
+        name: 'briefOverview',
+        title: 'Brief overview of the role',
         type: 'string'
       },
       {
@@ -47,9 +70,10 @@ export default
           'This ends up on summary pages, on Google, when people share your post in social media.'
       },
       {
-        name: 'qualification',
-        title: 'Qualification',
-        type: 'string'
+        name: 'standard',
+        title: 'Standard',
+        type: 'string',
+        description: 'eg. software developer level 4, data analyst level 4'
       },
       {
         name: 'salary',

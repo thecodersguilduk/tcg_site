@@ -10,9 +10,8 @@ const config = {
     token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
     useCdn: false // `false` if you want to ensure fresh data
 }
-const query = `*[_type == "course"] {
-    courseTypes[]->{courseType}
-
+const query = `*[_type == "courseTypes"] {
+    courseType
 }`
 
 module.exports = async function() {
@@ -36,17 +35,7 @@ function prepPost(data) {
     //     blocks: data.coursePortableText,
     //     serializers: serializers
     // })
+
     // console.log(data);
     return data
-}
-
-function urlFor(source) {
-    const imageBuilder = imageUrlBuilder(sanityClient(config));
-    return imageBuilder.image(source);
-  }
-
-// This is a way of converting our custom blocks from Portable Text to html
-const serializers = {
-    // Creates the code blocks how html and 11ty want them
-
 }
