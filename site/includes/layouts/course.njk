@@ -54,7 +54,9 @@ meta_description: {{ excerpt }}
                     </div>
                   </div>
               </div>
+              {% if course.isGMCA %}
               {% include '../components/course-directory/main-cta.njk' %}
+              {% endif %}
               {% include '../components/course-directory/apply-cta.njk' %}
 
         </article>
