@@ -25,6 +25,7 @@ const query = ` *[ _type == "ApprenticeJobAds"]{
   contract[]->{contractType},
   location[]->{location},
   standard[]->{apprenticeshipStandard},
+  apprenticeApplyUrl[]->{apprenticeApplyUrl},
   blogPortableText,
 
 "employerLogo": employerLogo.asset->url
@@ -50,8 +51,8 @@ function prepPost(data) {
     serializers: serializers
   })
   data.employerLogo = urlFor(data.employerLogo)
-  // console.log(data.body)
-  console.log(data.contract)
+  console.log(data.apprenticeApplyUrl)
+
 
   return data
 }

@@ -42,19 +42,38 @@ title: {{job.jobTitle}}
 <div class="mx-16 flex flex-row">
 <p class="font-bold text-sm text-blue-600">Company Socials:<p>
 <div class="flex flex-row ml-4">
+
+<a href="{{job.linkedIn}}" alt="linkedIn Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
 <img class="flex" src="../../images/apprenticeJobAd/LINKEDIN ICON.svg">
+</a>
+<a href="{{job.twitter}}" alt="Twitter Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/TWITTER ICON.svg">
+</a>
+<a href="{{job.instagram}}" alt="Instagram Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/INSTAGRAM.svg">
+</a>
+<a href="{{job.facebook}}" alt="Facebook Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/FACEBOOK.svg">
+</a>
+
 </div>
 </div>
 
 <div class="mx-16 mt-2">
+ {% for item in job.apprenticeApplyUrl %}       
+<a href="{{item.apprenticeApplyUrl}}" target="_blank">
+{% endfor %}
+  <button 
+  type="button" 
+  id="searchBtnJobIndex"
 
-  <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">
+              Apply Now 
+              <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
             </button>
+            </a>
 </div>
+
 
 <div class="mx-16 my-8 w-full">
 <p class="font-bold text-md text-blue-200">Company Intro</p>

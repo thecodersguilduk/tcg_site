@@ -36,6 +36,26 @@ export default
         }
       },
       {
+        name: 'linkedIn',
+        title: 'linkedIn url',
+        type: 'string'
+      },
+      {
+        name: 'instagram',
+        title: 'Instagram url',
+        type: 'string'
+      },
+      {
+        name: 'facebook',
+        title: 'FaceBook url',
+        type: 'string'
+      },
+      {
+        name: 'twitter',
+        title: 'Twitter url',
+        type: 'string'
+      },
+      {
         name: 'location',
         title: 'Location',
         type: 'array',
@@ -100,6 +120,20 @@ export default
         ],
       },
       {
+        name: 'apprenticeApplyUrl',
+        title: 'Apprentice Application Form Link',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'apprenticeApplyUrl'
+            }
+          }
+        ],
+      },
+      {
         name: 'salary',
         title: 'Salary',
         type: 'string'
@@ -159,23 +193,6 @@ export default
 
         ]
       }
-
-      // {
-      //   name: 'blogPortableText',
-      //   type: 'array',
-      //   title: 'Body',
-      //   of: [
-      //     { type: 'block' },
-      //     { type: 'imageSection' },
-      //     { type: 'applyBtn' },
-      //     { type: 'callModal' },
-      //     { type: 'leadSentence' },
-      //     { type: 'supportingSentence' },
-      //     { type: 'styledHeading' }
-
-      //   ]
-      // }
-
     ]
   }
 
