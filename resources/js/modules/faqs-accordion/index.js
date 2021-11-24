@@ -10,7 +10,7 @@ const faqAccordion = function faqAccordion() {
     if (!btn) return;
 
     let content = btn.nextElementSibling;
-    let angle = btn.querySelector('.fas');
+    let angle = btn.querySelector('.fa-w-10');
     
     btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
 

@@ -141,6 +141,7 @@
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
 
+<<<<<<< HEAD
       var faqAccordion = function faqAccordion() {
         if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection) return;
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection.addEventListener('click', function (e) {
@@ -161,6 +162,28 @@
           }
         });
       }();
+=======
+var faqAccordion = function faqAccordion() {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection) return;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection.addEventListener('click', function (e) {
+    var btn = e.target.closest('.faq-btn');
+    if (!btn) return;
+    var content = btn.nextElementSibling;
+    var angle = btn.querySelector('.fa-w-10');
+    btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
+
+    if (content.style.maxHeight) {
+      angle.classList.add('fa-angle-down');
+      angle.classList.remove('fa-angle-up');
+      content.style.maxHeight = null;
+    } else {
+      angle.classList.remove('fa-angle-down');
+      angle.classList.add('fa-angle-up');
+      content.style.maxHeight = "".concat(content.scrollHeight, "px");
+    }
+  });
+}();
+>>>>>>> 275588527c5cb2340167186a4c75b546e1707a21
 
 /* harmony default export */ __webpack_exports__["default"] = (faqAccordion);
 
