@@ -44,18 +44,8 @@ export default createSchema({
     applyBtn,
     callModal,
     apprenticeAd,
-<<<<<<< HEAD
-    leadSentence,
-    styledHeading,
-    supportingSentence,
-    courses,
-    courseTypes
-
-
-=======
     styledHeading,
     leadSentence,
     supportingSentence
->>>>>>> aea9c3e42e02827f65d5fcdd2b639ca7b4dd1c3c
   ]),
 })
