@@ -71,45 +71,45 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
-    imageSection: ({ node: { asset, width } }) => h("img", {
-      src: urlFor(asset),
-    }),
-    applyBtn: ({ node: { btnText, btnLink } }) => {
-      const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
-      return h("a", {
-        href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
-        className: 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white',
-        innerHTML: btnText + rightArrow,
-        style: 'color: white;'
-      })
-    },
-    leadSentence: ({ node: { leadSentence } }) => (
-      h('h2', {
-        innerHTML: leadSentence,
-        style: 'font-size: 30px'
-      })
-    ),
-    supportingSentence: ({ node: { supportingSentence } }) => (
-      h('h4', {
-        innerHTML: supportingSentence,
-        style: 'color:black'
-      })
-    ),
-    styledHeading: ({ node: { styledHeading } }) => (
-      h('h2', {
-        innerHTML: styledHeading,
-        style: 'font-size: 30px'
-      })
-    ),
+    // imageSection: ({ node: { asset, width } }) => h("img", {
+    //   src: urlFor(asset),
+    // }),
+    // applyBtn: ({ node: { btnText, btnLink } }) => {
+    //   const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
+    //   return h("a", {
+    //     href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
+    //     className: 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white',
+    //     innerHTML: btnText + rightArrow,
+    //     style: 'color: white;'
+    //   })
+    // },
+    // leadSentence: ({ node: { leadSentence } }) => (
+    //   h('h2', {
+    //     innerHTML: leadSentence,
+    //     style: 'font-size: 30px'
+    //   })
+    // ),
+    // supportingSentence: ({ node: { supportingSentence } }) => (
+    //   h('h4', {
+    //     innerHTML: supportingSentence,
+    //     style: 'color:black'
+    //   })
+    // ),
+    // styledHeading: ({ node: { styledHeading } }) => (
+    //   h('h2', {
+    //     innerHTML: styledHeading,
+    //     style: 'font-size: 30px'
+    //   })
+    // ),
 
 
-    callModal: ({ node: { title } }) => h('a', {
-      href: "#",
-      'data-modal': "book-a-call",
-      className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
-      innerHTML: title,
-      style: 'color: white;',
-    })
+    // callModal: ({ node: { title } }) => h('a', {
+    //   href: "#",
+    //   'data-modal': "book-a-call",
+    //   className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
+    //   innerHTML: title,
+    //   style: 'color: white;',
+    // })
     // code: props => '```' + props.node.language + '\n' + props.node.code + '\n```'
   }
 }
