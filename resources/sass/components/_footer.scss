@@ -1,0 +1,14 @@
+.footer {
+  .footer-dropdown-content {
+    max-height: none;
+  
+    @media screen and (max-width: 640px) {
+      max-height: 0;
+    }
+  }
+  
+  .cleanslate.ts-widget {
+    @apply h-12;
+  }
+}
+
