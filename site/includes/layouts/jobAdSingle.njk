@@ -1,0 +1,225 @@
+---
+layout: default
+title: {{job.jobTitle}}
+---
+
+<main class="mx-8 my-2 w-full">
+
+<div class="bg-blue-100 h-64 mt-20 relative w-full" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg)">
+<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg overflow-hidden"><img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full"></div>
+</div>
+
+<div class="mx-16 mt-16">
+<h1>{{job.jobTitle}}</h1>
+</div>
+
+<div class="mx-16 flex flex-row">
+<h6 class="mb-0">{{job.employerName}}</h6>
+
+<div class="flex">
+<img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg">
+{% for location in job.location%}<p class="text-sm ml-2">{{location.location}}</p>
+{% endfor %}
+</div>
+</div>
+
+<div class="mx-16 flex flex-row">
+<img class="flex mr-2" src="../../images/apprenticeJobAd/noun_Pound_1056201.svg">
+<p class="font-bold text-sm mr-14">{{job.salary}}</p>
+
+<img class="flex mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
+ {% for contract in job.contract%}
+ <p class="font-bold text-sm mr-14">{{contract.contractType}}</p>
+ {% endfor %}
+
+<img class="flex mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
+<p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate | dateDisplay}}</p>
+</div>
+<div class="mx-16">
+<p class="font-bold text-sm">Disability Confident Employer: {{job.disabilityConfident}}</p>
+</div>
+
+<div class="mx-16 flex flex-row">
+<p class="font-bold text-sm text-blue-600">Company Socials:<p>
+<div class="flex flex-row ml-4">
+
+<a href="{{job.linkedIn}}" alt="linkedIn Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
+<img class="flex" src="../../images/apprenticeJobAd/LINKEDIN ICON.svg">
+</a>
+<a href="{{job.twitter}}" alt="Twitter Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
+<img class="ml-2 flex" src="../../images/apprenticeJobAd/TWITTER ICON.svg">
+</a>
+<a href="{{job.instagram}}" alt="Instagram Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
+<img class="ml-2 flex" src="../../images/apprenticeJobAd/INSTAGRAM.svg">
+</a>
+<a href="{{job.facebook}}" alt="Facebook Logo" target="_blank" class="no-underline m-0 p-0 flex justify-center">
+<img class="ml-2 flex" src="../../images/apprenticeJobAd/FACEBOOK.svg">
+</a>
+
+</div>
+</div>
+
+<div class="mx-16 mt-2">
+ {% for item in job.apprenticeApplyUrl %}       
+<a href="{{item.apprenticeApplyUrl}}" target="_blank">
+{% endfor %}
+  <button 
+  type="button" 
+  id="searchBtnJobIndex"
+
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">
+              Apply Now 
+              <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
+            </button>
+            </a>
+</div>
+
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Company Intro</p>
+<p class="text-sm">
+</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Brief Overview of the Role</p>
+<p class="text-sm">
+{{job.briefOverview}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Training to be provided</p>
+<p class="text-sm">{{job.trainingProvided}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Vacancy description</p>
+<p class="text-sm">{{job.jobDescription}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">You duties will include:</p>
+<p class="text-sm">
+{{job.duties}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Benefits:</p>
+<p class="text-sm">
+{{job.body}}
+</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">We will support you as an apprentice</p>
+<p class="text-sm">
+{{job.support}}</p>
+</div>
+
+<div class="mx-16 w-full">
+<p class="font-bold text-2xl text-blue-100">Requirements and prospects</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Desired skills</p>
+<p class="text-sm">
+{{job.desiredSkills}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Personal qualities</p>
+<p class="text-sm">
+{{job.personalQualities}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Qualifcations required</p>
+<p class="text-sm">
+{{job.requiredQualifications}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Future prospects</p>
+<p class="text-sm">
+{{job.futureProspects}}</p>
+</div>
+
+<div class="mx-16 my-8 w-full">
+<p class="font-bold text-md text-blue-200">Things to consider</p>
+<p class="text-sm">
+{{job.thingsToConsider}}</p>
+</div>
+
+<div class="mx-16 w- h-20 rounded flex flex-row relative" style="background-color:#86BA90">
+<div class="flex p-6">
+<img src="../../images/apprenticeJobAd/TCG Icon.svg">
+<p class="font-bold text-white text-sm ml-2">Apply for this role</p>
+</div>
+<div class="flex flex-row mx-4 mt-6 justify-end absolute right-0">
+
+  <button type="button" id="searchBtnJobIndex"
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium bg-grey-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
+            </button>
+</div>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+{# <div class="bg-white overflow-hidden mt-18">
+  <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
+    <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+      <div>
+        <h4 class="text-base text-gray-900 font-semibold tracking-wide uppercase text-3xl">{{job.employerName}}</h4>
+        <h3 class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">{{job.jobTitle}}</h3>
+        <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Salary Details: {{job.salary}}</h4>      
+        <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Location: {{job.location}}</h4>
+         <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Published: {{job.createdAt}}</h4>         
+      </div>
+    </div>
+    <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+      <div class="relative lg:row-start-1 lg:col-start-2">
+        <svg class="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+          <defs>
+            <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
+        </svg>
+        <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+          <figure>
+            <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+              <img class="rounded-lg shadow-lg object-cover object-center" src="{{job.employerLogo}}" alt="Company Logo" width="1184" height="1376">
+            </div>
+            
+          </figure>
+        </div>
+      </div>
+      <div class="mt-8 lg:mt-0">
+        <div class="text-base max-w-prose mx-auto lg:max-w-none">
+        <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Job Description</h3>
+          <p>{{job.jobDescription}}</p>
+        </div>
+        <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+         <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Support</h3>
+          <p>{{job.support}}</p>
+           <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Training Provided</h3>
+          <p>{{job.trainingProvided}}</p>
+          <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Personal Qualities</h3>
+          <p>{{job.personalQualities}}</p>
+          <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Desired Skills</h3>
+          <p>{{job.desiredSkills}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> #}

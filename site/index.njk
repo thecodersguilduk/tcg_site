@@ -1,0 +1,44 @@
+---
+layout: default
+meta_title: The Coders Guild - Developing The Future
+meta_description: ‘best-in-class’ digital skills training and apprenticeships that put you at the centre of an industry-led community. Find out more or book a call.
+body_class: home
+title: The Coders Guild - Developing The Future
+---
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="md:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image" class="md:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">The Coders Guild</h1>
+          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
+          <p class="text-white font-heading text-center text-3xl md:leading-4xl font-bold max-w-md mx-auto">Developing The Future</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none relative" tabindex="-1">
+    <div class="bg-red-100 section-rounded">
+      <div class="bg-white section-rounded">
+        <div class="bg-blue-200 section-rounded">
+          <div class="bg-white section-rounded">
+            {% include "components/home/intro.njk" %}
+          </div>
+          {% include "components/home/apprenticeships.njk" %}
+        </div>
+        {% include "components/home/employability.njk" %}
+      </div>
+      {% include "components/home/services.njk" %}
+    </div>
+    {% include "components/home/social-mission.njk" %}
+    {% include "components/blog/blog-section.njk" %}
+    {% include "components/global/newsletter.njk" %}
+
+  </main>
+</div>  
+
+
