@@ -1,0 +1,39 @@
+{
+    "name": "The Coders Guild",
+    "url": "https://thecodersguild.org.uk",
+    "author": {
+        "name": "",
+        "email": "",
+        "handle": "",
+        "avatar": ""
+    },
+
+    "images": {
+        "logo": "/images/logo/logo.svg",
+        "favicon": "/images/favicon.ico",
+        "twitter": "/images/meta/twitter.jpg"
+    },
+
+    "social_links": {
+        "facebook": "https://www.facebook.com",
+        "twitter": "https://twitter.com/joe_dyer1",
+        "linkedin": "https://www.linkedin.com",
+        "instagram": "https://www.instagram.com/webdevappnet",
+        "github": "https://github.com/thecodersguilduk",
+        "linkedin": "https://www.linkedin.com/groups/8324305/",
+        "youtube": "https://www.youtube.com/channel/UC_By6GiE5aVoMyoTLr5lGZA"
+    },
+
+    "address": {
+        "street": "The Coders Guild",
+        "street_2": "3 Sheaf St",
+        "city": "Leeds",
+        "postcode": "LS10 1HD",
+        "country": "GB"
+    },
+
+    "contact": {
+        "phone": "0113 460 1024",
+        "email": "hello@thecodersguild.org.uk"
+    }
+}

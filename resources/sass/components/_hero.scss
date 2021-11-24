@@ -1,0 +1,21 @@
+#apprenticeships {
+
+  .hero {
+  
+    &-desktop {
+      display: block;
+  
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+  
+    &-mobile {
+      display: none;
+  
+      @media screen and (max-width: 640px) {
+        display: block;
+      }
+    }
+  }
+}
