@@ -1,0 +1,201 @@
+---
+layout: 'default'
+---
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="md:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image" class="md:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8 text-center">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Apply</h1>
+          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
+          <p class="text-white font-heading text-center text-3xl md:leading-4xl font-bold mx-auto mb-8">Apply for one of our courses using the form below</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<main id="main" class="main flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
+    <div class="bg-white">
+      <div class="bg-blue-200 section-rounded">
+        <div class="bg-white section-rounded">
+          <div class="bg-blue-200 section-rounded">
+            <div class="bg-white section-rounded">
+            
+                <section class="relative md:w-4/6 mx-auto md:py-20 py-14 z-10 overflow-hidden">
+                <h2 class="text-center text-blue-200 mb-12">Application Form</h2>
+                    <div class="flex flex-col md:flex-row md:justify-between">
+                        <div class="md:w-1/2 mb-14 md:mb-0 max-w-md width-100 mx-auto">
+                            <div class="max-w-xs">
+                                <h2 class="leading-3xl text-2xl mb-6">Our commitment to equality and diversity</h2>
+                                <p class="mb-6">The Coders Guild is 100% committed to promoting inclusion, eliminating discrimination and encouraging diversity
+                                across all areas of our work. Our aim is that applications to courses and services will be truly representative of all sections
+                                of society. As part of our monitoring processes we ask for your cooperation in completing the questions on this form. We have a 
+                                very inclusive application process, this data will be anonymised for our tracking purposes.
+                                No applicant will be discriminated against regardless of their age, colour, disability, ethnicity, gender or gender identity, race,
+                                religion or belief and / or sexual orientation or if you do not wish to complete this form. For full details please see our data and
+                                <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policies</a>.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 max-w-md not-on-print mx-auto">
+                        <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
+                            <form name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto">
+                            <p class="hidden">
+                                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                            </p>
+                            <input id="pj" type="hidden" name="pj" value="" />
+                            <input id="pt" type="hidden" name="pt" value="" />
+                            <input id="f" type="hidden" name="f" value="" />
+                            <input id="cN" type="hidden" name="cN" value="" />
+                            <div>
+                                <p>
+                                    <label for="first_name" class="sr-only">First Name:</label>
+                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />   
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="last_name" class="sr-only">Last Name:</label>
+                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />   
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="email" class="sr-only">Your Email:</label>
+                                    <input type="email" name="email" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Email" required />
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="postcode" class="sr-only">Your Postcode:</label>
+                                    <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required />
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="phone" class="sr-only">Your Phone Number: <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" /></label>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
+                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
+                                    
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="gender" class="">Which of the following most accurately describes you? </label>
+                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" >
+                                        <option selected>Please Select an Option</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Non-Binary">Non-Binary</option>
+                                        <option value="Transgender">Transgender</option>
+                                        <option value="Intersex">Intersex</option>
+                                        <option value="Not-disclosed">I prefer not to say</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="disability" class="">Do you have a disability which may require adjustments to be made to allow you to perform your job role? </label>
+                                    <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                        <option selected>Please Select an Option</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="sexuality" class="">With which of these do you most closely identify with? </label>
+                                    <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                        <option selected>Please Select an Option</option>
+                                        <option value="Heterosexual">Heterosexual</option>
+                                        <option value="Homosexual">Homosexual</option>
+                                        <option value="Bisexual">Bisexual</option>
+                                        <option value="Pansexual">Pansexual</option>
+                                        <option value="Not_disclosed">Prefer not to say</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="ethnicity" class="">What is your Ethnicity? </label>
+                                    <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                        <option selected>Please Select an Option</option>
+                                        <option value="white-british">White British</option>
+                                        <option value="other-white">Other White</option>
+                                        <option value="mixed">Mixed/Multiple Ethnic Groups</option>
+                                        <option value="asian-asian-british">Asian/Asian British</option>
+                                        <option value="black-african-caribbean-black-british">Black/African/Caribbean/Black British</option>
+                                        <option value="other">Other</option>
+                                        <option value="Not_disclosed">Prefer not to say</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="employment_status" class="">What is your current employment status? </label>
+                                    <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                        <option selected>Please Select an Option</option>
+                                        <option value="Full-Time">Full Time Employed</option>
+                                        <option value="Part-Time">Part Time Employed</option>
+                                        <option value="Self-Employed">Self Employed</option>
+                                        <option value="student">Student</option>
+                                        <option value="unemployed">Not currently employed</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="rtw_status" class="">Are you able to provide valid documentation of your right to work in the UK? </label>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="rtw_status">Yes</label>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="rtw_status" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="rtw_status_No">No</label>
+                                            </div>
+                                        </div>
+                                    </p> 
+                            </div>
+                            <div class="mt-8">
+                                <div class="relative flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                    </div>
+                                    <div class="ml-3 text-sm leading-5">
+                                        <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Submit Application</button>
+                        </form>
+                     </div>
+                    </div>
+                </section>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    const url = new URL(window.location.href)
+    url.searchParams.forEach((x, y) => {
+        document.getElementById(y).value = x
+    })
+    
+    </script>

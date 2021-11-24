@@ -1,0 +1,9 @@
+{
+    "types": [
+        {
+            "type": "blog",
+            "field": "publishedAt",
+            "titleField": "title"
+        }
+    ]
+}

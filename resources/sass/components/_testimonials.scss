@@ -1,0 +1,89 @@
+#apprenticeship-employer {
+
+  .testimonials {
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+
+      button {
+        @apply bg-grey-200;
+
+        font-size: 0;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        margin: 0 4px;
+      }
+
+      .slick-active {
+        button {
+          @apply bg-blue-100;
+        }
+      }
+
+      li {
+        @apply flex justify-center;
+      }
+    }
+
+    .slick-arrow {
+      @apply bg-blue-200;
+      // top: 0;
+      font-size: 0;
+      height: 46px;
+      width: 46px;
+      border-radius: 50%;
+      display: block;
+
+
+      &.prev {
+        
+
+        .chevron {
+          // transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      &.next {
+        // right: 0;
+      }
+
+      .chevron {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+      }
+    }
+
+    .slick-slide {
+      & > div {
+        border-radius: 10px;
+      }
+    }
+
+    &__author {
+      @apply border-4 border-blue-100;
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      flex: 1 0 110px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+
+      &::before {
+
+        @apply font-heading font-bold text-blue-200;
+        position: absolute;
+        top: 30px;
+        right: -30px;
+        font-size: 153px;
+        line-height: 0;
+        content: '\201C';
+      }
+    }
+  }
+}

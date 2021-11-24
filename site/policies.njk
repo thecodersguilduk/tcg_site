@@ -1,0 +1,27 @@
+---
+layout: default
+meta_title: The coders guild - Policies and Procedures
+meta_description: We take our policies very seriously. These are not just documents for compliance sake but they are an essential part of our organisational management and are our roadmap for successful day-to-day operations. We use these policies to create a safe, happy environment where wellbeing is an essential component of our business offer. We review these policies and procedures on a regular basis to ensure they meet the changing needs of the services that we provide and meet the needs of our staff and stakeholders.
+body_class: policies
+title: Policies - full list
+---
+
+<div class="container max-w-full sm:pt-0">
+  <main id="main" class="main inner flex flex-1 flex-col pt-20 focus:outline-none md:mb-20 mb-12" tabindex="-1">
+    <div class="pt-12 md:pt-14 md:px-16 sm:pt-10 max-w-3xl mx-auto">
+      <div class="mb-10">
+        <h1 class="md:text-5xl md:leading-5xl text-4xl leading-4xl">Policies</h1>
+        <p>We take our policies very seriously. These are not just documents for compliance sake but they are an essential part of our organisational management and are our roadmap for successful day-to-day operations. We use these policies to create a safe, happy environment where wellbeing is an essential component of our business offer. We review these policies and procedures on a regular basis to ensure they meet the changing needs of the services that we provide and meet the needs of our staff and stakeholders.</p>
+      </div>
+      <div>
+        {% for policy in policies_list.all %}
+          <a href="{{ policy.pdf }}" target="_blank" class="flex flex-wrap pointer hover:text-blue-200 py-4 px-6 border-1 border-grey-200 mb-4 md:mb-2 flex-test hover:shadow-primary focus:shadow-primary policy-item">
+            <p class="font-bold sm:flex-2 w-full pr-4">{{ policy.label }}</p>
+            <p class="text-sm flex-1 text-grey-300">{{ policy.version }}</p>
+            <p class="text-sm flex-1 text-grey-300">{{ policy.last_update }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>

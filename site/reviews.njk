@@ -1,0 +1,37 @@
+---
+layout: default
+meta_title: Reviews
+meta_description: We’d love to hear your thoughts
+body_class: reviews
+title: Reviews
+---
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="md:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image" class="md:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8 text-center">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Reviews</h1>
+          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
+          <p class="text-white font-heading text-center text-3xl md:leading-4xl font-bold mx-auto mb-8">We’d love to hear your thoughts</p>
+          <a href="https://www.trustistreviewer.com/Survey/eEtNYvDPNUCgGxnXqyliBw.html" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">Leave us a review<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none relative md:pt-20 pt-14" tabindex="-1">
+    <div class="inner">
+      <div class="max-w-3xl mx-auto md:px-16 pb-20">
+        <!--START OF TRUSTist REVIEWer CODE - DO NOT CHANGE-->
+        <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/reviewlist.js"></script>
+        <div ts-reviewlistwidget ts-page-size="10" class="reviews-component"></div>
+        <!--END OF TRUSTist REVIEWer CODE-->
+      </div>
+    </div>
+
+    {% include "components/global/newsletter.njk" %}
+  </main>
+</div>

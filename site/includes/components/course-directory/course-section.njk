@@ -1,0 +1,45 @@
+<section class="inner">
+  <div class="relative bg-grey-50 mb-20 sm:mb-24">
+    <div class="absolute inset-0">
+      <div class="bg-white h-1/3 sm:h-2/3"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto">
+      <div class="">
+        {% if related_articles %}
+        <h2 class="mb-8 sm:mb-10 title text-2xl leading-2xl">Related Courses</h2>
+        {% else %}
+          <h2 class="mb-12 title">
+            Our latest news
+          </h2>
+        {% endif %}
+      </div>
+
+      <div class="flex md:flex-row md:flex-wrap flex-col max-w-full mx-auto lg:max-w-none lg:-mx-3">
+        {% set courseType = course.courseType %}
+        {% for course in courses | limit(5) %}
+           {% if course.courseType === courseType %}
+            <div class="md:w-1/3 md:px-3 w-full mb-8 sm:mb-10 max-w-none mx-auto">
+                <div class="flex flex-col rounded-lg shadow-primary md:h-full overflow-hidden">
+                {% if course.featured_image %}
+                    <div class="flex-shrink-0">
+                    <img class="h-56 w-full object-cover" data-lazy="{{ course.featured_image }}" alt="{{ course.featured_image_alt }}" />
+                    </div>
+                    
+                {% endif %}
+                <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
+                    <div class="flex-1 mt-2">
+                    <a href="{{course.slug.current}}" class="block">
+                        <a href="../{{ course.slug.current }}" class="block"><h3 class="text-blue-200 max-w-90 mb-4">{{ course.title }}</h3></a>
+                        <p class="mb-6 sm:mb-4 text-sm leading-md">{{ course.excerpt }}</p>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>        
+      </div>
+    </div>
+  </div>
+</section>
