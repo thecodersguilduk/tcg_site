@@ -1,0 +1,16 @@
+.faq {
+  .faq-btn--active {
+    @apply text-blue-200;
+    transition: color 0.2s ease-out;
+
+    i {
+      @apply text-blue-200;
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}

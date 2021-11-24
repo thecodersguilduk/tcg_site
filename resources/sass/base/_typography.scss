@@ -1,0 +1,131 @@
+
+//==========  Typography ==========//
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mt-0 mb-6 text-blue-200;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-heading;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+p {
+  @apply font-paragraph text-black;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+span {
+  @apply font-paragraph;
+}
+
+input, textarea {
+  @apply text-sm;
+}
+
+// content
+.content {
+
+	// paragraph
+	& > p {
+    @apply mb-10;
+
+    @media (min-width: 640px){
+      @apply mb-8;
+    }
+
+    // intro paragraph
+		&:first-child {
+			@apply text-blue-200 text-lg leading-xl;
+		}
+  }
+
+  & > h2 {
+    @apply text-2xl leading-2xl mb-10;
+
+    @media (min-width: 640px){
+      @apply mb-8;
+    }
+  }
+
+  & > blockquote {
+    @apply mb-8 py-12 border-t-1 border-b-1 border-grey-300;
+
+    & > p {
+      @apply text-blue-200 mx-auto mb-6 text-2xl leading-3xl font-bold font-heading text-center;
+
+
+      &::first-letter {
+        margin-left: 10px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+      }
+
+      &::before {
+        content: "\201C";
+        letter-spacing: 3px;
+      }
+
+      &::after {
+        content: "\201D";
+      }
+    }
+
+    span {
+      @apply font-paragraph text-md leading-2xl text-center;
+    }
+  }
+
+  & > figure {
+    @apply mb-8;
+    
+    figcaption {
+      @apply text-sm leading-sm text-black mt-2;
+
+      @media (min-width: 640px){
+        @apply text-xs leading-xs;
+      }
+    }
+  }
+
+  ul, ol {
+    @apply pl-6 mb-6;
+  }
+
+  ul { list-style: disc; }
+
+  ol { list-style: decimal; }
+
+  a {
+    @apply text-blue-200 font-bold border-none;
+  }
+}

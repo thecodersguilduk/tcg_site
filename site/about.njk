@@ -1,0 +1,43 @@
+---
+layout: default
+meta_title: The Coders Guild - About Us, Mission and Vision
+meta_description: The UK’s gold standard for tech education, delivering the industry’s future innovators from society’s most underrepresented groups.
+body_class: about
+title: About
+---
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="sm:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/group-13.png" alt="Apprenticeships hero image" class="sm:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">About Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
+    <div class="bg-white">
+      <div class="bg-blue-200 section-rounded">
+        <div class="bg-white section-rounded">
+          <div class="bg-blue-200 section-rounded">
+            <div class="bg-white section-rounded">
+              {% include "components/about/mission-and-vision.njk" %}
+              {% include "components/about/our-story.njk" %}
+            </div>
+            {% include "components/team/team-component.njk" %}
+          </div>
+          {% include "components/about/how-we-work.njk" %}
+        </div>
+        {% include "components/about/apprenticeships.njk" %}
+      </div>
+      {% include "components/about/contact-us.njk" %}
+      {% include "components/global/newsletter.njk" %}
+    </div>
+
+
+
+  </main>
+</div>

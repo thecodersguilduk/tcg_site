@@ -1,0 +1,108 @@
+
+//==========  Globals ==========//
+html {
+  scroll-behavior: smooth;
+}
+
+.max-w-90 {
+  max-width: 90%;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+.rounded-50 {
+  border-radius: 50%;
+}
+
+.rounded-10 {
+  border-radius: 10px;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
+}
+
+.link {
+  position: relative;
+  &::after {
+    content: "";
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #16aedb;
+    border-radius: 1rem;
+  }
+}
+
+// Highlight the nav link based on page
+
+#about a[href="/about"] {
+    color: #16aedb;
+}
+
+#apprenticeships a[href="/apprenticeships"] {
+  color: #16aedb;
+}
+
+#blog a[href="/blog"] {
+  color: #16aedb;
+}
+
+#contact-us a[href="/contact-us"] {
+  color: #16aedb;
+}
+
+// Contact form input fields 
+
+.form-input-field {
+  @apply border-blue-200;
+
+  &--invalid {
+    @apply border-red-100;
+    outline-color: #c94b62;
+  }
+}
+
+// Form 'Required' pop up
+.required-pop-up {
+  bottom: 100%;
+}
+
+// Custom underline for links
+.link-underline {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    @apply bg-red-100;
+  }
+}
+
+// Rounded section
+.section-rounded {
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.section-rounded-t {
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}

@@ -1,0 +1,36 @@
+---
+layout: default
+meta_title: 
+meta_description: 
+body_class: apprenticeship-employer
+title: Software Development Apprenticeships from the coders guild
+---
+
+<div class="container max-w-full md:pt-22 pt-20">
+  <div class="hero relative bg-white">
+    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="md:block hidden h-full w-full hero-desktop"/>
+    <img src="../images/banner-2.png" alt="Apprenticeships hero image" class="md:hidden block h-full w-full hero-mobile"/>
+    <div class="absolute top-0 w-full h-full">
+      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
+        <div class="max-w-2xl mx-auto px-4 lg:mb-8 lg:mt-20 mt-10">
+          <h1 class="text-center text-white mb-0 text-4xl leading-4xl lg:text-5xl lg:leading-5xl max-w-md md:max-w-full">Industry Led Software Developer Apprenticeship Scheme</h1>
+          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
+          <p class="text-white font-heading text-center text-2xl md:leading-2xl leading-xl font-bold max-w-md mx-auto">Hire local, emerging talent with this Government funded scheme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-grey-100" tabindex="-1">
+    <div class="bg-white section-rounded">
+      <div class="bg-blue-200 section-rounded">
+        <div class="bg-white section-rounded">
+          {% include "components/employer/software-dev-intro.njk" %}
+          {% include "components/employer/software-dev-about.njk" %} 
+        </div>
+        {% include "components/employer/software-dev-case-studies.njk" %}
+      </div>
+      {% include "components/employer/software-dev-roadmap.njk" %}
+    </div>
+    {% include "components/global/testimonials.njk" %}  
+  </main>
+</div>

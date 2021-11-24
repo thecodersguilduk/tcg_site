@@ -1,0 +1,80 @@
+.modal {
+
+  &::before {
+    @apply bg-grey-300 opacity-25;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  @apply hidden flex-col items-center justify-center w-full h-full;
+  overflow: hidden;
+  position: fixed;
+  z-index: 40;
+
+  &--active {
+    @apply flex;
+  }
+
+  .modal-inner {
+    overflow: auto;
+    position: relative;
+    width: calc(100% - ( 16px * 2 ));
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+  }
+
+  @media (min-width: 641px) {
+    .modal-inner {
+        margin: 0 auto;
+        
+    }
+  }
+
+  .modal-close {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+
+    &::before {
+      @apply bg-grey-300;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -1px;
+      margin-left: -8px;
+      width: 16px;
+      height: 2px;
+      transform: rotate(225deg);
+    }
+
+    &::after {
+      @apply bg-grey-300;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -1px;
+      margin-left: -8px;
+      width: 16px;
+      height: 2px;
+      transform: rotate(-45deg);
+    }
+  }
+}

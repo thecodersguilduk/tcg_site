@@ -1,0 +1,236 @@
+---
+layout: default
+meta_title: 'Course Directory'
+title: 'Course Directory'
+---
+
+
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+   <section class="bg-white section-rounded pt-48 md:pt-64 pb-24">
+      <div class="inner">
+         <h2 class="my-8">{{title}}</h2>
+         <div class="py-6">
+            <span class="text-blue-200 font-medium mr-2 md:mr-6">Jump to:</span> <a class="font-bold mr-2 md:mr-6 no-border" href="#courses">Courses</a> <a class="font-bold mr-2 md:mr-6 no-border" href="#apprenticeships">Apprenticeships</a>
+         </div>
+         <div class="main-content flex flex-wrap mt-12">
+            <div class="filters-sidebar w-full md:w-3/12 px-6 mb-12 md:mb-0">
+               <div class="flex justify-between border-b-1 pb-4 mb-4">
+                  <h3 class="text-blue-200 mb-0">Filters</h3>
+                  <button class="mb-0 text-xs reset-filters cursor-pointer">Reset Filters</span>
+               </div>
+               <div>
+                  <form class="filters-form">
+                     <div class="my-4">
+                        <p class="heading"><strong>Topics</strong></p>
+                        <select class="w-full">
+                           <option value=null selected>Select a topic</option>
+                           {% for item in topics %}
+                              <option value="{{ item.name }}">{{ item.name }}</option>
+                           {% endfor %}
+                        </select>
+                     </div>
+                     {# <div class="my-4">
+                        <p class="heading">Location</p>
+                        <select class="w-full">
+                           <option>Remote</option>
+                        </select>
+                     </div>
+                     <div class="my-4">
+                        <p class="heading">Course Type</label>
+                        {% for item in courseTypes %}
+                           {% if item.courseType !== 'Apprenticeships' %}
+                              <div class="flex align-center my-2">
+                                 <input id="{{ item.courseType }}" type="checkbox" value="{{ item.courseType }}" />
+                                 <label for="{{ item.courseType }}">{{ item.courseType | truncate(25) }}</label>
+                              </div>
+                           {% endif %}
+                        {% endfor %}
+                     </div>
+                     <div class="my-4">
+                        <p class="heading">Attendance</p>
+                        <div class="flex justify-between align-center my-2">
+                           <input type="checkbox" value="full" />
+                           <label>Full Time</label>
+                        </div>
+                        <div class="flex justify-between align-center my-2">
+                           <input type="checkbox" value="part" />
+                           <label>Part Time</label>
+                        </div>
+                        <div class="flex justify-between align-center my-2">
+                           <input type="checkbox" value="demand" />
+                           <label>On Demand</label>
+                        </div>
+                     </div>
+                     <div class="my-4">
+                        <p class="heading">Course Length</p>
+                           <div class="flex justify-between align-center my-2">
+                              <input type="checkbox" value="2 Days" class="fancy-check" />
+                              <label>2 Days</label>
+                           </div>
+                           <div class="flex justify-between align-center my-2">
+                              <input type="checkbox" value="5 Days" />
+                              <label>5 Days</label>
+                           </div>
+                           <div class="flex justify-between align-center my-2">
+                              <input type="checkbox" value="Other" />
+                              <label>Other</label>
+                           </div>
+                     </div> #}
+                  </form>
+               </div>
+            </div>
+            <div class="w-full md:w-9/12  mx-auto lg:max-w-none md:pl-6">
+               <div class="flex justify-between border-b-1 pb-4 mb-4">
+                  <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
+               </div>
+            {% for item in courses %}
+               {% if item.isActive and item.courseType !== 'Apprenticeships' %}
+                  <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
+                     <div class="">
+                        <img class="h-full md:h-48 w-full object-cover" src="{{item.featuredImage}}" alt="{{item.name}}">
+                     </div>
+                     <div class="bg-white flex flex-col justify-around px-4 md:ml-8 py-4 w-full md:w-9/12">
+                        <div>
+                           <div class="flex mb-1">
+                           {% for item in item.courseTopics%}
+                              <a href="#" class="mr-2 p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{item.name}}</a>
+                           {% endfor %}
+                           </div>
+                           
+                           <p class="text-xl font-semibold text-blue-200">
+                              <a href="{{item.slug.current}}"> 
+                                 {{item.title}}
+                              </a> 
+                           </p>
+                           
+                        </div>
+                        <div class="flex items-center w-full flex-wrap mt-4 md:mt-0">
+                           <div class="w-6/12 mb-2 md:mb-0">
+                              <p class=" flex items-center text-sm font-medium text-gray-900 leading-none">
+                              <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
+                                 {{item.courseType}}
+                              </p>
+                           </div>
+                           <div class="w-6/12 mb-2 md:mb-0">
+                              <p class="flex items-center text-sm font-medium text-gray-900">
+                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
+                                 Remote
+                              </p>
+                           </div>
+                           <div class="w-6/12">                                   
+                              <p class="flex items-center text-sm font-medium text-gray-900">
+                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
+                                   {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
+                              </p>
+                           </div>
+                           <div class="w-6/12">                                   
+                              <p class=" flex items-center text-sm font-medium text-gray-900">
+                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
+                                 Full Time
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>     
+               {% endif %}
+            {% endfor %}
+            </div>
+         </div>
+      </div>
+   </section>
+
+      <section id="apprenticeships" class="relative overflow-hidden bg-blue-200">
+         <object type="image/svg+xml" data="../images/patterns/3.svg" class="hidden md:block absolute pattern pattern-3"></object>
+            <div class="inner relative z-10">
+            <div class="mt-24 mb-32">
+               {% include "components/apprenticeships/apprenticeships-component.njk" %}
+            </div>
+            </div>
+         <object type="image/svg+xml" data="../images/patterns/4.svg" class="hidden md:block absolute bottom-0 pattern pattern-4"></object>
+      </section>
+   </main>
+
+   <script>
+      const filters = document.querySelector('.filters-form');
+      const resetBtn = document.querySelector('.reset-filters');
+      const courses = Array.from(document.querySelectorAll('.course-item'));
+      let numberCourses = document.querySelector('.numberCourses');
+      numberCourses.textContent = courses.length;
+      let fieldArray = [];
+     
+
+      filters.addEventListener('change', e => {
+      
+         const nodeName = e.target.nodeName.toLowerCase();
+
+         if(nodeName === 'select'){
+            const optionsText = [];
+            const options = Array.from(e.target.options).forEach(option => optionsText.push(join(option.innerText)));
+            
+           if(!optionsText.some(item => fieldArray.includes(item))){
+               fieldArray.push(join(e.target.value));
+               console.log(fieldArray);
+           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking) 
+              fieldArray.forEach(field => {
+                 if(optionsText.some(item => fieldArray.includes(item))){
+                    const index = fieldArray.indexOf(field);
+                    fieldArray.splice(index, 1);
+                    fieldArray.push(join(e.target.value));
+                 };
+              })   
+            
+           }
+         }
+
+         if(nodeName === 'input' && e.target.checked){
+            fieldArray.push(join(e.target.value));
+            console.log(fieldArray);
+         } else if (nodeName === 'input' && !e.target.checked) {
+            let index = fieldArray.indexOf(join(e.target.value));
+            fieldArray.splice(index, 1);
+            console.log(fieldArray)
+         }
+
+         courses.forEach(course => {       
+           if(fieldArray.some(item => Array.from(course.classList).includes(item))){
+            course.classList.remove('hidden');
+            course.classList.add('flex');          
+           } else {
+            course.classList.add('hidden');
+            course.classList.remove('flex');
+           }
+         })
+
+        displayNumCourses();
+
+        if(fieldArray.length === 0){
+         reset()
+        }
+        
+      })
+
+      resetBtn.addEventListener('click', reset);
+
+      function reset(){
+         fieldArray = [];
+         const courseItems = Array.from(document.querySelectorAll('.course-item'));
+         courseItems.forEach(course => {
+            course.classList.remove('hidden');
+            course.classList.add('flex');  
+         })
+
+         displayNumCourses();
+      }
+
+      function displayNumCourses(){
+         const coursesShown = Array.from(document.querySelectorAll('.course-item.flex'));
+         return numberCourses.textContent = coursesShown.length;
+      }
+
+      function join(string){
+         return string.replace(/\s+/g, '-').toLowerCase();
+      }
+
+      
+   </script>
+</div>
