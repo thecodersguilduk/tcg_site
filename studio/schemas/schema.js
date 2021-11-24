@@ -8,6 +8,9 @@ import courses from './documents/courseSchemas/course'
 import courseTypes from './documents/courseSchemas/courseTypes'
 import courseDurations from './documents/courseSchemas/courseDuration'
 import courseTopics from './documents/courseSchemas/courseTopics'
+import coursePartners from './documents/courseSchemas/coursePartners'
+import courseProject from './documents/courseSchemas/courseProject'
+import courseFunder from './documents/courseSchemas/courseFunder'
 import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
@@ -36,6 +39,9 @@ export default createSchema({
     courseTypes,
     courseDurations,
     courseTopics,
+    courseFunder,
+    coursePartners,
+    courseProject,
     imageSection,
     applyBtn,
     callModal,
