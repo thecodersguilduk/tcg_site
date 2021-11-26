@@ -15,9 +15,13 @@ import imageSection from './documents/components/imageSection'
 import applyBtn from './documents/components/applyBtn'
 import callModal from './documents/components/callModal'
 import apprenticeAd from './documents/apprenticeAd'
-import leadSentence from './documents/components/leadSentence'
-import styledHeading from './documents/components/styledHeading'
-import supportingSentence from './documents/components/supportingSentence'
+import leadSentence from './documents/components/leadSentence.js'
+import styledHeading from './documents/components/styledHeading.js'
+import supportingSentence from './documents/components/supportingSentence.js'
+
+// import courses from './documents/course'
+// import courseTypes from './documents/courseTypes'
+
 
 
 // Then import schema types from any plugins that might expose them
