@@ -86,10 +86,10 @@ title: 'Course Directory'
             {% for item in courses %}
                {% if item.isActive and item.courseType !== 'Apprenticeships' %}
                   <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
-                     <div class="">
-                        <img class="h-full md:h-48 w-full object-cover" src="{{item.featuredImage}}" alt="{{item.name}}">
+                     <div class="w-full md:w-4/12">
+                        <img class="h-full w-full object-cover" src="{{item.courseItemImage}}" alt="{{item.name}}">
                      </div>
-                     <div class="bg-white flex flex-col justify-around px-4 md:ml-8 py-4 w-full md:w-9/12">
+                     <div class="bg-white flex flex-col justify-around px-4 md:ml-8 py-4 w-full md:w-8/12">
                         <div>
                            <div class="flex mb-1">
                            {% for item in item.courseTopics%}
