@@ -5,6 +5,25 @@ export default {
   initialValue: {
     attendance: 'Full Time'
   },
+  fieldsets: [
+    { name: 'courseMeta',
+      description: 'Collapse menu to fill in funder details',
+      title: 'Course Meta Data',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    },
+    { name: 'apprenticeshipOnly',
+      title: 'Apprenticeship Info Only',
+      description: 'Click to input data for apprenticeships only',
+      options: {
+        collapsible: true,
+        collapsed: true,
+        columns: 2
+      }
+    }
+  ],
     fields: [
       {
         name: 'isActive',
@@ -18,8 +37,67 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'isGMCA',
+        type: 'boolean',
+        title: 'Is GMCA?',
+        fieldset: 'courseMeta'
+      },
+      {
+        name: 'code',
+        type: 'string',
+        title: 'Course Code',
+        description: 'eg. 2dw-? 5di-? upsk-? rsk-? appr-?',
+        fieldset: 'courseMeta'
+      },
+      {
+        title: 'Course Partner',
+        name: 'partner',
+        fieldset: 'courseMeta',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'coursePartners'
+            }
+        }
+        ],
+      },
+      {
+        title: 'Course Funder',
+        name: 'funder',
+        fieldset: 'courseMeta',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseFunder'
+            }
+        }
+        ],
+      },
+      {
+        title: 'Course Project',
+        name: 'project',
+        fieldset: 'courseMeta',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseProject'
+            }
+        }
+        ],
+      },
+      {
         name: 'courseType',
         title: 'Course Type',
+        fieldset: 'courseMeta',
         type: 'array',
         description: 'Please select one',
         of: [
@@ -84,6 +162,7 @@ export default {
       {
         name: 'qualification',
         type: 'string',
+        fieldset: 'apprenticeshipOnly',
         title: 'Qualification',
         description:
           'If applicable.'
@@ -91,6 +170,7 @@ export default {
       {
         name: 'level',
         description: 'If applicable',
+        fieldset: 'apprenticeshipOnly',
         type: 'string',
         title: 'Level'
       },
@@ -103,8 +183,6 @@ export default {
         name: 'excerpt',
         type: 'text',
         title: 'Excerpt',
-        description:
-          'This ends up on summary pages, on Google, when people share your post in social media.'
       },
       {
         name: 'coursePortableText',
