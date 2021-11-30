@@ -143,9 +143,9 @@ export default {
         type: 'string',
         options: {
           list: [
-            { title: 'Full Time', value: 'full' },
-            { title: 'Part Time', value: 'part' },
-            { title: 'On Demand', value: 'demand' },
+            { title: 'Full Time', value: 'Full Time' },
+            { title: 'Part Time', value: 'Part Time' },
+            { title: 'On Demand', value: 'On Demand' },
           ],
         },
       },
