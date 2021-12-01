@@ -13,14 +13,14 @@ jQuery(document).on("click", ".validateFormStepPrev", function(event) {
     // jQuery(allFieldsets[nextFieldSet]).focus();
     jQuery('html, body').animate({
             scrollTop: scrollTo
-    }, 2000);
+    }, 200);
 });
 jQuery(document).on("click", ".validateFormStepNext, .submitApplication", function(event) {
     event.preventDefault();
     var fieldsetCounter = jQuery(this).data('fieldsetcounter');
     var fieldsets = jQuery('.application-form--fieldset.active');
     var fieldset = fieldsets[0];
-    // console.log(fieldset);
+    console.log(fieldsetCounter);
     var fieldsetName = jQuery(fieldset).data('fieldset');
     // console.log(fieldsetName);
     for(counter=0; counter < objInputs.length; counter++){
@@ -40,6 +40,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
         // console.log(required);
         var selector;
         var border = '#d2d6dc';
+        console.log(value.type);
         switch(value.type){
             case 'radio':
                 var checked = false;
@@ -149,9 +150,10 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
                         case 'national_insurance':
                             blnValidation = isValidateNationalInsurance(inputValue);
                         break;
-                        // case 'email':
-                        //     blnValidation = isValidateEmail(inputValue);
-                        // break;
+                        case 'email':
+                            console.log(key);
+                            blnValidation = isValidateEmail(inputValue);
+                        break;
                     }
                     if(!blnValidation){
                         border = 'red';
@@ -210,7 +212,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     if(currentStepValidation){
         var allFieldsets = jQuery('.application-form--fieldset');
         nextFieldSet = fieldsetCounter + 1;
-        // console.log(allFieldsets);
+        //console.log(allFieldsets);
         nextFieldSet = fieldsetCounter + 1;
         if(jQuery(event.target).hasClass('submitApplication')){
             jQuery('#applicationForm').submit();
@@ -231,7 +233,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     
     jQuery('html, body').animate({
         scrollTop: scrollTo
-    }, 2000);
+    }, 200);
 });
 
 function isValidPostcode(postcode) { 
@@ -239,10 +241,10 @@ function isValidPostcode(postcode) {
     return postcodeRegEx.test(postcode);
 }
 
-// function isValidateEmail(email) {
-//     const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-//     return re.test(String(email).toLowerCase());
-// }
+function isValidateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 function isValidateNationalInsurance(nationalInsurance) {
     const re = /^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/;

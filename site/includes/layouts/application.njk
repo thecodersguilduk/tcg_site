@@ -19,9 +19,9 @@ layout: default
                             <p class="mt-1 text-sm leading-5 text-gray-500">{{ fieldset.help }} </p>
                         {% endif %}
 
-                        {% if fieldset.fields.opportunity.options %}
+                        {% if form[0].fields.opportunity.options %}
                             <h3 class="my-8">Current Vacancies</h3>
-                            {% for key, option in fieldset.fields.opportunity.options  %}
+                            {% for key, option in form[0].fields.opportunity.options  %}
                             <div class="mb-6">
                                 <h5>{{option.name}}</h5>
                                 <h5>{{option.job_title}}</h5>
@@ -48,6 +48,8 @@ layout: default
                                 {% switch field.type %}
                                     {% case 'text' %}
                                         <input id="{{name}}" name="{{name}}" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
+                                     {% case 'email' %}
+                                        <input id="{{name}}" name="{{name}}" type="email" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                     {% case 'date_picker' %}
                                         <input id="{{name}}" name="{{name}}" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                         <script>
@@ -57,8 +59,6 @@ layout: default
                                                     changeYear: true,
                                                     yearRange: "-100:+0", // last hundred years
                                                     defaultDate: '-20y',
-                                                    format: "dd-mm-yyyy",
-                                                    dateFormat: "dd-mm-yyyy",
                                                     onSelect: function(dateText, inst) {
                                                         jQuery(this).focus();
                                                     }
@@ -211,12 +211,12 @@ layout: default
                 </div>
                 <div class="buttonContainer">
                     {% if fieldsetCounter != 0 %}
-                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepPrev btn btn-secondary">Prev</button>
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepPrev btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Prev</button>
                     {% endif %}
                     {% if fieldsetCounter != (counter -1) %}
-                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepNext btn btn-secondary">Next</button>
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepNext btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Next</button>
                     {% else %}
-                        <button data-fieldsetcounter="{{fieldsetCounter}}" type="submit" class="btn btn-primary submitApplication">Submit Application</button>
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" type="submit" class="btn block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 submitApplication">Submit Application</button>
                     {% endif %}
                     <div class="clearfix"></div>
                 </div>
@@ -228,6 +228,7 @@ layout: default
 <script>
     var objInputs = {{ form | dump | safe }}
 </script>
+
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery-ui.js"></script>
 <script src="/js/tcg-validation.js"></script>
