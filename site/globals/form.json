@@ -38,7 +38,7 @@
            },
            "email":{
               "type":"text",
-              "required":true,
+              "required":false,
               "label":"Email",
               "class":"wide",
               "help":"don't worry, we're not going to spam you",

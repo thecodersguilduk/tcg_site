@@ -149,9 +149,9 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
                         case 'national_insurance':
                             blnValidation = isValidateNationalInsurance(inputValue);
                         break;
-                        case 'email':
-                            blnValidation = isValidateEmail(inputValue);
-                        break;
+                        // case 'email':
+                        //     blnValidation = isValidateEmail(inputValue);
+                        // break;
                     }
                     if(!blnValidation){
                         border = 'red';
@@ -239,10 +239,10 @@ function isValidPostcode(postcode) {
     return postcodeRegEx.test(postcode);
 }
 
-function isValidateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+// function isValidateEmail(email) {
+//     const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+//     return re.test(String(email).toLowerCase());
+// }
 
 function isValidateNationalInsurance(nationalInsurance) {
     const re = /^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/;
@@ -261,33 +261,33 @@ jQuery( document ).ready(function() {
     });
 });
 
-jQuery( document ).ready(function() {
-    const menuBtn = document.querySelector(".menu-btn");  
-    // const menuBranding = document.querySelector(".menu-branding");
-    // const navItems = document.querySelectorAll(".nav-item");
-    // console.log(menuBtn);
-    let showMenu = false; 
-    menuBtn.addEventListener("click", toggleMenu); 
+// jQuery( document ).ready(function() {
+//     const menuBtn = document.querySelector(".menu-btn");  
+//     // const menuBranding = document.querySelector(".menu-branding");
+//     // const navItems = document.querySelectorAll(".nav-item");
+//     // console.log(menuBtn);
+//     let showMenu = false; 
+//     menuBtn.addEventListener("click", toggleMenu); 
     
-    function toggleMenu() { 
-        if (!showMenu) { 
-            menuBtn.classList.add("close"); 
-            jQuery(".showMobileMenu").show(500); 
-            // menuBranding.classList.add("show"); 
-            // navItems.forEach((item) => 
-            //     item.classList.add("show")); 
+//     function toggleMenu() { 
+//         if (!showMenu) { 
+//             menuBtn.classList.add("close"); 
+//             jQuery(".showMobileMenu").show(500); 
+//             // menuBranding.classList.add("show"); 
+//             // navItems.forEach((item) => 
+//             //     item.classList.add("show")); 
 
-            // Reset the menu state 
-            showMenu = true; 
-        } else { 
-            menuBtn.classList.remove("close");  
-            jQuery(".showMobileMenu").hide(500); 
-            // menuBranding.classList.remove("show"); 
-            // navItems.forEach((item) => 
-            //     item.classList.remove("show")); 
+//             // Reset the menu state 
+//             showMenu = true; 
+//         } else { 
+//             menuBtn.classList.remove("close");  
+//             jQuery(".showMobileMenu").hide(500); 
+//             // menuBranding.classList.remove("show"); 
+//             // navItems.forEach((item) => 
+//             //     item.classList.remove("show")); 
 
-            // Reset the menu state 
-            showMenu = false; 
-        } 
-    } 
-});
+//             // Reset the menu state 
+//             showMenu = false; 
+//         } 
+//     } 
+// });

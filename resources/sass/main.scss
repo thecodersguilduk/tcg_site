@@ -126,3 +126,168 @@
     text-decoration: none;
   }
 }
+.woocommerce-MyAccount-content{
+	padding:10px;
+	border:1px solid black;
+}
+
+.entry-content{
+	padding-top:30px;
+}
+.entry-content p{
+	margin-bottom:30px;
+}
+
+.application-form--fieldset{
+	display:none;
+}
+
+.application-form--fieldset.active{
+	display:block;
+}
+
+.validateFormStepNext,
+.submitApplication{
+	float:right;
+}
+
+.buttonContainer{
+	padding:10px 30px;
+}
+
+.clearfix{
+	clear:both;
+}
+
+.woocommerce-form__input.woocommerce-form__input-checkbox{
+	width:1rem;
+	position: relative;
+    top: 14px;
+}
+
+.woocommerce-account .woocommerce-error{
+	background-color:transparent;
+	box-sizing:border-box;
+	color:rgb(187, 52, 52);
+	display:block;
+	font-family:sans-serif;
+	font-size:12px;
+	font-weight:700;
+	line-height:18px;
+	text-size-adjust:100%;
+	margin-bottom:30px;
+}
+
+.woocommerce-account .woocommerce-message{
+	background-color:transparent;
+	box-sizing:border-box;
+	color:#0f834d;
+	display:block;
+	font-family:sans-serif;
+	font-size:12px;
+	font-weight:700;
+	line-height:18px;
+	text-size-adjust:100%;
+	margin-bottom:30px;
+}
+
+ul#primary-menu,
+#primary-menu ul{
+	display: flex;
+}
+
+.showMobileMenu{
+	display:none;
+}
+
+.showMobileMenu .flex{
+	display:block;
+	padding-right: 3rem;
+	text-align:right;
+}
+
+.menu-btn { 
+	position: absolute; 
+	z-index: 3; 
+	right: 35px; 
+	top: 35px; 
+	cursor: pointer; 
+	transition: all 0.5s ease-out; 
+} 
+
+/* Styling the hamburger lines */
+.menu-btn .btn-line { 
+	width: 28px; 
+	height: 3px; 
+	margin: 0 0 5px 0; 
+	background: black; 
+	transition: all 0.5s ease-out; 
+} 
+
+/* Adding tranform to the X */
+.menu-btn.close { 
+	transform: rotate(180deg); 
+} 
+
+/* Styling the three lines  
+	to make it an X */
+.menu-btn.close .btn-line:nth-child(1) { 
+	transform: rotate(45deg) translate(5px, 5px); 
+} 
+
+.menu-btn.close .btn-line:nth-child(2) { 
+	opacity: 0; 
+} 
+
+.menu-btn.close .btn-line:nth-child(3) { 
+	transform: rotate(-45deg) translate(7px, -6px); 
+} 
+
+/* Adding a transition delay to the 
+   4 items in the navigation menu */
+.nav-item:nth-child(1) { 
+	transition-delay: 0.1s; 
+} 
+
+.nav-item:nth-child(2) { 
+	transition-delay: 0.2s; 
+} 
+
+.nav-item:nth-child(3) { 
+	transition-delay: 0.3s; 
+} 
+
+.nav-item:nth-child(4) { 
+	transition-delay: 0.4s; 
+}
+nav{
+	box-shadow: none;
+}
+.edit-link{
+	display:none;
+}
+
+.btn.btn-secondary:focus{
+	outline: none !important;
+    border:1px solid #7dafff;
+    box-shadow: 0 0 10px #719ECE;
+}
+body .text-black{
+	color:black;
+}
+article p{
+	margin-bottom:30px;
+}
+.other{
+	display:none;
+}
+select{
+	max-width:100%;
+}
+fieldset a {
+	text-decoration: underline;
+}
+.form-label{
+	text-transform: none;
+}
+@media (min-width:1024px){#mobile-menu{display:none}}
