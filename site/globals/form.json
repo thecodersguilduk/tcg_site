@@ -248,7 +248,6 @@
               "class":"wide",
               "help":"",
               "required_message":"Please provide a valid postcode"
-           }
            },
            "employment_eligability":{
               "type":"radio",
@@ -263,7 +262,8 @@
               ],
               "required_message":"Please provide an answer"
            }
-        },
+        }
+     },
      {
         "name":"one_more_thing",
         "label":"Finally",
