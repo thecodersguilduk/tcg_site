@@ -23,8 +23,8 @@ layout: default
                             <h3 class="my-8">Current Vacancies</h3>
                             {% for key, option in form[0].fields.opportunity.options  %}
                             <div class="mb-6">
-                                <h5>{{option.name}}</h5>
-                                <h5>{{option.job_title}}</h5>
+                                <p><strong>{{option.name}}</strong></p>
+                                <p><strong>{{option.job_title}}</strong></p>
                                 <p class="mt-1 text-sm leading-5 text-gray-500">{{option.location}}</p>
                                 <a class="mt-1 text-sm break-all" href="{{option.url}}" target="_blank">Click here for more information</a>
                             </div>

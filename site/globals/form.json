@@ -90,24 +90,28 @@
                "other":"other",
                "other_text":"Provide examples seperated by commas"
             },
-           "opportunity":{
+            "opportunity":{
                "type":"select",
                "required":false,
                "label":"Which vacancy are you applying for?",
                "class":"wide",
                "help":"If you have come here via the .gov find an apprenticeship site or a job board the vacancy will be for a specific organisation - if not applicable just leave this blank",
                "options":{
-                  "Pace IT": "Pace IT in West Yorkshire",
-                  "A1": "A1 Security in West Midlands"
-               }
-              
+                  "Dedalus": {
+                     "name": "Dedalus",
+                     "job_title": "Software Developer Apprentice",
+                     "location": "Leeds, West Yorkshire",
+                     "url": "https://www.findapprenticeship.service.gov.uk/apprenticeship/-671182"
+                  }
+               },
+               "required_message":"Please provide an answer"
             }
         }
      },
      {
         "name":"application",
         "label":"Application Questions",
-        "help":"This course is not right for everyone - these questions will help us make a judgement on whether this pilot course is the right learning path for you. If you are unsuccessful we will still be able to point you to other resources and programmes. Please fill out the questions to the best of your ability.",
+        "help":"",
         "fields":{
             "why_did_user_apply":{
                "type":"textarea",
@@ -245,8 +249,6 @@
               "help":"",
               "required_message":"Please provide a valid postcode"
            }
-
-           
            },
            "employment_eligability":{
               "type":"radio",
