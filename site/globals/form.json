@@ -4,6 +4,34 @@
         "label":"About You",
         "help":"First off let's find out who you are. If completing a form like this is difficult for you to manage please get in touch via applications@thecodersguild.org.uk and we will arrange an alternative way for you to apply.",
         "fields":{
+         "opportunity":{
+            "type":"select",
+            "required":true,
+            "label":"Which vacancy are you applying for?",
+            "class":"wide",
+            "help":"If you have come here via the .gov find an apprenticeship site or a job board the vacancy will be for a specific organisation - if not applicable just leave this blank",
+            "options":{
+               "Pareto": {
+                  "name": "Pareto",
+                  "job_title": "Sales Executive Apprentice",
+                  "location": "?",
+                  "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
+               },
+               "Yorkshire Digital Marketing Apprentice": {
+                  "name": "Yorkshire Digital Marketing Apprentice",
+                  "job_title": "Digital Marketing Apprentice",
+                  "location": "?",
+                  "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
+               },
+               "Yorkshire Admin Apprentice": {
+                  "name": "Yorkshire Admin Apprentice",
+                  "job_title": "Administration Apprentice",
+                  "location": "?",
+                  "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
+               }
+            },
+            "required_message":"Please provide an answer"
+         },
            "first_name":{
               "type":"text",
               "required":true,
@@ -68,44 +96,41 @@
               "other":"other",
               "other_text":"Please enter below"
            },
-           
-           "where_are_you_looking_to_work":{
-               "type":"checkbox",
-               "required":false,
-               "label":"Where would you be looking to work?",
-               "class":"wide",
-               "help":"",
-               "options":[
-                  "Greater London",
-                  "South East England",
-                  "South West England",
-                  "West Midlands",
-                  "North West England",
-                  "North East England",
-                  "Yorkshire and the Humber",
-                  "East Midlands",
-                  "East of England"
-               ],
-               "required_message":"Please provide an answer",
-               "other":"other",
-               "other_text":"Provide examples seperated by commas"
-            },
-            "opportunity":{
-               "type":"select",
-               "required":false,
-               "label":"Which vacancy are you applying for?",
-               "class":"wide",
-               "help":"If you have come here via the .gov find an apprenticeship site or a job board the vacancy will be for a specific organisation - if not applicable just leave this blank",
-               "options":{
-                  "Dedalus": {
-                     "name": "Dedalus",
-                     "job_title": "Software Developer Apprentice",
-                     "location": "Leeds, West Yorkshire",
-                     "url": "https://www.findapprenticeship.service.gov.uk/apprenticeship/-671182"
-                  }
-               },
-               "required_message":"Please provide an answer"
-            }
+           "postcode":{
+            "type":"text",
+            "required":true,
+            "label":"Postcode",
+            "class":"wide",
+            "help":"",
+            "required_message":"Please provide a valid postcode"
+         },
+         "employment_eligability":{
+            "type":"radio",
+            "required":true,
+            "label":"Do you have the right to work in the UK?",
+            "class":"wide",
+            "help":"",
+            "options":[
+               "Yes",
+               "No",
+               "Unsure"
+            ],
+            "required_message":"Please provide an answer"
+         },
+         "completed_before":{
+            "type":"radio",
+            "required":true,
+            "label":"Have you completed an apprenticeship before?",
+            "class":"wide",
+            "help":"",
+            "options":[
+               "Yes",
+               "No"
+            ],
+            "required_message":"Please provide an answer",
+            "other":"Yes",
+            "other_text":"What subject was your previous apprenticeship in?"
+         }  
         }
      },
      {
@@ -115,6 +140,7 @@
         "fields":{
             "why_did_user_apply":{
                "type":"textarea",
+               "tags": ["pareto", "yorkshire digital marketing"],
                "required":true,
                "label":"What has made you apply for this Apprenticeship Position?",
                "class":"wide",
@@ -216,55 +242,6 @@
         }
      },
      {
-        "name":"eligibility",
-        "label":"Are you eligible for funding?",
-        "help":"This course is Gov funded and FREE for you - so obviously there is paperwork for us to complete. We need this information to be able to progress your application so please don't leave any out.",
-        "fields":{
-          "eligibility":{
-              "type":"select",
-              "required":true,
-              "label":"Eligibility",
-              "class":"wide",
-              "help":"",
-              "options":{
-                  "1": "Yes",
-                  "2": "No",
-                  "3": "Unsure" 
-               },
-              "required_message":"Please provide an answer"
-           },
-            "occupation":{
-              "type":"text",
-              "required":false,
-              "label":"Occupation",
-              "class":"wide",
-              "help":"What is your current job title (if applicable)",
-              "required_message":"Please provide an answer"
-           },
-           "postcode":{
-              "type":"text",
-              "required":true,
-              "label":"Postcode",
-              "class":"wide",
-              "help":"",
-              "required_message":"Please provide a valid postcode"
-           },
-           "employment_eligability":{
-              "type":"radio",
-              "required":true,
-              "label":"Do you have the right to work in the UK?",
-              "class":"wide",
-              "help":"",
-              "options":[
-                 "Yes",
-                 "No",
-                 "Unsure"
-              ],
-              "required_message":"Please provide an answer"
-           }
-        }
-     },
-     {
         "name":"one_more_thing",
         "label":"Finally",
         "help":"It really helps us if you let us know what bits of our social media and marketing are working :)",
@@ -290,6 +267,13 @@
                "required_message":"Please provide your reference",
                "other_text":"Where did you hear about this?"
            },
+           "cv":{
+            "type":"file",
+            "required":false,
+            "label":"Should you wish to upload a CV - drop it here",
+            "class":"wide",
+            "help":""
+         },
            "terms":{
               "type":"checkbox",
               "required":true,

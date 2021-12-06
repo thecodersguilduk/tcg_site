@@ -35,7 +35,7 @@ layout: default
                     <div class="lg:w-4/6 card-dark p-8">
                         {% set fieldCounter = 0 %}
                         {% for name,field in fieldset.fields %}
-                            <div class="{% if fieldCounter != 0 %}mt-8{%endif%}">
+                            <div class="question {% if fieldCounter != 0 %}mt-8{%endif%} {% if field.tags %}{% for tag in field.tags %}{{ tag | join }} {% endfor %}{% else %}all {% endif %}">
                                 <label for="{{name}}" class="form-label">
                                     {{field.label}}
                                     {% if field.required != 0 %}
@@ -48,6 +48,8 @@ layout: default
                                 {% switch field.type %}
                                     {% case 'text' %}
                                         <input id="{{name}}" name="{{name}}" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
+                                    {% case 'file' %}
+                                        <input id="{{name}}" type="{{field.type}}" name="{{name}}" class="mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                      {% case 'email' %}
                                         <input id="{{name}}" name="{{name}}" type="email" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                     {% case 'date_picker' %}
@@ -232,3 +234,30 @@ layout: default
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery-ui.js"></script>
 <script src="/js/tcg-validation.js"></script>
+
+<script>
+    const opportunity = document.getElementById('opportunity');
+    const questions = Array.from(document.querySelectorAll(".question"));
+    
+    opportunity.addEventListener('change', e => {
+        const value = join(e.target.value);
+        
+        questions.forEach(question => {
+            const classList = Array.from(question.classList);
+
+            if(!classList.includes('all') && !classList.includes(value)){
+                question.classList.remove('block');
+                question.classList.add('hidden');
+            } else {
+                question.classList.add('block');
+                question.classList.remove('hidden');
+            }    
+        });
+    });
+
+
+   function join(string) {
+    return string.replace(/\s+/g, '-').toLowerCase();
+    }
+
+</script>
