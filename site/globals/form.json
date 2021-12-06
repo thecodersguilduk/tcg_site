@@ -150,6 +150,7 @@
             "why_is_user_a_fit":{
                "type":"textarea",
                "required":true,
+               "tags": ["Pareto"],
                "label":"Why do you think you would be a good fit for The Coders Guild?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -158,7 +159,17 @@
             "what_is_user_passionate":{
                "type":"textarea",
                "required":true,
+               "tags": ["Pareto"],
                "label":"What is something outside of your work that you are passionate about?",
+               "class":"wide",
+               "help":"More than 50 but less than 200 words please :)",
+               "required_message":"Please provide an answer"
+            },
+            "idea_convince":{
+               "type":"textarea",
+               "required":true,
+               "tags": ["Pareto"],
+               "label":"Can you tell us about a time you had to convince someone that your idea was a  good one?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
                "required_message":"Please provide an answer"

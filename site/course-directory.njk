@@ -169,7 +169,6 @@ title: 'Course Directory'
             
            if(!optionsText.some(item => fieldArray.includes(item))){
                fieldArray.push(join(e.target.value));
-               console.log(fieldArray);
            } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking) 
               fieldArray.forEach(field => {
                  if(optionsText.some(item => fieldArray.includes(item))){
@@ -184,11 +183,9 @@ title: 'Course Directory'
 
          if(nodeName === 'input' && e.target.checked){
             fieldArray.push(join(e.target.value));
-            console.log(fieldArray);
          } else if (nodeName === 'input' && !e.target.checked) {
             let index = fieldArray.indexOf(join(e.target.value));
             fieldArray.splice(index, 1);
-            console.log(fieldArray)
          }
 
          courses.forEach(course => {       
