@@ -9,7 +9,7 @@
             "required":true,
             "label":"Which vacancy are you applying for?",
             "class":"wide",
-            "help":"If you have come here via the .gov find an apprenticeship site or a job board the vacancy will be for a specific organisation - if not applicable just leave this blank",
+            "help":"The role you apply for will determine the questions we need to ask",
             "options":{
                "Pareto": {
                   "name": "Pareto",

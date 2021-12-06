@@ -248,9 +248,18 @@ layout: default
             if(!classList.includes('all') && !classList.includes(value)){
                 question.classList.remove('block');
                 question.classList.add('hidden');
+                const parent = question.parentNode;
+                if(Array.from(parent.classList).includes("lg:w-4/6")){
+                    question.nextElementSibling.classList.remove("mt-8");
+                }
             } else {
                 question.classList.add('block');
                 question.classList.remove('hidden');
+                const previousSibling = question.previousElementSibling;
+                console.log(previousSibling);
+                if(!previousSibling){
+                    question.nextElementSibling.classList.add("mt-8");
+                }
             }    
         });
     });
