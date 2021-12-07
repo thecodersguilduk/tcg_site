@@ -34,6 +34,12 @@
                   "job_title": "Business Administration Apprentice",
                   "location": "Manchester",
                   "url": ""
+               },
+               "Technical Trainer": {
+                  "name": "Technical Trainer",
+                  "job_title": "Technical Trainer",
+                  "location": "Remote",
+                  "url": ""
                }
             },
             "required_message":"Please provide an answer"
@@ -156,7 +162,7 @@
             "why_is_user_a_fit":{
                "type":"textarea",
                "required":true,
-               "tags": ["Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"Why do you think you would be a good fit for The Coders Guild?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -165,7 +171,7 @@
             "what_is_user_passionate":{
                "type":"textarea",
                "required":true,
-               "tags": ["Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"What is something outside of your work that you are passionate about?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -202,6 +208,15 @@
             "required":true,
             "tags": ["Leeds Digital Marketing Apprentice"],
             "label":"What is your favourite social media platform and why?",
+            "class":"wide",
+            "help":"More than 50 but less than 200 words please :)",
+            "required_message":"Please provide an answer"
+         },
+           "specialisms":{
+            "type":"textarea",
+            "required":true,
+            "tags": ["Technical Trainer"],
+            "label": "Which area do you feel you specialise in and would enjoy sharing with our learners and why?",
             "class":"wide",
             "help":"More than 50 but less than 200 words please :)",
             "required_message":"Please provide an answer"
