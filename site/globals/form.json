@@ -17,17 +17,23 @@
                   "location": "?",
                   "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
                },
-               "Yorkshire Digital Marketing Apprentice": {
-                  "name": "Yorkshire Digital Marketing Apprentice",
+               "Leeds Digital Marketing Apprentice": {
+                  "name": "Leeds Digital Marketing Apprentice",
                   "job_title": "Digital Marketing Apprentice",
-                  "location": "?",
-                  "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
+                  "location": "Leeds",
+                  "url": ""
                },
-               "Yorkshire Admin Apprentice": {
+               "Yorkshire Business Admin Apprentice": {
                   "name": "Yorkshire Admin Apprentice",
-                  "job_title": "Administration Apprentice",
-                  "location": "?",
-                  "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
+                  "job_title": "Business Administration Apprentice",
+                  "location": "Yorkshire",
+                  "url": ""
+               },
+               "Manchester Business Admin Apprentice": {
+                  "name": "Manchester Admin Apprentice",
+                  "job_title": "Business Administration Apprentice",
+                  "location": "Manchester",
+                  "url": ""
                }
             },
             "required_message":"Please provide an answer"
@@ -150,7 +156,7 @@
             "why_is_user_a_fit":{
                "type":"textarea",
                "required":true,
-               "tags": ["Pareto"],
+               "tags": ["Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"Why do you think you would be a good fit for The Coders Guild?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -159,7 +165,7 @@
             "what_is_user_passionate":{
                "type":"textarea",
                "required":true,
-               "tags": ["Pareto"],
+               "tags": ["Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"What is something outside of your work that you are passionate about?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -177,6 +183,7 @@
             "time_organised":{
                "type":"textarea",
                "required":true,
+               "tags": ["Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice"],
                "label":"Can you tell us about a time when you have had to be organised and how that has paid off?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -189,7 +196,16 @@
               "class":"wide",
               "help":"More than 50 but less than 200 words please :)",
               "required_message":"Please provide an answer"
-           }
+           },
+           "social_media":{
+            "type":"textarea",
+            "required":true,
+            "tags": ["Leeds Digital Marketing Apprentice"],
+            "label":"What is your favourite social media platform and why?",
+            "class":"wide",
+            "help":"More than 50 but less than 200 words please :)",
+            "required_message":"Please provide an answer"
+         }
         }
      },
      {
