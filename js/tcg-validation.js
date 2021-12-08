@@ -20,7 +20,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     var fieldsetCounter = jQuery(this).data('fieldsetcounter');
     var fieldsets = jQuery('.application-form--fieldset.active');
     var fieldset = fieldsets[0];
-    console.log(fieldsetCounter);
+    //console.log(fieldset);
     var fieldsetName = jQuery(fieldset).data('fieldset');
     // console.log(fieldsetName);
     for(counter=0; counter < objInputs.length; counter++){
@@ -29,18 +29,20 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
             var validationInputData = objInputs[counter];
         }
     }
+    console.log(validationInputData);
     var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
-    // console.log(validationInputs);
+    console.log(validationInputs);
     var objValues = {};
     var currentStepValidation = true;
     var scrollToElement;
+    var questions = jQuery('.question');
+
     jQuery.each( validationInputs, function( key, value ) {
         var required = value.required;
-        // console.log(required);
+        console.log(required);
         var selector;
         var border = '#d2d6dc';
-        console.log(value.type);
         switch(value.type){
             case 'radio':
                 var checked = false;

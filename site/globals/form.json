@@ -11,10 +11,10 @@
             "class":"wide",
             "help":"The role you apply for will determine the questions we need to ask",
             "options":{
-               "Pareto": {
-                  "name": "Pareto",
+               "Yorkshire Sales Executive Apprentice": {
+                  "name": "Yorkshire Sales Executive Apprentice",
                   "job_title": "Sales Executive Apprentice",
-                  "location": "?",
+                  "location": "North and West Yorkshire",
                   "url": "https://www.instituteforapprenticeships.org/apprenticeship-standards/sales-executive-v1-0"
                },
                "Leeds Digital Marketing Apprentice": {
@@ -152,7 +152,7 @@
         "fields":{
             "why_did_user_apply":{
                "type":"textarea",
-               "tags": ["pareto", "yorkshire digital marketing"],
+               "tags": ["Yorkshire Sales Executive Apprentice", "Manchester Business Admin Apprentice", "Yorkshire Business Admin Apprentice", "Leeds Digital Marketing Apprentice", "yorkshire digital marketing", "Technical Trainer"],
                "required":true,
                "label":"What has made you apply for this Apprenticeship Position?",
                "class":"wide",
@@ -162,7 +162,7 @@
             "why_is_user_a_fit":{
                "type":"textarea",
                "required":true,
-               "tags": ["Technical Trainer", "Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"Why do you think you would be a good fit for The Coders Guild?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -171,7 +171,7 @@
             "what_is_user_passionate":{
                "type":"textarea",
                "required":true,
-               "tags": ["Technical Trainer", "Pareto", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"What is something outside of your work that you are passionate about?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -180,7 +180,7 @@
             "idea_convince":{
                "type":"textarea",
                "required":true,
-               "tags": ["Pareto"],
+               "tags": ["Yorkshire Sales Executive Apprentice"],
                "label":"Can you tell us about a time you had to convince someone that your idea was a  good one?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -198,11 +198,21 @@
            "self_taught":{
               "type":"textarea",
               "required":true,
+              "tags": ["Yorkshire Sales Executive Apprentice", "Leeds Digital Marketing Apprentice", "yorkshire digital marketing"], 
               "label":"Please give us an example of something you have taught yourself",
               "class":"wide",
               "help":"More than 50 but less than 200 words please :)",
               "required_message":"Please provide an answer"
            },
+           "training_course":{
+            "type":"textarea",
+            "required":true,
+            "tags": ["Technical Trainer"], 
+            "label":"WE would love to hear about your experiences of online learning - do you have any recent examples of courses you have really enjoyed?",
+            "class":"wide",
+            "help":"More than 50 but less than 200 words please :)",
+            "required_message":"Please provide an answer"
+         },
            "social_media":{
             "type":"textarea",
             "required":true,
