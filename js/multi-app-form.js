@@ -1,16 +1,10 @@
 const opportunity = document.getElementById('opportunity');
 const questions = Array.from(document.querySelectorAll(".question"));
-// var fieldsets = jQuery('.application-form--fieldset.active');
-// var fieldset = fieldsets[0];
-// var fieldsetName = jQuery(fieldset).data('fieldset');
-var validationInputs = objInputs.map(item => item.fields);
-console.log(validationInputs);
-
+let validationInputs = objInputs.map(item => item.fields);
 
 opportunity.addEventListener('change', e => {
     const value = join(e.target.value);
-    
-    
+      
     questions.forEach(question => {
         const classList = Array.from(question.classList);
       
@@ -19,16 +13,17 @@ opportunity.addEventListener('change', e => {
             question.classList.remove('block');
             question.classList.add('hidden');
             const label = question.querySelector('label').htmlFor;
-            ///console.log(label);
 
             validationInputs.forEach(item => {
                 for(const key in item){
                     if(key === label){
                         item[key].required = false;
                         console.log(item[key].required);
+                    } else {
+                        item[key].required = true;
                     }
                 }
-            })
+            });
 
 
             const remainingEls = Array.from(question.parentNode.children).filter(item => !Array.from(item.classList).includes('hidden'));
