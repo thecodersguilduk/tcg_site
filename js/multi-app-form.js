@@ -16,12 +16,11 @@ opportunity.addEventListener('change', e => {
 
             validationInputs.forEach(item => {
                 for(const key in item){
+                    console.log(key, label);
                     if(key === label){
                         item[key].required = false;
                         console.log(item[key].required);
-                    } else {
-                        item[key].required = true;
-                    }
+                    } 
                 }
             });
 

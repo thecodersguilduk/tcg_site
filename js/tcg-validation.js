@@ -32,11 +32,10 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     console.log(validationInputData);
     var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
-    console.log(validationInputs);
+    //console.log(validationInputs);
     var objValues = {};
     var currentStepValidation = true;
     var scrollToElement;
-    var questions = jQuery('.question');
 
     jQuery.each( validationInputs, function( key, value ) {
         var required = value.required;
