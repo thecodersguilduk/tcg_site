@@ -4,7 +4,7 @@ let validationInputs = objInputs.map(item => item.fields);
 
 opportunity.addEventListener('change', e => {
     const value = join(e.target.value);
-      
+    changeNameAttr(value);
     questions.forEach(question => {
         const classList = Array.from(question.classList);
       
@@ -35,11 +35,36 @@ opportunity.addEventListener('change', e => {
             if(!previousSibling){
                 question.nextElementSibling.classList.add("mt-8");
             }
-        }    
+        }  
     });
 });
 
 
 function join(string) {
 return string.replace(/\s+/g, '-').toLowerCase();
+}
+
+function changeNameAttr(value){
+    //value is the joined value from the opportunity field
+    const form = document.getElementById("applicationForm");
+    switch (value) {
+        case 'leeds-digital-marketing-apprentice': 
+            form.action = "https://formspree.io/f/xeqnqera";
+            break;
+        case 'yorkshire-sales-executive-apprentice': 
+            form.action = "https://formspree.io/f/xvolozww";
+            break;
+        case 'yorkshire-business-admin-apprentice': 
+            form.action = "https://formspree.io/f/xrgjgeyr";
+            break;
+        case 'manchester-business-admin-apprentice': 
+            form.action = "https://formspree.io/f/mbjwjdzw";
+            break;
+        case 'technical-trainer': 
+            form.action = "https://formspree.io/f/xnqwqjgr";
+            break;
+        default:
+            form.action = "https://formspree.io/f/xdoboawr";
+            break;
+    }
 }
