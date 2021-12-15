@@ -11,7 +11,7 @@ const config = {
   useCdn: false // `false` if you want to ensure fresh data
 
 }
-const query = `*[_type == "course"] {
+const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     ...,
     courseType[]->{courseType},
     "featuredImage": featuredImage.asset->url,
