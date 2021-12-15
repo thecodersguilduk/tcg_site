@@ -27,7 +27,7 @@ async function imageShortcode(src, alt, classNames) {
     }
   })
   let lowsrc = metadata.webp[0]
-  console.log(lowsrc);
+  //console.log(lowsrc);
   let highsrc = metadata.webp[metadata.webp.length - 1]
   return `<picture>
       ${Object.values(metadata).map(imageFormat => {
