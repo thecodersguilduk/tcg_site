@@ -46,8 +46,13 @@ function prepPost(data) {
     serializers: serializers
   })
   data.courseType = data.courseType[0].courseType
-  data.featuredImage = data.featuredImage ? data.featuredImage : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+  data.courseItemImage = urlFor(data.featuredImage).width(500).url()
+  data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(1200).height(600).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 
+  if(data.location){
+    data.location = data.location[0]
+  }
+  
   if (data.partner) {
     data.partner = data.partner[0].code
   }
@@ -58,7 +63,7 @@ function prepPost(data) {
     data.project = data.project[0].code
   }
 
-  // console.log(data.funder);
+  console.log(data.location);
   return data
 }
 

@@ -37,11 +37,37 @@ export default {
         title: 'Course Name'
       },
       {
-        name: 'isGMCA',
-        type: 'boolean',
-        title: 'Is GMCA?',
-        fieldset: 'courseMeta'
+        name: 'courseType',
+        title: 'Course Type',
+        type: 'array',
+        description: 'Please select one',
+        of: [
+          {
+            type: 'reference',
+            to: {
+              type: 'courseTypes'
+            }
+          }
+        ]
       },
+        {
+          title: 'Course Location',
+          name: 'location',
+          fieldset: 'courseMeta',
+          description: 'Choose ONE location only',
+          type: 'array',
+          of: [
+            {
+              type: 'string'
+            }
+          ],
+          options: {
+            list: [
+              { title: 'Manchester', value: 'Greater Manchester' },
+              { title: 'Yorkshire', value: 'Yorkshire' }
+            ],
+          },
+        },
       {
         name: 'code',
         type: 'string',
@@ -92,21 +118,6 @@ export default {
               type: 'courseProject'
             }
         }
-        ],
-      },
-      {
-        name: 'courseType',
-        title: 'Course Type',
-        fieldset: 'courseMeta',
-        type: 'array',
-        description: 'Please select one',
-        of: [
-          {
-            type: 'reference',
-            to: {
-              type: 'courseTypes'
-            }
-          }
         ],
       },
       {
