@@ -1,30 +1,41 @@
 ---
-layout: layouts/application.njk
+layout: default
 ---
-<script src="/js/tcg-validation.js"></script>
 
-   {%include "site/includes/components/progressBar.njk"%}
-<form id="applicationForm" action="https://formspree.io/f/mpzovwan" method="post">
-    <h2 class="my-8 ml-4">Application Form</h2>
+<form id="applicationForm" action='/thanks-applications/' method="post">
+    <h2 class="my-8">Application Form</h2>
     {% set counter = 0 %}
     {% for fieldset in form %}
         {% set counter = counter + 1 %}
     {% endfor %}
     {% set fieldsetCounter = 0 %}
     {% for fieldset in form %}
-        <fieldset class="application-form--fieldset">
-            <div class=" lg:w-4/6 card mr-6">
-                {# <div class="lg:flex"> #}
-                    {# <div class="lg:w-2/6 p-8"> #}
-                        <label for="" class="form-label ml-8 font-extrabold">{{ fieldset.label }}</label>
+        <fieldset class="application-form--fieldset {% if fieldsetCounter == 0 %} active {% endif %}" data-fieldset="{{fieldset.name}}">
+            <div class="card">
+                <div class="lg:flex">
+                    <div class="lg:w-2/6 p-8">
+                        <label for="" class="form-label">{{ fieldset.label }}</label>
                         {% if fieldset.help %}
-                            <p class="mt-1 ml-8 text-sm leading-5 text-gray-500">{{ fieldset.help }} </p>
+                            <p class="mt-1 text-sm leading-5 text-gray-500">{{ fieldset.help }} </p>
                         {% endif %}
-                    </div>
+
+                        {% if form[0].fields.opportunity.options %}
+                            <h3 class="my-8">Current Vacancies</h3>
+                            {% for key, option in form[0].fields.opportunity.options  %}
+                            <div class="mb-6">
+                                <p><strong>{{option.name}}</strong></p>
+                                <p><strong>{{option.job_title}}</strong></p>
+                                <p class="mt-1 text-sm leading-5 text-gray-500">{{option.location}}</p>
+                                <a class="mt-1 text-sm break-all" href="{{option.url}}" target="_blank">Click here for the full job specification</a>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                     </div>
+
                     <div class="lg:w-4/6 card-dark p-8">
                         {% set fieldCounter = 0 %}
                         {% for name,field in fieldset.fields %}
-                            <div class="{% if fieldCounter != 0 %}mt-8{%endif%}">
+                            <div class="question {% if fieldCounter != 0 %}mt-8{%endif%} {% if field.tags %}{% for tag in field.tags %}{{ tag | join }} {% endfor %}{% else %}all {% endif %}">
                                 <label for="{{name}}" class="form-label">
                                     {{field.label}}
                                     {% if field.required != 0 %}
@@ -37,6 +48,10 @@ layout: layouts/application.njk
                                 {% switch field.type %}
                                     {% case 'text' %}
                                         <input id="{{name}}" name="{{name}}" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
+                                    {% case 'file' %}
+                                        <input id="{{name}}" type="{{field.type}}" name="{{name}}" class="mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
+                                     {% case 'email' %}
+                                        <input id="{{name}}" name="{{name}}" type="email" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                     {% case 'date_picker' %}
                                         <input id="{{name}}" name="{{name}}" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
                                         <script>
@@ -46,8 +61,6 @@ layout: layouts/application.njk
                                                     changeYear: true,
                                                     yearRange: "-100:+0", // last hundred years
                                                     defaultDate: '-20y',
-                                                    format: "dd-mm-yyyy",
-                                                    dateFormat: "dd-mm-yyyy",
                                                     onSelect: function(dateText, inst) {
                                                         jQuery(this).focus();
                                                     }
@@ -75,7 +88,7 @@ layout: layouts/application.njk
                                                 </div>
                                             </div>
                                         {% endfor %}  
-                                        {% if (field.other) or (ukSelected) %}
+                                        {% if (field.other) or (not ukSelected) %}
                                             <div class="other other__{{name}}">
                                                 <p class="m-2 text-sm text-gray-500">{{field.other_text}}</p>
                                                 <input id="{{name}}_option_selected" name="{{name}}_option_selected" class="form-input mt-1 mb-1 block w-full placeholder-muted" {% if field.required_message %}required{%endif%} />
@@ -139,7 +152,6 @@ layout: layouts/application.njk
                                                     var selector = '[name ="{{name}}"]';
                                                     var inputs = jQuery(selector);
                                                     var optionContainer = jQuery('.other__{{name}}');
-                                                    console.log(optionContainer)
                                                     inputs.each(function( index ) {
                                                         var currentCheckbox = jQuery(this);
                                                         if(currentCheckbox.prop('checked')){
@@ -158,17 +170,17 @@ layout: layouts/application.njk
                                             <select name="{{name}}" id="{{name}}" class="form-select"> 
                                                 <option value="">Please Select</option>
                                                 {% for key,option in field.options %}
-                                                    <option value="{{key}}">{{option}}</option>
+                                                    <option value="{{key}}">{% if option.name %}{{option.name}}{% else %}{{option}}{% endif %}</option>
                                                 {% endfor %} 
                                             </select>
                                         </div>
-                                        <script>
+                                        {# <script>
                                             var ukSelected = true;
                                             var nationalityField = document.getElementById('nationality');
                                             var optionContainer = document.querySelector('.nationality');
                                         
                                             nationalityField.addEventListener('change', ()=>{
-                                                if(nationalityField.value === 'United Kingdom'){
+                                                if(nationalityField.value !== 'EU Citizen'){
                                                     ukSelected = true; 
                                                     optionContainer.style.display = 'none'
                                                     
@@ -179,7 +191,7 @@ layout: layouts/application.njk
                                                 }
                                             })
                                             
-                                        </script>  
+                                        </script>   #}
                                         {% if not ukSelected %}
                                             <div class="other nationality">
                                                 <p class="m-2 text-sm text-gray-500">{{field.other_text}}</p>
@@ -199,28 +211,27 @@ layout: layouts/application.njk
                         {% endfor %}
                     </div>
                 </div>
-                {# <div class="buttonContainer"> #}
-                    {# {% if fieldsetCounter != 0 %}
-                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepPrev btn btn-secondary">Prev</button>
+                <div class="buttonContainer">
+                    {% if fieldsetCounter != 0 %}
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepPrev btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Prev</button>
                     {% endif %}
                     {% if fieldsetCounter != (counter -1) %}
-                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepNext btn btn-secondary">Next</button>
-                    {% else %} #}
-                        {# <button data-fieldsetcounter="{{fieldsetCounter}}" type="submit" class="btn btn-primary submitApplication">Submit Application</button> #}
-                    {# {% endif %} #}
-                    {# <div class="clearfix"></div>
-                </div> #}
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" class="validateFormStepNext btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Next</button>
+                    {% else %}
+                        <button data-fieldsetcounter="{{fieldsetCounter}}" type="submit" class="btn block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 submitApplication">Submit Application</button>
+                    {% endif %}
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </fieldset>
         {% set fieldsetCounter = fieldsetCounter + 1 %}
     {% endfor %}
-    <div class="flex">
-    <button
-        class="w-lg inline-flex items-center justify-center px-6 py-3 my-3 border-1 rounded-lg shadow-sm text-base font-bold text-white bg-blue-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        type="submit">Submit
-      </button>
-      </div>
 </form>
 <script>
     var objInputs = {{ form | dump | safe }}
 </script>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/tcg-validation.js"></script>
+<script src="/js/multi-app-form.js"></script>

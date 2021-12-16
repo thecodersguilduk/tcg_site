@@ -13,14 +13,14 @@ jQuery(document).on("click", ".validateFormStepPrev", function(event) {
     // jQuery(allFieldsets[nextFieldSet]).focus();
     jQuery('html, body').animate({
             scrollTop: scrollTo
-    }, 2000);
+    }, 200);
 });
 jQuery(document).on("click", ".validateFormStepNext, .submitApplication", function(event) {
     event.preventDefault();
     var fieldsetCounter = jQuery(this).data('fieldsetcounter');
     var fieldsets = jQuery('.application-form--fieldset.active');
     var fieldset = fieldsets[0];
-    // console.log(fieldset);
+    //console.log(fieldset);
     var fieldsetName = jQuery(fieldset).data('fieldset');
     // console.log(fieldsetName);
     for(counter=0; counter < objInputs.length; counter++){
@@ -29,15 +29,17 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
             var validationInputData = objInputs[counter];
         }
     }
+    console.log(validationInputData);
     var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
-    // console.log(validationInputs);
+    //console.log(validationInputs);
     var objValues = {};
     var currentStepValidation = true;
     var scrollToElement;
+
     jQuery.each( validationInputs, function( key, value ) {
         var required = value.required;
-        // console.log(required);
+        console.log(required);
         var selector;
         var border = '#d2d6dc';
         switch(value.type){
@@ -150,6 +152,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
                             blnValidation = isValidateNationalInsurance(inputValue);
                         break;
                         case 'email':
+                            console.log(key);
                             blnValidation = isValidateEmail(inputValue);
                         break;
                     }
@@ -210,7 +213,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     if(currentStepValidation){
         var allFieldsets = jQuery('.application-form--fieldset');
         nextFieldSet = fieldsetCounter + 1;
-        // console.log(allFieldsets);
+        //console.log(allFieldsets);
         nextFieldSet = fieldsetCounter + 1;
         if(jQuery(event.target).hasClass('submitApplication')){
             jQuery('#applicationForm').submit();
@@ -231,7 +234,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
     
     jQuery('html, body').animate({
         scrollTop: scrollTo
-    }, 2000);
+    }, 200);
 });
 
 function isValidPostcode(postcode) { 
@@ -261,33 +264,33 @@ jQuery( document ).ready(function() {
     });
 });
 
-jQuery( document ).ready(function() {
-    const menuBtn = document.querySelector(".menu-btn");  
-    // const menuBranding = document.querySelector(".menu-branding");
-    // const navItems = document.querySelectorAll(".nav-item");
-    // console.log(menuBtn);
-    let showMenu = false; 
-    menuBtn.addEventListener("click", toggleMenu); 
+// jQuery( document ).ready(function() {
+//     const menuBtn = document.querySelector(".menu-btn");  
+//     // const menuBranding = document.querySelector(".menu-branding");
+//     // const navItems = document.querySelectorAll(".nav-item");
+//     // console.log(menuBtn);
+//     let showMenu = false; 
+//     menuBtn.addEventListener("click", toggleMenu); 
     
-    function toggleMenu() { 
-        if (!showMenu) { 
-            menuBtn.classList.add("close"); 
-            jQuery(".showMobileMenu").show(500); 
-            // menuBranding.classList.add("show"); 
-            // navItems.forEach((item) => 
-            //     item.classList.add("show")); 
+//     function toggleMenu() { 
+//         if (!showMenu) { 
+//             menuBtn.classList.add("close"); 
+//             jQuery(".showMobileMenu").show(500); 
+//             // menuBranding.classList.add("show"); 
+//             // navItems.forEach((item) => 
+//             //     item.classList.add("show")); 
 
-            // Reset the menu state 
-            showMenu = true; 
-        } else { 
-            menuBtn.classList.remove("close");  
-            jQuery(".showMobileMenu").hide(500); 
-            // menuBranding.classList.remove("show"); 
-            // navItems.forEach((item) => 
-            //     item.classList.remove("show")); 
+//             // Reset the menu state 
+//             showMenu = true; 
+//         } else { 
+//             menuBtn.classList.remove("close");  
+//             jQuery(".showMobileMenu").hide(500); 
+//             // menuBranding.classList.remove("show"); 
+//             // navItems.forEach((item) => 
+//             //     item.classList.remove("show")); 
 
-            // Reset the menu state 
-            showMenu = false; 
-        } 
-    } 
-});
+//             // Reset the menu state 
+//             showMenu = false; 
+//         } 
+//     } 
+// });

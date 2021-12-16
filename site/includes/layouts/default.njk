@@ -100,7 +100,6 @@
   {# else, use the minified css file for production #}
   <link rel="stylesheet" href="/css/main.min.css">
   {% endif %}
-
   {# include scripts #}
   {% if helpers.environment === "development" %}
   <script src="/js/main.js" defer></script>
@@ -118,7 +117,7 @@
   {# font awesome #}
   <script defer src="https://kit.fontawesome.com/c7b754904c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-
+   <link rel="stylesheet" href="/css/jquery-ui.css">
 
   {# canonical #}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
