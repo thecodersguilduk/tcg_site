@@ -82,6 +82,21 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
+    imageSection: ({ node: { asset, width } }) => h("img", {
+      src: urlFor(asset).width().url(),
+    }),
+    ctaMain: node => h("div", {
+     className: 'flex flex-col lg:flex-row bg-gray-800 my-24'
+    }),
+    applyBtn: ({ node: { btnText, btnLink } }) => {
+      const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
+      return h("a", {
+        href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
+        className: 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white',
+        innerHTML: btnText + rightArrow,
+        style: 'color: white;'
+      })
+    }
   }
 }
 

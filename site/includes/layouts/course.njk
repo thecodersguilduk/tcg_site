@@ -73,6 +73,9 @@ meta_description: {{ excerpt }}
       <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
         <img class="max-h-12" src="../../images/LocalAuthLogos/wyca.png"  alt="West Yorkshire Combined Authority Logo">
       </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/lep-logo.jpg"  alt="Leeds LEP Logo">
+      </div>
     </div>
   </div>
 </div>
@@ -100,7 +103,7 @@ meta_description: {{ excerpt }}
             </div>
         </div>
 
-          {% if course.location %}
+          {% if course.ctaActive %}
           {% include '../components/course-directory/main-cta.njk' %}
           {% endif %}
           {% include '../components/course-directory/apply-cta.njk' %}

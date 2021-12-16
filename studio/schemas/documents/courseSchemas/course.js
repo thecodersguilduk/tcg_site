@@ -6,9 +6,9 @@ export default {
     attendance: 'Full Time'
   },
   fieldsets: [
-    { name: 'courseMeta',
-      description: 'Collapse menu to fill in funder details',
-      title: 'Course Meta Data',
+    { name: 'cta',
+      description: 'Activate the CTA here if required',
+      title: 'Course CTA Field',
       options: {
         collapsible: true,
         collapsed: true,
@@ -50,75 +50,11 @@ export default {
           }
         ]
       },
-        {
-          title: 'Course Location',
-          name: 'location',
-          fieldset: 'courseMeta',
-          description: 'Choose ONE location only',
-          type: 'array',
-          of: [
-            {
-              type: 'string'
-            }
-          ],
-          options: {
-            list: [
-              { title: 'Manchester', value: 'Greater Manchester' },
-              { title: 'Yorkshire', value: 'Yorkshire' }
-            ],
-          },
-        },
       {
         name: 'code',
         type: 'string',
         title: 'Course Code',
         description: 'eg. 2dw-? 5di-? upsk-? rsk-? appr-?',
-        fieldset: 'courseMeta'
-      },
-      {
-        title: 'Course Partner',
-        name: 'partner',
-        fieldset: 'courseMeta',
-        type: 'array',
-        description: 'Please select one',
-        of: [
-          {
-            type: 'reference',
-            to: {
-              type: 'coursePartners'
-            }
-        }
-        ],
-      },
-      {
-        title: 'Course Funder',
-        name: 'funder',
-        fieldset: 'courseMeta',
-        type: 'array',
-        description: 'Please select one',
-        of: [
-          {
-            type: 'reference',
-            to: {
-              type: 'courseFunder'
-            }
-        }
-        ],
-      },
-      {
-        title: 'Course Project',
-        name: 'project',
-        fieldset: 'courseMeta',
-        type: 'array',
-        description: 'Please select one',
-        of: [
-          {
-            type: 'reference',
-            to: {
-              type: 'courseProject'
-            }
-        }
-        ],
       },
       {
         name: 'courseTopics',
@@ -201,7 +137,40 @@ export default {
         title: 'Body',
         of: [
           { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' }
         ] 
-      }
+      },
+      {
+        name: 'ctaActive',
+        type: 'boolean',
+        title: 'Activate CTA',
+        description: 'Turn the CTA on here if required.',
+        fieldset: 'cta'
+      },
+      {
+        name: 'ctaLink',
+        title: 'Link for the Call to Action button',
+        type: 'string',
+        fieldset: 'cta'
+      },
+      {
+        title: 'Course Location',
+        fieldset: 'cta',
+        name: 'location',
+        description: 'Choose ONE location only',
+        type: 'array',
+        of: [
+          {
+            type: 'string'
+          }
+        ],
+        options: {
+          list: [
+            { title: 'Manchester', value: 'Greater Manchester' },
+            { title: 'Yorkshire', value: 'Yorkshire' }
+          ],
+        },
+      },
     ]
 }

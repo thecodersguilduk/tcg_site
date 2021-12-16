@@ -81,6 +81,9 @@ const serializers = {
         style: 'color: white;'
       })
     },
+    ctaMain: node => h("div", {
+      className: 'flex flex-col lg:flex-row bg-gray-800 my-24'
+     }),
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
       'data-modal': "book-a-call",

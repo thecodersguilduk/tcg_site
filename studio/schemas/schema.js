@@ -52,6 +52,6 @@ export default createSchema({
     apprenticeAd,
     styledHeading,
     leadSentence,
-    supportingSentence
+    supportingSentence,
   ]),
 })
