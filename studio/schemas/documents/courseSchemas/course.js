@@ -1,3 +1,5 @@
+import courseLocations from "./courseLocations";
+
 export default {
   name: 'course',
   type: 'document',
@@ -138,7 +140,8 @@ export default {
         of: [
           { type: 'block'},
           { type: 'applyBtn' },
-          { type: 'imageSection' }
+          { type: 'imageSection' },
+          { type: 'break' }
         ] 
       },
       {
@@ -159,12 +162,7 @@ export default {
         fieldset: 'cta',
         name: 'location',
         description: 'Choose ONE location only',
-        type: 'array',
-        of: [
-          {
-            type: 'string'
-          }
-        ],
+        type: 'string',
         options: {
           list: [
             { title: 'Manchester', value: 'Greater Manchester' },

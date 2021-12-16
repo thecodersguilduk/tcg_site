@@ -18,6 +18,7 @@ import apprenticeAd from './documents/apprenticeAd'
 import leadSentence from './documents/components/leadSentence.js'
 import styledHeading from './documents/components/styledHeading.js'
 import supportingSentence from './documents/components/supportingSentence.js'
+import hr from './documents/components/hr'
 
 // import courses from './documents/course'
 // import courseTypes from './documents/courseTypes'
@@ -53,5 +54,6 @@ export default createSchema({
     styledHeading,
     leadSentence,
     supportingSentence,
+    hr
   ]),
 })

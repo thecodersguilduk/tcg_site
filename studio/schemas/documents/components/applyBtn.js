@@ -19,6 +19,13 @@ export default {
       type: 'string',
       title: 'Button Link',
       description: 'Will link to application form if left blank'
+    },
+    {
+      name: 'style',
+      type: 'string',
+      options: {
+        list: ['inline', 'float-right']
+      }
     }
   ]
 }
