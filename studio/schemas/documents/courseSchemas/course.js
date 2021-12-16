@@ -1,5 +1,3 @@
-import courseLocations from "./courseLocations";
-
 export default {
   name: 'course',
   type: 'document',

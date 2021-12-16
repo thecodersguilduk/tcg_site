@@ -54,6 +54,6 @@ export default createSchema({
     styledHeading,
     leadSentence,
     supportingSentence,
-    hr
+    hr,
   ]),
 })
