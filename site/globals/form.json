@@ -152,7 +152,7 @@
         "fields":{
             "why_did_user_apply":{
                "type":"textarea",
-               "tags": ["Yorkshire Sales Executive Apprentice", "Manchester Business Admin Apprentice", "Yorkshire Business Admin Apprentice", "Leeds Digital Marketing Apprentice", "yorkshire digital marketing", "Technical Trainer"],
+               "tags": ["Yorkshire Sales Executive Apprentice", "Manchester Business Admin Apprentice", "Leeds Business Admin Apprentice", "Leeds Digital Marketing Apprentice", "yorkshire digital marketing", "Technical Trainer"],
                "required":true,
                "label":"What has made you apply for this Apprenticeship Position?",
                "class":"wide",
@@ -162,7 +162,7 @@
             "why_is_user_a_fit":{
                "type":"textarea",
                "required":true,
-               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Leeds Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"Why do you think you would be a good fit for The Coders Guild?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -171,7 +171,7 @@
             "what_is_user_passionate":{
                "type":"textarea",
                "required":true,
-               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
+               "tags": ["Technical Trainer", "Yorkshire Sales Executive Apprentice", "Leeds Business Admin Apprentice", "Manchester Business Admin Apprentice",  "Leeds Digital Marketing Apprentice"],
                "label":"What is something outside of your work that you are passionate about?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
@@ -189,7 +189,7 @@
             "time_organised":{
                "type":"textarea",
                "required":true,
-               "tags": ["Yorkshire Business Admin Apprentice", "Manchester Business Admin Apprentice"],
+               "tags": ["Leeds Business Admin Apprentice", "Manchester Business Admin Apprentice"],
                "label":"Can you tell us about a time when you have had to be organised and how that has paid off?",
                "class":"wide",
                "help":"More than 50 but less than 200 words please :)",
