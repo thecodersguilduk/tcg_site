@@ -4,6 +4,7 @@ let validationInputs = objInputs.map(item => item.fields);
 
 opportunity.addEventListener('change', e => {
     const value = join(e.target.value);
+    console.log(value);
     changeNameAttr(value);
     questions.forEach(question => {
         const classList = Array.from(question.classList);
@@ -54,7 +55,7 @@ function changeNameAttr(value){
         case 'yorkshire-sales-executive-apprentice': 
             form.action = "https://formspree.io/f/xvolozww";
             break;
-        case 'yorkshire-business-admin-apprentice': 
+        case 'leeds-business-admin-apprentice': 
             form.action = "https://formspree.io/f/xrgjgeyr";
             break;
         case 'manchester-business-admin-apprentice': 
