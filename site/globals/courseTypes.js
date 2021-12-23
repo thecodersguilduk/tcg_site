@@ -1,6 +1,3 @@
-const blocksToHtml = require('@sanity/block-content-to-html')
-const h = blocksToHtml.h
-const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
 
 const config = { 
@@ -11,7 +8,7 @@ const config = {
     useCdn: false // `false` if you want to ensure fresh data
 }
 const query = `*[_type == "courseTypes"] {
-    courseType
+    ...
 }`
 
 module.exports = async function() {
@@ -30,12 +27,5 @@ module.exports = async function() {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
-    // Converts Portable Text to markdown
-    //     data.body = blocksToHtml({
-    //     blocks: data.coursePortableText,
-    //     serializers: serializers
-    // })
-
-    // console.log(data);
     return data
 }

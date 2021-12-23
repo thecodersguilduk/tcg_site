@@ -1,14 +1,14 @@
 ---
 layout: default
 meta_title: Web Development & Digital Skills Course Directory
-title: See All Our Digital Skills Courses And Web Development Apprenticeships Available, including Remote Workshops & Coding Bootcamps.
+meta_description: See All Our Digital Skills Courses And Web Development Apprenticeships Available, including Remote Workshops & Coding Bootcamps.
 ---
 
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
    <section class="bg-white section-rounded pt-48 md:pt-64 pb-24">
       <div class="inner">
-         <h2 class="my-8">{{title}}</h2>
+         <h2 class="my-8">{{meta_title}}</h2>
          <div class="py-6">
             <span class="text-blue-200 font-medium mr-2 md:mr-6">Jump to:</span> <a class="font-bold mr-2 md:mr-6 no-border" href="#courses">Courses</a> <a class="font-bold mr-2 md:mr-6 no-border" href="#apprenticeships">Apprenticeships</a>
          </div>
@@ -79,61 +79,73 @@ title: See All Our Digital Skills Courses And Web Development Apprenticeships Av
                   </form>
                </div>
             </div>
-            <div class="w-full md:w-9/12  mx-auto lg:max-w-none md:pl-6">
+            <div class="w-full md:w-9/12  mx-auto lg:max-w-none md:pl-6 parent">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
                   <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
                </div>
-            {% for item in courses %}
-               {% if item.isActive and item.courseType !== 'Apprenticeships' %}
-                  <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
-                     <div class="w-full md:w-4/12">
-                        <img class="h-full w-full object-cover" src="{{item.courseItemImage}}" alt="{{item.name}}">
-                     </div>
-                     <div class="bg-white flex flex-col justify-around px-4 md:ml-8 py-4 w-full md:w-8/12">
-                        <div>
-                           <div class="flex mb-1">
-                           {% for item in item.courseTopics%}
-                              <a href="#" class="mr-2 p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{item.name}}</a>
-                           {% endfor %}
+               {% for type in courseTypes %}
+               {% if type.courseType !== 'Apprenticeships' %}
+               <div class="courseGroup">
+                  <div class="heading">
+                     <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
+                     {% if type.tagline %}
+                     <p class="mb-6">{{type.tagline}}</p>
+                     {% endif %}
+                  </div>
+                  {% for item in courses %}
+                     {% if item.isActive and item.courseType !== 'Apprenticeships' and item.courseType === type.courseType %}
+                        <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
+                           <div class="w-full md:w-4/12">
+                              <img class="h-full w-full object-cover" src="{{item.courseItemImage}}" alt="{{item.name}}">
                            </div>
-                           
-                           <p class="text-xl font-semibold text-blue-200">
-                              <a href="{{item.slug.current}}"> 
-                                 {{item.title}}
-                              </a> 
-                           </p>
-                           
-                        </div>
-                        <div class="flex items-center w-full flex-wrap mt-4 md:mt-0">
-                           <div class="w-6/12 mb-2 md:mb-0">
-                              <p class=" flex items-center text-sm font-medium text-gray-900 leading-none">
-                              <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
-                                 {{item.courseType}}
-                              </p>
+                           <div class="bg-white flex flex-col justify-around px-4 md:ml-8 py-4 w-full md:w-8/12">
+                              <div>
+                                 <div class="flex mb-1">
+                                 {% for item in item.courseTopics%}
+                                    <a href="#" class="mr-2 p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{item.name}}</a>
+                                 {% endfor %}
+                                 </div>
+                                 
+                                 <p class="text-xl font-semibold text-blue-200">
+                                    <a href="{{item.slug.current}}"> 
+                                       {{item.title}}
+                                    </a> 
+                                 </p>
+                                 
+                              </div>
+                              <div class="flex items-center w-full flex-wrap mt-4 md:mt-0">
+                                 <div class="w-6/12 mb-2 md:mb-0">
+                                    <p class=" flex items-center text-sm font-medium text-gray-900 leading-none">
+                                    <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/Graduation-Cap-Icon.svg" alt="{{item.courseType}}" /></span>
+                                       {{item.courseType}}
+                                    </p>
+                                 </div>
+                                 <div class="w-6/12 mb-2 md:mb-0">
+                                    <p class="flex items-center text-sm font-medium text-gray-900">
+                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
+                                       Remote
+                                    </p>
+                                 </div>
+                                 <div class="w-6/12">                                   
+                                    <p class="flex items-center text-sm font-medium text-gray-900">
+                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
+                                       {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
+                                    </p>
+                                 </div>
+                                 <div class="w-6/12">                                   
+                                    <p class=" flex items-center text-sm font-medium text-gray-900">
+                                       <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
+                                       {{item.attendance}}
+                                    </p>
+                                 </div>
+                              </div>
                            </div>
-                           <div class="w-6/12 mb-2 md:mb-0">
-                              <p class="flex items-center text-sm font-medium text-gray-900">
-                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
-                                 Remote
-                              </p>
-                           </div>
-                           <div class="w-6/12">                                   
-                              <p class="flex items-center text-sm font-medium text-gray-900">
-                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
-                                   {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
-                              </p>
-                           </div>
-                           <div class="w-6/12">                                   
-                              <p class=" flex items-center text-sm font-medium text-gray-900">
-                                 <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
-                                 {{item.attendance}}
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>     
-               {% endif %}
-            {% endfor %}
+                        </div>     
+                     {% endif %}
+                  {% endfor %}
+                  </div>
+                  {% endif %}
+               {% endfor %}
             </div>
          </div>
       </div>
@@ -151,16 +163,17 @@ title: See All Our Digital Skills Courses And Web Development Apprenticeships Av
    </main>
 
    <script>
+      const parents = Array.from(document.querySelectorAll('.courseGroup'));
       const filters = document.querySelector('.filters-form');
       const resetBtn = document.querySelector('.reset-filters');
       const courses = Array.from(document.querySelectorAll('.course-item'));
       let numberCourses = document.querySelector('.numberCourses');
       numberCourses.textContent = courses.length;
       let fieldArray = [];
-     
+
+      hideHeadings(parents);
 
       filters.addEventListener('change', e => {
-      
          const nodeName = e.target.nodeName.toLowerCase();
 
          if(nodeName === 'select'){
@@ -199,6 +212,7 @@ title: See All Our Digital Skills Courses And Web Development Apprenticeships Av
          })
 
         displayNumCourses();
+        hideHeadings(parents);
 
         if(fieldArray.length === 0){
          reset()
@@ -226,6 +240,18 @@ title: See All Our Digital Skills Courses And Web Development Apprenticeships Av
 
       function join(string){
          return string.replace(/\s+/g, '-').toLowerCase();
+      }
+
+      function hideHeadings(arr){
+         arr.forEach(item => {
+            const heading = item.children[0]
+            const divscontaininghidden = item.querySelectorAll('.course-item.hidden');
+            if(item.children.length < 2 || divscontaininghidden.length === item.children.length - 1){
+               heading.classList.add('hidden')
+            } else {
+               heading.classList.remove('hidden')
+            }
+         })  
       }
 
       
