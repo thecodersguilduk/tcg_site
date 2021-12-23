@@ -79,15 +79,19 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                   </form>
                </div>
             </div>
-            <div class="w-full md:w-9/12  mx-auto lg:max-w-none md:pl-6">
+            <div class="w-full md:w-9/12  mx-auto lg:max-w-none md:pl-6 parent">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
                   <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
                </div>
                {% for type in courseTypes %}
                {% if type.courseType !== 'Apprenticeships' %}
                <div class="courseGroup">
-                  <h3 class="courseTypes">{{ type.courseType }}</h3>
-               
+                  <div class="heading">
+                     <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
+                     {% if type.tagline %}
+                     <p class="mb-6">{{type.tagline}}</p>
+                     {% endif %}
+                  </div>
                   {% for item in courses %}
                      {% if item.isActive and item.courseType !== 'Apprenticeships' and item.courseType === type.courseType %}
                         <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">

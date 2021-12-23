@@ -7,6 +7,12 @@ export default {
       title: 'Course Type',
       name: 'courseType',
       type: 'string'
-  }
+    },
+    {
+      title: 'Tagline',
+      name: 'tagline',
+      type: 'string'
+    },
+
 ]
 }

@@ -8,7 +8,7 @@ const config = {
     useCdn: false // `false` if you want to ensure fresh data
 }
 const query = `*[_type == "courseTypes"] {
-    courseType
+    ...
 }`
 
 module.exports = async function() {
