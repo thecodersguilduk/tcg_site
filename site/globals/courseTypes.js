@@ -9,7 +9,7 @@ const config = {
 }
 const query = `*[_type == "courseTypes"] {
     ...
-}`
+} order(order asc)`
 
 module.exports = async function() {
     // Fetches data
