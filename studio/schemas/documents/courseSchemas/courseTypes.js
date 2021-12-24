@@ -4,6 +4,11 @@ export default {
   title: 'Course Types',
   fields: [
     {
+      name: 'order',
+      type: 'number',
+      title: 'Order'
+    },
+    {
       title: 'Course Type',
       name: 'courseType',
       type: 'string'
