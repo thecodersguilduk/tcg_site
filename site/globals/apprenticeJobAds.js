@@ -1,15 +1,6 @@
 const sanityClient = require('@sanity/client')
 const imageUrlBuilder = require('@sanity/image-url')
-//block not required?
-
-const config = {
-  projectId: 'wd1bon7z',
-  dataset: 'production',
-  apiVersion: '2021-06-07', // use current UTC date - see "specifying API version"!
-  token: 'sk5wgUiW1yj5HqoLWUNWucS0DuWdacfPBw83aFoFaAGJFnQL6wDRlSCJ5Xg1Nua5EHPqZ0UjC5N6gMmzKrYyXE9DbEFzJWagHQ20oSYclK9AxsjcmwbkzzzEWpJrvSO10xEevDS0AULCa9lfz8u22NM18R3sh0R84aTWCNq36kq1f5Pt8jra', // or leave blank for unauthenticated usage
-  // or leave blank for unauthenticated usage
-  useCdn: false // `false` if you want to ensure fresh data
-}
+const config = require('../globals/config');
 
 // query the data from sanity using sanity's own language - GROQ *[_type == 'name-of-schema-file] with the field names we want - title etc. 
 
