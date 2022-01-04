@@ -26613,10 +26613,6 @@ fieldset a {
   }
 }
 
-.courseGroup:not(:first-of-type) {
-  margin-top: 50px;
-}
-
 @media (min-width: 320px){
   .xs\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
