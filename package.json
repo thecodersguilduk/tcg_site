@@ -21,6 +21,7 @@
     "@tailwindcss/ui": "^0.3.0",
     "axios": "^0.21.1",
     "dotenv": "^8.6.0",
+    "dotenv-webpack": "^7.0.3",
     "html-minifier": "^4.0.0",
     "jquery": "^3.5.1",
     "laravel-mix": "^5.0.5",
