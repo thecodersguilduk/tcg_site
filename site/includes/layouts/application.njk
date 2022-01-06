@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<main class="inner pt-24">
 <form id="applicationForm" action='/thanks-applications/' method="post">
     <h2 class="my-8">Application Form</h2>
     {% set counter = 0 %}
@@ -13,26 +13,28 @@ layout: default
         <fieldset class="application-form--fieldset {% if fieldsetCounter == 0 %} active {% endif %}" data-fieldset="{{fieldset.name}}">
             <div class="card">
                 <div class="lg:flex">
-                    <div class="lg:w-2/6 p-8">
+                    <div class="lg:w-2/6 pr-8">
                         <label for="" class="form-label">{{ fieldset.label }}</label>
                         {% if fieldset.help %}
                             <p class="mt-1 text-sm leading-5 text-gray-500">{{ fieldset.help }} </p>
                         {% endif %}
 
                         {% if form[0].fields.opportunity.options %}
-                            <h3 class="my-8">Current Vacancies</h3>
+                            <h3 class="my-8 text-center lg:text-left">Current Vacancies</h3>
+                            <div class="flex flex-wrap justify-around lg:flex-nowrap lg:justify-start">
                             {% for key, option in form[0].fields.opportunity.options  %}
-                            <div class="mb-6">
-                                <p><strong>{{option.name}}</strong></p>
-                                <p><strong>{{option.job_title}}</strong></p>
-                                <p class="mt-1 text-sm leading-5 text-gray-500">{{option.location}}</p>
-                                <a class="mt-1 text-sm break-all" href="{{option.url}}" target="_blank">Click here for the full job specification</a>
+                            <div class="mb-6 flex-0">
+                                    <p><strong>{{option.name}}</strong></p>
+                                    <p><strong>{{option.job_title}}</strong></p>
+                                    <p class="mt-1 text-sm leading-5 text-gray-500">{{option.location}}</p>
+                                    <a class="mt-1 text-sm break-all" href="{{option.url}}" target="_blank">Click here for the full job specification</a>
                             </div>
                             {% endfor %}
+                            </div>
                         {% endif %}
                      </div>
 
-                    <div class="lg:w-4/6 card-dark p-8">
+                    <div class="lg:w-4/6 card-dark lg:pl-8">
                         {% set fieldCounter = 0 %}
                         {% for name,field in fieldset.fields %}
                             <div class="question {% if fieldCounter != 0 %}mt-8{%endif%} {% if field.tags %}{% for tag in field.tags %}{{ tag | join }} {% endfor %}{% else %}all {% endif %}">
@@ -227,6 +229,7 @@ layout: default
         {% set fieldsetCounter = fieldsetCounter + 1 %}
     {% endfor %}
 </form>
+</main>
 <script>
     var objInputs = {{ form | dump | safe }}
 </script>

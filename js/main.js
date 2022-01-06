@@ -263,7 +263,6 @@ var validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length ? true : false;
     });
   } else {
