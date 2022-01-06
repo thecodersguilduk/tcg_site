@@ -1,4 +1,11 @@
 module.exports = {
+  purge: [
+    "./dist/**/*.html",
+    "./site.*.njk",
+    "./site/**/*.njk",
+    "./site/includes/**/*.njk",
+    "./site/includes/components/**/*.njk"
+  ],
   prefix: '',
   important: false,
   separator: ':',
