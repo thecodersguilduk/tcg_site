@@ -34,12 +34,6 @@
                   "job_title": "Business Administration Apprentice",
                   "location": "Manchester",
                   "url": "https://drive.google.com/file/d/1Mp8qSi23yKcZewjyHBwal80yn-bNfgSS/view"
-               },
-               "Technical Trainer": {
-                  "name": "Technical Trainer",
-                  "job_title": "Technical Trainer",
-                  "location": "Remote",
-                  "url": ""
                }
             },
             "required_message":"Please provide an answer"
