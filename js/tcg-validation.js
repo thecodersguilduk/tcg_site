@@ -29,7 +29,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
             var validationInputData = objInputs[counter];
         }
     }
-    console.log(validationInputData);
+    //console.log(validationInputData);
     var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
     //console.log(validationInputs);
@@ -39,7 +39,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
 
     jQuery.each( validationInputs, function( key, value ) {
         var required = value.required;
-        console.log(required);
+        //console.log(required);
         var selector;
         var border = '#d2d6dc';
         switch(value.type){
