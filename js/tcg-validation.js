@@ -29,7 +29,7 @@ jQuery(document).on("click", ".validateFormStepNext, .submitApplication", functi
             var validationInputData = objInputs[counter];
         }
     }
-    console.log(validationInputData);
+    //console.log(validationInputData);
     var validationInputs = validationInputData['fields'];
     // console.log(objInputs);
     //console.log(validationInputs);

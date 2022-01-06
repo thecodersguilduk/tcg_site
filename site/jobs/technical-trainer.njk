@@ -43,20 +43,22 @@ title: The Coders Guild Job Application Form
       </div>
 
       <div class="md:w-1/2 max-w-md not-on-print">
-        <form class="w-l flex-1 justify-center" name="technical-trainer" data-netlify="true" action="/thanks-applications" method="POST"
+        <form id="contact-form" class="w-l flex-1 justify-center" name="technical-trainer" data-netlify="true" action="/thanks-applications" method="POST"
             enctype="multipart/form-data">
-    
+                <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
+                <div>
     <div class="mb-4">
       <label for="first-name" class="sr-only">First Name</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" placeholder="First Name" type="text" id="first-name"
-        name="First Name" data-regex="^[a-zA-Z ]+$" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="First Name" type="text" id="first-name"
+        name="First Name" data-regex="^[a-zA-Z ]+$" data-valid="false" />
       <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
     </div>
 
     <div class="mb-4">
       <label for="second-name" class="sr-only">Last Name</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" placeholder="Second Name" type="text" id="surname"
-        name="Surname" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required " placeholder="Second Name" type="text" id="surname"
+        name="Surname" data-regex="^[a-zA-Z ]+$" data-valid="false" />
+        <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
     </div>
 
     <div class="mb-4">
@@ -94,12 +96,16 @@ title: The Coders Guild Job Application Form
 
     <div class="mb-4">
       <label for="email" class="sr-only">Email</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" type="email" name="email" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="\S+@\S+\.\S+" placeholder="Email" type="email" name="email" />
+      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+
     </div>
 
     <div class="mb-4">
       <label for="mobile" class="sr-only">Mobile Number</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" type="tel" name="Tel" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^[+0-9]+$" placeholder="Telephone" type="tel" name="Tel" />
+      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid number" aria-hidden="true" role="alert"></span>
+
     </div>
 
     <div class="mb-4">
@@ -119,8 +125,8 @@ title: The Coders Guild Job Application Form
       <label for="question 1" class="block text-md font-medium text-black mt-3">Please can you tell us you think you
         would be a good fit for this role?</label>
       <p class="text-sm">more than 50 words but less than 250 words please</p>
-      <textarea class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100 h-35" type="text"
-        height="100" name="Please can you tell us you think you would be a good fit for this role?">
+      <textarea class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" rows="8"
+        name="Please can you tell us you think you would be a good fit for this role?">
       </textarea>
     </div>
 
@@ -160,19 +166,12 @@ title: The Coders Guild Job Application Form
       </div>
     </div>
 
-      <button
-        class="submitApplication w-lg inline-flex items-center justify-center px-6 py-3 my-3 border-1 rounded-lg shadow-sm text-base font-bold text-white bg-blue-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        type="submit">Submit
-      </button>
+     <button type="submit" id="submit" class="contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled="">Submit</button>
     </form>
       </div>
     </div>
   </div>
 </main>
-<script>
-    var objInputs = {{ form | dump | safe }}
-</script>
 
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery-ui.js"></script>
-<script src="/js/tcg-validation.js"></script>
