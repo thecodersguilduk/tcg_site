@@ -54,8 +54,8 @@ title: The Coders Guild | Demographic Info
    
     <div class="mb-4">
       <label for="postcode" class="sr-only">Postcode</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="\S+@\S+\.\S+" placeholder="Postcode" type="text" name="postcode" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="/[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}/i" placeholder="Postcode" type="text" name="postcode" />
+      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid postcode" aria-hidden="true" role="alert"></span>
     </div>
 
 
@@ -73,8 +73,8 @@ title: The Coders Guild | Demographic Info
 
     <div class="mb-4">
       <label for="ni_number" class="sr-only">National Insurance Number</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="\S+@\S+\.\S+" placeholder="National Insurance Number" type="text" name="ni_number" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="/^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/" placeholder="National Insurance Number" type="text" name="ni_number" />
+      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid NI Number" aria-hidden="true" role="alert"></span>
     </div>
 
     <div class="mb-4">
