@@ -189,7 +189,9 @@ var validateForm = function validateForm() {
 
       if (input.hasAttribute('data-regex')) {
         // Assign the value to regex variable
-        regex = RegExp(input.getAttribute('data-regex')); // Compare user input with provided regex
+        regex = RegExp(input.getAttribute('data-regex'));
+        
+        console.log(regex); // Compare user input with provided regex
 
         if (regex.test(input.value)) {
           // If user input matches regex - check if it has data-valid attr, and change the attribute value, so the input becomes 'valid'
