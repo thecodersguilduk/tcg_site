@@ -33,7 +33,7 @@ title: The Coders Guild | Demographic Info
       </div>
 
       <div class="md:w-1/2 max-w-md not-on-print">
-        <form id="#" class="w-l flex-1 justify-center" name="demographic-form" data-netlify="true" action="/" method="POST"
+        <form id="contact-form" class="w-l flex-1 justify-center" name="demographic-form" data-netlify="true" action="/" method="POST"
             enctype="multipart/form-data">
                 <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                 <div>
@@ -54,14 +54,14 @@ title: The Coders Guild | Demographic Info
    
     <div class="mb-4">
       <label for="postcode" class="sr-only">Postcode</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}/i" placeholder="Postcode" type="text" name="postcode" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}" placeholder="Postcode" type="text" name="postcode" />
       <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid postcode" aria-hidden="true" role="alert"></span>
     </div>
 
 
     <div class="mb-4">
       <label for="email" class="sr-only">Email</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="S+@\S+\.\S+" placeholder="Email" type="email" name="email" />
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false"  placeholder="Email" type="email" name="email" />
       <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
     </div>
 
@@ -73,8 +73,8 @@ title: The Coders Guild | Demographic Info
 
     <div class="mb-4">
       <label for="ni_number" class="sr-only">National Insurance Number</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$/" placeholder="National Insurance Number" type="text" name="ni_number" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid NI Number" aria-hidden="true" role="alert"></span>
+      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^(?!BG)(?!GB)(?!NK)(?!KN)(?!TN)(?!NT)(?!ZZ)(?:[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z])(?:\s*\d\s*){6}([A-D]|\s)$" placeholder="National Insurance Number" type="text" name="ni_number" />
+      <span class="form-error text-xs leading-xs text-red-100" data-message="NI Number must be in uppercase" aria-hidden="true" role="alert"></span>
     </div>
 
     <div class="mb-4">
@@ -216,6 +216,11 @@ title: The Coders Guild | Demographic Info
                 <label for="ethnicity_no_response" class="font-medium text-gray-700">Prefer not to say</label>
             </div>
         </div>
+    </div>
+
+    <div class="mb-4">
+      <input id="privacy" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="privacy"  value="true"/> 
+      <label for="privacy" class="form-label">Does the learner consent to being contacted by a third party research contractor (commissioned by DfE) to be invited to participate in interviews and surveys to help us understand their experience of the course and any improvements we can make to future courses? Participation in such research is entirely voluntary and consent can be withdrawn at any time.</label>
     </div>
 
     <div class="mb-4">
