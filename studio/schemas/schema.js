@@ -19,6 +19,7 @@ import leadSentence from './documents/components/leadSentence.js'
 import styledHeading from './documents/components/styledHeading.js'
 import supportingSentence from './documents/components/supportingSentence.js'
 import hr from './documents/components/hr'
+import policies from './documents/policies'
 
 // import courses from './documents/course'
 // import courseTypes from './documents/courseTypes'
@@ -55,5 +56,6 @@ export default createSchema({
     leadSentence,
     supportingSentence,
     hr,
+    policies
   ]),
 })
