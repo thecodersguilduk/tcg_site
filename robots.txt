@@ -2,4 +2,3 @@ User-agent: Twitterbot
 User-agent: *
 Disallow:
 
-Sitemap: https://skeleventy.netlify.com/sitemap.xml
