@@ -14,7 +14,7 @@
   @apply hidden flex-col items-center justify-center w-full h-full;
   overflow: hidden;
   position: fixed;
-  z-index: 40;
+  z-index: 4000;
 
   &--active {
     @apply flex;
@@ -33,7 +33,7 @@
   @media (min-width: 641px) {
     .modal-inner {
         margin: 0 auto;
-        
+
     }
   }
 
