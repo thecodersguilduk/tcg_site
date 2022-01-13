@@ -4,7 +4,7 @@ title: Vacancies
 ---
 
 {# banner #}
-{# <div class="bg-grey-100 h-full">
+<div class="bg-grey-100 h-full">
   <div class="hero relative bg-grey-100 w-full mx-auto">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
@@ -15,23 +15,14 @@ title: Vacancies
         <div class="max-w-2xl mx-auto px-4 lg:mb-8">
           <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Vacancies</h1>
         </div>
-        {# <div>
-          <div class="mt-4 flex rounded-md shadow-sm w-ful">
-            <div class="relative flex items-stretch flex-grow w-full">
-              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-2 sm:text-sm"
-                placeholder="Search a keyword...">
-            </div>
-            <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
-            </button>
-          </div>
+    <div>
         </div>
       </div>
     </div>
   </div>
 
 <main class="main inner flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
-    <div class="flex flex-wrap flex-row justify-center">
+    {# <div class="flex flex-wrap flex-row justify-center">
       <div class="flex-row w-full md:w-1/5 h-full">
         <div class="flex justify-between mt-6">
           <h5 class="text-lg">Filters</h5>
@@ -121,7 +112,7 @@ title: Vacancies
         </div>
         </div>
       </div> #}
-        <div class="inner pt-48">
+        <div class="inner pt-24">
             <div class="flex-row w-full h-full">
                 {% for job in vacancies %}
                 {% if job.isActive and not job.isExternal %}
