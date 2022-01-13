@@ -77,7 +77,7 @@ module.exports = eleventyConfig => {
     return string.replace(/\s+/g, '-').toLowerCase();
   });
 
-  // Add a limit filter for collections to Nunjucks 
+  // Add a limit filter for collections to Nunjucks
   eleventyConfig.addFilter('limit', function (array, limit) {
     return array.slice(0, limit);
   });
@@ -106,7 +106,7 @@ module.exports = eleventyConfig => {
   // Add a HTML timestamp formatter filter to Nunjucks
   eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
-  // Add a limit filter for collections to Nunjucks 
+  // Add a limit filter for collections to Nunjucks
   eleventyConfig.addFilter('limit', function (array, limit) {
     return array.slice(0, limit);
   });
@@ -175,6 +175,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('candidate', 'layouts/candidate.njk')
   eleventyConfig.addLayoutAlias('employer', 'layouts/employer.njk')
   eleventyConfig.addLayoutAlias('jobAdSingle', 'layouts/jobAdSingle.njk')
+  eleventyConfig.addLayoutAlias('internalAd', 'layouts/internaljobapp.njk')
 
   // Include our static assets
   eleventyConfig.addPassthroughCopy("css")

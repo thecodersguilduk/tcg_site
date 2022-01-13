@@ -1,5 +1,5 @@
 ---
-layout: "layouts/default.njk"
+layout: default
 title: The Coders Guild Job Application Form
 ---
 
@@ -7,13 +7,17 @@ title: The Coders Guild Job Application Form
   <div class="inner max-w-5xl pt-20 mb-14 md:mb-20">
 
     <div class="my-14">
-     <h1 class="text-center">Technical Trainer</h1>
+     <h1 class="text-center">{{title}}</h1>
         <div class="flex item-center justify-center">
             <h4>Job Description</h4>
-            <a href="https://drive.google.com/file/d/1KwORZhbAxiUJXldPK0DqVsXdPpRXx6Zi/view?usp=sharing" target="_blank"
+            {% if job.pdf %}
+            <a href="{{job.pdf}}" target="_blank"
                 class="pdf-img">
                 <img src="/images/PDF.png" class="h-10 ml-2" alt="pdf logo">
             </a>
+            {% else %}
+                {{ job.jobDescription}}
+            {% endif %}
         </div>
     </div>
 
@@ -43,7 +47,7 @@ title: The Coders Guild Job Application Form
       </div>
 
       <div class="md:w-1/2 max-w-md not-on-print">
-        <form id="contact-form" class="w-l flex-1 justify-center" name="technical-trainer" data-netlify="true" action="/thanks-applications" method="POST"
+        <form id="contact-form" class="w-l flex-1 justify-center" name="{{job.slug.current}}" data-netlify="true" action="/thanks-applications" method="POST"
             enctype="multipart/form-data">
                 <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                 <div>
@@ -145,7 +149,7 @@ title: The Coders Guild Job Application Form
       <label for="question 3" class="block text-md font-medium text-black mt-3">What's something outside of your work
         that you're passionate about?</label>
       <p class="text-sm">more than 50 words but less than 250 words please</p>
-      <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm"rows="8"
+      <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
         name="What's something outside of your work that you're passionate about?">
       </textarea>
     </div>
