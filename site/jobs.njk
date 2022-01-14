@@ -113,46 +113,45 @@ title: Vacancies
         </div>
       </div> #}
         <div class="inner pt-24">
-            <div class="flex-row w-full h-full">
+            <div class="flex-row flex-wrap w-full h-full">
                 {% for job in vacancies %}
                 {% if job.isActive and not job.isExternal %}
                 {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
                     <div class="flex align-middle">
-                    <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
+                    <div class="w-full h-auto rounded-lg mx-0 my-4 shadow-xl border-grey-200 p-2 md:p-8 bg-white">
                         <div class="w-full h-auto rounded-t-lg flex flex-row">
-                        <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg">
+                        <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg order-last md:order-first">
                             <img class="flex h-full w-full" src="{% if job.employerLogo %}{{job.employerLogo}}{% else %}{{ site.images.logo }}{% endif %}">
                         </div>
-                        <div class="md:w-4/5 mx-2 my-2">
-                            <div class="flex justify-between ml-1">
-                            <h5 class="flex text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
-                            <p class="flex text-xs font-bold mr-2">{% if job.salary %}£{{job.salary}}{% else %} Negotiable DOE {% endif %}</p>
+                        <div class="w-full lg:w-4/5 mx-2 my-2">
+                            <div class="flex flex-col md:flex-row justify-between md:items-center">
+                                <h5 class="text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
+                                <p class="text-xs font-bold mr-2">{% if job.salary %}£{{job.salary}}{% else %} Negotiable DOE {% endif %}</p>
                             </div>
-                            <p class="ml-1 text-xs font-bold text-blue-700">{{job.employerName}}</p>
-                            <div class="flex flex-row">
-                            <div class="flex">
-                                <img class="mr-2" src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                                <p class="text-xs">{{job.contract}}</p>
-                            </div>
-                            <div class="flex ml-8">
-                                <img class="mr-2" src="../images/apprenticeJobAd/place_black_24dp.svg">
-                                <p class="flex text-xs">{{job.location}}</p>
-                            </div>
-                            <div class="flex ml-8">
-                                <img class="mr-2" src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                                <p class="flex text-xs"><span class="font-bold">Closing date:&nbsp; </span> {{job.closingDate}}</p>
-                            </div>
+                            <div class="flex flex-col md:flex-row md:justify-between lg:w-9/12">
+                                <div class="flex">
+                                    <img class="mr-2" src="../images/apprenticeJobAd/schedule_black_24dp.svg">
+                                    <p class="text-xs leading-xs md:leading-2xl">{{job.contract}}</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="mr-2" src="../images/apprenticeJobAd/place_black_24dp.svg">
+                                    <p class="flex text-xs leading-xs md:leading-2xl">{{job.location}}</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="mr-2" src="../images/apprenticeJobAd/date_range_black_24dp.svg">
+                                    <p class="flex flex-col md:flex-row text-xs leading-xs md:leading-2xl"><span class="font-bold">Closing date:&nbsp; </span> {{job.closingDate}}</p>
+                                </div>
                             </div>
                         </div>
                         </div>
-                        <div class=" w-full md:w-4/5 h-20 mx-2 my-2 overflow-hidden">
+                        <div class=" w-full md:w-4/5 mx-2 my-2 overflow-hidden">
                         <p class="truncate text-xs">{{job.briefOverview}} </p>
-                        <div class="mb-4 mt-2 flex flex-row">
-                            <div class="flex">
-                            <a href="{{job.slug.current}}">
+                        <div class="mb-4 mt-2 flex flex-row justify-start">
+                            <div class="flex flex-col md:flex-row">
+                            <a class="border-none my-4 md:my-0" href="{{job.slug.current}}">
                             <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
                             </a>
-                            <a href="{% if job.pdf %}{{job.pdf}}{% else %}{{job.slug.current}}{% endif %}">
+                            <a class="border-none" href="{% if job.pdf %}{{job.pdf}}{% else %}{{job.slug.current}}{% endif %}">
                             <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
                             </a>
                             </div>
