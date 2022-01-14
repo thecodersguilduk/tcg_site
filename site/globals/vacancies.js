@@ -29,7 +29,7 @@ function prepPost(data) {
     //     serializers: serializers
     // })
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
-    console.log(data);
+    //console.log(data);
     return data
 }
 

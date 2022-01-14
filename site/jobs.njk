@@ -175,30 +175,62 @@ title: Vacancies
 
 
 <script>
+const query = `*[_type == "vacancies" && !(_id in path("drafts.**"))] {
+    ...
+} | order(_createdAt desc)`;
 
-let jobAd = [{% for jobAd in apprenticeJobAds %}
-  {
-    title: '{{ jobAd.jobTitle }}',
-    location: '{{jobAd.location}}',
-    employer: '{{jobAd.employerName}}',
-    standard: '{{jobAd.standard}}'
-  },
-{% endfor %}];
+async function getData() {
+    // Fetches data
+    const client = sanityClient(config)
+    const data = await client.fetch(query)
 
-const searchBar = document.querySelector('#search')
-const searchBtn = document.querySelector('#searchBtnJobIndex')
-const standardCheckbox = document.querySelectorAll('.apprentince-standard')
-const disabiltyCheckbox = document.querySelectorAll('.disability-confident-employer')
-const locationCheckbox = document.querySelectorAll('.location')
-const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
-const resetIcon = document.querySelector('.resetIcon')
-const numberOfJobs = document.querySelector('.showing')
+    const preppedData = data.map(prepPost)
 
+    return preppedData
+}
 
-let searchString = ''
-let filteredAds = []
-let filteredbyCheckbox = []
-console.log(jobAd)
+function prepPost(data) {
+
+    data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
+    console.log(data);
+    return data
+}
+
+const jobs = getData();
+console.log(jobs);
+
+function dateDisplay(date, part) {
+    if(!date) return
+    var d = new Date(date);
+    if(part == 'year') {
+      return d.getUTCFullYear();
+    }
+    var month = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    var ordinal = {
+      1 : "st",
+      2 : "nd",
+      3 : "rd",
+      21 : "st",
+      22 : "nd",
+      23 : "rd",
+      31 : "st"
+    };
+    return d.getDate() + (ordinal[d.getDate()] || "th") + " " + month[d.getMonth()] + ", " + d.getUTCFullYear();
+  }
+
 
 
 //function to filter jobs based on input search string, which is called onlick of search button.
