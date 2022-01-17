@@ -175,29 +175,20 @@ title: Vacancies
 
 
 <script>
-const query = `*[_type == "vacancies" && !(_id in path("drafts.**"))] {
-    ...
-} | order(_createdAt desc)`;
+
 
 async function getData() {
+    let query = 'https://wd1bon7z.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22vacancies%22%5D%20%7B%0A%20%20%20%20%20...%0A%20%20%0A%20%20%0A%7D'
     // Fetches data
-    const client = sanityClient(config)
-    const data = await client.fetch(query)
-
-    const preppedData = data.map(prepPost)
-
-    return preppedData
-}
-
-function prepPost(data) {
-
-    data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
-    console.log(data);
+    const data = await fetch(query).then(response => response.json()).then(data => {
+        data.result.map(item => item.closingDate = item.closingDate ? dateDisplay(item.closingDate) : 'Ongoing');
+        return data
+    })
     return data
 }
 
-const jobs = getData();
-console.log(jobs);
+const data = getData();
+console.log(data);
 
 function dateDisplay(date, part) {
     if(!date) return
@@ -235,7 +226,7 @@ function dateDisplay(date, part) {
 
 //function to filter jobs based on input search string, which is called onlick of search button.
 
-function filteredJobs() {
+/*function filteredJobs() {
   const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString) || job.standard.includes(searchString))
   filteredAds.push(filtered)
   console.log(filtered)
@@ -312,5 +303,6 @@ function reset(){
   console.log(filteredAds)
 
 }
+*/
 
 </script>
