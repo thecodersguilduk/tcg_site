@@ -1,11 +1,15 @@
 module.exports = {
-  purge: [
+  purge: { [
     "./dist/**/*.html",
     "./site.*.njk",
     "./site/**/*.njk",
     "./site/includes/**/*.njk",
     "./site/includes/components/**/*.njk"
-  ],
+    ],
+    options: {
+      safelist: ["float-right"]
+    }
+  },
   prefix: '',
   important: false,
   separator: ':',
@@ -515,7 +519,7 @@ module.exports = {
     zIndex: ['responsive'],
   },
   corePlugins: {},
-  
+
   plugins: [
     require('@tailwindcss/ui'),
   ],
