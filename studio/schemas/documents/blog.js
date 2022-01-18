@@ -1,3 +1,7 @@
+import React from 'react';
+
+import newsletter from './components/newsletter';
+
 export default {
   name: 'blog',
   type: 'document',
@@ -78,8 +82,9 @@ export default {
         { type: 'callModal' },
         { type: 'leadSentence' },
         { type: 'supportingSentence' },
-        { type: 'styledHeading' }
-
+        { type: 'styledHeading' },
+        { type: 'newsletter' },
+        { type: 'form' }
       ]
     }
   ],
