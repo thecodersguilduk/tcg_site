@@ -87,7 +87,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -1093,9 +1094,10 @@ input, textarea {
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   flex-shrink: 0;
   height: 1rem;
   width: 1rem;
@@ -1144,9 +1146,10 @@ input, textarea {
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   flex-shrink: 0;
   border-radius: 100%;
   height: 1rem;
@@ -20968,27 +20971,31 @@ input, textarea {
 }
 
 .select-none{
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .select-text{
-  -moz-user-select: text;
-   -ms-user-select: text;
-       user-select: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 .select-all{
-  -moz-user-select: all;
-   -ms-user-select: all;
-       user-select: all;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
 }
 
 .select-auto{
-  -moz-user-select: auto;
-   -ms-user-select: auto;
-       user-select: auto;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 .align-baseline{
@@ -26578,7 +26585,8 @@ input, textarea {
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   margin-bottom: 30px;
 }
 
@@ -26591,7 +26599,8 @@ input, textarea {
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   margin-bottom: 30px;
 }
 
@@ -45650,27 +45659,31 @@ fieldset a {
   }
 
   .xs\:select-none{
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .xs\:select-text{
-    -moz-user-select: text;
-     -ms-user-select: text;
-         user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .xs\:select-all{
-    -moz-user-select: all;
-     -ms-user-select: all;
-         user-select: all;
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
   }
 
   .xs\:select-auto{
-    -moz-user-select: auto;
-     -ms-user-select: auto;
-         user-select: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 
   .xs\:align-baseline{
@@ -70163,27 +70176,31 @@ fieldset a {
   }
 
   .sm\:select-none{
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .sm\:select-text{
-    -moz-user-select: text;
-     -ms-user-select: text;
-         user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .sm\:select-all{
-    -moz-user-select: all;
-     -ms-user-select: all;
-         user-select: all;
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
   }
 
   .sm\:select-auto{
-    -moz-user-select: auto;
-     -ms-user-select: auto;
-         user-select: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 
   .sm\:align-baseline{
@@ -94676,27 +94693,31 @@ fieldset a {
   }
 
   .md\:select-none{
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .md\:select-text{
-    -moz-user-select: text;
-     -ms-user-select: text;
-         user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .md\:select-all{
-    -moz-user-select: all;
-     -ms-user-select: all;
-         user-select: all;
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
   }
 
   .md\:select-auto{
-    -moz-user-select: auto;
-     -ms-user-select: auto;
-         user-select: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 
   .md\:align-baseline{
@@ -119189,27 +119210,31 @@ fieldset a {
   }
 
   .lg\:select-none{
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .lg\:select-text{
-    -moz-user-select: text;
-     -ms-user-select: text;
-         user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .lg\:select-all{
-    -moz-user-select: all;
-     -ms-user-select: all;
-         user-select: all;
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
   }
 
   .lg\:select-auto{
-    -moz-user-select: auto;
-     -ms-user-select: auto;
-         user-select: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 
   .lg\:align-baseline{
@@ -143702,27 +143727,31 @@ fieldset a {
   }
 
   .xl\:select-none{
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .xl\:select-text{
-    -moz-user-select: text;
-     -ms-user-select: text;
-         user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .xl\:select-all{
-    -moz-user-select: all;
-     -ms-user-select: all;
-         user-select: all;
+    -webkit-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all;
   }
 
   .xl\:select-auto{
-    -moz-user-select: auto;
-     -ms-user-select: auto;
-         user-select: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 
   .xl\:align-baseline{

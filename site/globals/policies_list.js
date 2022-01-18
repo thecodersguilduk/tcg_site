@@ -21,7 +21,7 @@ module.exports = async function () {
 
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
-    console.log(data);
+
   return data
 }
 

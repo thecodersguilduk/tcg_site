@@ -28,85 +28,85 @@ title: Vacancies
           <h5 class="text-lg">Filters</h5>
           <div class="resetIcon flex">
             <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w- h-8 p-2">
-            <h5 class="text-xs">Reset Filters</h5>
+            <h5 class="text-sm">Reset Filters</h5>
           </div>
         </div>
         <div class="w-full filterOptions">
         <div class="flex-col mr-4">
           <div class="filter-form mt-4">
-            <p class="font-bold text-xs">Type of employment</p>
+            <p class="font-bold text-sm">Type of employment</p>
             <div>
               <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
                 class="transform scale-150">
-              <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
+              <label for="apprenticeship" class="ml-1 text-sm"> Apprenticeship</label>
             </div>
-            <p class="font-bold text-xs">Location</p>
+            <p class="font-bold text-sm">Location</p>
             <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
             </div>
              <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
             </div>
             <div>
               <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-xs"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
             </div>
-            <p class="font-bold text-xs">Apprenticeship Standard</p>
+            <p class="font-bold text-sm">Apprenticeship Standard</p>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                 value="software developer level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 4</label>
+              <label for="apprentince standard" class="ml-1 text-sm"> Software developer level 4</label>
             </div>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                 value="software developer level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 3</label>
+              <label for="apprentince standard" class="ml-1 text-sm"> Software developer level 3</label>
             </div>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                 value="software tester level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software tester level 3</label>
+              <label for="apprentince standard" class="ml-1 text-sm"> Software tester level 3</label>
             </div>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                 value="accessibilty specialist level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Accessibilty specialist level 4</label>
+              <label for="apprentince standard" class="ml-1 text-sm"> Accessibilty specialist level 4</label>
             </div>
             <div>
               <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
                 class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Data analyst level 4</label>
+              <label for="apprentince standard" class="ml-1 text-sm"> Data analyst level 4</label>
             </div>
             <div>
 
-              <p class="font-bold text-xs">Salary Range</p>
-              <label for="salary range" class="text-xs">£24k-£36k</label>
+              <p class="font-bold text-sm">Salary Range</p>
+              <label for="salary range" class="text-sm">£24k-£36k</label>
               <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
                 max="100" step="1" value="18" />
               <div class="flex flex-row justify-between">
-                <p class="flex text-xs">£18k</p>
-                <p class="flex text-xs">100k</p>
+                <p class="flex text-sm">£18k</p>
+                <p class="flex text-sm">100k</p>
               </div>
             </div>
-            <p class="font-bold text-xs">Disability confident employer</p>
+            <p class="font-bold text-sm">Disability confident employer</p>
             <div>
               <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="yes"
                 class="transform scale-150">
-              <label for="disability-confident-employer" class="ml-1 text-xs"> Yes</label>
+              <label for="disability-confident-employer" class="ml-1 text-sm"> Yes</label>
             </div>
             <div>
               <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="no"
                 class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-xs"> No</label>
+              <label for="disability confident employer" class="ml-1 text-sm"> No</label>
             </div>
             <div>
               <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="in progress" class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-xs"> In Progress</label>
+              <label for="disability confident employer" class="ml-1 text-sm"> In Progress</label>
             </div>
           </div>
         </div>
@@ -126,26 +126,26 @@ title: Vacancies
                         <div class="w-full lg:w-4/5 mx-2 my-2">
                             <div class="flex flex-col md:flex-row justify-between md:items-center">
                                 <h5 class="text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
-                                <p class="text-xs font-bold mr-2">{% if job.salary %}£{{job.salary}}{% else %} Negotiable DOE {% endif %}</p>
+                                <p class="text-sm font-bold mr-2">{% if job.salary %}£{{job.salary}}{% else %} Negotiable DOE {% endif %}</p>
                             </div>
                             <div class="flex flex-col md:flex-row md:justify-between lg:w-9/12">
-                                <div class="flex">
+                                <div class="flex my-2">
                                     <img class="mr-2" src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                                    <p class="text-xs leading-xs md:leading-2xl">{{job.contract}}</p>
+                                    <p class="text-sm leading-sm md:leading-2xl">{{job.contract}}</p>
                                 </div>
-                                <div class="flex">
+                                <div class="flex my-2">
                                     <img class="mr-2" src="../images/apprenticeJobAd/place_black_24dp.svg">
-                                    <p class="flex text-xs leading-xs md:leading-2xl">{{job.location}}</p>
+                                    <p class="flex text-sm leading-sm md:leading-2xl">{{job.location}}</p>
                                 </div>
-                                <div class="flex">
+                                <div class="flex my-2">
                                     <img class="mr-2" src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                                    <p class="flex flex-col md:flex-row text-xs leading-xs md:leading-2xl"><span class="font-bold">Closing date:&nbsp; </span> {{job.closingDate}}</p>
+                                    <p class="flex flex-col md:flex-row text-sm leading-sm md:leading-2xl"><span class="font-bold">Closing date:&nbsp; </span> {{job.closingDate}}</p>
                                 </div>
                             </div>
                         </div>
                         </div>
                         <div class=" w-full md:w-4/5 mx-2 my-2 overflow-hidden">
-                        <p class="truncate text-xs">{{job.briefOverview}} </p>
+                        <p class="truncate text-sm">{{job.briefOverview}} </p>
                         <div class="mb-4 mt-2 flex flex-row justify-start">
                             <div class="flex flex-col md:flex-row">
                             <a class="border-none my-4 md:my-0" href="{{job.slug.current}}">
