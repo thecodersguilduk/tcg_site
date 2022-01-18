@@ -163,5 +163,3 @@ const serializers = {
 
   }
 }
-
-//<button type="submit" className="">Sign me up</button>
