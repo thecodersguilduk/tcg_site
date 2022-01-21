@@ -8,7 +8,7 @@
                   <div class="mb-4">
                     <label for="options" class="sr-only">Options</label>
                     <div class="relative">
-                      <select id="options" name="options" type="select" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="What does your enquiry relate to?" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required>
+                      <select id="options" name="options" type="select" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="What does your enquiry relate to?" maxlength="50" required>
                         <option>Please select an option</option>
                         <option>I'm looking to hire an apprentice</option>
                         <option>I'm applying for a course</option>
@@ -61,7 +61,7 @@
 
               form.addEventListener('change', function(e){
                 const target = e.target;
-  
+
                 switch(target.value){
                   case "I'm looking to hire an apprentice":
                    form.action = "https://formspree.io/f/mknqeplz";
@@ -79,7 +79,7 @@
                    form.action = "https://formspree.io/f/mknqeplz";
                    break;
                    default:
-                    form.action = "https://formspree.io/f/mknqeplz";         
+                    form.action = "https://formspree.io/f/mknqeplz";
                 }
               })
 
