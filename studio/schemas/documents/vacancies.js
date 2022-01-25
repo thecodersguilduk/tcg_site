@@ -11,7 +11,16 @@ export default
                 collapsible: true,
                 collapsed: true
             },
-            description: 'Fill these in if the position is an external apprenticeship job advert only'
+            description: 'Fill these in if the position is an external apprenticeship job advert only - you will also need to fill in the job description below'
+        },
+        {
+          name: 'socials',
+          title: 'Social Handles',
+          options: {
+            collapsible: true,
+            collapsed: true
+          },
+          description: 'Social Media Handles for the Company hiring'
         }
     ],
     fields: [
@@ -63,7 +72,9 @@ export default
         title: 'Slug',
         description: 'Click to auto generate',
         options: {
-          source: 'jobTitle',
+          source: doc => {
+            return doc.employerName ? `${doc.jobTitle}-${doc.employerName}` : `${doc.title}`
+          },
           maxLength: 96
         }
       },
@@ -84,11 +95,6 @@ export default
         description: 'eg full-time, part-time'
       },
       {
-        name: 'jobDescription',
-        title: 'Job Description',
-        type: 'text'
-      },
-      {
         name: 'briefOverview',
         title: 'Brief overview of the role',
         type: 'text'
@@ -105,28 +111,48 @@ export default
         type: 'string'
       },
       {
-        name: 'desiredSkills',
-        title: 'Desired Skills',
+        name: 'facebook',
+        title: 'Facebook Url',
         type: 'string',
-        fieldset: 'apprenticeAds'
+        description: 'Facebook URL',
+        fieldset: 'socials'
       },
       {
-        name: 'personalQualities',
-        title: 'Personal Qualities',
+        name: 'twitter',
+        title: 'Twitter Url',
         type: 'string',
-        fieldset: 'apprenticeAds'
+        description: 'Twitter URL',
+        fieldset: 'socials'
       },
       {
-        name: 'trainingProvided',
-        title: 'Training to be Provided',
+        name: 'linkedin',
+        title: 'LinkedIn Url',
         type: 'string',
-        fieldset: 'apprenticeAds'
+        description: 'LinkedIn URL',
+        fieldset: 'socials'
       },
       {
-        name: 'support',
-        title: 'How we will support you as an apprentice',
+        name: 'instagram',
+        title: 'Instagram Url',
         type: 'string',
-        fieldset: 'apprenticeAds'
+        description: 'Instagram URL',
+        fieldset: 'socials'
+      },
+      {
+        name: 'jobDescription',
+        title: 'Job Description',
+        type: 'array',
+        of: [
+          { type: 'block' },
+          { type: 'imageSection' },
+          { type: 'applyBtn' },
+          { type: 'callModal' },
+          { type: 'leadSentence' },
+          { type: 'supportingSentence' },
+          { type: 'styledHeading' },
+          { type: 'newsletter' },
+          { type: 'form' }
+        ]
       }
     ]
   }
