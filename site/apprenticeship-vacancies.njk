@@ -151,7 +151,7 @@ slug: {{job.jobTitle}}
 
 
         {% for job in apprenticeJobAds %}
-        {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
+        <div class="w-full h-full my-4 flex justify-center rounded-lg pb-4 bg-white flex-col">
         <div class="flex align-middle">
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
             <div class="w-full h-auto rounded-t-lg flex flex-row">
@@ -181,11 +181,11 @@ slug: {{job.jobTitle}}
               </div>
             </div>
             <div class=" w-full md:w-4/5 h-20 mx-2 my-2 overflow-hidden">
-              <p class="truncate text-xs">{{job.excerpt}} </p>
+              <p class="truncate text-xs">{{job.briefOverview}} </p>
               <div class="mb-4 mt-2 flex flex-row">
                 <div class="flex">
                   <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
-                   <a href="/jobAdSingle/{{ job.slug.current }}/index.html">
+                   <a href="/jobAdSingle/{{ job.slug.current }}/index.html" class="applyBtn">
                   <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
                   </a>
                 </div>

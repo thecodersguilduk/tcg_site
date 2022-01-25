@@ -8,7 +8,7 @@ const config = require('../globals/config');
 //query path can be found in sanity via inspect.
 // you can then test the path in sanity via vision
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
-const query = ` *[ _type == "ApprenticeJobAds"]{
+const query = ` *[ _type == "vacancies" && isExternal == true]{
   ...,
 "employerLogo": employerLogo.asset->url
 }`
@@ -17,7 +17,7 @@ module.exports = async function () {
   const client = sanityClient(config)
   //data fetched using query, which is the path from sanity
   const data = await client.fetch(query)
-  console.log(data)
+  console.log('hello', data)
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
 
@@ -33,6 +33,7 @@ function prepPost(data) {
 
   return data
 }
+
 //urlFor is a function used to create a url from sanity.
 function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));

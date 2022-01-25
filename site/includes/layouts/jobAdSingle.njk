@@ -3,13 +3,15 @@ layout: default
 title: {{job.jobTitle}}
 ---
 
-<main class="mx-8 my-2">
+<main class="my-2 w-full">
 
-<div class="bg-blue-100 h-64 mt-20 relative" style="background-image:url(../../images/)">
-<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 border-2 border-blue-900 bo rounded-lg"><img src="{{job.employerLogo}}" alt="company logo"></div>
+<div class="bg-blue-100 h-64 mt-20 relative w-full" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg) width:100%;">
+<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg overflow-hidden">
+<img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full">
+</div>
 </div>
 
-<div class="mx-16 mt-8">
+<div class="mx-16 mt-8 pt-10">
 <h1>{{job.jobTitle}}</h1>
 </div>
 
@@ -18,6 +20,7 @@ title: {{job.jobTitle}}
 
 <div class="flex">
 <img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg"><p class="text-sm ml-2">{{job.location}}</p>
+
 </div>
 </div>
 
@@ -38,7 +41,9 @@ title: {{job.jobTitle}}
 <div class="mx-16 flex flex-row">
 <p class="font-bold text-sm text-blue-600">Company Socials:<p>
 <div class="flex flex-row ml-4">
+
 <img class="flex" src="../../images/apprenticeJobAd/LINKEDIN ICON.svg">
+
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/TWITTER ICON.svg">
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/INSTAGRAM.svg">
 <img class="ml-2 flex" src="../../images/apprenticeJobAd/FACEBOOK.svg">
@@ -53,7 +58,8 @@ title: {{job.jobTitle}}
 </div>
 
 <div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Company Intro</p>
+<h1>Portable Text to Go here</h1>
+{# <p class="font-bold text-md text-blue-200">Company Intro</p>
 <p class="text-sm">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
@@ -61,7 +67,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <div class="mx-16 my-8">
 <p class="font-bold text-md text-blue-200">Brief Overview of the Role</p>
 <p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</p>
 </div>
 
 <div class="mx-16 my-8">
@@ -136,17 +142,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <button type="button" id="searchBtnJobIndex"
               class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium bg-grey-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
             </button>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
+</div> #}
+  </div>
 </main>
 
 

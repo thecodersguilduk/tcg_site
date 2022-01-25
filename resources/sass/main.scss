@@ -129,86 +129,89 @@
     text-decoration: none;
   }
 }
-.woocommerce-MyAccount-content{
-	padding:10px;
-	border:1px solid black;
+.woocommerce-MyAccount-content {
+  padding: 10px;
+  border: 1px solid black;
 }
 
-.entry-content{
-	padding-top:30px;
+.entry-content {
+  padding-top: 30px;
 }
-.entry-content p{
-	margin-bottom:30px;
-}
-
-.application-form--fieldset{
-	display:none;
+.entry-content p {
+  margin-bottom: 30px;
 }
 
-.application-form--fieldset.active{
-	display:block;
+.application-form--fieldset {
+  display: none;
+}
+
+.application-form--fieldset.active {
+  display: block;
 }
 
 .validateFormStepNext,
-.submitApplication{
-	float:right;
+.submitApplication {
+  float: right;
 }
 
-.buttonContainer{
-	padding:10px 30px;
+.buttonContainer {
+  padding: 10px 30px;
 }
 
-.clearfix{
-	clear:both;
+.clearfix {
+  clear: both;
 }
 
-.woocommerce-form__input.woocommerce-form__input-checkbox{
-	width:1rem;
-	position: relative;
-    top: 14px;
+.woocommerce-form__input.woocommerce-form__input-checkbox {
+  width: 1rem;
+  position: relative;
+  top: 14px;
 }
 
-.woocommerce-account .woocommerce-error{
-	background-color:transparent;
-	box-sizing:border-box;
-	color:rgb(187, 52, 52);
-	display:block;
-	font-family:sans-serif;
-	font-size:12px;
-	font-weight:700;
-	line-height:18px;
-	text-size-adjust:100%;
-	margin-bottom:30px;
+.woocommerce-account .woocommerce-error {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: rgb(187, 52, 52);
+  display: block;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-size-adjust: 100%;
+  margin-bottom: 30px;
 }
 
-.woocommerce-account .woocommerce-message{
-	background-color:transparent;
-	box-sizing:border-box;
-	color:#0f834d;
-	display:block;
-	font-family:sans-serif;
-	font-size:12px;
-	font-weight:700;
-	line-height:18px;
-	text-size-adjust:100%;
-	margin-bottom:30px;
+.woocommerce-account .woocommerce-message {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #0f834d;
+  display: block;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-size-adjust: 100%;
+  margin-bottom: 30px;
 }
 
-
-
-
-.edit-link{
-	display:none;
+.edit-link {
+  display: none;
 }
 
-
-.other{
-	display:none;
+.other {
+  display: none;
 }
 
 fieldset a {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
-@media (min-width:1024px){#mobile-menu{display:none}}
+@media (min-width: 1024px) {
+  #mobile-menu {
+    display: none;
+  }
+}
 
+.applyBtn {
+  text-decoration: none;
+}
