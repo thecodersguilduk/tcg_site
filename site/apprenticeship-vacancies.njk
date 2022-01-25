@@ -43,14 +43,14 @@ slug: {{job.jobTitle}}
     </div>
   </div>
 
-<main class="main inner flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
-    <div class="flex flex-wrap flex-row justify-center">
-      <div class="flex-row w-full md:w-1/5 h-full">
-        <div class="flex justify-between mt-6">
-          <h5 class="text-lg">Filters</h5>
-          <div class="resetIcon flex">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w- h-8 p-2">
-            <h5 class="text-xs">Reset Filters</h5>
+<main class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
+    <div class="flex flex-wrap justify-center">
+      <div class="w-full md:w-1/5 h-full">
+        <div class="flex justify-between items-center mt-6">
+          <h5 class="text-lg mb-0">Filters</h5>
+          <div class="resetIcon flex items-center">
+            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
+            <h5 class="text-xs mb-0">Reset Filters</h5>
           </div>
         </div>
         <div class="w-full filterOptions">
@@ -134,11 +134,11 @@ slug: {{job.jobTitle}}
         </div>
         </div>
       </div>
-      <div class="flex-row md:w-4/5 w-full h-full">
-        <div class="flex justify-between mt-4">
-          <h5 class="text-xs showing"></h5>
-          <div class="flex">
-            <h5 class=" flex text-xs">Sort By</h5>
+      <div class="md:w-4/5 w-full h-full md:px-6">
+        <div class="flex justify-between items-center mt-6">
+          <h5 class="showing mb-0"></h5>
+          <div class="flex items-center">
+            <h5 class="text-xs mb-0">Sort By</h5>
             <select name="sort-by" class="mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
               <option value="A-Z">A-Z</option>
               <option value="location">location</option>
@@ -148,9 +148,9 @@ slug: {{job.jobTitle}}
             <img src="../images/apprenticeJobAd/list_black_24dp.svg">
           </div>
         </div>
+
+
         {% for job in apprenticeJobAds %}
-
-
         {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
         <div class="flex align-middle">
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
@@ -301,7 +301,7 @@ let mappedArray = jobAd.map(job => (
 
 function displayNumCourses(){
 let numCourses = Array.from(jobAd)
-numberOfJobs.innerHTML = `showing: ${numCourses.length}`
+numberOfJobs.innerHTML = numCourses === 1 ? `Showing ${numCourses.length} job` : `Showing ${numCourses.length} jobs`
 console.log('numCourses:', numCourses.length)
 }
 
