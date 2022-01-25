@@ -5,14 +5,14 @@ slug: {{job.jobTitle}}
 ---
 
 {# 1. using filter function to render jobs based on searchString
-   2. use filtered array to conditionally render -> job ? job.includes(searchString) : job 
+   2. use filtered array to conditionally render -> job ? job.includes(searchString) : job
    3. call functions within nunjucks {{function()}}
    4. need to clear check boxes on reset
    5. need to use the value from check boxes for filtering too
    6. sort by filter needs implementing jobAd.jobTitle.sort()
    7. implement grid view (stretch goal for now)
-   8. Array.length for showing: 
-   
+   8. Array.length for showing:
+
     #}
 
 {# banner #}
@@ -28,17 +28,17 @@ slug: {{job.jobTitle}}
           <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
             Apprenticeship</h1>
         </div>
-        {# <div>
-          <div class="mt-4 flex rounded-md shadow-sm w-ful">
-            <div class="relative flex items-stretch flex-grow w-full">
-              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-2 sm:text-sm"
+        <div>
+          <div class="mt-4 flex rounded-md shadow-sm w-full justify-self-center align-self-center">
+            <div class="relative">
+              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-4 py-4 sm:text-sm"
                 placeholder="Search a keyword...">
             </div>
             <button type="button" id="searchBtnJobIndex"
               class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
             </button>
           </div>
-        </div> #}
+        </div>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@ slug: {{job.jobTitle}}
             <h5 class="text-xs">Reset Filters</h5>
           </div>
         </div>
-        <div class="w-full filterOptions"> 
+        <div class="w-full filterOptions">
         <div class="flex-col mr-4">
           <div class="filter-form mt-4">
             <p class="font-bold text-xs">Type of employment</p>
@@ -105,7 +105,7 @@ slug: {{job.jobTitle}}
               <label for="apprentince standard" class="ml-1 text-xs"> Data analyst level 4</label>
             </div>
             <div>
-              
+
               <p class="font-bold text-xs">Salary Range</p>
               <label for="salary range" class="text-xs">£24k-£36k</label>
               <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
@@ -131,9 +131,9 @@ slug: {{job.jobTitle}}
               <label for="disability confident employer" class="ml-1 text-xs"> In Progress</label>
             </div>
           </div>
-        </div> 
         </div>
-      </div> 
+        </div>
+      </div>
       <div class="flex-row md:w-4/5 w-full h-full">
         <div class="flex justify-between mt-4">
           <h5 class="text-xs showing"></h5>
@@ -150,7 +150,7 @@ slug: {{job.jobTitle}}
         </div>
         {% for job in apprenticeJobAds %}
 
-        
+
         {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
         <div class="flex align-middle">
           <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
@@ -195,7 +195,7 @@ slug: {{job.jobTitle}}
           <div>
           </div>
         </div>
-      
+
         {% endfor %}
       </div>
     </div>
@@ -263,7 +263,7 @@ return searchString
 })
 
 
-// call filteredJobs function on click of the search button. 
+// call filteredJobs function on click of the search button.
 searchBtn.addEventListener('click', e => {
   filteredJobs()
 console.log('searchString:', searchString)
