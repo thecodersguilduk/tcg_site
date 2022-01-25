@@ -29,7 +29,6 @@
     "sanity-plugin-content-calendar": "^1.1.2",
     "sanity-plugin-dashboard-widget-netlify": "^1.1.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/thecodersguilduk/tcg_site.git"
