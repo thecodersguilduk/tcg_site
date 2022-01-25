@@ -30,10 +30,12 @@ module.exports = async function () {
 // prepPost function is passed as an argument into preppedData
 function prepPost(data) {
   // data.employerLogo = urlFor(data.employerLogo)
-  data.body = blocksToHtml({
-    blocks: data.jobDescription,
-    serializers: serializers
-  })
+  if(data.jobDescription){
+    data.body = blocksToHtml({
+      blocks: data.jobDescription,
+      serializers: serializers
+    })
+  }
 
   return data
 }
