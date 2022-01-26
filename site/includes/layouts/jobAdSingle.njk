@@ -1,208 +1,164 @@
 ---
 layout: default
-title: {{job.jobTitle}}
+related_articles: true
+title: {{ title }}
+meta_description: {{ excerpt }}
 ---
 
-<main class="my-2 w-full">
 
-<div class="bg-blue-100 h-64 mt-20 relative w-full" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg) width:100%;">
-<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg overflow-hidden">
-<img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full">
-</div>
-</div>
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-<div class="mx-16 mt-8 pt-10">
-<h1>{{job.jobTitle}}</h1>
-</div>
+    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
 
-<div class="mx-16 flex flex-row">
-<h6 class="mb-0">{{job.employerName}}</h6>
+        <div class="mb-10 sm:mb-8 min-w-[6xl]">
 
-<div class="flex">
-<img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg"><p class="text-sm ml-2">{{job.location}}</p>
+                <figure class="relative">
+                    <img data-lazy="https://cdn.sanity.io/images/wd1bon7z/production/980e1a692018f20aa937b1e51b49916248f4530a-1024x768.jpg" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
+                      <div class="absolute h-32 w-32 bg-white" style="bottom: -50px; left: 50px;">
+                        <img data-lazy="{{ job.employerLogo }}" alt="{{ job.jobTitle }}" class="w-full h-full" />
+                      </div>
+                </figure>
 
-</div>
-</div>
+                <div class="flex flex-col md:px-20 relative py-12 sm:pt-10 max-w-3xl mx-auto inner mt-12">
+                  <h2 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ job.jobTitle }}</h2>
+                  <div class="flex items-center">
+                    <p class="mr-4 font-bold text-blue-200">{{ job.employerName }}</p>
+                    <img class="mr-1" src="../../images/apprenticeJobAd/place_black_24dp.svg">
+                    <p class="text-sm">{{job.location}}</p>
+                  </div>
+                  <div class="flex items-center justify-start">
+                    <div class="flex items-center justify-around mr-6 py-2">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/pound_icon.svg">
+                      <p class="text-sm"><strong>£{{ job.salary }}</strong></p>
+                    </div>
 
-<div class="mx-16 flex flex-row">
-<img class="flex mr-2" src="../../images/apprenticeJobAd/noun_Pound_1056201.svg">
-<p class="font-bold text-sm mr-14">{{job.salary}}</p>
 
-<img class="flex mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
-<p class="font-bold text-sm mr-14">{{job.contract}}</p>
+                    <div class="flex items-center justify-around mr-6">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
+                      <p class="text-sm"><strong>{{ job.contract }}</strong></p>
+                    </div>
 
-<img class="flex mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
-<p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate}}</p>
-</div>
-<div class="mx-16">
-<p class="font-bold text-sm">Disability Confident Employer:</p><p>{{job.disabilityConfident}}</p>
-</div>
 
-<div class="mx-16 flex flex-row">
-<p class="font-bold text-sm text-blue-600">Company Socials:<p>
-<div class="flex flex-row ml-4">
+                    <div class="flex items-center justify-around">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
+                      <p class="text-sm">Closing Date: <strong>{{ job.closingDate | dateDisplay }}</strong></p>
+                    </div>
+                 </div>
+                <div class="flex items-center py-2">
+                  <p class="text-sm"><span class="font-bold">Disability Confident Employer:</span>{% if job.disabilityConfident %} Yes {% else %} No {% endif %}</pclass=>
+                </div>
+                <div class="flex items-center py-2">
+                  <span class="text-blue-200 font-bold text-sm">Company Socials:&nbsp;&nbsp; </span>
+                  {%if job.linkedin %}<a class="border-none" href="{{ job.linkedin}}"><img src="../../images/icons/LINKEDIN_ICON.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.facebook %}<a class="border-none" href="{{ job.facebook}}"><img src="../../images/icons/FACEBOOK.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.twitter %}<a class="border-none" href="{{ job.twitter}}"><img src="../../images/icons/TWITTER_ICON.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.instagram %}<a class="border-none" href="{{ job.instagram}}"><img src="../../images/icons/INSTAGRAM.svg" class="h-6 mr-2"></a>{% endif %}
+                </div>
+                <div class="my-4">
+                <a href="/apply/" class="text-white bg-green-100 px-6 py-2 rounded font-bold">Apply Now <svg class="svg-inline--fa fa-angle-right fa-w-8 align-middle ml-2 text-white text-md leading-md" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a>
+                </div>
+            </div>
 
-<img class="flex" src="../../images/apprenticeJobAd/LINKEDIN ICON.svg">
+            <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner mt-12">
+              <header>
+                <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ job.jobTitle }}</h1>
+              </header>
+            </div>
+        </div>
 
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/TWITTER ICON.svg">
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/INSTAGRAM.svg">
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/FACEBOOK.svg">
-</div>
-</div>
+        <div class="post content md:px-20 max-w-3xl mx-auto inner">
+            {{ job.body | safe }}
 
-<div class="mx-16 mt-2">
+            {# <div class="flex flex-col xs:flex-row py-16">
+              <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
+                  <object type="image/svg+xml" data="../../../images/icons/Group-72.svg" class="h-14 w-14 mx-auto mb-6"></object>
+                  <h3 class="text-center text-xl leading-lg mb-4">Learn from the best</h3>
+                  <p class="text-center">Our trainers and coaches are industry-leading digital experts, providing you with top-notch skills and knowledge to help you excel.</p>
+              </div>
 
-  <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
-            </button>
-</div>
+              <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
+                  <object type="image/svg+xml" data="../../../images/icons/Group-79.svg" class="h-14 w-14 mx-auto mb-6"></object>
+                  <h3 class="text-center text-xl leading-lg mb-4">Boost your confidence</h3>
+                  <p class="text-center">Our courses are designed to teach you in-demand tech and digital skills.</p>
+              </div>
 
-<div class="mx-16 my-8">
-<h1>Portable Text to Go here</h1>
-<div>{{job.body}}<div/>
-{# <p class="font-bold text-md text-blue-200">Company Intro</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+              <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
+                  <object type="image/svg+xml" data="../../../images/icons/Group-15.svg" class="h-14 w-14 mx-auto mb-6"></object>
+                  <h3 class="text-center text-xl leading-lg mb-4">Upskill</h3>
+                  <p class="text-center">Develop new tech skills or brush-up on existing skills to increase your productivity.  You and your teams will feel empowered, engaged and educated.</p>
+              </div>
+            </div>
 
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Brief Overview of the Role</p>
-<p class="text-sm">
-</p>
-</div>
+            <div class="mt-12">
+              <h2 class="text-center">100% funding is often available  for our courses</h2> #}
 
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Training to be provided</p>
-<p class="text-sm">{{job.trainingProvided}}</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Vacancy description</p>
-<p class="text-sm">{{job.jobDescription}}</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">You duties will include:</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Benifits:</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">We will support you as an apprentice</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16">
-<p class="font-bold text-2xl text-blue-100">Requirements and prospects</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Desired skills</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Personal qualities</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Qualifcations required</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Future prospects</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 my-8">
-<p class="font-bold text-md text-blue-200">Things to consider</p>
-<p class="text-sm">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<div class="mx-16 w- h-20 rounded flex flex-row relative" style="background-color:#86BA90">
-<div class="flex p-6">
-<img src="../../images/apprenticeJobAd/TCG Icon.svg">
-<p class="font-bold text-white text-sm ml-2">Apply for this role</p>
-</div>
-<div class="flex flex-row mx-4 mt-6 justify-end absolute right-0">
-
-  <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium bg-grey-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
-            </button>
-</div> #}
+              <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    {# <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">
+      Trusted by over 5 very average small businesses
+    </p> #}
+    <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/dfe.png"  alt="Department for Education Logo">
+      </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/erdf.png"  alt="EU Reginonal Development Fund Logo">
+      </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/esf.png" alt="EU Social Fund Logo">
+      </div>
+      <div class="col-span-1 flex justify-center bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/skills-for-growth-logo.png"  alt="Skills for Growth Logo">
+      </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/lcr.png"  alt="Liverpool City Region Logo">
+      </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/wyca.png"  alt="West Yorkshire Combined Authority Logo">
+      </div>
+      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/lep-logo.jpg"  alt="Leeds LEP Logo">
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+
+
+
+
+              {# <div class="flex flex-col md:flex-row flex-wrap">
+                  <div class="relative h-24 md:h-40 w-full mb-6" style="background-image:url('../../images/gmca-logo-landscape.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                  <a href="https://www.greatermanchester-ca.gov.uk/" class="h-full absolute top-0 right-0 left-0 bottom-0">
+                  </a>
+                </div>
+                 <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/esf_logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                    <a href="https://ec.europa.eu/esf/home.jsp" class="h-full absolute top-0 right-0 left-0 bottom-0">
+                    </a>
+                  </div>
+                <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/dfe_logo.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                  <a href="https://www.gov.uk/government/organisations/department-for-education" class="h-full absolute top-0 right-0 left-0 bottom-0">
+                  </a>
+                </div>
+              </div> #}
+            </div>
+        </div>
+
+          {# {% if course.ctaActive %}
+          {% include '../components/course-directory/main-cta.njk' %}
+          {% endif %}
+          {% include '../components/course-directory/apply-cta.njk' %} #}
+
+
+
+
+    </article>
+  <script>
+    const styledDiv = document.querySelector('.content > div');
+    styledDiv.classList.add('content');
+  </script>
 </main>
 
-
-
-
-
-
-
-
-
-
-{# <div class="bg-white overflow-hidden mt-18">
-  <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
-    <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
-      <div>
-        <h4 class="text-base text-gray-900 font-semibold tracking-wide uppercase text-3xl">{{job.employerName}}</h4>
-        <h3 class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">{{job.jobTitle}}</h3>
-        <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Salary Details: {{job.salary}}</h4>      
-        <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Location: {{job.location}}</h4>
-         <h4 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Published: {{job.createdAt}}</h4>         
-      </div>
-    </div>
-    <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
-      <div class="relative lg:row-start-1 lg:col-start-2">
-        <svg class="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
-          <defs>
-            <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
-        </svg>
-        <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
-          <figure>
-            <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-              <img class="rounded-lg shadow-lg object-cover object-center" src="{{job.employerLogo}}" alt="Company Logo" width="1184" height="1376">
-            </div>
-            
-          </figure>
-        </div>
-      </div>
-      <div class="mt-8 lg:mt-0">
-        <div class="text-base max-w-prose mx-auto lg:max-w-none">
-        <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Job Description</h3>
-          <p>{{job.jobDescription}}</p>
-        </div>
-        <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
-         <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Support</h3>
-          <p>{{job.support}}</p>
-           <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Training Provided</h3>
-          <p>{{job.trainingProvided}}</p>
-          <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Personal Qualities</h3>
-          <p>{{job.personalQualities}}</p>
-          <h3 class="mt-2 text-1xl leading-8 font-bold tracking-tight text-gray-900 sm:text-1xl">Desired Skills</h3>
-          <p>{{job.desiredSkills}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> #}

@@ -9,6 +9,9 @@ pagination: {
   },
   layout: 'jobAdSingle',
   permalink: "/apprenticeship-vacancies/{{ job.slug.current }}/index.html",
+  eleventyComputed: {
+    title: data => data.job.jobTitle
+  }
 }
 ---
 
