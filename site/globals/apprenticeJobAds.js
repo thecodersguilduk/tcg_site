@@ -55,8 +55,9 @@ const serializers = {
       )
     ),
     styledHeading: (node) => h('h2', {
-      innerHTML: node.styledHeading,
-      className: 'text-lightblue-500 text-3xl'
+      innerHTML: node.node.styledHeading,
+      className: 'text-lightblue-500',
+      style: 'font-size: 32px'
     }),
     leadSentence: (node) => h('h3', {
       innerHTML: node.leadSentence,
@@ -65,20 +66,18 @@ const serializers = {
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).url(),
     }),
-    applyBtn: ({ node: { btnText, btnLink, style } }) => {
-      let classes;
-      if (style === 'float-right') {
-        classes = 'mt-auto block float-right py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white'
-      } else {
-        classes = 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white'
-      }
-      const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
-      return h("a", {
-        href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
-        className: classes,
-        innerHTML: btnText + rightArrow,
-        style: 'color: white;'
-      })
+    applyBtn: ({ node: { btnText, btnLink } }) => {
+      const rightArrow = '<i class="align-middle ml-2 text-green-100 fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
+      return y("div", { className: 'rounded block w-full bg-green-100 flex justify-between px-6 py-6'},
+                y('div', { className: 'flex w-4/12 items-center justify-between'},
+                  y('img', { src: '../../images/logo/TGC_Square_Logo_White.svg', className: 'h-12'}),
+                  y('p', { className: 'text-white font-bold', innerHTML: 'Apply for this role' })),
+                y('a', { href: '#', className: 'flex items-center py-2 px-6 font-bold rounded font-heading bg-white', style: 'color: #86ba90', innerHTML: btnText + rightArrow })
+        // href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
+        // className: classes,
+        // innerHTML: btnText + rightArrow,
+        // style: 'color: white;'
+      )
     },
     break: (node) => {
       if (node.node.style === 'break') return h('hr', { style: 'border-color: #2574a9;' });
