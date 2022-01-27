@@ -1,65 +1,72 @@
 ---
 layout: default
-title: {{job.jobTitle}}
+related_articles: true
+title: {{ title }}
+meta_description: {{ excerpt }}
 ---
 
-<main class="my-2 w-full">
 
-<div class="bg-blue-100 h-64 mt-20 relative w-full" style="background-image:url(../../images/homepage/MVIMG_20180119_122608.jpg) width:100%;">
-<div class="bg-white h-32 w-32 ml-16 absolute bottom-0 right-8 -mb-12 border-2 border-blue-900 rounded-lg overflow-hidden">
-<img src="{{job.employerLogo}}" alt="company logo" class="w-full h-full">
-</div>
-</div>
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-<div class="mx-16 mt-8 pt-10">
-<h1>{{job.jobTitle}}</h1>
-</div>
+    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 w-7/12 mx-auto pt-20">
 
-<div class="mx-16 flex flex-row">
-<h6 class="mb-0">{{job.employerName}}</h6>
+        <div class="mb-10 sm:mb-8">
 
-<div class="flex">
-<img class="ml-8 flex justify-content" src="../../images/apprenticeJobAd/place_black_24dp.svg"><p class="text-sm ml-2">{{job.location}}</p>
+                <figure class="relative">
+                    <img data-lazy="https://cdn.sanity.io/images/wd1bon7z/production/980e1a692018f20aa937b1e51b49916248f4530a-1024x768.jpg" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
+                      <div class="absolute h-32 w-32 bg-white" style="bottom: -50px; left: 50px;">
+                        <img data-lazy="{{ job.employerLogo }}" alt="{{ job.jobTitle }}" class="w-full h-full" />
+                      </div>
+                </figure>
 
-</div>
-</div>
+                <div class="flex flex-col md:px-20 relative py-12 sm:pt-10 max-w-3xl mx-auto inner mt-12">
+                  <h2 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ job.jobTitle }}</h2>
+                  <div class="flex items-center">
+                    <p class="mr-4 font-bold text-blue-200">{{ job.employerName }}</p>
+                    <img class="mr-1" src="../../images/apprenticeJobAd/place_black_24dp.svg">
+                    <p class="text-sm">{{job.location}}</p>
+                  </div>
+                  <div class="flex items-center justify-start">
+                    <div class="flex items-center justify-around mr-6 py-2">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/pound_icon.svg">
+                      <p class="text-sm"><strong>£{{ job.salary }}</strong></p>
+                    </div>
 
-<div class="mx-16 flex flex-row">
-<img class="flex mr-2" src="../../images/apprenticeJobAd/noun_Pound_1056201.svg">
-<p class="font-bold text-sm mr-14">{{job.salary}}</p>
 
-<img class="flex mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
-<p class="font-bold text-sm mr-14">{{job.contract}}</p>
+                    <div class="flex items-center justify-around mr-6">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/schedule_black_24dp.svg">
+                      <p class="text-sm"><strong>{{ job.contract }}</strong></p>
+                    </div>
 
-<img class="flex mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
-<p class="text-sm ">Closing date:</p><p class="font-bold text-sm ml-2">{{job.closingDate}}</p>
-</div>
-<div class="mx-16">
-<p class="font-bold text-sm">Disability Confident Employer:</p><p>{{job.disabilityConfident}}</p>
-</div>
 
-<div class="mx-16 flex flex-row">
-<p class="font-bold text-sm text-blue-600">Company Socials:<p>
-<div class="flex flex-row ml-4">
+                    <div class="flex items-center justify-around">
+                      <img class="mr-2" src="../../images/apprenticeJobAd/date_range_black_24dp.svg">
+                      <p class="text-sm">Closing Date: <strong>{{ job.closingDate | dateDisplay }}</strong></p>
+                    </div>
+                 </div>
+                <div class="flex items-center py-2">
+                  <p class="text-sm"><span class="font-bold">Disability Confident Employer:</span>{% if job.disabilityConfident %} Yes {% else %} No {% endif %}</pclass=>
+                </div>
+                <div class="flex items-center py-2">
+                  <span class="text-blue-200 font-bold text-sm">Company Socials:&nbsp;&nbsp; </span>
+                  {%if job.linkedin %}<a class="border-none" href="{{ job.linkedin}}"><img src="../../images/icons/LINKEDIN_ICON.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.facebook %}<a class="border-none" href="{{ job.facebook}}"><img src="../../images/icons/FACEBOOK.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.twitter %}<a class="border-none" href="{{ job.twitter}}"><img src="../../images/icons/TWITTER_ICON.svg" class="h-6 mr-2"></a>{% endif %}
+                  {%if job.instagram %}<a class="border-none" href="{{ job.instagram}}"><img src="../../images/icons/INSTAGRAM.svg" class="h-6 mr-2"></a>{% endif %}
+                </div>
+                <div class="my-4">
+                <a href="/apply/" class="text-white bg-green-100 px-6 py-2 rounded font-bold">Apply Now <svg class="svg-inline--fa fa-angle-right fa-w-8 align-middle ml-2 text-white text-md leading-md" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a>
+                </div>
+            </div>
+        </div>
 
-<img class="flex" src="../../images/apprenticeJobAd/LINKEDIN ICON.svg">
-
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/TWITTER ICON.svg">
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/INSTAGRAM.svg">
-<img class="ml-2 flex" src="../../images/apprenticeJobAd/FACEBOOK.svg">
-</div>
-</div>
-
-<div class="mx-16 mt-2">
-
-  <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded shadow">Apply Now <img class="ml-2" src="../../images/apprenticeJobAd/Path 108.svg">
-            </button>
-</div>
-
-<div class="decorated-list content mx-16 my-8">{{job.body | safe}}
-<div/>
-
-  
+        <div class="post content md:px-20 max-w-3xl mx-auto inner">
+            {{ job.body | safe }}
+        </div>
+    </article>
+  <script>
+    const styledDiv = document.querySelector('.content > div');
+    styledDiv.classList.add('content');
+  </script>
 </main>
 

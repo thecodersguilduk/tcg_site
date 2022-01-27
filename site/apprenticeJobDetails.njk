@@ -8,7 +8,10 @@ pagination: {
   addAllPagesToCollections: true
   },
   layout: 'jobAdSingle',
-  permalink: "/jobAdSingle/{{job.slug.current }}/index.html",
+  permalink: "/apprenticeship-vacancies/{{ job.slug.current }}/index.html",
+  eleventyComputed: {
+    title: data => data.job.jobTitle
+  }
 }
 ---
 
