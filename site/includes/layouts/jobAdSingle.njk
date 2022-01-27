@@ -8,9 +8,9 @@ meta_description: {{ excerpt }}
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
 
-    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 w-7/12 mx-auto pt-20">
+    <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
 
-        <div class="mb-10 sm:mb-8">
+        <div class="mb-10 sm:mb-8 max-w-6xl">
 
                 <figure class="relative">
                     <img data-lazy="https://cdn.sanity.io/images/wd1bon7z/production/980e1a692018f20aa937b1e51b49916248f4530a-1024x768.jpg" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
@@ -26,7 +26,7 @@ meta_description: {{ excerpt }}
                     <img class="mr-1" src="../../images/apprenticeJobAd/place_black_24dp.svg">
                     <p class="text-sm">{{job.location}}</p>
                   </div>
-                  <div class="flex items-center justify-start">
+                  <div class="flex items-center justify-start flex-wrap">
                     <div class="flex items-center justify-around mr-6 py-2">
                       <img class="mr-2" src="../../images/apprenticeJobAd/pound_icon.svg">
                       <p class="text-sm"><strong>£{{ job.salary }}</strong></p>

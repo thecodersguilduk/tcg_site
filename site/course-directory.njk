@@ -105,13 +105,13 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                                     <a href="#" class="mr-2 p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{item.name}}</a>
                                  {% endfor %}
                                  </div>
-                                 
+
                                  <p class="text-xl font-semibold text-blue-200">
-                                    <a href="{{item.slug.current}}"> 
+                                    <a href="{{item.slug.current}}">
                                        {{item.title}}
-                                    </a> 
+                                    </a>
                                  </p>
-                                 
+
                               </div>
                               <div class="flex items-center w-full flex-wrap mt-4 md:mt-0">
                                  <div class="w-6/12 mb-2 md:mb-0">
@@ -126,13 +126,13 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                                        Remote
                                     </p>
                                  </div>
-                                 <div class="w-6/12">                                   
+                                 <div class="w-6/12">
                                     <p class="flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
                                        {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
                                     </p>
                                  </div>
-                                 <div class="w-6/12">                                   
+                                 <div class="w-6/12">
                                     <p class=" flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
                                        {{item.attendance}}
@@ -140,7 +140,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                                  </div>
                               </div>
                            </div>
-                        </div>     
+                        </div>
                      {% endif %}
                   {% endfor %}
                   </div>
@@ -179,18 +179,18 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
          if(nodeName === 'select'){
             const optionsText = [];
             const options = Array.from(e.target.options).forEach(option => optionsText.push(join(option.innerText)));
-            
+
            if(!optionsText.some(item => fieldArray.includes(item))){
                fieldArray.push(join(e.target.value));
-           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking) 
+           } else if (optionsText.some(item => fieldArray.includes(item)) && !fieldArray.includes(join(e.target.value))) { //one of the options is in the array but not the one we are clicking)
               fieldArray.forEach(field => {
                  if(optionsText.some(item => fieldArray.includes(item))){
                     const index = fieldArray.indexOf(field);
                     fieldArray.splice(index, 1);
                     fieldArray.push(join(e.target.value));
                  };
-              })   
-            
+              })
+
            }
          }
 
@@ -201,10 +201,10 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
             fieldArray.splice(index, 1);
          }
 
-         courses.forEach(course => {       
+         courses.forEach(course => {
            if(fieldArray.some(item => Array.from(course.classList).includes(item))){
             course.classList.remove('hidden');
-            course.classList.add('flex');          
+            course.classList.add('flex');
            } else {
             course.classList.add('hidden');
             course.classList.remove('flex');
@@ -217,7 +217,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
         if(fieldArray.length === 0){
          reset()
         }
-        
+
       })
 
       resetBtn.addEventListener('click', reset);
@@ -227,7 +227,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
          const courseItems = Array.from(document.querySelectorAll('.course-item'));
          courseItems.forEach(course => {
             course.classList.remove('hidden');
-            course.classList.add('flex');  
+            course.classList.add('flex');
          })
 
          displayNumCourses();
@@ -251,9 +251,9 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
             } else {
                heading.classList.remove('hidden')
             }
-         })  
+         })
       }
 
-      
+
    </script>
 </div>

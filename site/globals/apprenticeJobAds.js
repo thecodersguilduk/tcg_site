@@ -69,10 +69,10 @@ const serializers = {
     applyBtn: ({ node: { btnText, btnLink } }) => {
       const rightArrow = '<i class="align-middle ml-2 text-green-100 fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
       return y("div", { className: 'rounded block w-full bg-green-100 flex justify-between px-6 py-6'},
-                y('div', { className: 'flex w-4/12 items-center justify-between'},
-                  y('img', { src: '../../images/logo/TGC_Square_Logo_White.svg', className: 'h-12'}),
+                y('div', { className: 'flex w-8/12 md:w-4/12 items-center justify-start md:justify-between'},
+                  y('img', { src: '../../images/logo/TGC_Square_Logo_White.svg', className: 'h-12 mr-2 md:mr-2'}),
                   y('p', { className: 'text-white font-bold', innerHTML: 'Apply for this role' })),
-                y('a', { href: '#', className: 'flex items-center py-2 px-6 font-bold rounded font-heading bg-white', style: 'color: #86ba90', innerHTML: btnText + rightArrow })
+                y('a', { href: '#', className: 'flex items-center py-0 px-4 md:px-6 text-sm font-bold rounded font-heading bg-white', style: 'color: #86ba90', innerHTML: btnText + rightArrow })
         // href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
         // className: classes,
         // innerHTML: btnText + rightArrow,
