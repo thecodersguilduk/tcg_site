@@ -34,11 +34,14 @@ function prepPost(data) {
     data.body = blocksToHtml({
       blocks: data.jobDescription,
       serializers: serializers
+
     })
+
   }
 
   return data
 }
+
 
 //urlFor is a function used to create a url from sanity.
 function urlFor(source) {
