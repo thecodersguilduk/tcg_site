@@ -301,6 +301,7 @@ slug: {{job.jobTitle}}
 <script>
 
 
+
 const filterOptions = document.querySelector('.filterOptions')
 console.log(`filter Options = ${filterOptions}`)
 //filter options is the container div for all the location check boxes
@@ -354,7 +355,6 @@ let selectedLocation = join(e.target.value)
 })
 
 
-
 let jobAd = [{% for jobAd in apprenticeJobAds %}
   {
     title: '{{ jobAd.jobTitle }}',
@@ -364,7 +364,13 @@ let jobAd = [{% for jobAd in apprenticeJobAds %}
   },
 {% endfor %}];
 
-console.log(`this is all the data: ${jobAd}`)
+console.log(apprenticeJobAds)
+
+console.log(`this is:${this.ApprenticeJobAds}`)
+
+
+
+console.log(`this is all the data: ${jobAd.map(job=>job.title)}`)
 
 const searchBar = document.querySelector('#search')
 const searchBtn = document.querySelector('#searchBtnJobIndex')
