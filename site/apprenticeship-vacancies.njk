@@ -205,39 +205,42 @@ slug: {{job.jobTitle}}
 
 {% for job in apprenticeJobAds %}
 
-<div class="main-container singleAd {{ job.disabilityConfident }} {{job.location | join}} flex flex-col">
- <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
+  <div class="main-container singleAd {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+    <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
-  <div class="top-row flex flex-row justify-between">
-    <div style="background-image: url('{{job.employerLogo}}'); background-size: cover; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24"></div>
-    <span class="font-bold p-0 m-0">£{{job.salary}}</span>
+      <div class="top-row flex flex-row justify-between mb-6">
+        <div style="background-image: url('{{job.employerLogo}}'); background-size: cover; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+
+        <div class="flex flex-col align-start justify-self-start w-full">
+          <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
+          <h5 class="p-0 my-2">{{job.employerName}}</h5>
+
+
+          <div class="flex flex-row items-center">
+            <span class="text-sm">{{job.standard}}</span>
+            <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+            <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+            <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+          </div>
+        </div>
+
+        <span class="font-bold p-0 m-0">£{{job.salary}}</span>
+      </div>
+
+
+      <div class="job-description my-2">
+        <p class="text-sm truncate">{{job.excerpt}}</p>
+      </div>
+
+      <div class="apply-btn find-out-more-btn flex flex-row">
+        <a class="mt-auto mr-8 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="" style="color:white;">Apply Now</a>
+        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+      </div>
+
+    </div>
   </div>
 
-  <div class="title-and-biz">
-    <h3 class="p-0 mb-4">{{job.jobTitle}}</h3>
-    <h5 class="p-0 mb-4">{{job.employerName}}</h5>
-  </div>
-
-  <div class="bottom-row flex flex-row">
-    <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="flex p-0"><span class="mr-4 flex">{{job.location}}</span>
-    <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-    <span class="flex">{{job.closingDate | dateDisplay}}</span>
-  </div>
-
-  <div class="job-description">
-  <p class="text-sm truncate">{{job.briefOverview}}</p>
-  </div>
-
-  <div class="apply-btn find-out-more-btn flex flex-row">
-
-  <a class="mt-auto mr-8 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="" style="color:white;">Apply Now</a>
-   <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/jobAdSingle/{{ job.slug.current }}/index.html" target="_blank" style="color:#2574a9;">Find Out More</a>
-  </div>
-
- </div>
-</div>
-
-        {% endfor %}
+{% endfor %}
 
 
 
@@ -343,16 +346,12 @@ filterOptions.addEventListener('change', e => {
       }
 
       if(disabilityArray.length >= 1 && locationArray.length < 1){
-        filtersinglearray(locationArray, job)
+        filtersinglearray(disabilityArray, job)
       }
 
       if(locationArray.length < 1 && disabilityArray.length < 1){
         reset()
       }
-      //filtersinglearray()
-      //filterdoublearray()
-      //reset()
-
     })
 })
 

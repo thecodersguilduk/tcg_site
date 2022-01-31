@@ -13,18 +13,23 @@ meta_description: {{ excerpt }}
         <div class="mb-10 sm:mb-8 max-w-6xl">
 
                 <figure class="relative">
-                    <img data-lazy="https://cdn.sanity.io/images/wd1bon7z/production/980e1a692018f20aa937b1e51b49916248f4530a-1024x768.jpg" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
+                    <img data-lazy="https://cdn.sanity.io/images/wd1bon7z/production/980e1a692018f20aa937b1e51b49916248f4530a-1024x768.jpg" alt="{{ featured_image_alt }}" class="max-h-96 max-w-4xl h-40 sm:h-56 md:h-auto object-cover loaded">
                       <div class="absolute h-32 w-32 bg-white" style="bottom: -50px; left: 50px;">
                         <img data-lazy="{{ job.employerLogo }}" alt="{{ job.jobTitle }}" class="w-full h-full" />
                       </div>
                 </figure>
 
-                <div class="flex flex-col md:px-20 relative py-12 sm:pt-10 max-w-3xl mx-auto inner mt-12">
+                <div class="flex flex-col md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner mt-12">
                   <h2 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ job.jobTitle }}</h2>
-                  <div class="flex items-center">
-                    <p class="mr-4 font-bold text-blue-200">{{ job.employerName }}</p>
-                    <img class="mr-1" src="../../images/apprenticeJobAd/place_black_24dp.svg">
-                    <p class="text-sm">{{job.location}}</p>
+                  <div class="flex flex-col">
+                    <div>
+                      <p class="font-bold">{{ job.standard }}</p>
+                    </div>
+                    <div class="flex items-center">
+                      <p class="mr-4 font-bold text-blue-200">{{ job.employerName }}</p>
+                      <img class="mr-1" src="../../images/apprenticeJobAd/place_black_24dp.svg">
+                      <p class="text-sm">{{job.location}}</p>
+                    </div>
                   </div>
                   <div class="flex items-center justify-start flex-wrap">
                     <div class="flex items-center justify-around mr-6 py-2">
@@ -61,7 +66,100 @@ meta_description: {{ excerpt }}
         </div>
 
         <div class="post content md:px-20 max-w-3xl mx-auto inner">
-            {{ job.body | safe }}
+            {% if job.companyIntro %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl mb-6">Company Intro</h3>
+                {{job.companyIntro | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.excerpt %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Brief Overview of the Role</h3>
+                {{job.excerpt | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.trainingProvided %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Training to be provided</h3>
+                {{job.trainingProvided | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.jobDescription %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Vacancy Description</h3>
+                {{job.jobDescription | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.jobDuties %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">YOur duties will include:</h3>
+                {{job.jobDuties | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.jobDuties %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Your duties will include:</h3>
+                {{job.jobDuties | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.benefits %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Benefits:</h3>
+                {{job.benefits | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.support %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">How we will support you as an apprentice</h3>
+                {{job.support | safe}}
+            </div>
+            {% endif %}
+
+            <h3 class="text-3xl text-lightblue-500 my-8">Requirements and Prospects</h3>
+
+            {% if job.desiredSkills %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Desired Skills</h3>
+                {{job.desiredSkills | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.personalQualities %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Personal Qualities</h3>
+                {{job.personalQualities | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.qualifications %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Qualifications Required</h3>
+                {{job.qualifications | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.prospects %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Future Prospects</h3>
+                {{job.prospects | safe}}
+            </div>
+            {% endif %}
+
+            {% if job.thingstoConsider %}
+            <div class="mb-4">
+              <h3 class="text-blue-200 text-xl my-6">Things to Consider</h3>
+                {{job.thingstoConsider | safe}}
+            </div>
+            {% endif %}
+
+
         </div>
     </article>
   <script>

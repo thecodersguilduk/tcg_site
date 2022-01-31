@@ -3,26 +3,6 @@ export default
     name: 'vacancies',
     type: 'document',
     title: 'Vacancies',
-    fieldsets: [
-        {
-            name: 'apprenticeAds',
-            title: 'Apprenticeship Vacancies',
-            options: {
-                collapsible: true,
-                collapsed: true
-            },
-            description: 'Fill these in if the position is an external apprenticeship job advert only - you will also need to fill in the job description below'
-        },
-        {
-          name: 'socials',
-          title: 'Social Handles',
-          options: {
-            collapsible: true,
-            collapsed: true
-          },
-          description: 'Social Media Handles for the Company hiring'
-        }
-    ],
     fields: [
       {
         name: 'jobTitle',
@@ -34,31 +14,6 @@ export default
           title: 'Active',
           type: 'boolean',
           description: 'Click to put live or take down'
-      },
-      {
-        name: 'isExternal',
-        title: 'Is External',
-        type: 'boolean',
-        description: 'Click to confirm this is an external vacancy',
-        fieldset: 'apprenticeAds'
-      },
-      {
-        name: 'employerLogo',
-        title: 'Employer Logo',
-        type: 'image',
-        fieldset: 'apprenticeAds'
-      },
-      {
-        name: 'employerName',
-        title: 'Employer Name',
-        type: 'string',
-        fieldset: 'apprenticeAds'
-      },
-      {
-        name: 'disabilityConfident',
-        title: 'Disabily Confident',
-        type: 'boolean',
-        fieldset: 'apprenticeAds'
       },
       {
         name: 'pdf',
@@ -73,7 +28,7 @@ export default
         description: 'Click to auto generate',
         options: {
           source: doc => {
-            return doc.employerName ? `${doc.jobTitle}-${doc.employerName}` : `${doc.title}`
+            return `${doc.jobTitle}-tcg`
           },
           maxLength: 96
         }
@@ -81,18 +36,15 @@ export default
       {
         name: 'location',
         title: 'Location',
-        type: 'string'
+        type: 'reference',
+        to: [
+          { type: 'location'}
+        ]
       },
       {
         name: 'closingDate',
         title: 'Closing Date',
         type: 'date',
-      },
-      {
-        name: 'contract',
-        title: 'Contract',
-        type: 'string',
-        description: 'eg full-time, part-time'
       },
       {
         name: 'briefOverview',
@@ -109,50 +61,6 @@ export default
         name: 'salary',
         title: 'Salary',
         type: 'string'
-      },
-      {
-        name: 'facebook',
-        title: 'Facebook Url',
-        type: 'string',
-        description: 'Facebook URL',
-        fieldset: 'socials'
-      },
-      {
-        name: 'twitter',
-        title: 'Twitter Url',
-        type: 'string',
-        description: 'Twitter URL',
-        fieldset: 'socials'
-      },
-      {
-        name: 'linkedin',
-        title: 'LinkedIn Url',
-        type: 'string',
-        description: 'LinkedIn URL',
-        fieldset: 'socials'
-      },
-      {
-        name: 'instagram',
-        title: 'Instagram Url',
-        type: 'string',
-        description: 'Instagram URL',
-        fieldset: 'socials'
-      },
-      {
-        name: 'jobDescription',
-        title: 'Job Description',
-        type: 'array',
-        of: [
-          { type: 'block' },
-          { type: 'imageSection' },
-          { type: 'applyBtn' },
-          { type: 'callModal' },
-          { type: 'leadSentence' },
-          { type: 'supportingSentence' },
-          { type: 'styledHeading' },
-          { type: 'newsletter' },
-          { type: 'form' }
-        ]
       }
     ]
   }

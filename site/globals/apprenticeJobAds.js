@@ -12,8 +12,9 @@ const config = require('../globals/config');
 //query path can be found in sanity via inspect.
 // you can then test the path in sanity via vision
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
-const query = ` *[ _type == "vacancies" && isExternal == true]{
+const query = ` *[ _type == "apprenticeshipVacancies" && !(_id in path("drafts.**"))]{
   ...,
+  location[]->{name},
 "employerLogo": employerLogo.asset->url
 }`
 module.exports = async function () {
@@ -30,14 +31,97 @@ module.exports = async function () {
 // prepPost function is passed as an argument into preppedData
 function prepPost(data) {
   // data.employerLogo = urlFor(data.employerLogo)
+
   if (data.jobDescription) {
-    data.body = blocksToHtml({
+    data.jobDescription = blocksToHtml({
       blocks: data.jobDescription,
       serializers: serializers
 
     })
-
   }
+
+  if (data.companyIntro) {
+    data.companyIntro = blocksToHtml({
+      blocks: data.companyIntro,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.trainingProvided) {
+    data.trainingProvided = blocksToHtml({
+      blocks: data.trainingProvided,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.benefits) {
+    data.benefits = blocksToHtml({
+      blocks: data.benefits,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.support) {
+    data.support = blocksToHtml({
+      blocks: data.support,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.desiredSkills) {
+    data.desiredSkills = blocksToHtml({
+      blocks: data.desiredSkills,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.jobDuties) {
+    data.jobDuties = blocksToHtml({
+      blocks: data.jobDuties,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.personalQualities) {
+    data.personalQualities = blocksToHtml({
+      blocks: data.personalQualities,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.qualifications) {
+    data.qualifications = blocksToHtml({
+      blocks: data.qualifications,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.prospects) {
+    data.prospects = blocksToHtml({
+      blocks: data.prospects,
+      serializers: serializers
+
+    })
+  }
+
+  if (data.thingstoConsider) {
+    data.thingstoConsider = blocksToHtml({
+      blocks: data.thingstoConsider,
+      serializers: serializers
+
+    })
+  }
+
+
+  data.location = data.location.map(location => location.name)
 
   return data
 }
