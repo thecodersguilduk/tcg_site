@@ -36,9 +36,11 @@ export default
       {
         name: 'location',
         title: 'Location',
-        type: 'reference',
-        to: [
-          { type: 'location'}
+        type: 'array',
+        of: [
+          { type: 'reference',
+            to: [{ type: 'location'}]
+          }
         ]
       },
       {

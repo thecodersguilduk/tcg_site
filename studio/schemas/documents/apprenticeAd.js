@@ -30,6 +30,16 @@ export default
         type: 'string'
       },
       {
+        name: 'isDev',
+        title: 'Select if this is a Software Development L4 Course',
+        type: 'boolean'
+      },
+      {
+        name: 'isTest',
+        title: 'Select if this is a Software Testing Course',
+        type: 'boolean'
+      },
+      {
         name: 'slug',
         type: 'slug',
         title: 'Slug',

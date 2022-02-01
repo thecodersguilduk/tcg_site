@@ -20,10 +20,11 @@ import styledHeading from './documents/components/styledHeading.js'
 import supportingSentence from './documents/components/supportingSentence.js'
 import hr from './documents/components/hr'
 import policies from './documents/policies'
+import vacancies from './documents/vacancies'
 import newsletter from './documents/components/newsletter'
 import form from './documents/components/form'
-import vacancies from './documents/vacancies'
 import locations from './documents/locations'
+
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 

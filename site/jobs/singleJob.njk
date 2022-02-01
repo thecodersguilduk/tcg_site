@@ -1,0 +1,26 @@
+---js
+
+{
+pagination: {
+  data: 'vacancies',
+  size: 1,
+  alias: 'job',
+  addAllPagesToCollections: true,
+  },
+layout: 'internalAd',
+permalink: '/',
+  eleventyComputed: {
+    meta_title: data => data.job.title,
+    meta_description: data => data.job.briefOverview,
+    title: data => data.job.jobTitle,
+    employerLogo: data => data.job.employerLogo,
+    closingDate: data => data.job.closingDate,
+    body: data => data.job.jobDescription,
+    permalink: data => `/jobs/${data.job.slug.current}/index.html`,
+    },
+}
+
+---
+
+{{ job.body | safe  }}
+
