@@ -21,7 +21,7 @@ meta_description: {{ excerpt }}
               </header>
             </div>
         </div>
-        
+
         <div class="post content md:px-20 max-w-3xl mx-auto inner">
             {{ course.body | safe }}
 
@@ -54,18 +54,21 @@ meta_description: {{ excerpt }}
     {# <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">
       Trusted by over 5 very average small businesses
     </p> #}
-    <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+    <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8">
+      <div class="col-span-2 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/skills-for-growth-logo.png"  alt="Leeds LEP Logo">
+      </div>
+      <div class="col-span-2 flex justify-center py-8 px-8 bg-gray-50">
+        <img class="max-h-12" src="../../images/logoesf_col_landscape.png" alt="EU Social Fund Logo">
+      </div>
       <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
         <img class="max-h-12" src="../../images/LocalAuthLogos/dfe.png"  alt="Department for Education Logo">
       </div>
       <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
         <img class="max-h-12" src="../../images/LocalAuthLogos/erdf.png"  alt="EU Reginonal Development Fund Logo">
       </div>
-      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/esf.png" alt="EU Social Fund Logo">
-      </div>
-      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/gmca.png"  alt="Greater Manchester Combined Authority Logo">
+      <div class="col-span-1 flex justify-center bg-gray-50">
+        <img class="max-h-12" src="../../images/LocalAuthLogos/lep-logo.jpg"  alt="Skills for Growth Logo">
       </div>
       <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
         <img class="max-h-12" src="../../images/LocalAuthLogos/lcr.png"  alt="Liverpool City Region Logo">
@@ -73,14 +76,11 @@ meta_description: {{ excerpt }}
       <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
         <img class="max-h-12" src="../../images/LocalAuthLogos/wyca.png"  alt="West Yorkshire Combined Authority Logo">
       </div>
-      <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/lep-logo.jpg"  alt="Leeds LEP Logo">
-      </div>
     </div>
   </div>
 </div>
 
-              
+
 
 
 
@@ -88,15 +88,15 @@ meta_description: {{ excerpt }}
 
               {# <div class="flex flex-col md:flex-row flex-wrap">
                   <div class="relative h-24 md:h-40 w-full mb-6" style="background-image:url('../../images/gmca-logo-landscape.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                  <a href="https://www.greatermanchester-ca.gov.uk/" class="h-full absolute top-0 right-0 left-0 bottom-0"> 
+                  <a href="https://www.greatermanchester-ca.gov.uk/" class="h-full absolute top-0 right-0 left-0 bottom-0">
                   </a>
                 </div>
                  <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/esf_logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                    <a href="https://ec.europa.eu/esf/home.jsp" class="h-full absolute top-0 right-0 left-0 bottom-0"> 
+                    <a href="https://ec.europa.eu/esf/home.jsp" class="h-full absolute top-0 right-0 left-0 bottom-0">
                     </a>
                   </div>
                 <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/dfe_logo.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                  <a href="https://www.gov.uk/government/organisations/department-for-education" class="h-full absolute top-0 right-0 left-0 bottom-0"> 
+                  <a href="https://www.gov.uk/government/organisations/department-for-education" class="h-full absolute top-0 right-0 left-0 bottom-0">
                   </a>
                 </div>
               </div> #}
@@ -107,7 +107,7 @@ meta_description: {{ excerpt }}
           {% include '../components/course-directory/main-cta.njk' %}
           {% endif %}
           {% include '../components/course-directory/apply-cta.njk' %}
-        
+
 
 
 
