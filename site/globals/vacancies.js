@@ -5,7 +5,8 @@ const sanityClient = require('@sanity/client')
 const config = require('../globals/config');
 
 const query = `*[_type == "vacancies" && !(_id in path("drafts.**"))] {
-    ...
+    ...,
+    location[]->{name}
 } | order(_createdAt desc)`
 
 module.exports = async function () {
@@ -28,6 +29,7 @@ function prepPost(data) {
     //     blocks: data.blogPortableText,
     //     serializers: serializers
     // })
+    data.location = data.location.map(location => location.name)
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
     //console.log(data);
     return data

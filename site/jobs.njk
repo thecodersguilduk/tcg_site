@@ -115,7 +115,7 @@ title: Vacancies
         <div class="inner pt-24">
             <div class="flex-row flex-wrap w-full h-full">
                 {% for job in vacancies %}
-                {% if job.isActive and not job.isExternal %}
+                {% if job.isActive %}
                 {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
                     <div class="flex align-middle">
                     <div class="w-full h-auto rounded-lg mx-0 my-4 shadow-xl border-grey-200 p-2 md:p-8 bg-white">
@@ -130,12 +130,8 @@ title: Vacancies
                             </div>
                             <div class="flex flex-col md:flex-row md:justify-between lg:w-9/12">
                                 <div class="flex my-2">
-                                    <img class="mr-2" src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                                    <p class="text-sm leading-sm md:leading-2xl">{{job.contract}}</p>
-                                </div>
-                                <div class="flex my-2">
                                     <img class="mr-2" src="../images/apprenticeJobAd/place_black_24dp.svg">
-                                    <p class="flex text-sm leading-sm md:leading-2xl">{{job.location}}</p>
+                                    <p class="flex text-sm leading-sm md:leading-2xl">{% for location in job.location %}{{location}}{% endfor %}</p>
                                 </div>
                                 <div class="flex my-2">
                                     <img class="mr-2" src="../images/apprenticeJobAd/date_range_black_24dp.svg">
@@ -147,8 +143,8 @@ title: Vacancies
                         <div class=" w-full md:w-4/5 mx-2 my-2 overflow-hidden">
                         <p class="truncate text-sm">{{job.briefOverview}} </p>
                         <div class="mb-4 mt-2 flex flex-row justify-start">
-                            <div class="flex flex-col md:flex-row">
-                            <a class="border-none my-4 md:my-0" href="{{job.slug.current}}">
+                            <div class="flex flex-col sm:flex-row">
+                            <a class="border-none my-4 sm:my-0" href="{{job.slug.current}}">
                             <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
                             </a>
                             <a class="border-none" href="{% if job.pdf %}{{job.pdf}}{% else %}{{job.slug.current}}{% endif %}">
