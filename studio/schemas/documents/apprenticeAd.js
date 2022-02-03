@@ -64,7 +64,7 @@ export default
         name: 'closingDate',
         title: 'Closing Date',
         type: 'date',
-        validation: Rule => Rule.required()
+
       },
       {
         name: 'jobDescription',

@@ -212,12 +212,9 @@ slug: {{job.jobTitle}}
         <div class="flex flex-col align-start justify-self-start w-full">
           <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
           <h5 class="p-0 my-2">{{job.employerName}}</h5>
-
+          <h5 class="text-sm">{{job.standard}}</h5>
 
           <div class="flex flex-row flex-wrap items-center">
-            <div class="flex items-center mr-4">
-              <span class="text-sm">{{job.standard}}</span>
-            </div>
             <div class="flex items-center mr-4">
               <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
             </div>
@@ -228,12 +225,12 @@ slug: {{job.jobTitle}}
           </div>
         </div>
 
-        <span class="font-bold p-0 m-0">£{{job.salary}}</span>
+        <span class="font-bold p-0 m-0">if{%job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
       </div>
 
 
       <div class="job-description my-2">
-        <p class="text-sm truncate">{{job.excerpt}}</p>
+        <p class="text-sm">{{job.excerpt}}</p>
       </div>
 
       <div class="apply-btn find-out-more-btn flex flex-row">
@@ -365,6 +362,8 @@ function toggleGrid(){
   jobs.forEach(job => {
     job.classList.toggle('w-5/12')
     job.classList.toggle('mx-auto')
+    job.firstElementChild.classList.toggle('h-full')
+
   })
 }
 
