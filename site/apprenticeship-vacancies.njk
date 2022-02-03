@@ -118,7 +118,7 @@ slug: {{job.jobTitle}}
 
 
             {#-------apprenticeship standard#}
-            <div class="my-4">
+            <div class="lg:my-4">
               <p class="font-bold">Apprenticeship Standard</p>
               <div>
                 <input type="checkbox" class="apprentince-standard" name="apprentince standard"
@@ -193,8 +193,8 @@ slug: {{job.jobTitle}}
               <option value="A-Z">A-Z</option>
               <option value="location">Location</option>
             </select> #}
-            <img class="w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img class="listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
+            <img class="hidden lg:block w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
+            <img class="hidden lg:block listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
           </div>
         </div>
 
@@ -207,7 +207,7 @@ slug: {{job.jobTitle}}
     <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
       <div class="top-row flex flex-row justify-between mb-6">
-        <div class="hidden md:block" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+        <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
         <div class="flex flex-col align-start justify-self-start w-full">
           <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
