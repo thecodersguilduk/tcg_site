@@ -215,10 +215,10 @@ slug: {{job.jobTitle}}
           <h5 class="text-sm">{{job.standard}}</h5>
 
           <div class="flex flex-row flex-wrap items-center">
-            <div class="flex items-center mr-4">
+            <div class="flex items-center mr- my-2 sm:my-0">
               <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
             </div>
-            <div class="flex items-center mr-4">
+            <div class="flex items-center mr-4 my-2 sm:my-0">
               <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
               <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
             </div>
