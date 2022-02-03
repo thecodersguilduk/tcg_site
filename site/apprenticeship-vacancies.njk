@@ -203,7 +203,7 @@ slug: {{job.jobTitle}}
 <div class="flex flex-col">
 {% for job in apprenticeJobAds %}
 
-  <div class="main-container singleAd {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+  <div class="main-container singleAd {{ job.jobTitle | join }} {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
     <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
       <div class="top-row flex flex-row justify-between mb-6">
@@ -235,7 +235,7 @@ slug: {{job.jobTitle}}
       </div>
 
       <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="" style="color:white;">Apply Now</a>
+        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodrsguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
         <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
       </div>
 
