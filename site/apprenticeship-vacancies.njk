@@ -41,7 +41,7 @@ slug: {{job.jobTitle}}
 {# check the below div - no closing tag but stopping column display for main#}
     <div class="flex flex-wrap justify-center">
     {# main left filter section ------#}
-      <div class="w-full md:w-1/5 h-full">
+      <div class="w-full lg:w-1/5 h-full">
         <div class="flex justify-between items-center mt-6">
           <h5 class="text-lg mb-0">Filters</h5>
           <div class="resetIcon flex items-center">
@@ -53,8 +53,8 @@ slug: {{job.jobTitle}}
         {# this div is preventing display as column but does not have a closing tag???#}
         <div class="w-full filterOptions">
         {#---------------------------------#}
-        <div class="flex-col mr-4 text-md">
-          <div class="filter-form mt-4">
+        <div class="flex justify-center items-center text-sm">
+          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col filter-form mt-4">
 
 
             {# <p class="font-bold text-xs">Type of employment</p>
@@ -66,7 +66,7 @@ slug: {{job.jobTitle}}
             {# main left section locations ----- #}
 
 
-
+          <div>
             <p class="font-bold">Location</p>
             <div>
               <input type="checkbox" class="location" name="location" value="Greater London"
@@ -77,73 +77,75 @@ slug: {{job.jobTitle}}
               <input type="checkbox" class="location" name="location" value="South East England"
                 class="transform scale-150">
               <label for="location" class="ml-1"> South East England</label>
-            </div>
-            <div>
+             </div>
+             <div>
               <input type="checkbox" class="location" name="location" value="South West England"
                 class="transform scale-150">
               <label for="location" class="ml-1">South West England</label>
-            </div>
+             </div>
              <div>
               <input type="checkbox" class="location" name="location" value="West Midlands"
                 class="transform scale-150">
               <label for="location" class="ml-1">West Midlands</label>
-            </div>
+             </div>
              <div>
               <input type="checkbox" class="location" name="location" value="East Midlands"
                 class="transform scale-150">
               <label for="location" class="ml-1">East Midlands</label>
-            </div>
+              </div>
               <div>
               <input type="checkbox" class="location" name="location" value="North West England"
                 class="transform scale-150">
               <label for="location" class="ml-1">North West England</label>
-            </div>
+              </div>
                <div>
-              <input type="checkbox" class="location" name="location" value="North East England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">North East England</label>
-            </div>
+                <input type="checkbox" class="location" name="location" value="North East England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">North East England</label>
+              </div>
                <div>
               <input type="checkbox" class="location" name="location" value="East of England"
                 class="transform scale-150">
               <label for="location" class="ml-1">East of England</label>
-            </div>
+              </div>
                 <div>
               <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
                 class="transform scale-150">
               <label for="location" class="ml-1">Yorkshire and the Humber</label>
             </div>
-
+          </div>
             {#end of main location filter section ----- #}
 
 
             {#-------apprenticeship standard#}
-            {# <p class="font-bold text-xs">Apprenticeship Standard</p>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 4</label>
+            <div class="my-4">
+              <p class="font-bold">Apprenticeship Standard</p>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software developer level 4" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software developer level 4</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software developer level 3" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software developer level 3</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software tester level 3" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software tester level 3</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="accessibilty specialist level 4" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Accessibilty specialist level 4</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
+                  class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Data analyst level 4</label>
+              </div>
             </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software developer level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software tester level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Software tester level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="accessibilty specialist level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Accessibilty specialist level 4</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
-                class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-xs"> Data analyst level 4</label>
-            </div> #}
 
             {# end of standard -------- #}
 
@@ -162,7 +164,7 @@ slug: {{job.jobTitle}}
 
             {# end of salary range #}
 
-
+          <div class="lg:mt-4">
             <p class="font-bold">Disability confident employer</p>
             <div>
               <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="true"
@@ -174,10 +176,7 @@ slug: {{job.jobTitle}}
                 class="transform scale-150">
               <label for="disability confident employer" class="ml-1"> No</label>
             </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="in_progress" class="transform scale-150">
-              <label for="disability confident employer" class="ml-1"> In Progress</label>
-            </div>
+          </div>
           </div>
         </div>
         </div>
@@ -185,42 +184,47 @@ slug: {{job.jobTitle}}
 
 
       {# main right filter section -----#}
-      <div class="md:w-4/5 w-full h-full md:px-6">
+      <div class="lg:w-4/5 w-full h-full lg:px-6">
         <div class="flex justify-between items-center mt-6">
           <h5 class="mb-0">Showing: <span class="showing"></span></h5>
           <div class="flex items-center">
-            <h5 class="text-xs mb-0">Sort By</h5>
-            <select name="sort-by" class="mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
+            {# <h5 class="text-xs mb-0">Sort By</h5>
+            <select name="sort-by" class="sort mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
               <option value="A-Z">A-Z</option>
-              <option value="location">location</option>
-              <option value="salary">Salary</option>
-            </select>
-            <img class="w-8" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img src="../images/apprenticeJobAd/list_black_24dp.svg">
+              <option value="location">Location</option>
+            </select> #}
+            <img class="w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
+            <img class="listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
           </div>
         </div>
 
 
 {# apprentceship vancancy job card ----- #}
-
+<div class="flex flex-col">
 {% for job in apprenticeJobAds %}
 
-  <div class="main-container singleAd {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+  <div class="main-container singleAd {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
     <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
       <div class="top-row flex flex-row justify-between mb-6">
-        <div style="background-image: url('{{job.employerLogo}}'); background-size: cover; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+        <div class="hidden md:block" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
         <div class="flex flex-col align-start justify-self-start w-full">
           <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
           <h5 class="p-0 my-2">{{job.employerName}}</h5>
 
 
-          <div class="flex flex-row items-center">
-            <span class="text-sm">{{job.standard}}</span>
-            <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
-            <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-            <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+          <div class="flex flex-row flex-wrap items-center">
+            <div class="flex items-center mr-4">
+              <span class="text-sm">{{job.standard}}</span>
+            </div>
+            <div class="flex items-center mr-4">
+              <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+            </div>
+            <div class="flex items-center mr-4">
+              <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+              <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+            </div>
           </div>
         </div>
 
@@ -241,61 +245,8 @@ slug: {{job.jobTitle}}
   </div>
 
 {% endfor %}
+</div>
 
-
-
-
-
-
-
-
-        {# {% for job in apprenticeJobAds %}
-        <div class="singleAd w-full h-full my-4 flex justify-center rounded-lg pb-4 bg-white flex-col">
-        <div class="flex align-middle justify-center m-4 center">
-          <div class="w-full h-auto rounded-lg mx-4 my-4 shadow-xl border-grey-200 p-8 bg-white">
-            <div class="w-full h-auto rounded-t-lg flex flex-row">
-              <div class="mx-2 flex justify-center pt-6 h-20 w-20 border-grey-200 border-2 rounded-lg">
-                <img class="flex h-10 w-10" src="{{job.employerLogo}}">
-              </div>
-              <div class="md:w-4/5 mx-2 my-2">
-                <div class="flex justify-between ml-1">
-                  <h5 class="flex text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
-                  <p class="flex text-xs font-bold mr-2">£{{job.salary}}</p>
-                </div>
-                <p class="ml-1 text-xs font-bold text-blue-700">{{job.employerName}}</p>
-                <div class="flex flex-row">
-                  <div class="flex">
-                    <img src="../images/apprenticeJobAd/schedule_black_24dp.svg">
-                    <p class="text-xs">{{job.contract}}</p>
-                  </div>
-                  <div class="flex ml-8">
-                    <img src="../images/apprenticeJobAd/place_black_24dp.svg">
-                    <p class="flex text-xs">{{job.location}}</p>
-                  </div>
-                  <div class="flex ml-8">
-                    <img src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                    <p class="flex text-xs"><span class="font-bold">Closing date: </span> {{job.closingDate | dateDisplay}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class=" w-full md:w-4/5 h-20 mx-2 my-2 overflow-hidden">
-                <p class="truncate text-xs">{{job.briefOverview}} </p>
-                  <div class="mb-4 mt-2 flex flex-row">
-                <div class="flex">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
-                   <a href="/apprenticeship-vacancies/{{ job.slug.current }}/" class="applyBtn">
-                  <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-          </div>
-        </div>
-        </div>
-        {% endfor %} #}
       </div>
     </div>
   </main>
@@ -307,12 +258,20 @@ const searchBar = document.querySelector('#search')
 const searchBtn = document.querySelector('#searchBtnJobIndex')
 const disabilityCheckbox = document.querySelectorAll('.disability-confident-employer')
 const locationCheckbox = document.querySelectorAll('.location')
+const standardCheckbox = document.querySelectorAll('.standard')
 const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
 const resetIcon = document.querySelector('.resetIcon')
 const singleAd = Array.from(document.querySelectorAll('.singleAd'))
+const sortSelect = document.querySelector('.sort')
+const gridIcon = document.querySelector('.gridView')
+const listIcon = document.querySelector('.listView')
 let searchString = ''
 let locationArray = []
 let disabilityArray = []
+let standardArray = []
+
+listIcon.addEventListener('click', toggleGrid)
+gridIcon.addEventListener('click', toggleGrid)
 
 
 filterOptions.addEventListener('change', e => {
@@ -334,22 +293,55 @@ filterOptions.addEventListener('change', e => {
             let index = disabilityArray.indexOf(checkboxValue)
             disabilityArray.splice(index, 1)
         }
+    } else if(e.target.classList.contains('apprentince-standard')){
+        let checkboxValue = join(e.target.value);
+
+        if(e.target.checked){
+        standardArray.push(checkboxValue)
+        } else if(!e.target.checked) {
+            let index = standardArray.indexOf(checkboxValue)
+            standardArray.splice(index, 1)
+            console.log(standardArray)
+        }
     }
 
     singleAd.forEach(job => {
-      if(locationArray.length > 0 && disabilityArray.length > 0){
+      if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length > 0){
+        console.log('triple array filter')
+        filtertriplearray(standardArray, disabilityArray, standardArray, job)
+      }
+
+      if(locationArray.length < 1 && disabilityArray.length > 0 && standardArray.length > 0){
+        console.log('double array filter')
+        filterdoublearray(disabilityArray, standardArray, job)
+      }
+
+      if(locationArray.length > 0 && disabilityArray.length < 1 && standardArray.length > 0){
+        console.log('double array filter')
+        filterdoublearray(locationArray, standardArray, job)
+      }
+
+      if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length < 1){
+        console.log('double array filter')
         filterdoublearray(locationArray, disabilityArray, job)
       }
 
-      if(locationArray.length >= 1 && disabilityArray.length < 1){
-        filtersinglearray(locationArray, job)
+      if(locationArray.length >= 1 && disabilityArray.length < 1 && standardArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(locationArray, job)
       }
 
-      if(disabilityArray.length >= 1 && locationArray.length < 1){
-        filtersinglearray(disabilityArray, job)
+      if(disabilityArray.length >= 1 && locationArray.length < 1 && standardArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(disabilityArray, job)
       }
 
-      if(locationArray.length < 1 && disabilityArray.length < 1){
+      if(standardArray.length >= 1 && disabilityArray.length < 1 && locationArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(standardArray, job)
+      }
+
+      if(locationArray.length < 1 && disabilityArray.length < 1 && standardArray.length < 1){
         reset()
       }
     })
@@ -363,6 +355,31 @@ console.log(searchString)
 return searchString.toLowerCase()
 })
 
+function toggleGrid(){
+  const jobs = document.querySelectorAll('.singleAd.flex')
+  const jobChildEl = jobs[0];
+  jobChildEl.parentNode.classList.toggle('flex-col')
+  jobChildEl.parentNode.classList.toggle('flex-row')
+  jobChildEl.parentNode.classList.toggle('flex-wrap')
+
+  jobs.forEach(job => {
+    job.classList.toggle('w-5/12')
+    job.classList.toggle('mx-auto')
+  })
+}
+
+function filtertriplearray(arr1, arr2, arr3, el){
+    if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item)) && arr3.some(item=>Array.from(el.classList).includes(item))){
+      el.classList.remove('hidden')
+      el.classList.add('flex')
+    } else {
+      el.classList.add('hidden')
+      el.classList.remove('flex')
+    }
+
+    displayNumVacancies()
+}
+
 function filterdoublearray(arr1, arr2, el){
     if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item))){
       el.classList.remove('hidden')
@@ -371,16 +388,22 @@ function filterdoublearray(arr1, arr2, el){
       el.classList.add('hidden')
       el.classList.remove('flex')
     }
+
+    displayNumVacancies()
 }
 
 function filterSingleArray(arr, el){
     if(arr.some(item=>Array.from(el.classList).includes(item))){
+    console.log(arr, el)
       el.classList.remove('hidden')
       el.classList.add('flex')
     } else {
+    console.log(arr, el)
       el.classList.add('hidden')
       el.classList.remove('flex')
     }
+
+    displayNumVacancies()
 }
 
 function join(string){
@@ -396,6 +419,10 @@ function reset(){
     ad.classList.add('flex')
   })
 
+  standardCheckbox.forEach(box => {
+    box.checked = false
+  })
+
   locationCheckbox.forEach(box => {
     box.checked = false
   })
@@ -406,14 +433,7 @@ function reset(){
   displayNumVacancies()
 }
 
-function filteredJobs() {
-  const filtered = jobAd.filter(job => job.title.toLowerCase().includes(searchString) || job.location.toLowerCase().includes(searchString) || job.employer.toLowerCase().includes(searchString) || job.standard.toLowerCase().includes(searchString))
-  filteredAds.push(filtered)
-  displayNumVacancies()
-}
-
 searchBtn.addEventListener('click', e => {
-  filteredJobs()
   displayNumVacancies()
 })
 
