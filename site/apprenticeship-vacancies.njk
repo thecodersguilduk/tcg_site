@@ -17,7 +17,7 @@ slug: {{job.jobTitle}}
           <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
             Apprenticeship</h1>
         </div>
-        <div>
+        {# <div>
           <div class="mt-4 flex rounded-md shadow-sm w-full justify-self-center align-self-center">
             <div class="relative">
               <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-4 py-4 sm:text-sm"
@@ -27,7 +27,7 @@ slug: {{job.jobTitle}}
               class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
             </button>
           </div>
-        </div>
+        </div> #}
       </div>
     </div>
   </div>
@@ -263,7 +263,6 @@ const singleAd = Array.from(document.querySelectorAll('.singleAd'))
 const sortSelect = document.querySelector('.sort')
 const gridIcon = document.querySelector('.gridView')
 const listIcon = document.querySelector('.listView')
-let searchString = ''
 let locationArray = []
 let disabilityArray = []
 let standardArray = []
@@ -347,11 +346,23 @@ filterOptions.addEventListener('change', e => {
 
 resetIcon.addEventListener('click', reset);
 
-searchBar.addEventListener('keyup', e => {
-searchString = e.target.value
-console.log(searchString)
-return searchString.toLowerCase()
-})
+/* searchBar.addEventListener('keyup', e => {
+const searchString = e.target.value
+const jobs = document.querySelectorAll('.singleAd.flex');
+
+  jobs.forEach(job => {
+    if(!job.classList.includes(searchString)){
+      job.classList.add('hidden')
+      job.classList.remove('flex')
+    } else {
+      job.classList.add('flex')
+      job.classList.remove('hidden')
+    }
+  })
+
+  displayNumVacancies()
+
+}) */
 
 function toggleGrid(){
   const jobs = document.querySelectorAll('.singleAd.flex')
