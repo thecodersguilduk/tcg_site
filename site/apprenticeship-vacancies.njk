@@ -210,7 +210,10 @@ slug: {{job.jobTitle}}
         <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
         <div class="flex flex-col align-start justify-self-start w-full">
-          <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
+          <div class="flex justify-between w-full">
+            <h3 class="p-0 mb-0 text-xl">{{job.jobTitle}}</h3>
+            <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+          </div>
           <h5 class="p-0 my-2">{{job.employerName}}</h5>
           <h5 class="text-sm">{{job.standard}}</h5>
 
@@ -224,8 +227,6 @@ slug: {{job.jobTitle}}
             </div>
           </div>
         </div>
-
-        <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
       </div>
 
 
