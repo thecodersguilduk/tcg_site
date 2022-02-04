@@ -130,7 +130,7 @@ function prepPost(data) {
 
 
   data.location = data.location.map(location => location.name)
-
+  console.log(data.thingstoConsider);
   return data
 }
 

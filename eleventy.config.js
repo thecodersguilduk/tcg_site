@@ -167,6 +167,12 @@ module.exports = eleventyConfig => {
     return courses
   })
 
+  eleventyConfig.addCollection('apprentice-vacancies', collection => {
+    let jobs = collection.getFilteredByTag('apprentice-vacancies');
+
+    return jobs
+  })
+
   // Layout aliases
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')

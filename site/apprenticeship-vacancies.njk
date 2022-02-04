@@ -231,7 +231,7 @@ slug: {{job.jobTitle}}
 
 
       <div class="job-description my-2">
-        <p class="text-sm">{{job.excerpt}}</p>
+        <p class="text-sm">{{job.excerpt | safe}}</p>
       </div>
 
       <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">

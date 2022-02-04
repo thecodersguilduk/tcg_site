@@ -114,69 +114,6 @@ slug: {{job.jobTitle}}
               <label for="location" class="ml-1">Yorkshire and the Humber</label>
             </div>
           </div>
-            {#end of main location filter section ----- #}
-
-
-            {#-------apprenticeship standard#}
-            <div class="lg:my-4">
-              <p class="font-bold">Apprenticeship Standard</p>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software developer level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software developer level 4</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software developer level 3" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software developer level 3</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software tester level 3" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software tester level 3</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="accessibilty specialist level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Accessibilty specialist level 4</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
-                  class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Data analyst level 4</label>
-              </div>
-            </div>
-
-            {# end of standard -------- #}
-
-            {# salary range----- #}
-            {# <div>
-
-              <p class="font-bold text-xs">Salary Range</p>
-              <label for="salary range" class="text-xs">£24k-£36k</label>
-              <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
-                max="100" step="1" value="18" />
-              <div class="flex flex-row justify-between">
-                <p class="flex text-xs">£18k</p>
-                <p class="flex text-xs">100k</p>
-              </div>
-            </div> #}
-
-            {# end of salary range #}
-
-          <div class="lg:mt-4">
-            <p class="font-bold">Disability confident employer</p>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="true"
-                class="transform scale-150">
-              <label for="disability-confident-employer" class="ml-1"> Yes</label>
-            </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="false"
-                class="transform scale-150">
-              <label for="disability confident employer" class="ml-1"> No</label>
-            </div>
-          </div>
           </div>
         </div>
         </div>
@@ -223,7 +160,7 @@ slug: {{job.jobTitle}}
             </div>
             <div class="flex items-center mr-4 my-2 sm:my-0">
               <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-              <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+              <span class="text-sm">{{job.closingDate}}</span>
             </div>
           </div>
         </div>
@@ -235,8 +172,8 @@ slug: {{job.jobTitle}}
       </div>
 
       <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodrsguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
-        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{{job.pdf}}" style="color:white;" target="_blank">Apply Now</a>
+        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/jobs/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
       </div>
 
     </div>
