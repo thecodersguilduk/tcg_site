@@ -1,10 +1,11 @@
 ---
-layout: default
-title: Vacancies
+layout: "layouts/default.njk"
+title: Vacancies at The Coders Guild
+slug: {{job.jobTitle}}
 ---
 
 {# banner #}
-<div class="bg-grey-100 h-full">
+<div class="bg-grey-50 h-full">
   <div class="hero relative bg-grey-100 w-full mx-auto">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
@@ -13,292 +14,446 @@ title: Vacancies
     <div class="absolute top-0 w-full h-full">
       <div class="flex flex-col justify-center items-center w-full h-full">
         <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Vacancies</h1>
+          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
+            Apprenticeship</h1>
         </div>
-    <div>
-        </div>
+        {# <div>
+          <div class="mt-4 flex rounded-md shadow-sm w-full justify-self-center align-self-center">
+            <div class="relative">
+              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-4 py-4 sm:text-sm"
+                placeholder="Search a keyword...">
+            </div>
+            <button type="button" id="searchBtnJobIndex"
+              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
+            </button>
+          </div>
+        </div> #}
       </div>
     </div>
   </div>
 
-<main class="main inner flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
-    {# <div class="flex flex-wrap flex-row justify-center">
-      <div class="flex-row w-full md:w-1/5 h-full">
-        <div class="flex justify-between mt-6">
-          <h5 class="text-lg">Filters</h5>
-          <div class="resetIcon flex">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="w- h-8 p-2">
-            <h5 class="text-sm">Reset Filters</h5>
+
+
+
+  {# main section ---- #}
+
+<main class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
+{# check the below div - no closing tag but stopping column display for main#}
+    <div class="flex flex-wrap justify-center">
+    {# main left filter section ------#}
+      <div class="w-full lg:w-1/5 h-full">
+        <div class="flex justify-between items-center mt-6">
+          <h5 class="text-lg mb-0">Filters</h5>
+          <div class="resetIcon flex items-center">
+            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
+            <h5 class="text-xs mb-0">Reset Filters</h5>
           </div>
         </div>
+
+        {# this div is preventing display as column but does not have a closing tag???#}
         <div class="w-full filterOptions">
-        <div class="flex-col mr-4">
-          <div class="filter-form mt-4">
-            <p class="font-bold text-sm">Type of employment</p>
+        {#---------------------------------#}
+        <div class="flex justify-center items-center text-sm">
+          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col filter-form mt-4">
+
+
+            {# <p class="font-bold text-xs">Type of employment</p>
             <div>
               <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
                 class="transform scale-150">
-              <label for="apprenticeship" class="ml-1 text-sm"> Apprenticeship</label>
-            </div>
-            <p class="font-bold text-sm">Location</p>
+              <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
+            </div>  #}
+            {# main left section locations ----- #}
+
+
+          <div>
+            <p class="font-bold">Location</p>
             <div>
-              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+              <input type="checkbox" class="location" name="location" value="Greater London"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
+              <label for="location" class="ml-1">Greater London</label>
             </div>
              <div>
-              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+              <input type="checkbox" class="location" name="location" value="South East England"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
-            </div>
-            <div>
-              <input type="checkbox" class="location" name="location" value="yorkshire & humberside"
+              <label for="location" class="ml-1"> South East England</label>
+             </div>
+             <div>
+              <input type="checkbox" class="location" name="location" value="South West England"
                 class="transform scale-150">
-              <label for="location" class="ml-1 text-sm"> Yorkshire & Humbersides</label>
-            </div>
-            <p class="font-bold text-sm">Apprenticeship Standard</p>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-sm"> Software developer level 4</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software developer level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-sm"> Software developer level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="software tester level 3" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-sm"> Software tester level 3</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                value="accessibilty specialist level 4" class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-sm"> Accessibilty specialist level 4</label>
-            </div>
-            <div>
-              <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
+              <label for="location" class="ml-1">South West England</label>
+             </div>
+             <div>
+              <input type="checkbox" class="location" name="location" value="West Midlands"
                 class="transform scale-150">
-              <label for="apprentince standard" class="ml-1 text-sm"> Data analyst level 4</label>
+              <label for="location" class="ml-1">West Midlands</label>
+             </div>
+             <div>
+              <input type="checkbox" class="location" name="location" value="East Midlands"
+                class="transform scale-150">
+              <label for="location" class="ml-1">East Midlands</label>
+              </div>
+              <div>
+              <input type="checkbox" class="location" name="location" value="North West England"
+                class="transform scale-150">
+              <label for="location" class="ml-1">North West England</label>
+              </div>
+               <div>
+                <input type="checkbox" class="location" name="location" value="North East England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">North East England</label>
+              </div>
+               <div>
+              <input type="checkbox" class="location" name="location" value="East of England"
+                class="transform scale-150">
+              <label for="location" class="ml-1">East of England</label>
+              </div>
+                <div>
+              <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
+                class="transform scale-150">
+              <label for="location" class="ml-1">Yorkshire and the Humber</label>
             </div>
-            <div>
+          </div>
+            {#end of main location filter section ----- #}
 
-              <p class="font-bold text-sm">Salary Range</p>
-              <label for="salary range" class="text-sm">£24k-£36k</label>
+
+            {#-------apprenticeship standard#}
+            <div class="lg:my-4">
+              <p class="font-bold">Apprenticeship Standard</p>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software developer level 4" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software developer level 4</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software developer level 3" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software developer level 3</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="software tester level 3" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software tester level 3</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                  value="accessibilty specialist level 4" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Accessibilty specialist level 4</label>
+              </div>
+              <div>
+                <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
+                  class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Data analyst level 4</label>
+              </div>
+            </div>
+
+            {# end of standard -------- #}
+
+            {# salary range----- #}
+            {# <div>
+
+              <p class="font-bold text-xs">Salary Range</p>
+              <label for="salary range" class="text-xs">£24k-£36k</label>
               <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
                 max="100" step="1" value="18" />
               <div class="flex flex-row justify-between">
-                <p class="flex text-sm">£18k</p>
-                <p class="flex text-sm">100k</p>
+                <p class="flex text-xs">£18k</p>
+                <p class="flex text-xs">100k</p>
               </div>
-            </div>
-            <p class="font-bold text-sm">Disability confident employer</p>
+            </div> #}
+
+            {# end of salary range #}
+
+          <div class="lg:mt-4">
+            <p class="font-bold">Disability confident employer</p>
             <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="yes"
+              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="true"
                 class="transform scale-150">
-              <label for="disability-confident-employer" class="ml-1 text-sm"> Yes</label>
+              <label for="disability-confident-employer" class="ml-1"> Yes</label>
             </div>
             <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="no"
+              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="false"
                 class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-sm"> No</label>
+              <label for="disability confident employer" class="ml-1"> No</label>
             </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="in progress" class="transform scale-150">
-              <label for="disability confident employer" class="ml-1 text-sm"> In Progress</label>
-            </div>
+          </div>
           </div>
         </div>
         </div>
-      </div> #}
-        <div class="inner pt-24">
-            <div class="flex-row flex-wrap w-full h-full">
-                {% for job in vacancies %}
-                {% if job.isActive %}
-                {# <div class="w-full h-full my-4 flex flex-row justify-center rounded-lg pb-4 bg-white"> #}
-                    <div class="flex align-middle">
-                    <div class="w-full h-auto rounded-lg mx-0 my-4 shadow-xl border-grey-200 p-2 md:p-8 bg-white">
-                        <div class="w-full h-auto rounded-t-lg flex flex-row">
-                        <div class="mx-2 flex justify-center h-20 w-20 border-grey-200 border-2 rounded-lg order-last md:order-first">
-                            <img class="flex h-full w-full" src="{% if job.employerLogo %}{{job.employerLogo}}{% else %}{{ site.images.logo }}{% endif %}">
-                        </div>
-                        <div class="w-full lg:w-4/5 mx-2 my-2">
-                            <div class="flex flex-col md:flex-row justify-between md:items-center">
-                                <h5 class="text-lg text-blue-700 m-0 p-0">{{job.jobTitle}}</h5>
-                                <p class="text-sm font-bold mr-2">{% if job.salary %}£{{job.salary}}{% else %} Negotiable DOE {% endif %}</p>
-                            </div>
-                            <div class="flex flex-col md:flex-row md:justify-between lg:w-9/12">
-                                <div class="flex my-2">
-                                    <img class="mr-2" src="../images/apprenticeJobAd/place_black_24dp.svg">
-                                    <p class="flex text-sm leading-sm md:leading-2xl">{% for location in job.location %}{{location}}{% endfor %}</p>
-                                </div>
-                                <div class="flex my-2">
-                                    <img class="mr-2" src="../images/apprenticeJobAd/date_range_black_24dp.svg">
-                                    <p class="flex flex-col md:flex-row text-sm leading-sm md:leading-2xl"><span class="font-bold">Closing date:&nbsp; </span> {{job.closingDate}}</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class=" w-full md:w-4/5 mx-2 my-2 overflow-hidden">
-                        <p class="truncate text-sm">{{job.briefOverview}} </p>
-                        <div class="mb-4 mt-2 flex flex-row justify-start">
-                            <div class="flex flex-col sm:flex-row">
-                            <a class="border-none my-4 sm:my-0" href="{{job.slug.current}}">
-                            <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Apply Now</button>
-                            </a>
-                            <a class="border-none" href="{% if job.pdf %}{{job.pdf}}{% else %}{{job.slug.current}}{% endif %}">
-                            <button class="w-auto h-auto bg-blue-200 text-white rounded-lg p-2 mx-1"> Find out more</button>
-                            </a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div>
-                    </div>
-                    </div>
-                {% endif %}
-                {% endfor %}
-            </div>
+      </div>
+
+
+      {# main right filter section -----#}
+      <div class="lg:w-4/5 w-full h-full lg:px-6">
+        <div class="flex justify-between items-center mt-6">
+          <h5 class="mb-0">Showing: <span class="showing"></span></h5>
+          <div class="flex items-center">
+            {# <h5 class="text-xs mb-0">Sort By</h5>
+            <select name="sort-by" class="sort mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
+              <option value="A-Z">A-Z</option>
+              <option value="location">Location</option>
+            </select> #}
+            <img class="hidden lg:block w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
+            <img class="hidden lg:block listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
+          </div>
         </div>
-    {# </div> #}
-  </main>
+
+
+{# apprentceship vancancy job card ----- #}
+<div class="flex flex-col">
+{% for job in vacancies %}
+
+  <div class="main-container singleAd {{ job.jobTitle | join }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+    <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
+
+      <div class="top-row flex flex-row justify-between mb-6">
+        <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{%if job.employerLogo %}{{job.employerLogo}}{%else%}{{site.images.logo}}{%endif%}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+
+        <div class="flex flex-col align-start justify-self-start w-full">
+          <div class="flex justify-between w-full">
+            <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
+            <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+          </div>
+          <h5 class="p-0 my-2">{{job.employerName}}</h5>
+          <h5 class="text-sm">{{job.standard}}</h5>
+
+          <div class="flex flex-row flex-wrap items-center">
+            <div class="flex items-center mr- my-2 sm:my-0">
+              <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+            </div>
+            <div class="flex items-center mr-4 my-2 sm:my-0">
+              <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+              <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="job-description my-2">
+        <p class="text-sm">{{job.excerpt}}</p>
+      </div>
+
+      <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
+        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodrsguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
+        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+      </div>
+
+    </div>
+  </div>
+
+{% endfor %}
 </div>
 
-
-
-
+      </div>
+    </div>
+  </main>
 
 
 <script>
+const filterOptions = document.querySelector('.filterOptions')
+const searchBar = document.querySelector('#search')
+const searchBtn = document.querySelector('#searchBtnJobIndex')
+const disabilityCheckbox = document.querySelectorAll('.disability-confident-employer')
+const locationCheckbox = document.querySelectorAll('.location')
+const standardCheckbox = document.querySelectorAll('.standard')
+const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
+const resetIcon = document.querySelector('.resetIcon')
+const singleAd = Array.from(document.querySelectorAll('.singleAd'))
+const sortSelect = document.querySelector('.sort')
+const gridIcon = document.querySelector('.gridView')
+const listIcon = document.querySelector('.listView')
+let locationArray = []
+let disabilityArray = []
+let standardArray = []
+
+listIcon.addEventListener('click', toggleGrid)
+gridIcon.addEventListener('click', toggleGrid)
 
 
-async function getData() {
-    let query = 'https://wd1bon7z.api.sanity.io/v1/data/query/production?query=*%5B_type%20%3D%3D%20%22vacancies%22%5D%20%7B%0A%20%20%20%20%20...%0A%20%20%0A%20%20%0A%7D'
-    // Fetches data
-    const data = await fetch(query).then(response => response.json()).then(data => {
-        data.result.map(item => item.closingDate = item.closingDate ? dateDisplay(item.closingDate) : 'Ongoing');
-        return data
-    })
-    return data
-}
+filterOptions.addEventListener('change', e => {
+  //filter options is the container div for all the checkboxes.the event listener listens for any change, check/uncheck
+    if(e.target.classList.contains('location')){
+      let selectedLocation = join(e.target.value)
+        if(e.target.checked) {
+          locationArray.push(selectedLocation)
+        } else if (!e.target.checked){
+          let index = locationArray.indexOf(selectedLocation)
+          locationArray.splice(index, 1)
+        }
+    } else if(e.target.classList.contains('disability-confident-employer')){
+        let checkboxValue = join(e.target.value);
 
-const data = getData();
-console.log(data);
+        if(e.target.checked){
+        disabilityArray.push(checkboxValue)
+        } else if(!e.target.checked) {
+            let index = disabilityArray.indexOf(checkboxValue)
+            disabilityArray.splice(index, 1)
+        }
+    } else if(e.target.classList.contains('apprentince-standard')){
+        let checkboxValue = join(e.target.value);
 
-function dateDisplay(date, part) {
-    if(!date) return
-    var d = new Date(date);
-    if(part == 'year') {
-      return d.getUTCFullYear();
+        if(e.target.checked){
+        standardArray.push(checkboxValue)
+        } else if(!e.target.checked) {
+            let index = standardArray.indexOf(checkboxValue)
+            standardArray.splice(index, 1)
+            console.log(standardArray)
+        }
     }
-    var month = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ];
-    var ordinal = {
-      1 : "st",
-      2 : "nd",
-      3 : "rd",
-      21 : "st",
-      22 : "nd",
-      23 : "rd",
-      31 : "st"
-    };
-    return d.getDate() + (ordinal[d.getDate()] || "th") + " " + month[d.getMonth()] + ", " + d.getUTCFullYear();
-  }
 
+    singleAd.forEach(job => {
+      if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length > 0){
+        console.log('triple array filter')
+        filtertriplearray(standardArray, disabilityArray, standardArray, job)
+      }
 
+      if(locationArray.length < 1 && disabilityArray.length > 0 && standardArray.length > 0){
+        console.log('double array filter')
+        filterdoublearray(disabilityArray, standardArray, job)
+      }
 
-//function to filter jobs based on input search string, which is called onlick of search button.
+      if(locationArray.length > 0 && disabilityArray.length < 1 && standardArray.length > 0){
+        console.log('double array filter')
+        filterdoublearray(locationArray, standardArray, job)
+      }
 
-/*function filteredJobs() {
-  const filtered = jobAd.filter(job => job.title.includes(searchString) || job.location.includes(searchString) || job.employer.includes(searchString) || job.standard.includes(searchString))
-  filteredAds.push(filtered)
-  console.log(filtered)
-}
+      if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length < 1){
+        console.log('double array filter')
+        filterdoublearray(locationArray, disabilityArray, job)
+      }
 
-function filterByCheck() {
-  standardCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedStandardValue = e.target.value
-console.log('selectedStandardValue:', selectedStandardValue)
-if(jobAd.includes(selectedStandardValue))
-console.log(jobAd)
-filteredbyCheckbox.push(selectedStandardValue)
-console.log(filteredbyCheckbox)
-}))
-}
+      if(locationArray.length >= 1 && disabilityArray.length < 1 && standardArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(locationArray, job)
+      }
 
-filterByCheck()
+      if(disabilityArray.length >= 1 && locationArray.length < 1 && standardArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(disabilityArray, job)
+      }
 
+      if(standardArray.length >= 1 && disabilityArray.length < 1 && locationArray.length < 1){
+        console.log('single array filter')
+        filterSingleArray(standardArray, job)
+      }
 
-// use the user input to update the searchString variable
-searchBar.addEventListener('keyup', e => {
-searchString = e.target.value
-return searchString
+      if(locationArray.length < 1 && disabilityArray.length < 1 && standardArray.length < 1){
+        reset()
+      }
+    })
 })
 
+resetIcon.addEventListener('click', reset);
 
-// call filteredJobs function on click of the search button.
-searchBtn.addEventListener('click', e => {
-  filteredJobs()
-console.log('searchString:', searchString)
-})
+/* searchBar.addEventListener('keyup', e => {
+const searchString = e.target.value
+const jobs = document.querySelectorAll('.singleAd.flex');
 
-standardCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedStandardValue = e.target.value
-console.log('selectedStandardValue:', selectedStandardValue)
-}))
-
-disabiltyCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedDisabilityValue = e.target.value
-  console.log(selectedDisabilityValue)
-}))
-
-locationCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedLocation = e.target.value
-  console.log(selectedLocation)
-}))
-
-employmentTypeCheckbox.forEach(box => box.addEventListener('click', e => {
-  let selectedEmploymentType = e.target.value
-  console.log(selectedEmploymentType)
-}))
-
-resetIcon.addEventListener('click', e => {
-  reset()
-console.log('clicked')
+  jobs.forEach(job => {
+    if(!job.classList.includes(searchString)){
+      job.classList.add('hidden')
+      job.classList.remove('flex')
+    } else {
+      job.classList.add('flex')
+      job.classList.remove('hidden')
+    }
   })
 
-let mappedArray = jobAd.map(job => (
-  console.log(job.title)
-))
+  displayNumVacancies()
 
+}) */
 
-function displayNumCourses(){
-let numCourses = Array.from(jobAd)
-numberOfJobs.innerHTML = `showing: ${numCourses.length}`
-console.log('numCourses:', numCourses.length)
+function toggleGrid(){
+  const jobs = document.querySelectorAll('.singleAd.flex')
+  const jobChildEl = jobs[0];
+  jobChildEl.parentNode.classList.toggle('flex-col')
+  jobChildEl.parentNode.classList.toggle('flex-row')
+  jobChildEl.parentNode.classList.toggle('flex-wrap')
+
+  jobs.forEach(job => {
+    job.classList.toggle('w-5/12')
+    job.classList.toggle('mx-auto')
+    job.firstElementChild.classList.toggle('h-full')
+
+  })
 }
 
-displayNumCourses()
+function filtertriplearray(arr1, arr2, arr3, el){
+    if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item)) && arr3.some(item=>Array.from(el.classList).includes(item))){
+      el.classList.remove('hidden')
+      el.classList.add('flex')
+    } else {
+      el.classList.add('hidden')
+      el.classList.remove('flex')
+    }
+
+    displayNumVacancies()
+}
+
+function filterdoublearray(arr1, arr2, el){
+    if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item))){
+      el.classList.remove('hidden')
+      el.classList.add('flex')
+    } else {
+      el.classList.add('hidden')
+      el.classList.remove('flex')
+    }
+
+    displayNumVacancies()
+}
+
+function filterSingleArray(arr, el){
+    if(arr.some(item=>Array.from(el.classList).includes(item))){
+    console.log(arr, el)
+      el.classList.remove('hidden')
+      el.classList.add('flex')
+    } else {
+    console.log(arr, el)
+      el.classList.add('hidden')
+      el.classList.remove('flex')
+    }
+
+    displayNumVacancies()
+}
+
+function join(string){
+    return string.replace(/\s+/g, '-').toLowerCase()
+}
 
 function reset(){
-  let filteredAds = jobAd
+  disabilityArray = []
+  locationArray = []
 
-  console.log(filteredAds)
+  singleAd.forEach(ad => {
+    ad.classList.remove('hidden')
+    ad.classList.add('flex')
+  })
 
+  standardCheckbox.forEach(box => {
+    box.checked = false
+  })
+
+  locationCheckbox.forEach(box => {
+    box.checked = false
+  })
+
+  disabilityCheckbox.forEach(box => {
+    box.checked = false
+  })
+  displayNumVacancies()
 }
-*/
 
+searchBtn.addEventListener('click', e => {
+  displayNumVacancies()
+})
+
+function displayNumVacancies(){
+  const ads = document.querySelectorAll('.singleAd.flex');
+  const display = document.querySelector('.showing')
+
+  display.innerHTML = ads.length;
+}
+
+displayNumVacancies()
 </script>

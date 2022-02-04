@@ -62,7 +62,8 @@ export default
       {
         name: 'salary',
         title: 'Salary',
-        type: 'string'
+        type: 'string',
+        description: 'If this is DOE - no need to write it here - just leave it blank :-) otherwise set a salary amount or range. No need to include "£" signs'
       }
     ]
   }
