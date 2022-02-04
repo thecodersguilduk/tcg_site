@@ -77,7 +77,10 @@ export default
       {
         name: 'excerpt',
         title: 'Excerpt',
-        type: 'text'
+        type: 'array',
+        of: [
+          { type: 'block'}
+        ]
       },
       {
         name: 'standard',
