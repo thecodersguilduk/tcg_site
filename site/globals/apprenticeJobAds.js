@@ -104,6 +104,14 @@ function prepPost(data) {
     })
   }
 
+  if (data.excerpt) {
+    data.excerpt = blocksToHtml({
+      blocks: data.excerpt,
+      serializers: serializers
+
+    })
+  }
+
   if (data.prospects) {
     data.prospects = blocksToHtml({
       blocks: data.prospects,
