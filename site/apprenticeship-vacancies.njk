@@ -5,7 +5,7 @@ slug: {{job.jobTitle}}
 ---
 
 {# banner #}
-<div class="bg-grey-50 h-full">
+<div class="bg-grey-50 h-full py-24">
   <div class="hero relative bg-grey-100 w-full mx-auto">
     <img src="../images/banner-1.png" alt="Apprenticeships hero image"
       class="md:block hidden h-full w-full hero-desktop" />
@@ -123,27 +123,12 @@ slug: {{job.jobTitle}}
               <div>
                 <input type="checkbox" class="apprentince-standard" name="apprentince standard"
                   value="software developer level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software developer level 4</label>
+                <label for="apprentince standard" class="ml-1"> Software Developer Level 4</label>
               </div>
               <div>
                 <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software developer level 3" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software developer level 3</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software tester level 3" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software tester level 3</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="accessibilty specialist level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Accessibilty specialist level 4</label>
-              </div>
-              <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard" value="data analyst level 4"
-                  class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Data analyst level 4</label>
+                  value="software tester level 4" class="transform scale-150">
+                <label for="apprentince standard" class="ml-1"> Software Tester Level 4</label>
               </div>
             </div>
 
@@ -201,6 +186,7 @@ slug: {{job.jobTitle}}
 
 {# apprentceship vancancy job card ----- #}
 <div class="flex flex-col">
+<h2 class="text-center hidden no-results my-20">Sorry, No Vacancies Match Your Search</h2>
 {% for job in apprenticeJobAds %}
 
   <div class="main-container singleAd {{ job.jobTitle | join }} {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
@@ -252,8 +238,6 @@ slug: {{job.jobTitle}}
 
 <script>
 const filterOptions = document.querySelector('.filterOptions')
-const searchBar = document.querySelector('#search')
-const searchBtn = document.querySelector('#searchBtnJobIndex')
 const disabilityCheckbox = document.querySelectorAll('.disability-confident-employer')
 const locationCheckbox = document.querySelectorAll('.location')
 const standardCheckbox = document.querySelectorAll('.standard')
@@ -263,6 +247,7 @@ const singleAd = Array.from(document.querySelectorAll('.singleAd'))
 const sortSelect = document.querySelector('.sort')
 const gridIcon = document.querySelector('.gridView')
 const listIcon = document.querySelector('.listView')
+const noresults = document.querySelector('.no-results')
 let locationArray = []
 let disabilityArray = []
 let standardArray = []
@@ -298,43 +283,42 @@ filterOptions.addEventListener('change', e => {
         } else if(!e.target.checked) {
             let index = standardArray.indexOf(checkboxValue)
             standardArray.splice(index, 1)
-            console.log(standardArray)
         }
     }
 
     singleAd.forEach(job => {
       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length > 0){
-        console.log('triple array filter')
+        ('triple array filter')
         filtertriplearray(standardArray, disabilityArray, standardArray, job)
       }
 
       if(locationArray.length < 1 && disabilityArray.length > 0 && standardArray.length > 0){
-        console.log('double array filter')
+        ('double array filter')
         filterdoublearray(disabilityArray, standardArray, job)
       }
 
       if(locationArray.length > 0 && disabilityArray.length < 1 && standardArray.length > 0){
-        console.log('double array filter')
+        ('double array filter')
         filterdoublearray(locationArray, standardArray, job)
       }
 
       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length < 1){
-        console.log('double array filter')
+        ('double array filter')
         filterdoublearray(locationArray, disabilityArray, job)
       }
 
       if(locationArray.length >= 1 && disabilityArray.length < 1 && standardArray.length < 1){
-        console.log('single array filter')
+        ('single array filter')
         filterSingleArray(locationArray, job)
       }
 
       if(disabilityArray.length >= 1 && locationArray.length < 1 && standardArray.length < 1){
-        console.log('single array filter')
+        ('single array filter')
         filterSingleArray(disabilityArray, job)
       }
 
       if(standardArray.length >= 1 && disabilityArray.length < 1 && locationArray.length < 1){
-        console.log('single array filter')
+        ('single array filter')
         filterSingleArray(standardArray, job)
       }
 
@@ -405,11 +389,11 @@ function filterdoublearray(arr1, arr2, el){
 
 function filterSingleArray(arr, el){
     if(arr.some(item=>Array.from(el.classList).includes(item))){
-    console.log(arr, el)
+    (arr, el)
       el.classList.remove('hidden')
       el.classList.add('flex')
     } else {
-    console.log(arr, el)
+    (arr, el)
       el.classList.add('hidden')
       el.classList.remove('flex')
     }
@@ -444,15 +428,19 @@ function reset(){
   displayNumVacancies()
 }
 
-searchBtn.addEventListener('click', e => {
-  displayNumVacancies()
-})
-
 function displayNumVacancies(){
   const ads = document.querySelectorAll('.singleAd.flex');
   const display = document.querySelector('.showing')
 
   display.innerHTML = ads.length;
+
+  if(ads.length === 0){
+    noresults.classList.add('block')
+    noresults.classList.remove('hidden')
+  } else {
+    noresults.classList.remove('block')
+    noresults.classList.add('hidden')
+  }
 }
 
 displayNumVacancies()
