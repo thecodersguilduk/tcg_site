@@ -32,6 +32,10 @@
           "url": "/sitemap.xml"
         },
         {
+          "label": "Vacancies",
+          "url": "/jobs/"
+        },
+        {
           "label": "Terms and Conditions",
           "url": "/pdf/Terms and Conditions v1.2.pdf"
         },
