@@ -25,6 +25,9 @@ mix
                 '@utilities': path.resolve(__dirname, 'resources/js/utilities'),
                 '@modules': path.resolve(__dirname, 'resources/js/modules')
             }
+        },
+        node: {
+            fs: "empty"
         }
     })
 

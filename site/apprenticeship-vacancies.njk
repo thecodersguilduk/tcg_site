@@ -37,7 +37,7 @@ slug: {{job.jobTitle}}
 
   {# main section ---- #}
 
-<main class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
+<main class="main inner flex flex-1 flex-col focus:outline-none vacancies" tabindex="-1">
 {# check the below div - no closing tag but stopping column display for main#}
     <div class="flex flex-wrap justify-center">
     {# main left filter section ------#}
@@ -238,19 +238,14 @@ slug: {{job.jobTitle}}
 
 <script>
 const filterOptions = document.querySelector('.filterOptions')
-const disabilityCheckbox = document.querySelectorAll('.disability-confident-employer')
-const locationCheckbox = document.querySelectorAll('.location')
-const standardCheckbox = document.querySelectorAll('.standard')
-const employmentTypeCheckbox = document.querySelectorAll('.employment-type')
 const resetIcon = document.querySelector('.resetIcon')
 const singleAd = Array.from(document.querySelectorAll('.singleAd'))
 const sortSelect = document.querySelector('.sort')
 const gridIcon = document.querySelector('.gridView')
 const listIcon = document.querySelector('.listView')
 const noresults = document.querySelector('.no-results')
-let locationArray = []
-let disabilityArray = []
-let standardArray = []
+//const url = `https://${process.env.PROJECTID}.api.sanity.io/v${process.env.API_VERSION}/<path>`
+
 
 listIcon.addEventListener('click', toggleGrid)
 gridIcon.addEventListener('click', toggleGrid)
