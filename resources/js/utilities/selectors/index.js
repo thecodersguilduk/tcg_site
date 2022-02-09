@@ -59,7 +59,9 @@ const $$ = {
 
     scrollTopBtn        : document.getElementById('scroll-top'),
 
-    faqSection          : document.querySelector('.faq')
+    faqSection          : document.querySelector('.faq'),
+
+    vacancies           : document.querySelector('.vacancies')
 
 }
 
