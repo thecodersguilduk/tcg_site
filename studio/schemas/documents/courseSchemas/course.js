@@ -141,7 +141,8 @@ export default {
           { type: 'imageSection' },
           { type: 'break' },
           { type: 'newsletter' },
-          { type: 'form' }
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
         ]
       },
       {
