@@ -65,6 +65,11 @@ const serializers = {
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).url(),
     }),
+    youtubeEmbed: (node) => h("iframe", {
+      src: node.node.src,
+      width: node.node.width || '100%',
+      height: node.node.height || '500px'
+    }),
     applyBtn: ({ node: { btnText, btnLink, style } }) => {
       let classes;
       if(style === 'float-right') {

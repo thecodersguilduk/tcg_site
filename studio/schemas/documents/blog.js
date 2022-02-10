@@ -84,7 +84,8 @@ export default {
         { type: 'supportingSentence' },
         { type: 'styledHeading' },
         { type: 'newsletter' },
-        { type: 'form' }
+        { type: 'form' },
+        { type: 'youtubeEmbed' }
       ]
     }
   ],
