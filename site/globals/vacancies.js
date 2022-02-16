@@ -4,7 +4,7 @@ const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
 const config = require('../globals/config');
 
-const query = `*[_type == "vacancies" && !(_id in path("drafts.**"))] {
+const query = `*[_type == "vacancies" && isActive && !(_id in path("drafts.**"))] {
     ...,
     location[]->{name}
 } | order(_createdAt desc)`
@@ -32,7 +32,7 @@ function prepPost(data) {
     data.location = data.location.map(location => location.name)
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
 
-    //console.log(data);
+    console.log(data);
     return data
 }
 

@@ -12,7 +12,7 @@ const config = require('../globals/config');
 //query path can be found in sanity via inspect.
 // you can then test the path in sanity via vision
 //employerLogo is a object key set in the schema, we include this to access the url path of the image
-const query = ` *[ _type == "apprenticeshipVacancies" && !(_id in path("drafts.**"))]{
+const query = ` *[ _type == "apprenticeshipVacancies" && isActive && !(_id in path("drafts.**"))]{
   ...,
   location[]->{name},
 "employerLogo": employerLogo.asset->url
