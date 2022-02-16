@@ -245,7 +245,9 @@ const gridIcon = document.querySelector('.gridView')
 const listIcon = document.querySelector('.listView')
 const noresults = document.querySelector('.no-results')
 //const url = `https://${process.env.PROJECTID}.api.sanity.io/v${process.env.API_VERSION}/<path>`
-
+let locationArray = [];
+let standardArray = [];
+let disabilityArray = [];
 
 listIcon.addEventListener('click', toggleGrid)
 gridIcon.addEventListener('click', toggleGrid)
