@@ -22,7 +22,7 @@ layout: 'default'
         <div class="bg-white section-rounded">
           <div class="bg-blue-200 section-rounded">
             <div class="bg-white section-rounded">
-            
+
                 <section class="relative md:w-4/6 mx-auto md:py-20 py-14 z-10 overflow-hidden">
                 <h2 class="text-center text-blue-200 mb-12">Application Form</h2>
                     <div class="flex flex-col lg:flex-row md:justify-between">
@@ -31,7 +31,7 @@ layout: 'default'
                                 <h2 class="leading-3xl text-2xl mb-6">Our commitment to equality and diversity</h2>
                                 <p class="mb-6">The Coders Guild is 100% committed to promoting inclusion, eliminating discrimination and encouraging diversity
                                 across all areas of our work. Our aim is that applications to courses and services will be truly representative of all sections
-                                of society. As part of our monitoring processes we ask for your cooperation in completing the questions on this form. We have a 
+                                of society. As part of our monitoring processes we ask for your cooperation in completing the questions on this form. We have a
                                 very inclusive application process, this data will be anonymised for our tracking purposes.
                                 No applicant will be discriminated against regardless of their age, colour, disability, ethnicity, gender or gender identity, race,
                                 religion or belief and / or sexual orientation or if you do not wish to complete this form. For full details please see our data and
@@ -51,13 +51,13 @@ layout: 'default'
                             <div>
                                 <p>
                                     <label for="first_name" class="sr-only">First Name:</label>
-                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />   
+                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="last_name" class="sr-only">Last Name:</label>
-                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />   
+                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -80,9 +80,15 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
+                                    <label for="dob" class="sr-only">Date of Birth</label>
+                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" />
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
                                     <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
-                                    
+
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -169,7 +175,7 @@ layout: 'default'
                                                 <label for="rtw_status_No">No</label>
                                             </div>
                                         </div>
-                                    </p> 
+                                    </p>
                             </div>
                             <div class="mt-8">
                                 <div class="relative flex items-start">
@@ -186,17 +192,24 @@ layout: 'default'
                      </div>
                     </div>
                 </section>
-                
+
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="../js/jquery-ui.js"></script>
     <script>
     const url = new URL(window.location.href)
     url.searchParams.forEach((x, y) => {
         document.getElementById(y).value = x
     })
-    
+
+    </script>
+    <script>
+    $(document).ready(function(){
+        $(".dob").datepicker()
+    })
+
     </script>
