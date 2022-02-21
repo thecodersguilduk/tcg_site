@@ -132,6 +132,12 @@ export default {
         title: 'Excerpt',
       },
       {
+        name: 'tags',
+        type: 'tags',
+        title: 'Tags',
+        description: 'please use lower case'
+      },
+      {
         name: 'coursePortableText',
         type: 'array',
         title: 'Body',
