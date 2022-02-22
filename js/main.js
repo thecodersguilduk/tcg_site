@@ -783,7 +783,7 @@ var faqAccordion = function faqAccordion() {
     var btn = e.target.closest('.faq-btn');
     if (!btn) return;
     var content = btn.nextElementSibling;
-    var angle = btn.querySelector('.fa-w-10');
+    var angle = btn.querySelector('.svg-inline--fa');
     btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
 
     if (content.style.maxHeight) {
