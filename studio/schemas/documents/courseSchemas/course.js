@@ -37,6 +37,17 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'tags',
+        title: 'Tags',
+        type: 'tags',
+        options: {
+          //Locks menu from creating new tags (defaults to false)
+          frozen: false,
+          //Closes menu after tag selected (defaults to true)
+          closeMenuOnSelect: true
+        }
+      },
+      {
         name: 'courseType',
         title: 'Course Type',
         type: 'array',
@@ -130,12 +141,6 @@ export default {
         name: 'excerpt',
         type: 'text',
         title: 'Excerpt',
-      },
-      {
-        name: 'tags',
-        type: 'tags',
-        title: 'Tags',
-        description: 'please use lower case'
       },
       {
         name: 'coursePortableText',
