@@ -32,7 +32,7 @@ function prepPost(data) {
     data.location = data.location.map(location => location.name)
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
 
-    console.log(data);
+    //console.log(data);
     return data
 }
 
