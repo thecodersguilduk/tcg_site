@@ -25,25 +25,16 @@ meta_description: {{ excerpt }}
         <div class="post content md:px-20 max-w-3xl mx-auto inner">
         {% for tag in course.tags %}
           {% if tag.value === 'serco' %}
-                <div class="mt-6 grid grid-cols-6 gap-0.5 mt-8 mb-16">
-                  <div class="col-span-6 my-8">
-                    <p>The Coders Guild have been commissioned by the
-                    Greater Manchester Combined Authority and work
-                    alongside <a href="https://www.serco.com/about" target="_blank">SERCO</a>
-                    to help deliver the fully funded courses in the
-                    Greater Manchester Area under the GMCA's
-                    <a href="https://www.greatermanchester-ca.gov.uk/news/new-training-to-combat-digital-skills-shortage-as-businesses-adapt-to-impact-of-covid-19/" target="_blank">'Skills for Growth'</a> Programme.</p>
-                  </div>
-                  <div class="col-span-2 flex justify-center py-2 px-2 bg-gray-50">
-                    <img class="max-h-12" src="../../images/LocalAuthLogos/Serco.jpg"  alt="Serco Logo">
-                  </div>
-                  <div class="col-span-2 flex justify-center py-2 px-2 bg-gray-50">
-                    <img class="max-h-12" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Skills for Growth Logo">
-                  </div>
-                  <div class="col-span-2 flex justify-center py-2 px-2 bg-gray-50">
-                    <img class="max-h-12" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Social Fund Logo">
-                  </div>
-                </div>
+          <div class="my-8">
+              <p>The Coders Guild have been commissioned by the
+                Greater Manchester Combined Authority and work
+                alongside <a href="https://www.serco.com/about" target="_blank">SERCO</a>
+                to help deliver the fully funded courses in the
+                Greater Manchester Area under the GMCA's
+                <a href="https://www.greatermanchester-ca.gov.uk/news/new-training-to-combat-digital-skills-shortage-as-businesses-adapt-to-impact-of-covid-19/" target="_blank">'Skills for Growth'</a> Programme.
+              </p>
+              <img src="../../images/logos_banner.png" alt="funders logos" class="mx-auto w-full">
+          </div>
           {% endif %}
         {% endfor %}
 
