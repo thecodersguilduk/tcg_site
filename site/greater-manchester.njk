@@ -4,15 +4,65 @@ meta_title: Free Digital and Coding Courses in Greater Manchester | The Coders G
 meta_description: Free Digital and Coding Courses in Greater Manchester | The Coders Guild
 ---
 
-<div class="inner py-24">
-    <div class="flex flex-wrap py-24">
-        <div class="w-full lg:w-5/12">
-            <h1>Businesses in Greater Manchester</h1>
-            <p class="font-bold text-lightblue-500"><span class="capitalize">Upskill your teams in digital</span> (at no cost to you*)</p>
-            <p>Employers</p>
+<section class="section-rounded">
+    <div class="inner py-24">
+        <div class="flex flex-wrap pt-24 pb-12">
+            <div class="w-full lg:w-5/12">
+                <h1>Businesses in Greater Manchester</h1>
+                <p class="font-bold text-lightblue-500 mb-4"><span class="capitalize">Upskill your teams in digital</span> (at no cost to you*)</p>
+                <p>Employers, you can register your teams for our digital
+                upskill courses to:</p>
+                    <ul class="decorated-ul my-4">
+                        <li class="mb-0">Improve productivity</li>
+                        <li class="mb-0">Drive business growth</li>
+                        <li class="mb-0">Fill the digital skills gap</li>
+                    </ul>
+
+                <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="/course-directory/"> View our Courses</a>
+                <p class="text-xs leading-tight">*All courses are funded by the Greater Manchester
+                Combined Authority's 'Skills for Growth' programme</p>
+            </div>
+            <div class="w-full lg:w-7/12 flex items-center justify-center">
+                VIDEO DIV
+            </div>
         </div>
-        <div class="w-full lg:w-7/12 flex items-center justify-center">
-            VIDEO DIV
+        <div class="w-full md:w-8/12 mx-auto">
+            <div class="mt-2 mb-4 grid grid-cols-4 gap-0.5">
+                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                    <img class="max-h-8" src="../../images/LocalAuthLogos/Serco.jpg"  alt="Leeds LEP Logo">
+                </div>
+                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                    <img class="max-h-8" src="../../images/LocalAuthLogos/uk_skills.png" alt="EU Social Fund Logo">
+                </div>
+                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                    <img class="max-h-8" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
+                </div>
+                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                    <img class="max-h-8" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
+                </div>
+            </div>
+            <p class="text-center">The Coders Guild have been commissioned by the Greater Manchester Combined Authority
+            and work alongside SERCO to help deliver the fully funded courses
+            in the Greater Manchester Area under the GMCA’s ‘Skills for Growth’
+            Programme. We are working directly with SERCO to deliver this
+            training.</p>
         </div>
     </div>
-</div>
+</section>
+<section class="bg-yellow-100 section-rounded py-24">
+    <div class="inner">
+        <div class="w-full md:w-8/12 mx-auto">
+            <h2 class="text-center text-white">Upskill/Reskill yourself or
+            your teams with these 100% funded courses</h2>
+        </div>
+        <div class="courses flex flex-wrap">
+            {% for course in courses%}
+                <div class="bg-white rounded flex flex-col w-full md:w-4/12">
+                    <div class="featured-image rounded">
+                        <img src="{{course.featuredImage}}" alt="{{course.title}}" class="-w-full max-h-8">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
