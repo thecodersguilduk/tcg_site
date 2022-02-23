@@ -45,7 +45,7 @@ function prepPost(data) {
   if(data.location){
     data.location = data.location[0]
   }
-  
+
   if (data.partner) {
     data.partner = data.partner[0].code
   }
@@ -55,6 +55,8 @@ function prepPost(data) {
   if (data.project) {
     data.project = data.project[0].code
   }
+
+  console.log(data.tags);
   return data
 }
 

@@ -23,47 +23,21 @@ meta_description: {{ excerpt }}
         </div>
 
         <div class="post content md:px-20 max-w-3xl mx-auto inner">
-        <div class="bg-white">
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-    {# <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">
-      Trusted by over 5 very average small businesses
-    </p> #}
-    <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-5 lg:mt-8">
-      <div class="col-span-1 flex justify-center py-2 px-2 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/Serco.jpg"  alt="Leeds LEP Logo">
-      </div>
-      <div class="col-span-1 flex justify-center py-2 px-2 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/uk_skills.png" alt="EU Social Fund Logo">
-      </div>
-      <div class="col-span-1 flex justify-center py-2 px-2 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
-      </div>
-      <div class="col-span-1 flex justify-center py-2 px-2 bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
-      </div>
-      <div class="col-span-1 flex justify-center bg-gray-50">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/york_n_yorks.png"  alt="Skills for Growth Logo">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/ny_growth_hub.png"  alt="Skills for Growth Logo">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/wyca.png"  alt="Skills for Growth Logo">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/missing.png"  alt="Skills for Growth Logo">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/s-4-life.webp"  alt="Skills for Growth Logo">
-      </div>
-      <div class="col-span-1 flex py-2 px-2 justify-center bg-gray-50">
-        <img class="max-h-12" src="../../images/LocalAuthLogos/dfe.jpg"  alt="Skills for Growth Logo">
-      </div>
-    </div>
-  </div>
-</div>
+        {% for tag in course.tags %}
+          {% if tag.value === 'serco' %}
+          <div class="my-8">
+              <p>The Coders Guild have been commissioned by the
+                Greater Manchester Combined Authority and work
+                alongside <a href="https://www.serco.com/about" target="_blank">SERCO</a>
+                to help deliver the fully funded courses in the
+                Greater Manchester Area under the GMCA's
+                <a href="https://www.greatermanchester-ca.gov.uk/news/new-training-to-combat-digital-skills-shortage-as-businesses-adapt-to-impact-of-covid-19/" target="_blank">'Skills for Growth'</a> Programme.
+              </p>
+              <img src="../../images/logos_banner.png" alt="funders logos" class="mx-auto w-full">
+          </div>
+          {% endif %}
+        {% endfor %}
+
             {{ course.body | safe }}
 
             <div class="flex flex-col xs:flex-row py-16">
