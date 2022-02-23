@@ -26837,6 +26837,10 @@ fieldset a {
   text-decoration: none;
 }
 
+.post.content p {
+  min-height: 32px;
+}
+
 @media (min-width: 320px){
   .xs\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
