@@ -2,9 +2,12 @@
 layout: default
 meta_title: Free Digital and Coding Courses in Greater Manchester | The Coders Guild
 meta_description: Free Digital and Coding Courses in Greater Manchester | The Coders Guild
+body_class: apprenticeship_employer
 ---
 
 <section class="section-rounded">
+    <div class="bg-yellow-100">
+        <div class="bg-white section-rounded">
     <div class="inner py-24">
         <div class="flex flex-wrap pt-24 pb-12">
             <div class="w-full lg:w-5/12">
@@ -27,20 +30,7 @@ meta_description: Free Digital and Coding Courses in Greater Manchester | The Co
             </div>
         </div>
         <div class="w-full md:w-8/12 mx-auto">
-            <div class="mt-2 mb-4 grid grid-cols-4 gap-0.5">
-                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
-                    <img class="max-h-8" src="../../images/LocalAuthLogos/Serco.jpg"  alt="Leeds LEP Logo">
-                </div>
-                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
-                    <img class="max-h-8" src="../../images/LocalAuthLogos/uk_skills.png" alt="EU Social Fund Logo">
-                </div>
-                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
-                    <img class="max-h-8" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
-                </div>
-                <div class="col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
-                    <img class="max-h-8" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
-                </div>
-            </div>
+            {% include './includes/components/hub/manchester/logogrid.njk' %}
             <p class="text-center">The Coders Guild have been commissioned by the Greater Manchester Combined Authority
             and work alongside SERCO to help deliver the fully funded courses
             in the Greater Manchester Area under the GMCA’s ‘Skills for Growth’
@@ -48,21 +38,113 @@ meta_description: Free Digital and Coding Courses in Greater Manchester | The Co
             training.</p>
         </div>
     </div>
+    </div>
+</div>
 </section>
 <section class="bg-yellow-100 section-rounded py-24">
     <div class="inner">
         <div class="w-full md:w-8/12 mx-auto">
-            <h2 class="text-center text-white">Upskill/Reskill yourself or
+            <h2 class="text-center text-white mb-6">Upskill/Reskill yourself or
             your teams with these 100% funded courses</h2>
         </div>
         <div class="courses flex flex-wrap">
             {% for course in courses%}
-                <div class="bg-white rounded flex flex-col w-full md:w-4/12">
-                    <div class="featured-image rounded">
-                        <img src="{{course.featuredImage}}" alt="{{course.title}}" class="-w-full max-h-8">
+                <div class="rounded flex flex-col w-full md:w-3/12 px-4 mb-6 min-h-full">
+                    <div class="bg-white rounded h-full">
+                        <div class="featured-image rounded-full">
+                            <img src="{{course.courseItemImage}}" alt="{{course.title}}" class="rounded w-full">
+                        </div>
+                        <div class="content flex flex-col justify-self-stretch p-4">
+                            <h3 class="text-lg">{{ course.title }}</h3>
+                            <p class="leading-tight"><span class="text-sm text-bold">Starts:</span> <span class="text-sm">{{course.start}}</span></p>
+                            <p class="leading-tight"><span class="text-sm text-bold">Length:</span> <span class="text-sm">{{ course.length }}</span></p>
+                            <p class="leading-tight"><span class="text-sm text-bold">Type:</span> <span class="text-sm">{{ course.courseType }}</span></p>
+                            <a href="../course-directory/{{ course.slug.current }}/" class="mt-8 text-lightblue-500">View this course <i class="align-middle ml-2 text-lightblue-500 fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
+        <div class="cta bg-white flex rounded shadow-primary">
+            <div class="logo flex items-center w-1/12">
+                <img class="w-full" src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Logo">
+            </div>
+            <div class="content flex flex-col justify-center w-8/12">
+                <h4 class="mb-0">Not found a suitable course for your team?</h4>
+                <p>Speak to our course experts to find out how we can help your team grow</p>
+            </div>
+            <div class="buttons flex items-center self-center w-3/12">
+                <a href="" data-modal="book-a-call" class="bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Get in Touch Today <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </div>
+</section>
+<section class="employers-employees bg-blue-200 rounded" style="margin-top: -100px; z-index: -1; min-height: 500px;">
+    <h2 class="text-center text-white mt-48">Hear from the Employers and Employees</h2>
+</section>
+<section class="partners py-24">
+    <h2 class="text-center">Hear from our Partners:</h2>
+        <div class="testimonials__slider">
+          {% for testimonial in testimonials %}
+            <div class="p-4">
+              <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                <div class="sm:flex sm:items-center">
+                  <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                  <div class="relative testimonials__quote">
+                    <h3 class="mb-2px">{{ testimonial.author }}</h3>
+                    <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                    <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+</section>
+<section class="py-24">
+    <div class="inner">
+        <div class="md:flex md:pt-16 pt-20 pb-12 md:pb-12">
+            <div class="md:w-1/3 md:mb-0 mb-12">
+                <div class="px-4">
+                <img src="../images/icons/Group-16.svg" alt="Image of a group to indicate a group of developers" class="mx-auto mb-6 h-16"/>
+                <h3 class="text-center text-xl leading-lg mb-0">Digital Training Courses</h3>
+                </div>
+            </div>
+            <div class="md:w-1/3 md:mb-0 mb-12">
+                <div class="px-4">
+                <img src="../images/icons/Group-34.svg" alt="icon to denote coding professionals" class="mx-auto mb-6 h-16"/>
+                <h3 class="text-center text-xl leading-lg mb-0">Upskilling professionals</h3>
+                </div>
+            </div>
+            <div class="md:w-1/3">
+                <div class="px-4">
+                <img src="../images/icons/Group-72.svg" alt="icon to denote a presentation" class="mx-auto mb-6 h-16"/>
+                <h3 class="text-center text-xl leading-lg mb-0">SMEs and larger organisations</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="logos py-24">
+    <div class="w-6/12 mx-auto">
+        {% include './includes/components/hub/manchester/logogrid.njk' %}
+        <p class="text-center">
+        We offer fully funded Digital courses and qualifications for businesses and employed individuals based in Bolton, Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford and Wigan.
+        </p>
+    </div>
+</section>
+
+<section class="contact py-24">
+<div class="inner">
+    <div class="flex">
+        <div class="w-4/12">
+            <img class="w-full" src="../../images/chevrons-2.png" alt="The Coders Guild students on a course">
+        </div>
+        <div class="w-8/12">
+            {% include './includes/components/contact/contact-form.njk' %}
+        </div>
+    </div>
+</div>
 </section>

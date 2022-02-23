@@ -1967,6 +1967,19 @@ input, textarea {
   background-repeat: no-repeat;
 }
 
+.courses .content p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.courses .content a {
+  color: #16AEDB;
+}
+
+.cta p {
+  margin-bottom: 0;
+}
+
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
