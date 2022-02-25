@@ -1967,6 +1967,20 @@ input, textarea {
   background-repeat: no-repeat;
 }
 
+.partners .testimonials__slider .slick-list {
+  overflow: visible;
+}
+
+.partners .testimonials__slider .slick-list .slick-slide {
+  min-height: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.partners .testimonials__slider .slick-list .slick-slide.slick-active {
+  opacity: 1;
+}
+
 .courses .content p {
   margin-bottom: 0;
   line-height: 1.5;
@@ -8458,6 +8472,10 @@ input, textarea {
   flex-grow: 0;
 }
 
+.flex-grow-grow{
+  flex-grow: 1;
+}
+
 .flex-grow{
   flex-grow: 1;
 }
@@ -8982,6 +9000,10 @@ input, textarea {
 
 .text-5xl{
   font-size: 40px;
+}
+
+.text-9xl{
+  font-size: 95px;
 }
 
 .leading-none{
@@ -33369,6 +33391,10 @@ fieldset a {
     flex-grow: 0;
   }
 
+  .xs\:flex-grow-grow{
+    flex-grow: 1;
+  }
+
   .xs\:flex-grow{
     flex-grow: 1;
   }
@@ -33893,6 +33919,10 @@ fieldset a {
 
   .xs\:text-5xl{
     font-size: 40px;
+  }
+
+  .xs\:text-9xl{
+    font-size: 95px;
   }
 
   .xs\:leading-none{
@@ -58094,6 +58124,10 @@ fieldset a {
     flex-grow: 0;
   }
 
+  .sm\:flex-grow-grow{
+    flex-grow: 1;
+  }
+
   .sm\:flex-grow{
     flex-grow: 1;
   }
@@ -58618,6 +58652,10 @@ fieldset a {
 
   .sm\:text-5xl{
     font-size: 40px;
+  }
+
+  .sm\:text-9xl{
+    font-size: 95px;
   }
 
   .sm\:leading-none{
@@ -82819,6 +82857,10 @@ fieldset a {
     flex-grow: 0;
   }
 
+  .md\:flex-grow-grow{
+    flex-grow: 1;
+  }
+
   .md\:flex-grow{
     flex-grow: 1;
   }
@@ -83343,6 +83385,10 @@ fieldset a {
 
   .md\:text-5xl{
     font-size: 40px;
+  }
+
+  .md\:text-9xl{
+    font-size: 95px;
   }
 
   .md\:leading-none{
@@ -107544,6 +107590,10 @@ fieldset a {
     flex-grow: 0;
   }
 
+  .lg\:flex-grow-grow{
+    flex-grow: 1;
+  }
+
   .lg\:flex-grow{
     flex-grow: 1;
   }
@@ -108068,6 +108118,10 @@ fieldset a {
 
   .lg\:text-5xl{
     font-size: 40px;
+  }
+
+  .lg\:text-9xl{
+    font-size: 95px;
   }
 
   .lg\:leading-none{
@@ -132269,6 +132323,10 @@ fieldset a {
     flex-grow: 0;
   }
 
+  .xl\:flex-grow-grow{
+    flex-grow: 1;
+  }
+
   .xl\:flex-grow{
     flex-grow: 1;
   }
@@ -132793,6 +132851,10 @@ fieldset a {
 
   .xl\:text-5xl{
     font-size: 40px;
+  }
+
+  .xl\:text-9xl{
+    font-size: 95px;
   }
 
   .xl\:leading-none{

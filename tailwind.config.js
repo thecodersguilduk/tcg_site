@@ -204,6 +204,7 @@ module.exports = {
       },
       flexGrow: {
         '0': '0',
+        'grow': '1',
         default: '1',
       },
       flexShrink: {
@@ -280,7 +281,8 @@ module.exports = {
         '2xl': '24px',
         '3xl': '32px',
         '4xl': '30px',
-        '5xl': '40px'
+        '5xl': '40px',
+        '9xl': '95px'
       },
       fontWeight: {
         hairline: '100',

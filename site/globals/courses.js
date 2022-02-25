@@ -42,6 +42,10 @@ function prepPost(data) {
   data.courseItemImage = data.featuredImage ? urlFor(data.featuredImage).width(500).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
   data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(1200).height(600).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 
+if(data.duration){
+  data.duration = data.duration.map(item => item.name)
+}
+
   if(data.location){
     data.location = data.location[0]
   }
@@ -56,7 +60,7 @@ function prepPost(data) {
     data.project = data.project[0].code
   }
 
-  console.log(data.tags);
+  console.log(data.title, data.duration);
   return data
 }
 
