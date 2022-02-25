@@ -11,7 +11,7 @@ body_class: apprenticeship-employer
                 <div class="section-rounded">
                     <div class="bg-white section-rounded">
                         <div class="inner py-24">
-                            <div class="flex flex-wrap pt-24 pb-12">
+                            <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>Businesses in Greater Manchester</h1>
                                     <p class="font-bold text-lightblue-500 mb-4"><span class="capitalize">Upskill your teams in digital</span> (at no cost to you*)</p>
@@ -27,7 +27,7 @@ body_class: apprenticeship-employer
                                     <p class="text-xs leading-tight">*All courses are funded by the Greater Manchester
                                     Combined Authority's 'Skills for Growth' programme</p>
                                 </div>
-                                <div class="w-full lg:w-7/12 flex items-center justify-center">
+                                <div class="w-full lg:w-7/12 flex items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
                                     <iframe width="530" height="298" src="https://www.youtube.com/embed/waFGqRBR4qs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ body_class: apprenticeship-employer
                         <div class="courses flex flex-wrap">
                             {% for course in courses %}
                             {% if course.courseType !== 'Apprenticeship' %}
-                                <div class="rounded flex flex-col w-full md:w-3/12 px-4 mb-6 min-h-full">
+                                <div class="rounded flex flex-col w-full sm:w-6/12 md:w-4/12 lg:w-3/12 sm:px-4 mb-6 min-h-full">
                                     <div class="bg-white rounded h-full flex flex-col">
                                         <div class="featured-image rounded-full">
                                             <img src="{{course.courseItemImage}}" alt="{{course.title}}" class="rounded w-full">
@@ -94,16 +94,16 @@ body_class: apprenticeship-employer
                 </h2>
                 <div>
                     <div class="md:w-9/12 mx-auto flex flex-wrap">
-                        <div class="w-full md:w-6/12 p-6 flex">
-                            <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');">
+                        <div class="w-full lg:w-6/12 p-6 flex">
+                            <div class="testimonials__author block mr-6 sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');">
                             </div>
                             <div class="relative text-white">
                                 <p class="text-sm leading-lg text-white">Just wanted to say a big thank you to The Coders Guild team for a great course! Definitely inspired me to push our team in different directions to ensure we are developing a more rounded project</p>
                                 <span class="font-bold mb-2px">Essential Skills for Your Tech Career - Employer</span>
                             </div>
                         </div>
-                        <div class="w-full md:w-6/12 p-6 flex">
-                            <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');">
+                        <div class="w-full lg:w-6/12 p-6 flex">
+                            <div class="testimonials__author block mr-6 sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');">
                             </div>
                             <div class="relative text-white">
                                 <p class="text-sm leading-lg text-white">From the course I was able to get progression within my employment, I have more of a tech based role which I am loving.</p>
@@ -189,8 +189,8 @@ body_class: apprenticeship-employer
 
 <section class="contact py-24">
 <div class="inner">
-    <div class="flex">
-        <div class="w-full md:w-4/12">
+    <div class="flex flex-wrap">
+        <div class="w-full md:w-4/12 mb-6 md:mb-0">
             <img class="w-full" src="../../images/chevrons-2.png" alt="The Coders Guild students on a course">
         </div>
         <div class="w-full md:w-8/12">

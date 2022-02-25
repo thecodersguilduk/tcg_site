@@ -37,6 +37,11 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'start',
+        type: 'date',
+        title: 'Course Start Date'
+      },
+      {
         name: 'tags',
         title: 'Tags',
         type: 'tags',
