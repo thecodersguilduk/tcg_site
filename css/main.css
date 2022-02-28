@@ -1292,6 +1292,29 @@ input, textarea {
   color: #2874a9;
 }
 
+.nav .nav-links .nav-links-inner .submenu {
+  left: -50%;
+  width: 15rem;
+  text-align: center;
+  top: 60px;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.nav .nav-links .nav-links-inner .submenu:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 0 30px 20px 30px;
+  border-color: transparent transparent #fff transparent;
+  filter: drop-shadow(6px -1px 6px rgba(0, 0, 0, 0.29));
+}
+
 .nav .burger {
   height: 30px;
   width: 36px;

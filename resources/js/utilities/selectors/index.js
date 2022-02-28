@@ -1,3 +1,4 @@
+import submenu from "../../modules/submenu"
 
 const $$ = {
 
@@ -61,7 +62,9 @@ const $$ = {
 
     faqSection          : document.querySelector('.faq'),
 
-    vacancies           : document.querySelector('.vacancies')
+    vacancies           : document.querySelector('.vacancies'),
+
+    submenu             : document.querySelector('.submenu')
 
 }
 

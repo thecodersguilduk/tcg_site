@@ -6,7 +6,7 @@
       },
       {
         "label": "courses",
-        "url": "./#",
+        "url": "",
         "submenu": [
           {
             "label": "Course Directory",

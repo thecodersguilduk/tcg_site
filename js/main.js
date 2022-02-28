@@ -751,7 +751,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_faqs_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @modules/faqs-accordion */ "./resources/js/modules/faqs-accordion/index.js");
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @modules/modals */ "./resources/js/modules/modals/index.js");
 /* harmony import */ var _modules_vacancy_filters__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @modules/vacancy-filters */ "./resources/js/modules/vacancy-filters/index.js");
+/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @modules/submenu */ "./resources/js/modules/submenu/index.js");
 // Import local modules
+
 
 
 
@@ -1194,6 +1196,32 @@ $('.testimonials__slider').slick({
 
 /***/ }),
 
+/***/ "./resources/js/modules/submenu/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/modules/submenu/index.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var submenu = function submenu() {
+  //   if (!$$.submenu) return;
+  var navlinks = document.getElementById('nav-links');
+  navlinks.addEventListener('click', function (e) {
+    e.preventDefault();
+    var target = e.target;
+    console.log(target.nextSibling);
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (submenu);
+
+/***/ }),
+
 /***/ "./resources/js/modules/vacancy-filters/index.js":
 /*!*******************************************************!*\
   !*** ./resources/js/modules/vacancy-filters/index.js ***!
@@ -1434,6 +1462,8 @@ var exists = function exists(el, limit) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
+
 var $$ = {
   body: document.querySelector('body'),
   wrapper: document.getElementById('wrapper'),
@@ -1465,7 +1495,8 @@ var $$ = {
   loadMoreBtn: document.getElementById('load-more'),
   scrollTopBtn: document.getElementById('scroll-top'),
   faqSection: document.querySelector('.faq'),
-  vacancies: document.querySelector('.vacancies')
+  vacancies: document.querySelector('.vacancies'),
+  submenu: document.querySelector('.submenu')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
