@@ -1211,7 +1211,11 @@ __webpack_require__.r(__webpack_exports__);
 var submenu = function submenu() {
   //   if (!$$.submenu) return;
   var navlinks = document.getElementById('nav-links');
-  navlinks.addEventListener('click', function (e) {
+  var mobileNav = document.getElementById('mobile-nav');
+  navlinks.addEventListener('click', toggleSubMenu);
+  mobileNav.addEventListener('click', toggleSubMenu);
+
+  function toggleSubMenu(e) {
     var target = e.target;
 
     if (e.target.classList.contains('parent')) {
@@ -1228,25 +1232,7 @@ var submenu = function submenu() {
     }
 
     ;
-  });
-
-  function getSiblings(elem) {
-    // Setup siblings array and get the first sibling
-    var siblings = [];
-    var sibling = elem.parentNode.firstChild; // Loop through each sibling and push to the array
-
-    while (sibling) {
-      if (sibling.nodeType === 1 && sibling !== elem) {
-        siblings.push(sibling);
-      }
-
-      sibling = sibling.nextSibling;
-    }
-
-    return siblings;
   }
-
-  ;
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (submenu);

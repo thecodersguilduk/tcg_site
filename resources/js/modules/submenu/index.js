@@ -3,41 +3,29 @@ import $$ from '@utilities/selectors';
 const submenu = function submenu() {
 //   if (!$$.submenu) return;
 
-  const navlinks = document.getElementById('nav-links');
-  navlinks.addEventListener('click', function(e){
-      const target = e.target;
+  const navlinks = document.getElementById('nav-links')
+  const mobileNav = document.getElementById('mobile-nav')
 
-      if(e.target.classList.contains('parent')){
-        e.preventDefault()
-      }
+  navlinks.addEventListener('click', toggleSubMenu)
+  mobileNav.addEventListener('click', toggleSubMenu)
 
-      if(target.nextSibling.classList.contains('submenu')){
-        let menu = target.nextSibling;
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('block');
+  function toggleSubMenu(e){
+        const target = e.target;
 
-        menu.addEventListener('mouseleave', function(e){
-          menu.classList.add('hidden');
-        })
-      };
-  })
+        if(e.target.classList.contains('parent')){
+          e.preventDefault()
+        }
 
-  function getSiblings(elem){
-    	// Setup siblings array and get the first sibling
-    var siblings = [];
-    var sibling = elem.parentNode.firstChild;
+        if(target.nextSibling.classList.contains('submenu')){
+          let menu = target.nextSibling;
+          menu.classList.toggle('hidden');
+          menu.classList.toggle('block');
 
-    // Loop through each sibling and push to the array
-    while (sibling) {
-      if (sibling.nodeType === 1 && sibling !== elem) {
-        siblings.push(sibling);
-      }
-      sibling = sibling.nextSibling
+          menu.addEventListener('mouseleave', function(e){
+            menu.classList.add('hidden');
+          })
+        };
     }
-
-    return siblings;
-
-  };
 }()
 
 export default submenu;

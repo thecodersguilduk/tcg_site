@@ -1376,6 +1376,19 @@ input, textarea {
   left: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  #mobile-nav .nav-links .submenu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    top: 60px;
+    z-index: 99;
+    background-color: #fff;
+  }
+}
+
 .banner {
   background-image: url("../images/homepage/banner.jpg");
   background-size: cover;
