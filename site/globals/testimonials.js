@@ -1,9 +1,9 @@
 const sanityClient = require('@sanity/client')
 const imageUrlBuilder = require('@sanity/image-url');
 const query = `*[_type == "testimonial"] {
-   "avatar": avatar.asset->url, 
+   "avatar": avatar.asset->url,
     ...
-    
+
   } | order(order asc)`
 const config = require('../globals/config');
 
@@ -18,8 +18,8 @@ module.exports = async function() {
 
 function prepData(data) {
     // Returns back to our main function
-    data.avatar = urlFor(data.avatar)
-   
+    data.avatar = data.avatar ? urlFor(data.avatar) : ''
+   console.log(data);
     return data
 }
 

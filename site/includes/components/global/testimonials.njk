@@ -3,22 +3,24 @@
     <div class="inner relative z-10">
       <div class="max-w-3xl mx-auto md:px-16">
         <h2 class="text-center mb-8 md:mb-14">What our partners say about us</h2>
-        
+
         <div class="testimonials__slider">
           {% for testimonial in testimonials %}
-            <div class="p-4">
-              <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
-                <div class="sm:flex sm:items-center">
-                  <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
-                  <div class="relative testimonials__quote">
-                    <h3 class="mb-2px">{{ testimonial.author }}</h3>
-                    <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                    <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+            {% if testimonial.avatar %}
+              <div class="p-4">
+                <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                  <div class="sm:flex sm:items-center">
+                    <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                    <div class="relative testimonials__quote">
+                      <h3 class="mb-2px">{{ testimonial.author }}</h3>
+                      <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                      <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
-            </div>
+            {% endif %}
           {% endfor %}
         </div>
         <div class="flex justify-center items-center mt-8">
