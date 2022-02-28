@@ -61,8 +61,6 @@ function prepPost(data) {
   if (data.project) {
     data.project = data.project[0].code
   }
-
-  //console.log(data.title, data.duration);
   return data
 }
 
