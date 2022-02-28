@@ -12,7 +12,7 @@ const submenu = function submenu() {
   function toggleSubMenu(e){
         const target = e.target;
 
-        if(e.target.classList.contains('parent')){
+        if(e.target.classList.contains('parent') || e.target.classList.contains('dropdown-trigger')){
           e.preventDefault()
         }
 
