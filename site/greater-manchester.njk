@@ -13,10 +13,10 @@ body_class: apprenticeship-employer
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
-                                    <h1>Businesses in Greater Manchester</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span class="capitalize">Upskill your teams in digital</span> (at no cost to you*)</p>
-                                    <p>Employers, you can register your teams for our digital
-                                    upskill courses to:</p>
+                                    <h1>Greater Manchester Digital Skills Hub</h1>
+                                    <p class="font-bold text-lightblue-500 mb-4"><span class="capitalize">Businesses and employees in Greater Manchester! Apply for our digital upskill and reskill courses, at no cost to you (or your business).
+                                    </p>
+                                    <p>Our digital courses will:</p>
                                         <ul class="decorated-ul my-4">
                                             <li class="mb-0">Improve productivity</li>
                                             <li class="mb-0">Drive business growth</li>
@@ -24,7 +24,7 @@ body_class: apprenticeship-employer
                                         </ul>
 
                                     <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="/course-directory/"> View our Courses</a>
-                                    <p class="text-xs leading-tight">*All courses are funded by the Greater Manchester
+                                    <p class="text-xs leading-sm">*All courses are funded by the Greater Manchester
                                     Combined Authority's 'Skills for Growth' programme</p>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
@@ -33,11 +33,15 @@ body_class: apprenticeship-employer
                             </div>
                             <div class="w-full md:w-8/12 mx-auto">
                                 {% include './includes/components/hub/manchester/logogrid.njk' %}
-                                <p class="text-center">The Coders Guild have been commissioned by the Greater Manchester Combined Authority
-                                and work alongside SERCO to help deliver the fully funded courses
-                                in the Greater Manchester Area under the GMCA’s ‘Skills for Growth’
-                                Programme. We are working directly with SERCO to deliver this
-                                training.</p>
+                                <p class="text-center">The Digital Careers Upskill Programme (DCUP) is delivered by Serco as part of Greater Manchester Combined Authority’s three-year Skills for Growth programme, which is funded through the European Social Fund.</p>
+                                <p class="text-center">We are part of Serco’s Approved Training Providers, providing businesses and employed people with access to fully funded digital skills training courses across the Greater Manchester area. It is available in Bolton, Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford and Wigan.</p>
+                                <p class="mt-4 text-center"><span class="font-bold">What's on offer?</span><br>
+                                    The courses have been designed to address two types of learners and career goals:<br>
+                                    <ul>
+                                        <li><span class="font-bold">Reskilling -</span>Training for those looking to start a new career in a digital role</li>
+                                        <li><span class="font-bold">Upskilling -</span>Training for those in digital role aspiring to progress their digital career</li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -45,12 +49,14 @@ body_class: apprenticeship-employer
                 <div class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
-                            <h2 class="text-center text-white mb-6">Upskill/Reskill yourself or
+                            <h2 class="text-center text-white mb-6">Upskill/Reskill yourself and
                             your teams with these 100% funded courses</h2>
                         </div>
                         <div class="courses flex flex-wrap">
                             {% for course in courses %}
                             {% if course.courseType !== 'Apprenticeship' %}
+                            {% for tag in course.tags %}
+                                {% if tag.value === 'serco' %}
                                 <div class="rounded flex flex-col w-full sm:w-6/12 md:w-4/12 lg:w-3/12 sm:px-4 mb-6 min-h-full">
                                     <div class="bg-white rounded h-full flex flex-col">
                                         <div class="featured-image rounded-full">
@@ -71,6 +77,8 @@ body_class: apprenticeship-employer
                                         </div>
                                     </div>
                                 </div>
+                                {% endif %}
+                                {% endfor %}
                             {% endif %}
                             {% endfor %}
                         </div>

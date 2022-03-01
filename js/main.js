@@ -1218,7 +1218,7 @@ var submenu = function submenu() {
   function toggleSubMenu(e) {
     var target = e.target;
 
-    if (e.target.classList.contains('parent')) {
+    if (e.target.classList.contains('parent') || e.target.classList.contains('dropdown-trigger')) {
       e.preventDefault();
     }
 
