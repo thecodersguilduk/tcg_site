@@ -19,7 +19,7 @@ module.exports = async function() {
 function prepData(data) {
     // Returns back to our main function
     data.avatar = data.avatar ? urlFor(data.avatar) : ''
-   console.log(data);
+
     return data
 }
 

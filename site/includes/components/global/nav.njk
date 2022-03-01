@@ -42,9 +42,7 @@
                         {% for nav_link in navigation.main %}
                           {% if nav_link.submenu %}
                           <li class="px-4 relative">
-                              <a href="{{link.url | safe}}" class="parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ link.label | safe }}
-                              </a>
-                              <a href="" class="parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize" aria-hidden="true"></i>
+                              <a href="" class="parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize" aria-hidden="true">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
                               </a>
                               <ul class="submenu absolute shadow-secondary hidden">
                                 {% for link in nav_link.submenu%}
