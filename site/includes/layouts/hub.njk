@@ -21,7 +21,7 @@ body_class: apprenticeship-employer
                                             <li class="mb-0">Fill the digital skills gap</li>
                                         </ul>
 
-                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="/course-directory/"> View our Courses</a>
+                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
                                     {% if location === 'Greater Manchester' %}
@@ -60,7 +60,7 @@ body_class: apprenticeship-employer
                             <h2 class="text-center text-white mb-6">Upskill/Reskill yourself and
                             your teams with these 100% funded courses</h2>
                         </div>
-                        <div class="courses flex flex-wrap">
+                        <div id="courses" class="courses flex flex-wrap">
                             {% for course in courses %}
                             {% if course.courseType !== 'Apprenticeship' %}
                             {% for item in course.tags %}
