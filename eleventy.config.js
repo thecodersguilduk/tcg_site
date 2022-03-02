@@ -47,6 +47,9 @@ module.exports = eleventyConfig => {
   //add shortcode to change image formats to webp or jpeg
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
+  //
+  eleventyConfig.addFilter("courseDisplay", require("./filters/courseNames.js"))
+
   // Add a readable date formatter filter to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 

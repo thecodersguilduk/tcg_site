@@ -32,16 +32,19 @@ body_class: apprenticeship-employer
                                 </div>
                             </div>
                             <div class="w-full md:w-8/12 mx-auto">
-                            {% if location === 'Greater Manchester' %}
+                            {% if tag === 'serco' %}
                                 <img src="../../images/combined_serco_sfg_esf_logos.jpg" alt="funders logos"  class="w-full my-12" />
+                                {% include '../components/hub/gmca-intro.njk' %}
+                            {% elif tag === 'wyca' %}
+                                {% include '../components/hub/wyca/wyca-logos.njk' %}
+                                {% include '../components/hub/west-yorks-intro.njk' %}
+                            {% elif tag === 'hey' %}
+                                {% include '../components/hub/hey/hey-logos.njk' %}
+                                {% include '../components/hub/hey-intro.njk' %}
+                            {% elif tag === 'yny' %}
+                                {% include '../components/hub/yny/yny-logos.njk' %}
+                                {% include '../components/hub/yny-intro.njk' %}
                             {% endif %}
-                                {% if tag === 'wyca' %}
-                                    {% include '../components/hub/west-yorks-intro.njk' %}
-                                {% elif tag === 'serco'%}
-                                    {% include '../components/hub/gmca-intro.njk' %}
-                                {% elif tag === 'hey' %}
-                                    {% include '../components/hub/hey-intro.njk' %}
-                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -64,7 +67,7 @@ body_class: apprenticeship-employer
                                         </div>
                                         <div class="content flex flex-col justify-between p-4 flex-grow-grow">
                                             <div>
-                                                <h3 class="text-lg">{{ course.title }}</h3>
+                                                <h3 class="text-lg">{{ course.title | courseDisplay }}</h3>
                                             </div>
                                             <div class="mb-4">
                                                 <p class="leading-tight"><span class="text-sm font-bold">Starts:</span> <span class="text-sm">{{course.start | dateDisplay}}</span></p>
