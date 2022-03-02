@@ -194,6 +194,7 @@ module.exports = {
       },
       fill: {
         current: 'currentColor',
+        blue: '#2574a9'
       },
       flex: {
         '1': '1 1 0%',

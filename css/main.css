@@ -1692,6 +1692,14 @@ input, textarea {
   content: "\201C";
 }
 
+.filter-blue {
+  filter: invert(33%) sepia(91%) saturate(817%) hue-rotate(172deg) brightness(90%) contrast(78%);
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(135deg) brightness(106%) contrast(96%);
+}
+
 .get-in-touch .cta__text {
   max-width: 60%;
 }
@@ -18777,6 +18785,10 @@ input, textarea {
 
 .fill-current{
   fill: currentColor;
+}
+
+.fill-blue{
+  fill: #2574a9;
 }
 
 .stroke-current{
@@ -43698,6 +43710,10 @@ fieldset a {
     fill: currentColor;
   }
 
+  .xs\:fill-blue{
+    fill: #2574a9;
+  }
+
   .xs\:stroke-current{
     stroke: currentColor;
   }
@@ -68429,6 +68445,10 @@ fieldset a {
 
   .sm\:fill-current{
     fill: currentColor;
+  }
+
+  .sm\:fill-blue{
+    fill: #2574a9;
   }
 
   .sm\:stroke-current{
@@ -93164,6 +93184,10 @@ fieldset a {
     fill: currentColor;
   }
 
+  .md\:fill-blue{
+    fill: #2574a9;
+  }
+
   .md\:stroke-current{
     stroke: currentColor;
   }
@@ -117897,6 +117921,10 @@ fieldset a {
     fill: currentColor;
   }
 
+  .lg\:fill-blue{
+    fill: #2574a9;
+  }
+
   .lg\:stroke-current{
     stroke: currentColor;
   }
@@ -142628,6 +142656,10 @@ fieldset a {
 
   .xl\:fill-current{
     fill: currentColor;
+  }
+
+  .xl\:fill-blue{
+    fill: #2574a9;
   }
 
   .xl\:stroke-current{
