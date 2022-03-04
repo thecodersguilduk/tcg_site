@@ -12,7 +12,7 @@ body_class: apprenticeship-employer
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} Digital Skills Hub</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span class="capitalize">Businesses and employees in {{location}}! Apply for our digital upskill and reskill courses.<br>At no cost to you (or your business).
+                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and employees in {{location}}! Apply for our digital upskill and reskill courses.<br>At no cost to you (or your business).
                                     </p>
                                     <p>Our digital courses will:</p>
                                         <ul class="decorated-ul my-4">
@@ -23,9 +23,19 @@ body_class: apprenticeship-employer
 
                                     <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
                                 </div>
-                                <div class="w-full lg:w-7/12 flex items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
+                                <div class="w-full lg:w-7/12 flex flex-col items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
                                     {% if location === 'Greater Manchester' %}
-                                    <iframe width="530" height="298" src="https://www.youtube.com/embed/waFGqRBR4qs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe class="block" width="530" height="298" src="https://www.youtube.com/embed/waFGqRBR4qs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                    <div class="mt-2 mb-4 grid grid-cols-4 gap-0.5">
+                                        <div class="col-span-2 lg:col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                                            <img class="max-h-8" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
+                                        </div>
+                                        <div class="col-span-2 lg:col-span-1 flex items-center justify-center py-2 px-6 bg-gray-50">
+                                            <img class="max-h-8" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
+                                        </div>
+                                    </div>
                                     {% else %}
                                     <img class="lg:px-6" src="../../images/{{ image_source}}" alt="Digital Skills Courses in {{location}}" class="w-full" />
                                     {% endif %}
