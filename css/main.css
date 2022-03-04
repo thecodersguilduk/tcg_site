@@ -12838,6 +12838,10 @@ input, textarea {
   max-height: 3.8rem;
 }
 
+.max-h-12{
+  max-height: 4rem;
+}
+
 .max-h-full{
   max-height: 100%;
 }
@@ -37765,6 +37769,10 @@ fieldset a {
     max-height: 3.8rem;
   }
 
+  .xs\:max-h-12{
+    max-height: 4rem;
+  }
+
   .xs\:max-h-full{
     max-height: 100%;
   }
@@ -62504,6 +62512,10 @@ fieldset a {
 
   .sm\:max-h-10{
     max-height: 3.8rem;
+  }
+
+  .sm\:max-h-12{
+    max-height: 4rem;
   }
 
   .sm\:max-h-full{
@@ -87247,6 +87259,10 @@ fieldset a {
     max-height: 3.8rem;
   }
 
+  .md\:max-h-12{
+    max-height: 4rem;
+  }
+
   .md\:max-h-full{
     max-height: 100%;
   }
@@ -111988,6 +112004,10 @@ fieldset a {
     max-height: 3.8rem;
   }
 
+  .lg\:max-h-12{
+    max-height: 4rem;
+  }
+
   .lg\:max-h-full{
     max-height: 100%;
   }
@@ -136727,6 +136747,10 @@ fieldset a {
 
   .xl\:max-h-10{
     max-height: 3.8rem;
+  }
+
+  .xl\:max-h-12{
+    max-height: 4rem;
   }
 
   .xl\:max-h-full{

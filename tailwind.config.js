@@ -341,7 +341,8 @@ module.exports = {
         full: '100%',
         screen: '100vh',
         '8': '2rem',
-        '10': '3.8rem'
+        '10': '3.8rem',
+        '12': '4rem'
       },
       maxWidth: {
         xs: '22rem',
