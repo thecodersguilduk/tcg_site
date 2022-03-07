@@ -82,7 +82,10 @@ mix
                     'row',
                     'visually-hidden',
                     'menu-visible',
-                    'float-right'
+                    'float-right',
+                    'slick-list',
+                    'slick-slide',
+                    'slick-slide slick-active'
                 ]
             })
 
