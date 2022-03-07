@@ -37,6 +37,22 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'start',
+        type: 'date',
+        title: 'Course Start Date'
+      },
+      {
+        name: 'tags',
+        title: 'Tags',
+        type: 'tags',
+        options: {
+          //Locks menu from creating new tags (defaults to false)
+          frozen: false,
+          //Closes menu after tag selected (defaults to true)
+          closeMenuOnSelect: true
+        }
+      },
+      {
         name: 'courseType',
         title: 'Course Type',
         type: 'array',

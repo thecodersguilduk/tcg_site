@@ -16,7 +16,8 @@
     "content-calendar",
     "@sanity/production-preview",
     "@sanity/dashboard",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "autocomplete-tags"
   ],
   "env": {
     "development": {

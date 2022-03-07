@@ -194,6 +194,7 @@ module.exports = {
       },
       fill: {
         current: 'currentColor',
+        blue: '#2574a9'
       },
       flex: {
         '1': '1 1 0%',
@@ -204,6 +205,7 @@ module.exports = {
       },
       flexGrow: {
         '0': '0',
+        'grow': '1',
         default: '1',
       },
       flexShrink: {
@@ -280,7 +282,8 @@ module.exports = {
         '2xl': '24px',
         '3xl': '32px',
         '4xl': '30px',
-        '5xl': '40px'
+        '5xl': '40px',
+        '9xl': '95px'
       },
       fontWeight: {
         hairline: '100',
@@ -337,6 +340,9 @@ module.exports = {
       maxHeight: {
         full: '100%',
         screen: '100vh',
+        '8': '2rem',
+        '10': '3.8rem',
+        '12': '4rem'
       },
       maxWidth: {
         xs: '22rem',

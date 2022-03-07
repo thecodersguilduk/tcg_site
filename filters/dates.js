@@ -2,7 +2,9 @@
 A date formatter filter for Nunjucks
 */
 module.exports = function(date, part) {
-  if(isNaN(date)) return 'TBC'
+  const parsedDate = Date.parse(date)
+  if(isNaN(parsedDate)) return 'TBC'
+
   var d = new Date(date);
   if(part == 'year') {
     return d.getUTCFullYear();

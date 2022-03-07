@@ -6,12 +6,12 @@ const faqAccordion = function faqAccordion() {
   $$.faqSection.addEventListener('click', function(e) {
 
     let btn = e.target.closest('.faq-btn');
-    
+
     if (!btn) return;
 
     let content = btn.nextElementSibling;
-    let angle = btn.querySelector('.fa-w-10');
-    
+    let angle = btn.querySelector('.svg-inline--fa');
+
     btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
 
     if (content.style.maxHeight) {

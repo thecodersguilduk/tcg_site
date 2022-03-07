@@ -7,12 +7,27 @@
                     </button>
                     <div class="mobile-nav-container opacity-0 fixed z-10 h-full flex bg-white">
                       <nav id="mobile-nav" class="inner">
-                        <ul class="py-24">
+                        <ul class="py-24 nav-links">
                           {% for nav_link in navigation.main %}
+                          {% if nav_link.submenu %}
+                          <li class="px-4 text-center relative">
+                              <a href="" class="parent block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
+                              </a>
+                              <ul class="submenu absolute shadow-secondary hidden">
+                                {% for link in nav_link.submenu%}
+                                  <li class="px-4 hover:bg-blue-200 hover:text-white">
+                                    <a href="{{link.url | safe}}" class="block py-2 font-bold font-heading text-black capitalize text-xl leading-xl">{{ link.label | safe }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                          </li>
+                          {% else %}
                             <li class="my-8 text-center">
                               <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}
                               </a>
                             </li>
+                          {% endif %}
                           {% endfor %}
                           <li class="mt-6 text-center">
                             <a href="" data-modal="book-a-call" class="bookacall-c-btn block sm:inline-block sm:px-24 py-2 font-bold bg-blue-200 text-white rounded font-heading text-2xl leading-2xl">Book a Call</a>
@@ -25,11 +40,26 @@
                     <div class="nav-links-inner">
                       <ul class="flex -mx-3">
                         {% for nav_link in navigation.main %}
-                          <li class="px-4">
-                            <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
-                            </a>
+                          {% if nav_link.submenu %}
+                          <li class="px-4 relative">
+                              <a href="" class="parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize" aria-hidden="true">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
+                              </a>
+                              <ul class="submenu absolute shadow-secondary hidden">
+                                {% for link in nav_link.submenu%}
+                                  <li class="px-4 hover:bg-blue-200 hover:text-white">
+                                    <a href="{{link.url | safe}}" class="block py-2 font-bold text-grey-300 font-heading hover:text-white font-heading focus:text-blue-100 active:text-blue-100 capitalize">{{ link.label | safe }}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
                           </li>
-                        {% endfor %}
+                          {% else %}
+                            <li class="px-4">
+                                <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize">{{ nav_link.label | safe }}
+                                </a>
+                            </li>
+                          {% endif %}
+                          {% endfor %}
                         <li class="px-3">
                           <a href="" data-modal="book-a-call" class="bookacall-c-btn block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Book a Call</a>
                         </li>

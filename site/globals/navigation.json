@@ -6,7 +6,17 @@
       },
       {
         "label": "courses",
-        "url": "/course-directory"
+        "url": "",
+        "submenu": [
+          {
+            "label": "Course Directory",
+            "url": "/course-directory"
+          },
+          {
+            "label": "Greater Manchester",
+            "url": "/greater-manchester"
+          }
+        ]
       },
       {
           "label": "about",
