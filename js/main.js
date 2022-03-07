@@ -1217,6 +1217,7 @@ var submenu = function submenu() {
 
   function toggleSubMenu(e) {
     var target = e.target;
+    console.log(target.tagName);
 
     if (e.target.classList.contains('parent')) {
       e.preventDefault();
@@ -1225,6 +1226,30 @@ var submenu = function submenu() {
       menu.classList.toggle('block');
       menu.addEventListener('mouseleave', function (e) {
         menu.classList.add('hidden');
+      });
+    }
+
+    if (target.tagName === 'path') {
+      var _menu = target.parentElement.parentElement.querySelector('.submenu');
+
+      _menu.classList.toggle('hidden');
+
+      _menu.classList.toggle('block');
+
+      _menu.addEventListener('mouseleave', function (e) {
+        _menu.classList.add('hidden');
+      });
+    }
+
+    if (target.tagName === 'svg') {
+      var _menu2 = target.parentElement.querySelector('.submenu');
+
+      _menu2.classList.toggle('hidden');
+
+      _menu2.classList.toggle('block');
+
+      _menu2.addEventListener('mouseleave', function (e) {
+        _menu2.classList.add('hidden');
       });
     }
   }
