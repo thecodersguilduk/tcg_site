@@ -85,7 +85,10 @@ mix
                     'float-right',
                     'slick-list',
                     'slick-slide',
-                    'slick-slide slick-active'
+                    'slick-slide slick-active',
+                    'slick-dots',
+                    'slick-active',
+
                 ]
             })
 
