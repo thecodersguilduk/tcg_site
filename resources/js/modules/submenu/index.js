@@ -12,19 +12,19 @@ const submenu = function submenu() {
   function toggleSubMenu(e){
         const target = e.target;
 
-        if(e.target.classList.contains('parent') || e.target.classList.contains('dropdown-trigger')){
-          e.preventDefault()
-        }
 
-        if(target.nextSibling.classList.contains('submenu')){
-          let menu = target.nextSibling;
+        if(e.target.classList.contains('parent')){
+          e.preventDefault()
+
+          let menu = target.querySelector('.submenu');
           menu.classList.toggle('hidden');
           menu.classList.toggle('block');
 
           menu.addEventListener('mouseleave', function(e){
             menu.classList.add('hidden');
           })
-        };
+
+      }
     }
 }()
 

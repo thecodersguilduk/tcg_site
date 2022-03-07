@@ -10,9 +10,8 @@
                         <ul class="py-24 nav-links">
                           {% for nav_link in navigation.main %}
                           {% if nav_link.submenu %}
-                          <li class="px-4 text-center relative">
-                              <a href="" class="parent block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
-                              </a>
+                          <li class="px-4 text-center relative parent block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
+
                               <ul class="submenu absolute shadow-secondary hidden">
                                 {% for link in nav_link.submenu%}
                                   <li class="px-4 hover:bg-blue-200 hover:text-white">
@@ -41,9 +40,8 @@
                       <ul class="flex -mx-3">
                         {% for nav_link in navigation.main %}
                           {% if nav_link.submenu %}
-                          <li class="px-4 relative">
-                              <a href="" class="parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize" aria-hidden="true">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
-                              </a>
+                          <li class="px-4 cursor-pointer relative parent block py-2 font-bold text-grey-300 font-heading hover:text-blue-200 focus:text-blue-100 active:text-blue-100 capitalize" aria-hidden="true">{{ nav_link.label | safe }}<i class="dropdown-trigger align-middle ml-2 fas fa-angle-down text-md leading-md z-10"></i>
+
                               <ul class="submenu absolute shadow-secondary hidden">
                                 {% for link in nav_link.submenu%}
                                   <li class="px-4 hover:bg-blue-200 hover:text-white">
