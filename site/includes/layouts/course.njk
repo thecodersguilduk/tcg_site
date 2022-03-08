@@ -24,33 +24,6 @@ meta_description: {{ excerpt }}
         </div>
 
         <div class="post content md:px-20 max-w-3xl mx-auto inner">
-        {% for tag in course.tags %}
-          {% if tag.value === 'serco' %}
-          <div class="my-8">
-              <p>
-                The Digital Careers Upskill Programme (DCUP) is delivered by Serco as
-                part of Greater Manchester Combined Authority’s three-year Skills for Growth
-                programme, which is funded through the European Social Fund.
-              </p>
-              <p>
-                We are part of Serco’s Approved Training Providers, providing businesses
-                and employed people with access to fully funded digital skills training
-                courses across the Greater Manchester area. It is available in Bolton,
-                Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford
-                and Wigan.
-              </p>
-              <p class="font-bold" style="margin-bottom: 0;">
-                What’s on offer?
-              </p>
-              <p>
-                The courses have been designed to address two types of learners and career goals:<br>
-                <span class="font-bold">Reskilling - </span>  Training for those looking to start a new career in a digital role<br>
-                <span class="font-bold">Upskilling - </span>  Training for those in digital role aspiring to progress their digital career
-              </p>
-              <img src="../../images/serco-logo-correct.jpg" alt="funders logos" class="mx-auto w-full">
-          </div>
-          {% endif %}
-        {% endfor %}
 
             {{ course.body | safe }}
 
