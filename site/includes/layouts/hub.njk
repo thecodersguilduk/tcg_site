@@ -54,27 +54,33 @@ body_class: apprenticeship-employer
                                 {% include '../components/hub/gmca-intro.njk' %}
                                 <img src="../../images/LocalAuthLogos/uk_skills.png" alt="UK Skills Academy logo"  class="max-h-10 mt-12 mx-auto" />
                             {% elif tag === 'wyca' %}
-                                {% include '../components/hub/wyca/wyca-logos.njk' %}
                                 {% include '../components/hub/west-yorks-intro.njk' %}
                             {% elif tag === 'hey' %}
-                                {% include '../components/hub/hey/hey-logos.njk' %}
                                 {% include '../components/hub/hey-intro.njk' %}
                             {% elif tag === 'yny' %}
-                                {% include '../components/hub/yny/yny-logos.njk' %}
                                 {% include '../components/hub/yny-intro.njk' %}
                             {% endif %}
                             {% if location !== 'Greater Manchester' %}
                                 <p class="text-center my-4">
-<span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill
-your teams to increase productivity and drive business growth.{% if b2bpdf %} <a href="/pdf/{{b2bpdf}}" download>Download our flyer for Businesses</a>{% endif%}
-</p>
-<p class="text-center my-4">
-<span class="font-bold">Individuals/Self Employed: </span>
-Gain the digital skills you need to get ahead at work or if you
-are out of work, build up in-demand digital skills to land you that
-dream job in tech. {% if b2cpdf %}<a href="/pdf/{{b2cpdf}}" download>Download our flyer for Individuals</a>{% endif %}
-</p>
+                                <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill
+                                your teams to increase productivity and drive business growth.{% if b2bpdf %} <a href="/pdf/{{b2bpdf}}" download>Download our flyer for Businesses</a>{% endif%}
+                                </p>
+                                <p class="text-center my-4">
+                                <span class="font-bold">Individuals/Self Employed: </span>
+                                Gain the digital skills you need to get ahead at work or if you
+                                are out of work, build up in-demand digital skills to land you that
+                                dream job in tech. {% if b2cpdf %}<a href="/pdf/{{b2cpdf}}" download>Download our flyer for Individuals</a>{% endif %}
+                                </p>
                             {% endif %}
+                                <div class="mt-12">
+                                    {% if tag === 'wyca' %}
+                                        {% include '../components/hub/wyca/wyca-logos.njk' %}
+                                    {% elif tag === 'hey' %}
+                                        {% include '../components/hub/hey/hey-logos.njk' %}
+                                    {% elif tag === 'yny' %}
+                                        {% include '../components/hub/yny/yny-logos.njk' %}
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
