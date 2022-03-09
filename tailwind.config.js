@@ -342,7 +342,9 @@ module.exports = {
         screen: '100vh',
         '8': '2rem',
         '10': '3.8rem',
-        '12': '4rem'
+        '12': '4rem',
+        '15': '5rem',
+        '18': '6rem'
       },
       maxWidth: {
         xs: '22rem',

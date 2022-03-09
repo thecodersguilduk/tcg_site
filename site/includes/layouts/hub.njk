@@ -12,13 +12,20 @@ body_class: apprenticeship-employer
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} Digital Skills Hub</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and employees in {{location}}! Apply for our digital upskill and reskill courses.<br>At no cost to you (or your business).
+                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! Apply for our {% if location === 'Greater Manchester' %}digital upskill and reskill courses.<br>At no cost to you (or your business).{% else %}funded Digital Skills Bootcamps. Places limited!{% endif %}
+
                                     </p>
-                                    <p>Our digital courses will:</p>
+                                    <p>Our {% if location === 'Greater Manchester' %}digital courses{% else %} Bootcamps{% endif %} will:</p>
                                         <ul class="decorated-ul my-4">
+                                        {% if location === 'Greater Manchester '%}
                                             <li class="mb-0">Improve productivity</li>
                                             <li class="mb-0">Drive business growth</li>
                                             <li class="mb-0">Fill the digital skills gap</li>
+                                        {% else %}
+                                            <li class="mb-0">Help businesses to fill the digital skills gap and increase productivity</li>
+                                            <li class="mb-0">Help people in work to get ahead in digital</li>
+                                            <li class="mb-0">Help the unemployed to get a job in tech</li>
+                                        {% endif %}
                                         </ul>
 
                                     <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
@@ -63,8 +70,8 @@ body_class: apprenticeship-employer
                 <div class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
-                            <h2 class="text-center text-white mb-6">Upskill/Reskill yourself and
-                            your teams with these 100% funded courses</h2>
+                            <h2 class="text-center text-white mb-6">{% if location === 'Greater Manchester' %}Upskill/Reskill yourself and
+                            your teams with these 100% funded courses {% else %} Digital Skills Bootcamps {% endif %} </h2>
                         </div>
                         <div id="courses" class="courses flex flex-wrap">
                             {% for course in courses %}
