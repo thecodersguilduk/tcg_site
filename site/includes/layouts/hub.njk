@@ -63,6 +63,18 @@ body_class: apprenticeship-employer
                                 {% include '../components/hub/yny/yny-logos.njk' %}
                                 {% include '../components/hub/yny-intro.njk' %}
                             {% endif %}
+                            {% if location !== 'Greater Manchester' %}
+                                <p class="text-center my-4">
+<span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill
+your teams to increase productivity and drive business growth.{% if b2bpdf %} <a href="/pdf/{{b2bpdf}}" download>Download our flyer for Businesses</a>{% endif%}
+</p>
+<p class="text-center my-4">
+<span class="font-bold">Individuals/Self Employed: </span>
+Gain the digital skills you need to get ahead at work or if you
+are out of work, build up in-demand digital skills to land you that
+dream job in tech. {% if b2cpdf %}<a href="/pdf/{{b2cpdf}}" download>Download our flyer for Individuals</a>{% endif %}
+</p>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
