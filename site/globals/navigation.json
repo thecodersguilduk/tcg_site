@@ -15,6 +15,18 @@
           {
             "label": "Greater Manchester",
             "url": "/greater-manchester"
+          },
+          {
+            "label": "West Yorkshire",
+            "url": "/west-yorkshire"
+          },
+          {
+            "label": "Hull & East Yorkshire",
+            "url": "/hull-east-yorkshire"
+          },
+          {
+            "label": "York & North Yorkshire",
+            "url": "/york-north-yorkshire"
           }
         ]
       },
