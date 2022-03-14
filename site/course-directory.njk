@@ -85,7 +85,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                </div>
                {% for type in courseTypes %}
                {% if type.courseType !== 'Apprenticeship' %}
-               <div class="courseGroup">
+                <div class="courseGroup">
                   <div class="heading">
                      <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
                      {% if type.tagline %}
@@ -93,7 +93,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                      {% endif %}
                   </div>
                   {% for item in courses %}
-                     {% if item.isActive and item.courseType !== 'Apprenticeships' and item.courseType === type.courseType %}
+                     {% if item.isActive and item.courseType !== 'Apprenticeship' and item.courseType === type.courseType %}
                         <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
                            <div class="w-full md:w-4/12">
                               <img class="h-full w-full object-cover" src="{{item.courseItemImage}}" alt="{{item.name}}">
@@ -123,13 +123,13 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                                  <div class="w-6/12 mb-2 md:mb-0">
                                     <p class="flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
-                                       Remote
+                                       Classroom
                                     </p>
                                  </div>
                                  <div class="w-6/12">
                                     <p class="flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
-                                       {% if item.duration.length < 2 %}  {{item.duration[0].name}} {% else %} Multiple Options Available {% endif %}
+                                       {% if item.duration %}{% if item.duration.length < 2 %}  {{item.duration[0]}} {% else %} Multiple Options Available {% endif %}{% endif %}
                                     </p>
                                  </div>
                                  <div class="w-6/12">
@@ -144,7 +144,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                      {% endif %}
                   {% endfor %}
                   </div>
-                  {% endif %}
+               {% endif %}
                {% endfor %}
             </div>
          </div>
