@@ -1,3 +1,4 @@
+import courseDirectoryFilters from "../../modules/course-directory-filters"
 import submenu from "../../modules/submenu"
 
 const $$ = {
@@ -64,7 +65,9 @@ const $$ = {
 
     vacancies           : document.querySelector('.vacancies'),
 
-    submenu             : document.querySelector('.submenu')
+    submenu             : document.querySelector('.submenu'),
+
+    cdFilters           : document.querySelector('.cd-filters-form')
 
 }
 

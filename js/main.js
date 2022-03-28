@@ -752,6 +752,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @modules/modals */ "./resources/js/modules/modals/index.js");
 /* harmony import */ var _modules_vacancy_filters__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @modules/vacancy-filters */ "./resources/js/modules/vacancy-filters/index.js");
 /* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @modules/submenu */ "./resources/js/modules/submenu/index.js");
+/* harmony import */ var _modules_course_directory_filters__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @modules/course-directory-filters */ "./resources/js/modules/course-directory-filters/index.js");
 // Import local modules
 
 
@@ -764,6 +765,124 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/course-directory-filters/index.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/modules/course-directory-filters/index.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var courseDirectoryFilters = function () {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].cd - filters - form) return;
+  var parents = Array.from(document.querySelectorAll('.courseGroup'));
+  var filters = document.querySelector('.cd-filters-form');
+  var resetBtn = document.querySelector('.reset-filters');
+  var courses = Array.from(document.querySelectorAll('.course-item'));
+  var numberCourses = document.querySelector('.numberCourses');
+  numberCourses.textContent = courses.length;
+  var fieldArray = [];
+  hideHeadings(parents);
+  filters.addEventListener('change', function (e) {
+    var nodeName = e.target.nodeName.toLowerCase();
+
+    if (nodeName === 'select') {
+      var optionsText = [];
+      var options = Array.from(e.target.options).forEach(function (option) {
+        return optionsText.push(join(option.innerText));
+      });
+
+      if (!optionsText.some(function (item) {
+        return fieldArray.includes(item);
+      })) {
+        fieldArray.push(join(e.target.value));
+      } else if (optionsText.some(function (item) {
+        return fieldArray.includes(item);
+      }) && !fieldArray.includes(join(e.target.value))) {
+        //one of the options is in the array but not the one we are clicking)
+        fieldArray.forEach(function (field) {
+          if (optionsText.some(function (item) {
+            return fieldArray.includes(item);
+          })) {
+            var index = fieldArray.indexOf(field);
+            fieldArray.splice(index, 1);
+            fieldArray.push(join(e.target.value));
+          }
+
+          ;
+        });
+      }
+    }
+
+    if (nodeName === 'input' && e.target.checked) {
+      fieldArray.push(join(e.target.value));
+    } else if (nodeName === 'input' && !e.target.checked) {
+      var index = fieldArray.indexOf(join(e.target.value));
+      fieldArray.splice(index, 1);
+    }
+
+    courses.forEach(function (course) {
+      if (fieldArray.some(function (item) {
+        return Array.from(course.classList).includes(item);
+      })) {
+        course.classList.remove('hidden');
+        course.classList.add('flex');
+      } else {
+        course.classList.add('hidden');
+        course.classList.remove('flex');
+      }
+    });
+    displayNumCourses();
+    hideHeadings(parents);
+
+    if (fieldArray.length === 0) {
+      reset();
+    }
+  });
+  resetBtn.addEventListener('click', reset);
+
+  function reset() {
+    fieldArray = [];
+    var courseItems = Array.from(document.querySelectorAll('.course-item'));
+    courseItems.forEach(function (course) {
+      course.classList.remove('hidden');
+      course.classList.add('flex');
+    });
+    displayNumCourses();
+  }
+
+  function displayNumCourses() {
+    var coursesShown = Array.from(document.querySelectorAll('.course-item.flex'));
+    return numberCourses.textContent = coursesShown.length;
+  }
+
+  function join(string) {
+    return string.replace(/\s+/g, '-').toLowerCase();
+  }
+
+  function hideHeadings(arr) {
+    arr.forEach(function (item) {
+      var heading = item.children[0];
+      var divscontaininghidden = item.querySelectorAll('.course-item.hidden');
+
+      if (item.children.length < 2 || divscontaininghidden.length === item.children.length - 1) {
+        heading.classList.add('hidden');
+      } else {
+        heading.classList.remove('hidden');
+      }
+    });
+  }
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (courseDirectoryFilters);
 
 /***/ }),
 
@@ -1499,7 +1618,9 @@ var exists = function exists(el, limit) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
+/* harmony import */ var _modules_course_directory_filters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/course-directory-filters */ "./resources/js/modules/course-directory-filters/index.js");
+/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
+
 
 var $$ = {
   body: document.querySelector('body'),
@@ -1533,7 +1654,8 @@ var $$ = {
   scrollTopBtn: document.getElementById('scroll-top'),
   faqSection: document.querySelector('.faq'),
   vacancies: document.querySelector('.vacancies'),
-  submenu: document.querySelector('.submenu')
+  submenu: document.querySelector('.submenu'),
+  cdFilters: document.querySelector('.cd-filters-form')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
