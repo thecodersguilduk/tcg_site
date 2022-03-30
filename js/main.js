@@ -782,75 +782,88 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var courseDirectoryFilters = function () {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].cd - filters - form) return;
+  var filters = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].cdFilters;
+  if (!filters) return;
   var parents = Array.from(document.querySelectorAll('.courseGroup'));
-  var filters = document.querySelector('.cd-filters-form');
   var resetBtn = document.querySelector('.reset-filters');
   var courses = Array.from(document.querySelectorAll('.course-item'));
   var numberCourses = document.querySelector('.numberCourses');
   numberCourses.textContent = courses.length;
-  var fieldArray = [];
+  var fieldObject = {};
   hideHeadings(parents);
   filters.addEventListener('change', function (e) {
     var nodeName = e.target.nodeName.toLowerCase();
+    var target = join(e.target.value);
 
-    if (nodeName === 'select') {
-      var optionsText = [];
-      var options = Array.from(e.target.options).forEach(function (option) {
-        return optionsText.push(join(option.innerText));
-      });
-
-      if (!optionsText.some(function (item) {
-        return fieldArray.includes(item);
-      })) {
-        fieldArray.push(join(e.target.value));
-      } else if (optionsText.some(function (item) {
-        return fieldArray.includes(item);
-      }) && !fieldArray.includes(join(e.target.value))) {
-        //one of the options is in the array but not the one we are clicking)
-        fieldArray.forEach(function (field) {
-          if (optionsText.some(function (item) {
-            return fieldArray.includes(item);
-          })) {
-            var index = fieldArray.indexOf(field);
-            fieldArray.splice(index, 1);
-            fieldArray.push(join(e.target.value));
-          }
-
-          ;
-        });
-      }
-    }
-
-    if (nodeName === 'input' && e.target.checked) {
-      fieldArray.push(join(e.target.value));
-    } else if (nodeName === 'input' && !e.target.checked) {
-      var index = fieldArray.indexOf(join(e.target.value));
-      fieldArray.splice(index, 1);
-    }
-
-    courses.forEach(function (course) {
-      if (fieldArray.some(function (item) {
-        return Array.from(course.classList).includes(item);
-      })) {
-        course.classList.remove('hidden');
-        course.classList.add('flex');
+    if (!fieldObject[e.target.name]) {
+      fieldObject[e.target.name] = [target];
+      fieldObject['type'] = nodeName;
+    } else {
+      if (nodeName === 'input') {
+        if (e.target.checked) {
+          fieldObject[e.target.name].push(join(target));
+        } else if (!e.target.checked) {
+          var index = fieldObject[e.target.name].indexOf(target);
+          fieldObject[e.target.name].splice(index, 1);
+        }
       } else {
-        course.classList.add('hidden');
-        course.classList.remove('flex');
+        var _index = fieldObject[e.target.name].indexOf(target);
+
+        fieldObject[e.target.name].splice(_index, 1);
+        fieldObject[e.target.name] = [target];
       }
-    });
+    }
+
+    filterObject(fieldObject);
     displayNumCourses();
     hideHeadings(parents);
-
-    if (fieldArray.length === 0) {
-      reset();
-    }
   });
   resetBtn.addEventListener('click', reset);
 
+  function filterObject(obj) {
+    courses.forEach(function (course) {
+      var show = true;
+
+      if (obj.type === 'input') {
+        for (var field in obj) {
+          if (field !== 'type') {
+            if (!obj[field].some(function (item) {
+              return Array.from(course.classList).includes(item);
+            })) {
+              show = false;
+              console.log(obj[field]);
+            }
+
+            if (obj[field].length === 0) show = true;
+          }
+        }
+      } else {
+        for (var _field in obj) {
+          if (_field !== 'type') {
+            if (!obj[_field].every(function (item) {
+              return Array.from(course.classList).includes(item);
+            })) {
+              show = false;
+            }
+          }
+        }
+      }
+
+      if (!show) {
+        course.classList.add('hidden');
+        course.classList.remove('flex');
+      } else {
+        course.classList.remove('hidden');
+        course.classList.add('flex');
+      }
+    });
+  }
+
   function reset() {
-    fieldArray = [];
+    fieldObject = {};
+    var uncheckboxes = document.querySelectorAll('input[type=checkbox').forEach(function (el) {
+      return el.checked = false;
+    });
     var courseItems = Array.from(document.querySelectorAll('.course-item'));
     courseItems.forEach(function (course) {
       course.classList.remove('hidden');
@@ -1618,10 +1631,6 @@ var exists = function exists(el, limit) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_course_directory_filters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/course-directory-filters */ "./resources/js/modules/course-directory-filters/index.js");
-/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
-
-
 var $$ = {
   body: document.querySelector('body'),
   wrapper: document.getElementById('wrapper'),
@@ -1655,7 +1664,7 @@ var $$ = {
   faqSection: document.querySelector('.faq'),
   vacancies: document.querySelector('.vacancies'),
   submenu: document.querySelector('.submenu'),
-  cdFilters: document.querySelector('.cd-filters-form')
+  cdFilters: document.querySelector('.cdFiltersForm')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 

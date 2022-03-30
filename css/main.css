@@ -1246,23 +1246,23 @@ input, textarea {
   height: 6rem;
 }
 
-.cd-filters-form .heading {
+.cdFiltersForm .heading {
   font-weight: 700;
 }
 
-.cd-filters-form label {
+.cdFiltersForm label {
   margin-bottom: 0;
   align-self: center;
 }
 
-.cd-filters-form select {
+.cdFiltersForm select {
   background: #f3fbfd;
   padding: 12px 5px;
   border: 2px solid #2874a9;
   border-radius: 5px;
 }
 
-.cd-filters-form input[type=checkbox] {
+.cdFiltersForm input[type=checkbox] {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
@@ -1276,7 +1276,7 @@ input, textarea {
   margin-right: 5px;
 }
 
-.cd-filters-form input[type=checkbox]:checked::before {
+.cdFiltersForm input[type=checkbox]:checked::before {
   font-weight: 900;
   content: "X";
   display: inline-block;

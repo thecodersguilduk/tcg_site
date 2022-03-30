@@ -1,6 +1,3 @@
-import courseDirectoryFilters from "../../modules/course-directory-filters"
-import submenu from "../../modules/submenu"
-
 const $$ = {
 
     body                : document.querySelector('body'),
@@ -67,7 +64,7 @@ const $$ = {
 
     submenu             : document.querySelector('.submenu'),
 
-    cdFilters           : document.querySelector('.cd-filters-form')
+    cdFilters           : document.querySelector('.cdFiltersForm')
 
 }
 

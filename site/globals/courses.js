@@ -61,7 +61,7 @@ function prepPost(data) {
   if (data.project) {
     data.project = data.project[0].code
   }
-  console.log(data.duration, data.courseType);
+
   return data
 }
 
