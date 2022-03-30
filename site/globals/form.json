@@ -11,18 +11,6 @@
             "class":"wide",
             "help":"The role you apply for will determine the questions we need to ask",
             "options":{
-               "Yorkshire Sales Executive Apprentice": {
-                  "name": "Yorkshire Sales Executive Apprentice",
-                  "job_title": "Sales Executive Apprentice",
-                  "location": "North and West Yorkshire",
-                  "url": "https://drive.google.com/file/d/1UbIpOv3JhagCawCzxywtzTt69pSL_jZ8/view"
-               },
-               "Leeds Business Admin Apprentice": {
-                  "name": "Leeds Admin Apprentice",
-                  "job_title": "Business Administration Apprentice",
-                  "location": "Leeds",
-                  "url": "https://drive.google.com/file/d/19PTP-dQd3TAljk5E17U_CyFvo9TYf3Lk/view"
-               }
             },
             "required_message":"Please provide an answer"
          },
