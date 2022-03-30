@@ -100,7 +100,12 @@ const serializers = {
     },
     break: (node) => {
       if(node.node.style === 'break') return h('hr', { style: 'border-color: #2574a9;'});
-    }
+    },
+    youtubeEmbed: (node) => h("iframe", {
+      src: node.node.src,
+      width: node.node.width || '100%',
+      height: node.node.height || '500px'
+    })
   }
 }
 
