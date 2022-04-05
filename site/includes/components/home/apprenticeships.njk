@@ -8,7 +8,7 @@
     <div class="md:flex -mx-8">
       <div class="md:w-1/3 px-8 md:mb-0 mb-12">
         <h3 class="text-white">No one knows the landscape better</h3>
-        <p class="text-white">We started the first industry-led digital apprenticeship back in 2012, revolutionising the way modern technical vocations are learned. Since then we’ve continually improved our courses and are now transferring our know-how to new areas. Our <a href="/course-directory/">course directory</a> covers a variety of digital areas, from web development to training in coding. We deliver professional tech apprenticeships in Leeds and Manchester, and we're the UK's leading providers of digital skills courses and bootcamps.</p>
+        <p class="text-white">We started the first industry-led digital apprenticeship back in 2012, revolutionising the way modern technical vocations are learned. Since then we’ve continually improved our courses and are now transferring our know-how to new areas. Our <a class="text-white" href="/course-directory/">course directory</a> covers a variety of digital areas, from web development to training in coding. We deliver professional tech apprenticeships in Leeds and Manchester, and we're the UK's leading providers of digital skills courses and bootcamps.</p>
       </div>
       <div class="md:w-1/3 px-8 md:mb-0 mb-12">
         <h3 class="text-white">Digital Skills Billable within weeks</h3>
@@ -37,7 +37,7 @@
     <div class="md:flex md:mb-16 mb-14">
       <div class="md:max-w-sm pr-12 mb-12 md:mb-0">
         <h3 class="text-white">Our Available Coding Apprenticeships & Digital Courses</h3>
-        <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts. Check out our <a href="/course-directory/">courses directory</a>. Our expertise covers a range of training options, such as coding bootcamps, courses in user experience design, and junior web development apprenticeships. We also offer workshops and immersive courses to meet all needs. Whether you're looking for a short course, a full-immersive experience or a <a href="/apprenticeships/">digital skill apprenticeship</a>, we have the perfect options to broaden your skillset and boost your job prospects.</p>
+        <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts. Check out our <a class="text-white" href="/course-directory/">courses directory</a>. Our expertise covers a range of training options, such as coding bootcamps, courses in user experience design, and junior web development apprenticeships. We also offer workshops and immersive courses to meet all needs. Whether you're looking for a short course, a full-immersive experience or a <a class="text-white" href="/apprenticeships/">digital skill apprenticeship</a>, we have the perfect options to broaden your skillset and boost your job prospects.</p>
         <a href="/apprenticeships" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">See all our apprenticeships<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
       </div>
 
@@ -46,11 +46,10 @@
           {% if course.courseType === "Apprenticeship" and course.isActive  %}
               <div class="flex mx-4">
                 <div class="px-4">
-                  <div class="bg-white px-6 py-8 rounded-lg shadow-primary h-full apprenticeships__item">
-                    <div class="flex flex-col items-start h-full">
+                  <div class="bg-white px-6 py-8 rounded-lg shadow-primary  apprenticeships__item">
+                    <div class="flex flex-col items-start">
                       <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
                       <h3 class="text-xl leading-lg mb-0">{{ course.title }}</h3>
-                      <h3 class="text-xl leading-lg mb-2">{{ course.qualification }}</h3>
                       <div class="mt-auto">
                         <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
                         <div class="mb-4">
