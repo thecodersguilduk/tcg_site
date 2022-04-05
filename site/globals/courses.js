@@ -46,6 +46,8 @@ function prepPost(data) {
 
   if(data.duration){
     data.duration = data.duration.map(item => item.name)
+  } else {
+    data.duration = 'Ongoing'
   }
 
   if(data.location){
@@ -61,7 +63,7 @@ function prepPost(data) {
   if (data.project) {
     data.project = data.project[0].code
   }
-  console.log(data.duration, data.courseType);
+  console.log(data._key);
   return data
 }
 

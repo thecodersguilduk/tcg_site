@@ -17,6 +17,11 @@ module.exports = function(str){
         case 'Get Hired in the Tech Industry':
             return 'Work in the Tech Industry'
             break;
+        case 'Software Dev L4':
+            return 'Developer'
+            break;
+        case 'Software Testing L4':
+            return 'Tester'
         default:
             return str
     }
