@@ -68,6 +68,12 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
+                                    <label for="address" class="sr-only">Your Address:</label>
+                                    <input type="text" name="address" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Line of Your Address" required />
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
                                     <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required />
                                 </p>
@@ -75,19 +81,25 @@ layout: 'default'
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
-                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" />
+                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" required/>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="dob" class="sr-only">Date of Birth</label>
-                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" />
+                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" required />
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="ni_number" class="sr-only">NI Number</label>
+                                    <input type="text" name="ni_number" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your NI Number" required />
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
+                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course" required></textarea>
 
                                 </p>
                             </div>
@@ -178,16 +190,111 @@ layout: 'default'
                                     </p>
                             </div>
                             <div class="mt-8">
-                                <div class="relative flex items-start">
-                                    <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                               <div class="relative flex flex-col items-start">
+                                    <label for="referral" class="form-label">Where did you hear about us?</label>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-google" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Google Search"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-google" class="font-medium text-gray-700">Google Search</label>
+                                        </div>
                                     </div>
-                                    <div class="ml-3 text-sm leading-5">
-                                        <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-facebook" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Facebook"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-facebook" class="font-medium text-gray-700">Facebook</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-twitter" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Twitter"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-twitter" class="font-medium text-gray-700">Twitter</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-instagram" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Instagram"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-instagram" class="font-medium text-gray-700">Instagram</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-indeed" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Indeed"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-indeed" class="font-medium text-gray-700">Indeed</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-linkedin" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="LinkedIn"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-linkedin" class="font-medium text-gray-700">LinkedIn</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-tech-talent-charter" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Tech Talent Charter"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-tech-talent-charter" class="font-medium text-gray-700">Tech Talent Charter</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-skills-bootcamp-site" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Skills Bootcamp Site"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-skills-bootcamp-site" class="font-medium text-gray-700">Skills Bootcamp Site</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-skills-for-growth" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Skills For Growth Site"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-skills-for-growth" class="font-medium text-gray-700">Skills For Growth</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input id="referral-other" type="radio" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="referral" value="Other"/>
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="referral-other" class="font-medium text-gray-700">Other</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Submit Application</button>
+                            <div class="mt-8">
+                                <div class="relative flex flex-col items-start">
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input name="case_study" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="case_study_yes">Tick here to indicate agree to your work being shared on our social media platforms. This can be great when applying for jobs as live examples of your excellent work.</label>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex items-center h-5">
+                                            <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                        </div>
+                                        <div class="ml-3 text-sm leading-5">
+                                            <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 active:bg-blue-100 transition duration-150 ease-in-out" disabled="disabled">Submit Application</button>
                         </form>
                      </div>
                     </div>
