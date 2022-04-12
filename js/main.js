@@ -844,7 +844,7 @@ var validateForm = function validateForm() {
           // If user input matches regex - check if it has data-valid attr, and change the attribute value, so the input becomes 'valid'
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null; // Check if input contains specified class, if so - remove it
 
-          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null; // Check if current input element has errorContainer and errorMessage attached 
+          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null; // Check if current input element has errorContainer and errorMessage attached
 
           if (errorContainer && errorContainer) {
             // Change text content to be empty and hide the element itself
@@ -860,7 +860,7 @@ var validateForm = function validateForm() {
           // If input has data-valid attr - make it hold invlaid state
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null; // If input doesn't contain invalid input class - attach it to the existing class list, if not - do nothing
 
-          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid'); // Check if current input element has errorContainer and errorMessage attached 
+          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid'); // Check if current input element has errorContainer and errorMessage attached
 
           if (errorContainer && errorContainer) {
             // If so - display error message and make element visible
@@ -1517,6 +1517,7 @@ var $$ = {
   mobileNavContainer: document.querySelector('.mobile-nav-container'),
   toggleShowHide: document.querySelectorAll('.toggle-show-hide'),
   contactForm: document.getElementById('contact-form'),
+  applicationForm: document.getElementById('short-course-apply'),
   inputFields: document.querySelectorAll('.form-input-field'),
   nameInput: document.getElementById('name'),
   emailInput: document.getElementById('email'),

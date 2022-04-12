@@ -40,24 +40,21 @@ layout: 'default'
                         </div>
                         <div class="lg:w-1/2 max-w-md not-on-print mx-auto">
                         <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
-                            <form name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
+                            <form name="course-apply" id="short-course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
                             <p class="hidden">
                                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                             </p>
-                            <input id="pj" type="hidden" name="pj" value="" />
-                            <input id="pt" type="hidden" name="pt" value="" />
-                            <input id="f" type="hidden" name="f" value="" />
                             <input id="cN" type="hidden" name="cN" value="" />
                             <div>
                                 <p>
                                     <label for="first_name" class="sr-only">First Name:</label>
-                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />
+                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black required" placeholder="First Name*" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required />
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="last_name" class="sr-only">Last Name:</label>
-                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />
+                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black required" placeholder="Last Name*" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required/>
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -93,7 +90,7 @@ layout: 'default'
                             <div class="mt-8">
                                 <p>
                                     <label for="ni_number" class="sr-only">NI Number</label>
-                                    <input type="text" name="ni_number" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your NI Number" required />
+                                    <input type="text" name="ni_number" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your NI Number" required />
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -294,7 +291,7 @@ layout: 'default'
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 active:bg-blue-100 transition duration-150 ease-in-out" disabled="disabled">Submit Application</button>
+                            <button id="submit" type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 active:bg-blue-100 transition duration-150 ease-in-out">Submit Application</button>
                         </form>
                      </div>
                     </div>
@@ -319,4 +316,17 @@ layout: 'default'
         $(".dob").datepicker()
     })
 
+    </script>
+    <script>
+    $(document).ready(function(){
+        function allFilled() {
+            var filled = true;
+            $('.form-input-field').each(function() {
+                if($(this).val() == '') filled = false;
+            });
+            return filled;
+        }
+
+        if(allFilled()) $('#submit').removeAttr('disabled');
+    })
     </script>

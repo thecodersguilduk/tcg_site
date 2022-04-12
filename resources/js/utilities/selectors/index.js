@@ -32,6 +32,8 @@ const $$ = {
 
     contactForm         : document.getElementById('contact-form'),
 
+    applicationForm     : document.getElementById('short-course-apply'),
+
     inputFields         : document.querySelectorAll('.form-input-field'),
 
     nameInput           : document.getElementById('name'),

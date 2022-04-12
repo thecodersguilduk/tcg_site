@@ -4,8 +4,8 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 
-const validateForm = function validateForm() {
-  if ($$.contactForm) {
+const validateShortForm = function validateShortForm() {
+  if ($$.applicationForm) {
 
     let input,
         regex,
@@ -138,5 +138,5 @@ const validateForm = function validateForm() {
   }
 }()
 
-export default validateForm;
+export default validateShortForm;
 
