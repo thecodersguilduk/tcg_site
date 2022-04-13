@@ -1,3 +1,5 @@
+import interviewQuestions from "./interviewQuestions"
+
 export default
   {
     name: 'vacancies',
@@ -64,6 +66,19 @@ export default
         title: 'Salary',
         type: 'string',
         description: 'If this is DOE - no need to write it here - just leave it blank :-) otherwise set a salary amount or range. No need to include "£" signs'
+      },
+      {
+        name: 'questions',
+        title: 'Choose Questions',
+        type: 'array',
+        of: [
+          {
+            type: 'reference',
+            to: [
+              {type: 'interviewQuestions' }
+            ]
+          }
+        ]
       }
     ]
   }

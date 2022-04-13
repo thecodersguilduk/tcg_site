@@ -21,6 +21,7 @@ import supportingSentence from './documents/components/supportingSentence.js'
 import hr from './documents/components/hr'
 import policies from './documents/policies'
 import vacancies from './documents/vacancies'
+import interviewQuestions from './documents/interviewQuestions'
 import newsletter from './documents/components/newsletter'
 import form from './documents/components/form'
 import locations from './documents/locations'
@@ -60,6 +61,7 @@ export default createSchema({
     newsletter,
     form,
     vacancies,
+    interviewQuestions,
     locations,
     youtube
   ]),

@@ -50,6 +50,8 @@ module.exports = eleventyConfig => {
   //
   eleventyConfig.addFilter("courseDisplay", require("./filters/courseNames.js"))
 
+  eleventyConfig.addFilter("underscore", require("./filters/underscore.js"))
+
   // Add a readable date formatter filter to Nunjucks
   eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 

@@ -6,7 +6,8 @@ const config = require('../globals/config');
 
 const query = `*[_type == "vacancies" && isActive && !(_id in path("drafts.**"))] {
     ...,
-    location[]->{name}
+    location[]->{name},
+    questions[]->{...}
 } | order(_createdAt desc)`
 
 module.exports = async function () {
@@ -32,7 +33,7 @@ function prepPost(data) {
     data.location = data.location.map(location => location.name)
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
 
-    //console.log(data);
+    console.log(data);
     return data
 }
 
