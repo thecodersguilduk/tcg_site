@@ -14,7 +14,7 @@ const validateShortForm = function validateShortForm() {
         errorContainer;
 
     // Attach keyup event to a contact form
-    $$.contactForm.addEventListener('keyup', function(e) {
+    $$.applicationForm.addEventListener('keyup', function(e) {
       // Get the input element
       input = e.target.closest('.form-input-field');
 
@@ -85,7 +85,7 @@ const validateShortForm = function validateShortForm() {
     })
 
     // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
-    $$.contactForm.addEventListener('focusout', function(e) {
+    $$.applicationForm.addEventListener('focusout', function(e) {
       input = e.target.closest('.form-input-field');
       if (!input) return;
 
