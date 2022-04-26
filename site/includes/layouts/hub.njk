@@ -12,17 +12,16 @@ body_class: apprenticeship-employer
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} Digital Skills Hub</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! Apply for our {% if location === 'Greater Manchester' %}digital upskill and reskill courses.<br>At no cost to you (or your business).{% else %}funded Digital Skills Bootcamps. Places limited!{% endif %}
-
+                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! Apply for our {% if location === 'Greater Manchester' %}digital upskill and reskill courses.<br>At no cost to you (or your business).{% else %}funded Digital Skills Bootcamps{% if location === 'Hull and East Yorkshire' %} to learn new digital skills{% endif %}. Places limited!{% endif %}
                                     </p>
-                                    <p>Our {% if location === 'Greater Manchester' %}digital courses{% else %} Bootcamps{% endif %} will:</p>
+                                    <p>Our {% if location === 'Greater Manchester' %}digital courses{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will:</p>
                                         <ul class="decorated-ul my-4">
                                         {% if location === 'Greater Manchester '%}
                                             <li class="mb-0">Improve productivity</li>
                                             <li class="mb-0">Drive business growth</li>
                                             <li class="mb-0">Fill the digital skills gap</li>
                                         {% else %}
-                                            <li class="mb-0">Help businesses to fill the digital skills gap and increase productivity</li>
+                                            <li class="mb-0">Help businesses in {{ location }} to fill the digital skills gap and increase productivity</li>
                                             <li class="mb-0">Help people in work to get ahead in digital</li>
                                             <li class="mb-0">Help the unemployed to get a job in tech</li>
                                         {% endif %}
@@ -66,13 +65,13 @@ body_class: apprenticeship-employer
                             {% if location !== 'Greater Manchester' %}
                                 <p class="text-center my-4">
                                 <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill
-                                your teams to increase productivity and drive business growth.{% if b2bpdf %} <a href="/pdf/{{b2bpdf}}" download>Download our flyer for Businesses</a>{% endif%}
+                                your teams to increase productivity and drive business growth.{% if b2bpdf %} If you are a business in {{ location }} <a href="/pdf/{{b2bpdf}}" download>download our flyer for Businesses</a> to learn more about our digital bootcamps.{% endif%}
                                 </p>
                                 <p class="text-center my-4">
                                 <span class="font-bold">Individuals/Self Employed: </span>
                                 Gain the digital skills you need to get ahead at work or if you
                                 are out of work, build up in-demand digital skills to land you that
-                                dream job in tech. {% if b2cpdf %}<a href="/pdf/{{b2cpdf}}" download>Download our flyer for Individuals</a>{% endif %}
+                                dream job in tech. {% if b2cpdf %}<a href="/pdf/{{b2cpdf}}" download>Download our flyer for Individuals</a> to find out more about our digital skills {% if location === 'York and North Yorkshire' %}bootcamps{% else %}apprenticeships{% endif %} in {{ location }}{% endif %}
                                 </p>
                             {% endif %}
                                 <div class="mt-12">
