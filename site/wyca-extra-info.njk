@@ -1,0 +1,177 @@
+---
+layout: default
+permalink: '/applicant/wyca-applicant-info/'
+title: The Coders Guild | Demographic Info
+hidden: true
+---
+
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery-ui.js"></script>
+
+<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+  <div class="inner max-w-5xl pt-20 mb-14 md:mb-20">
+
+    <div class="my-14">
+     <h1 class="text-center">Demographic Information Form</h1>
+        <div class="flex item-center justify-center">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:justify-between">
+
+      <div class="md:w-1/2 mb-14 md:mb-0 max-w-md width-100">
+        <div class="max-w-xs">
+          <h2 class="leading-3xl text-2xl">
+            Demographic Information Form
+          </h2>
+          <p>To be able to provide an accurate and effective service, we require some demographic data. We look forward to welcoming you on the course when this information has been
+          provided.</p>
+          <p class="mb-6 not-on-print">
+            This form collects your personal data. Please see our <a href="/pdf/tcg_privacy_policy.pdf" class="font-bold text-blue-200">Privacy Policy</a> for more details.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 max-w-md not-on-print">
+        <form id="contact-form" class="w-l flex-1 justify-center" name="wyca-demographic-form" data-netlify="true" action="/thanks-info" method="POST"
+            enctype="multipart/form-data">
+                <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
+                <div>
+                    <div class="mb-4">
+                    <label for="first_name" class="sr-only">First Name</label>
+                    <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="First Name" type="text" id="first-name"
+                        name="first_name" data-regex="^[a-zA-Z ]+$" data-valid="false" />
+                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                    </div>
+
+                    <div class="mb-4">
+                    <label for="surname" class="sr-only">Last Name</label>
+                    <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required " placeholder="Second Name" type="text" id="surname"
+                        name="surname" data-regex="^[a-zA-Z ]+$" data-valid="false" />
+                        <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                    </div>
+
+
+                    <div class="mb-4">
+                    <label for="email" class="sr-only">Email</label>
+                    <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false"  placeholder="Email" type="email" name="email" />
+                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+                    </div>
+
+                    <div class="mb-4">
+                    <label for="ni_number" class="sr-only">National Insurance Number</label>
+                    <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^(?!BG)(?!GB)(?!NK)(?!KN)(?!TN)(?!NT)(?!ZZ)(?:[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z])(?:\s*\d\s*){6}([A-D]|\s)$" placeholder="National Insurance Number" type="text" name="ni_number" />
+                    <span class="form-error text-xs leading-xs text-red-100" data-message="NI Number must be in uppercase" aria-hidden="true" role="alert"></span>
+                    </div>
+
+                    <div class="mb-4">
+                    <label for="education" class="sr-only">Highest Level of Education Completed</label>
+                    <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" placeholder="Highest Level of Education Completed" name="education">
+                        <option>Highest Level of Education Completed</option>
+                        <option value="1">GCSE D or Below or Equivalent</option>
+                        <option value="2">GCSE C or Above or Equivalent</option>
+                        <option value="3">AS/A-Level or Equivalent</option>
+                        <option value="4">Higher Apprenticeship or Equivalent</option>
+                        <option value="5">Foundation Degree or Equivalent</option>
+                        <option value="6">Honours Degree or Equivalent</option>
+                        <option value="7">Masters Degree or Equivalent</option>
+                        <option value="8">Doctorate or Equivalent</option>
+                    </select>
+                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+                    </div>
+
+
+
+                    <div class="mb-4">
+                    <label for="work_bootcamp" class="block text-md font-medium text-black mt-3">Plans to work alongside the bootcamp?</label>
+                    <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" rows="4"
+                        name="work_bootcamp">
+                        <option value="yes - full-time employment">Yes - full time employment</option>
+                        <option value="yes - part-time employment">Yes - part time employment</option>
+                        <option value="yes - self-employed">Yes - self-eployed</option>
+                        <option value="no">No</option>
+                    </select>
+                    </div>
+
+                    <div class="mb-4">
+                    <label for="occupation" class="sr-only">Current/Most Recent Occupation</label>
+                    <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Current/Most Recent Occupation" type="text" name="occupation" />
+                    </div>
+
+                    <div class="mb-4">
+                    <label for="caring_responsibilities"
+                        class="block text-md font-medium text-black mt-3">Do you have caring responsibilities for children or other adults?</label>
+                        <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" rows="4"
+                        name="caring_responsibilities">
+                            <option value="Yes caring for children">Yes caring for children</option>
+                            <option value="Yes caring for adults">Yes caring for adults</option>
+                            <option value="No caring responsibilites">o caring responsibilites</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="dob" class="sr-only">
+                        Date of Birth
+                        </label>
+                        <input type="text" id="datepicker" name="dob" placeholder="Date of Birth" class="form-input mt-1 mb-1 block w-full placeholder-black hasDatepicker" required="">
+                        <script>
+                            jQuery( document ).ready(function() {
+                                jQuery( "#datepicker" ).datepicker();
+                            });
+                        </script>
+                    </div>
+
+
+    <div class="mb-4">
+      <label for="marketing"
+        class="form-label">Where did you hear about us?</label>
+        <div class="flex flex-col">
+            <div class="flex items-center">
+                <input id="marketing_google" type="radio" name="marketing" value="Google" />
+                <label for="marketing_google" class="ml-4 font-medium text-gray-700">Google</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_facebook" type="radio" name="marketing" value="Facebook" />
+                <label for="marketing_facebook" class="ml-4 font-medium text-gray-700">Facebook</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_instagram" type="radio" name="marketing" value="Instagram" />
+                <label for="marketing_instagram" class="ml-4 font-medium text-gray-700">Instagram</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_twitter" type="radio" name="marketing" value="Twitter" />
+                <label for="marketing_twitter" class="ml-4 font-medium text-gray-700">Twitter</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_linkedin" type="radio" name="marketing" value="LinkedIn" />
+                <label for="marketing_linkedin" class="ml-4 font-medium text-gray-700">LinkedIn</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_tech_talent" type="radio" name="marketing" value="TikTok" />
+                <label for="marketing_tech_talent" class="ml-4 font-medium text-gray-700">TikTok</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_skills_bootcamp" type="radio" name="marketing" value="Skills Bootcamp Site" />
+                <label for="marketing_skills_bootcamp" class="ml-4 font-medium text-gray-700">Skills Bootcamp Site</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_other" type="radio" name="marketing" value="Other" />
+                <label for="marketing_other" class="ml-4 font-medium text-gray-700">Other</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+      <input id="privacy" type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" name="privacy"  value="true"/>
+      <label for="privacy" class="form-label">Does the learner consent to being contacted by a third party research contractor (commissioned by DfE) to be invited to participate in interviews and surveys to help us understand their experience of the course and any improvements we can make to future courses? Participation in such research is entirely voluntary and consent can be withdrawn at any time.</label>
+    </div>
+
+
+     <button type="submit" class="contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Submit</button>
+    </form>
+      </div>
+    </div>
+  </div>
+</main>
+
