@@ -66,9 +66,8 @@ hidden: true
                     </div>
 
                     <div class="mb-4">
-                    <label for="education" class="sr-only">Highest Level of Education Completed</label>
+                    <label for="education" class="block text-md font-medium text-black mt-3">Highest Level of Education Completed</label>
                     <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" placeholder="Highest Level of Education Completed" name="education">
-                        <option>Highest Level of Education Completed</option>
                         <option value="1">GCSE D or Below or Equivalent</option>
                         <option value="2">GCSE C or Above or Equivalent</option>
                         <option value="3">AS/A-Level or Equivalent</option>
@@ -84,13 +83,13 @@ hidden: true
 
 
                     <div class="mb-4">
-                    <label for="work_bootcamp" class="block text-md font-medium text-black mt-3">Plans to work alongside the bootcamp?</label>
+                    <label for="work_bootcamp" class="block text-md font-medium text-black mt-3">Did you have plans to work alongside the bootcamp?</label>
                     <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" rows="4"
                         name="work_bootcamp">
+                        <option value="no">No</option>
                         <option value="yes - full-time employment">Yes - full time employment</option>
                         <option value="yes - part-time employment">Yes - part time employment</option>
                         <option value="yes - self-employed">Yes - self-eployed</option>
-                        <option value="no">No</option>
                     </select>
                     </div>
 
@@ -104,9 +103,9 @@ hidden: true
                         class="block text-md font-medium text-black mt-3">Do you have caring responsibilities for children or other adults?</label>
                         <select class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" rows="4"
                         name="caring_responsibilities">
+                            <option value="No caring responsibilites">No caring responsibilites</option>
                             <option value="Yes caring for children">Yes caring for children</option>
                             <option value="Yes caring for adults">Yes caring for adults</option>
-                            <option value="No caring responsibilites">o caring responsibilites</option>
                         </select>
                     </div>
 
@@ -154,6 +153,10 @@ hidden: true
             <div class="flex items-center">
                 <input id="marketing_skills_bootcamp" type="radio" name="marketing" value="Skills Bootcamp Site" />
                 <label for="marketing_skills_bootcamp" class="ml-4 font-medium text-gray-700">Skills Bootcamp Site</label>
+            </div>
+            <div class="flex items-center">
+                <input id="marketing_skills_wom" type="radio" name="marketing" value="Word of Mouth" />
+                <label for="marketing_skills_wom" class="ml-4 font-medium text-gray-700">Word of Mouth</label>
             </div>
             <div class="flex items-center">
                 <input id="marketing_other" type="radio" name="marketing" value="Other" />
