@@ -46,9 +46,15 @@ title: Contact Us
             <div class="mt-3">
               <dt class="sr-only">Email
               </dt>
-              <dd class="flex">
-                <object type="image/svg+xml" data="../images/icons/contact-2.svg" class="w-10"></object>
-                <span class="ml-3 my-auto"><a href="mailto:{{ site.contact.email }}" class="text-blue-200 font-bold text-md leading-2xl">{{ site.contact.email }}</a></span>
+              <dd class="flex flex-col">
+                <div class="flex">
+                  <object type="image/svg+xml" data="../images/icons/contact-2.svg" class="w-10"></object>
+                  <span class="ml-3 my-auto"><a href="mailto:{{ site.contact.email }}" class="text-blue-200 font-bold text-md leading-2xl">{{ site.contact.email }}</a></span>
+                </div>
+                <div class="flex mt-3">
+                  <object type="image/svg+xml" data="../images/icons/contact-2.svg" class="w-10"></object>
+                  <span class="ml-3 my-auto"><a href="mailto:hr@thecodersguild.org.uk" class="text-blue-200 font-bold text-md leading-2xl">hr@thecodersguild.org.uk</a></span>
+                </div>
               </dd>
             </div>
           </dl>
@@ -65,8 +71,8 @@ title: Contact Us
       {% include "components/map.njk" %}
     </div>
   </div>
-  
-  
+
+
     {# an optional and basic local business schema example #}
     {# <script type="application/ld+json">
     {
