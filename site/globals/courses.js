@@ -85,20 +85,39 @@ const serializers = {
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).width().url(),
     }),
-    applyBtn: ({ node: { btnText, btnLink, style } }) => {
+    applyBtn: ({ node: { btnText, btnLink, style, isModal, modalName } }) => {
+      function modalNameGenerator(str){
+        if (!str) return '';
+
+        return str.replace(/\s+/g, '-').toLowerCase()
+      }
+
       let classes;
       if(style === 'float-right') {
         classes = 'mt-auto block float-right py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white'
       } else {
         classes = 'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white'
       }
+
+      if(isModal) classes += `${modalName}-c-btn`
+
       const rightArrow = '<i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i>'
+      if(isModal){
       return h("a", {
-        href: btnLink ? btnLink : 'https:\/\/skills-bootcamp-ux.tcg.camp',
+        href: '',
+        className: classes,
+        innerHTML: btnText + rightArrow,
+        style: 'color: white',
+        'data-modal': modalNameGenerator(modalName)
+      })
+    } else {
+      return h("a", {
+        href: btnLink ? btnLink : '',
         className: classes,
         innerHTML: btnText + rightArrow,
         style: 'color: white;'
       })
+    }
     },
     break: (node) => {
       if(node.node.style === 'break') return h('hr', { style: 'border-color: #2574a9;'});

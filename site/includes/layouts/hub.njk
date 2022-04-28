@@ -132,74 +132,8 @@ body_class: apprenticeship-employer
                             {% endfor %}
                         </div>
                         {% else %}
-                            <div id="courses">
-                                <form netlify action="/thanks-application/" name="expression-interest" class="w-full md:w-5/12 mx-auto">
-                                    <div class="mb-4">
-                                        <label for="name" class="sr-only">Name</label>
-                                        <div class="relative">
-                                            <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" placeholder="Your Name*" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required="">
-                                            <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
-                                        </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="_replyto" class="sr-only">Email Address</label>
-                                        <div class="relative">
-                                            <input name="_replyto" id="email" type="email" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Email*" maxlength="50" data-regex="\S+@\S+\.\S+" data-valid="false" required="">
-                                            <span class="form-error text-xs leading-xs text-red-100" data-message="Please check if provided email is correct" aria-hidden="true" role="alert"></span>
-                                        </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="postcode" class="sr-only">Your Postcode:</label>
-                                        <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required="">
-                                    </div>
-                                    <div class="mb-4">
-                                        <p><label for="course_choice" class="">Which courses might you be interested in?</label>
-                                        </p>
-                                        <div class="relative flex items-start">
-                                            <div class="flex items-center h-5">
-                                                <input name="course_choice[]" type="checkbox" value="software_tester" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-                                            </div>
-                                            <div class="ml-3 text-sm leading-5">
-                                                <label for="software_teser">Software Tester</label>
-                                            </div>
-                                        </div>
-                                        <div class="relative flex items-start">
-                                            <div class="flex items-center h-5">
-                                                <input name="course_choice[]" type="checkbox" value="software_developer" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-                                            </div>
-                                            <div class="ml-3 text-sm leading-5">
-                                                <label for="software_developer">Software Developer</label>
-                                            </div>
-                                        </div>
-                                        <div class="relative flex items-start">
-                                            <div class="flex items-center h-5">
-                                                <input name="course_choice[]" type="checkbox" value="ux_designer" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-                                            </div>
-                                            <div class="ml-3 text-sm leading-5">
-                                                <label for="ux_designer">UX Designer</label>
-                                            </div>
-                                        </div>
-                                        <div class="relative flex items-start">
-                                            <div class="flex items-center h-5">
-                                                <input name="course_choice[]" type="checkbox" value="account_manager" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-                                            </div>
-                                            <div class="ml-3 text-sm leading-5">
-                                                <label for="software_developer">Account Manager</label>
-                                            </div>
-                                        </div>
-                                        <div class="relative flex items-start">
-                                            <div class="flex items-center h-5">
-                                                <input name="course_choice[]" type="checkbox" value="essential_skills" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-                                            </div>
-                                            <div class="ml-3 text-sm leading-5">
-                                                <label for="essential_skills">Essential Skills</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <button type="submit" id="submit" class="contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Register Interest</button>
-                                    </div>
-                                </form>
+                            <div id="courses" class="w-full md:w-5/12 mx-auto">
+                               {% include '../components/contact/expression-of-interest-form.njk' %}
                             </div>
                         {% endif %}
                         <div class="cta bg-white rounded lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center shadow-primary">

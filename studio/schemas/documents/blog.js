@@ -1,7 +1,3 @@
-import React from 'react';
-
-import newsletter from './components/newsletter';
-
 export default {
   name: 'blog',
   type: 'document',

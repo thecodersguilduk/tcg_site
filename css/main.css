@@ -1875,7 +1875,7 @@ input, textarea {
   height: 100%;
   overflow: hidden;
   position: fixed;
-  z-index: 40;
+  z-index: 1200;
 }
 
 .modal::before {
