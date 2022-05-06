@@ -79,21 +79,28 @@ layout: 'default'
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
-                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" />
+                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="dob" class="sr-only">Date of Birth</label>
-                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" />
+                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" required />
+                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="phone" class="sr-only">Your NI Number:</label>
+                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your National Insurance Number" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid NI Number" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
                                     <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
-
                                 </p>
                             </div>
                             <div class="mt-8">
