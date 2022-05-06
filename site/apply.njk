@@ -40,7 +40,7 @@ layout: 'default'
                         </div>
                         <div class="lg:w-1/2 max-w-md not-on-print mx-auto">
                         <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
-                            <form name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
+                            <form id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
                             <p class="hidden">
                                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                             </p>
@@ -52,30 +52,35 @@ layout: 'default'
                                 <p>
                                     <label for="first_name" class="sr-only">First Name:</label>
                                     <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="last_name" class="sr-only">Last Name:</label>
                                     <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="email" class="sr-only">Your Email:</label>
                                     <input type="email" name="email" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Email" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid email address" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
                                     <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
                                     <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
