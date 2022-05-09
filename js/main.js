@@ -858,9 +858,9 @@ var validateForm = function validateForm() {
       }
 
       if (input.type === 'textarea') {
-        if (input.id === 'message') return;
+        if (!input.getAttribute('data-min') && !input.getAttribute('data-max')) return;
 
-        if (getStringLength(input) > 50 && getStringLength(input) <= 250) {
+        if (getStringLength(input) > parseInt(input.getAttribute('data-min')) && getStringLength(input) <= parseInt(input.getAttribute('data-max'))) {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
           console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;

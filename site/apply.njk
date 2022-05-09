@@ -73,6 +73,13 @@ meta_title: 'Apply for one of our short courses!'
                             </div>
                             <div class="mt-8">
                                 <p>
+                                    <label for="address" class="sr-only">Your Address</label>
+                                    <textarea row="5" name="address" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Please tell us your address*" data-valid="false"></textarea>
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure this is filled in" aria-hidden="true" role="alert"></span>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
                                     <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" data-regex="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" data-valid="false" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="This doesn't appear to be a valid postcode" aria-hidden="true" role="alert"></span>
@@ -109,7 +116,7 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-valid="false"></textarea>
+                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-min="50" data-max="250" data-valid="false"></textarea>
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure you have more than 50 words and less than 250 words" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -126,7 +133,21 @@ meta_title: 'Apply for one of our short courses!'
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="sexuality" class="">Do you consider yourself LGBQT+?*</label>
+                                    <label for="gender" class="">Which of the following most accurately describes you?*</label>
+                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
+                                        <option disabled hidden selected>Please Select an Option</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Non-Binary">Non-Binary</option>
+                                        <option value="Transgender">Transgender</option>
+                                        <option value="Intersex">Intersex</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="sexuality" class="">Do you consider yourself LGBTQ+?*</label>
                                     <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
                                         <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Yes">Yes</option>
