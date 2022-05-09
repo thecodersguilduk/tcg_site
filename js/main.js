@@ -858,7 +858,25 @@ var validateForm = function validateForm() {
       }
 
       if (input.type === 'textarea') {
-        if (!input.getAttribute('data-min') && !input.getAttribute('data-max')) return;
+        if (!input.getAttribute('data-min') && !input.getAttribute('data-max')) {
+          if (input.hasAttribute('data-regex')) {
+            // Assign the value to regex variable
+            regex = RegExp(input.getAttribute('data-regex')); // Compare user input with provided regex
+
+            if (regex.test(input.value)) {
+              // If user input matches regex - check if it has data-valid attr, and change the attribute value, so the input becomes 'valid'
+              input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null; // Check if input contains specified class, if so - remove it
+
+              input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null; // Check if current input element has errorContainer and errorMessage attached
+
+              if (errorContainer && errorContainer) {
+                // Change text content to be empty and hide the element itself
+                errorContainer.textContent === errorMessage ? errorContainer.textContent = null : null;
+                errorContainer.setAttribute('aria-hidden', 'false');
+              }
+            }
+          }
+        }
 
         if (getStringLength(input) > parseInt(input.getAttribute('data-min')) && getStringLength(input) <= parseInt(input.getAttribute('data-max'))) {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
