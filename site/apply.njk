@@ -109,8 +109,8 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="employer_details" class="sr-only">Current Employment Details</label>
-                                    <input type="text" name="employer_details" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Your Current Employer Details" />
-                                    <span class="employer_details_info form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="true" role="alert">We won't contact them without your prior permission</span>
+                                    <input id="employer_details" type="text" name="employer_details" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Your Current Employer Details" />
+                                    <span class="employer_details_message form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="true" role="alert">We won't contact them without your prior permission</span>
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -238,6 +238,12 @@ meta_title: 'Apply for one of our short courses!'
     <script>
         const radios = Array.from(document.querySelectorAll('.form-checkbox'));
         const rtw_message = document.querySelector('.rtw_message');
+        const employer_details = document.querySelector('#employer_details');
+        const employer_details_message = document.querySelector('.employer_details_message');
+
+        employer_details.addEventListener('keyup', function(e){
+            employer_details_message.classList.remove('hidden');
+        })
 
         radios.forEach(radio => {
             if(radio.name !== 'rtw_status') return
