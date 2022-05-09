@@ -73,6 +73,13 @@ meta_title: 'Apply for one of our short courses!'
                             </div>
                             <div class="mt-8">
                                 <p>
+                                    <label for="address" class="sr-only">Your Address</label>
+                                    <textarea row="5" name="address" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Please tell us your address*" data-regex="[A-Za-z0-9]" data-valid="false"></textarea>
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure this is filled in" aria-hidden="true" role="alert"></span>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
                                     <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" data-regex="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" data-valid="false" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="This doesn't appear to be a valid postcode" aria-hidden="true" role="alert"></span>
@@ -81,14 +88,14 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
-                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number*" required />
-                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number*" data-regex="^[0-9]{11}$" data-valid="false" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="The phone number entered may not be valid - try without spaces" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="dob" class="sr-only">Date of Birth</label>
-                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth*" required />
+                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth*" data-valid="false" required />
                                      <span class="form-error text-xs leading-xs text-red-100" data-message="Please enter a valid Date of Birth in DD/MM/YYYY format" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -102,45 +109,46 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="employer_details" class="sr-only">Current Employment Details</label>
-                                    <input type="text" name="employer_details" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Your Current Employer Details" />
-                                    <span class="employer_details_info form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="true" role="alert">We won't contact them without your prior permission</span>
+                                    <input id="employer_details" type="text" name="employer_details" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Your Current Employer Details" />
+                                    <span class="employer_details_message form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="true" role="alert">We won't contact them without your prior permission</span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-valid="false"></textarea>
+                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-min="50" data-max="250" data-valid="false"></textarea>
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure you have more than 50 words and less than 250 words" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
+                                    <label for="disability" class="">Do you consider yourself to have a disability?*</label>
+                                    <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
+                                        <option disabled hidden selected>Please Select an Option</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
                                     <label for="gender" class="">Which of the following most accurately describes you?*</label>
-                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
+                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
                                         <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Female">Female</option>
                                         <option value="Male">Male</option>
                                         <option value="Non-Binary">Non-Binary</option>
                                         <option value="Transgender">Transgender</option>
                                         <option value="Intersex">Intersex</option>
-                                        <option value="Not-disclosed">I prefer not to say</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
                                     </select>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="disability" class="">Do you consider yourself to have a disability?*</label>
-                                    <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
-                                        <option disabled hidden selected>Please Select an Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </p>
-                            </div>
-                            <div class="mt-8">
-                                <p>
-                                    <label for="sexuality" class="">Do you consider yourself LGBQT+?*</label>
-                                    <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
+                                    <label for="sexuality" class="">Do you consider yourself LGBTQ+?*</label>
+                                    <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
                                         <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -151,22 +159,22 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="ethnicity" class="">What is your Ethnicity?*</label>
-                                    <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                    <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
                                         <option disabled hidden selected>Please Select an Option</option>
-                                        <option value="white-british">White British</option>
-                                        <option value="other-white">Other White</option>
-                                        <option value="mixed">Mixed/Multiple Ethnic Groups</option>
-                                        <option value="asian-asian-british">Asian/Asian British</option>
-                                        <option value="black-african-caribbean-black-british">Black/African/Caribbean/Black British</option>
-                                        <option value="other">Other</option>
-                                        <option value="Not_disclosed">Prefer not to say</option>
+                                        <option value="White British">White British</option>
+                                        <option value="White Other">Other White</option>
+                                        <option value="Mixed Ethnic Groups">Mixed/Multiple Ethnic Groups</option>
+                                        <option value="Asian Or Asian British">Asian/Asian British</option>
+                                        <option value="Black/African/Caribbean/Black British">Black/African/Caribbean/Black British</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Prefer not to say">Prefer not to say</option>
                                     </select>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="employment_status" class="">What is your current employment status?*</label>
-                                    <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
+                                    <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
                                         <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Full-Time">Full Time Employed</option>
                                         <option value="Part-Time">Part Time Employed</option>
@@ -201,14 +209,14 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
                                     </div>
                                     <div class="ml-3 text-sm leading-5">
                                         <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out">Submit Application</button>
+                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled>Submit Application</button>
                         </form>
                      </div>
                     </div>
@@ -230,9 +238,14 @@ meta_title: 'Apply for one of our short courses!'
     <script>
         const radios = Array.from(document.querySelectorAll('.form-checkbox'));
         const rtw_message = document.querySelector('.rtw_message');
+        const employer_details = document.querySelector('#employer_details');
+        const employer_details_message = document.querySelector('.employer_details_message');
+
+        employer_details.addEventListener('keyup', function(e){
+            employer_details_message.classList.remove('hidden');
+        })
 
         radios.forEach(radio => {
-        console.log(radio.name)
             if(radio.name !== 'rtw_status') return
 
             radio.addEventListener('change', function(){
