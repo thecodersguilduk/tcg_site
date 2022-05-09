@@ -929,10 +929,8 @@ var validateForm = function validateForm() {
       } // Keeps track of 'invalid' input fields
 
 
-      invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs); // If there are no invalid input fields - make button available, else - disable it
+      invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
 
-      console.log(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
 
@@ -978,8 +976,6 @@ var validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs);
-      console.log(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     });
   } else {
@@ -1245,22 +1241,29 @@ var ShowHide = function ShowHide() {
 /*!**********************************************!*\
   !*** ./resources/js/modules/slider/index.js ***!
   \**********************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-$('.testimonials__slider').slick({
-  dots: true,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
-  appendDots: $('.dots'),
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-});
+
+var sliderSettings = function () {
+  var slick = document.querySelector('.testimonials__slider');
+  if (!slick) return;
+  return $('.testimonials__slider').slick({
+    dots: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    appendDots: $('.dots'),
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (sliderSettings);
 
 /***/ }),
 

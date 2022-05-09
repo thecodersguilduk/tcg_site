@@ -145,9 +145,7 @@ const validateForm = function validateForm() {
 
       // Keeps track of 'invalid' input fields
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs);
       // If there are no invalid input fields - make button available, else - disable it
-      console.log($$.submitBtn);
       $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
 
     })
@@ -205,8 +203,6 @@ const validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs);
-      console.log($$.submitBtn);
       $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     })
   } else {
