@@ -32,6 +32,8 @@ const $$ = {
 
     contactForm         : document.getElementById('contact-form'),
 
+    applyFormSubmit     : document.querySelector('.apply-form-submit'),
+
     inputFields         : document.querySelectorAll('.form-input-field'),
 
     nameInput           : document.getElementById('name'),

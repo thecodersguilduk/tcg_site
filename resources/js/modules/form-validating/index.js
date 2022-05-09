@@ -4,6 +4,19 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 
+function getStringLength(string){
+  let res = [];
+    let str = string.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+    str.map((s) => {
+      let trimStr = s.trim();
+      if (trimStr.length > 0) {
+        res.push(trimStr);
+      }
+    })
+
+    return res.length
+}
+
 const validateForm = function validateForm() {
   if ($$.contactForm) {
 
@@ -13,11 +26,21 @@ const validateForm = function validateForm() {
         errorMessage,
         errorContainer;
 
+    $$.contactForm.addEventListener('change', function(e){
+      input = e.target.closest('.form-checkbox');
+
+      if(!input) return
+
+      if(input.type !== 'radio') return
+
+      if(input.value !== ''){
+        input.setAttribute('data-valid', true)
+      }
+    })
      // Attach keyup event to a contact form
     $$.contactForm.addEventListener('keyup', function(e) {
       // Get the input element
       input = e.target.closest('.form-input-field');
-      console.log(input.type);
 
       // If event occured somewhere else than on input field - return;
       if (!input) return;
@@ -31,24 +54,15 @@ const validateForm = function validateForm() {
       if(input.type === 'textarea' ){
         if(input.id === 'message') return
 
-        let res = [];
-          let str = input.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
-          str.map((s) => {
-            let trimStr = s.trim();
-            if (trimStr.length > 0) {
-              res.push(trimStr);
-            }
-
-        })
-
-
-        if (res.length > 50 && res.length <= 250) {
+        if (getStringLength(input) > 50 && getStringLength(input) <= 250) {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
+          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
           errorContainer.textContent = '';
           errorContainer.setAttribute('aria-hidden', 'true');
         } else {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
+          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
           errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
           errorContainer.setAttribute('aria-hidden', 'false');
@@ -107,8 +121,10 @@ const validateForm = function validateForm() {
 
       // Keeps track of 'invalid' input fields
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs);
       // If there are no invalid input fields - make button available, else - disable it
-      $$.submitBtn.disabled = invalidInputs.length ? true : false;
+      console.log($$.submitBtn);
+      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
 
     })
 
@@ -122,6 +138,12 @@ const validateForm = function validateForm() {
         errorContainer = e.target.nextElementSibling;
         errorMessage = e.target.nextElementSibling.getAttribute('data-message');
 
+      }
+
+      if(!input.hasAttribute('data-regex') && input.type !== 'textarea'){
+        if (input.value !== '') {
+          input.setAttribute('data-valid', true);
+        }
       }
 
       // Check if input, where event occured - has no value and contains a required class
@@ -159,7 +181,9 @@ const validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      $$.submitBtn.disabled = invalidInputs.length ? true : false;
+      console.log(invalidInputs);
+      console.log($$.submitBtn);
+      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     })
   } else {
     return;

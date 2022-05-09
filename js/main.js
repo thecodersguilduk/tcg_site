@@ -820,14 +820,35 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 
+function getStringLength(string) {
+  var res = [];
+  var str = string.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+  str.map(function (s) {
+    var trimStr = s.trim();
+
+    if (trimStr.length > 0) {
+      res.push(trimStr);
+    }
+  });
+  return res.length;
+}
+
 var validateForm = function validateForm() {
   if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm) {
-    var input, regex, invalidInputs, errorMessage, errorContainer; // Attach keyup event to a contact form
+    var input, regex, invalidInputs, errorMessage, errorContainer;
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('change', function (e) {
+      input = e.target.closest('.form-checkbox');
+      if (!input) return;
+      if (input.type !== 'radio') return;
+
+      if (input.value !== '') {
+        input.setAttribute('data-valid', true);
+      }
+    }); // Attach keyup event to a contact form
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
       // Get the input element
-      input = e.target.closest('.form-input-field');
-      console.log(input.type); // If event occured somewhere else than on input field - return;
+      input = e.target.closest('.form-input-field'); // If event occured somewhere else than on input field - return;
 
       if (!input) return; // Check if input element has a sibling element with data-message attribute attached
 
@@ -838,23 +859,16 @@ var validateForm = function validateForm() {
 
       if (input.type === 'textarea') {
         if (input.id === 'message') return;
-        var res = [];
-        var str = input.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
-        str.map(function (s) {
-          var trimStr = s.trim();
 
-          if (trimStr.length > 0) {
-            res.push(trimStr);
-          }
-        });
-
-        if (res.length > 50 && res.length <= 250) {
+        if (getStringLength(input) > 50 && getStringLength(input) <= 250) {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
+          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
           errorContainer.textContent = '';
           errorContainer.setAttribute('aria-hidden', 'true');
         } else {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
+          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
           errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
           errorContainer.setAttribute('aria-hidden', 'false');
@@ -897,9 +911,11 @@ var validateForm = function validateForm() {
       } // Keeps track of 'invalid' input fields
 
 
-      invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
+      invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs); // If there are no invalid input fields - make button available, else - disable it
 
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length ? true : false;
+      console.log(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn);
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('focusout', function (e) {
@@ -909,6 +925,12 @@ var validateForm = function validateForm() {
       if (messageExists(input, 'data-message')) {
         errorContainer = e.target.nextElementSibling;
         errorMessage = e.target.nextElementSibling.getAttribute('data-message');
+      }
+
+      if (!input.hasAttribute('data-regex') && input.type !== 'textarea') {
+        if (input.value !== '') {
+          input.setAttribute('data-valid', true);
+        }
       } // Check if input, where event occured - has no value and contains a required class
 
 
@@ -938,7 +960,9 @@ var validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length ? true : false;
+      console.log(invalidInputs);
+      console.log(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn);
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     });
   } else {
     return;
@@ -1543,6 +1567,7 @@ var $$ = {
   mobileNavContainer: document.querySelector('.mobile-nav-container'),
   toggleShowHide: document.querySelectorAll('.toggle-show-hide'),
   contactForm: document.getElementById('contact-form'),
+  applyFormSubmit: document.querySelector('.apply-form-submit'),
   inputFields: document.querySelectorAll('.form-input-field'),
   nameInput: document.getElementById('name'),
   emailInput: document.getElementById('email'),
