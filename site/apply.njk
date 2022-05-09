@@ -1,5 +1,6 @@
 ---
 layout: 'default'
+meta_title: 'Apply for one of our short courses!'
 ---
 
 <div class="container max-w-full md:pt-22 pt-20">
@@ -40,7 +41,8 @@ layout: 'default'
                         </div>
                         <div class="lg:w-1/2 max-w-md not-on-print mx-auto">
                         <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
-                            <form id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
+                            <form autocomplete="off" id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
+                            <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                             <p class="hidden">
                                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                             </p>
@@ -51,63 +53,71 @@ layout: 'default'
                             <div>
                                 <p>
                                     <label for="first_name" class="sr-only">First Name:</label>
-                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="First Name" required />
+                                    <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^[a-zA-Z ]+$" data-valid="false" placeholder="First Name*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="last_name" class="sr-only">Last Name:</label>
-                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Last Name" required />
+                                    <input type="text" name="lastName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^[a-zA-Z ]+$" data-valid="false" placeholder="Last Name*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="email" class="sr-only">Your Email:</label>
-                                    <input type="email" name="email" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Email" required />
+                                    <input type="email" name="email" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^\S+@\S+\.\S+$" data-valid="false" placeholder="Your Email*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid email address" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
-                                    <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required />
-                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                                    <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" data-regex="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" data-valid="false" required />
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="This doesn't appear to be a valid postcode" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
-                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number" required />
+                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="dob" class="sr-only">Date of Birth</label>
-                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth in DD/MM/YYYY" required />
-                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+                                    <input type="text" name="dob" class="dob form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Date of Birth*" required />
+                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Please enter a valid Date of Birth in DD/MM/YYYY format" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your NI Number:</label>
-                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your National Insurance Number" required />
+                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^^(?!BG)(?!GB)(?!NK)(?!KN)(?!TN)(?!NT)(?!ZZ)(?:[a-ceghj-pr-tw-zA-CEGHJ-PR-TW-Z][a-ceghj-pr-tw-zA-CEGHJ-NPR-TW-Z])(?:\s*\d\s*){6}([a-dA-D]|\s)$" data-valid="false" placeholder="Your National Insurance Number*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid NI Number" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course"></textarea>
+                                    <label for="employer_details" class="sr-only">Current Employment Details</label>
+                                    <input type="text" name="employer_details" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Your Current Employer Details" />
+                                    <span class="employer_details_info form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="true" role="alert">We won't contact them without your prior permission</span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="gender" class="">Which of the following most accurately describes you? </label>
-                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" >
-                                        <option selected>Please Select an Option</option>
+                                    <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
+                                    <textarea row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-valid="false"></textarea>
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure you have more than 50 words and less than 250 words" aria-hidden="true" role="alert"></span>
+                                </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="gender" class="">Which of the following most accurately describes you?*</label>
+                                    <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
+                                        <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Female">Female</option>
                                         <option value="Male">Male</option>
                                         <option value="Non-Binary">Non-Binary</option>
@@ -119,9 +129,9 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="disability" class="">Do you have a disability which may require adjustments to be made to allow you to perform your job role? </label>
-                                    <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
-                                        <option selected>Please Select an Option</option>
+                                    <label for="disability" class="">Do you consider yourself to have a disability?*</label>
+                                    <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
+                                        <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -129,22 +139,20 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="sexuality" class="">With which of these do you most closely identify with? </label>
-                                    <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
-                                        <option selected>Please Select an Option</option>
-                                        <option value="Heterosexual">Heterosexual</option>
-                                        <option value="Homosexual">Homosexual</option>
-                                        <option value="Bisexual">Bisexual</option>
-                                        <option value="Pansexual">Pansexual</option>
-                                        <option value="Not_disclosed">Prefer not to say</option>
+                                    <label for="sexuality" class="">Do you consider yourself LGBQT+?*</label>
+                                    <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" required>
+                                        <option disabled hidden selected>Please Select an Option</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Prefer Not to Say">Prefer not to say</option>
                                     </select>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="ethnicity" class="">What is your Ethnicity? </label>
+                                    <label for="ethnicity" class="">What is your Ethnicity?*</label>
                                     <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
-                                        <option selected>Please Select an Option</option>
+                                        <option disabled hidden selected>Please Select an Option</option>
                                         <option value="white-british">White British</option>
                                         <option value="other-white">Other White</option>
                                         <option value="mixed">Mixed/Multiple Ethnic Groups</option>
@@ -157,9 +165,9 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="employment_status" class="">What is your current employment status? </label>
+                                    <label for="employment_status" class="">What is your current employment status?*</label>
                                     <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required">
-                                        <option selected>Please Select an Option</option>
+                                        <option disabled hidden selected>Please Select an Option</option>
                                         <option value="Full-Time">Full Time Employed</option>
                                         <option value="Part-Time">Part Time Employed</option>
                                         <option value="Self-Employed">Self Employed</option>
@@ -170,10 +178,10 @@ layout: 'default'
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="rtw_status" class="">Are you able to provide valid documentation of your right to work in the UK? </label>
+                                    <label for="rtw_status" class="">Are you able to provide valid documentation of your right to work in the UK?*</label>
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
-                                                <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                                <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
                                             </div>
                                             <div class="ml-3 text-sm leading-5">
                                                 <label for="rtw_status">Yes</label>
@@ -181,13 +189,14 @@ layout: 'default'
                                         </div>
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
-                                                <input name="rtw_status" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block" />
+                                                <input name="rtw_status" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
                                             </div>
                                             <div class="ml-3 text-sm leading-5">
                                                 <label for="rtw_status_No">No</label>
                                             </div>
                                         </div>
-                                    </p>
+                                    <span class="rtw_message form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="false" role="alert">We will ask you to evidence this before you are onboarded to our courses.</span>
+                                 </p>
                             </div>
                             <div class="mt-8">
                                 <div class="relative flex items-start">
@@ -211,7 +220,6 @@ layout: 'default'
       </div>
     </div>
 
-    <script src="../js/jquery-ui.js"></script>
     <script>
     const url = new URL(window.location.href)
     url.searchParams.forEach((x, y) => {
@@ -220,8 +228,16 @@ layout: 'default'
 
     </script>
     <script>
-    $(document).ready(function(){
-        $(".dob").datepicker()
-    })
+        const radios = Array.from(document.querySelectorAll('.form-checkbox'));
+        const rtw_message = document.querySelector('.rtw_message');
 
+        radios.forEach(radio => {
+        console.log(radio.name)
+            if(radio.name !== 'rtw_status') return
+
+            radio.addEventListener('change', function(){
+                rtw_message.classList.remove('hidden');
+                return
+            })
+        })
     </script>

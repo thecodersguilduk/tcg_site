@@ -6,17 +6,18 @@ function messageExists(el, attr) {
 
 const validateForm = function validateForm() {
   if ($$.contactForm) {
-  
+
     let input,
         regex,
         invalidInputs,
         errorMessage,
         errorContainer;
 
-    // Attach keyup event to a contact form
+     // Attach keyup event to a contact form
     $$.contactForm.addEventListener('keyup', function(e) {
       // Get the input element
       input = e.target.closest('.form-input-field');
+      console.log(input.type);
 
       // If event occured somewhere else than on input field - return;
       if (!input) return;
@@ -25,6 +26,33 @@ const validateForm = function validateForm() {
       if (messageExists(input, 'data-message')) {
         errorContainer = input.nextElementSibling;
         errorMessage = input.nextElementSibling.getAttribute('data-message');
+      }
+
+      if(input.type === 'textarea' ){
+        if(input.id === 'message') return
+
+        let res = [];
+          let str = input.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+          str.map((s) => {
+            let trimStr = s.trim();
+            if (trimStr.length > 0) {
+              res.push(trimStr);
+            }
+
+        })
+
+
+        if (res.length > 50 && res.length <= 250) {
+          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
+          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
+          errorContainer.textContent = '';
+          errorContainer.setAttribute('aria-hidden', 'true');
+        } else {
+          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
+          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
+          errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
+          errorContainer.setAttribute('aria-hidden', 'false');
+        }
       }
 
       // In input field has data-regex attribute
@@ -41,15 +69,15 @@ const validateForm = function validateForm() {
 
           // Check if input contains specified class, if so - remove it
           input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
-          
-          // Check if current input element has errorContainer and errorMessage attached 
+
+          // Check if current input element has errorContainer and errorMessage attached
           if (errorContainer && errorContainer) {
 
             // Change text content to be empty and hide the element itself
             errorContainer.textContent === errorMessage ? errorContainer.textContent = null : null;
             errorContainer.setAttribute('aria-hidden', 'false');
           }
-        
+
         // Check if event key is navigation key, if so - do nothing
         } else if (!input.value && e.which === 9 || e.which === 8 || (e.which >= 37 && e.which <= 40)) {
           return;
@@ -57,7 +85,7 @@ const validateForm = function validateForm() {
         // Check if current input is email field, if so - break of the function
         } else if (input === $$.emailInput) {
           return;
-        
+
         // If none of the specified above conditions are met:
         } else {
 
@@ -67,7 +95,7 @@ const validateForm = function validateForm() {
           // If input doesn't contain invalid input class - attach it to the existing class list, if not - do nothing
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
 
-          // Check if current input element has errorContainer and errorMessage attached 
+          // Check if current input element has errorContainer and errorMessage attached
           if (errorContainer && errorContainer) {
 
             // If so - display error message and make element visible
@@ -75,7 +103,7 @@ const validateForm = function validateForm() {
             errorContainer.setAttribute('aria-hidden', 'true');
           }
         }
-      } 
+      }
 
       // Keeps track of 'invalid' input fields
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
@@ -90,10 +118,10 @@ const validateForm = function validateForm() {
       if (!input) return;
 
       if (messageExists(input, 'data-message')) {
-        
+
         errorContainer = e.target.nextElementSibling;
         errorMessage = e.target.nextElementSibling.getAttribute('data-message');
-      
+
       }
 
       // Check if input, where event occured - has no value and contains a required class
@@ -120,12 +148,12 @@ const validateForm = function validateForm() {
         if (!regex.test(e.target.value)) {
 
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
-    
+
           if (errorContainer && errorContainer) {
-    
+
             errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
             errorContainer.setAttribute('aria-hidden', 'false');
-    
+
           }
         }
       }
