@@ -12,14 +12,16 @@ body_class: apprenticeship-employer
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} Digital Skills Hub</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! Apply for our {% if location === 'Greater Manchester' %}digital upskill and reskill courses.<br>At no cost to you (or your business).{% else %}funded Digital Skills Bootcamps{% if location === 'Hull and East Yorkshire' %} to learn new digital skills{% endif %}. Places limited!{% endif %}
+                                    <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! {% if location === 'Greater Manchester'%}Gain qualifications with our free coding and
+                                    digital skills courses.{% else %} Apply for our funded Digital Skills Bootcamps{% if location === 'Hull and East Yorkshire' %} to learn new digital skills{% endif %}.{% endif %} Reserve your spot now — space is limited!
                                     </p>
-                                    <p>Our {% if location === 'Greater Manchester' %}digital courses{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will:</p>
+                                    <p>Our {% if location === 'Greater Manchester' %}free coding courses in {{ location }}{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will:</p>
                                         <ul class="decorated-ul my-4">
-                                        {% if location === 'Greater Manchester '%}
-                                            <li class="mb-0">Improve productivity</li>
-                                            <li class="mb-0">Drive business growth</li>
-                                            <li class="mb-0">Fill the digital skills gap</li>
+                                        {% if location === 'Greater Manchester'%}
+                                            <li class="mb-0">Help local businesses fill the digital skills gap and increase productivity.</li>
+                                            <li class="mb-0">Upskill individuals already employed in the IT industry to maximise potential.</li>
+                                            <li class="mb-0">Supporting the {{location}} community through providing free courses for
+                                            unemployed adults, enabling career progression within tech and other digital industries.</li>
                                         {% else %}
                                             <li class="mb-0">Help businesses in {{ location }} to fill the digital skills gap and increase productivity</li>
                                             <li class="mb-0">Help people in work to get ahead in digital</li>
@@ -50,6 +52,9 @@ body_class: apprenticeship-employer
                                     {% endif %}
                                 </div>
                             </div>
+                            {% if location === 'Greater Manchester'%}
+                                {% include '../components/hub/blue-cta.njk' %}
+                            {% endif %}
                             <div class="w-full md:w-8/12 mx-auto">
                             {% if tag === 'serco' %}
                                 <img src="../../images/LocalAuthLogos/Serco.jpg" alt="Serco logo"  class="max-h-10 my-12 mx-auto" />
