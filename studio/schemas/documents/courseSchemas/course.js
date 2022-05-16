@@ -162,6 +162,20 @@ export default {
         ]
       },
       {
+        name: 'coursePortableText2',
+        type: 'array',
+        title: 'Second block of text (if applicable)',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
         name: 'ctaActive',
         type: 'boolean',
         title: 'Activate CTA',

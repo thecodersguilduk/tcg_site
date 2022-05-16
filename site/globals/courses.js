@@ -15,7 +15,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     partner[]->{code},
     coursePortableText
 
-}`
+} | order(start asc)`
 
 module.exports = async function () {
   // Fetches data
@@ -34,10 +34,20 @@ module.exports = async function () {
 function prepPost(data) {
 
   // Converts Portable Text to HTML
-  data.body = blocksToHtml({
-    blocks: data.coursePortableText,
-    serializers: serializers
-  })
+  if(data.coursePortableText){
+    data.body = blocksToHtml({
+      blocks: data.coursePortableText,
+      serializers: serializers
+    })
+  }
+
+  if(data.coursePortableText2){
+    data.additionalText = blocksToHtml({
+      blocks: data.coursePortableText2,
+      serializers: serializers
+    })
+  }
+
   data.courseType = data.courseType[0].courseType
   data.courseItemImage = data.featuredImage ? urlFor(data.featuredImage).width(500).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
   data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(1200).height(600).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
@@ -63,7 +73,7 @@ function prepPost(data) {
   if (data.project) {
     data.project = data.project[0].code
   }
-  console.log(data._key);
+
   return data
 }
 
