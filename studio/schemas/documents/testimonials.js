@@ -22,6 +22,15 @@ export default {
             name: 'avatar',
             type: 'image',
             title: 'Avatar'
+        },
+        {
+            name: 'tags',
+            type: 'tags',
+            title: 'Tags',
+            options: {
+                frozen: false,
+                closeMenuOnSelect: true
+            }
         }
     ]
 }
