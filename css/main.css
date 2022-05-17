@@ -18811,6 +18811,10 @@ input, textarea {
   fill: #2574a9;
 }
 
+.fill-white{
+  fill: #fff;
+}
+
 .stroke-current{
   stroke: currentColor;
 }
@@ -43754,6 +43758,10 @@ fieldset a {
     fill: #2574a9;
   }
 
+  .xs\:fill-white{
+    fill: #fff;
+  }
+
   .xs\:stroke-current{
     stroke: currentColor;
   }
@@ -68509,6 +68517,10 @@ fieldset a {
 
   .sm\:fill-blue{
     fill: #2574a9;
+  }
+
+  .sm\:fill-white{
+    fill: #fff;
   }
 
   .sm\:stroke-current{
@@ -93268,6 +93280,10 @@ fieldset a {
     fill: #2574a9;
   }
 
+  .md\:fill-white{
+    fill: #fff;
+  }
+
   .md\:stroke-current{
     stroke: currentColor;
   }
@@ -118025,6 +118041,10 @@ fieldset a {
     fill: #2574a9;
   }
 
+  .lg\:fill-white{
+    fill: #fff;
+  }
+
   .lg\:stroke-current{
     stroke: currentColor;
   }
@@ -142780,6 +142800,10 @@ fieldset a {
 
   .xl\:fill-blue{
     fill: #2574a9;
+  }
+
+  .xl\:fill-white{
+    fill: #fff;
   }
 
   .xl\:stroke-current{

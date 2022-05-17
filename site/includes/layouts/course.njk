@@ -6,11 +6,11 @@ meta_description: {{ excerpt }}
 ---
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-  <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 mx-auto pt-20">
-    <div class="mx-auto mb-10 sm:mb-8 max-w-7xl">
+  <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 pt-20 rounded">
+    <div class="mx-auto mb-10 sm:mb-8 rounded">
         {% if featured_image %}
-            <figure class="">
-                <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="max-h-96 h-40 sm:h-56 md:h-auto object-cover">
+            <figure class="rounded">
+                <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="rounded max-h-96 h-40 sm:h-56 md:h-auto object-cover">
             </figure>
         {% endif %}
         <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
@@ -29,39 +29,39 @@ meta_description: {{ excerpt }}
         {% if course.additionalText %}
           {{ course.additionalText | safe}}
         {% endif %}
+    </div>
+    <div class="bg-blue-200 rounded text-white text-center py-24">
+      <h2 class="text-center text-white mb-0">100% Funded Courses Available</h2>
+      <p class="text-white text-sm mt-0">*Whilst it is very likely you will be eligible for funding it is not a guarantee</p>
 
-        <div>
-          <h2 class="text-center">100% Funded Courses Available</h2>
-          <p>*Whilst it is very likely you will be eligible for funding it is not a guarantee</p>
-        </div>
 
-        <div class="flex flex-col xs:flex-row py-16">
+        <div class="flex flex-col xs:flex-row py-16 inner text-white">
           <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
-              <object type="image/svg+xml" data="../../../images/icons/Group-72.svg" class="h-14 w-14 mx-auto mb-6"></object>
-              <h3 class="text-center text-xl leading-lg mb-4">Learn from the best</h3>
-              <p class="text-center">Our trainers and coaches are industry-leading digital experts, providing you with top-notch skills and knowledge to help you excel.</p>
+              <object type="image/svg+xml" data="../../../images/icons/Group-72.svg" class="fill-white h-14 w-14 mx-auto mb-6"></object>
+              <h3 class="text-center text-xl leading-lg mb-4 text-white">Learn from the best</h3>
+              <p class="text-center text-white">Our trainers and coaches are industry-leading digital experts, providing you with top-notch skills and knowledge to help you excel.</p>
           </div>
 
           <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
-              <object type="image/svg+xml" data="../../../images/icons/Group-79.svg" class="h-14 w-14 mx-auto mb-6"></object>
-              <h3 class="text-center text-xl leading-lg mb-4">Boost your confidence</h3>
-              <p class="text-center">Our courses are designed to teach you in-demand tech and digital skills.</p>
+              <object type="image/svg+xml" data="../../../images/icons/Group-79.svg" class="fill-white h-14 w-14 mx-auto mb-6"></object>
+              <h3 class="text-center text-xl leading-lg mb-4 text-white">Boost your confidence</h3>
+              <p class="text-center text-white">Our courses are designed to teach you in-demand tech and digital skills.</p>
           </div>
 
           <div class="px-0 md:px-4 md:mx-4 mb-14 md:mb-0 sm:w-1/2 md:w-auto sm:mx-auto">
               <object type="image/svg+xml" data="../../../images/icons/Group-15.svg" class="h-14 w-14 mx-auto mb-6"></object>
-              <h3 class="text-center text-xl leading-lg mb-4">Upskill</h3>
-              <p class="text-center">Develop new tech skills or brush-up on existing skills to increase your productivity.  You and your teams will feel empowered, engaged and educated.</p>
+              <h3 class="text-center text-xl leading-lg mb-4 text-white">Upskill</h3>
+              <p class="text-center text-white">Develop new tech skills or brush-up on existing skills to increase your productivity.  You and your teams will feel empowered, engaged and educated.</p>
           </div>
         </div>
-
-        <div>
-          <h2>What's the next Step?</h2>
-          <p><a href="https://calendly.com/sarah-1661/course-info">Book a call with us today</a> and speak to a member of our team about how you can <strong>progress your tech career.</strong></p>
-          <h3>100% Funded Courses Available!*</h3>
-          <p>Whilst it is very likely you will be eligible for funding, it is not a guarantee.</p>
-          <p><a href="https://calendly.com/sarah-1661/course-info">Get in touch to find out more!</a></p>
-        </div>
+    </div>
+    <div class="py-24 text-center inner">
+      <h2>What's the next Step?</h2>
+      <p><a href="https://calendly.com/sarah-1661/course-info">Book a call with us today</a> and speak to a member of our team about how you can <strong>progress your tech career.</strong></p>
+      <h3>100% Funded Courses Available!*</h3>
+      <p>Whilst it is very likely you will be eligible for funding, it is not a guarantee.</p>
+      <p><a href="https://calendly.com/sarah-1661/course-info">Get in touch to find out more!</a></p>
+    </div>
 
         <div class="mt-12">
           <h2 class="text-center">100% funding is often available for our courses</h2>
@@ -83,10 +83,14 @@ meta_description: {{ excerpt }}
           </div> #}
         </div>
     </div>
-    {% include '../components/course-directory/apply-cta.njk' %}
+    <div class="inner mb-12">
+      {% include '../components/course-directory/apply-cta.njk' %}
+    </div>
   </article>
   <script>
     const styledDiv = document.querySelector('.content > div');
     styledDiv.classList.add('content');
+
+
   </script>
 </main>
