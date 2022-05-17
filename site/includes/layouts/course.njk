@@ -16,7 +16,7 @@ meta_description: {{ excerpt }}
         <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
           <header>
             <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ course.title }}</h1>
-            <p>Course start date: {{ course.start | dateDisplay }}</p>
+            <p><strong>Course start date: {{ course.start | dateDisplay }}</strong></p>
           </header>
         </div>
     </div>
@@ -25,9 +25,17 @@ meta_description: {{ excerpt }}
         {% if course.body %}
           {{ course.body | safe }}
         {% endif %}
-
-        {% include 'components/course-directory/course-testimonial.njk' %}
-
+    </div>
+    {% for testimonial in testimonials %}
+      {% for tag in testimonial.tag %}
+        {% if tag === course.title %}
+          <div class="my-12">
+              {% include '../components/course-directory/course-testimonial.njk' %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    <div class="post content md:px-20 max-w-3xl mx-auto inner">
         {% if course.additionalText %}
           {{ course.additionalText | safe}}
         {% endif %}

@@ -1,26 +1,28 @@
-{% if body_class == "apprenticeship-employer" and testimonials %}
-  <section class="relative md:pt-16 pt-14 testimonials overflow-hidden">
+{% if testimonials %}
+  <section class="relative md:pt-16 pt-14 testimonials overflow-hidden bg-grey-100">
     <div class="inner relative z-10">
       <div class="max-w-3xl mx-auto md:px-16">
         <h2 class="text-center mb-8 md:mb-14">What our partners say about us</h2>
 
         <div class="testimonials__slider">
           {% for testimonial in testimonials %}
-            {% if testimonial._id === 'fd78ef4d-c70d-462e-a956-4bd59c535c9d' or testimonial._id === '6828dd98-5f83-4451-88c9-3a3aafd87c5a' or testimonial._id === '24d8cf73-2b27-41ae-a482-44fc6e9694c0' %}
-              <div class="p-4">
-                <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
-                  <div class="sm:flex sm:items-center">
-                    <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
-                    <div class="relative testimonials__quote">
-                      <h3 class="mb-2px">{{ testimonial.author }}</h3>
-                      <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                      <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+            {% for tag in testimonial.tag%}
+              {% if tag === course.title %}
+                <div class="p-4">
+                  <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                    <div class="sm:flex sm:items-center">
+                      <div class="testimonials__author h-28 w-28 bg-cover rounded-full border-2 border-blue-200 block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                      <div class="relative testimonials__quote">
+                        <h3 class="mb-2px">{{ testimonial.client }}</h3>
+                        <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                        <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
-              </div>
-            {% endif %}
+              {% endif %}
+            {% endfor %}
           {% endfor %}
         </div>
         <div class="flex justify-center items-center mt-8">
