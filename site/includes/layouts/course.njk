@@ -26,6 +26,8 @@ meta_description: {{ excerpt }}
           {{ course.body | safe }}
         {% endif %}
 
+        {% include 'components/course-directory/course-testimonial.njk' %}
+
         {% if course.additionalText %}
           {{ course.additionalText | safe}}
         {% endif %}
