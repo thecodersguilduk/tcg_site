@@ -25,12 +25,14 @@ export default {
         },
         {
             name: 'tags',
-            type: 'tags',
             title: 'Tags',
-            options: {
-                frozen: false,
-                closeMenuOnSelect: true
-            }
+            type: 'array',
+            of: [
+              {
+                type: 'reference',
+                to: [{ type: 'course' }]
+              }
+            ]
         }
     ]
 }
