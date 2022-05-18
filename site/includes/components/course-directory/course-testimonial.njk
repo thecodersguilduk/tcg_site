@@ -9,39 +9,47 @@
             {% for tag in testimonial.tag%}
               {% if tag === course.title %}
                 <div class="p-4">
-                  <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
-                    <div class="sm:flex sm:items-center">
-                      <div class="testimonials__author h-28 w-28 bg-cover rounded-full border-2 border-blue-200 block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
-                      <div class="relative testimonials__quote">
-                        <h3 class="mb-2px">{{ testimonial.client }}</h3>
-                        <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                        <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
-                      </div>
+                <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                  <div class="sm:flex sm:items-center">
+                    <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                    <div class="relative testimonials__quote">
+                      <h3 class="mb-2px">{{ testimonial.author }}</h3>
+                      <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                      <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
                     </div>
-
                   </div>
+
                 </div>
+              </div>
               {% endif %}
             {% endfor %}
           {% endfor %}
         </div>
         <div class="flex justify-center items-center mt-8">
           <button type="button" class="prev mr-6">
-            <img src="../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
+            <img src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
           </button>
           <div class="dots"></div>
           <button type="button" class="next ml-6">
-            <img src="../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
+            <img src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
           </button>
         </div>
       </div>
 
       <div class="md:my-24 my-14">
-      {% if title != "Software Testing Apprenticeship | The Coders Guild" %}
-        {% include "components/global/get-in-touch-cta.njk" %}
-        {% else %}
-        {% include "components/employer/get-in-touch-cta.njk" %}
-      {% endif %}
+        <div class="rounded bg-blue-200 lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center">
+          <div class="lg:mr-4 lg:mb-0 mb-6">
+            <img class="h-10 w-10 block" alt="" src="../images/logo/TGC_Square_Logo_White.svg"/>
+          </div>
+          <div class="cta__text">
+            <p class="text-lg leading-xl font-bold text-white text-center lg:text-left lg:mb-0 mb-6">You May Be Able To Do This Course For Free!*
+            </p>
+            <p class="mt-0 text-xs">*Whilst it is very likely you will be eligible for funding, it is not a guarantee</p>
+          </div>
+          <div class="lg:ml-auto">
+            <a href="" class="bookacall-f-btn text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap" data-modal="book-a-call">Get in touch today<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
+          </div>
+        </div>
       </div>
 
       <object type="image/svg+xml" data="../images/patterns/11.svg" class="hidden md:block absolute pattern pattern-11"></object>

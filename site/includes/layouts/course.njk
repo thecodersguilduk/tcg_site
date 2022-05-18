@@ -3,6 +3,7 @@ layout: default
 related_articles: true
 meta_title: {{ title }}
 meta_description: {{ excerpt }}
+body_class: apprenticeship-employer
 ---
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
@@ -26,13 +27,11 @@ meta_description: {{ excerpt }}
           {{ course.body | safe }}
         {% endif %}
     </div>
-    {% for testimonial in testimonials %}
-      {% for tag in testimonial.tag %}
-        {% if tag === course.title %}
+
           <div class="my-12">
               {% include '../components/course-directory/course-testimonial.njk' %}
           </div>
-        {% endif %}
+
       {% endfor %}
     {% endfor %}
     <div class="post content md:px-20 max-w-3xl mx-auto inner">
