@@ -27,10 +27,11 @@ body_class: apprenticeship-employer
           {{ course.body | safe }}
         {% endif %}
     </div>
-
-          <div class="my-12">
-              {% include '../components/course-directory/course-testimonial.njk' %}
-          </div>
+    {% if page.url === '/course-directory/agile-a-practical-guide-with-scrum-and-kanban-2-days/' %}
+    <div class="my-12">
+        {% include '../components/course-directory/course-testimonial.njk' %}
+    </div>
+    {% endif %}
 
     <div class="post content md:px-20 max-w-3xl mx-auto inner">
         {% if course.additionalText %}

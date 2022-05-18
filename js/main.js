@@ -880,13 +880,11 @@ var validateForm = function validateForm() {
 
         if (getStringLength(input) > parseInt(input.getAttribute('data-min')) && getStringLength(input) <= parseInt(input.getAttribute('data-max'))) {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
-          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
           errorContainer.textContent = '';
           errorContainer.setAttribute('aria-hidden', 'true');
         } else {
           input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
-          console.log(input.getAttribute('data-valid'));
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
           errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
           errorContainer.setAttribute('aria-hidden', 'false');

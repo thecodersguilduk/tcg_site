@@ -35,7 +35,7 @@ const searchBar = document.getElementById('search')
 const policyList = document.querySelector('policy-list')
 const policies = Array.from(document.querySelectorAll('.policy'))
 let searchTerm = ''
-console.log(policies);
+
 searchBar.addEventListener('keyup', (e) => {
   e.preventDefault();
   const value = e.target.value.toLowerCase()

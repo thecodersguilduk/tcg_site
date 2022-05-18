@@ -234,43 +234,43 @@ filterOptions.addEventListener('change', e => {
         } else if(!e.target.checked) {
             let index = standardArray.indexOf(checkboxValue)
             standardArray.splice(index, 1)
-            console.log(standardArray)
+
         }
     }
 
     singleAd.forEach(job => {
       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length > 0){
-        console.log('triple array filter')
+
         filtertriplearray(standardArray, disabilityArray, standardArray, job)
       }
 
       if(locationArray.length < 1 && disabilityArray.length > 0 && standardArray.length > 0){
-        console.log('double array filter')
+
         filterdoublearray(disabilityArray, standardArray, job)
       }
 
       if(locationArray.length > 0 && disabilityArray.length < 1 && standardArray.length > 0){
-        console.log('double array filter')
+
         filterdoublearray(locationArray, standardArray, job)
       }
 
       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length < 1){
-        console.log('double array filter')
+
         filterdoublearray(locationArray, disabilityArray, job)
       }
 
       if(locationArray.length >= 1 && disabilityArray.length < 1 && standardArray.length < 1){
-        console.log('single array filter')
+
         filterSingleArray(locationArray, job)
       }
 
       if(disabilityArray.length >= 1 && locationArray.length < 1 && standardArray.length < 1){
-        console.log('single array filter')
+
         filterSingleArray(disabilityArray, job)
       }
 
       if(standardArray.length >= 1 && disabilityArray.length < 1 && locationArray.length < 1){
-        console.log('single array filter')
+
         filterSingleArray(standardArray, job)
       }
 
@@ -341,11 +341,11 @@ function filterdoublearray(arr1, arr2, el){
 
 function filterSingleArray(arr, el){
     if(arr.some(item=>Array.from(el.classList).includes(item))){
-    console.log(arr, el)
+
       el.classList.remove('hidden')
       el.classList.add('flex')
     } else {
-    console.log(arr, el)
+
       el.classList.add('hidden')
       el.classList.remove('flex')
     }
