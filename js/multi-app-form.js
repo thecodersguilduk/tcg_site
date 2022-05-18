@@ -4,11 +4,11 @@ let validationInputs = objInputs.map(item => item.fields);
 
 opportunity.addEventListener('change', e => {
     const value = join(e.target.value);
-    console.log(value);
+
     changeNameAttr(value);
     questions.forEach(question => {
         const classList = Array.from(question.classList);
-      
+
 
         if(!classList.includes('all') && !classList.includes(value)){
             question.classList.remove('block');
@@ -19,7 +19,7 @@ opportunity.addEventListener('change', e => {
                 for(const key in item){
                     if(key === label){
                         item[key].required = false;
-                    } 
+                    }
                 }
             });
 
@@ -28,7 +28,7 @@ opportunity.addEventListener('change', e => {
             if(remainingEls.length > 0){
                 remainingEls[0].classList.remove('mt-8');
             }
-            
+
         } else {
             question.classList.add('block');
             question.classList.remove('hidden');
@@ -36,7 +36,7 @@ opportunity.addEventListener('change', e => {
             if(!previousSibling){
                 question.nextElementSibling.classList.add("mt-8");
             }
-        }  
+        }
     });
 });
 
@@ -49,19 +49,19 @@ function changeNameAttr(value){
     //value is the joined value from the opportunity field
     const form = document.getElementById("applicationForm");
     switch (value) {
-        case 'leeds-digital-marketing-apprentice': 
+        case 'leeds-digital-marketing-apprentice':
             form.action = "https://formspree.io/f/xeqnqera";
             break;
-        case 'yorkshire-sales-executive-apprentice': 
+        case 'yorkshire-sales-executive-apprentice':
             form.action = "https://formspree.io/f/xvolozww";
             break;
-        case 'leeds-business-admin-apprentice': 
+        case 'leeds-business-admin-apprentice':
             form.action = "https://formspree.io/f/xrgjgeyr";
             break;
-        case 'manchester-business-admin-apprentice': 
+        case 'manchester-business-admin-apprentice':
             form.action = "https://formspree.io/f/mbjwjdzw";
             break;
-        case 'technical-trainer': 
+        case 'technical-trainer':
             form.action = "https://formspree.io/f/xnqwqjgr";
             break;
         default:
