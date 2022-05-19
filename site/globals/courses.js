@@ -13,7 +13,12 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     project[]->{code},
     funder[]->{code},
     partner[]->{code},
-    coursePortableText
+    coursePortableText,
+    "testimonials": *[_type=='testimonial' && references(^._id)]{
+      client,
+      occupation,
+      testimonial
+   }
 
 } | order(start asc)`
 
@@ -74,6 +79,8 @@ function prepPost(data) {
     data.project = data.project[0].code
   }
 
+  data.testimonials = data.testimonials
+  console.log(data.testimonials);
   return data
 }
 

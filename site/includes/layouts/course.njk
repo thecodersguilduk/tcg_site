@@ -27,7 +27,9 @@ body_class: apprenticeship-employer
           {{ course.body | safe }}
         {% endif %}
     </div>
-    {% if page.url === '/course-directory/agile-a-practical-guide-with-scrum-and-kanban-2-days/' %}
+
+
+    {% if course.testimonials.length %}
     <div class="my-12">
         {% include '../components/course-directory/course-testimonial.njk' %}
     </div>
@@ -63,32 +65,16 @@ body_class: apprenticeship-employer
           </div>
         </div>
     </div>
-    <div class="py-24 text-center inner">
+    <div class="py-12 text-center inner">
       <h2>What's the next Step?</h2>
       <p><a href="https://calendly.com/sarah-1661/course-info">Book a call with us today</a> and speak to a member of our team about how you can <strong>progress your tech career.</strong></p>
-      <h3>100% Funded Courses Available!*</h3>
+      <h3 class="mt-4">100% Funded Courses Available!*</h3>
       <p>Whilst it is very likely you will be eligible for funding, it is not a guarantee.</p>
-      <p><a href="https://calendly.com/sarah-1661/course-info">Get in touch to find out more!</a></p>
+      <p><a href="/apply/index.html?{{ course.title }}">Get in touch to find out more!</a></p>
     </div>
 
         <div class="mt-12">
           <h2 class="text-center">100% funding is often available for our courses</h2>
-
-
-          {# <div class="flex flex-col md:flex-row flex-wrap">
-              <div class="relative h-24 md:h-40 w-full mb-6" style="background-image:url('../../images/gmca-logo-landscape.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-              <a href="https://www.greatermanchester-ca.gov.uk/" class="h-full absolute top-0 right-0 left-0 bottom-0">
-              </a>
-            </div>
-              <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/esf_logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                <a href="https://ec.europa.eu/esf/home.jsp" class="h-full absolute top-0 right-0 left-0 bottom-0">
-                </a>
-              </div>
-            <div class="relative h-24 md:h-56 w-full sm:w-1/2" style="background-image:url('../../images/dfe_logo.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-              <a href="https://www.gov.uk/government/organisations/department-for-education" class="h-full absolute top-0 right-0 left-0 bottom-0">
-              </a>
-            </div>
-          </div> #}
         </div>
     </div>
     <div class="inner mb-12">

@@ -11,7 +11,8 @@ permalink: "/course-directory/{{ course.slug.current }}/index.html",
 eleventyComputed: {
     meta_title: data => data.course.title,
     meta_description: data => data.course.excerpt,
-    featured_image: data => data.course.featuredImage
+    featured_image: data => data.course.featuredImage,
+    testimonialsLength: data => data.course.testimonials.length
     }
 }
 ---
