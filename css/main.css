@@ -1669,7 +1669,7 @@ input, textarea {
   border-color: #16aedb;
   border-color: rgba(22, 174, 219, var(--border-opacity));
   height: 110px;
-  width: 110px;
+  max-width: 110px;
   border-radius: 50%;
   flex: 1 0 110px;
   background-position: center;

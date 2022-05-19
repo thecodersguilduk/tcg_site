@@ -27,7 +27,9 @@ body_class: apprenticeship-employer
           {{ course.body | safe }}
         {% endif %}
     </div>
-    {% if page.url === '/course-directory/agile-a-practical-guide-with-scrum-and-kanban-2-days/' %}
+
+
+    {% if course.testimonials.length %}
     <div class="my-12">
         {% include '../components/course-directory/course-testimonial.njk' %}
     </div>
