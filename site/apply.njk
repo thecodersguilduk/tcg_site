@@ -72,7 +72,7 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="address" class="sr-only">Your Address</label>
-                                    <textarea row="5" name="address" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Please tell us your address*" data-regex="[A-Za-z0-9]" data-valid="false"></textarea>
+                                    <textarea row="5" name="address" class="form-input-field border-1 rounded py-2 px-3 mt-1 mb-1 block w-full placeholder-black" placeholder="Please tell us your address*" ></textarea>
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure this is filled in" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -86,7 +86,7 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your Phone Number:</label>
-                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number*" data-regex="^[0-9]{11}$" data-valid="false" required />
+                                    <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="The phone number entered may not be valid - try without spaces" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -100,7 +100,7 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="phone" class="sr-only">Your NI Number:</label>
-                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^^(?!BG)(?!GB)(?!NK)(?!KN)(?!TN)(?!NT)(?!ZZ)(?:[a-ceghj-pr-tw-zA-CEGHJ-PR-TW-Z][a-ceghj-pr-tw-zA-CEGHJ-NPR-TW-Z])(?:\s*\d\s*){6}([a-dA-D]|\s)$" data-valid="false" placeholder="Your National Insurance Number*" required />
+                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your National Insurance Number*" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid NI Number" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -114,8 +114,8 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course (between 50 - 250 words please!)*" data-min="50" data-max="250" data-valid="false"></textarea>
-                                    <span class="form-error text-xs leading-xs text-red-100" data-message="Please ensure you have more than 50 words and less than 250 words" aria-hidden="true" role="alert"></span>
+                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course*" required></textarea>
+                                    <span class="form-error text-xs leading-xs text-red-100" data-message="This field is required" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
@@ -201,20 +201,21 @@ meta_title: 'Apply for one of our short courses!'
                                                 <label for="rtw_status_No">No</label>
                                             </div>
                                         </div>
-                                    <span class="rtw_message form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="false" role="alert">We will ask you to evidence this before you are onboarded to our courses.</span>
+                                    <span class="rtw_message form-info text-xs leading-xs text-blue-200 hidden" aria-hidden="false" role="alert">We will ask you to provide a passport or visa before you are onboarded to our courses.</span>
                                  </p>
                             </div>
                             <div class="mt-8">
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
                                     </div>
                                     <div class="ml-3 text-sm leading-5">
                                         <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled>Submit Application</button>
+                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 disabled:opacity-50 active:opacity-100
+                        transition duration-150 ease-in-out" disabled>Submit Application</button>
                         </form>
                      </div>
                     </div>

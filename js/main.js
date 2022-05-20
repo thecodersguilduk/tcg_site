@@ -820,30 +820,22 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 
-function getStringLength(string) {
-  var res = [];
-  var str = string.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
-  str.map(function (s) {
-    var trimStr = s.trim();
-
-    if (trimStr.length > 0) {
-      res.push(trimStr);
-    }
-  });
-  return res.length;
-}
-
 var validateForm = function validateForm() {
   if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm) {
     var input, regex, invalidInputs, errorMessage, errorContainer;
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('change', function (e) {
       input = e.target.closest('.form-checkbox');
       if (!input) return;
-      if (input.type !== 'radio') return;
 
       if (input.value !== '') {
         input.setAttribute('data-valid', true);
+      } else {
+        input.setAttribute('data-valid', false);
       }
+
+      invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs.length);
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     }); // Attach keyup event to a contact form
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
@@ -855,40 +847,6 @@ var validateForm = function validateForm() {
       if (messageExists(input, 'data-message')) {
         errorContainer = input.nextElementSibling;
         errorMessage = input.nextElementSibling.getAttribute('data-message');
-      }
-
-      if (input.type === 'textarea') {
-        if (!input.getAttribute('data-min') && !input.getAttribute('data-max')) {
-          if (input.hasAttribute('data-regex')) {
-            // Assign the value to regex variable
-            regex = RegExp(input.getAttribute('data-regex')); // Compare user input with provided regex
-
-            if (regex.test(input.value)) {
-              // If user input matches regex - check if it has data-valid attr, and change the attribute value, so the input becomes 'valid'
-              input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null; // Check if input contains specified class, if so - remove it
-
-              input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null; // Check if current input element has errorContainer and errorMessage attached
-
-              if (errorContainer && errorContainer) {
-                // Change text content to be empty and hide the element itself
-                errorContainer.textContent === errorMessage ? errorContainer.textContent = null : null;
-                errorContainer.setAttribute('aria-hidden', 'false');
-              }
-            }
-          }
-        }
-
-        if (getStringLength(input) > parseInt(input.getAttribute('data-min')) && getStringLength(input) <= parseInt(input.getAttribute('data-max'))) {
-          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
-          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
-          errorContainer.textContent = '';
-          errorContainer.setAttribute('aria-hidden', 'true');
-        } else {
-          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
-          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
-          errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
-          errorContainer.setAttribute('aria-hidden', 'false');
-        }
       } // In input field has data-regex attribute
 
 
@@ -929,6 +887,7 @@ var validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
 
+      console.log(invalidInputs.length);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
 
@@ -974,6 +933,7 @@ var validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs.length);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     });
   } else {
