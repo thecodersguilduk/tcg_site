@@ -4,19 +4,6 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 
-function getStringLength(string){
-  let res = [];
-    let str = string.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
-    str.map((s) => {
-      let trimStr = s.trim();
-      if (trimStr.length > 0) {
-        res.push(trimStr);
-      }
-    })
-
-    return res.length
-}
-
 const validateForm = function validateForm() {
   if ($$.contactForm) {
 
@@ -31,11 +18,15 @@ const validateForm = function validateForm() {
 
       if(!input) return
 
-      if(input.type !== 'radio') return
-
       if(input.value !== ''){
         input.setAttribute('data-valid', true)
+      } else {
+        input.setAttribute('data-valid', false)
       }
+
+      invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs.length);
+      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     })
      // Attach keyup event to a contact form
     $$.contactForm.addEventListener('keyup', function(e) {
@@ -104,6 +95,7 @@ const validateForm = function validateForm() {
       // Keeps track of 'invalid' input fields
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       // If there are no invalid input fields - make button available, else - disable it
+      console.log(invalidInputs.length);
       $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
 
     })
@@ -161,6 +153,7 @@ const validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      console.log(invalidInputs.length);
       $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     })
   } else {

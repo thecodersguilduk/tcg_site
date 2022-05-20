@@ -13028,6 +13028,54 @@ input, textarea {
   opacity: 1;
 }
 
+.active\:opacity-0:active{
+  opacity: 0;
+}
+
+.active\:opacity-25:active{
+  opacity: 0.25;
+}
+
+.active\:opacity-50:active{
+  opacity: 0.5;
+}
+
+.active\:opacity-75:active{
+  opacity: 0.75;
+}
+
+.active\:opacity-85:active{
+  opacity: 0.85;
+}
+
+.active\:opacity-100:active{
+  opacity: 1;
+}
+
+.disabled\:opacity-0:disabled{
+  opacity: 0;
+}
+
+.disabled\:opacity-25:disabled{
+  opacity: 0.25;
+}
+
+.disabled\:opacity-50:disabled{
+  opacity: 0.5;
+}
+
+.disabled\:opacity-75:disabled{
+  opacity: 0.75;
+}
+
+.disabled\:opacity-85:disabled{
+  opacity: 0.85;
+}
+
+.disabled\:opacity-100:disabled{
+  opacity: 1;
+}
+
 .outline-none{
   outline: 0;
 }
@@ -37975,6 +38023,54 @@ fieldset a {
     opacity: 1;
   }
 
+  .xs\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .xs\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .xs\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .xs\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .xs\:active\:opacity-85:active{
+    opacity: 0.85;
+  }
+
+  .xs\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .xs\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .xs\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .xs\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .xs\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .xs\:disabled\:opacity-85:disabled{
+    opacity: 0.85;
+  }
+
+  .xs\:disabled\:opacity-100:disabled{
+    opacity: 1;
+  }
+
   .xs\:outline-none{
     outline: 0;
   }
@@ -62733,6 +62829,54 @@ fieldset a {
   }
 
   .sm\:opacity-100{
+    opacity: 1;
+  }
+
+  .sm\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .sm\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .sm\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .sm\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .sm\:active\:opacity-85:active{
+    opacity: 0.85;
+  }
+
+  .sm\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .sm\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .sm\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .sm\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .sm\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .sm\:disabled\:opacity-85:disabled{
+    opacity: 0.85;
+  }
+
+  .sm\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 
@@ -87497,6 +87641,54 @@ fieldset a {
     opacity: 1;
   }
 
+  .md\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .md\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .md\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .md\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .md\:active\:opacity-85:active{
+    opacity: 0.85;
+  }
+
+  .md\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .md\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .md\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .md\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .md\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .md\:disabled\:opacity-85:disabled{
+    opacity: 0.85;
+  }
+
+  .md\:disabled\:opacity-100:disabled{
+    opacity: 1;
+  }
+
   .md\:outline-none{
     outline: 0;
   }
@@ -112258,6 +112450,54 @@ fieldset a {
     opacity: 1;
   }
 
+  .lg\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .lg\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .lg\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .lg\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .lg\:active\:opacity-85:active{
+    opacity: 0.85;
+  }
+
+  .lg\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .lg\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .lg\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .lg\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .lg\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .lg\:disabled\:opacity-85:disabled{
+    opacity: 0.85;
+  }
+
+  .lg\:disabled\:opacity-100:disabled{
+    opacity: 1;
+  }
+
   .lg\:outline-none{
     outline: 0;
   }
@@ -137016,6 +137256,54 @@ fieldset a {
   }
 
   .xl\:opacity-100{
+    opacity: 1;
+  }
+
+  .xl\:active\:opacity-0:active{
+    opacity: 0;
+  }
+
+  .xl\:active\:opacity-25:active{
+    opacity: 0.25;
+  }
+
+  .xl\:active\:opacity-50:active{
+    opacity: 0.5;
+  }
+
+  .xl\:active\:opacity-75:active{
+    opacity: 0.75;
+  }
+
+  .xl\:active\:opacity-85:active{
+    opacity: 0.85;
+  }
+
+  .xl\:active\:opacity-100:active{
+    opacity: 1;
+  }
+
+  .xl\:disabled\:opacity-0:disabled{
+    opacity: 0;
+  }
+
+  .xl\:disabled\:opacity-25:disabled{
+    opacity: 0.25;
+  }
+
+  .xl\:disabled\:opacity-50:disabled{
+    opacity: 0.5;
+  }
+
+  .xl\:disabled\:opacity-75:disabled{
+    opacity: 0.75;
+  }
+
+  .xl\:disabled\:opacity-85:disabled{
+    opacity: 0.85;
+  }
+
+  .xl\:disabled\:opacity-100:disabled{
     opacity: 1;
   }
 

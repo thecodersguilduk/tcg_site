@@ -207,14 +207,15 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
                                     </div>
                                     <div class="ml-3 text-sm leading-5">
                                         <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled>Submit Application</button>
+                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 disabled:opacity-50 active:opacity-100
+                        transition duration-150 ease-in-out" disabled>Submit Application</button>
                         </form>
                      </div>
                     </div>
