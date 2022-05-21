@@ -825,6 +825,7 @@ var validateForm = function validateForm() {
     var input, regex, invalidInputs, errorMessage, errorContainer;
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('change', function (e) {
       input = e.target.closest('.form-checkbox');
+      console.log(input.value);
       if (!input) return;
 
       if (input.value !== '') {
@@ -840,7 +841,8 @@ var validateForm = function validateForm() {
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
       // Get the input element
-      input = e.target.closest('.form-input-field'); // If event occured somewhere else than on input field - return;
+      input = e.target.closest('.form-input-field');
+      console.log(input.value); // If event occured somewhere else than on input field - return;
 
       if (!input) return; // Check if input element has a sibling element with data-message attribute attached
 
@@ -887,12 +889,12 @@ var validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
 
-      console.log(invalidInputs.length);
       _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
     }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('focusout', function (e) {
       input = e.target.closest('.form-input-field');
+      console.log(input.value);
       if (!input) return;
 
       if (messageExists(input, 'data-message')) {
