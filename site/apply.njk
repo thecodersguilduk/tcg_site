@@ -41,7 +41,7 @@ meta_title: 'Apply for one of our short courses!'
                         </div>
                         <div class="lg:w-1/2 max-w-md not-on-print mx-auto">
                         <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
-                            <form autocomplete="off" id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto" action="/thanks-applications/">
+                            <form autocomplete="off" id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto relative" action="/thanks-applications/">
                             <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                             <p class="hidden">
                                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -79,7 +79,7 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <p>
                                     <label for="postcode" class="sr-only">Your Postcode:</label>
-                                    <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" data-regex="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})" data-valid="false" required />
+                                    <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" data-valid="false" required />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="This doesn't appear to be a valid postcode" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
@@ -207,7 +207,8 @@ meta_title: 'Apply for one of our short courses!'
                             <div class="mt-8">
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false
+                                        " required />
                                     </div>
                                     <div class="ml-3 text-sm leading-5">
                                         <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
