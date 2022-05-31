@@ -4,24 +4,22 @@ layout: default
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
   <div class="inner max-w-5xl pt-20 mb-14 md:mb-20">
-
     <div class="my-14">
      <h1 class="text-center">{{title}}</h1>
-        <div class="flex item-center justify-center">
-            <h4>Job Description</h4>
-            {% if job.pdf %}
+      <div class="flex item-center justify-center">
+          <h4>Job Description</h4>
+          {% if job.pdf %}
             <a href="{{job.pdf}}" target="_blank"
                 class="pdf-img">
                 <img src="/images/PDF.png" class="h-10 ml-2" alt="pdf logo">
             </a>
-            {% else %}
-                {{ job.jobDescription}}
-            {% endif %}
-        </div>
+          {% else %}
+              {{ job.jobDescription}}
+          {% endif %}
+      </div>
     </div>
 
     <div class="flex flex-col md:flex-row md:justify-between">
-
       <div class="md:w-1/2 mb-14 md:mb-0 max-w-md width-100">
         <div class="max-w-xs">
           <h2 class="leading-3xl text-2xl">
@@ -39,187 +37,183 @@ layout: default
             If you would like to apply in a different way please get in touch via the email below. Good luck.
           </p>
             <div class="flex flex-row">
-            <img src="/images/icons/contact-2.svg" class="mt-4"><a href="mailto:hr@thecodersguild.org.uk"
+              <img src="/images/icons/contact-2.svg" class="mt-4"><a href="mailto:hr@thecodersguild.org.uk"
                 class="text-blue-200 font-bold text-md leading-2xl mt-4 ml-4">hr@thecodersguild.org.uk</a>
             </div>
         </div>
       </div>
 
       <div class="md:w-1/2 max-w-md not-on-print">
-        <form id="contact-form" class="w-l flex-1 justify-center" name="{{job.slug.current}}" data-netlify="true" action="/thanks-applications" method="POST"
+        <form id="contact-form" class="w-l flex-1 justify-center relative" name="{{job.slug.current}}" data-netlify="true" action="/thanks-applications" method="POST"
             enctype="multipart/form-data">
-                <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
-                <div>
-    <div class="mb-4">
-      <label for="first-name" class="sr-only">First Name</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="First Name" type="text" id="first-name"
-        name="First Name" data-regex="^[a-zA-Z ]+$" data-valid="false" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
-    </div>
-
-    <div class="mb-4">
-      <label for="second-name" class="sr-only">Last Name</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required " placeholder="Second Name" type="text" id="surname"
-        name="Surname" data-regex="^[a-zA-Z ]+$" data-valid="false" />
-        <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
-    </div>
-
-    <div class="mb-4">
-      <label for="second-name" class="sr-only">Preferred Name</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required " placeholder="Preferred Name" type="text" id="preferred_name"
-        name="preferred_name" data-regex="^[a-zA-Z ]+$" data-valid="false" />
-        <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
-    </div>
-
-    <div class="mb-4">
-      <label for="pronouns" class="block text-md font-medium text-black my-3">Pronouns</label>
-      <div class="flex-column">
-        <div class="flex flex-row">
-          <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="he_him" name="pronouns" value="he_him" />
-          <label for="he_him" class="text-sm font-medium">He/Him</label>
-        </div>
-      </div>
-
-      <div class="flex-column">
-        <div class="flex flex-row">
-          <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="she_her" name="pronouns" value="she_her" />
-          <label for="she_her" class="text-sm font-medium">She/Her</label>
-        </div>
-      </div>
-
-      <div class="flex-column">
-        <div class="flex flex-row">
-          <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="they_them" name="pronouns" value="they_them" />
-          <label for="they_them" class="text-sm font-medium">They/Them</label>
-        </div>
-      </div>
-
-      <div class="flex-column">
-        <div class="flex flex-row">
-          <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="other" name="pronouns" value="Other" />
-          <label for="other" class="text-sm font-medium">Other</label>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="mb-4">
-      <label for="email" class="sr-only">Email</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="\S+@\S+\.\S+" placeholder="Email" type="email" name="email" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
-
-    </div>
-
-    <div class="mb-4">
-      <label for="mobile" class="sr-only">Mobile Number</label>
-      <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^[+0-9]+$" placeholder="Telephone" type="tel" name="Tel" />
-      <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid number" aria-hidden="true" role="alert"></span>
-
-    </div>
-
-    <div class="mb-4">
-      <div class="flex-column mt-2">
-        <label for="photo" class="text-md font-medium mt-4 flex">Do you have the right to work in the UK?</label>
-        <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-1/5" name="right to work in the UK">
-          <option value="N/A"></option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-          <option value="unsure">Unsure</option>
-        </select>
-
-      </div>
-    </div>
-
-    <div class="mb-4">
-      <div class="flex-column mt-2">
-        <label for="CV" class="text-md font-medium mt-10">Upload your CV</label>
-        <input type="file" class="flex mt-2 mb-4" id="cv" name="CV" />
-      </div>
-    </div>
-
-    {% for item in job.questions %}
-      <div class="mb-4">
-        {% switch item.inputType %}
-          {% case 'text'%}
-          <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
-          <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="text" id="{{item.questionName | underscore}}"
-          name="{{item.questionName | underscore}}" />
-          {% case 'email'%}
-          <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
-          <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="email" id="{{item.questionName | underscore}}"
-          name="{{item.questionName | underscore}}" />
-          {% case 'select'%}
-            <div class="flex-column mt-2">
-              <label for="{{item.questionName | underscore}}" class="text-md font-medium mt-4 flex">{{item.question}}</label>
-              {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-              <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-full" name="{{item.questionName | underscore}}">
-                <option value="N/A">Please select one option</option>
-                {% for option in item.options %}
-                  <option value="{{option | underscore}}">{{option}}</option>
-                {% endfor %}
-              </select>
+          <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
+          <div>
+            <div class="mb-4">
+              <label for="first-name" class="sr-only">First Name</label>
+              <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="First Name" type="text" id="first-name"
+                name="First Name" data-regex="^[a-zA-Z ]+$" data-valid="false" />
+              <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
             </div>
-          {% case 'checkbox'%}
-            <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
-              {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-              <div class="flex flex-row flex-wrap justify-around">
-              {% for option in item.options%}
-                <input class="flex mb-2 mt-1" type="checkbox" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
-                  <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
-              {% endfor %}
+
+            <div class="mb-4">
+              <label for="second-name" class="sr-only">Last Name</label>
+              <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required " placeholder="Second Name" type="text" id="surname"
+                name="Surname" data-regex="^[a-zA-Z ]+$" data-valid="false" />
+                <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+            </div>
+
+            <div class="mb-4">
+              <label for="preferred_name" class="sr-only">Preferred Name</label>
+              <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black " placeholder="Preferred Name" type="text" id="preferred_name"
+                name="preferred_name" />
+                <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+            </div>
+
+            <div class="mb-4">
+              <label for="pronouns" class="block text-md font-medium text-black my-3">Pronouns</label>
+              <div class="flex-column">
+                <div class="flex flex-row">
+                  <input class="flex mb-2 mt-1 mr-2 form-checkbox-field" type="checkbox" id="he_him" name="pronouns" value="he_him" />
+                  <label for="he_him" class="text-sm font-medium">He/Him</label>
+                </div>
               </div>
-          {% case 'radio'%}
-            <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
-              {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-              <div class="flex flex-row flex-wrap justify-around">
-              {% for option in item.options%}
-                <input class="flex mb-2 mt-1" type="radio" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
-                  <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
-              {% endfor %}
+
+              <div class="flex-column">
+                <div class="flex flex-row">
+                  <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="she_her" name="pronouns" value="she_her" />
+                  <label for="she_her" class="text-sm font-medium">She/Her</label>
+                </div>
               </div>
-          {% case 'textarea'%}
-            <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black mt-3">{{item.question}}</label>
-            {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-            <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
-              name="{{item.questionName | underscore}}">
-            </textarea>
-        {% endswitch %}
-      </div>
-    {% endfor %}
 
-    <div class="mb-4">
-      <label for="question 3" class="block text-md font-medium text-black mt-3">What's something outside of your work
-        that you're passionate about?</label>
-      <p class="text-sm">more than 50 words but less than 250 words please</p>
-      <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
-        name="What's something outside of your work that you're passionate about?">
-      </textarea>
-    </div>
+              <div class="flex-column">
+                <div class="flex flex-row">
+                  <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="they_them" name="pronouns" value="they_them" />
+                  <label for="they_them" class="text-sm font-medium">They/Them</label>
+                </div>
+              </div>
 
-    <div class="mb-4">
-      <label for="additional comments" class="block text-md font-medium text-black mt-3">Anything else that you would
-        you'd like us to know?</label>
-      <p class="text-sm">A great opportunity to tell us about your experience</p>
-      <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
-        name="additional comments">
-      </textarea>
-    </div>
+              <div class="flex-column">
+                <div class="flex flex-row">
+                  <input class="flex mb-2 mt-1 mr-2" type="checkbox" id="other" name="pronouns" value="Other" />
+                  <label for="other" class="text-sm font-medium">Other</label>
+                </div>
+              </div>
+            </div>
 
-    <div class="mb-4">
-      <div class="flex-column mt-2">
-        <label for="referred_tcg" class="text-md font-medium mt-4 flex">If you were referred to us by a member of the TCG team - who was it?</label>
-        <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-full" name="referred_tcg">
-          <option value="N/A">Please select if applicable</option>
-          {% for member in team %}
-            <option value="{{member.name}}">{{member.name}}</option>
-          {% endfor %}
-        </select>
-      </div>
-    </div>
+            <div class="mb-4">
+              <label for="email" class="sr-only">Email</label>
+              <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="\S+@\S+\.\S+" placeholder="Email" type="email" name="email" />
+              <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid email" aria-hidden="true" role="alert"></span>
+            </div>
 
-     <button type="submit" id="submit" class="contact-btn apply-form-submit  rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out" disabled>Submit</button>
-    </form>
+            <div class="mb-4">
+              <label for="mobile" class="sr-only">Mobile Number</label>
+              <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" data-regex="^[+0-9]+$" placeholder="Telephone" type="tel" name="Tel" />
+              <span class="form-error text-xs leading-xs text-red-100" data-message="Please check this is a valid number" aria-hidden="true" role="alert"></span>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex-column mt-2">
+                <label for="photo" class="text-md font-medium mt-4 flex">Do you have the right to work in the UK?</label>
+                <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-1/5" name="right to work in the UK">
+                  <option value="N/A"></option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="unsure">Unsure</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex-column mt-2">
+                <label for="CV" class="text-md font-medium mt-10">Upload your CV</label>
+                <input type="file" class="flex mt-2 mb-4" id="cv" name="CV" />
+              </div>
+            </div>
+
+            {% for item in job.questions %}
+              <div class="mb-4">
+                {% switch item.inputType %}
+                  {% case 'text'%}
+                  <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
+                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="text" id="{{item.questionName | underscore}}"
+                  name="{{item.questionName | underscore}}" />
+                  {% case 'email'%}
+                  <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
+                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="email" id="{{item.questionName | underscore}}"
+                  name="{{item.questionName | underscore}}" />
+                  {% case 'select'%}
+                    <div class="flex-column mt-2">
+                      <label for="{{item.questionName | underscore}}" class="text-md font-medium mt-4 flex">{{item.question}}</label>
+                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
+                      <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-full" name="{{item.questionName | underscore}}">
+                        <option value="N/A">Please select one option</option>
+                        {% for option in item.options %}
+                          <option value="{{option | underscore}}">{{option}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  {% case 'checkbox'%}
+                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
+                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
+                      <div class="flex flex-row flex-wrap justify-around">
+                      {% for option in item.options%}
+                        <input class="flex mb-2 mt-1" type="checkbox" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
+                          <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
+                      {% endfor %}
+                      </div>
+                  {% case 'radio'%}
+                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
+                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
+                      <div class="flex flex-row flex-wrap justify-around">
+                      {% for option in item.options%}
+                        <input class="flex mb-2 mt-1" type="radio" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
+                          <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
+                      {% endfor %}
+                      </div>
+                  {% case 'textarea'%}
+                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black mt-3">{{item.question}}</label>
+                    {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
+                    <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
+                      name="{{item.questionName | underscore}}">
+                    </textarea>
+                {% endswitch %}
+              </div>
+            {% endfor %}
+
+            <div class="mb-4">
+              <label for="question 3" class="block text-md font-medium text-black mt-3">What's something outside of your work
+                that you're passionate about?</label>
+              <p class="text-sm">more than 50 words but less than 250 words please</p>
+              <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
+                name="What's something outside of your work that you're passionate about?">
+              </textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="additional comments" class="block text-md font-medium text-black mt-3">Anything else that you would
+                you'd like us to know?</label>
+              <p class="text-sm">A great opportunity to tell us about your experience</p>
+              <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
+                name="additional comments">
+              </textarea>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex-column mt-2">
+                <label for="referred_tcg" class="text-md font-medium mt-4 flex">If you were referred to us by a member of the TCG team - who was it?</label>
+                <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-full" name="referred_tcg">
+                  <option value="N/A">Please select if applicable</option>
+                  {% for member in team %}
+                    <option value="{{member.name}}">{{member.name}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" id="submit" class="contact-btn apply-form-submit  rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 active:bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 disabled:opacity-50 active:opacity-100 transition duration-150 ease-in-out" disabled>Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

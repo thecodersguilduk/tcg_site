@@ -15,7 +15,6 @@ const validateForm = function validateForm() {
 
     $$.contactForm.addEventListener('change', function(e){
       input = e.target.closest('.form-checkbox');
-      console.log(input.value);
 
       if(!input) return
 
@@ -33,7 +32,6 @@ const validateForm = function validateForm() {
     $$.contactForm.addEventListener('keyup', function(e) {
       // Get the input element
       input = e.target.closest('.form-input-field');
-      console.log(input.value);
       // If event occured somewhere else than on input field - return;
       if (!input) return;
 
@@ -104,7 +102,7 @@ const validateForm = function validateForm() {
     // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
     $$.contactForm.addEventListener('focusout', function(e) {
       input = e.target.closest('.form-input-field');
-      console.log(input.value);
+      //console.log(input.value);
       if (!input) return;
 
       if (messageExists(input, 'data-message')) {
