@@ -1609,8 +1609,8 @@ module.exports = config;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jodiemarks/tcg-site/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /Users/jodiemarks/tcg-site/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
