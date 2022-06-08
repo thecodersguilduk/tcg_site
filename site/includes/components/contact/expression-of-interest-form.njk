@@ -26,6 +26,7 @@
 
                 <select class="form-input-field rounded block w-full py-2 px-3 border-1" name="course_choice">
                     <option selected>{{course.title}}</option>
+                    <option value="Any/Not Sure">Any/Not Sure</option>
                     {% for item in courses %}
                         {% if item.title !== course.title and item.courseType !== 'Apprenticeship'%}
                             <option value="{{ item.title }}">{{ item.title }}</option>
