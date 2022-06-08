@@ -17,6 +17,12 @@ body_class: apprenticeship-employer
         <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
           <header>
             <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ course.title }}</h1>
+            {% if course.tags %}
+
+            <div class="py-8">
+              <img src="../../../images/LocalAuthLogos/gmcafunders.png" alt="Kindly funding these courses are the European Social Fund and SKills for Growth">
+            </div>
+            {% endif %}
             <p><strong>Course start date: {{ course.start | dateDisplay }}</strong></p>
           </header>
         </div>
