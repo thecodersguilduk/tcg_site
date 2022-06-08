@@ -80,7 +80,7 @@ function prepPost(data) {
   }
 
   data.testimonials = data.testimonials
-  console.log(data.testimonials);
+
   return data
 }
 
