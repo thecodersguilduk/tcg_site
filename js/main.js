@@ -752,6 +752,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @modules/modals */ "./resources/js/modules/modals/index.js");
 /* harmony import */ var _modules_vacancy_filters__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @modules/vacancy-filters */ "./resources/js/modules/vacancy-filters/index.js");
 /* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @modules/submenu */ "./resources/js/modules/submenu/index.js");
+/* harmony import */ var _modules_expression_interest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @modules/expression-interest */ "./resources/js/modules/expression-interest/index.js");
 // Import local modules
 
 
@@ -764,6 +765,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/expression-interest/index.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/modules/expression-interest/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var expressionInterest = function expressionInterest() {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) {
+    return;
+  }
+
+  var timer = 20000;
+  var x = setTimeout(function () {
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add('modal--active');
+  }, timer);
+  var closeBtn = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.querySelector('.modal-close');
+  closeBtn.addEventListener('click', function () {
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.remove('modal--active');
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (expressionInterest);
 
 /***/ }),
 
@@ -1119,6 +1152,10 @@ var displayModal = function displayModal() {
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
 
     if (!dataAttr) {
+      return;
+    }
+
+    if (dataAttr = 'expression-of-interest') {
       return;
     }
 
@@ -1547,6 +1584,7 @@ var $$ = {
   toggleShowHide: document.querySelectorAll('.toggle-show-hide'),
   contactForm: document.getElementById('contact-form'),
   applyFormSubmit: document.querySelector('.apply-form-submit'),
+  expressionInterestForm: document.getElementById('expression-of-interest'),
   inputFields: document.querySelectorAll('.form-input-field'),
   nameInput: document.getElementById('name'),
   emailInput: document.getElementById('email'),

@@ -7,16 +7,18 @@ const displayModal = function displayModal() {
 
   document.addEventListener('click', function(e) {
 
-    
-    btn = e.target.closest('[data-modal]'); 
-    
+
+    btn = e.target.closest('[data-modal]');
+
     if ( !btn ) { return; }
-    
+
     e.preventDefault();
-    
+
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
 
     if ( !dataAttr ) { return; }
+
+    if( dataAttr = 'expression-of-interest') { return }
 
     modal = document.querySelector(`#${dataAttr}`);
 

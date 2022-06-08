@@ -34,6 +34,8 @@ const $$ = {
 
     applyFormSubmit     : document.querySelector('.apply-form-submit'),
 
+    expressionInterestForm: document.getElementById('expression-of-interest'),
+
     inputFields         : document.querySelectorAll('.form-input-field'),
 
     nameInput           : document.getElementById('name'),

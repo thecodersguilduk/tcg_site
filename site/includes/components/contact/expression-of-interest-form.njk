@@ -2,63 +2,38 @@
     <div class="mb-4">
         <label for="name" class="sr-only">Name</label>
         <div class="relative">
-            <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" placeholder="Your Name*" maxlength="50" data-regex="^[a-zA-Z ]+$" data-valid="false" required="">
-            <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
+            <input id="name" name="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" placeholder="Your Name*" maxlength="50" required>
         </div>
     </div>
     <div class="mb-4">
         <label for="_replyto" class="sr-only">Email Address</label>
         <div class="relative">
-            <input name="_replyto" id="email" type="email" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Email*" maxlength="50" data-regex="\S+@\S+\.\S+" data-valid="false" required="">
-            <span class="form-error text-xs leading-xs text-red-100" data-message="Please check if provided email is correct" aria-hidden="true" role="alert"></span>
+            <input name="_replyto" id="email" type="email" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Email*" maxlength="50" required>
         </div>
     </div>
     <div class="mb-4">
         <label for="postcode" class="sr-only">Your Postcode:</label>
-        <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode" required="">
+        <input type="text" name="postcode" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Postcode*" required>
     </div>
     <div class="mb-4">
-        <p><label for="course_choice" class="">Which courses might you be interested in?</label>
+        <label for="phone" class="sr-only">Your Phone Number:</label>
+        <input type="text" name="phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number">
+    </div>
+    <div class="mb-4">
+        <p><label for="course_choice" class="">Which course might you be interested in?</label>
         </p>
         <div class="relative flex items-start">
-            <div class="flex items-center h-5">
-                <input name="course_choice[]" type="checkbox" value="software_tester" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-            </div>
-            <div class="ml-3 text-sm leading-5">
-                <label for="software_teser">Software Tester</label>
-            </div>
-        </div>
-        <div class="relative flex items-start">
-            <div class="flex items-center h-5">
-                <input name="course_choice[]" type="checkbox" value="software_developer" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-            </div>
-            <div class="ml-3 text-sm leading-5">
-                <label for="software_developer">Software Developer</label>
-            </div>
-        </div>
-        <div class="relative flex items-start">
-            <div class="flex items-center h-5">
-                <input name="course_choice[]" type="checkbox" value="ux_designer" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-            </div>
-            <div class="ml-3 text-sm leading-5">
-                <label for="ux_designer">UX Designer</label>
-            </div>
-        </div>
-        <div class="relative flex items-start">
-            <div class="flex items-center h-5">
-                <input name="course_choice[]" type="checkbox" value="account_manager" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-            </div>
-            <div class="ml-3 text-sm leading-5">
-                <label for="software_developer">Account Manager</label>
-            </div>
-        </div>
-        <div class="relative flex items-start">
-            <div class="flex items-center h-5">
-                <input name="course_choice[]" type="checkbox" value="essential_skills" class="form-checkbox h-4 w-4 mt-1 mb-1 block">
-            </div>
-            <div class="ml-3 text-sm leading-5">
-                <label for="essential_skills">Essential Skills</label>
-            </div>
+
+                <select class="form-input-field rounded block w-full py-2 px-3 border-1" name="course_choice">
+                    <option selected>{{course.title}}</option>
+                    <option value="Any/Not Sure">Any/Not Sure</option>
+                    {% for item in courses %}
+                        {% if item.title !== course.title and item.courseType !== 'Apprenticeship'%}
+                            <option value="{{ item.title }}">{{ item.title }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+
         </div>
     </div>
     <div class="mb-4">
