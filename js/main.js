@@ -786,7 +786,7 @@ var expressionInterest = function expressionInterest() {
     return;
   }
 
-  var timer = 20000;
+  var timer = 6000;
   var x = setTimeout(function () {
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add('modal--active');
   }, timer);

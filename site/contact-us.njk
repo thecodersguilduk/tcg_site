@@ -28,12 +28,14 @@ title: Contact Us
             <div class="mb-6">
               <dt class="sr-only">Postal address
               </dt>
+              {% for address in site.addresses %}
               <dd>
-                <p class="leading-lg">{{ site.address.street }}</p>
-                <p class="leading-lg">{{ site.address.street_2 }}</p>
-                <p class="leading-lg">{{ site.address.city }}</p>
-                <p class="leading-lg">{{ site.address.postcode }}</p>
+                <p class="leading-lg text-blue-200 mb-2 font-bold">{{ address.street }}</p>
+                <p class="leading-lg">{{ address.street_2 }}</p>
+                <p class="leading-lg">{{ address.city }}</p>
+                <p class="leading-lg mb-4">{{ address.postcode }}</p>
               </dd>
+              {% endfor %}
             </div>
             <div class="">
               <dt class="sr-only">Phone number

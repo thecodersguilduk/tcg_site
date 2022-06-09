@@ -24,13 +24,22 @@
         "youtube": "https://www.youtube.com/channel/UC_By6GiE5aVoMyoTLr5lGZA"
     },
 
-    "address": {
-        "street": "The Coders Guild",
-        "street_2": "10-12 E Parade,",
-        "city": "Leeds",
-        "postcode": "LS1 2BH",
-        "country": "GB"
-    },
+    "addresses": [
+        {
+            "street": "Leeds Office",
+            "street_2": "10-12 E Parade,",
+            "city": "Leeds",
+            "postcode": "LS1 2BH",
+            "country": "GB"
+        },
+        {
+            "street": "Manchester Office",
+            "street_2": "Suite 2, Colony Astley, 70 Great Ancoats St,",
+            "city": "Manchester",
+            "postcode": "M4 5BG",
+            "country": "GB"
+        }
+],
 
     "contact": {
         "phone": "0113 460 1024",
