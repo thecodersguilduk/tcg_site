@@ -4,7 +4,7 @@ const h = blocksToHtml.h
 const y = require('hyperscript')
 const blocksToHyperScript = require('@sanity/block-content-to-hyperscript')
 const imageUrlBuilder = require('@sanity/image-url')
-const config = require('../globals/config');
+const config = require('./config');
 
 // query the data from sanity using sanity's own language - GROQ *[_type == 'name-of-schema-file] with the field names we want - title etc.
 
@@ -130,6 +130,8 @@ function prepPost(data) {
 
 
   data.location = data.location.map(location => location.name)
+
+  console.log(data);
 
   return data
 }

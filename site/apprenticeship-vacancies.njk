@@ -1,72 +1,26 @@
 ---
-layout: "layouts/default.njk"
-title: Apprentice Job Ad Index
-slug: {{job.jobTitle}}
+layout: "layouts/jobs-board.njk"
+title: Apprenticeship Vacancies
+permalink: /jobs/apprenticeship-vacancies/
 ---
 
-{# banner #}
-<div class="bg-grey-50 h-full py-24">
-  <div class="hero relative bg-grey-100 w-full mx-auto">
-    <img src="../images/banner-1.png" alt="Apprenticeships hero image"
-      class="md:block hidden h-full w-full hero-desktop" />
-    <img src="../images/banner-2.png" alt="Apprenticeships hero image"
-      class="md:hidden block h-full w-full hero-mobile" />
-    <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center w-full h-full">
-        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">Find Your Dream
-            Apprenticeship</h1>
-        </div>
-        {# <div>
-          <div class="mt-4 flex rounded-md shadow-sm w-full justify-self-center align-self-center">
-            <div class="relative">
-              <input type="text" name="search" id="search" class="w-full rounded-l-lg pl-4 py-4 sm:text-sm"
-                placeholder="Search a keyword...">
-            </div>
-            <button type="button" id="searchBtnJobIndex"
-              class="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 rounded-r-lg">Search
-            </button>
-          </div>
-        </div> #}
-      </div>
-    </div>
-  </div>
 
 
-
-
-  {# main section ---- #}
-
-<main class="main inner flex flex-1 flex-col focus:outline-none vacancies" tabindex="-1">
-{# check the below div - no closing tag but stopping column display for main#}
     <div class="flex flex-wrap justify-center">
-    {# main left filter section ------#}
       <div class="w-full lg:w-1/5 h-full">
         <div class="flex justify-between items-center mt-6">
           <h5 class="text-lg mb-0">Filters</h5>
           <div class="resetIcon flex items-center">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
+            <img src="../../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
             <h5 class="text-xs mb-0">Reset Filters</h5>
           </div>
         </div>
 
-        {# this div is preventing display as column but does not have a closing tag???#}
         <div class="w-full filterOptions">
-        {#---------------------------------#}
         <div class="flex justify-center items-center text-sm">
-          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col filter-form mt-4">
+          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col mt-4">
 
-
-            {# <p class="font-bold text-xs">Type of employment</p>
             <div>
-              <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
-                class="transform scale-150">
-              <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
-            </div>  #}
-            {# main left section locations ----- #}
-
-
-          <div>
             <p class="font-bold">Location</p>
             <div>
               <input type="checkbox" class="location" name="location" value="Greater London"
@@ -166,75 +120,68 @@ slug: {{job.jobTitle}}
         </div>
         </div>
       </div>
-
-
-      {# main right filter section -----#}
       <div class="lg:w-4/5 w-full h-full lg:px-6">
         <div class="flex justify-between items-center mt-6">
           <h5 class="mb-0">Showing: <span class="showing"></span></h5>
           <div class="flex items-center">
-            {# <h5 class="text-xs mb-0">Sort By</h5>
-            <select name="sort-by" class="sort mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
-              <option value="A-Z">A-Z</option>
-              <option value="location">Location</option>
-            </select> #}
-            <img class="hidden lg:block w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img class="hidden lg:block listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
+            <img class="hidden lg:block w-8 gridView" src="../../images/apprenticeJobAd/grid_view_black_24dp.svg">
+            <img class="hidden lg:block listView" src="../../images/apprenticeJobAd/list_black_24dp.svg">
           </div>
         </div>
+        <div class="flex flex-col"></div>
+        {%if apprentice_jobs.length < 1 %}
+          <h2 class="text-center mt-20">Sorry, There are no live vacancies at the moment...</h2>
+          <p>But don't let that put you off applying for our Apprenticeship. We can aid your job search and train you in Essential job hunting skills to help you pursue a career in Tech.</p>
+          <div class="flex justify-around mt-8">
+            <a href="https://applysdl4.thecodersguild.org.uk/" class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 mr-8">Apply for our Software Development Apprenticeship</a>
+            <a href="https://applystl4.thecodersguild.org.uk/
 
 
-{# apprentceship vancancy job card ----- #}
-<div class="flex flex-col">
-<h2 class="text-center hidden no-results my-20">Sorry, No Vacancies Match Your Search</h2>
-{% for job in apprenticeJobAds %}
 
-  <div class="main-container singleAd {{ job.jobTitle | join }} {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
-    <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
-      <div class="top-row flex flex-row justify-between mb-6">
-        <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
-
-        <div class="flex flex-col align-start justify-self-start w-full">
-          <div class="flex justify-between w-full">
-            <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-            <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+            " class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 ml-8">Apply for our Software Testing Apprenticeship</a>
           </div>
-          <h5 class="p-0 my-2">{{job.employerName}}</h5>
-          <h5 class="text-sm">{{job.standard}}</h5>
+        {% else %}
+          {% for job in apprentice_jobs %}
+              <div class="main-container singleAd {{ job.jobTitle | join }} {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+                <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
+                  <div class="top-row flex flex-row justify-between mb-6">
+                    <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
-          <div class="flex flex-row flex-wrap items-center">
-            <div class="flex items-center mr- my-2 sm:my-0">
-              <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
-            </div>
-            <div class="flex items-center mr-4 my-2 sm:my-0">
-              <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-              <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
-            </div>
-          </div>
+                    <div class="flex flex-col align-start justify-self-start w-full">
+                      <div class="flex justify-between w-full">
+                        <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
+                        <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+                      </div>
+                      <h5 class="p-0 my-2">{{job.employerName}}</h5>
+                      <h5 class="text-sm">{{job.standard}}</h5>
+
+                      <div class="flex flex-row flex-wrap items-center">
+                        <div class="flex items-center mr- my-2 sm:my-0">
+                          <img src="../../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+                        </div>
+                        <div class="flex items-center mr-4 my-2 sm:my-0">
+                          <img src="../../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+                          <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="job-description my-2">
+                    <p class="text-sm">{{job.excerpt | safe}}</p>
+                  </div>
+                  <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
+                    <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
+                    <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+          {% endfor %}
+        {% endif %}
         </div>
-      </div>
-
-
-      <div class="job-description my-2">
-        <p class="text-sm">{{job.excerpt | safe}}</p>
-      </div>
-
-      <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
-        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
-      </div>
-
-    </div>
-  </div>
-
-{% endfor %}
-</div>
 
       </div>
     </div>
-  </main>
-
 
 <script>
 const filterOptions = document.querySelector('.filterOptions')
@@ -244,7 +191,6 @@ const sortSelect = document.querySelector('.sort')
 const gridIcon = document.querySelector('.gridView')
 const listIcon = document.querySelector('.listView')
 const noresults = document.querySelector('.no-results')
-//const url = `https://${process.env.PROJECTID}.api.sanity.io/v${process.env.API_VERSION}/<path>`
 let locationArray = [];
 let standardArray = [];
 let disabilityArray = [];
@@ -326,24 +272,6 @@ filterOptions.addEventListener('change', e => {
 })
 
 resetIcon.addEventListener('click', reset);
-
-/* searchBar.addEventListener('keyup', e => {
-const searchString = e.target.value
-const jobs = document.querySelectorAll('.singleAd.flex');
-
-  jobs.forEach(job => {
-    if(!job.classList.includes(searchString)){
-      job.classList.add('hidden')
-      job.classList.remove('flex')
-    } else {
-      job.classList.add('flex')
-      job.classList.remove('hidden')
-    }
-  })
-
-  displayNumVacancies()
-
-}) */
 
 function toggleGrid(){
   const jobs = document.querySelectorAll('.singleAd.flex')

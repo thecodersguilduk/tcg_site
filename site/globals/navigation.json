@@ -31,12 +31,22 @@
         ]
       },
       {
-          "label": "about",
+          "label": "about us",
           "url": "/about"
       },
       {
-        "label": "Blog",
-        "url": "/blog"
+        "label": "Jobs",
+        "url": "",
+        "submenu":[
+          {
+            "label": "Work With Us",
+            "url": "/jobs/"
+          },
+          {
+            "label": "Apprenticeship Vacancies",
+            "url": "/jobs/apprenticeship-vacancies/"
+          }
+        ]
       },
       {
         "label": "contact us",
