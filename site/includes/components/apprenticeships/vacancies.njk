@@ -1,52 +1,54 @@
+ {% if apprentice_jobs.length > 0 %}
 <section class="inner">
     <div class="relative max-w-7xl mx-auto py-24">
-    <h2 class="text-white text-center my-6">Our Current Apprenticeship Vacancies</h2>
-        <div class="flex flex-wrap">
-        {% for job in apprentice-jobs %}
+        <h2 class="text-white text-center my-6">Our Current Apprenticeship Vacancies</h2>
+            <div class="flex flex-wrap">
+            {% for job in apprentice_jobs %}
 
-        <div class="main-container singleAd flex flex-col w-full px-4">
-            <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl h-full">
+            <div class="main-container singleAd flex flex-col w-full px-4">
+                <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl h-full">
 
-            <div class="top-row flex flex-row justify-between mb-6">
-                <div class="hidden md:block w-36 h-36 mb-4 mr-4" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+                <div class="top-row flex flex-row justify-between mb-6">
+                    <div class="hidden md:block w-36 h-36 mb-4 mr-4" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
-                <div class="flex flex-col align-start justify-self-start w-full">
-                <div class="flex justify-between w-full">
-                    <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-                    <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
-                </div>
-                <h5 class="p-0 my-2">{{job.employerName}}</h5>
-                <h5 class="text-sm">{{job.standard}}</h5>
-
-                <div class="flex flex-row flex-wrap items-center items-end">
-                    <div class="flex items-center my-2 sm:my-0">
-                    <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+                    <div class="flex flex-col align-start justify-self-start w-full">
+                    <div class="flex justify-between w-full">
+                        <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
+                        <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
                     </div>
-                    <div class="flex items-center mr-4 my-2 sm:my-0">
-                    <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-                    <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+                    <h5 class="p-0 my-2">{{job.employerName}}</h5>
+                    <h5 class="text-sm">{{job.standard}}</h5>
+
+                    <div class="flex flex-row flex-wrap items-center items-end">
+                        <div class="flex items-center my-2 sm:my-0">
+                        <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+                        </div>
+                        <div class="flex items-center mr-4 my-2 sm:my-0">
+                        <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+                        <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+                        </div>
+                    </div>
                     </div>
                 </div>
+
+
+                <div class="job-description my-2">
+                    <p class="text-sm">{{job.excerpt | safe}}</p>
+                </div>
+
+                <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
+                    <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
+                    <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+                </div>
+
                 </div>
             </div>
 
-
-            <div class="job-description my-2">
-                <p class="text-sm">{{job.excerpt | safe}}</p>
+            {% endfor %}
             </div>
-
-            <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-                <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
-                <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
-            </div>
-
+            <div class="mx-auto mt-10 flex justify-center">
+                <a href="../apprenticeship-vacancies/" class="mx-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" style="color:#2574a9;">See all Vacancies</a>
             </div>
         </div>
-
-        {% endfor %}
-        </div>
-        <div class="mx-auto mt-10 flex justify-center">
-            <a href="../apprenticeship-vacancies/" class="mx-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" style="color:#2574a9;">See all Vacancies</a>
-        </div>
-    </div>
 </section>
+{% endif %}

@@ -38,12 +38,7 @@ export default
       {
         name: 'location',
         title: 'Location',
-        type: 'array',
-        of: [
-          { type: 'reference',
-            to: [{ type: 'location'}]
-          }
-        ]
+        type: 'text',
       },
       {
         name: 'closingDate',

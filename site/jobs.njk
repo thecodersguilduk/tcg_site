@@ -8,148 +8,45 @@ title: Vacancies at The Coders Guild
 <main class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
 {# check the below div - no closing tag but stopping column display for main#}
     <div class="flex flex-wrap justify-center">
-    {# main left filter section ------#}
-      <div class="w-full lg:w-1/5 h-full">
-        <div class="flex justify-between items-center mt-6">
-          <h5 class="text-lg mb-0">Filters</h5>
-          <div class="resetIcon flex items-center">
-            <img src="../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
-            <h5 class="text-xs mb-0">Reset Filters</h5>
-          </div>
-        </div>
+      <div class="w-full h-full lg:px-6">
+        <div class="flex flex-col">
+        {% for job in vacancies %}
 
-        {# this div is preventing display as column but does not have a closing tag???#}
-        <div class="w-full filterOptions">
-        {#---------------------------------#}
-        <div class="flex justify-center items-center text-sm">
-          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col filter-form mt-4">
+          <div class="main-container singleAd flex flex-col">
+            <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
 
-
-            {# <p class="font-bold text-xs">Type of employment</p>
-            <div>
-              <input type="checkbox" class="employment-type" name="apprenticeship" value="apprenticeship"
-                class="transform scale-150">
-              <label for="apprenticeship" class="ml-1 text-xs"> Apprenticeship</label>
-            </div>  #}
-            {# main left section locations ----- #}
-
-
-          <div>
-            <p class="font-bold">Location</p>
-            <div>
-              <input type="checkbox" class="location" name="location" value="Greater London"
-                class="transform scale-150">
-              <label for="location" class="ml-1">Greater London</label>
-            </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="South East England"
-                class="transform scale-150">
-              <label for="location" class="ml-1"> South East England</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="South West England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">South West England</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="West Midlands"
-                class="transform scale-150">
-              <label for="location" class="ml-1">West Midlands</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="East Midlands"
-                class="transform scale-150">
-              <label for="location" class="ml-1">East Midlands</label>
+              <div class="top-row flex flex-row justify-between mb-6">
+                <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{%if job.employerLogo %}{{job.employerLogo}}{%else%}{{site.images.logo}}{%endif%}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6">
+                </div>
+                <div class="flex flex-col align-start justify-self-start w-full">
+                  <div class="flex flex-wrap justify-between w-full">
+                    <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
+                    <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+                  </div>
+                  <div class="flex flex-row flex-wrap items-center mt-2">
+                    <div class="flex items-center my-2 sm:my-0">
+                      <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+                    </div>
+                    <div class="flex items-center mr-4 my-2 sm:my-0">
+                      <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+                      <span class="text-sm">{{job.closingDate}}</span>
+                    </div>
+                  </div>
+                  <div class="mt-2 ml-2">
+                    <p class="text-sm">{{job.briefOverview}}</p>
+                  </div>
+                </div>
               </div>
-              <div>
-              <input type="checkbox" class="location" name="location" value="North West England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">North West England</label>
+              <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
+                <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="/jobs/{{ job.slug.current }}/index.html" style="color:white;">Apply Now</a>
+                <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="{{job.pdf}}" target="_blank" style="color:#2574a9;">Find Out More</a>
               </div>
-               <div>
-                <input type="checkbox" class="location" name="location" value="North East England"
-                  class="transform scale-150">
-                <label for="location" class="ml-1">North East England</label>
-              </div>
-               <div>
-              <input type="checkbox" class="location" name="location" value="East of England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">East of England</label>
-              </div>
-                <div>
-              <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
-                class="transform scale-150">
-              <label for="location" class="ml-1">Yorkshire and the Humber</label>
+
             </div>
           </div>
-          </div>
+
+        {% endfor %}
         </div>
-        </div>
-      </div>
-
-
-      {# main right filter section -----#}
-      <div class="lg:w-4/5 w-full h-full lg:px-6">
-        <div class="flex justify-between items-center mt-6">
-          <h5 class="mb-0">Showing: <span class="showing"></span></h5>
-          <div class="flex items-center">
-            {# <h5 class="text-xs mb-0">Sort By</h5>
-            <select name="sort-by" class="sort mx-2 w-full h-8 md:w-48 rounded-lg border-2 border-blue-300 text-xs">
-              <option value="A-Z">A-Z</option>
-              <option value="location">Location</option>
-            </select> #}
-            <img class="hidden lg:block w-8 gridView" src="../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img class="hidden lg:block listView" src="../images/apprenticeJobAd/list_black_24dp.svg">
-          </div>
-        </div>
-
-
-{# apprentceship vancancy job card ----- #}
-<div class="flex flex-col">
-{% for job in vacancies %}
-
-  <div class="main-container singleAd {{ job.jobTitle | join }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
-    <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
-
-      <div class="top-row flex flex-row justify-between mb-6">
-        <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{%if job.employerLogo %}{{job.employerLogo}}{%else%}{{site.images.logo}}{%endif%}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
-
-        <div class="flex flex-col align-start justify-self-start w-full">
-          <div class="flex justify-between w-full">
-            <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-            <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
-          </div>
-          <h5 class="p-0 my-2">{{job.employerName}}</h5>
-          <h5 class="text-sm">{{job.standard}}</h5>
-
-          <div class="flex flex-row flex-wrap items-center">
-            <div class="flex items-center mr- my-2 sm:my-0">
-              <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
-            </div>
-            <div class="flex items-center mr-4 my-2 sm:my-0">
-              <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-              <span class="text-sm">{{job.closingDate}}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="job-description my-2">
-        <p class="text-sm">{{job.excerpt}}</p>
-      </div>
-
-      <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-        <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="/jobs/{{ job.slug.current }}/index.html" style="color:white;">Apply Now</a>
-        <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="{{job.pdf}}" target="_blank" style="color:#2574a9;">Find Out More</a>
-      </div>
-
-    </div>
-  </div>
-
-{% endfor %}
-</div>
-
       </div>
     </div>
   </main>
