@@ -49,6 +49,10 @@
         ]
       },
       {
+        "label": "blog",
+        "url": "/blog"
+      },
+      {
         "label": "contact us",
         "url": "/contact-us"
       }
