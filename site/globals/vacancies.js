@@ -25,12 +25,6 @@ module.exports = async function () {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
-    // Converts Portable Text to HTML
-    // data.body = blocksToHtml({
-    //     blocks: data.blogPortableText,
-    //     serializers: serializers
-    // })
-    data.location = data.location.map(location => location.name)
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
 
     return data
