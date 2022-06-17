@@ -18,8 +18,6 @@ const displayModal = function displayModal() {
 
     if ( !dataAttr ) { return; }
 
-    if( dataAttr = 'expression-of-interest') { return }
-
     modal = document.querySelector(`#${dataAttr}`);
 
     if ( !modal ) { return; }

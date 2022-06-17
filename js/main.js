@@ -782,18 +782,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var expressionInterest = function expressionInterest() {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) {
-    return;
-  }
-
-  var timer = 6000;
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return;
+  var timer = 12000;
   var x = setTimeout(function () {
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add('modal--active');
   }, timer);
-  var closeBtn = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.querySelector('.modal-close');
-  closeBtn.addEventListener('click', function () {
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.remove('modal--active');
-  });
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (expressionInterest);
@@ -1152,10 +1145,6 @@ var displayModal = function displayModal() {
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
 
     if (!dataAttr) {
-      return;
-    }
-
-    if (dataAttr = 'expression-of-interest') {
       return;
     }
 
