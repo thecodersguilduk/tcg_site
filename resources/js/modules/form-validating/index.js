@@ -26,7 +26,13 @@ const validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       console.log(invalidInputs.length);
-      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+
+      if($$.submitBtn){
+        $$.submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
+
     })
      // Attach keyup event to a contact form
     $$.contactForm.addEventListener('keyup', function(e) {
@@ -95,7 +101,11 @@ const validateForm = function validateForm() {
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       // If there are no invalid input fields - make button available, else - disable it
 
-      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      if($$.submitBtn){
+        $$.submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
 
     })
 
@@ -154,7 +164,11 @@ const validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       console.log(invalidInputs.length);
-      $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      if($$.submitBtn){
+        $$.submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        $$.applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
     })
   } else {
     return;

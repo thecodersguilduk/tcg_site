@@ -58,15 +58,6 @@ module.exports = eleventyConfig => {
   // Add a HTML timestamp formatter filter to Nunjucks
   eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
-  //add function to split an array into joined strings
-  // eleventyConfig.addFilter('explode', function(arr){
-  //     function join(string){
-  //         return string.replace(/\s+/g, '-').toLowerCase();
-  //     }
-
-  //     return join(arr.values().value);
-  // })
-
   //add capitalize functtion to nunjucks
   eleventyConfig.addFilter('capitalize', function (string) {
     const wordsArray = string.split(" ");

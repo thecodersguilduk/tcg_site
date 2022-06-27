@@ -138,7 +138,7 @@ permalink: /jobs/apprenticeship-vacancies/
           </div>
         {% else %}
           {% for job in apprentice_jobs %}
-              <div class="main-container singleAd {{ job.jobTitle | join }} {{ job.standard | join}} {{ job.disabilityConfident }} {%for location in job.location %}{{location | join}}{% endfor %} flex flex-col">
+              <div class="main-container singleAd  flex flex-col">
                 <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
                   <div class="top-row flex flex-row justify-between mb-6">
                     <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>

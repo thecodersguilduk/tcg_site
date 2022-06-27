@@ -861,7 +861,12 @@ var validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       console.log(invalidInputs.length);
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+
+      if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
     }); // Attach keyup event to a contact form
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
@@ -913,7 +918,11 @@ var validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
 
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
     }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
 
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('focusout', function (e) {
@@ -960,7 +969,12 @@ var validateForm = function validateForm() {
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       console.log(invalidInputs.length);
-      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+
+      if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+      } else {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
+      }
     });
   } else {
     return;
