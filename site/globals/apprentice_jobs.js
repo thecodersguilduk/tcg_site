@@ -127,7 +127,7 @@ function prepPost(data) {
 
     })
   }
-
+  console.log(data);
   return data
 }
 
