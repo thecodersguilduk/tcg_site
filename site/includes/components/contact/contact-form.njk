@@ -2,10 +2,12 @@
               <div>
                 <h2 class="leading-3xl text-2xl">Send us a message</h2>
               </div>
-              <form method="POST" action="https://formspree.io/f/mknqeplz" id="contact-form" class="relative">
+              <form method="POST" action="thanks-contact" name="main-contact" netlify netlify-honeypot="mission_control" id="contact-form" class="relative"><!-- The honeypot field must be named obscurely enough for bots not to figure it out, but also so that it's not accidently filled out by the users autocomplete. I'm not sure why I chose this name! -->
                 <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                 <div>
                   <div class="mb-4">
+                  <label for="mission_control" class="sr-only">Don't fill this out if you're human</label>
+                  <input name="mission_control" />
                     <label for="options" class="sr-only">Options</label>
                     <div class="relative">
                       <select id="options" name="options" type="select" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" placeholder="What does your enquiry relate to?" maxlength="50">
@@ -56,7 +58,7 @@
               </form>
             </div>
 
-            <script>
+            {# <script>
               const form = document.getElementById('contact-form');
 
               form.addEventListener('change', function(e){
@@ -83,4 +85,4 @@
                 }
               })
 
-            </script>
+            </script> #}
