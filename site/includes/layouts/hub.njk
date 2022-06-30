@@ -13,7 +13,7 @@ body_class: apprenticeship-employer
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} Digital Skills Hub</h1>
                                     <p class="font-bold text-lightblue-500 mb-4"><span>Businesses and {% if location === 'Greater Manchester' %}employees{% else %} people {% endif %} in {{location}}! {% if location === 'Greater Manchester'%}Gain qualifications with our free coding and
-                                    digital skills courses.{% else %} Apply for our funded Digital Skills Bootcamps{% if location === 'Hull and East Yorkshire' %} to learn new digital skills{% endif %}.{% endif %} Reserve your spot now — space is limited!
+                                    digital skills courses.{% else %} Apply for our funded Digital Skills Bootcamp.{% endif %} Reserve your spot now — space is limited!
                                     </p>
                                     <p>Our {% if location === 'Greater Manchester' %}free coding courses in {{ location }}{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will:</p>
                                         <ul class="decorated-ul my-4">
@@ -28,11 +28,7 @@ body_class: apprenticeship-employer
                                             <li class="mb-0">Help the unemployed to get a job in tech</li>
                                         {% endif %}
                                         </ul>
-                                    {% if location === 'Greater Manchester'%}
-                                        <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
-                                    {% else %}
-                                        <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> Register your Interest</a>
-                                    {% endif %}
+                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex flex-col items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
                                     {% if location === 'Greater Manchester' %}
@@ -95,17 +91,10 @@ body_class: apprenticeship-employer
                 <div class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
-                            <h2 class="text-center text-white mb-6">{% if location === 'Greater Manchester' %}Upskill/Reskill yourself and
-                            your teams with these 100% funded courses {% else %} Register your Interest {% endif %} </h2>
-                            {% if location !== 'Greater Manchester'%}
-                                <div class="my-6">
-                                    <p class="text-white text-center">Our {{location}} courses launch in September 2022.</p>
-                                    <p class="text-white text-center">Please fill out the form below to register you interest for our funded digital skills courses in North Yorkshire:
-                                    </p>
-                                </div>
-                            {% endif %}
+                            <h2 class="text-center text-white mb-6">Upskill/Reskill yourself and
+                            your teams with these 100% funded courses </h2>
                         </div>
-                        {% if location === "Greater Manchester"%}
+
                         <div id="courses" class="courses flex flex-wrap">
                             {% for course in courses %}
                             {% if course.courseType !== 'Apprenticeship' %}
@@ -136,11 +125,7 @@ body_class: apprenticeship-employer
                             {% endif %}
                             {% endfor %}
                         </div>
-                        {% else %}
-                            <div id="courses" class="w-full md:w-5/12 mx-auto">
-                               {% include '../components/contact/expression-of-interest-form.njk' %}
-                            </div>
-                        {% endif %}
+
                         <div class="cta bg-white rounded lg:p-4 py-8 px-6 flex lg:flex-row flex-col get-in-touch items-center shadow-primary">
                             <div class="logo flex items-center mx-auto w-1/12">
                                 <img class="w-full" src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Logo">
