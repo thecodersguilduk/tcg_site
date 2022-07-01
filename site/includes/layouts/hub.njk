@@ -92,14 +92,15 @@ body_class: apprenticeship-employer
                         </div>
                     </div>
                 </div>
-                <div class="section-rounded py-24">
+                <div id="courses"
+                class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
                             <h2 class="text-center text-white mb-6">Upskill/Reskill yourself and
                             your teams with these 100% funded courses </h2>
                         </div>
 
-                        <div id="courses" class="courses flex flex-wrap">
+                        <div class="courses flex flex-wrap">
                             {% for course in courses %}
                             {% if course.courseType !== 'Apprenticeship' %}
                             {% for item in course.tags %}
