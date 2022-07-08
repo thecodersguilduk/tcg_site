@@ -17,7 +17,7 @@ const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     "avatar": authors[]->image.asset,
     categories[]->{name},
     blogPortableText,
-} | order(_createdAt desc)`
+} | order(publishedAt desc)`
 
 module.exports = async function () {
   // Fetches data
