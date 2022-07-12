@@ -20,7 +20,7 @@ body_class: apprenticeship-employer
             {% if course.tags %}
 
             <div class="py-8">
-              <img src="../../../images/LocalAuthLogos/gmcafunders.png" alt="Kindly funding these courses are the European Social Fund and SKills for Growth">
+              <img src="../../../images/LocalAuthLogos/course-funders.jpg" alt="100% funded Digital Skills courses - funded by the Department for Education, Skills for Growth and the European Union Social Fund">
             </div>
             {% endif %}
             <p><strong>Course start date: {{ course.start | dateDisplay }}</strong></p>
@@ -35,11 +35,9 @@ body_class: apprenticeship-employer
     </div>
 
 
-    {% if course.testimonials.length %}
     <div class="my-12">
         {% include '../components/course-directory/course-testimonial.njk' %}
     </div>
-    {% endif %}
 
     <div class="post content md:px-20 max-w-3xl mx-auto inner">
         {% if course.additionalText %}

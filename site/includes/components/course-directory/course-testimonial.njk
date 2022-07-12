@@ -1,29 +1,46 @@
-{% if testimonials %}
+
   <section class="relative md:pt-16 pt-14 testimonials overflow-hidden bg-grey-100">
     <div class="inner relative z-10">
       <div class="max-w-3xl mx-auto md:px-16">
         <h2 class="text-center mb-8 md:mb-14">What learners say about this course</h2>
 
         <div class="testimonials__slider">
-          {% for testimonial in testimonials %}
-            {% for tag in testimonial.tag%}
-              {% if tag === course.title %}
-                <div class="p-4">
-                <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
-                  <div class="sm:flex sm:items-center">
-                    <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
-                    <div class="relative testimonials__quote">
-                      <h3 class="mb-2px">{{ testimonial.author }}</h3>
-                      <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                      <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+          {% if course.testimonials.length > 0 %}
+              {% for testimonial in course.testimonials %}
+                  <div class="p-4">
+                  <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                    <div class="sm:flex sm:items-center">
+                      <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                      <div class="relative testimonials__quote">
+                        <h3 class="mb-2px">{{ testimonial.author }}</h3>
+                        <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                        <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
-              </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
+              {% endfor %}
+            {% else %}
+              {% for testimonial in testimonials %}
+                {% if testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
+                <div class="p-4">
+                  <div class="shadow-secondary bg-white sm:p-10 pt-12 px-8 pb-8">
+                    <div class="sm:flex sm:items-center">
+                      <div class="testimonials__author block sm:mr-14 sm:mb-0 mb-6" style="background-image: url('{{ testimonial.avatar }}');"></div>
+                      <div class="relative testimonials__quote">
+                        <h3 class="mb-2px">{{ testimonial.client }}</h3>
+                        <span class="text-md leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                        <p class="text-sm leading-lg">{{ testimonial.testimonial }}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                {% endif %}
+              {%endfor %}
+          {% endif %}
+
         </div>
         <div class="flex justify-center items-center mt-8">
           <button type="button" class="prev mr-6">
@@ -45,8 +62,7 @@
             <img class="h-10 w-10 block" alt="" src="../../images/logo/TGC_Square_Logo_White.svg"/>
           </div>
           <div class="cta__text">
-            <p class="text-lg leading-xl text-white font-bold">If you live or work in Greater Manchester, it is very likely you are eligible for 100% funding
-              through the GMCA Skills for growth programme.</p>
+            <p class="text-lg leading-xl text-white font-bold">If you live or work in Greater Manchester or Yorkshire & Humber, it is very likely you are eligible for 100% funding..</p>
           </div>
           <div class="lg:ml-auto">
             <a href="" data-modal="expression-of-interest" class="expression-of-interest-c text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">Find out if you Qualify<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
@@ -59,4 +75,3 @@
       <object type="image/svg+xml" data="../images/patterns/12.svg" class="hidden md:block absolute pattern pattern-12"></object>
     </div>
   </section>
-{% endif %}

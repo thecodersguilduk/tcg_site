@@ -15,9 +15,11 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     partner[]->{code},
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
+      _id,
       client,
       occupation,
-      testimonial
+      testimonial,
+      avatar
    }
 
 } | order(start asc)`
@@ -79,7 +81,12 @@ function prepPost(data) {
     data.project = data.project[0].code
   }
 
-  data.testimonials = data.testimonials
+  if(data.testimonials){
+    data.testimonials.forEach(testimonial => {
+      testimonial.avatar = urlFor(testimonial.avatar).url();
+    })
+    //data.testimonials.avatar = urlFor(data.testimonials.avatar).url();
+  }
 
   return data
 }
