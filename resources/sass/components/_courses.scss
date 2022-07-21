@@ -1,3 +1,50 @@
+#course {
+    .pattern {
+        z-index: -1;
+    }
+
+    #content {
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            a {
+                @apply text-blue-200 no-underline transition-all duration-300 font-bold ease-out;
+            }
+
+
+            ul li {
+                padding: 15px 0 5px 0;
+                border-top: 1px solid #e7e7e7;
+                font-weight: 400 !important;
+            }
+
+            ul li:last-child {
+                border-bottom: 1px solid #e7e7e7;
+            }
+
+            #course_breakdown {
+                ol li {
+                    padding: 15px;
+                    background: #fff;
+                    list-style: decimal-leading-zero inside;
+                    border-radius: 4px;
+                    color: #707070;
+                    border: 1px solid #a6a6a6;
+                }
+
+                ol li::marker {
+                    font-size: unset;
+                }
+            }
+
+        }
+
+    }
+
+}
+
 .courses {
     .content {
         p {

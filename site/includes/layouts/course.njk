@@ -5,41 +5,76 @@ meta_title: {{ title }}
 meta_description: {{ excerpt }}
 body_class: apprenticeship-employer
 ---
-{% include '../components/modals/expression-of-interest.njk' %}
-<main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-  <article id="container-centre" class="column centre flex-1 mb-10 sm:mb-20 pt-20 rounded">
-    <div class="mx-auto mb-10 sm:mb-8 rounded">
-        {% if featured_image %}
-            <figure class="rounded">
-                <img data-lazy="{{ featured_image }}" alt="{{ featured_image_alt }}" class="rounded max-h-96 h-40 sm:h-56 md:h-auto object-cover">
-            </figure>
-        {% endif %}
-        <div class="md:px-20 relative pt-12 sm:pt-10 max-w-3xl mx-auto inner">
-          <header>
-            <h1 class="text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl">{{ course.title }}</h1>
-            {% if course.tags %}
-
-            <div class="py-8">
-              <img src="../../../images/LocalAuthLogos/course-funders.jpg" alt="100% funded Digital Skills courses - funded by the Department for Education, Skills for Growth and the European Union Social Fund">
-            </div>
-            {% endif %}
-            <p><strong>Course start date: {{ course.start | dateDisplay }}</strong></p>
-          </header>
-        </div>
+{# {% include '../components/modals/expression-of-interest.njk' %} #}
+<main id="course" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+<section id="cta-header"class="fixed top-0 bg-white flex space-between mx-auto w-full z-10 shadow py-4">
+  <div class="flex inner justify-between items-center">
+    <div class="flex items-center">
+      <div class="logo mr-8">
+        <img class="block h-10 md:h-10 w-auto" src="../../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" alt="The Coders Guild Logo">
+      </div>
+      <div class="title">
+        <p class="text-blue-200 text-xl font-bold">{{ course.title }}</p>
+      </div>
     </div>
-    <div class="post content md:px-20 max-w-3xl mx-auto inner">
-
-        {% if course.body %}
-          {{ course.body | safe }}
-        {% endif %}
+    <div>
+      <a href="#contact" class="px-4 py-2 bg-blue-200"><span class="text-white font-bold rounded">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
     </div>
-
-
-    <div class="my-12">
-        {% include '../components/course-directory/course-testimonial.njk' %}
+  </div>
+</section>
+<section id="hero">
+  <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 bg-gradient-to-r from-orange-100 to-red-100 min-h-screen" style="clip-path: polygon(0% 0%, 100% 0%, 100% 79%, 94% 100%, 6% 100%, 0% 79%);">
+    <div class="flex container">
+      <div class="md:w-6/12">
+        <header class="md:w-8/12">
+          <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
+          <p class="mb-2">{{ course.attendance }}</p>
+          <p class="bg-green-100 py-2 px-4 text-black inline-block rounded">Next Course Starts: <strong> {{ course.start | dateDisplay }}</strong></p>
+          <a href="#contact" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 max-w-3/12">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+          <a href="" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
+        </header>
+      </div>
+      <div class="md:w-6/12">
+        <img src="../../images/blog/course-hero-image.jpg" class="rounded" alt="{{course.title}}" />
+      </div>
     </div>
+  <!-- TO DO - add logos components -->
+  </div>
+</section>
+<section id="pitch">
+  <div class="post content md:px-20 mx-auto container mt-12">
+    {% include '../components/courses/pitch.njk' %}
+    {% include '../components/courses/banner-cta.njk' %}
+    {% include '../components/courses/video.njk' %}
+  </div>
+</section>
+<section id="content">
+  {% include '../components/courses/content.njk' %}
+</section>
+<section id="trainers">
+</section>
+<section id="testimonials">
+  <div class="my-12">
+      {% include '../components/courses/course-testimonial.njk' %}
+  </div>
+</section>
+<section id="footer-cta">
+</section>
+<section id="contact">
+</section>
 
-    <div class="post content md:px-20 max-w-3xl mx-auto inner">
+
+
+      {# {% if course.body %}
+        {{ course.body | safe }}
+      {% endif %} #}
+
+  </div>
+
+
+
+
+    {# <div class="post content md:px-20 max-w-3xl mx-auto inner">
         {% if course.additionalText %}
           {{ course.additionalText | safe}}
         {% endif %}
@@ -68,8 +103,8 @@ body_class: apprenticeship-employer
               <p class="text-center">Develop new tech skills or brush-up on existing skills to increase your productivity.  You and your teams will feel empowered, engaged and educated.</p>
           </div>
         </div>
-    </div>
-    <div class="py-12 text-center inner">
+    </div> #}
+    {# <div class="py-12 text-center inner">
       <h2>What's the next Step?</h2>
       <p><a href="https://calendly.com/sarah-1661/course-info">Book a call with us today</a> and speak to a member of our team about how you can <strong>progress your tech career.</strong></p>
       <h3 class="mt-4">100% Funded Courses Available!*</h3>
@@ -83,12 +118,7 @@ body_class: apprenticeship-employer
     </div>
     <div class="inner mb-12">
       {% include '../components/course-directory/apply-cta.njk' %}
-    </div>
+    </div> #}
   </article>
-  <script>
-    const styledDiv = document.querySelector('.content > div');
-    styledDiv.classList.add('content');
 
-
-  </script>
 </main>

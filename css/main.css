@@ -2014,6 +2014,48 @@ input, textarea {
   opacity: 1;
 }
 
+#course .pattern {
+  z-index: -1;
+}
+
+#course #content p {
+  margin-bottom: 1rem;
+}
+
+#course #content .content a {
+  --text-opacity: 1;
+  color: #2574a9;
+  color: rgba(37, 116, 169, var(--text-opacity));
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 300ms;
+  font-weight: 700;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+#course #content .content ul li {
+  padding: 15px 0 5px 0;
+  border-top: 1px solid #e7e7e7;
+  font-weight: 400 !important;
+}
+
+#course #content .content ul li:last-child {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+#course #content .content #course_breakdown ol li {
+  padding: 15px;
+  background: #fff;
+  list-style: decimal-leading-zero inside;
+  border-radius: 4px;
+  color: #707070;
+  border: 1px solid #a6a6a6;
+}
+
+#course #content .content #course_breakdown ol li::marker {
+  font-size: unset;
+}
+
 .courses .content p {
   margin-bottom: 0;
   line-height: 1.5;
@@ -25082,6 +25124,10 @@ input, textarea {
 
 .z-0{
   z-index: 0;
+}
+
+.z-1{
+  z-index: 1;
 }
 
 .z-10{
@@ -54669,6 +54715,10 @@ fieldset a {
     z-index: 0;
   }
 
+  .xs\:z-1{
+    z-index: 1;
+  }
+
   .xs\:z-10{
     z-index: 10;
   }
@@ -83998,6 +84048,10 @@ fieldset a {
 
   .sm\:z-0{
     z-index: 0;
+  }
+
+  .sm\:z-1{
+    z-index: 1;
   }
 
   .sm\:z-10{
@@ -113331,6 +113385,10 @@ fieldset a {
     z-index: 0;
   }
 
+  .md\:z-1{
+    z-index: 1;
+  }
+
   .md\:z-10{
     z-index: 10;
   }
@@ -142662,6 +142720,10 @@ fieldset a {
     z-index: 0;
   }
 
+  .lg\:z-1{
+    z-index: 1;
+  }
+
   .lg\:z-10{
     z-index: 10;
   }
@@ -171991,6 +172053,10 @@ fieldset a {
 
   .xl\:z-0{
     z-index: 0;
+  }
+
+  .xl\:z-1{
+    z-index: 1;
   }
 
   .xl\:z-10{

@@ -2,7 +2,7 @@ const blocksToHtml = require('@sanity/block-content-to-html')
 const h = blocksToHtml.h
 const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
-const config = require('../globals/config');
+const config = require('../globals/courses-config');
 
 const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     ...,
