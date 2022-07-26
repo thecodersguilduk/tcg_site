@@ -16,6 +16,10 @@
 // TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
 @tailwind utilities;
 
+* {
+  border: 1px solid red;
+}
+
 //CSS Rules for blog ul and ol li styling
 .decorated-list,
 .content {

@@ -6,8 +6,8 @@ meta_description: {{ excerpt }}
 body_class: apprenticeship-employer
 ---
 {# {% include '../components/modals/expression-of-interest.njk' %} #}
-<main id="course" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-<section id="cta-header"class="fixed top-0 bg-white flex space-between mx-auto w-full z-10 shadow py-4">
+<main id="course" class="overflow-x-hidden main flex flex-1 flex-col focus:outline-none" tabindex="-1">
+{# <section id="cta-header"class="fixed top-0 bg-white flex space-between mx-auto z-10 shadow py-4">
   <div class="flex inner justify-between items-center">
     <div class="flex items-center">
       <div class="logo mr-8">
@@ -21,9 +21,9 @@ body_class: apprenticeship-employer
       <a href="#contact" class="px-4 py-2 bg-blue-200"><span class="text-white font-bold rounded">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
     </div>
   </div>
-</section>
-<section id="hero">
-  <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 bg-gradient-to-r from-orange-100 to-red-100 min-h-screen" style="clip-path: polygon(0% 0%, 100% 0%, 100% 79%, 94% 100%, 6% 100%, 0% 79%);">
+</section> #}
+<section id="hero relative">
+  <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 bg-gradient-to-r from-orange-100 to-red-100 min-h-screen rounded">
     <div class="flex container">
       <div class="md:w-6/12">
         <header class="md:w-8/12">
@@ -52,15 +52,19 @@ body_class: apprenticeship-employer
   {% include '../components/courses/content.njk' %}
 </section>
 <section id="trainers">
+  {% include '../components/courses/trainers.njk' %}
 </section>
-<section id="testimonials">
-  <div class="my-12">
-      {% include '../components/courses/course-testimonial.njk' %}
-  </div>
+<section id="testimonials" class="my-12">
+    {% include '../components/courses/course-testimonial.njk' %}
+</section>
+<section id="further-cta">
+    {% include '../components/courses/further-cta.njk' %}
 </section>
 <section id="footer-cta">
+  {% include '../components/courses/individuals-and-businesses.njk' %}
 </section>
 <section id="contact">
+  {% include '../components/courses/contact.njk' %}
 </section>
 
 

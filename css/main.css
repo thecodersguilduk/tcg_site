@@ -720,8 +720,8 @@ html {
 
 a {
   --text-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--text-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--text-opacity));
   text-decoration: none;
   transition-property: all;
   transition-duration: 300ms;
@@ -3813,8 +3813,8 @@ input, textarea {
 
 .divide-red-900 > :not(template) ~ :not(template){
   --divide-opacity: 1;
-  border-color: #742a2a;
-  border-color: rgba(116, 42, 42, var(--divide-opacity));
+  border-color: #BB4E69;
+  border-color: rgba(187, 78, 105, var(--divide-opacity));
 }
 
 .divide-orange-100 > :not(template) ~ :not(template){
@@ -4197,8 +4197,8 @@ input, textarea {
 
 .divide-purple-900 > :not(template) ~ :not(template){
   --divide-opacity: 1;
-  border-color: #21183c;
-  border-color: rgba(33, 24, 60, var(--divide-opacity));
+  border-color: #5350A5;
+  border-color: rgba(83, 80, 165, var(--divide-opacity));
 }
 
 .divide-pink-100 > :not(template) ~ :not(template){
@@ -4512,8 +4512,8 @@ input, textarea {
 
 .bg-red-900{
   --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
+  background-color: #BB4E69;
+  background-color: rgba(187, 78, 105, var(--bg-opacity));
 }
 
 .bg-orange-100{
@@ -4896,8 +4896,8 @@ input, textarea {
 
 .bg-purple-900{
   --bg-opacity: 1;
-  background-color: #21183c;
-  background-color: rgba(33, 24, 60, var(--bg-opacity));
+  background-color: #5350A5;
+  background-color: rgba(83, 80, 165, var(--bg-opacity));
 }
 
 .bg-pink-100{
@@ -5086,8 +5086,8 @@ input, textarea {
 
 .hover\:bg-red-900:hover{
   --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
+  background-color: #BB4E69;
+  background-color: rgba(187, 78, 105, var(--bg-opacity));
 }
 
 .hover\:bg-orange-100:hover{
@@ -5470,8 +5470,8 @@ input, textarea {
 
 .hover\:bg-purple-900:hover{
   --bg-opacity: 1;
-  background-color: #21183c;
-  background-color: rgba(33, 24, 60, var(--bg-opacity));
+  background-color: #5350A5;
+  background-color: rgba(83, 80, 165, var(--bg-opacity));
 }
 
 .hover\:bg-pink-100:hover{
@@ -5660,8 +5660,8 @@ input, textarea {
 
 .focus\:bg-red-900:focus{
   --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
+  background-color: #BB4E69;
+  background-color: rgba(187, 78, 105, var(--bg-opacity));
 }
 
 .focus\:bg-orange-100:focus{
@@ -6044,8 +6044,8 @@ input, textarea {
 
 .focus\:bg-purple-900:focus{
   --bg-opacity: 1;
-  background-color: #21183c;
-  background-color: rgba(33, 24, 60, var(--bg-opacity));
+  background-color: #5350A5;
+  background-color: rgba(83, 80, 165, var(--bg-opacity));
 }
 
 .focus\:bg-pink-100:focus{
@@ -6249,8 +6249,8 @@ input, textarea {
 }
 
 .from-red-900{
-  --gradient-from-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-from-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .from-orange-100{
@@ -6569,8 +6569,8 @@ input, textarea {
 }
 
 .from-purple-900{
-  --gradient-from-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-from-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .from-pink-100{
@@ -6729,8 +6729,8 @@ input, textarea {
 }
 
 .via-red-900{
-  --gradient-via-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-via-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .via-orange-100{
@@ -7049,8 +7049,8 @@ input, textarea {
 }
 
 .via-purple-900{
-  --gradient-via-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-via-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .via-pink-100{
@@ -7187,7 +7187,7 @@ input, textarea {
 }
 
 .to-red-900{
-  --gradient-to-color: #742a2a;
+  --gradient-to-color: #BB4E69;
 }
 
 .to-orange-100{
@@ -7443,7 +7443,7 @@ input, textarea {
 }
 
 .to-purple-900{
-  --gradient-to-color: #21183c;
+  --gradient-to-color: #5350A5;
 }
 
 .to-pink-100{
@@ -7593,8 +7593,8 @@ input, textarea {
 }
 
 .hover\:from-red-900:hover{
-  --gradient-from-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-from-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .hover\:from-orange-100:hover{
@@ -7913,8 +7913,8 @@ input, textarea {
 }
 
 .hover\:from-purple-900:hover{
-  --gradient-from-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-from-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .hover\:from-pink-100:hover{
@@ -8073,8 +8073,8 @@ input, textarea {
 }
 
 .hover\:via-red-900:hover{
-  --gradient-via-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-via-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .hover\:via-orange-100:hover{
@@ -8393,8 +8393,8 @@ input, textarea {
 }
 
 .hover\:via-purple-900:hover{
-  --gradient-via-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-via-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .hover\:via-pink-100:hover{
@@ -8531,7 +8531,7 @@ input, textarea {
 }
 
 .hover\:to-red-900:hover{
-  --gradient-to-color: #742a2a;
+  --gradient-to-color: #BB4E69;
 }
 
 .hover\:to-orange-100:hover{
@@ -8787,7 +8787,7 @@ input, textarea {
 }
 
 .hover\:to-purple-900:hover{
-  --gradient-to-color: #21183c;
+  --gradient-to-color: #5350A5;
 }
 
 .hover\:to-pink-100:hover{
@@ -8937,8 +8937,8 @@ input, textarea {
 }
 
 .focus\:from-red-900:focus{
-  --gradient-from-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-from-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .focus\:from-orange-100:focus{
@@ -9257,8 +9257,8 @@ input, textarea {
 }
 
 .focus\:from-purple-900:focus{
-  --gradient-from-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-from-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .focus\:from-pink-100:focus{
@@ -9417,8 +9417,8 @@ input, textarea {
 }
 
 .focus\:via-red-900:focus{
-  --gradient-via-color: #742a2a;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+  --gradient-via-color: #BB4E69;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
 }
 
 .focus\:via-orange-100:focus{
@@ -9737,8 +9737,8 @@ input, textarea {
 }
 
 .focus\:via-purple-900:focus{
-  --gradient-via-color: #21183c;
-  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+  --gradient-via-color: #5350A5;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
 }
 
 .focus\:via-pink-100:focus{
@@ -9875,7 +9875,7 @@ input, textarea {
 }
 
 .focus\:to-red-900:focus{
-  --gradient-to-color: #742a2a;
+  --gradient-to-color: #BB4E69;
 }
 
 .focus\:to-orange-100:focus{
@@ -10131,7 +10131,7 @@ input, textarea {
 }
 
 .focus\:to-purple-900:focus{
-  --gradient-to-color: #21183c;
+  --gradient-to-color: #5350A5;
 }
 
 .focus\:to-pink-100:focus{
@@ -10454,8 +10454,8 @@ input, textarea {
 
 .border-red-900{
   --border-opacity: 1;
-  border-color: #742a2a;
-  border-color: rgba(116, 42, 42, var(--border-opacity));
+  border-color: #BB4E69;
+  border-color: rgba(187, 78, 105, var(--border-opacity));
 }
 
 .border-orange-100{
@@ -10838,8 +10838,8 @@ input, textarea {
 
 .border-purple-900{
   --border-opacity: 1;
-  border-color: #21183c;
-  border-color: rgba(33, 24, 60, var(--border-opacity));
+  border-color: #5350A5;
+  border-color: rgba(83, 80, 165, var(--border-opacity));
 }
 
 .border-pink-100{
@@ -11028,8 +11028,8 @@ input, textarea {
 
 .hover\:border-red-900:hover{
   --border-opacity: 1;
-  border-color: #742a2a;
-  border-color: rgba(116, 42, 42, var(--border-opacity));
+  border-color: #BB4E69;
+  border-color: rgba(187, 78, 105, var(--border-opacity));
 }
 
 .hover\:border-orange-100:hover{
@@ -11412,8 +11412,8 @@ input, textarea {
 
 .hover\:border-purple-900:hover{
   --border-opacity: 1;
-  border-color: #21183c;
-  border-color: rgba(33, 24, 60, var(--border-opacity));
+  border-color: #5350A5;
+  border-color: rgba(83, 80, 165, var(--border-opacity));
 }
 
 .hover\:border-pink-100:hover{
@@ -11602,8 +11602,8 @@ input, textarea {
 
 .focus\:border-red-900:focus{
   --border-opacity: 1;
-  border-color: #742a2a;
-  border-color: rgba(116, 42, 42, var(--border-opacity));
+  border-color: #BB4E69;
+  border-color: rgba(187, 78, 105, var(--border-opacity));
 }
 
 .focus\:border-orange-100:focus{
@@ -11986,8 +11986,8 @@ input, textarea {
 
 .focus\:border-purple-900:focus{
   --border-opacity: 1;
-  border-color: #21183c;
-  border-color: rgba(33, 24, 60, var(--border-opacity));
+  border-color: #5350A5;
+  border-color: rgba(83, 80, 165, var(--border-opacity));
 }
 
 .focus\:border-pink-100:focus{
@@ -19808,14 +19808,14 @@ input, textarea {
 
 .placeholder-red-900::-moz-placeholder{
   --placeholder-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--placeholder-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--placeholder-opacity));
 }
 
 .placeholder-red-900::placeholder{
   --placeholder-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--placeholder-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--placeholder-opacity));
 }
 
 .placeholder-orange-100::-moz-placeholder{
@@ -20576,14 +20576,14 @@ input, textarea {
 
 .placeholder-purple-900::-moz-placeholder{
   --placeholder-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--placeholder-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--placeholder-opacity));
 }
 
 .placeholder-purple-900::placeholder{
   --placeholder-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--placeholder-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--placeholder-opacity));
 }
 
 .placeholder-pink-100::-moz-placeholder{
@@ -20956,14 +20956,14 @@ input, textarea {
 
 .focus\:placeholder-red-900:focus::-moz-placeholder{
   --placeholder-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--placeholder-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-red-900:focus::placeholder{
   --placeholder-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--placeholder-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -21724,14 +21724,14 @@ input, textarea {
 
 .focus\:placeholder-purple-900:focus::-moz-placeholder{
   --placeholder-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--placeholder-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-purple-900:focus::placeholder{
   --placeholder-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--placeholder-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--placeholder-opacity));
 }
 
 .focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -22386,8 +22386,8 @@ input, textarea {
 
 .text-red-900{
   --text-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--text-opacity));
 }
 
 .text-orange-100{
@@ -22770,8 +22770,8 @@ input, textarea {
 
 .text-purple-900{
   --text-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--text-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--text-opacity));
 }
 
 .text-pink-100{
@@ -22960,8 +22960,8 @@ input, textarea {
 
 .hover\:text-red-900:hover{
   --text-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--text-opacity));
 }
 
 .hover\:text-orange-100:hover{
@@ -23344,8 +23344,8 @@ input, textarea {
 
 .hover\:text-purple-900:hover{
   --text-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--text-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--text-opacity));
 }
 
 .hover\:text-pink-100:hover{
@@ -23534,8 +23534,8 @@ input, textarea {
 
 .focus\:text-red-900:focus{
   --text-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--text-opacity));
 }
 
 .focus\:text-orange-100:focus{
@@ -23918,8 +23918,8 @@ input, textarea {
 
 .focus\:text-purple-900:focus{
   --text-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--text-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--text-opacity));
 }
 
 .focus\:text-pink-100:focus{
@@ -24108,8 +24108,8 @@ input, textarea {
 
 .active\:text-red-900:active{
   --text-opacity: 1;
-  color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
+  color: #BB4E69;
+  color: rgba(187, 78, 105, var(--text-opacity));
 }
 
 .active\:text-orange-100:active{
@@ -24492,8 +24492,8 @@ input, textarea {
 
 .active\:text-purple-900:active{
   --text-opacity: 1;
-  color: #21183c;
-  color: rgba(33, 24, 60, var(--text-opacity));
+  color: #5350A5;
+  color: rgba(83, 80, 165, var(--text-opacity));
 }
 
 .active\:text-pink-100:active{
@@ -31434,6 +31434,10 @@ input, textarea {
           animation: bounce 1s infinite;
 }
 
+* {
+  border: 1px solid red;
+}
+
 .decorated-list ul li,
 .content ul li {
   list-style: none;
@@ -33402,8 +33406,8 @@ fieldset a {
 
   .xs\:divide-red-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--divide-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--divide-opacity));
   }
 
   .xs\:divide-orange-100 > :not(template) ~ :not(template){
@@ -33786,8 +33790,8 @@ fieldset a {
 
   .xs\:divide-purple-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--divide-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--divide-opacity));
   }
 
   .xs\:divide-pink-100 > :not(template) ~ :not(template){
@@ -34101,8 +34105,8 @@ fieldset a {
 
   .xs\:bg-red-900{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xs\:bg-orange-100{
@@ -34485,8 +34489,8 @@ fieldset a {
 
   .xs\:bg-purple-900{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xs\:bg-pink-100{
@@ -34675,8 +34679,8 @@ fieldset a {
 
   .xs\:hover\:bg-red-900:hover{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xs\:hover\:bg-orange-100:hover{
@@ -35059,8 +35063,8 @@ fieldset a {
 
   .xs\:hover\:bg-purple-900:hover{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xs\:hover\:bg-pink-100:hover{
@@ -35249,8 +35253,8 @@ fieldset a {
 
   .xs\:focus\:bg-red-900:focus{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xs\:focus\:bg-orange-100:focus{
@@ -35633,8 +35637,8 @@ fieldset a {
 
   .xs\:focus\:bg-purple-900:focus{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xs\:focus\:bg-pink-100:focus{
@@ -35838,8 +35842,8 @@ fieldset a {
   }
 
   .xs\:from-red-900{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:from-orange-100{
@@ -36158,8 +36162,8 @@ fieldset a {
   }
 
   .xs\:from-purple-900{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:from-pink-100{
@@ -36318,8 +36322,8 @@ fieldset a {
   }
 
   .xs\:via-red-900{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:via-orange-100{
@@ -36638,8 +36642,8 @@ fieldset a {
   }
 
   .xs\:via-purple-900{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:via-pink-100{
@@ -36776,7 +36780,7 @@ fieldset a {
   }
 
   .xs\:to-red-900{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xs\:to-orange-100{
@@ -37032,7 +37036,7 @@ fieldset a {
   }
 
   .xs\:to-purple-900{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xs\:to-pink-100{
@@ -37182,8 +37186,8 @@ fieldset a {
   }
 
   .xs\:hover\:from-red-900:hover{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:hover\:from-orange-100:hover{
@@ -37502,8 +37506,8 @@ fieldset a {
   }
 
   .xs\:hover\:from-purple-900:hover{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:hover\:from-pink-100:hover{
@@ -37662,8 +37666,8 @@ fieldset a {
   }
 
   .xs\:hover\:via-red-900:hover{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:hover\:via-orange-100:hover{
@@ -37982,8 +37986,8 @@ fieldset a {
   }
 
   .xs\:hover\:via-purple-900:hover{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:hover\:via-pink-100:hover{
@@ -38120,7 +38124,7 @@ fieldset a {
   }
 
   .xs\:hover\:to-red-900:hover{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xs\:hover\:to-orange-100:hover{
@@ -38376,7 +38380,7 @@ fieldset a {
   }
 
   .xs\:hover\:to-purple-900:hover{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xs\:hover\:to-pink-100:hover{
@@ -38526,8 +38530,8 @@ fieldset a {
   }
 
   .xs\:focus\:from-red-900:focus{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:focus\:from-orange-100:focus{
@@ -38846,8 +38850,8 @@ fieldset a {
   }
 
   .xs\:focus\:from-purple-900:focus{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:focus\:from-pink-100:focus{
@@ -39006,8 +39010,8 @@ fieldset a {
   }
 
   .xs\:focus\:via-red-900:focus{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xs\:focus\:via-orange-100:focus{
@@ -39326,8 +39330,8 @@ fieldset a {
   }
 
   .xs\:focus\:via-purple-900:focus{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xs\:focus\:via-pink-100:focus{
@@ -39464,7 +39468,7 @@ fieldset a {
   }
 
   .xs\:focus\:to-red-900:focus{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xs\:focus\:to-orange-100:focus{
@@ -39720,7 +39724,7 @@ fieldset a {
   }
 
   .xs\:focus\:to-purple-900:focus{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xs\:focus\:to-pink-100:focus{
@@ -40043,8 +40047,8 @@ fieldset a {
 
   .xs\:border-red-900{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xs\:border-orange-100{
@@ -40427,8 +40431,8 @@ fieldset a {
 
   .xs\:border-purple-900{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xs\:border-pink-100{
@@ -40617,8 +40621,8 @@ fieldset a {
 
   .xs\:hover\:border-red-900:hover{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xs\:hover\:border-orange-100:hover{
@@ -41001,8 +41005,8 @@ fieldset a {
 
   .xs\:hover\:border-purple-900:hover{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xs\:hover\:border-pink-100:hover{
@@ -41191,8 +41195,8 @@ fieldset a {
 
   .xs\:focus\:border-red-900:focus{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xs\:focus\:border-orange-100:focus{
@@ -41575,8 +41579,8 @@ fieldset a {
 
   .xs\:focus\:border-purple-900:focus{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xs\:focus\:border-pink-100:focus{
@@ -49397,14 +49401,14 @@ fieldset a {
 
   .xs\:placeholder-red-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xs\:placeholder-red-900::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xs\:placeholder-orange-100::-moz-placeholder{
@@ -50165,14 +50169,14 @@ fieldset a {
 
   .xs\:placeholder-purple-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xs\:placeholder-purple-900::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xs\:placeholder-pink-100::-moz-placeholder{
@@ -50545,14 +50549,14 @@ fieldset a {
 
   .xs\:focus\:placeholder-red-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xs\:focus\:placeholder-red-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xs\:focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -51313,14 +51317,14 @@ fieldset a {
 
   .xs\:focus\:placeholder-purple-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xs\:focus\:placeholder-purple-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xs\:focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -51975,8 +51979,8 @@ fieldset a {
 
   .xs\:text-red-900{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xs\:text-orange-100{
@@ -52359,8 +52363,8 @@ fieldset a {
 
   .xs\:text-purple-900{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xs\:text-pink-100{
@@ -52549,8 +52553,8 @@ fieldset a {
 
   .xs\:hover\:text-red-900:hover{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xs\:hover\:text-orange-100:hover{
@@ -52933,8 +52937,8 @@ fieldset a {
 
   .xs\:hover\:text-purple-900:hover{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xs\:hover\:text-pink-100:hover{
@@ -53123,8 +53127,8 @@ fieldset a {
 
   .xs\:focus\:text-red-900:focus{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xs\:focus\:text-orange-100:focus{
@@ -53507,8 +53511,8 @@ fieldset a {
 
   .xs\:focus\:text-purple-900:focus{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xs\:focus\:text-pink-100:focus{
@@ -53697,8 +53701,8 @@ fieldset a {
 
   .xs\:active\:text-red-900:active{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xs\:active\:text-orange-100:active{
@@ -54081,8 +54085,8 @@ fieldset a {
 
   .xs\:active\:text-purple-900:active{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xs\:active\:text-pink-100:active{
@@ -62737,8 +62741,8 @@ fieldset a {
 
   .sm\:divide-red-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--divide-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--divide-opacity));
   }
 
   .sm\:divide-orange-100 > :not(template) ~ :not(template){
@@ -63121,8 +63125,8 @@ fieldset a {
 
   .sm\:divide-purple-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--divide-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--divide-opacity));
   }
 
   .sm\:divide-pink-100 > :not(template) ~ :not(template){
@@ -63436,8 +63440,8 @@ fieldset a {
 
   .sm\:bg-red-900{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .sm\:bg-orange-100{
@@ -63820,8 +63824,8 @@ fieldset a {
 
   .sm\:bg-purple-900{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .sm\:bg-pink-100{
@@ -64010,8 +64014,8 @@ fieldset a {
 
   .sm\:hover\:bg-red-900:hover{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .sm\:hover\:bg-orange-100:hover{
@@ -64394,8 +64398,8 @@ fieldset a {
 
   .sm\:hover\:bg-purple-900:hover{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .sm\:hover\:bg-pink-100:hover{
@@ -64584,8 +64588,8 @@ fieldset a {
 
   .sm\:focus\:bg-red-900:focus{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .sm\:focus\:bg-orange-100:focus{
@@ -64968,8 +64972,8 @@ fieldset a {
 
   .sm\:focus\:bg-purple-900:focus{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .sm\:focus\:bg-pink-100:focus{
@@ -65173,8 +65177,8 @@ fieldset a {
   }
 
   .sm\:from-red-900{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:from-orange-100{
@@ -65493,8 +65497,8 @@ fieldset a {
   }
 
   .sm\:from-purple-900{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:from-pink-100{
@@ -65653,8 +65657,8 @@ fieldset a {
   }
 
   .sm\:via-red-900{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:via-orange-100{
@@ -65973,8 +65977,8 @@ fieldset a {
   }
 
   .sm\:via-purple-900{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:via-pink-100{
@@ -66111,7 +66115,7 @@ fieldset a {
   }
 
   .sm\:to-red-900{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .sm\:to-orange-100{
@@ -66367,7 +66371,7 @@ fieldset a {
   }
 
   .sm\:to-purple-900{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .sm\:to-pink-100{
@@ -66517,8 +66521,8 @@ fieldset a {
   }
 
   .sm\:hover\:from-red-900:hover{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:hover\:from-orange-100:hover{
@@ -66837,8 +66841,8 @@ fieldset a {
   }
 
   .sm\:hover\:from-purple-900:hover{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:hover\:from-pink-100:hover{
@@ -66997,8 +67001,8 @@ fieldset a {
   }
 
   .sm\:hover\:via-red-900:hover{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:hover\:via-orange-100:hover{
@@ -67317,8 +67321,8 @@ fieldset a {
   }
 
   .sm\:hover\:via-purple-900:hover{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:hover\:via-pink-100:hover{
@@ -67455,7 +67459,7 @@ fieldset a {
   }
 
   .sm\:hover\:to-red-900:hover{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .sm\:hover\:to-orange-100:hover{
@@ -67711,7 +67715,7 @@ fieldset a {
   }
 
   .sm\:hover\:to-purple-900:hover{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .sm\:hover\:to-pink-100:hover{
@@ -67861,8 +67865,8 @@ fieldset a {
   }
 
   .sm\:focus\:from-red-900:focus{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:focus\:from-orange-100:focus{
@@ -68181,8 +68185,8 @@ fieldset a {
   }
 
   .sm\:focus\:from-purple-900:focus{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:focus\:from-pink-100:focus{
@@ -68341,8 +68345,8 @@ fieldset a {
   }
 
   .sm\:focus\:via-red-900:focus{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .sm\:focus\:via-orange-100:focus{
@@ -68661,8 +68665,8 @@ fieldset a {
   }
 
   .sm\:focus\:via-purple-900:focus{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .sm\:focus\:via-pink-100:focus{
@@ -68799,7 +68803,7 @@ fieldset a {
   }
 
   .sm\:focus\:to-red-900:focus{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .sm\:focus\:to-orange-100:focus{
@@ -69055,7 +69059,7 @@ fieldset a {
   }
 
   .sm\:focus\:to-purple-900:focus{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .sm\:focus\:to-pink-100:focus{
@@ -69378,8 +69382,8 @@ fieldset a {
 
   .sm\:border-red-900{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .sm\:border-orange-100{
@@ -69762,8 +69766,8 @@ fieldset a {
 
   .sm\:border-purple-900{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .sm\:border-pink-100{
@@ -69952,8 +69956,8 @@ fieldset a {
 
   .sm\:hover\:border-red-900:hover{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .sm\:hover\:border-orange-100:hover{
@@ -70336,8 +70340,8 @@ fieldset a {
 
   .sm\:hover\:border-purple-900:hover{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .sm\:hover\:border-pink-100:hover{
@@ -70526,8 +70530,8 @@ fieldset a {
 
   .sm\:focus\:border-red-900:focus{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .sm\:focus\:border-orange-100:focus{
@@ -70910,8 +70914,8 @@ fieldset a {
 
   .sm\:focus\:border-purple-900:focus{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .sm\:focus\:border-pink-100:focus{
@@ -78732,14 +78736,14 @@ fieldset a {
 
   .sm\:placeholder-red-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-red-900::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-orange-100::-moz-placeholder{
@@ -79500,14 +79504,14 @@ fieldset a {
 
   .sm\:placeholder-purple-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-purple-900::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .sm\:placeholder-pink-100::-moz-placeholder{
@@ -79880,14 +79884,14 @@ fieldset a {
 
   .sm\:focus\:placeholder-red-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-red-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -80648,14 +80652,14 @@ fieldset a {
 
   .sm\:focus\:placeholder-purple-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-purple-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -81310,8 +81314,8 @@ fieldset a {
 
   .sm\:text-red-900{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .sm\:text-orange-100{
@@ -81694,8 +81698,8 @@ fieldset a {
 
   .sm\:text-purple-900{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .sm\:text-pink-100{
@@ -81884,8 +81888,8 @@ fieldset a {
 
   .sm\:hover\:text-red-900:hover{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .sm\:hover\:text-orange-100:hover{
@@ -82268,8 +82272,8 @@ fieldset a {
 
   .sm\:hover\:text-purple-900:hover{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .sm\:hover\:text-pink-100:hover{
@@ -82458,8 +82462,8 @@ fieldset a {
 
   .sm\:focus\:text-red-900:focus{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .sm\:focus\:text-orange-100:focus{
@@ -82842,8 +82846,8 @@ fieldset a {
 
   .sm\:focus\:text-purple-900:focus{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .sm\:focus\:text-pink-100:focus{
@@ -83032,8 +83036,8 @@ fieldset a {
 
   .sm\:active\:text-red-900:active{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .sm\:active\:text-orange-100:active{
@@ -83416,8 +83420,8 @@ fieldset a {
 
   .sm\:active\:text-purple-900:active{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .sm\:active\:text-pink-100:active{
@@ -92072,8 +92076,8 @@ fieldset a {
 
   .md\:divide-red-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--divide-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--divide-opacity));
   }
 
   .md\:divide-orange-100 > :not(template) ~ :not(template){
@@ -92456,8 +92460,8 @@ fieldset a {
 
   .md\:divide-purple-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--divide-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--divide-opacity));
   }
 
   .md\:divide-pink-100 > :not(template) ~ :not(template){
@@ -92771,8 +92775,8 @@ fieldset a {
 
   .md\:bg-red-900{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .md\:bg-orange-100{
@@ -93155,8 +93159,8 @@ fieldset a {
 
   .md\:bg-purple-900{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .md\:bg-pink-100{
@@ -93345,8 +93349,8 @@ fieldset a {
 
   .md\:hover\:bg-red-900:hover{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .md\:hover\:bg-orange-100:hover{
@@ -93729,8 +93733,8 @@ fieldset a {
 
   .md\:hover\:bg-purple-900:hover{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .md\:hover\:bg-pink-100:hover{
@@ -93919,8 +93923,8 @@ fieldset a {
 
   .md\:focus\:bg-red-900:focus{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .md\:focus\:bg-orange-100:focus{
@@ -94303,8 +94307,8 @@ fieldset a {
 
   .md\:focus\:bg-purple-900:focus{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .md\:focus\:bg-pink-100:focus{
@@ -94508,8 +94512,8 @@ fieldset a {
   }
 
   .md\:from-red-900{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:from-orange-100{
@@ -94828,8 +94832,8 @@ fieldset a {
   }
 
   .md\:from-purple-900{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:from-pink-100{
@@ -94988,8 +94992,8 @@ fieldset a {
   }
 
   .md\:via-red-900{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:via-orange-100{
@@ -95308,8 +95312,8 @@ fieldset a {
   }
 
   .md\:via-purple-900{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:via-pink-100{
@@ -95446,7 +95450,7 @@ fieldset a {
   }
 
   .md\:to-red-900{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .md\:to-orange-100{
@@ -95702,7 +95706,7 @@ fieldset a {
   }
 
   .md\:to-purple-900{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .md\:to-pink-100{
@@ -95852,8 +95856,8 @@ fieldset a {
   }
 
   .md\:hover\:from-red-900:hover{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:hover\:from-orange-100:hover{
@@ -96172,8 +96176,8 @@ fieldset a {
   }
 
   .md\:hover\:from-purple-900:hover{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:hover\:from-pink-100:hover{
@@ -96332,8 +96336,8 @@ fieldset a {
   }
 
   .md\:hover\:via-red-900:hover{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:hover\:via-orange-100:hover{
@@ -96652,8 +96656,8 @@ fieldset a {
   }
 
   .md\:hover\:via-purple-900:hover{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:hover\:via-pink-100:hover{
@@ -96790,7 +96794,7 @@ fieldset a {
   }
 
   .md\:hover\:to-red-900:hover{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .md\:hover\:to-orange-100:hover{
@@ -97046,7 +97050,7 @@ fieldset a {
   }
 
   .md\:hover\:to-purple-900:hover{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .md\:hover\:to-pink-100:hover{
@@ -97196,8 +97200,8 @@ fieldset a {
   }
 
   .md\:focus\:from-red-900:focus{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:focus\:from-orange-100:focus{
@@ -97516,8 +97520,8 @@ fieldset a {
   }
 
   .md\:focus\:from-purple-900:focus{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:focus\:from-pink-100:focus{
@@ -97676,8 +97680,8 @@ fieldset a {
   }
 
   .md\:focus\:via-red-900:focus{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .md\:focus\:via-orange-100:focus{
@@ -97996,8 +98000,8 @@ fieldset a {
   }
 
   .md\:focus\:via-purple-900:focus{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .md\:focus\:via-pink-100:focus{
@@ -98134,7 +98138,7 @@ fieldset a {
   }
 
   .md\:focus\:to-red-900:focus{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .md\:focus\:to-orange-100:focus{
@@ -98390,7 +98394,7 @@ fieldset a {
   }
 
   .md\:focus\:to-purple-900:focus{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .md\:focus\:to-pink-100:focus{
@@ -98713,8 +98717,8 @@ fieldset a {
 
   .md\:border-red-900{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .md\:border-orange-100{
@@ -99097,8 +99101,8 @@ fieldset a {
 
   .md\:border-purple-900{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .md\:border-pink-100{
@@ -99287,8 +99291,8 @@ fieldset a {
 
   .md\:hover\:border-red-900:hover{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .md\:hover\:border-orange-100:hover{
@@ -99671,8 +99675,8 @@ fieldset a {
 
   .md\:hover\:border-purple-900:hover{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .md\:hover\:border-pink-100:hover{
@@ -99861,8 +99865,8 @@ fieldset a {
 
   .md\:focus\:border-red-900:focus{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .md\:focus\:border-orange-100:focus{
@@ -100245,8 +100249,8 @@ fieldset a {
 
   .md\:focus\:border-purple-900:focus{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .md\:focus\:border-pink-100:focus{
@@ -108067,14 +108071,14 @@ fieldset a {
 
   .md\:placeholder-red-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .md\:placeholder-red-900::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .md\:placeholder-orange-100::-moz-placeholder{
@@ -108835,14 +108839,14 @@ fieldset a {
 
   .md\:placeholder-purple-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .md\:placeholder-purple-900::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .md\:placeholder-pink-100::-moz-placeholder{
@@ -109215,14 +109219,14 @@ fieldset a {
 
   .md\:focus\:placeholder-red-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-red-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -109983,14 +109987,14 @@ fieldset a {
 
   .md\:focus\:placeholder-purple-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-purple-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .md\:focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -110645,8 +110649,8 @@ fieldset a {
 
   .md\:text-red-900{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .md\:text-orange-100{
@@ -111029,8 +111033,8 @@ fieldset a {
 
   .md\:text-purple-900{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .md\:text-pink-100{
@@ -111219,8 +111223,8 @@ fieldset a {
 
   .md\:hover\:text-red-900:hover{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .md\:hover\:text-orange-100:hover{
@@ -111603,8 +111607,8 @@ fieldset a {
 
   .md\:hover\:text-purple-900:hover{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .md\:hover\:text-pink-100:hover{
@@ -111793,8 +111797,8 @@ fieldset a {
 
   .md\:focus\:text-red-900:focus{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .md\:focus\:text-orange-100:focus{
@@ -112177,8 +112181,8 @@ fieldset a {
 
   .md\:focus\:text-purple-900:focus{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .md\:focus\:text-pink-100:focus{
@@ -112367,8 +112371,8 @@ fieldset a {
 
   .md\:active\:text-red-900:active{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .md\:active\:text-orange-100:active{
@@ -112751,8 +112755,8 @@ fieldset a {
 
   .md\:active\:text-purple-900:active{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .md\:active\:text-pink-100:active{
@@ -121407,8 +121411,8 @@ fieldset a {
 
   .lg\:divide-red-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--divide-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--divide-opacity));
   }
 
   .lg\:divide-orange-100 > :not(template) ~ :not(template){
@@ -121791,8 +121795,8 @@ fieldset a {
 
   .lg\:divide-purple-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--divide-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--divide-opacity));
   }
 
   .lg\:divide-pink-100 > :not(template) ~ :not(template){
@@ -122106,8 +122110,8 @@ fieldset a {
 
   .lg\:bg-red-900{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .lg\:bg-orange-100{
@@ -122490,8 +122494,8 @@ fieldset a {
 
   .lg\:bg-purple-900{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .lg\:bg-pink-100{
@@ -122680,8 +122684,8 @@ fieldset a {
 
   .lg\:hover\:bg-red-900:hover{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .lg\:hover\:bg-orange-100:hover{
@@ -123064,8 +123068,8 @@ fieldset a {
 
   .lg\:hover\:bg-purple-900:hover{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .lg\:hover\:bg-pink-100:hover{
@@ -123254,8 +123258,8 @@ fieldset a {
 
   .lg\:focus\:bg-red-900:focus{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .lg\:focus\:bg-orange-100:focus{
@@ -123638,8 +123642,8 @@ fieldset a {
 
   .lg\:focus\:bg-purple-900:focus{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .lg\:focus\:bg-pink-100:focus{
@@ -123843,8 +123847,8 @@ fieldset a {
   }
 
   .lg\:from-red-900{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:from-orange-100{
@@ -124163,8 +124167,8 @@ fieldset a {
   }
 
   .lg\:from-purple-900{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:from-pink-100{
@@ -124323,8 +124327,8 @@ fieldset a {
   }
 
   .lg\:via-red-900{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:via-orange-100{
@@ -124643,8 +124647,8 @@ fieldset a {
   }
 
   .lg\:via-purple-900{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:via-pink-100{
@@ -124781,7 +124785,7 @@ fieldset a {
   }
 
   .lg\:to-red-900{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .lg\:to-orange-100{
@@ -125037,7 +125041,7 @@ fieldset a {
   }
 
   .lg\:to-purple-900{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .lg\:to-pink-100{
@@ -125187,8 +125191,8 @@ fieldset a {
   }
 
   .lg\:hover\:from-red-900:hover{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:hover\:from-orange-100:hover{
@@ -125507,8 +125511,8 @@ fieldset a {
   }
 
   .lg\:hover\:from-purple-900:hover{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:hover\:from-pink-100:hover{
@@ -125667,8 +125671,8 @@ fieldset a {
   }
 
   .lg\:hover\:via-red-900:hover{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:hover\:via-orange-100:hover{
@@ -125987,8 +125991,8 @@ fieldset a {
   }
 
   .lg\:hover\:via-purple-900:hover{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:hover\:via-pink-100:hover{
@@ -126125,7 +126129,7 @@ fieldset a {
   }
 
   .lg\:hover\:to-red-900:hover{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .lg\:hover\:to-orange-100:hover{
@@ -126381,7 +126385,7 @@ fieldset a {
   }
 
   .lg\:hover\:to-purple-900:hover{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .lg\:hover\:to-pink-100:hover{
@@ -126531,8 +126535,8 @@ fieldset a {
   }
 
   .lg\:focus\:from-red-900:focus{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:focus\:from-orange-100:focus{
@@ -126851,8 +126855,8 @@ fieldset a {
   }
 
   .lg\:focus\:from-purple-900:focus{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:focus\:from-pink-100:focus{
@@ -127011,8 +127015,8 @@ fieldset a {
   }
 
   .lg\:focus\:via-red-900:focus{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .lg\:focus\:via-orange-100:focus{
@@ -127331,8 +127335,8 @@ fieldset a {
   }
 
   .lg\:focus\:via-purple-900:focus{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .lg\:focus\:via-pink-100:focus{
@@ -127469,7 +127473,7 @@ fieldset a {
   }
 
   .lg\:focus\:to-red-900:focus{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .lg\:focus\:to-orange-100:focus{
@@ -127725,7 +127729,7 @@ fieldset a {
   }
 
   .lg\:focus\:to-purple-900:focus{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .lg\:focus\:to-pink-100:focus{
@@ -128048,8 +128052,8 @@ fieldset a {
 
   .lg\:border-red-900{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .lg\:border-orange-100{
@@ -128432,8 +128436,8 @@ fieldset a {
 
   .lg\:border-purple-900{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .lg\:border-pink-100{
@@ -128622,8 +128626,8 @@ fieldset a {
 
   .lg\:hover\:border-red-900:hover{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .lg\:hover\:border-orange-100:hover{
@@ -129006,8 +129010,8 @@ fieldset a {
 
   .lg\:hover\:border-purple-900:hover{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .lg\:hover\:border-pink-100:hover{
@@ -129196,8 +129200,8 @@ fieldset a {
 
   .lg\:focus\:border-red-900:focus{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .lg\:focus\:border-orange-100:focus{
@@ -129580,8 +129584,8 @@ fieldset a {
 
   .lg\:focus\:border-purple-900:focus{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .lg\:focus\:border-pink-100:focus{
@@ -137402,14 +137406,14 @@ fieldset a {
 
   .lg\:placeholder-red-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-red-900::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-orange-100::-moz-placeholder{
@@ -138170,14 +138174,14 @@ fieldset a {
 
   .lg\:placeholder-purple-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-purple-900::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .lg\:placeholder-pink-100::-moz-placeholder{
@@ -138550,14 +138554,14 @@ fieldset a {
 
   .lg\:focus\:placeholder-red-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-red-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -139318,14 +139322,14 @@ fieldset a {
 
   .lg\:focus\:placeholder-purple-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-purple-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -139980,8 +139984,8 @@ fieldset a {
 
   .lg\:text-red-900{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .lg\:text-orange-100{
@@ -140364,8 +140368,8 @@ fieldset a {
 
   .lg\:text-purple-900{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .lg\:text-pink-100{
@@ -140554,8 +140558,8 @@ fieldset a {
 
   .lg\:hover\:text-red-900:hover{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .lg\:hover\:text-orange-100:hover{
@@ -140938,8 +140942,8 @@ fieldset a {
 
   .lg\:hover\:text-purple-900:hover{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .lg\:hover\:text-pink-100:hover{
@@ -141128,8 +141132,8 @@ fieldset a {
 
   .lg\:focus\:text-red-900:focus{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .lg\:focus\:text-orange-100:focus{
@@ -141512,8 +141516,8 @@ fieldset a {
 
   .lg\:focus\:text-purple-900:focus{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .lg\:focus\:text-pink-100:focus{
@@ -141702,8 +141706,8 @@ fieldset a {
 
   .lg\:active\:text-red-900:active{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .lg\:active\:text-orange-100:active{
@@ -142086,8 +142090,8 @@ fieldset a {
 
   .lg\:active\:text-purple-900:active{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .lg\:active\:text-pink-100:active{
@@ -150742,8 +150746,8 @@ fieldset a {
 
   .xl\:divide-red-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--divide-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--divide-opacity));
   }
 
   .xl\:divide-orange-100 > :not(template) ~ :not(template){
@@ -151126,8 +151130,8 @@ fieldset a {
 
   .xl\:divide-purple-900 > :not(template) ~ :not(template){
     --divide-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--divide-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--divide-opacity));
   }
 
   .xl\:divide-pink-100 > :not(template) ~ :not(template){
@@ -151441,8 +151445,8 @@ fieldset a {
 
   .xl\:bg-red-900{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xl\:bg-orange-100{
@@ -151825,8 +151829,8 @@ fieldset a {
 
   .xl\:bg-purple-900{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xl\:bg-pink-100{
@@ -152015,8 +152019,8 @@ fieldset a {
 
   .xl\:hover\:bg-red-900:hover{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xl\:hover\:bg-orange-100:hover{
@@ -152399,8 +152403,8 @@ fieldset a {
 
   .xl\:hover\:bg-purple-900:hover{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xl\:hover\:bg-pink-100:hover{
@@ -152589,8 +152593,8 @@ fieldset a {
 
   .xl\:focus\:bg-red-900:focus{
     --bg-opacity: 1;
-    background-color: #742a2a;
-    background-color: rgba(116, 42, 42, var(--bg-opacity));
+    background-color: #BB4E69;
+    background-color: rgba(187, 78, 105, var(--bg-opacity));
   }
 
   .xl\:focus\:bg-orange-100:focus{
@@ -152973,8 +152977,8 @@ fieldset a {
 
   .xl\:focus\:bg-purple-900:focus{
     --bg-opacity: 1;
-    background-color: #21183c;
-    background-color: rgba(33, 24, 60, var(--bg-opacity));
+    background-color: #5350A5;
+    background-color: rgba(83, 80, 165, var(--bg-opacity));
   }
 
   .xl\:focus\:bg-pink-100:focus{
@@ -153178,8 +153182,8 @@ fieldset a {
   }
 
   .xl\:from-red-900{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:from-orange-100{
@@ -153498,8 +153502,8 @@ fieldset a {
   }
 
   .xl\:from-purple-900{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:from-pink-100{
@@ -153658,8 +153662,8 @@ fieldset a {
   }
 
   .xl\:via-red-900{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:via-orange-100{
@@ -153978,8 +153982,8 @@ fieldset a {
   }
 
   .xl\:via-purple-900{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:via-pink-100{
@@ -154116,7 +154120,7 @@ fieldset a {
   }
 
   .xl\:to-red-900{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xl\:to-orange-100{
@@ -154372,7 +154376,7 @@ fieldset a {
   }
 
   .xl\:to-purple-900{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xl\:to-pink-100{
@@ -154522,8 +154526,8 @@ fieldset a {
   }
 
   .xl\:hover\:from-red-900:hover{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:hover\:from-orange-100:hover{
@@ -154842,8 +154846,8 @@ fieldset a {
   }
 
   .xl\:hover\:from-purple-900:hover{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:hover\:from-pink-100:hover{
@@ -155002,8 +155006,8 @@ fieldset a {
   }
 
   .xl\:hover\:via-red-900:hover{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:hover\:via-orange-100:hover{
@@ -155322,8 +155326,8 @@ fieldset a {
   }
 
   .xl\:hover\:via-purple-900:hover{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:hover\:via-pink-100:hover{
@@ -155460,7 +155464,7 @@ fieldset a {
   }
 
   .xl\:hover\:to-red-900:hover{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xl\:hover\:to-orange-100:hover{
@@ -155716,7 +155720,7 @@ fieldset a {
   }
 
   .xl\:hover\:to-purple-900:hover{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xl\:hover\:to-pink-100:hover{
@@ -155866,8 +155870,8 @@ fieldset a {
   }
 
   .xl\:focus\:from-red-900:focus{
-    --gradient-from-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-from-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:focus\:from-orange-100:focus{
@@ -156186,8 +156190,8 @@ fieldset a {
   }
 
   .xl\:focus\:from-purple-900:focus{
-    --gradient-from-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-from-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:focus\:from-pink-100:focus{
@@ -156346,8 +156350,8 @@ fieldset a {
   }
 
   .xl\:focus\:via-red-900:focus{
-    --gradient-via-color: #742a2a;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0));
+    --gradient-via-color: #BB4E69;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(187, 78, 105, 0));
   }
 
   .xl\:focus\:via-orange-100:focus{
@@ -156666,8 +156670,8 @@ fieldset a {
   }
 
   .xl\:focus\:via-purple-900:focus{
-    --gradient-via-color: #21183c;
-    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(33, 24, 60, 0));
+    --gradient-via-color: #5350A5;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(83, 80, 165, 0));
   }
 
   .xl\:focus\:via-pink-100:focus{
@@ -156804,7 +156808,7 @@ fieldset a {
   }
 
   .xl\:focus\:to-red-900:focus{
-    --gradient-to-color: #742a2a;
+    --gradient-to-color: #BB4E69;
   }
 
   .xl\:focus\:to-orange-100:focus{
@@ -157060,7 +157064,7 @@ fieldset a {
   }
 
   .xl\:focus\:to-purple-900:focus{
-    --gradient-to-color: #21183c;
+    --gradient-to-color: #5350A5;
   }
 
   .xl\:focus\:to-pink-100:focus{
@@ -157383,8 +157387,8 @@ fieldset a {
 
   .xl\:border-red-900{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xl\:border-orange-100{
@@ -157767,8 +157771,8 @@ fieldset a {
 
   .xl\:border-purple-900{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xl\:border-pink-100{
@@ -157957,8 +157961,8 @@ fieldset a {
 
   .xl\:hover\:border-red-900:hover{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xl\:hover\:border-orange-100:hover{
@@ -158341,8 +158345,8 @@ fieldset a {
 
   .xl\:hover\:border-purple-900:hover{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xl\:hover\:border-pink-100:hover{
@@ -158531,8 +158535,8 @@ fieldset a {
 
   .xl\:focus\:border-red-900:focus{
     --border-opacity: 1;
-    border-color: #742a2a;
-    border-color: rgba(116, 42, 42, var(--border-opacity));
+    border-color: #BB4E69;
+    border-color: rgba(187, 78, 105, var(--border-opacity));
   }
 
   .xl\:focus\:border-orange-100:focus{
@@ -158915,8 +158919,8 @@ fieldset a {
 
   .xl\:focus\:border-purple-900:focus{
     --border-opacity: 1;
-    border-color: #21183c;
-    border-color: rgba(33, 24, 60, var(--border-opacity));
+    border-color: #5350A5;
+    border-color: rgba(83, 80, 165, var(--border-opacity));
   }
 
   .xl\:focus\:border-pink-100:focus{
@@ -166737,14 +166741,14 @@ fieldset a {
 
   .xl\:placeholder-red-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-red-900::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-orange-100::-moz-placeholder{
@@ -167505,14 +167509,14 @@ fieldset a {
 
   .xl\:placeholder-purple-900::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-purple-900::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xl\:placeholder-pink-100::-moz-placeholder{
@@ -167885,14 +167889,14 @@ fieldset a {
 
   .xl\:focus\:placeholder-red-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-red-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--placeholder-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-orange-100:focus::-moz-placeholder{
@@ -168653,14 +168657,14 @@ fieldset a {
 
   .xl\:focus\:placeholder-purple-900:focus::-moz-placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-purple-900:focus::placeholder{
     --placeholder-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--placeholder-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-pink-100:focus::-moz-placeholder{
@@ -169315,8 +169319,8 @@ fieldset a {
 
   .xl\:text-red-900{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xl\:text-orange-100{
@@ -169699,8 +169703,8 @@ fieldset a {
 
   .xl\:text-purple-900{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xl\:text-pink-100{
@@ -169889,8 +169893,8 @@ fieldset a {
 
   .xl\:hover\:text-red-900:hover{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xl\:hover\:text-orange-100:hover{
@@ -170273,8 +170277,8 @@ fieldset a {
 
   .xl\:hover\:text-purple-900:hover{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xl\:hover\:text-pink-100:hover{
@@ -170463,8 +170467,8 @@ fieldset a {
 
   .xl\:focus\:text-red-900:focus{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xl\:focus\:text-orange-100:focus{
@@ -170847,8 +170851,8 @@ fieldset a {
 
   .xl\:focus\:text-purple-900:focus{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xl\:focus\:text-pink-100:focus{
@@ -171037,8 +171041,8 @@ fieldset a {
 
   .xl\:active\:text-red-900:active{
     --text-opacity: 1;
-    color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
+    color: #BB4E69;
+    color: rgba(187, 78, 105, var(--text-opacity));
   }
 
   .xl\:active\:text-orange-100:active{
@@ -171421,8 +171425,8 @@ fieldset a {
 
   .xl\:active\:text-purple-900:active{
     --text-opacity: 1;
-    color: #21183c;
-    color: rgba(33, 24, 60, var(--text-opacity));
+    color: #5350A5;
+    color: rgba(83, 80, 165, var(--text-opacity));
   }
 
   .xl\:active\:text-pink-100:active{
