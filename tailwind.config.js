@@ -305,6 +305,7 @@ module.exports = {
       }),
       inset: {
         '0': '0',
+        '100': '100px',
         auto: 'auto',
         '-16': '-4rem',
       },

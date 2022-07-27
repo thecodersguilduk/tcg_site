@@ -2018,6 +2018,29 @@ input, textarea {
   z-index: -1;
 }
 
+#course .pattern-5 {
+  top: 40%;
+  left: 0;
+}
+
+#course .pattern-11 {
+  top: 0%;
+  left: 40%;
+}
+
+#course .pattern-16 {
+  bottom: 0;
+}
+
+#course .pattern-18 {
+  right: 5%;
+  top: 15%;
+}
+
+#course .pattern-98, #course .pattern-99 {
+  top: 25%;
+}
+
 #course .pattern-280 {
   top: 0;
   left: 25%;
@@ -2025,13 +2048,49 @@ input, textarea {
 }
 
 #course .pattern-145 {
-  top: 50%;
-  left: 39%;
+  top: 40%;
+  left: 45%;
   z-index: 1;
+}
+
+#course .pattern-417 {
+  z-index: 1;
+  top: 15%;
+  right: 10%;
+}
+
+#course .pattern-416 {
+  z-index: 1;
+  bottom: 15%;
+  left: 10%;
+}
+
+#course .pattern-460 {
+  left: 0;
+  top: 25%;
+}
+
+#course .pattern-459 {
+  right: 0;
+  top: 25%;
+}
+
+#course .pattern-457 {
+  left: 15%;
+  top: 40%;
+}
+
+#course .pattern-458 {
+  right: 15%;
+  top: 40%;
 }
 
 #course #content p {
   margin-bottom: 1rem;
+}
+
+#course #content ol {
+  padding-left: 0 !important;
 }
 
 #course #content .content a {
@@ -2079,6 +2138,18 @@ input, textarea {
 
 .cta p {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .cta p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 565px) {
+  #pitch iframe {
+    height: 400px;
+  }
 }
 
 .space-y-0 > :not(template) ~ :not(template){
@@ -21990,6 +22061,13 @@ input, textarea {
   left: 0;
 }
 
+.inset-100{
+  top: 100px;
+  right: 100px;
+  bottom: 100px;
+  left: 100px;
+}
+
 .inset-auto{
   top: auto;
   right: auto;
@@ -22012,6 +22090,16 @@ input, textarea {
 .inset-x-0{
   right: 0;
   left: 0;
+}
+
+.inset-y-100{
+  top: 100px;
+  bottom: 100px;
+}
+
+.inset-x-100{
+  right: 100px;
+  left: 100px;
 }
 
 .inset-y-auto{
@@ -22048,6 +22136,22 @@ input, textarea {
 
 .left-0{
   left: 0;
+}
+
+.top-100{
+  top: 100px;
+}
+
+.right-100{
+  right: 100px;
+}
+
+.bottom-100{
+  bottom: 100px;
+}
+
+.left-100{
+  left: 100px;
 }
 
 .top-auto{
@@ -51583,6 +51687,13 @@ fieldset a {
     left: 0;
   }
 
+  .xs\:inset-100{
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+  }
+
   .xs\:inset-auto{
     top: auto;
     right: auto;
@@ -51605,6 +51716,16 @@ fieldset a {
   .xs\:inset-x-0{
     right: 0;
     left: 0;
+  }
+
+  .xs\:inset-y-100{
+    top: 100px;
+    bottom: 100px;
+  }
+
+  .xs\:inset-x-100{
+    right: 100px;
+    left: 100px;
   }
 
   .xs\:inset-y-auto{
@@ -51641,6 +51762,22 @@ fieldset a {
 
   .xs\:left-0{
     left: 0;
+  }
+
+  .xs\:top-100{
+    top: 100px;
+  }
+
+  .xs\:right-100{
+    right: 100px;
+  }
+
+  .xs\:bottom-100{
+    bottom: 100px;
+  }
+
+  .xs\:left-100{
+    left: 100px;
   }
 
   .xs\:top-auto{
@@ -80922,6 +81059,13 @@ fieldset a {
     left: 0;
   }
 
+  .sm\:inset-100{
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+  }
+
   .sm\:inset-auto{
     top: auto;
     right: auto;
@@ -80944,6 +81088,16 @@ fieldset a {
   .sm\:inset-x-0{
     right: 0;
     left: 0;
+  }
+
+  .sm\:inset-y-100{
+    top: 100px;
+    bottom: 100px;
+  }
+
+  .sm\:inset-x-100{
+    right: 100px;
+    left: 100px;
   }
 
   .sm\:inset-y-auto{
@@ -80980,6 +81134,22 @@ fieldset a {
 
   .sm\:left-0{
     left: 0;
+  }
+
+  .sm\:top-100{
+    top: 100px;
+  }
+
+  .sm\:right-100{
+    right: 100px;
+  }
+
+  .sm\:bottom-100{
+    bottom: 100px;
+  }
+
+  .sm\:left-100{
+    left: 100px;
   }
 
   .sm\:top-auto{
@@ -110261,6 +110431,13 @@ fieldset a {
     left: 0;
   }
 
+  .md\:inset-100{
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+  }
+
   .md\:inset-auto{
     top: auto;
     right: auto;
@@ -110283,6 +110460,16 @@ fieldset a {
   .md\:inset-x-0{
     right: 0;
     left: 0;
+  }
+
+  .md\:inset-y-100{
+    top: 100px;
+    bottom: 100px;
+  }
+
+  .md\:inset-x-100{
+    right: 100px;
+    left: 100px;
   }
 
   .md\:inset-y-auto{
@@ -110319,6 +110506,22 @@ fieldset a {
 
   .md\:left-0{
     left: 0;
+  }
+
+  .md\:top-100{
+    top: 100px;
+  }
+
+  .md\:right-100{
+    right: 100px;
+  }
+
+  .md\:bottom-100{
+    bottom: 100px;
+  }
+
+  .md\:left-100{
+    left: 100px;
   }
 
   .md\:top-auto{
@@ -139600,6 +139803,13 @@ fieldset a {
     left: 0;
   }
 
+  .lg\:inset-100{
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+  }
+
   .lg\:inset-auto{
     top: auto;
     right: auto;
@@ -139622,6 +139832,16 @@ fieldset a {
   .lg\:inset-x-0{
     right: 0;
     left: 0;
+  }
+
+  .lg\:inset-y-100{
+    top: 100px;
+    bottom: 100px;
+  }
+
+  .lg\:inset-x-100{
+    right: 100px;
+    left: 100px;
   }
 
   .lg\:inset-y-auto{
@@ -139658,6 +139878,22 @@ fieldset a {
 
   .lg\:left-0{
     left: 0;
+  }
+
+  .lg\:top-100{
+    top: 100px;
+  }
+
+  .lg\:right-100{
+    right: 100px;
+  }
+
+  .lg\:bottom-100{
+    bottom: 100px;
+  }
+
+  .lg\:left-100{
+    left: 100px;
   }
 
   .lg\:top-auto{
@@ -168939,6 +169175,13 @@ fieldset a {
     left: 0;
   }
 
+  .xl\:inset-100{
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+  }
+
   .xl\:inset-auto{
     top: auto;
     right: auto;
@@ -168961,6 +169204,16 @@ fieldset a {
   .xl\:inset-x-0{
     right: 0;
     left: 0;
+  }
+
+  .xl\:inset-y-100{
+    top: 100px;
+    bottom: 100px;
+  }
+
+  .xl\:inset-x-100{
+    right: 100px;
+    left: 100px;
   }
 
   .xl\:inset-y-auto{
@@ -168997,6 +169250,22 @@ fieldset a {
 
   .xl\:left-0{
     left: 0;
+  }
+
+  .xl\:top-100{
+    top: 100px;
+  }
+
+  .xl\:right-100{
+    right: 100px;
+  }
+
+  .xl\:bottom-100{
+    bottom: 100px;
+  }
+
+  .xl\:left-100{
+    left: 100px;
   }
 
   .xl\:top-auto{

@@ -2,22 +2,68 @@
 
     .pattern {
         z-index: -1;
+        &-5{
+            top: 40%;
+            left: 0;
+        }
+        &-11{
+            top:0%;
+            left: 40%;
+        }
+        &-16{
+            bottom: 0;
+        }
+        &-18{
+            right: 5%;
+            top: 15%;
+        }
+        &-98, &-99{
+            top: 25%;
+        }
         &-280{
             top: 0;
             left: 25%;
             z-index: 10;
         }
         &-145{
-            top: 50%;
-            left: 39%;
+            top: 40%;
+            left: 45%;
             z-index: 1;
         }
+        &-417{
+            z-index: 1;
+            top: 15%;
+            right: 10%;
+        }
+        &-416{
+            z-index: 1;
+            bottom: 15%;
+            left: 10%;
+        }
+        &-460{
+            left: 0;
+            top: 25%;
+        }
+        &-459{
+            right: 0;
+            top: 25%;
+        }
+        &-457{
+            left: 15%;
+            top: 40%;
+        }
+        &-458{
+            right: 15%;
+            top: 40%;
+        }
     }
-
 
     #content {
         p {
             margin-bottom: 1rem;
+        }
+        ol {
+            padding-left: 0 !important;
         }
 
         .content {
@@ -72,5 +118,21 @@
 .cta {
     p {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .cta {
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 565px){
+    #pitch {
+        iframe {
+            height: 400px;
+        }
     }
 }
