@@ -2018,6 +2018,18 @@ input, textarea {
   z-index: -1;
 }
 
+#course .pattern-280 {
+  top: 0;
+  left: 25%;
+  z-index: 10;
+}
+
+#course .pattern-145 {
+  top: 50%;
+  left: 39%;
+  z-index: 1;
+}
+
 #course #content p {
   margin-bottom: 1rem;
 }
@@ -17342,6 +17354,10 @@ input, textarea {
   min-height: 0;
 }
 
+.min-h-80{
+  min-height: 80vh;
+}
+
 .min-h-full{
   min-height: 100%;
 }
@@ -31434,10 +31450,6 @@ input, textarea {
           animation: bounce 1s infinite;
 }
 
-* {
-  border: 1px solid red;
-}
-
 .decorated-list ul li,
 .content ul li {
   list-style: none;
@@ -31478,7 +31490,6 @@ input, textarea {
 .content ol li::before {
   content: "";
   background-image: url("/images/patterns/Numbered_List_Pattern.svg");
-  width: 100%;
   height: 43px;
   position: absolute;
   z-index: -1;
@@ -31494,6 +31505,7 @@ input, textarea {
   width: 100%;
   z-index: 1000;
   background-color: #fff;
+  transition: 6s linear all;
 }
 
 .progress-container {
@@ -46933,6 +46945,10 @@ fieldset a {
 
   .xs\:min-h-0{
     min-height: 0;
+  }
+
+  .xs\:min-h-80{
+    min-height: 80vh;
   }
 
   .xs\:min-h-full{
@@ -76270,6 +76286,10 @@ fieldset a {
     min-height: 0;
   }
 
+  .sm\:min-h-80{
+    min-height: 80vh;
+  }
+
   .sm\:min-h-full{
     min-height: 100%;
   }
@@ -105603,6 +105623,10 @@ fieldset a {
 
   .md\:min-h-0{
     min-height: 0;
+  }
+
+  .md\:min-h-80{
+    min-height: 80vh;
   }
 
   .md\:min-h-full{
@@ -134940,6 +134964,10 @@ fieldset a {
     min-height: 0;
   }
 
+  .lg\:min-h-80{
+    min-height: 80vh;
+  }
+
   .lg\:min-h-full{
     min-height: 100%;
   }
@@ -164273,6 +164301,10 @@ fieldset a {
 
   .xl\:min-h-0{
     min-height: 0;
+  }
+
+  .xl\:min-h-80{
+    min-height: 80vh;
   }
 
   .xl\:min-h-full{

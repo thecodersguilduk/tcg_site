@@ -7,11 +7,11 @@
           {% if course.testimonials.length > 0 %}
               {% for testimonial in course.testimonials %}
                   <div class="w-full md:w-4/12 p-8">
-                    <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-2 pl-16 pr-4 pb-8 w-full flex flex-col">
+                    <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
                       <div class="sm:flex sm:flex-col">
-                        <div class="-ml-10 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}');"></div>
-                          <h3 class="mb-2px">{{ testimonial.author }}</h3>
-                          <span class="text-md text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                        <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                          <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
+                          <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
                           <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
                       </div>
                     </div>

@@ -7,7 +7,7 @@ body_class: apprenticeship-employer
 ---
 {# {% include '../components/modals/expression-of-interest.njk' %} #}
 <main id="course" class="overflow-x-hidden main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-{# <section id="cta-header"class="fixed top-0 bg-white flex space-between mx-auto z-10 shadow py-4">
+<section id="course-cta-header"class="fixed top-0 bg-white flex space-between mx-auto z-50 shadow py-4 w-full">
   <div class="flex inner justify-between items-center">
     <div class="flex items-center">
       <div class="logo mr-8">
@@ -21,21 +21,23 @@ body_class: apprenticeship-employer
       <a href="#contact" class="px-4 py-2 bg-blue-200"><span class="text-white font-bold rounded">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
     </div>
   </div>
-</section> #}
+</section>
 <section id="hero relative">
-  <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 bg-gradient-to-r from-orange-100 to-red-100 min-h-screen rounded">
+<object type="image/svg+xml" data="../../images/patterns/280.svg" class=" absolute pattern pattern-280"></object>
+  <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 bg-gradient-to-r from-orange-100 to-red-100 min-h-80 rounded">
     <div class="flex container">
       <div class="md:w-6/12">
         <header class="md:w-8/12">
           <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
-          <p class="mb-2">{{ course.attendance }}</p>
+          <p class="mb-2 text-sm">{{ course.attendance }}</p>
           <p class="bg-green-100 py-2 px-4 text-black inline-block rounded">Next Course Starts: <strong> {{ course.start | dateDisplay }}</strong></p>
-          <a href="#contact" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 max-w-3/12">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+          <a href="#contact" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
           <a href="" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
         </header>
       </div>
       <div class="md:w-6/12">
         <img src="../../images/blog/course-hero-image.jpg" class="rounded" alt="{{course.title}}" />
+        <object type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden md:block absolute pattern pattern-145"></object>
       </div>
     </div>
   <!-- TO DO - add logos components -->

@@ -1,7 +1,19 @@
 #course {
+
     .pattern {
         z-index: -1;
+        &-280{
+            top: 0;
+            left: 25%;
+            z-index: 10;
+        }
+        &-145{
+            top: 50%;
+            left: 39%;
+            z-index: 1;
+        }
     }
+
 
     #content {
         p {

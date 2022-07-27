@@ -753,6 +753,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_vacancy_filters__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @modules/vacancy-filters */ "./resources/js/modules/vacancy-filters/index.js");
 /* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @modules/submenu */ "./resources/js/modules/submenu/index.js");
 /* harmony import */ var _modules_expression_interest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @modules/expression-interest */ "./resources/js/modules/expression-interest/index.js");
+/* harmony import */ var _modules_course_cta_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @modules/course-cta-header */ "./resources/js/modules/course-cta-header/index.js");
 // Import local modules
 
 
@@ -766,6 +767,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/course-cta-header/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/modules/course-cta-header/index.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var courseCTAHeader = function courseCTAHeader() {
+  var coursePage = document.getElementById('course');
+  if (!coursePage) return;
+  var header = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header;
+  document.addEventListener('scroll', function (e) {
+    var scroll = window.scrollY;
+
+    if (scroll > 125) {
+      header.style.height = '0';
+      header.style.overflow = 'hidden';
+    } else {
+      header.style.height = 'unset';
+      header.style.overflow = 'unset';
+    }
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (courseCTAHeader);
 
 /***/ }),
 
@@ -1574,6 +1609,7 @@ var $$ = {
   body: document.querySelector('body'),
   wrapper: document.getElementById('wrapper'),
   header: document.getElementById('header'),
+  courseCTAHeader: document.getElementById('cours-cta-header'),
   nav: document.getElementById('nav'),
   hero: document.getElementById('hero'),
   main: document.getElementById('main'),
