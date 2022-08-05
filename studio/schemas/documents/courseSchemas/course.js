@@ -46,9 +46,28 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'featuredImage',
+        type: 'image',
+        title: 'Featured image'
+      },
+      {
         name: 'start',
         type: 'date',
         title: 'Course Start Date'
+      },
+      {
+        name: 'logos',
+        type: 'array',
+        title: 'Funders & Partners',
+        of: [
+          {
+            type: 'reference',
+             to: [
+               { type: 'courseFunder'},
+               { type: 'coursePartners' }
+              ]
+          }
+        ]
       },
       {
         name: 'tags',
@@ -124,11 +143,6 @@ export default {
           source: 'title'
           },
           maxLength: 96
-      },
-      {
-        name: 'featuredImage',
-        type: 'image',
-        title: 'Featured image'
       },
       {
         name: 'excerpt',
