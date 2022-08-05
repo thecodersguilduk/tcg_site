@@ -11,7 +11,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     courseTopics[]->{name},
     duration[]->{name},
     trainers[]->{...},
-    logos[]->{...},
+    logos[]->{logo},
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
       _id,
@@ -134,16 +134,6 @@ function prepPost(data) {
     data.location = data.location[0]
   }
 
-  if (data.partner) {
-    data.partner = data.partner[0].code
-  }
-  if (data.funder) {
-    data.funder = data.funder[0].code
-  }
-  if (data.project) {
-    data.project = data.project[0].code
-  }
-
   if(data.testimonials){
     data.testimonials.forEach(testimonial => {
       testimonial.avatar = urlFor(testimonial.avatar).url();
@@ -151,7 +141,10 @@ function prepPost(data) {
     //data.testimonials.avatar = urlFor(data.testimonials.avatar).url();
   }
 
-  console.log(data.logos)
+  if( data.logos ){
+    data.logos = data.logos.map(logo => (urlFor(logo.logo).url()));
+  }
+
   return data
 }
 
