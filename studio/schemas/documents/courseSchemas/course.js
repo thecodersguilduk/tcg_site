@@ -6,9 +6,19 @@ export default {
     attendance: 'Full Time'
   },
   fieldsets: [
-    { name: 'cta',
+    {
+      name: 'cta',
       description: 'Activate the CTA here if required',
       title: 'Course CTA Field',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    },
+    {
+      name: 'Benefits',
+      description: 'Renders the icons under the 10s pitch',
+      title: 'Benefits',
       options: {
         collapsible: true,
         collapsed: true,
@@ -158,6 +168,60 @@ export default {
           { type: 'form' },
           { type: 'youtubeEmbed'}
         ]
+      },
+      {
+        name: 'part_time_learning',
+        title: 'Part Time Learning',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'one_or_two_sessions_per_week',
+        title: 'One or Two Sessions per Week',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'evenings_available',
+        title: 'Evenings Available',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'one_session_per_week',
+        title: 'One Session per Week',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'two_day_workshop',
+        title: 'Two Day Workshop',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'group_and_one_on_one_learning',
+        title: 'Group and One on One learning',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'super_fast_roi',
+        title: 'Super Fast ROI',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'three_half_days',
+        title: 'Three Half Days',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'expert_professionals',
+        title: 'Expert Professionals',
+        type: 'boolean',
+        fieldset: 'Benefits'
       },
       {
         name: 'who_is_this_for',
