@@ -1,6 +1,43 @@
-<div class="bg-blue-200 rounded relative py-24">
-        <object type="image/svg+xml" data="../../images/patterns/5.svg" class="absolute pattern pattern-1 right-0 bottom-0"></object>
-        <object type="image/svg+xml" data="../../images/patterns/18.svg" class="absolute pattern pattern-1 left-0 top-0"></object>
+<div class="bg-blue-200 relative py-24 section-rounded -mt-16 -z-1">
+        <object type="image/svg+xml" data="../../images/patterns/5.svg" class="absolute pattern pattern-1 right-0 bottom-0 hidden md:block"></object>
+        <object type="image/svg+xml" data="../../images/patterns/18.svg" class="absolute pattern pattern-1 left-0 top-0 hidden md:block"></object>
     <h2 class="text-center text-white text-3xl">Who trains this course?</h2>
     <p class="text-center text-white">All out technical and vocational courses are devised, reviewed and delivered by prominent industry professionals, many of them are experts in their fields</p>
+
+    {% if course.trainers %}
+        <div class="inner mx-auto my-8">
+            <div class="flex flex-wrap">
+                {% for trainer in course.trainers %}
+                    <div class="p-6 flex flex-col w-6/12 lg:w-4/12">
+                        <div class="image h-80 sm:h-96 lg:h-56 rounded-full" style="background-image: url({{trainer.image}}); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+                        </div>
+                        <div class="content text-white mt-6">
+                            <p class="text-lg font-bold text-center">{{ trainer.name }}</p>
+                            <p class="text-center">{{ trainer.occupation }}
+                            <div class="flex justify-center">
+                                {% if trainer.linkedin %}
+                                    <a href="{{ trainer.linkedin }}" class="p-2">
+                                    <span class="sr-only">Linkedin</span>
+                                    <img src="../../images/icons/linkedin.svg" class="h-4"/>
+                                    </a>
+                                {% endif %}
+                                {% if trainer.twitter %}
+                                    <a href="{{ trainer.twitter }}" class="p-2">
+                                    <span class="sr-only">Twitter</span>
+                                    <img src="../../images/icons/twitter.svg" class="h-4"/>
+                                    </a>
+                                {% endif %}
+                                {% if trainer.github %}
+                                    <a href="{{ trainer.github }}" class="p-2">
+                                    <span class="sr-only">Github</span>
+                                    <img src="../../images/icons/github.svg" class="h-4"/>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
 </div>
