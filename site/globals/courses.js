@@ -40,6 +40,13 @@ module.exports = async function () {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
+  if(data.excerpt){
+    data.excerpt = blocksToHtml({
+      blocks: data.excerpt,
+      serializers: serializers
+    })
+  }
+
   // Converts Portable Text to HTML
   if(data.coursePortableText){
     data.body = blocksToHtml({

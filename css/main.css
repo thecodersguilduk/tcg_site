@@ -2014,6 +2014,10 @@ input, textarea {
   opacity: 1;
 }
 
+#course .excerpt {
+  text-align: center;
+}
+
 #course .pattern {
   z-index: -1;
 }
