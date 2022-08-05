@@ -2014,6 +2014,11 @@ input, textarea {
   opacity: 1;
 }
 
+#course #trainers p {
+  color: #fff;
+  margin-bottom: unset;
+}
+
 #course .excerpt {
   text-align: center;
 }

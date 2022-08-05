@@ -10,9 +10,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     "featuredImage": featuredImage.asset->url,
     courseTopics[]->{name},
     duration[]->{name},
-    project[]->{code},
-    funder[]->{code},
-    partner[]->{code},
+    trainers[]->{...},
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
       _id,
@@ -40,9 +38,64 @@ module.exports = async function () {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
+  if(data.trainers){
+    data.trainers.forEach(trainer => {
+      trainer.image = urlFor(trainer.image).width(350).url();
+    })
+  }
+
   if(data.excerpt){
     data.excerpt = blocksToHtml({
       blocks: data.excerpt,
+      serializers: serializers
+    })
+  }
+
+  if(data.who_is_this_for){
+    data.who_is_this_for = blocksToHtml({
+      blocks: data.who_is_this_for,
+      serializers: serializers
+    })
+  }
+
+   if(data.what_you_will_get){
+    data.what_you_will_get = blocksToHtml({
+      blocks: data.what_you_will_get,
+      serializers: serializers
+    })
+  }
+
+  if(data.course_outline){
+    data.course_outline = blocksToHtml({
+      blocks: data.course_outline,
+      serializers: serializers
+    })
+  }
+
+  if(data.course_breakdown){
+    data.course_breakdown = blocksToHtml({
+      blocks: data.course_breakdown,
+      serializers: serializers
+    })
+  }
+
+  if(data.delivery){
+    data.delivery = blocksToHtml({
+      blocks: data.delivery,
+      serializers: serializers
+    })
+  }
+
+  if(data.pre_requisites){
+    data.pre_requisites = blocksToHtml({
+      blocks: data.pre_requisites,
+      serializers: serializers
+    })
+  }
+
+  if(data.bonus_takeaways){
+    data.bonus_takeaways = blocksToHtml({
+      blocks: data.bonus_takeaways,
       serializers: serializers
     })
   }
@@ -63,7 +116,9 @@ function prepPost(data) {
   }
 
   data.courseType = 'Fix this'
+
   data.courseItemImage = data.featuredImage ? urlFor(data.featuredImage).width(500).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+
   data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(1200).height(600).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 
   data.start = data.start || 'TBC'
