@@ -93,6 +93,15 @@
                 border-bottom: 1px solid #e7e7e7;
             }
 
+            ul li:before{
+                content: unset;
+            }
+
+            ul li::before{
+                content: url('../../images/icons/li_tick.png');
+                margin-right: 10px;
+            }
+
             #course_breakdown {
                 ol li {
                     padding: 15px;
