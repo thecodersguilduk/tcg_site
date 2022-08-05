@@ -14,6 +14,15 @@ export default {
         collapsed: true,
       }
     },
+    {
+      name: 'content',
+      description: 'Main Course Content',
+      title: 'Main Course Content',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    },
     { name: 'apprenticeshipOnly',
       title: 'Apprenticeship Info Only',
       description: 'Click to input data for apprenticeships only',
@@ -67,12 +76,6 @@ export default {
         ]
       },
       {
-        name: 'code',
-        type: 'string',
-        title: 'Course Code',
-        description: 'eg. 2dw-? 5di-? upsk-? rsk-? appr-?',
-      },
-      {
         name: 'courseTopics',
         type: 'array',
         description: 'Select as many as you like - what is the course relevant to?',
@@ -123,29 +126,146 @@ export default {
           maxLength: 96
       },
       {
-        name: 'qualification',
-        type: 'string',
-        fieldset: 'apprenticeshipOnly',
-        title: 'Qualification',
-        description:
-          'If applicable.'
-      },
-      {
-        name: 'level',
-        description: 'If applicable',
-        fieldset: 'apprenticeshipOnly',
-        type: 'string',
-        title: 'Level'
-      },
-      {
         name: 'featuredImage',
         type: 'image',
         title: 'Featured image'
       },
       {
         name: 'excerpt',
-        type: 'text',
+        type: 'array',
         title: 'Excerpt',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'who_is_this_for',
+        type: 'array',
+        title: 'Who is this for?',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'what_you_will_get',
+        type: 'array',
+        title: 'What you will get?',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'bonus_takeaways',
+        type: 'array',
+        title: 'Bonus Takeaways',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'course_outline',
+        type: 'array',
+        title: 'Course Outline',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'course_breakdown',
+        type: 'array',
+        title: 'Course Breakdown',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'delivery',
+        type: 'array',
+        title: 'Delivery',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'pre_requisites',
+        type: 'array',
+        title: 'Pre-Requisites',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'video_embed',
+        title: 'Video Embed',
+        type: 'string'
+      },
+      {
+        name: 'trainers',
+        type: 'array',
+        title: 'Trainers',
+        of: [
+          {
+            type: 'reference',
+            to: { type: 'team' }
+          }
+        ]
+
       },
       {
         name: 'coursePortableText',
@@ -176,30 +296,19 @@ export default {
         ]
       },
       {
-        name: 'ctaActive',
-        type: 'boolean',
-        title: 'Activate CTA',
-        description: 'Turn the CTA on here if required.',
-        fieldset: 'cta'
+        name: 'qualification',
+        type: 'string',
+        fieldset: 'apprenticeshipOnly',
+        title: 'Qualification',
+        description:
+          'If applicable.'
       },
       {
-        name: 'ctaLink',
-        title: 'Link for the Call to Action button',
+        name: 'level',
+        description: 'If applicable',
+        fieldset: 'apprenticeshipOnly',
         type: 'string',
-        fieldset: 'cta'
-      },
-      {
-        title: 'Course Location',
-        fieldset: 'cta',
-        name: 'location',
-        description: 'Choose ONE location only',
-        type: 'string',
-        options: {
-          list: [
-            { title: 'Manchester', value: 'Greater Manchester' },
-            { title: 'Yorkshire', value: 'Yorkshire' }
-          ],
-        },
-      },
+        title: 'Level'
+      }
     ]
 }

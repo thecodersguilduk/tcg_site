@@ -11,6 +11,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     courseTopics[]->{name},
     duration[]->{name},
     trainers[]->{...},
+    logos[]->{...},
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
       _id,
@@ -150,6 +151,7 @@ function prepPost(data) {
     //data.testimonials.avatar = urlFor(data.testimonials.avatar).url();
   }
 
+  console.log(data.logos)
   return data
 }
 
