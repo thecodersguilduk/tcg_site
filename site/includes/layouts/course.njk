@@ -36,10 +36,11 @@ body_class: apprenticeship-employer
         </header>
       </div>
       <div class="lg:w-6/12 pt-24 lg:pt-0 order-1 lg:order-2 flex items-center justify-center mb-6 lg:mb-0">
-        <img src="../../images/blog/course-hero-image.jpg" class="rounded z-20" alt="{{course.title}}" />
+        <img src="{{course.featuredImage}}" class="rounded z-20" alt="{{course.title}}" />
         <object type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden lg:block absolute pattern pattern-145"></object>
       </div>
     </div>
+    {% include '../components/courses/logos.njk' %}
   <!-- TO DO - add logos components -->
   </div>
 </section>
