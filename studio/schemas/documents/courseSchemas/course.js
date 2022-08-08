@@ -58,7 +58,14 @@ export default {
       {
         name: 'featuredImage',
         type: 'image',
-        title: 'Featured image'
+        title: 'Featured image',
+        fields: [
+          {
+            title: 'Alt Text',
+            name: 'alt',
+            type: 'text'
+          }
+        ]
       },
       {
         name: 'start',
@@ -140,6 +147,8 @@ export default {
           list: [
             { title: 'Full Time', value: 'Full Time' },
             { title: 'Part Time', value: 'Part Time' },
+            { title: 'Remote', value: "Remote" },
+            { title: 'Classroom Based', value: 'Classroom Based' },
             { title: 'On Demand', value: 'On Demand' },
           ],
         },
@@ -343,7 +352,11 @@ export default {
             to: { type: 'team' }
           }
         ]
-
+      },
+      {
+        name: 'link',
+        title: 'Course Direct Apply Link',
+        type: 'string'
       },
       {
         name: 'coursePortableText',
