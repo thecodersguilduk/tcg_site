@@ -56,9 +56,11 @@ body_class: apprenticeship-employer
 <section id="content" class="section-rounded z-10">
   {% include '../components/courses/content.njk' %}
 </section>
-<section id="trainers">
-  {% include '../components/courses/trainers.njk' %}
-</section>
+{% if course.trainers.length > 0%}
+  <section id="trainers">
+    {% include '../components/courses/trainers.njk' %}
+  </section>
+{% endif %}
 <section id="testimonials" class="my-12">
     {% include '../components/courses/course-testimonial.njk' %}
 </section>
