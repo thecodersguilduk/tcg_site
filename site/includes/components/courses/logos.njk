@@ -3,9 +3,7 @@
     <div class="flex flex-wrap lg:flex-nowrap w-full container">
         {% for logo in course.logos %}
             <div class="p-1 w-4/12 lg:w-2/12">
-                <div class="bg-white p-2 lg:p-6 flex items-center justify-center h-full rounded">
-                    <img src="{{logo}}" alt="Course funded by..." class="h-16" />
-                </div>
+                <img src="{{logo}}" alt="Course funded by..." class="h-full w-full rounded"  />
             </div>
         {% endfor %}
     </div>
