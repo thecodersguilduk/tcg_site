@@ -43,25 +43,37 @@
             </div>
         </div>
         <div class="w-full lg:w-8/12 lg:px-16 content">
-            <div id="who_is_this_for" class="py-8 border-b-2 border-lightblue-500">
-                {{course.who_is_this_for | safe }}
-            </div>
-            <div id="what_you_get" class="py-8 border-b-2 border-lightblue-500">
-                {{course.what_you_will_get | safe }}
-                {{course.bonus_takeaways | safe }}
-            </div>
-            <div id="course_outline" class="py-8 border-b-2 border-lightblue-500">
-                {{course.course_outline | safe }}
-            </div>
-            <div id="course_breakdown" class="py-8 border-b-2 border-lightblue-500">
-                {{course.course_breakdown | safe }}
-            </div>
-            <div id="delivery" class="py-8 border-b-2 border-lightblue-500">
-                {{ course.delivery | safe }}
-            </div>
-            <div id="pre_requisites" class="py-8 border-b-2 border-lightblue-500">
-                {{ course.pre_requisites | safe }}
-            </div>
+            {% if course.who_is_this_for %}
+                <div id="who_is_this_for" class="py-8 border-b-2 border-lightblue-500">
+                    {{course.who_is_this_for | safe }}
+                </div>
+            {% endif %}
+            {% if course.what_you_get %}
+                <div id="what_you_get" class="py-8 border-b-2 border-lightblue-500">
+                    {{course.what_you_will_get | safe }}
+                    {{course.bonus_takeaways | safe }}
+                </div>
+            {% endif %}
+            {% if course.course_ouline %}
+                <div id="course_outline" class="py-8 border-b-2 border-lightblue-500">
+                    {{course.course_outline | safe }}
+                </div>
+            {% endif %}
+            {% if course.course_breakdown %}
+                <div id="course_breakdown" class="py-8 border-b-2 border-lightblue-500">
+                    {{course.course_breakdown | safe }}
+                </div>
+            {% endif %}
+            {% if course.delivery %}
+                <div id="delivery" class="py-8 border-b-2 border-lightblue-500">
+                    {{ course.delivery | safe }}
+                </div>
+            {% endif %}
+            {% if course.pre-requisites %}
+                <div id="pre_requisites" class="py-8 border-b-2 border-lightblue-500">
+                    {{ course.pre_requisites | safe }}
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
