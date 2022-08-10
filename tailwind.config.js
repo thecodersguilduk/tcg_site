@@ -298,6 +298,9 @@ module.exports = {
         extrabold: '800',
         black: '900',
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       height: theme => ({
         auto: 'auto',
         ...theme('spacing'),
