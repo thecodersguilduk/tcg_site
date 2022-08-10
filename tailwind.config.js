@@ -10,6 +10,7 @@ module.exports = {
         md: '768px',
         lg: '1024px',
         xl: '1280px',
+        xxxl: '1480px'
       },
       colors: {
         transparent: 'transparent',
@@ -40,7 +41,7 @@ module.exports = {
           600: '#e53e3e',
           700: '#c53030',
           800: '#9b2c2c',
-          900: '#742a2a',
+          900: '#BB4E69',
         },
         orange: {
           100: '#fffaf0',
@@ -120,7 +121,7 @@ module.exports = {
           600: '#805ad5',
           700: '#6b46c1',
           800: '#553c9a',
-          900: '#21183c',
+          900: '#5350A5',
         },
         pink: {
           100: '#fff5f7',
@@ -297,6 +298,9 @@ module.exports = {
         extrabold: '800',
         black: '900',
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       height: theme => ({
         auto: 'auto',
         ...theme('spacing'),
@@ -305,6 +309,7 @@ module.exports = {
       }),
       inset: {
         '0': '0',
+        '100': '100px',
         auto: 'auto',
         '-16': '-4rem',
       },
@@ -366,6 +371,7 @@ module.exports = {
         '0': '0',
         full: '100%',
         screen: '100vh',
+        '80': '80vh'
       },
       minWidth: {
         '0': '0',
@@ -448,6 +454,7 @@ module.exports = {
       zIndex: {
         auto: 'auto',
         '0': '0',
+        '1': '1',
         '10': '10',
         '20': '20',
         '30': '30',

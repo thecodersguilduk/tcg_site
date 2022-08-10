@@ -10,9 +10,8 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     "featuredImage": featuredImage.asset->url,
     courseTopics[]->{name},
     duration[]->{name},
-    project[]->{code},
-    funder[]->{code},
-    partner[]->{code},
+    trainers[]->{...},
+    logos[]->{logo},
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
       _id,
@@ -40,6 +39,68 @@ module.exports = async function () {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
+  if(data.trainers){
+    data.trainers.forEach(trainer => {
+      trainer.image = urlFor(trainer.image).width(350).url();
+    })
+  }
+
+  if(data.excerpt){
+    data.excerpt = blocksToHtml({
+      blocks: data.excerpt,
+      serializers: serializers
+    })
+  }
+
+  if(data.who_is_this_for){
+    data.who_is_this_for = blocksToHtml({
+      blocks: data.who_is_this_for,
+      serializers: serializers
+    })
+  }
+
+   if(data.what_you_will_get){
+    data.what_you_will_get = blocksToHtml({
+      blocks: data.what_you_will_get,
+      serializers: serializers
+    })
+  }
+
+  if(data.course_outline){
+    data.course_outline = blocksToHtml({
+      blocks: data.course_outline,
+      serializers: serializers
+    })
+  }
+
+  if(data.course_breakdown){
+    data.course_breakdown = blocksToHtml({
+      blocks: data.course_breakdown,
+      serializers: serializers
+    })
+  }
+
+  if(data.delivery){
+    data.delivery = blocksToHtml({
+      blocks: data.delivery,
+      serializers: serializers
+    })
+  }
+
+  if(data.pre_requisites){
+    data.pre_requisites = blocksToHtml({
+      blocks: data.pre_requisites,
+      serializers: serializers
+    })
+  }
+
+  if(data.bonus_takeaways){
+    data.bonus_takeaways = blocksToHtml({
+      blocks: data.bonus_takeaways,
+      serializers: serializers
+    })
+  }
+
   // Converts Portable Text to HTML
   if(data.coursePortableText){
     data.body = blocksToHtml({
@@ -55,9 +116,11 @@ function prepPost(data) {
     })
   }
 
-  data.courseType = data.courseType[0].courseType
+  data.courseType = data.courseType ? data.courseType[0].courseType : 'Get Ahead'
+
   data.courseItemImage = data.featuredImage ? urlFor(data.featuredImage).width(500).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
-  data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(1200).height(600).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+
+  data.featuredImage = data.featuredImage ? urlFor(data.featuredImage).width(530).height(353).url() : 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 
   data.start = data.start || 'TBC'
 
@@ -71,22 +134,18 @@ function prepPost(data) {
     data.location = data.location[0]
   }
 
-  if (data.partner) {
-    data.partner = data.partner[0].code
-  }
-  if (data.funder) {
-    data.funder = data.funder[0].code
-  }
-  if (data.project) {
-    data.project = data.project[0].code
-  }
-
   if(data.testimonials){
     data.testimonials.forEach(testimonial => {
       testimonial.avatar = urlFor(testimonial.avatar).url();
     })
     //data.testimonials.avatar = urlFor(data.testimonials.avatar).url();
   }
+
+  if( data.logos ){
+    data.logos = data.logos.map(logo => (urlFor(logo.logo).url()));
+  }
+
+  console.log(data.attendance);
 
   return data
 }

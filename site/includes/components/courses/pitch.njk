@@ -1,0 +1,63 @@
+<div>
+    <div class="inner max-w-5xl">
+        <div class="excerpt">
+            {{ course.excerpt | safe }}
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-center my-0 lg:my-12 md:justify-between">
+    {% if course.part_time_learning %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/part_time_icon.svg" alt="Part time learning available">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">Part time Learning</p>
+        </div>
+    {% endif %}
+    {% if course.one_or_two_sessions_per_week %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/session_icon.svg" alt="Part time learning available">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">One or two sessions per week</p>
+        </div>
+    {% endif %}
+    {% if course.evenings_available %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/evenings_available.svg" alt="Part time learning available">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">Evenings Available</p>
+        </div>
+        {% endif %}
+        {%if course.one_session_per_week %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/session_icon.svg" alt="Part time learning available">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">One session per week</p>
+        </div>
+        {% endif %}
+        {% if course.two_day_workshop %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/workshop_icon.svg" alt="2 Day Workshops">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">2 Day Workshop</p>
+        </div>
+        {% endif %}
+        {% if course.group_and_one_on_one_learning %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/Group.svg" alt="Group and 1-1 Learning">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">Group and 1-1 Learning</p>
+        </div>
+        {% endif %}
+        {% if course.super_fast_roi %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/roi_icon.svg" alt="Super Fast ROI">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">Super Fast ROI</p>
+        </div>
+        {% endif %}
+        {% if course.three_half_days %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/three_half_days.svg" alt="Part time learning available">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">3 X half day sessions</p>
+        </div>
+        {% endif %}
+        {% if course.expert_professionals %}
+        <div class="flex flex-col my-6">
+            <img class="max-h-12" src="../../images/icons/Expert.svg" alt="Learn from expert professionals">
+            <p class="mt-4 text-lg text-blue-200 font-bold text-center">Learn from expert professionals</p>
+        </div>
+        {% endif %}
+    </div>
+</div>

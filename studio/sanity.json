@@ -3,9 +3,29 @@
   "project": {
     "name": "tcg"
   },
+  "__experimental_spaces" : [
+    {
+      "name": "production",
+      "title": "production",
+      "default": true,
+      "api": {
+        "projectId": "wd1bon7z",
+        "dataset": "production"
+      }
+    },
+    {
+      "name": "courses",
+      "title": "courses",
+      "default": false,
+      "api": {
+        "projectId": "wd1bon7z",
+        "dataset": "course-directory"
+      }
+    }
+  ],
   "api": {
     "projectId": "wd1bon7z",
-    "dataset": "production"
+    "dataset": "course-directory"
   },
   "plugins": [
     "@sanity/base",

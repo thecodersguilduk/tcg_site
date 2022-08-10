@@ -123,19 +123,18 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                                  <div class="w-6/12 mb-2 md:mb-0">
                                     <p class="flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/location.svg" alt="{{item.courseType}}" /></span>
-                                       Classroom
-                                    </p>
+                                       {{item.attendance}}</p>
                                  </div>
                                  <div class="w-6/12">
                                     <p class="flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/calendar.svg" alt="{{item.courseType}}" /></span>
-                                       {% if item.duration %}{% if item.duration.length < 2 %}  {{item.duration[0]}} {% else %} Multiple Options Available {% endif %}{% endif %}
+                                       {{item.start | dateDisplay}}
                                     </p>
                                  </div>
                                  <div class="w-6/12">
                                     <p class=" flex items-center text-sm font-medium text-gray-900">
                                        <span class="mr-2"><img style="height: 20px;" src="../../images/course-directory/clock.svg" alt="{{item.courseType}}" /></span>
-                                       {{item.attendance}}
+                                       {{item.duration}}
                                     </p>
                                  </div>
                               </div>

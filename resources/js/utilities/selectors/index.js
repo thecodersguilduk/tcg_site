@@ -8,6 +8,8 @@ const $$ = {
 
     header              : document.getElementById('header'),
 
+    courseCTAHeader     : document.getElementById('cours-cta-header'),
+
     nav                 : document.getElementById('nav'),
 
     hero                : document.getElementById('hero'),

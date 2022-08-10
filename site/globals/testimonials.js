@@ -27,7 +27,7 @@ function prepData(data) {
       data.tag = data.tag.map(item => item.title);
     }
 
-    console.log(data);
+    //console.log(data);
     return data
 }
 

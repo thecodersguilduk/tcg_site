@@ -6,9 +6,28 @@ export default {
     attendance: 'Full Time'
   },
   fieldsets: [
-    { name: 'cta',
+    {
+      name: 'cta',
       description: 'Activate the CTA here if required',
       title: 'Course CTA Field',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    },
+    {
+      name: 'Benefits',
+      description: 'Renders the icons under the 10s pitch',
+      title: 'Benefits',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
+    },
+    {
+      name: 'content',
+      description: 'Main Course Content',
+      title: 'Main Course Content',
       options: {
         collapsible: true,
         collapsed: true,
@@ -37,9 +56,35 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'featuredImage',
+        type: 'image',
+        title: 'Featured image',
+        fields: [
+          {
+            title: 'Alt Text',
+            name: 'alt',
+            type: 'text'
+          }
+        ]
+      },
+      {
         name: 'start',
         type: 'date',
         title: 'Course Start Date'
+      },
+      {
+        name: 'logos',
+        type: 'array',
+        title: 'Funders & Partners',
+        of: [
+          {
+            type: 'reference',
+             to: [
+               { type: 'courseFunder'},
+               { type: 'coursePartners' }
+              ]
+          }
+        ]
       },
       {
         name: 'tags',
@@ -65,12 +110,6 @@ export default {
             }
           }
         ]
-      },
-      {
-        name: 'code',
-        type: 'string',
-        title: 'Course Code',
-        description: 'eg. 2dw-? 5di-? upsk-? rsk-? appr-?',
       },
       {
         name: 'courseTopics',
@@ -108,6 +147,8 @@ export default {
           list: [
             { title: 'Full Time', value: 'Full Time' },
             { title: 'Part Time', value: 'Part Time' },
+            { title: 'Remote', value: "Remote" },
+            { title: 'Classroom Based', value: 'Classroom Based' },
             { title: 'On Demand', value: 'On Demand' },
           ],
         },
@@ -123,29 +164,199 @@ export default {
           maxLength: 96
       },
       {
-        name: 'qualification',
-        type: 'string',
-        fieldset: 'apprenticeshipOnly',
-        title: 'Qualification',
-        description:
-          'If applicable.'
-      },
-      {
-        name: 'level',
-        description: 'If applicable',
-        fieldset: 'apprenticeshipOnly',
-        type: 'string',
-        title: 'Level'
-      },
-      {
-        name: 'featuredImage',
-        type: 'image',
-        title: 'Featured image'
-      },
-      {
         name: 'excerpt',
-        type: 'text',
+        type: 'array',
         title: 'Excerpt',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'part_time_learning',
+        title: 'Part Time Learning',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'one_or_two_sessions_per_week',
+        title: 'One or Two Sessions per Week',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'evenings_available',
+        title: 'Evenings Available',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'one_session_per_week',
+        title: 'One Session per Week',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'two_day_workshop',
+        title: 'Two Day Workshop',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'group_and_one_on_one_learning',
+        title: 'Group and One on One learning',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'super_fast_roi',
+        title: 'Super Fast ROI',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'three_half_days',
+        title: 'Three Half Days',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'expert_professionals',
+        title: 'Expert Professionals',
+        type: 'boolean',
+        fieldset: 'Benefits'
+      },
+      {
+        name: 'who_is_this_for',
+        type: 'array',
+        title: 'Who is this for?',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'what_you_will_get',
+        type: 'array',
+        title: 'What you will get?',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'bonus_takeaways',
+        type: 'array',
+        title: 'Bonus Takeaways',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'course_outline',
+        type: 'array',
+        title: 'Course Outline',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'course_breakdown',
+        type: 'array',
+        title: 'Course Breakdown',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+            {
+        name: 'delivery',
+        type: 'array',
+        title: 'Delivery',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'pre_requisites',
+        type: 'array',
+        title: 'Pre-Requisites',
+        fieldset: 'content',
+        of: [
+          { type: 'block'},
+          { type: 'applyBtn' },
+          { type: 'imageSection' },
+          { type: 'break' },
+          { type: 'newsletter' },
+          { type: 'form' },
+          { type: 'youtubeEmbed'}
+        ]
+      },
+      {
+        name: 'video_embed',
+        title: 'Video Embed',
+        type: 'string'
+      },
+      {
+        name: 'trainers',
+        type: 'array',
+        title: 'Trainers',
+        of: [
+          {
+            type: 'reference',
+            to: { type: 'team' }
+          }
+        ]
+      },
+      {
+        name: 'link',
+        title: 'Course Direct Apply Link',
+        type: 'string'
       },
       {
         name: 'coursePortableText',
@@ -176,30 +387,19 @@ export default {
         ]
       },
       {
-        name: 'ctaActive',
-        type: 'boolean',
-        title: 'Activate CTA',
-        description: 'Turn the CTA on here if required.',
-        fieldset: 'cta'
+        name: 'qualification',
+        type: 'string',
+        fieldset: 'apprenticeshipOnly',
+        title: 'Qualification',
+        description:
+          'If applicable.'
       },
       {
-        name: 'ctaLink',
-        title: 'Link for the Call to Action button',
+        name: 'level',
+        description: 'If applicable',
+        fieldset: 'apprenticeshipOnly',
         type: 'string',
-        fieldset: 'cta'
-      },
-      {
-        title: 'Course Location',
-        fieldset: 'cta',
-        name: 'location',
-        description: 'Choose ONE location only',
-        type: 'string',
-        options: {
-          list: [
-            { title: 'Manchester', value: 'Greater Manchester' },
-            { title: 'Yorkshire', value: 'Yorkshire' }
-          ],
-        },
-      },
+        title: 'Level'
+      }
     ]
 }

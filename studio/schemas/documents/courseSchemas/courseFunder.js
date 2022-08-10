@@ -12,6 +12,11 @@ export default {
           title: 'Funder Code',
           name: 'code',
           type: 'string'
+      },
+      {
+        title: 'Logo',
+        name: 'logo',
+        type: 'image'
       }
     ]
   }
