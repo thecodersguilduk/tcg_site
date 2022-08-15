@@ -10,10 +10,12 @@ function getChildren(parent, className) {
   let children = Array.from(parent.childNodes);
 
   children.map(childEl => {
-    if (childEl.classList.contains(className)) {
-      child = childEl;
-    }
-  });
+    if(childEl.classList){
+        if (childEl.classList.contains(className)) {
+          child = childEl;
+        }
+      }
+    });
 
   return child;
 }
@@ -28,15 +30,16 @@ const ShowHide = function ShowHide() {
     btn.addEventListener('click', function(e) {
       parentNode = this.parentNode;
 
-      content = getChildren(parentNode, 'footer-dropdown-content');
+     content = getChildren(parentNode, 'footer-dropdown-content');
 
       if (!content) return;
 
       iconDown = getChildren(this, 'fa-angle-down');
       iconUp = getChildren(this, 'fa-angle-up');
 
+
       content.maxHeight = content.scrollHeight;
-  
+
       if (!content.style.maxHeight) {
         iconDown.classList.remove('fa-angle-down');
         iconDown.classList.add('fa-angle-up');
