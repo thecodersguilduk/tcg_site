@@ -1233,8 +1233,10 @@ function getChildren(parent, className) {
 
   var children = Array.from(parent.childNodes);
   children.map(function (childEl) {
-    if (childEl.classList.contains(className)) {
-      child = childEl;
+    if (childEl.classList) {
+      if (childEl.classList.contains(className)) {
+        child = childEl;
+      }
     }
   });
   return child;
