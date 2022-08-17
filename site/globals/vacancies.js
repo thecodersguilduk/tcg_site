@@ -6,7 +6,6 @@ const config = require('../globals/config');
 
 const query = `*[_type == "vacancies" && isActive && !(_id in path("drafts.**"))] {
     ...,
-    location[]->{name},
     questions[]->{...}
 } | order(_createdAt desc)`
 
@@ -26,7 +25,7 @@ module.exports = async function () {
 function prepPost(data) {
 
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
-
+  console.log(data);
     return data
 }
 
