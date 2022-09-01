@@ -11,7 +11,7 @@ body_class: apprenticeship-employer
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
-                                    <h1>{{location}} Digital Skills Hub {% if page.url === '/ldcf/' %}// Leeds Digital Careers Festival{% endif %}</h1>
+                                    <h1>{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% endif %}</h1>
                                     <p class="font-bold text-lightblue-500 mb-4"><span> {% if location === 'Greater Manchester' %}Businesses and employees people in {{location}}! Gain qualifications with our free coding and
                                     digital skills courses.{% else %}Are you eager to learn new skills? You can apply for one of our FREE digital courses!
                                     Whether you want to broaden your job prospects or simply upgrade your skill set, you can get training and support from industry experts with our digital courses
@@ -62,13 +62,11 @@ body_class: apprenticeship-employer
                                 <img src="../../images/LocalAuthLogos/uk_skills.png" alt="UK Skills Academy logo"  class="max-h-10 mt-12 mx-auto" />
                             {% elif tag === 'wyca' %}
                                 {% include '../components/hub/west-yorks-intro.njk' %}
-                            {% elif tag === 'hey' %}
-                                {% include '../components/hub/hey-intro.njk' %}
-                            {% elif tag === 'yny' %}
-                                {% include '../components/hub/yny-intro.njk' %}
                             {% endif %}
+
                             {% if location !== 'Greater Manchester' %}
-                            <h2 class="text-center">Register your Interest for our Digital Skills Courses Across Yorkshire & Humber</h2>
+
+                            <h2 class="text-center">{% if page.url !== '/ldcf/'%}Register your Interest for our Digital Skills Courses Across Yorkshire & Humber{% else %}Upskill/Reskill yourself with these 100% funded courses{% endif %}</h2>
                             <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a>, <a href="https://www.sheffcol.ac.uk/" target="_blank">Sheffield College and Skills Connect</a> and <a href="https://www.futuregoals.co.uk/learn/free-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across the Yorkshire & Humber regions.
                             </p>
                             <p>Our Skills Bootcamps offer flexible courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts.
