@@ -25,7 +25,7 @@ const validateForm = function validateForm() {
       }
 
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs.length);
+      //console.log(invalidInputs.length);
 
       if($$.submitBtn){
         $$.submitBtn.disabled = invalidInputs.length > 0 ? true : false;

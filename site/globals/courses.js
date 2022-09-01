@@ -145,7 +145,7 @@ function prepPost(data) {
     data.logos = data.logos.map(logo => (urlFor(logo.logo).url()));
   }
 
-  console.log(data.attendance);
+  //console.log(data.attendance);
 
   return data
 }

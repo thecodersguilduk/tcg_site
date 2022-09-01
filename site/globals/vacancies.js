@@ -25,7 +25,7 @@ module.exports = async function () {
 function prepPost(data) {
 
     data.closingDate = dateDisplay(data.closingDate) || 'Ongoing'
-  console.log(data);
+  //console.log(data);
     return data
 }
 

@@ -112,9 +112,6 @@ module.exports = eleventyConfig => {
     return array.slice(1, limit);
   });
 
-  eleventyConfig.addFilter('log', function (value) {
-    return console.log(value)
-  })
   // Minify our HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (outputPath.endsWith(".html")) {
@@ -153,6 +150,15 @@ module.exports = eleventyConfig => {
     // Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
     blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
     // Make sortedPosts the array for the collection
+
+    return blogs;
+  })
+
+  eleventyConfig.addCollection('ldcf', collection => {
+
+    let blogs = collection.getFilteredByTag('LDCF')
+
+    console.log(blogs.length);
 
     return blogs;
   })
