@@ -894,8 +894,7 @@ var validateForm = function validateForm() {
         input.setAttribute('data-valid', false);
       }
 
-      invalidInputs = this.querySelectorAll('[data-valid="false"]');
-      console.log(invalidInputs.length);
+      invalidInputs = this.querySelectorAll('[data-valid="false"]'); //console.log(invalidInputs.length);
 
       if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;

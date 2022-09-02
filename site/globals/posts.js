@@ -45,6 +45,9 @@ function prepPost(data) {
   // Returns back to our main function
   // data.avatar = urlFor(data.avatar);
   data.avatar = urlFor(data.avatar[0]).width(100).url();
+
+  //console.log(data.tags);
+
   return data
 }
 
