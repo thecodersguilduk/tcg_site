@@ -11,7 +11,7 @@ body_class: apprenticeship-employer
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
-                                    <h1>{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% endif %}</h1>
+                                    <h1>{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% else %} #LCDF22 {% endif %}</h1>
                                     <p class="font-bold text-lightblue-500 mb-4"><span> {% if location === 'Greater Manchester' %}Businesses and employees people in {{location}}! Gain qualifications with our free coding and
                                     digital skills courses.{% else %}Are you eager to learn new skills? You can apply for one of our FREE digital courses!
                                     Whether you want to broaden your job prospects or simply upgrade your skill set, you can get training and support from industry experts with our digital courses
@@ -26,9 +26,9 @@ body_class: apprenticeship-employer
                                             <li class="mb-0">Supporting the {{location}} community through providing free courses for
                                             those over 16 years of age, enabling career progression within tech and other digital industries.</li>
                                         {% else %}
-                                            <li class="mb-0"><strong>Businesses</strong> in {{ location }} to fill the digital skills gap and increase productivity</li>
+                                            <li class="mb-0"><strong>Businesses {% if page.url === '/york-north-yorkshire/'%} and Self Employed {% endif %}</strong> in {{ location }} to fill the digital skills gap and increase productivity</li>
                                             <li class="mb-0"><strong>Career Changers</strong> work to get ahead in digital</li>
-                                            <li class="mb-0"><strong>un/underemployed</strong> to get a job in tech</li>
+                                            <li class="mb-0"><strong>{% if page.url === '/york-north-yorkshire/'%} Recently Unemployed (within the last 12 months){% else %}un/underemployed{% endif %}</strong> to get a job in tech</li>
                                         {% endif %}
                                         </ul>
                                     {% endif %}
