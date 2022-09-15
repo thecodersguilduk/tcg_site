@@ -158,6 +158,16 @@ module.exports = eleventyConfig => {
 
     let blogs = collection.getFilteredByTag('LDCF')
 
+    const blogsWithUpdatedDates = blogs.map(blog => {
+      // If the item has a data.post object (from external Data)
+      // Then set a new date based on the date property
+      // Else return the original date (takes care of the Markdown)
+      blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date
+      return blog
+    })
+
+    blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date)
+
     console.log(blogs.length);
 
     return blogs;
