@@ -92,11 +92,11 @@ permalink: /jobs/apprenticeship-vacancies/
             {# <div>
 
               <p class="font-bold text-xs">Salary Range</p>
-              <label for="salary range" class="text-xs">£24k-£36k</label>
+              <label for="salary range" class="text-xs">24k-36k</label>
               <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
                 max="100" step="1" value="18" />
               <div class="flex flex-row justify-between">
-                <p class="flex text-xs">£18k</p>
+                <p class="flex text-xs">18k</p>
                 <p class="flex text-xs">100k</p>
               </div>
             </div> #}
@@ -146,7 +146,7 @@ permalink: /jobs/apprenticeship-vacancies/
                     <div class="flex flex-col align-start justify-self-start w-full">
                       <div class="flex justify-between w-full">
                         <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-                        <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+                        <span class="font-bold p-0 m-0">{%if job.salary%}{{job.salary}}{%else%}DOE{%endif%}</span>
                       </div>
                       <h5 class="p-0 my-2">{{job.employerName}}</h5>
                       <h5 class="text-sm">{{job.standard}}</h5>
