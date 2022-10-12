@@ -14,14 +14,14 @@
                     <div class="flex flex-col align-start justify-self-start w-full">
                     <div class="flex justify-between w-full">
                         <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-                        <span class="font-bold p-0 m-0">{%if job.salary%}£{{job.salary}}{%else%}DOE{%endif%}</span>
+                        <span class="font-bold p-0 m-0">{%if job.salary%}{{job.salary}}{%else%}DOE{%endif%}</span>
                     </div>
                     <h5 class="p-0 my-2">{{job.employerName}}</h5>
                     <h5 class="text-sm">{{job.standard}}</h5>
 
                     <div class="flex flex-row flex-wrap items-center items-end">
                         <div class="flex items-center my-2 sm:my-0">
-                        <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location}}</span>{% endfor %}
+                        <img src="../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{%for location in job.location %}<span class="mr-4 text-sm">{{location.name}}</span>{% endfor %}
                         </div>
                         <div class="flex items-center mr-4 my-2 sm:my-0">
                         <img src="../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
@@ -47,7 +47,7 @@
             {% endfor %}
             </div>
             <div class="mx-auto mt-10 flex justify-center">
-                <a href="../apprenticeship-vacancies/" class="mx-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" style="color:#2574a9;">See all Vacancies</a>
+                <a href="../jobs/apprenticeship-vacancies/" class="mx-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" style="color:#2574a9;">See all Vacancies</a>
             </div>
         </div>
 </section>
