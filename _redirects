@@ -1,8 +1,11 @@
-/promo/                         /ldcf/
-/west-yorkshire/                /yorkshire-humber/
-/york-north-yorkshire/          /yorkshire-humber/
-/west-yorkshire/                /yorkshire-humber/
-/hull-east-yorkshire/           /yorkshire-humber/
+/promo/                         /
+/ldcf/                          /york-north-yorkshire/
+/yorkshire-humber/              /york-north-yorkshire/
+/greater-manchester/            /york-north-yorkshire/
+/west-yorkshire/                /york-north-yorkshire/
+/york-north-yorkshire/          /york-north-yorkshire/
+/west-yorkshire/                /york-north-yorkshire/
+/hull-east-yorkshire/           /york-north-yorkshire/
 /employer-software-dev/         /course-directory/
 /employer-software-test/        /course-directory/
 /applicant-software-dev/        /course-directory/
