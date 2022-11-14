@@ -145,7 +145,14 @@ function prepPost(data) {
     data.logos = data.logos.map(logo => (urlFor(logo.logo).url()));
   }
 
-  //console.log(data.attendance);
+  if(data.ctaBanner){
+    data.ctaBanner = blocksToHtml({
+      blocks: data.ctaBanner,
+      serializers: serializers
+    })
+  }
+
+  console.log(data.ctaBanner);
 
   return data
 }
@@ -165,6 +172,9 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
+    ctaBanner: ({node : { img, title, subTitle }}) => h("div", {
+
+    }),
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).width().url(),
     }),

@@ -48,7 +48,12 @@ body_class: apprenticeship-employer
 <section id="pitch">
   <div class="post inner content md:px-20 mx-auto mt-12">
     {% include '../components/courses/pitch.njk' %}
-    {% include '../components/courses/banner-cta.njk' %}
+    {% if page.url !== '/course-directory/agile-a-practical-guide-with-scrum-and-kanban-2-days/'%}
+      {% include '../components/courses/banner-cta.njk' %}
+    {% endif %}
+    {% if page.url === '/course-directory/agile-a-practical-guide-with-scrum-and-kanban-2-days/' %}
+      {% include '../components/courses/paidctabanner.njk' %}
+    {% endif %}
   {% if course.video_embed %}
     {% include '../components/courses/video.njk' %}
   {% endif %}

@@ -26,6 +26,7 @@ import newsletter from './documents/components/newsletter'
 import form from './documents/components/form'
 import locations from './documents/locations'
 import youtube from './documents/components/youtubeEmbed'
+import bannerCTA from './documents/components/bannerCTA'
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
@@ -63,6 +64,7 @@ export default createSchema({
     vacancies,
     interviewQuestions,
     locations,
-    youtube
+    youtube,
+    bannerCTA
   ]),
 })

@@ -387,6 +387,14 @@ export default {
         ]
       },
       {
+        name: 'ctaBanner',
+        title: 'CTA Banner',
+        type: 'array',
+        of: [
+          { type: 'bannerCTA' }
+        ]
+      },
+      {
         name: 'qualification',
         type: 'string',
         fieldset: 'apprenticeshipOnly',
