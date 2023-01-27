@@ -124,12 +124,15 @@ layout: default
               </div>
             </div>
 
+            {% if job.slug.current !== "apprentice-admin-assistant-tcg" %}
             <div class="mb-4">
               <div class="flex-column mt-2">
                 <label for="CV" class="text-md font-medium mt-10">Upload your CV</label>
                 <input type="file" class="flex mt-2 mb-4" id="cv" name="CV" />
               </div>
             </div>
+            {% endif %}
+
 
             {% for item in job.questions %}
               <div class="mb-4">
@@ -181,6 +184,7 @@ layout: default
               </div>
             {% endfor %}
 
+            {% if job.slug.current !== "apprentice-admin-assistant-tcg" %}
             <div class="mb-4">
               <label for="question 3" class="block text-md font-medium text-black mt-3">What's something outside of your work
                 that you're passionate about?</label>
@@ -198,6 +202,7 @@ layout: default
                 name="additional comments">
               </textarea>
             </div>
+            {% endif %}
 
             <div class="mb-4">
               <div class="flex-column mt-2">
