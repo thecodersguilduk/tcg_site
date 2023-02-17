@@ -2,6 +2,10 @@ import submenu from "../../modules/submenu"
 
 const $$ = {
 
+    courseApply         : document.getElementById('courseApply'),
+
+    applyBtnSubmit      : document.getElementById('apply-btn-submit'),
+
     body                : document.querySelector('body'),
 
     wrapper             : document.getElementById('wrapper'),

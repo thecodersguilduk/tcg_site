@@ -754,6 +754,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @modules/submenu */ "./resources/js/modules/submenu/index.js");
 /* harmony import */ var _modules_expression_interest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @modules/expression-interest */ "./resources/js/modules/expression-interest/index.js");
 /* harmony import */ var _modules_course_cta_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @modules/course-cta-header */ "./resources/js/modules/course-cta-header/index.js");
+/* harmony import */ var _modules_course_apply_validation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @modules/course-apply-validation */ "./resources/js/modules/course-apply-validation/index.js");
 // Import local modules
 
 
@@ -768,6 +769,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/modules/course-apply-validation/index.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/modules/course-apply-validation/index.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+
+var courseApplyValidation = function courseApplyValidation() {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseApply) return;
+  var submitBtn = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyBtnSubmit;
+  var form = document.forms.namedItem('courseApply');
+  form.addEventListener('change', function (e) {
+    var input = e.target.closest('.form-input-field') || e.target.closest('.form-checkbox'); // let radios = document.querySelectorAll('input[type="radio');
+
+    if (!input) return;
+
+    if (input.type === 'radio') {
+      input = form.querySelectorAll("input[name='".concat(input.name, "']"));
+      input.forEach(function (item) {
+        item.setAttribute('data-valid', true);
+      });
+    } else {
+      input.value !== '' ? input.setAttribute('data-valid', true) : input.setAttribute('data-valid', false);
+    }
+
+    var invalidInputs = this.querySelectorAll('[data-valid="false"]');
+    console.log(invalidInputs);
+
+    if (submitBtn) {
+      submitBtn.disabled = invalidInputs.length > 0 ? true : false;
+    }
+  });
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (courseApplyValidation);
 
 /***/ }),
 
@@ -894,7 +939,7 @@ var validateForm = function validateForm() {
         input.setAttribute('data-valid', false);
       }
 
-      invalidInputs = this.querySelectorAll('[data-valid="false"]'); //console.log(invalidInputs.length);
+      invalidInputs = this.querySelectorAll('[data-valid="false"]');
 
       if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
@@ -1607,6 +1652,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
 
 var $$ = {
+  courseApply: document.getElementById('courseApply'),
+  applyBtnSubmit: document.getElementById('apply-btn-submit'),
   body: document.querySelector('body'),
   wrapper: document.getElementById('wrapper'),
   header: document.getElementById('header'),
