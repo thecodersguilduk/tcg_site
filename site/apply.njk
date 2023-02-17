@@ -42,7 +42,7 @@ tag: 'apprentice-vacancies'
                         </div>
                         <div class="lg:w-1/2 max-w-md not-on-print mx-auto">
                         <h2 class="leading-3xl text-2xl mb-6">Apply Now</h2>
-                            <form autocomplete="off" id="contact-form" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto relative" action="/thanks-applications/">
+                            <form autocomplete="off" id="courseApply" name="course-apply" method="POST" netlify netlify-honeypot="bot-field" class="max-x-2xl mx-auto relative" action="/thanks-applications/">
                             <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                             <p class="hidden">
                                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -101,18 +101,89 @@ tag: 'apprentice-vacancies'
                             <div class="mt-8">
                                 <p>
                                     <label for="ni" class="sr-only">Your NI Number:</label>
-                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your National Insurance Number" />
+                                    <input type="text" name="ni" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-valid="false" placeholder="Your National Insurance Number" />
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="Not a valid NI Number" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
                                 <p>
-                                    <label for="why_this_course" class="sr-only">Why have you chosen this course:</label>
-                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course*" required></textarea>
+                                    <label for="education" class="">Are you currently in Education, including an Apprenticeship*</label>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="education" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="education_YES">Yes</label>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="education" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="education_No">No</label>
+                                            </div>
+                                        </div>
+                                 </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="interview" class="">Have you taken a Skills Bootcamp before?*</label>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="skills_connect" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="skills_connect_YES">Yes</label>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="skills_connect" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="skills_connect_No">No</label>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="skills_connect" type="radio" value="Not Sure" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="skills_connect_NOT_SURE">Not Sure</label>
+                                            </div>
+                                        </div>
+                                 </p>
+                            </div>
+                            <div class="mt-8">
+                                <p>
+                                    <label for="why_this_course" class="sr-only">Please tell us why you would like to do this course:</label>
+                                    <textarea id="why_this_course" row="5" name="why_this_course" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Tell us why you would like to do this course*" required data-valid="false"></textarea>
                                     <span class="form-error text-xs leading-xs text-red-100" data-message="This field is required" aria-hidden="true" role="alert"></span>
                                 </p>
                             </div>
                             <div class="mt-8">
+                                <p>
+                                    <label for="interview" class="">Please confirm you are willing to attend interview for jobs in the West Yorkshire area*</label>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="interview" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="interview_YES">Yes</label>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input name="interview" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
+                                            </div>
+                                            <div class="ml-3 text-sm leading-5">
+                                                <label for="interview_No">No</label>
+                                            </div>
+                                        </div>
+                                 </p>
+                            </div>
+                            {# <div class="mt-8">
                                 <p>
                                     <label for="disability" class="">Do you consider yourself to have a disability?*</label>
                                     <select name="disability" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
@@ -122,8 +193,8 @@ tag: 'apprentice-vacancies'
                                         <option value="Prefer not to say">Prefer not to say</option>
                                     </select>
                                 </p>
-                            </div>
-                            <div class="mt-8">
+                            </div> #}
+                            {# <div class="mt-8">
                                 <p>
                                     <label for="gender" class="">Which of the following most accurately describes you?*</label>
                                     <select name="gender" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
@@ -136,8 +207,8 @@ tag: 'apprentice-vacancies'
                                         <option value="Prefer not to say">Prefer not to say</option>
                                     </select>
                                 </p>
-                            </div>
-                            <div class="mt-8">
+                            </div> #}
+                            {# <div class="mt-8">
                                 <p>
                                     <label for="sexuality" class="">Do you consider yourself LGBTQ+?*</label>
                                     <select name="sexuality" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
@@ -147,8 +218,8 @@ tag: 'apprentice-vacancies'
                                         <option value="Prefer Not to Say">Prefer not to say</option>
                                     </select>
                                 </p>
-                            </div>
-                            <div class="mt-8">
+                            </div> #}
+                            {# <div class="mt-8">
                                 <p>
                                     <label for="ethnicity" class="">What is your Ethnicity?*</label>
                                     <select name="ethnicity" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
@@ -162,8 +233,8 @@ tag: 'apprentice-vacancies'
                                         <option value="Prefer not to say">Prefer not to say</option>
                                     </select>
                                 </p>
-                            </div>
-                            <div class="mt-8">
+                            </div> #}
+                            {# <div class="mt-8">
                                 <p>
                                     <label for="employment_status" class="">What is your current employment status?*</label>
                                     <select name="employment_status" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" data-valid="false" required>
@@ -175,13 +246,13 @@ tag: 'apprentice-vacancies'
                                         <option value="Unemployed">Not currently employed</option>
                                     </select>
                                 </p>
-                            </div>
+                            </div> #}
                             <div class="mt-8">
                                 <p>
                                     <label for="rtw_status" class="">Do you have the Right to Work in the UK?*</label>
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
-                                                <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
+                                                <input name="rtw_status" type="radio" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
                                             </div>
                                             <div class="ml-3 text-sm leading-5">
                                                 <label for="rtw_status">Yes</label>
@@ -189,13 +260,13 @@ tag: 'apprentice-vacancies'
                                         </div>
                                         <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
-                                                <input name="rtw_status" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
+                                                <input name="rtw_status" type="radio" value="No" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
                                             </div>
                                             <div class="ml-3 text-sm leading-5">
                                                 <label for="rtw_status_No">No</label>
                                             </div>
                                         </div>
-                                                                                                                        <div class="relative flex items-start">
+                                                                                                                                                                <div class="relative flex items-start">
                                             <div class="flex items-center h-5">
                                                 <input name="rtw_status" type="radio" value="Not Sure" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" required />
                                             </div>
@@ -208,15 +279,14 @@ tag: 'apprentice-vacancies'
                             <div class="mt-8">
                                 <div class="relative flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false
-                                        " required />
+                                        <input name="privacy" type="checkbox" value="Yes" class="form-checkbox h-4 w-4 mt-1 mb-1 block required" data-valid="false" required />
                                     </div>
                                     <div class="ml-3 text-sm leading-5">
                                         <label for="privacy_yes">Tick here to indicate you have read and agreed to our <a href="https://thecodersguild.org.uk/pdf/Privacy%20Policy%20v1.2.pdf" target="_blank" rel="noreferrer">privacy policy</a></label>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 disabled:opacity-50 active:opacity-100
+                            <button id="apply-btn-submit" type="submit" class="mt-8 apply-form-submit rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 disabled:opacity-50 active:opacity-100
                         transition duration-150 ease-in-out" disabled>Submit Application</button>
                         <p class="text-sm">Wish to speak to us about your application? Click here to <a href="https://calendly.com/sarah-1661/course-info">book a call</a> with us.</p>
                         </form>
