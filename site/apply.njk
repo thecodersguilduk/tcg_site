@@ -49,7 +49,24 @@ tag: 'apprentice-vacancies'
                             </p>
                             <input id="title" type="hidden" name="title" value="" />
                             <input id="cN" type="hidden" name="cN" value="" />
-                            <div>
+                            <div class="mt-4">
+                                <p><label for="course_choice" class="">Which course are you interested in?</label>
+                                </p>
+                                <div class="relative flex items-start">
+
+                                        <select class="form-input-field rounded block w-full py-2 px-3 border-1" name="course_choice">
+                                            <option disabled selected value="">Please Select</option>
+                                            {% for item in courses %}
+                                                {% if item.title !== course.title and item.courseType !== 'Apprenticeship' and item.isActive %}
+                                                    <option value="{{ item.title }}">{{ item.title }}</option>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <option value="Any/Not Sure">Any/Not Sure</option>
+                                        </select>
+
+                                </div>
+                            </div>
+                            <div class="mt-8">
                                 <p>
                                     <label for="first_name" class="sr-only">First Name:</label>
                                     <input type="text" name="firstName" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" data-regex="^[a-zA-Z ]+$" data-valid="false" placeholder="First Name*" required />

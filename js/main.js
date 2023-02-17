@@ -790,11 +790,10 @@ var courseApplyValidation = function courseApplyValidation() {
   var submitBtn = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyBtnSubmit;
   var form = document.forms.namedItem('courseApply');
   form.addEventListener('change', function (e) {
-    var input = e.target.closest('.form-input-field') || e.target.closest('.form-checkbox'); // let radios = document.querySelectorAll('input[type="radio');
-
+    var input = e.target.closest('.form-input-field') || e.target.closest('.form-checkbox');
     if (!input) return;
 
-    if (input.type === 'radio') {
+    if (input.type === 'radio' || input.type === 'checkbox') {
       input = form.querySelectorAll("input[name='".concat(input.name, "']"));
       input.forEach(function (item) {
         item.setAttribute('data-valid', true);
@@ -804,7 +803,6 @@ var courseApplyValidation = function courseApplyValidation() {
     }
 
     var invalidInputs = this.querySelectorAll('[data-valid="false"]');
-    console.log(invalidInputs);
 
     if (submitBtn) {
       submitBtn.disabled = invalidInputs.length > 0 ? true : false;
