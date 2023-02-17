@@ -7,11 +7,10 @@ const courseApplyValidation = function courseApplyValidation() {
 
     form.addEventListener('change', function(e){
         let input = e.target.closest('.form-input-field') || e.target.closest('.form-checkbox');
-        // let radios = document.querySelectorAll('input[type="radio');
 
         if(!input) return
 
-        if(input.type === 'radio'){
+        if(input.type === 'radio' || input.type === 'checkbox'){
             input = form.querySelectorAll(`input[name='${input.name}']`);
             input.forEach(item => {
                 item.setAttribute('data-valid', true);
@@ -21,8 +20,6 @@ const courseApplyValidation = function courseApplyValidation() {
         }
 
         let invalidInputs = this.querySelectorAll('[data-valid="false"]');
-
-        console.log(invalidInputs);
 
         if(submitBtn){
           submitBtn.disabled = invalidInputs.length > 0 ? true : false;
