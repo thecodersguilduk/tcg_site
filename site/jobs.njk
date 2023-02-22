@@ -38,7 +38,7 @@ title: Vacancies at The Coders Guild
                 </div>
               </div>
               <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-                <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="/jobs/{{ job.slug.current }}/index.html" style="color:white;">Apply Now</a>
+                <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" {% if job.slug.current === 'apprentice-admin-assistant-tcg' %} href="https://www.findapprenticeship.service.gov.uk/apprenticeship/1000131065" target="_blank" {% else %}href="/jobs/{{ job.slug.current }}/index.html"{% endif %} style="color:white;">Apply Now</a>
                 <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="{{job.pdf}}" target="_blank" style="color:#2574a9;">Find Out More</a>
               </div>
 
