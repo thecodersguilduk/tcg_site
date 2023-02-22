@@ -73,10 +73,16 @@
               <div class="bg-blue-200 not-on-print">
                 <div class="inner sm:px-4 lg:px-8 lg:max-w-screen-xl py-2">
                   <div class="flex -mx-6 flex-wrap">
-                    <div class="text-white px-6 mb-1 md:mb-0 text-xs md:text-sm">&copy; 2022 The Coders Guild ltd. All rights reserved.</div>
+                    <div class="text-white px-6 mb-1 md:mb-0 text-xs md:text-sm">&copy; <span id="footerCurrentYear"></span> The Coders Guild ltd. All rights reserved.</div>
                     <div class="text-white px-6 mb-1 md:mb-0 text-xs md:text-sm">Reg England and Wales: 9622444</div>
                     <div class="text-white px-6 text-xs md:text-sm">UKPRN 10058030</div>
                   </div>
                 </div>
               </div>
             </footer>
+
+<script>
+  const currentYear = new Date().getFullYear();
+  const el = document.getElementById('footerCurrentYear')
+  el.innerText = currentYear
+</script>
