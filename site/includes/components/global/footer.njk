@@ -17,8 +17,8 @@
                         {% for social in navigation.social_links %}
                           <li class="px-1">
                             <span class="sr-only">Find us on
-                              {{ social.label }}</span>
-                            <a href="{{ social.url }}" class="rounded h-10 w-10 lg:h-8 lg:w-8 flex justify-center items-center bg-blue-100">
+                              {{ social.title }}</span>
+                            <a href="{{ social.url }}" class="rounded h-10 w-10 lg:h-8 lg:w-8 flex justify-center items-center bg-blue-100" aria-label="{{ social.title }}">
                               <i class="fab {{ social.icon }} text-white"></i>
                             </a>
                           </li>
