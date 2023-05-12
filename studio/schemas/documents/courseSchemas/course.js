@@ -73,6 +73,11 @@ export default {
         title: 'Course Name'
       },
       {
+        name: 'subtitle',
+        type: 'string',
+        title: 'Course SubTitle'
+      },
+      {
         name: 'featuredImage',
         type: 'image',
         title: 'Featured image',
