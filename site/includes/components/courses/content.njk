@@ -36,7 +36,7 @@
                             <strong>{{ course.start | dateDisplay }}</strong>
                         </div>
                         <div>
-                            <a href="#contact" class="flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-100 py-2 px-4 rounded"><span class="text-white font-bold">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+                            <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-100 py-2 px-4 rounded"><span class="text-white font-bold">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,6 @@
         item.addEventListener('click', function(){
             content.forEach(item => {
                 if(match === item.id){
-                console.log('match')
                     item.classList.add('pt-24');
                 } else {
                     item.classList.remove('pt-24');

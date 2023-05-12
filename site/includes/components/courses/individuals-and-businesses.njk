@@ -7,7 +7,7 @@
             <h3 class="text-white text-center text-2xl">Individuals</h3>
             <p class="text-white text-lg text-center">If you live or work in West Yorkshire it is very likely that you will be eligible for 100% funding.</p>
             <div class="bg-white rounded px-4 py-2 my-4">
-                <p class="text-center"><a href="https://calendly.com/sarah-1661/course-info" class="text-lightblue-500 font-bold">Apply Now</a></p>
+                <p class="text-center"><a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="text-lightblue-500 font-bold">Apply Now</a></p>
             </div>
             <p class="text-center"><a class="book-a-call-short-course text-center mt-4 text-white text-underline font-bold" href="#" data-modal="book-a-call-short-course">Book a call</a></p>
     </div>

@@ -8,7 +8,7 @@
 
         <div class="cta bg-gradient-to-r from-blue-200 to-blue-100 flex flex-col lg:flex-row justify-between px-8 py-4 rounded">
         <p class="text-center lg:text-left text-white max-w-3xl leading-xl lg:leading-md text-lg mb-4 lg:mb-0 lg:w-9/12">If you live or work in <strong>West Yorkshire</strong> it is very likely that you will be eligible for <strong>100% funding.</strong></p>
-        <a href="#contact" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-0 text-lightblue-500 rounded text-center">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i></a>
+        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-0 text-lightblue-500 rounded text-center">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i></a>
         </div>
     </div>
     <div class="flex items-center justify-around mx-auto mt-8 w-full sm:w-7/12">
