@@ -12,6 +12,10 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     duration[]->{name},
     trainers[]->{...},
     logos[]->{logo},
+    instances[] {
+      date,
+      description
+    },
     coursePortableText,
     "testimonials": *[_type=='testimonial' && references(^._id)]{
       _id,
@@ -145,7 +149,11 @@ function prepPost(data) {
     data.logos = data.logos.map(logo => (urlFor(logo.logo).url()));
   }
 
-  //console.log(data.attendance);
+  if(data.title === 'Skills Bootcamp in Web Design and Development'){
+    console.log(data);
+  }
+
+
 
   return data
 }

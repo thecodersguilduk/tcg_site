@@ -1,0 +1,34 @@
+<div class="bg-white py-24 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl sm:text-center">
+      <h2 class="text-base font-semibold leading-7 text-blue-200 text-lg">Upcoming Courses</h2>
+      <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Choose the best delivery for you</p>
+    </div>
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 sm:text-center">We have new courses coming up all the time. If the delivery patterns below are not suitable for you please get in touch and we will let you know about future courses - <a href="mailto:applications@thecodersguild.org.uk?subject={{course.title}}">applications@thecodersguild.org.uk</a></p>
+    <div class="mt-20 flow-root">
+      <div class="isolate -mt-16 grid grid-cols-1 gap-y-16 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0 xl:-mx-4">
+        {% for instance in course.instances %}
+        <div class="pt-16 lg:px-8 lg:pt-0 xl:px-14">
+          <h3 class="text-base font-semibold leading-7 text-gray-900">Week Commencing</h3>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <span id="date" class="text-5xl font-bold tracking-tight text-gray-900">{{ instance.date | dateDisplay }}</span>
+          </p>
+          <a href="#" aria-describedby="date" class="mt-10 block rounded-md bg-blue-200 px-3 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 !important"><span class="text-white">Apply Now</span></a>
+          <p class="mt-10 text-sm font-semibold leading-6 text-gray-900">Everything necessary to get started.</p>
+          <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
+            <li class="flex gap-x-3 items-center">
+              Drop in sessions for additional support
+            </li>
+            <li class="flex gap-x-3 items-center">
+              Occassional 30 min lunch sessions
+            </li>
+            <li class="flex gap-x-3 items-center">
+              1-1 support sessions at your convenience
+            </li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

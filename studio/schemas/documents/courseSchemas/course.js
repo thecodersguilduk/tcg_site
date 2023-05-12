@@ -1,3 +1,20 @@
+import { format } from 'date-fns';
+import React from 'react';
+
+const CourseInstancePreview = ({ value }) => {
+  if (!value || !value.date) {
+    return <div>No course instance date specified</div>;
+  }
+
+  const formattedDate = format(new Date(value.date), 'dd/MM/yyyy hh:mm a');
+
+  return (
+    <div>
+      <div>{formattedDate}</div>
+    </div>
+  );
+};
+
 export default {
   name: 'course',
   type: 'document',
@@ -177,6 +194,44 @@ export default {
           { type: 'form' },
           { type: 'youtubeEmbed'}
         ]
+      },
+      {
+        name: 'instances',
+        title: 'Instances',
+        type: 'array',
+        of: [
+          {
+            name: 'instance',
+            title: 'Instance',
+            type: 'object',
+            fields: [
+              {
+                name: 'date',
+                title: 'Date',
+                type: 'datetime',
+                description: 'The date of this course instance',
+              },
+              {
+                name: 'description',
+                title: 'Description',
+                type: 'array',
+                of: [
+                  {
+                    type: 'block'
+                  }
+                ],
+                description: 'A description of this course instance',
+              },
+            ],
+            preview: {
+              select: {
+                date: 'date',
+                description: 'description',
+              },
+              component: CourseInstancePreview,
+            },
+          },
+        ],
       },
       {
         name: 'part_time_learning',
