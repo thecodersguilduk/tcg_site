@@ -13,12 +13,12 @@ body_class: apprenticeship-employer
       <div class="logo mr-8 hidden sm:block">
         <img class="block h-10 md:h-10 w-auto" src="../../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" alt="The Coders Guild Logo">
       </div>
-      <div class="title">
-        <p class="text-blue-200 text-sm md:text-md lg:text-lg font-bold">{{ course.title }}</p>
+      <div class="title mr-2">
+        <p class="text-blue-200 text-xs sm:text-sm md:text-md lg:text-lg font-bold">{{ course.title }}</p>
       </div>
     </div>
     <div>
-      <a href="#contact" class="px-2 md:px-4 py-2 bg-blue-200"><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+      <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="px-2 md:px-4 py-2 bg-blue-200" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
     </div>
   </div>
 </section>
@@ -30,9 +30,10 @@ body_class: apprenticeship-employer
         <div class="lg:w-6/12 order-2 lg:order-1">
           <header class="md:w-8/12">
             <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
+            <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-4xl">{{course.subtitle}}</h2>
             <p class="mb-2 text-sm font-bold">{{course.duration}}</p>
             <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts: <strong> {{ course.start | dateDisplay }}</strong></p>
-            <a href="#contact" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+            <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
             <a href="#" data-modal="cd-send-info" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
           </header>
         </div>
