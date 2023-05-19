@@ -6,7 +6,7 @@
     </div>
     <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 sm:text-center">We have new courses coming up all the time. If the delivery patterns below are not suitable for you please get in touch and we will let you know about future courses - <a href="mailto:applications@thecodersguild.org.uk?subject={{course.title}}">applications@thecodersguild.org.uk</a></p>
     <div class="mt-20 flow-root">
-      <div class="isolate -mt-16 grid grid-cols-1 gap-y-16 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0 xl:-mx-4">
+      <div class="isolate -mt-16 grid grid-cols-1 gap-y-8 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0 xl:-mx-4">
         {% for instance in course.instances | limit(3) %}
         <div class="pt-8 lg:px-8 lg:pt-0 xl:px-4">
           <h3 class="text-base font-semibold leading-7 text-gray-900">Week Commencing</h3>
