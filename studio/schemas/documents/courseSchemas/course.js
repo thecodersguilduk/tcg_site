@@ -148,19 +148,6 @@ export default {
         ]
       },
       {
-        name: 'duration',
-        description: 'Non-apprenticeship courses only',
-        type: 'array',
-        of: [
-          {
-            type: 'reference',
-            to: {
-              type: 'courseDuration'
-            }
-          }
-        ]
-      },
-      {
         title: 'Attendance',
         description: 'Non-apprenticeship courses only - only one can be selected - please contact the administrator for more details',
         name: 'attendance',
@@ -417,34 +404,6 @@ export default {
         name: 'link',
         title: 'Course Direct Apply Link',
         type: 'string'
-      },
-      {
-        name: 'coursePortableText',
-        type: 'array',
-        title: 'Body',
-        of: [
-          { type: 'block'},
-          { type: 'applyBtn' },
-          { type: 'imageSection' },
-          { type: 'break' },
-          { type: 'newsletter' },
-          { type: 'form' },
-          { type: 'youtubeEmbed'}
-        ]
-      },
-      {
-        name: 'coursePortableText2',
-        type: 'array',
-        title: 'Second block of text (if applicable)',
-        of: [
-          { type: 'block'},
-          { type: 'applyBtn' },
-          { type: 'imageSection' },
-          { type: 'break' },
-          { type: 'newsletter' },
-          { type: 'form' },
-          { type: 'youtubeEmbed'}
-        ]
       },
       {
         name: 'qualification',
