@@ -5,7 +5,7 @@
       <div class="">
         <h2 class="text-center mt-8">Book a call with us</h2>
         <p class="text-center mb-8">Thinking of upskilling some or even all of your team? Fill in the form to let us know the best number to get you on and we’ll be in touch to arrange a time.</p>
-        <p class="mb-4">Looking to join a course yourself? <a href="{% if course.link %}}{{ course.link }}{% else %}#contact{% endif %}">See if you're eligible here!</a></p>
+        <p class="mb-4">Looking to join a course yourself? <a data-modal="book-a-call-short-course" href="{% if course.link %}}{{ course.link }}{% else %}#contact{% endif %}">See if you're eligible here!</a></p>
       </div>
       <div class="">
         <form action="thanks-short-course" netlify netlify-honeypot="tcg-h0ney-p0t" name="book-a-call-short-course-modal" method="POST">
