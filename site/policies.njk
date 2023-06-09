@@ -19,10 +19,8 @@ title: Policies - full list
       </div>
       <div class="policy-list">
         {% for policy in policies_list %}
-          <a href="{{ policy.pdf_link }}" target="_blank" class="policy flex flex-wrap pointer hover:text-blue-200 py-4 px-6 border-1 border-grey-200 mb-4 md:mb-2 flex-test hover:shadow-primary focus:shadow-primary policy-item">
-            <p class="font-bold sm:flex-2 w-full pr-4">{{ policy.title }}</p>
-            <p class="text-sm flex-1 text-grey-300">{{ policy.version }}</p>
-            <p class="text-sm flex-1 text-grey-300">{{ policy.updated_date | dateDisplay }}</p>
+          <a href="{{ policy.link }}" target="_blank" class="policy flex flex-wrap pointer hover:text-blue-200 py-4 px-6 border-1 border-grey-200 mb-4 md:mb-2 flex-test hover:shadow-primary focus:shadow-primary policy-item">
+            <p class="font-bold sm:flex-2 w-full pr-4">{{ policy.name }}</p>
           </a>
         {% endfor %}
       </div>
