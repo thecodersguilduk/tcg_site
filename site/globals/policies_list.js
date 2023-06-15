@@ -4,7 +4,7 @@ const axios = require("axios");
 const MONDAY_API_KEY = process.env.MONDAY_API_KEY;
 const BOARD_ID = process.env.POLICIESBOARD_ID;
 
-const policies = async () => {
+const fetchPolicies = async () => {
   try {
     const url = `https://api.monday.com/v2/`;
     const headers = {
@@ -13,58 +13,68 @@ const policies = async () => {
     };
 
     const query = `query {
-                boards(ids: ${BOARD_ID}) {
-                  items{
-                    name
-                    column_values(ids : ["checkbox", "file"]){
-                      id
-                      value
-                    }
-                  }
-                }
-              }
-            `;
+      boards(ids: ${BOARD_ID}) {
+        items {
+          name
+          column_values(ids: ["checkbox", "checkbox5", "file"]) {
+            id
+            value
+          }
+        }
+      }
+    }`;
 
     const response = await axios.post(url, { query }, { headers });
 
     const items = response.data.data.boards[0].items;
-    const filteredItems = items.filter((item) => {
-      const checkboxValue = item.column_values.find(
+    const policies = items.map((item) => {
+      const isPublicCheckbox = item.column_values.find(
         (column) => column.id === "checkbox"
       );
 
-      if (checkboxValue.value) {
-        const checkboxData = JSON.parse(checkboxValue.value);
-        return checkboxData.checked === "true";
-      }
+      const checkbox5Value = item.column_values.find(
+        (column) => column.id === "checkbox5"
+      );
 
-      return false;
-    });
+      const parsedPublicCheckboxValue = isPublicCheckbox.value
+        ? JSON.parse(isPublicCheckbox.value)
+        : "false";
 
-    const mappedItems = filteredItems.map((item) => {
-      const columnValues = item.column_values;
-      let fileLink;
+      const parsedCheckbox5Value = checkbox5Value.value
+        ? JSON.parse(checkbox5Value.value)
+        : "false";
 
-      if (columnValues) {
-        const parsedColumnValues = JSON.parse(columnValues[0].value);
-        fileLink = parsedColumnValues.files[0].linkToFile;
-      } else {
-        fileLink = "";
+      const fileValue = item.column_values.find(
+        (column) => column.id === "file"
+      );
+
+      const inFooter =
+        checkbox5Value && parsedCheckbox5Value.checked === "true";
+
+      const isPublic =
+        isPublicCheckbox && parsedPublicCheckboxValue.checked === "true";
+
+      let fileLink = "";
+      if (fileValue) {
+        const parsedFileValue = JSON.parse(fileValue.value);
+        if (parsedFileValue.files.length > 0) {
+          fileLink = parsedFileValue.files[0].linkToFile;
+        }
       }
 
       return {
         name: item.name,
-        link: fileLink,
+        inFooter: inFooter,
+        fileLink: fileLink,
+        isPublic: isPublic,
       };
     });
 
-    return mappedItems;
+    return policies;
   } catch (error) {
     console.error("Error fetching data from Monday.com API:", error);
     return error;
   }
 };
 
-console.log(policies());
-
-module.exports = policies;
+module.exports = fetchPolicies;
