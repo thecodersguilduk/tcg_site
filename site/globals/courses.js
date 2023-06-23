@@ -11,7 +11,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     courseTopics[]->{name},
     duration[]->{name},
     trainers[]->{...},
-    logos[]->{logo},
+    logos[]->{logo, partnerName},
     instances[] {
       date,
       description
@@ -134,7 +134,6 @@ function prepPost(data) {
     ? data.courseType[0].courseType
     : "Get Ahead";
 
-
   data.courseItemImage = data.featuredImage
     ? urlFor(data.featuredImage).width(500).url()
     : "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
@@ -143,12 +142,12 @@ function prepPost(data) {
     ? urlFor(data.featuredImage).width(530).height(353).url()
     : "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
 
-  data.start = data.instances ? data.instances[0].date : 'TBC';
+  data.start = data.instances ? data.instances[0].date : "TBC";
 
-  if(data.duration){
-    data.duration = data.duration.map(item => item.name);
+  if (data.duration) {
+    data.duration = data.duration.map((item) => item.name);
   } else {
-    data.duration = 'Ongoing';
+    data.duration = "Ongoing";
   }
 
   if (data.location) {
@@ -161,6 +160,8 @@ function prepPost(data) {
     });
   }
 
+  data.partners = data.logos ? data.logos.map((logo) => logo.partnerName) : [];
+
   data.logos = data.logos
     ? data.logos.map((logo) => urlFor(logo.logo).width(200).url())
     : [];
@@ -168,7 +169,6 @@ function prepPost(data) {
   data.isFunded = data.logos.length > 0;
 
   return data;
-
 }
 
 function urlFor(source) {
