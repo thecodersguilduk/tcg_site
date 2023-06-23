@@ -103,21 +103,6 @@ function prepPost(data) {
     });
   }
 
-  // Converts Portable Text to HTML
-  if (data.coursePortableText) {
-    data.body = blocksToHtml({
-      blocks: data.coursePortableText,
-      serializers: serializers,
-    });
-  }
-
-  if (data.coursePortableText2) {
-    data.additionalText = blocksToHtml({
-      blocks: data.coursePortableText2,
-      serializers: serializers,
-    });
-  }
-
   if (data.instances) {
     data.instances = data.instances.map((instance) => {
       if (instance.description) {
