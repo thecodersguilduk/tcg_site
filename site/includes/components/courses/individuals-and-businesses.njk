@@ -5,7 +5,7 @@
             <img src="../../images/icons/individual_icon.svg" alt="Digital Courses for individuals">
         </div>
             <h3 class="text-white text-center text-2xl">Individuals</h3>
-            <p class="text-white text-lg text-center">If you live or work in West Yorkshire it is very likely that you will be eligible for 100% funding.</p>
+            <p class="text-white text-lg text-center">{% if course.isFunded %}If you live or work in West Yorkshire it is very likely that you will be eligible for 100% funding.{% else %}Bolster your skillset and supercharge your career with this interactive group training{% endif %}</p>
             <div class="bg-white rounded px-4 py-2 my-4">
                 <p class="text-center"><a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="text-lightblue-500 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now</a></p>
             </div>

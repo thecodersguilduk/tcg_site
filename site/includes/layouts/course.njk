@@ -31,7 +31,10 @@ body_class: apprenticeship-employer
           <header class="md:w-8/12">
             <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
             <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-4xl">{{course.subtitle}}</h2>
-            <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts: <strong> {{ course.start | dateDisplay }}</strong></p>
+            {% if course.isFunded %}
+            <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:    <strong> {{ course.start | dateDisplay }}</strong>
+            </p>
+            {% endif %}
             <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
             <a href="#" data-modal="cd-send-info" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
           </header>
@@ -53,7 +56,9 @@ body_class: apprenticeship-employer
     {# {% if course.instances %}
       {% include '../components/courses/course-instances.njk' %}
     {% endif %} #}
-    {% include '../components/courses/banner-cta.njk' %}
+    {% if course.isFunded %}
+      {% include '../components/courses/banner-cta.njk' %}
+    {% endif %}
   {% if course.video_embed %}
     {% include '../components/courses/video.njk' %}
   {% endif %}
@@ -70,9 +75,11 @@ body_class: apprenticeship-employer
 <section id="testimonials" class="my-12">
     {% include '../components/courses/course-testimonial.njk' %}
 </section>
+{% if course.isFunded %}
 <section id="further-cta">
     {% include '../components/courses/further-cta.njk' %}
 </section>
+{% endif %}
 <section id="footer-cta">
   {% include '../components/courses/individuals-and-businesses.njk' %}
 </section>
