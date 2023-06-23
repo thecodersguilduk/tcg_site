@@ -149,9 +149,13 @@ function prepPost(data) {
     //data.testimonials.avatar = urlFor(data.testimonials.avatar).url();
   }
 
-  if (data.logos) {
-    data.logos = data.logos.map((logo) => urlFor(logo.logo).width(200).url());
-  }
+  data.logos = data.logos
+    ? data.logos.map((logo) => urlFor(logo.logo).width(200).url())
+    : [];
+
+  data.isFunded = data.logos.length > 0;
+
+  console.log(data.title, data.isFunded);
 
   if (data.title === "Skills Bootcamp in Web Design and Development") {
     console.log(data);
