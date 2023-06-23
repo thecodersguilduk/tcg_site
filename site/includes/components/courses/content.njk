@@ -30,6 +30,7 @@
                         {% endif %}
                         </ul>
                     </div>
+                    {% if course.isFunded %}
                     <div class="bg-green-100 flex flex-col rounded p-4">
                         <div>
                             <p class="text-center text-black mb-4 leading-sm">Next Course Starts:
@@ -39,6 +40,7 @@
                             <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-100 py-2 px-4 rounded"><span class="text-white font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
