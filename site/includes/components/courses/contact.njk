@@ -7,7 +7,7 @@
         </div>
         <div class="w-full md:w-6/12 px-2 lg:px-16 mt-8 md:mt-0">
             <h2 class="text-white">Let's get this show on the road!</h2>
-            <p class="text-white">Find out if you qualify for 100% funding for this course by completing this short callback form.</p>
+            <p class="text-white">{% if course.isFunded %}Find out if you qualify for 100% funding for this course by completing this short callback form.{% else %}Register your interest in this course to be kept in the loop about upcoming dates and funding.{% endif %}</p>
             {% include '../contact/expression-of-interest-form.njk' %}
         </div>
     </div>
