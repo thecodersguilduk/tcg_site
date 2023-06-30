@@ -1,14 +1,12 @@
-require('dotenv').config();
-import $$ from '@utilities/selectors';
-import config from '../../../../site/globals/config';
+require("dotenv").config();
+import $$ from "@utilities/selectors";
+import config from "../../../../site/globals/config";
 
+const vacancyFilters = (function vacancyFilters() {
+  if (!$$.vacancies) return;
 
-const vacancyFilters = function vacancyFilters(){
-    if (!$$.vacancies) return;
-
-    const url = `https://${config.PROJECTID}.api.sanity.io/v${config.apiVersion}/<path>`
-    console.log(config)
-}();
+  const url = `https://${config.PROJECTID}.api.sanity.io/v${config.apiVersion}/<path>`;
+})();
 
 // const filterOptions = document.querySelector('.filterOptions')
 // const resetIcon = document.querySelector('.resetIcon')
@@ -19,10 +17,8 @@ const vacancyFilters = function vacancyFilters(){
 // const noresults = document.querySelector('.no-results')
 // //const url = `https://${process.env.PROJECTID}.api.sanity.io/v${process.env.API_VERSION}/<path>`
 
-
 // listIcon.addEventListener('click', toggleGrid)
 // gridIcon.addEventListener('click', toggleGrid)
-
 
 // filterOptions.addEventListener('change', e => {
 //   //filter options is the container div for all the checkboxes.the event listener listens for any change, check/uncheck
