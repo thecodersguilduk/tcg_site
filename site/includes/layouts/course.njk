@@ -16,8 +16,9 @@ body_class: apprenticeship-employer
           <p class="text-blue-200 text-xs sm:text-sm md:text-md lg:text-lg font-bold">{{ course.title }}</p>
         </div>
       </div>
-      <div>
+      <div class="flex flex-col sm:flex-row">
         <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="px-2 md:px-4 py-2 bg-blue-200" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+        <a href="#contact" class="px-2 md:px-4 py-2 bg-white text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -32,10 +33,12 @@ body_class: apprenticeship-employer
               {% if course.isFunded and course.subtitle %}
               <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-4xl">{{course.subtitle}}</h2>
               {% endif %}
-              <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:    <strong> {{ course.start | dateDisplay }}</strong>
+              <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:<strong> {{ course.start | dateDisplay }}</strong>
               </p>
-
+              <div class="">
               <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+              <a href="#contact" class="px-2 md:px-4 py-2 bg-white text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+              </div>
               <a href="#" data-modal="cd-send-info" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
             </header>
           </div>
