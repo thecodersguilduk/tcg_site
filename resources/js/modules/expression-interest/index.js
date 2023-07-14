@@ -3,16 +3,14 @@ import $$ from "@utilities/selectors";
 const expressionInterest = (function expressionInterest() {
   if (!$$.expressionInterestForm) return;
 
-  // const timer = 12000
-  // const x = setTimeout(function(){
-  //     $$.expressionInterestForm.classList.add('modal--active');
-  // }, timer)
   const content = document.getElementById("content");
+  let hasBeenOpened = false;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && !hasBeenOpened) {
         $$.expressionInterestForm.classList.add("modal--active");
+        hasBeenOpened = true;
       }
     });
   });
