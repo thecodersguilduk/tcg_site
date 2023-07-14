@@ -860,11 +860,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var expressionInterest = function expressionInterest() {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return;
-  var timer = 12000;
-  var x = setTimeout(function () {
-    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add('modal--active');
-  }, timer);
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return; // const timer = 12000
+  // const x = setTimeout(function(){
+  //     $$.expressionInterestForm.classList.add('modal--active');
+  // }, timer)
+
+  var content = document.getElementById("content");
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add("modal--active");
+      }
+    });
+  });
+  observer.observe(content);
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (expressionInterest);
