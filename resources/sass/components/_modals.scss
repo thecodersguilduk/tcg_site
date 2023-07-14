@@ -1,9 +1,8 @@
 .modal {
-
   &::before {
     @apply bg-grey-300 opacity-25;
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -23,17 +22,17 @@
   .modal-inner {
     overflow: auto;
     position: relative;
-    width: calc(100% - ( 16px * 2 ));
+    width: calc(100% - (16px * 2));
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
+    transition: opacity ease-in 3s;
   }
 
   @media (min-width: 641px) {
     .modal-inner {
-        margin: 0 auto;
-
+      margin: 0 auto;
     }
   }
 
@@ -51,7 +50,7 @@
 
     &::before {
       @apply bg-grey-300;
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 50%;
@@ -65,7 +64,7 @@
 
     &::after {
       @apply bg-grey-300;
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 50%;

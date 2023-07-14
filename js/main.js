@@ -860,16 +860,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var expressionInterest = function expressionInterest() {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return; // const timer = 12000
-  // const x = setTimeout(function(){
-  //     $$.expressionInterestForm.classList.add('modal--active');
-  // }, timer)
-
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return;
   var content = document.getElementById("content");
+  var hasBeenOpened = false;
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && !hasBeenOpened) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm.classList.add("modal--active");
+        hasBeenOpened = true;
       }
     });
   });
