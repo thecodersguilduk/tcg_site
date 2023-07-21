@@ -1,158 +1,151 @@
 #course {
+  #trainers {
+    p {
+      color: #fff;
+      margin-bottom: unset;
+    }
+  }
 
-    #trainers {
-        p{
-            color: #fff;
-            margin-bottom: unset;
-        }
+  .excerpt {
+    text-align: center;
+  }
+
+  .pattern {
+    z-index: -1;
+    &-5 {
+      top: 40%;
+      left: 0;
+    }
+    &-11 {
+      top: 0%;
+      left: 40%;
+    }
+    &-16 {
+      bottom: 0;
+    }
+    &-18 {
+      right: 5%;
+      top: 15%;
+    }
+    &-98,
+    &-99 {
+      top: 25%;
+    }
+    &-280 {
+      top: 0;
+      left: 25%;
+      z-index: 10;
+    }
+    &-145 {
+      top: 40%;
+      left: 45%;
+      z-index: 1;
+    }
+    &-417 {
+      z-index: 1;
+      top: 15%;
+      right: 10%;
+    }
+    &-416 {
+      z-index: 1;
+      bottom: 15%;
+      left: 10%;
+    }
+    &-460 {
+      left: 0;
+      top: 25%;
+    }
+    &-459 {
+      right: 0;
+      top: 25%;
+    }
+    &-457 {
+      left: 15%;
+      top: 40%;
+    }
+    &-458 {
+      right: 15%;
+      top: 40%;
+    }
+  }
+
+  #content {
+    p {
+      margin-bottom: 1rem;
     }
 
-    .excerpt {
-        text-align: center;
+    .content {
+      a {
+        @apply text-blue-200 no-underline transition-all duration-300 font-bold ease-out;
+      }
+
+      ul li {
+        padding: 15px 0 5px 0;
+        border-top: 1px solid #e7e7e7;
+        font-weight: 400 !important;
+      }
+
+      ul li:last-child {
+        border-bottom: 1px solid #e7e7e7;
+      }
+
+      ul li:before {
+        content: unset;
+      }
+
+      ul li::before {
+        content: url("../../images/icons/li_tick.png");
+        margin-right: 10px;
+      }
+
+      #course_breakdown {
+        ol li {
+          padding: 15px;
+          background: #fff;
+          list-style: decimal-leading-zero inside;
+          border-radius: 4px;
+          color: #707070;
+          border: 1px solid #a6a6a6;
+        }
+
+        ol li::marker {
+          font-size: unset;
+        }
+      }
     }
-
-    .pattern {
-        z-index: -1;
-        &-5{
-            top: 40%;
-            left: 0;
-        }
-        &-11{
-            top:0%;
-            left: 40%;
-        }
-        &-16{
-            bottom: 0;
-        }
-        &-18{
-            right: 5%;
-            top: 15%;
-        }
-        &-98, &-99{
-            top: 25%;
-        }
-        &-280{
-            top: 0;
-            left: 25%;
-            z-index: 10;
-        }
-        &-145{
-            top: 40%;
-            left: 45%;
-            z-index: 1;
-        }
-        &-417{
-            z-index: 1;
-            top: 15%;
-            right: 10%;
-        }
-        &-416{
-            z-index: 1;
-            bottom: 15%;
-            left: 10%;
-        }
-        &-460{
-            left: 0;
-            top: 25%;
-        }
-        &-459{
-            right: 0;
-            top: 25%;
-        }
-        &-457{
-            left: 15%;
-            top: 40%;
-        }
-        &-458{
-            right: 15%;
-            top: 40%;
-        }
-    }
-
-    #content {
-        p {
-            margin-bottom: 1rem;
-        }
-        ol {
-            padding-left: 0 !important;
-        }
-
-        .content {
-            a {
-                @apply text-blue-200 no-underline transition-all duration-300 font-bold ease-out;
-            }
-
-
-            ul li {
-                padding: 15px 0 5px 0;
-                border-top: 1px solid #e7e7e7;
-                font-weight: 400 !important;
-            }
-
-            ul li:last-child {
-                border-bottom: 1px solid #e7e7e7;
-            }
-
-            ul li:before{
-                content: unset;
-            }
-
-            ul li::before{
-                content: url('../../images/icons/li_tick.png');
-                margin-right: 10px;
-            }
-
-            #course_breakdown {
-                ol li {
-                    padding: 15px;
-                    background: #fff;
-                    list-style: decimal-leading-zero inside;
-                    border-radius: 4px;
-                    color: #707070;
-                    border: 1px solid #a6a6a6;
-                }
-
-                ol li::marker {
-                    font-size: unset;
-                }
-            }
-
-        }
-
-    }
-
+  }
 }
 
 .courses {
-    .content {
-        p {
-            margin-bottom: 0;
-            line-height: 1.5;
-        }
-        a {
-            color: #16AEDB;
-        }
+  .content {
+    p {
+      margin-bottom: 0;
+      line-height: 1.5;
     }
+    a {
+      color: #16aedb;
+    }
+  }
 }
 
 .cta {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cta {
     p {
-        margin-bottom: 0;
+      margin-bottom: 1rem;
     }
+  }
 }
 
-@media screen and (max-width: 1024px){
-    .cta {
-        p {
-            margin-bottom: 1rem;
-        }
+@media screen and (min-width: 565px) {
+  #pitch {
+    iframe {
+      height: 400px;
     }
-}
-
-@media screen and (min-width: 565px){
-    #pitch {
-        iframe {
-            height: 400px;
-        }
-    }
+  }
 }

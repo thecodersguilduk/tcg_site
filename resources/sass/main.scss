@@ -17,6 +17,7 @@
 @tailwind utilities;
 
 //CSS Rules for blog ul and ol li styling
+#content,
 .decorated-list,
 .content {
   ul {
@@ -106,12 +107,6 @@
 :root {
   --line-border-fill: #3498db;
   --line-border-empty: #e0e0e0;
-}
-
-/// CSS for conditional 'other field' in apprentice application form.
-
-.other {
-  display: none;
 }
 
 ///Apprentice Job Index
@@ -218,6 +213,6 @@ fieldset a {
   text-decoration: none;
 }
 
-.post.content  p {
+.post.content p {
   min-height: 32px;
 }
