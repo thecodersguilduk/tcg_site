@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
   }
 
   const formData = JSON.parse(event.body);
-
+  console.log(formData);
   // You can process the form data here (send emails, store in database, etc.)
 
   return {
