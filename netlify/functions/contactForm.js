@@ -16,6 +16,6 @@ exports.handler = async (event, context) => {
     headers: {
       Location: "/thanks-contact", // Redirect to the thank you page
     },
-    body: JSON.stringify({ message: "Form submitted successfully" }),
+    body: "",
   };
 };
