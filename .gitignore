@@ -4,3 +4,5 @@ dist/
 .env
 # *.icloud
 .tar.gz
+# Local Netlify folder
+.netlify

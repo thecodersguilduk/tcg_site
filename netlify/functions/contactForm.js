@@ -1,14 +1,14 @@
 // netlify/functions/submitForm.js
 exports.handler = async (event, context) => {
-  //   if (event.httpMethod !== "POST") {
-  //     return {
-  //       statusCode: 405,
-  //       body: JSON.stringify({ error: "Method not allowed" }),
-  //     };
-  //   }
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: "Method not allowed" }),
+    };
+  }
 
-  //   const formData = JSON.parse(event.body);
-  //   console.log(formData);
+  // const formData = JSON.parse(decodeURIComponent(event.body));
+  console.log(event.body);
   // You can process the form data here (send emails, store in database, etc.)
 
   return {

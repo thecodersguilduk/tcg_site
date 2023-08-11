@@ -2,7 +2,7 @@
               <div>
                 <h2 class="leading-3xl text-2xl">Send us a message</h2>
               </div>
-              <form method="POST" action="/.netlify/functions/contactForm" id="contact-form" class="relative"><!-- The honeypot field must be named obscurely enough for bots not to figure it out, but also so that it's not accidently filled out by the users autocomplete. I'm not sure why I chose this name! -->
+              <form method="POST" action="/.netlify/functions/contactForm" id="contact-form" class="relative" enctype="application/json"><!-- The honeypot field must be named obscurely enough for bots not to figure it out, but also so that it's not accidently filled out by the users autocomplete. I'm not sure why I chose this name! -->
                 <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
                 <div>
                   <div class="mb-4">
@@ -12,11 +12,11 @@
                     <div class="relative">
                       <select id="options" name="options" type="select" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black" placeholder="What does your enquiry relate to?" maxlength="50">
                         <option>Please select an option</option>
-                        <option>I'm looking to hire an apprentice</option>
-                        <option>I'm applying for a course</option>
-                        <option>I'm currently a learner on a Coders Guild programme</option>
-                        <option>I'm from the media</option>
-                        <option>Something else</option>
+                        <option value="I'm looking to hire an apprentice">I'm looking to hire an apprentice</option>
+                        <option value="I'm applying for a course">I'm applying for a course</option>
+                        <option value="I'm currently a learner on a Coders Guild programme">I'm currently a learner on a Coders Guild programme</option>
+                        <option value="I'm from the media">I'm from the media</option>
+                        <option value="Something else">Something else</option>
                       </select>
                       <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="true" role="alert"></span>
                     </div>
