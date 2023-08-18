@@ -1,52 +1,56 @@
 const axios = require("axios");
 
 exports.handler = async (event, context) => {
-  console.log(event);
-
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
-      body: JSON.stringify({ error: "Method not allowed" }),
-    };
-  }
+  // if (event.httpMethod !== "POST") {
+  //   return {
+  //     statusCode: 405,
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Access-Control-Allow-Headers": "Content-Type",
+  //     },
+  //     body: JSON.stringify({ error: "Method not allowed" }),
+  //   };
+  // }
 
   const formData = JSON.parse(event.body);
 
-  console.log("Console log line 17" + formData);
+  //console.log("Console log line 17" + formData);
   // Construct the GraphQL mutation query
-  const mutationQuery = `
-   mutation CreateItem($boardId: Int!, $itemName: String!, $columnValues: JSON!) {
-     create_item(board_id: $boardId, item_name: $itemName, column_values: $columnValues) {
-       id
-     }
-   }
-  `;
+  //   const mutationQuery = `
+  //   mutation {
+  //     create_item(
+  //       boardId: 5011072550,
+  //       item_name: \"${formData.name}\",
+  //       column_values: {
+  //       email: \"${formData._replyto}\",
+  //       phone: \"${formData.phone}\",
+  //       message: \"${formData.message}\",
+  //       options: "General"
+  //     }) {
+  //       id
+  //       name
+  //     }
+  //   }
+  // `;
 
-  const variables = {
-    boardId: process.env.CONTACTBOARD_ID, // Replace with your actual board ID
-    itemName: formData.name,
-    columnValues: {
-      email: formData._replyto,
-      phone: formData.phone,
-      message: formData.message,
-      status: getStatusLabel(formData.options),
-    },
-  };
+  const columnValues = JSON.stringify({ name: "test" });
+  console.log(columnValues);
+  const mutationQuery = `mutation {
+    create_item(board_id: 5011072550, group_id: "Inbox", item_name: "new item", column_values: "${columnValues}") {
+      id
+    }
+  }`;
 
   try {
     // Send data to Monday.com using the API
     const response = await axios.post(
       process.env.MONDAY_API,
-      { query: { mutationQuery, variables } },
+      { query: mutationQuery },
       {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Headers": "Content-Type",
-          Authorization: process.env.MONDAY_API_KEY, // Replace with your actual Monday.com API key
+          Authorization: process.env.MONDAY_API_KEY,
         },
       }
     );
@@ -54,7 +58,7 @@ exports.handler = async (event, context) => {
     console.log("Monday.com response:", response.data);
 
     return {
-      statusCode: 302, // Redirect
+      statusCode: 200, // Redirect
       headers: {
         Location: "http://localhost:8888/thanks-contact", // Redirect to the thank you page
       },

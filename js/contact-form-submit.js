@@ -2,7 +2,6 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
-    console.log(event);
 
     const formData = new FormData(event.target);
     const formDataJSON = {};
@@ -19,7 +18,7 @@ document
       body: JSON.stringify(formDataJSON),
     });
 
-    console.log(response);
+    //console.log(response);
 
     window.location.href = response.url;
   });
