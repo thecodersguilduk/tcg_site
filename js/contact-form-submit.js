@@ -2,6 +2,7 @@ document
   .getElementById("contact-form")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
+    console.log(event);
 
     const formData = new FormData(event.target);
     const formDataJSON = {};
