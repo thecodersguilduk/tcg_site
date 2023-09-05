@@ -9,9 +9,9 @@
     <div class="mt-20 flow-root">
       <div class="isolate -mt-16 grid grid-cols-1 place-items-center gap-y-8 divide-y divide-gray-100 sm:mx-auto lg:-mx-8 lg:mt-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-3 lg:divide-x lg:divide-y-0 xl:-mx-4">
         {% for instance in course.instances | limit(3) %}
-        <div class="pt-8 md:px-8 lg:pt-0 xl:px-4">
+        <div class="pt-8 md:px-8 lg:pt-0 xl:px-4 self-start">
           <h3 class="text-base font-semibold leading-7 text-gray-900 text-center md:text-left">Week Commencing</h3>
-          <p class="mt-6 flex items-baseline gap-x-1 text-center md:text-left">
+          <p class="mt-6 items-baseline gap-x-1 text-center md:text-left">
             <span id="date" class="text-2xl font-bold text-gray-900">{{ instance.date | dateDisplay }}</span>
           </p>
           <a href="https://forms.gle/RrPafeNmXX1FBoet8" target="_blank" aria-describedby="date" class="mt-10 inline-block w-full justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white text-center rounded my-6 w-6/12 font-bold">
