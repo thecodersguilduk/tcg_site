@@ -155,16 +155,11 @@ body_class: apprenticeship-employer
                 <h2 class="text-center text-white">Hear from the Employers and Employees
                 </h2>
                 <div>
-                    <div class="md:w-9/12 mx-auto flex flex-col lg:flex-row justify-center lg:overflow-hidden">
-                    {% set usedTestimonials = [] %}
+                    <div class="md:w-9/12 mx-auto flex flex-col lg:flex-row justify-center">
                     {% for testimonial in testimonials %}
-                        {% if testimonial._id === '82f7a7e4-aa5d-4ee4-b1b5-d545d5a2f428' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74'  or testimonial._id === '9060132e-b1a9-4d67-8dc7-2daab9648afb'  or testimonial._id === '3aa99d1e-4a14-4a18-ace3-57ce7dc50392' %}
-                        {% set usedTestimonials = (setTestimonials.push(testimonial, usedTestimonials))%}
-                        {% endif %}
-                    {% endfor %}
-                    {% for testimonial in usedTestimonials %}
+                        {% if testimonial._id === '82f7a7e4-aa5d-4ee4-b1b5-d545d5a2f428' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
                             <div class="w-full lg:w-6/12 p-8">
-                                <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
+                                <div class="relative shadow-secondary bg-blue-300 text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
                                 <div class="sm:flex sm:flex-col">
                                     <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
                                     <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
@@ -173,6 +168,7 @@ body_class: apprenticeship-employer
                                 </div>
                                 </div>
                             </div>
+                            {% endif %}
                     {% endfor %}
                     </div>
                 </div>
