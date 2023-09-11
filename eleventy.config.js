@@ -195,6 +195,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('jobAdSingle', 'layouts/jobAdSingle.njk')
   eleventyConfig.addLayoutAlias('internalAd', 'layouts/internaljobapp.njk')
   eleventyConfig.addLayoutAlias('hub', 'layouts/hub.njk')
+  eleventyConfig.addLayoutAlias('home', 'layouts/home.njk')
+  eleventyConfig.addLayoutAlias('internal', 'layouts/internal.njk')
 
 
   // Include our static assets

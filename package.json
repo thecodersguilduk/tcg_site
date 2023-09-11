@@ -18,7 +18,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.1.0",
-    "@tailwindcss/ui": "^0.3.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.15",
     "axios": "^0.21.4",
     "dotenv": "^8.6.0",
     "dotenv-webpack": "^7.1.0",
@@ -27,10 +30,11 @@
     "laravel-mix": "^5.0.9",
     "laravel-mix-purgecss": "^4.2.0",
     "node-fetch": "^2.6.7",
+    "postcss": "^8.4.29",
     "resolve-url-loader": "^3.1.4",
     "sass": "^1.52.1",
     "sass-loader": "^8.0.0",
-    "tailwindcss": "^1.9.6",
+    "tailwindcss": "^3.3.3",
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
@@ -39,7 +43,6 @@
     "@sanity/block-content-to-markdown": "0.0.5",
     "@sanity/cli": "^2.30.0",
     "@sanity/client": "^2.23.2",
-    "autoprefixer": "^10.4.7",
     "sanity": "^2.29.3"
   }
 }

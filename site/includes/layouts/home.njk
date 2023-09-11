@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% include 'components/home/hero.njk'%}
+{% include 'components/home/clientLogos.njk'%}
+
+<div class="section-rounded bg-red-100">
+    <div class="section-rounded bg-white">
+        <div class="section-rounded bg-yellow-100">
+            <div class="section-rounded bg-white">
+            {% include "components/home/intro.njk" %}
+            </div>
+            {% include "components/home/apprenticeship-clarity.njk" %}
+            {% include "components/home/stats.njk" %}
+
+         </div>
+        {% include "components/home/social-mission.njk" %}
+        {% include "components/home/testimonials.njk" %}
+    </div>
+    {% include "components/home/services.njk" %}
+</div>
+
+{% include "components/blog/blog-section.njk" %}
+{% include "components/global/newsletter.njk" %}

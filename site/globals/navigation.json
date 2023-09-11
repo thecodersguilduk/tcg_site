@@ -1,56 +1,51 @@
 {
   "main": [
-      {
-          "label": "apprenticeships",
-          "url": "/apprenticeships"
-      },
-      {
-        "label": "courses",
-        "url": "",
-        "submenu": [
-          {
-            "label": "Course Directory",
-            "url": "/course-directory"
-          },
-          {
-            "label": "West Yorkshire",
-            "url": "/west-yorkshire"
-          }
-        ]
-      },
-      {
-          "label": "about us",
-          "url": "/about"
-      },
-      {
-        "label": "Jobs",
-        "url": "",
-        "submenu":[
-          {
-            "label": "Work With Us",
-            "url": "/jobs/"
-          },
-          {
-            "label": "Apprenticeship Vacancies",
-            "url": "/jobs/apprenticeship-vacancies/"
-          }
-        ]
-      },
-      {
-        "label": "blog",
-        "url": "/blog"
-      },
-      {
-        "label": "contact us",
-        "url": "/contact-us"
-      }
+    {
+      "label": "apprenticeships",
+      "url": "/apprenticeships"
+    },
+    {
+      "label": "courses",
+      "url": "",
+      "submenu": [
+        {
+          "label": "Course Directory",
+          "url": "/course-directory"
+        },
+        {
+          "label": "West Yorkshire",
+          "url": "/west-yorkshire"
+        }
+      ]
+    },
+    {
+      "label": "about us",
+      "url": "/about",
+      "submenu": [
+        {
+          "label": "Work With Us",
+          "url": "/jobs/"
+        },
+        {
+          "label": "Apprenticeship Vacancies",
+          "url": "/jobs/apprenticeship-vacancies/"
+        },
+        {
+          "label": "blog",
+          "url": "/blog"
+        },
+        {
+          "label": "contact us",
+          "url": "/contact-us"
+        }
+      ]
+    }
   ],
 
   "footer": [
     {
       "title": "Quick Links",
       "links": [
-
         {
           "label": "Sitemap",
           "url": "/sitemap.xml"
