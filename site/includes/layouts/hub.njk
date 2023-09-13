@@ -12,8 +12,8 @@ body_class: apprenticeship-employer
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
                                     <h1>{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% else %} #LCDF23 {% endif %}</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span> {% if location === 'Greater Manchester' %}Businesses and employees people in {{location}}! Gain qualifications with our FULLY  FUNDED coding and
-                                    digital skills courses.{% else %}Are you eager to learn new skills? You can apply for one of our FULLY FUNDED digital courses!
+                                    <p class="font-bold text-lightblue-500 mb-4"><span> {% if page.url === '/ldcf/' %}Are you ready to upgrade or kick start your career?
+We provide 100% government funded courses in key areas such as <a href="/course-directory/digital-project-manager/">Agile Project Management</a> and <a href="/course-directory/leading-digital-teams/">Team Leadership</a> as well as courses in working with <a href="/course-directory/get-hired-as-a-software-developer/">code</a> - all courses come with 6 months career support to help you find your dream job. Courses are running now and space is limited so don’t delay{% else %}Are you eager to learn new skills? You can apply for one of our FULLY FUNDED digital courses!
                                     Whether you want to broaden your job prospects or simply upgrade your skill set, you can get training and support from industry experts with our digital courses
                                     {% endif %}</span> Reserve your spot now — space is limited!
                                     </p>
@@ -32,7 +32,7 @@ body_class: apprenticeship-employer
                                         {% endif %}
                                         </ul>
                                     {% endif %}
-                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses Below</a>
+                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses and Apply Today</a>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex flex-col items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
                                     {% if location === 'Greater Manchester' %}
@@ -67,10 +67,16 @@ body_class: apprenticeship-employer
                             {% if location !== 'Greater Manchester' %}
 
                             <h2 class="text-center">{% if page.url !== '/ldcf/'%}Register your interest for our Digital Skills Courses across Yorkshire & Humber{% else %}Upskill/Reskill yourself with these 100% funded courses{% endif %}</h2>
-                            <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a>, <a href="https://www.sheffcol.ac.uk/" target="_blank">Sheffield College and Skills Connect</a> and <a href="https://www.futuregoals.co.uk/learn/FULLY  FUNDED-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across the Yorkshire & Humber regions.
-                            </p>
-                            <p>Our Skills Bootcamps offer flexible courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts.
-                            </p>
+                            {% if page.url === '/ldcf/' %}
+                                <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a> and <a href="https://www.futuregoals.co.uk/learn/FULLY%20%20FUNDED-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across West Yorkshire.</p>
+                                <p class="my-4">Our Skills Bootcamps offer flexible part time courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts and come with 6 months employability coaching and support to take your career to the next level.</p>
+                                </p>
+                            {% else %}
+                                <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a>, <a href="https://www.sheffcol.ac.uk/" target="_blank">Sheffield College and Skills Connect</a> and <a href="https://www.futuregoals.co.uk/learn/FULLY  FUNDED-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across the Yorkshire & Humber regions.
+                                </p>
+                                <p>Our Skills Bootcamps offer flexible courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts.
+                                </p>
+                            {% endif %}
                                 {% if page.url !== '/ldcf/' %}
                                     <p class="text-center my-4">
                                     <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
@@ -100,8 +106,8 @@ body_class: apprenticeship-employer
                 class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
-                            <h2 class="text-center text-white mb-6">Reskill yourself and
-                            your teams with these 100% funded courses </h2>
+                            <h2 class="text-center text-white mb-6">{% if page.url === '/ldcf/' %}Upskill{% else %}Reskill{% endif %} yourself {% if page.url !== '/ldcf/' %}and
+                            your teams{% endif %} with these 100% funded courses </h2>
                         </div>
 
                         <div class="courses flex flex-wrap justify-center">
@@ -140,8 +146,9 @@ body_class: apprenticeship-employer
                                 <img class="w-full" src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Logo">
                             </div>
                             <div class="content flex flex-col justify-center md:w-7/12 lg:w-8/12 text-center lg:text-left mb-4 md:mb-0">
-                                <h4 class="mb-0">Not found a suitable course for your team?</h4>
-                                <p>Speak to our course experts to find out how we can help your team grow, or register your interest for our courses coming soon</p>
+                                <h4 class="mb-0">{% if page.url === '/ldcf/' %} Looking to upskill your team? {% else %}Not found a suitable course for your team?{% endif %}</h4>
+                                <p>{% if page.url ==='/ldcf/' %}Book a call with our course experts to find out how you can use government funding to train your team in Leadership, Agile and Code.
+                                {% else %} Speak to our course experts to find out how we can help your team grow, or register your interest for our courses coming soon{% endif %}</p>
                             </div>
                             <div class="buttons flex items-center self-center md:w-4/12 lg:w-3/12">
                                 <a href="" data-modal="book-a-call" class="bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Get in Touch Today <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
@@ -152,12 +159,12 @@ body_class: apprenticeship-employer
             </div>
 
             <div class="employers-employees section-rounded py-24">
-                <h2 class="text-center text-white">Hear from the Employers and Employees
+                <h2 class="text-center text-white">{% if page.url === '/ldcf/' %} Hear from Previous Learners {% else %}Hear from the Employers and Employees{% endif %}
                 </h2>
                 <div>
                     <div class="md:w-9/12 mx-auto flex flex-col lg:flex-row justify-center">
                     {% for testimonial in testimonials %}
-                        {% if testimonial._id === '82f7a7e4-aa5d-4ee4-b1b5-d545d5a2f428' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
+                        {% if testimonial._id === '7b59b61e-7d49-4d14-9bad-bf121a4cb66a' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
                             <div class="w-full lg:w-6/12 p-8">
                                 <div class="relative shadow-secondary bg-blue-300 text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
                                 <div class="sm:flex sm:flex-col">
@@ -175,37 +182,16 @@ body_class: apprenticeship-employer
             </div>
         </div>
     </div>
-<section class="py-12">
-    <div class="inner">
-        <div class="md:flex md:pt-16 pt-20 pb-12 md:pb-12">
-            <div class="md:w-1/3 md:mb-0 mb-12">
-                <div class="px-4">
-                <img src="../images/icons/Group-16.svg" alt="Image of a group to indicate a group of developers" class="mx-auto mb-6 h-16"/>
-                <h3 class="text-center text-xl leading-lg mb-0">Digital Training Courses</h3>
-                </div>
-            </div>
-            <div class="md:w-1/3 md:mb-0 mb-12">
-                <div class="px-4">
-                <img src="../images/icons/Group-34.svg" alt="icon to denote coding professionals" class="mx-auto mb-6 h-16"/>
-                <h3 class="text-center text-xl leading-lg mb-0">Upskilling professionals</h3>
-                </div>
-            </div>
-            <div class="md:w-1/3">
-                <div class="px-4">
-                <img src="../images/icons/Group-72.svg" alt="icon to denote a presentation" class="mx-auto mb-6 h-16"/>
-                <h3 class="text-center text-xl leading-lg mb-0">SMEs and larger organisations</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 {% if page.url === '/ldcf/' %}
+<section class="py-24">
     {% include '../components/hub/blog-section.njk' %}
+    </section>
 {% endif %}
 
 
-<section class="contact py-24">
+<section class="contact py-24 bg-yellow-100">
 <div class="inner">
     <div class="flex flex-wrap">
         <div class="w-full md:w-4/12 mb-6 md:mb-0">
