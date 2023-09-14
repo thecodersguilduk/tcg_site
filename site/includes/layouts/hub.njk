@@ -6,7 +6,7 @@ body_class: apprenticeship-employer
     <div class="bg-grey-100">
         <div class="bg-blue-200 section-rounded">
             <div class="bg-yellow-100 section-rounded">
-                <div class="section-rounded">
+                <div class="bg-grey-100 section-rounded">
                     <div class="bg-white section-rounded">
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
@@ -20,64 +20,67 @@ body_class: apprenticeship-employer
                                     {% if page.url !== '/ldcf/' %}
                                      <p>Our {% if location === 'Greater Manchester' %}FULLY  FUNDED coding courses in {{ location }}{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will help:</p>
                                         <ul class="decorated-ul my-4">
+                                        {% if location === 'Greater Manchester'%}
+                                            <li class="mb-0">Help local businesses fill the digital skills gap and increase productivity.</li>
+                                            <li class="mb-0">Upskill individuals already employed in the IT industry to maximise potential.</li>
+                                            <li class="mb-0">Supporting the {{location}} community through providing FULLY  FUNDED courses for
+                                            those over 16 years of age, enabling career progression within tech and other digital industries.</li>
+                                        {% else %}
                                             <li class="mb-0"><strong>Businesses {% if page.url === '/york-north-yorkshire/'%} and Self Employed {% endif %}</strong> in {{ location }} to fill the digital skills gap and increase productivity</li>
                                             <li class="mb-0"><strong>Career Changers</strong> work to get ahead in digital</li>
                                             <li class="mb-0"><strong>{% if page.url === '/york-north-yorkshire/'%} Recently Unemployed (within the last 12 months){% else %}un/underemployed{% endif %}</strong> to get a job in tech</li>
+                                        {% endif %}
                                         </ul>
                                     {% endif %}
                                     <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses and Apply Today</a>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex flex-col items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
+                                    {% if location === 'Greater Manchester' %}
+
+                                        <iframe class="block" width="530" height="298" src="https://www.youtube.com/embed/waFGqRBR4qs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                    <div class="mt-8 mb-4 grid grid-cols-4 gap-0.5">
+                                        <div class="col-span-4 sm:col-span-2 flex items-center justify-center py-2 px-6 bg-gray-50">
+                                            <img class="sm:max-h-10 max-h-12" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
+                                        </div>
+                                        <div class="col-span-4 sm:col-span-2 flex items-center justify-center py-2 px-6 bg-gray-50">
+                                            <img class="sm:max-h-10 max-h-12 px-16 sm:px-0" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
+                                        </div>
+                                    </div>
+                                    {% else %}
                                     <img class="lg:px-6" src="../../images/{{ image_source}}" alt="Digital Skills Courses in {{location}}" class="w-full" />
+                                    {% endif %}
                                 </div>
                             </div>
-
+                            <div class="w-full md:w-8/12 mx-auto">
                             {% if page.url === '/ldcf/' %}
                                 {% include 'components/hub/ldcf-pitch.njk' %}
                             {% else %}
-
-                            <div class="w-full md:w-8/12 mx-auto">
-
                                 {% if tag === 'wyca' %}
                                     {% include '../components/hub/west-yorks-intro.njk' %}
                                 {% endif %}
-
                             {% endif %}
 
-                            <h2 class="text-center">{% if page.url !== '/ldcf/'%}Register your interest for our Digital Skills Courses across Yorkshire & Humber{% endif %}</h2>
-                            {% if page.url === '/ldcf/' %}
-                                <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a> and <a href="https://www.futuregoals.co.uk/learn/FULLY%20%20FUNDED-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across West Yorkshire.</p>
-                                <p class="my-4">Our Skills Bootcamps offer flexible part time courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts and come with 6 months employability coaching and support to take your career to the next level.</p>
+                            {% if page.url !== '/ldcf/' %}
+                                <p class="text-center my-4">
+                                <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
                                 </p>
-                            {% else %}
-                                <p class="my-4">The Coders Guild is proud to be working with <a href="https://www.ynylep.com/" target="_blank">York and North Yorkshire LEP</a>, <a href="https://www.sheffcol.ac.uk/" target="_blank">Sheffield College and Skills Connect</a> and <a href="https://www.futuregoals.co.uk/learn/FULLY  FUNDED-adult-training-courses/skills-connect-training-courses/" target="_blank">Future Goals</a> (brought to you by the <a href="https://www.westyorks-ca.gov.uk/" target="_blank">West Yorkshire Combined Authority</a> and <a href="https://www.the-lep.com/" target="_blank">Leeds City Region Enterprise Partnership</a>) to deliver the Department for Education's Skills Bootcamps across the Yorkshire & Humber regions.
-                                </p>
-                                <p>Our Skills Bootcamps offer flexible courses of 12 weeks for adults aged 19 or over and who are either in work or recently unemployed. All Bootcamps are delivered online by industry-leading experts.
+                                <p class="text-center my-4">
+                                <span class="font-bold">Individuals/Self Employed: </span>
+                                Gain the digital skills you need to get ahead at work or if you are out of work, build up in-demand digital skills to land you that dream job in tech.
                                 </p>
                             {% endif %}
-                                {% if page.url !== '/ldcf/' %}
-                                    <p class="text-center my-4">
-                                    <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
-                                    </p>
-                                    <p class="text-center my-4">
-                                    <span class="font-bold">Individuals/Self Employed: </span>
-                                    Gain the digital skills you need to get ahead at work or if you are out of work, build up in-demand digital skills to land you that dream job in tech.
-                                    </p>
+                            <div class="mt-12">
+                                {% if tag === 'wyca' %}
+                                    {% include '../components/hub/wyca/wyca-logos.njk' %}
+                                {% elif tag === 'hey' %}
+                                    {% include '../components/hub/hey/hey-logos.njk' %}
+                                {% elif tag === 'yny' %}
+                                    {% include '../components/hub/yny/yny-logos.njk' %}
+                                {% elif tag === 'yorkshire-humber' %}
+                                    {% include '../components/hub/yorkshire-humber/yorkshire-humber-logos.njk' %}
                                 {% endif %}
-
-                                <div class="mt-12">
-                                    {% if tag === 'wyca' %}
-                                        {% include '../components/hub/wyca/wyca-logos.njk' %}
-                                    {% elif tag === 'hey' %}
-                                        {% include '../components/hub/hey/hey-logos.njk' %}
-                                    {% elif tag === 'yny' %}
-                                        {% include '../components/hub/yny/yny-logos.njk' %}
-                                    {% elif tag === 'yorkshire-humber' %}
-                                        {% include '../components/hub/yorkshire-humber/yorkshire-humber-logos.njk' %}
-                                    {% elif tag === 'ldcf' %}
-                                        {% include '../components/hub/ldcf/ldcf-logos.njk' %}
-                                    {% endif %}
-                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -165,13 +168,13 @@ body_class: apprenticeship-employer
 
 
 {% if page.url === '/ldcf/' %}
-<section class="py-24">
+<section class="py-24 bg-grey-100">
     {% include '../components/hub/blog-section.njk' %}
     </section>
 {% endif %}
 
 
-<section class="contact py-24 bg-yellow-100">
+<section class="contact py-24">
 <div class="inner">
     <div class="flex flex-wrap">
         <div class="w-full md:w-4/12 mb-6 md:mb-0">
