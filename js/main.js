@@ -1364,7 +1364,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var submenu = function submenu() {
-  //   if (!$$.submenu) return;
   var navlinks = document.getElementById('nav-links');
   var mobileNav = document.getElementById('mobile-nav');
   navlinks.addEventListener('click', toggleSubMenu);
@@ -1372,39 +1371,33 @@ var submenu = function submenu() {
 
   function toggleSubMenu(e) {
     var target = e.target;
-    console.log(target.tagName);
 
-    if (e.target.classList.contains('parent')) {
-      e.preventDefault();
-      var menu = target.querySelector('.submenu');
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('block');
-      menu.addEventListener('mouseleave', function (e) {
-        menu.classList.add('hidden');
+    if (target.nodeName.toLowerCase() === 'li') {
+      //now open thesubmenu of the li just clicked on
+      var currentSubMenu = target.querySelector('.submenu');
+
+      if (currentSubMenu.classList.contains('block')) {
+        currentSubMenu.classList.remove('block');
+        currentSubMenu.classList.add('hidden');
+      } else {
+        currentSubMenu.classList.remove('hidden');
+        currentSubMenu.classList.add('block');
+      } //close all the submenus
+
+
+      var submenus = document.querySelectorAll('.submenu');
+      submenus.forEach(function (menu) {
+        console.log(menu.parentElement);
+
+        if (menu.classList.contains('block') && target.innerText.toLowerCase() !== menu.parentElement.innerText.toLowerCase()) {
+          // console.log('were here');
+          menu.classList.remove('block');
+          menu.classList.add('hidden'); // console.log(menu.classList);
+        }
       });
-    }
-
-    if (target.tagName === 'path') {
-      var _menu = target.parentElement.parentElement.querySelector('.submenu');
-
-      _menu.classList.toggle('hidden');
-
-      _menu.classList.toggle('block');
-
-      _menu.addEventListener('mouseleave', function (e) {
-        _menu.classList.add('hidden');
-      });
-    }
-
-    if (target.tagName === 'svg') {
-      var _menu2 = target.parentElement.querySelector('.submenu');
-
-      _menu2.classList.toggle('hidden');
-
-      _menu2.classList.toggle('block');
-
-      _menu2.addEventListener('mouseleave', function (e) {
-        _menu2.classList.add('hidden');
+      currentSubMenu.addEventListener('mouseleave', function (e) {
+        currentSubMenu.classList.remove('block');
+        currentSubMenu.classList.add('hidden');
       });
     }
   }

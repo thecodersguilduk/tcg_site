@@ -1,50 +1,48 @@
 import $$ from '@utilities/selectors';
 
-const submenu = function submenu() {
-//   if (!$$.submenu) return;
+const submenu = (function submenu() {
+	const navlinks = document.getElementById('nav-links');
+	const mobileNav = document.getElementById('mobile-nav');
 
-  const navlinks = document.getElementById('nav-links')
-  const mobileNav = document.getElementById('mobile-nav')
+	navlinks.addEventListener('click', toggleSubMenu);
+	mobileNav.addEventListener('click', toggleSubMenu);
 
-  navlinks.addEventListener('click', toggleSubMenu)
-  mobileNav.addEventListener('click', toggleSubMenu)
+	function toggleSubMenu(e) {
+		const target = e.target;
 
-  function toggleSubMenu(e){
-        const target = e.target;
-        console.log(target.tagName);
+		if (target.nodeName.toLowerCase() === 'li') {
+			//now open thesubmenu of the li just clicked on
+			const currentSubMenu = target.querySelector('.submenu');
+			if (currentSubMenu.classList.contains('block')) {
+				currentSubMenu.classList.remove('block');
+				currentSubMenu.classList.add('hidden');
+			} else {
+				currentSubMenu.classList.remove('hidden');
+				currentSubMenu.classList.add('block');
+			}
 
-        if(e.target.classList.contains('parent')){
-          e.preventDefault()
+			//close all the submenus
+			const submenus = document.querySelectorAll('.submenu');
+			submenus.forEach((menu) => {
+				console.log(menu.parentElement);
+				if (
+					menu.classList.contains('block') &&
+					target.innerText.toLowerCase() !==
+						menu.parentElement.innerText.toLowerCase()
+				) {
+					// console.log('were here');
+					menu.classList.remove('block');
+					menu.classList.add('hidden');
+					// console.log(menu.classList);
+				}
+			});
 
-          let menu = target.querySelector('.submenu');
-          menu.classList.toggle('hidden');
-          menu.classList.toggle('block');
-
-          menu.addEventListener('mouseleave', function(e){
-            menu.classList.add('hidden');
-          })
-        }
-
-        if(target.tagName === 'path'){
-          let menu = target.parentElement.parentElement.querySelector('.submenu');
-          menu.classList.toggle('hidden');
-          menu.classList.toggle('block');
-
-          menu.addEventListener('mouseleave', function(e){
-            menu.classList.add('hidden');
-          })
-        }
-
-        if(target.tagName === 'svg'){
-          let menu = target.parentElement.querySelector('.submenu');
-          menu.classList.toggle('hidden');
-          menu.classList.toggle('block');
-
-          menu.addEventListener('mouseleave', function(e){
-            menu.classList.add('hidden');
-          })
-        }
-    }
-}()
+			currentSubMenu.addEventListener('mouseleave', function (e) {
+				currentSubMenu.classList.remove('block');
+				currentSubMenu.classList.add('hidden');
+			});
+		}
+	}
+})();
 
 export default submenu;
