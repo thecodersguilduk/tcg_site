@@ -3,7 +3,7 @@ layout: default
 body_class: apprenticeship-employer
 ---
 <main>
-    <div class="bg-grey-100">
+    <div class="bg-grey-100 section-rounded">
         <div class="bg-blue-200 section-rounded">
             <div class="bg-yellow-100 section-rounded">
                 <div class="bg-grey-100 section-rounded">
@@ -11,7 +11,7 @@ body_class: apprenticeship-employer
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
-                                    <h1>{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% else %} #LCDF23 {% endif %}</h1>
+                                    <h1 class="text-center lg:text-left">{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% else %} #LCDF23 {% endif %}</h1>
                                     <p class="font-bold text-lightblue-500 mb-4"><span> {% if page.url === '/ldcf/' %}Are you ready to upgrade or kick start your career?
                                     We provide 100% government funded courses in key areas such as <a href="/course-directory/digital-project-manager/">Agile Project Management</a> and <a href="/course-directory/leading-digital-teams/">Team Leadership</a> as well as courses in working with <a href="/course-directory/get-hired-as-a-software-developer/">code</a> - all courses come with 6 months career support to help you find your dream job. Courses are running now and space is limited so don’t delay{% else %}Are you eager to learn new skills? You can apply for one of our FULLY FUNDED digital courses!
                                     Whether you want to broaden your job prospects or simply upgrade your skill set, you can get training and support from industry experts with our digital courses
@@ -53,40 +53,41 @@ body_class: apprenticeship-employer
                                 </div>
                             </div>
                             <div class="w-full md:w-8/12 mx-auto">
-                            {% if page.url === '/ldcf/' %}
-                                {% include 'components/hub/ldcf-pitch.njk' %}
-                            {% else %}
-                                {% if tag === 'wyca' %}
-                                    {% include '../components/hub/west-yorks-intro.njk' %}
+                                {% if page.url === '/ldcf/' %}
+                                    {% include 'components/hub/ldcf-pitch.njk' %}
+                                {% else %}
+                                    {% if tag === 'wyca' %}
+                                        {% include '../components/hub/west-yorks-intro.njk' %}
+                                    {% endif %}
                                 {% endif %}
-                            {% endif %}
 
-                            {% if page.url !== '/ldcf/' %}
-                                <p class="text-center my-4">
-                                <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
-                                </p>
-                                <p class="text-center my-4">
-                                <span class="font-bold">Individuals/Self Employed: </span>
-                                Gain the digital skills you need to get ahead at work or if you are out of work, build up in-demand digital skills to land you that dream job in tech.
-                                </p>
-                            {% endif %}
-                            <div class="mt-12">
-                                {% if tag === 'wyca' %}
-                                    {% include '../components/hub/wyca/wyca-logos.njk' %}
-                                {% elif tag === 'hey' %}
-                                    {% include '../components/hub/hey/hey-logos.njk' %}
-                                {% elif tag === 'yny' %}
-                                    {% include '../components/hub/yny/yny-logos.njk' %}
-                                {% elif tag === 'yorkshire-humber' %}
-                                    {% include '../components/hub/yorkshire-humber/yorkshire-humber-logos.njk' %}
+                                {% if page.url !== '/ldcf/' %}
+                                    <p class="text-center my-4">
+                                    <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
+                                    </p>
+                                    <p class="text-center my-4">
+                                    <span class="font-bold">Individuals/Self Employed: </span>
+                                    Gain the digital skills you need to get ahead at work or if you are out of work, build up in-demand digital skills to land you that dream job in tech.
+                                    </p>
                                 {% endif %}
-                            </div>
+                                <div class="mt-12">
+                                    {% if tag === 'wyca' %}
+                                        {% include '../components/hub/wyca/wyca-logos.njk' %}
+                                    {% elif tag === 'hey' %}
+                                        {% include '../components/hub/hey/hey-logos.njk' %}
+                                    {% elif tag === 'yny' %}
+                                        {% include '../components/hub/yny/yny-logos.njk' %}
+                                    {% elif tag === 'yorkshire-humber' %}
+                                        {% include '../components/hub/yorkshire-humber/yorkshire-humber-logos.njk' %}
+                                    {% elif tag === 'ldcf' %}
+                                        {% include '../components/hub/ldcf/ldcf-logos.njk' %}
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="courses"
-                class="section-rounded py-24">
+                <div id="courses" class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
                             <h2 class="text-center text-white mb-6">{% if page.url === '/ldcf/' %}Upskill{% else %}Reskill{% endif %} yourself {% if page.url !== '/ldcf/' %}and
@@ -95,32 +96,32 @@ body_class: apprenticeship-employer
 
                         <div class="courses flex flex-wrap justify-center">
                             {% for course in courses %}
-                            {% if course.courseType !== 'Apprenticeship' %}
-                            {% for item in course.tags %}
-                                {% if item.value === tag %}
-                                <div class="relative rounded flex flex-col w-full sm:w-6/12 md:w-4/12 lg:w-3/12 sm:px-4 mb-6 min-h-full">
-                                    <div class="bg-white rounded h-full flex flex-col">
-                                        <div class="featured-image rounded-full">
-                                            <img src="{{course.courseItemImage}}" alt="{{course.title}}" class="rounded w-full">
+                                {% if course.courseType !== 'Apprenticeship' %}
+                                    {% for item in course.tags %}
+                                        {% if item.value === tag %}
+                                        <div class="relative rounded flex flex-col w-full sm:w-6/12 md:w-4/12 lg:w-3/12 sm:px-4 mb-6 min-h-full">
+                                            <div class="bg-white rounded h-full flex flex-col">
+                                                <div class="featured-image rounded-full">
+                                                    <img src="{{course.courseItemImage}}" alt="{{course.title}}" class="rounded w-full">
+                                                </div>
+                                                <div class="content flex flex-col justify-between p-4 flex-grow-grow">
+                                                    <div>
+                                                        <h3 class="text-lg">{% if course.subtitle %}{{ course.subtitle}}{% else %}{{ course.title | courseDisplay }}{% endif %}</h3>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <p class="leading-tight"><span class="text-sm font-bold">Starts:</span> <span class="text-sm">{{course.start | dateDisplay}}</span></p>
+                                                        <p class="leading-tight"><span class="text-sm font-bold">Length:</span> <span class="text-sm">{%if course.duration.length < 0%}Coming soon!{% elseif course.duration.length === 1%}{{ course.duration[0] }}{% else %}Multiple options available{% endif %}</span></p>
+                                                        <p class="leading-tight"><span class="text-sm font-bold">Type:</span> <span class="text-sm">{{ course.courseType }}</span></p>
+                                                    </div>
+                                                    <div>
+                                                        <a href="../course-directory/{{ course.slug.current }}/" class="stretched-link mt-8 text-lightblue-500">View this course <i class="align-middle ml-2 text-lightblue-500 fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="content flex flex-col justify-between p-4 flex-grow-grow">
-                                            <div>
-                                                <h3 class="text-lg">{% if course.subtitle %}{{ course.subtitle}}{% else %}{{ course.title | courseDisplay }}{% endif %}</h3>
-                                            </div>
-                                            <div class="mb-4">
-                                                <p class="leading-tight"><span class="text-sm font-bold">Starts:</span> <span class="text-sm">{{course.start | dateDisplay}}</span></p>
-                                                <p class="leading-tight"><span class="text-sm font-bold">Length:</span> <span class="text-sm">{%if course.duration.length < 0%}Coming soon!{% elseif course.duration.length === 1%}{{ course.duration[0] }}{% else %}Multiple options available{% endif %}</span></p>
-                                                <p class="leading-tight"><span class="text-sm font-bold">Type:</span> <span class="text-sm">{{ course.courseType }}</span></p>
-                                            </div>
-                                            <div>
-                                                <a href="../course-directory/{{ course.slug.current }}/" class="stretched-link mt-8 text-lightblue-500">View this course <i class="align-middle ml-2 text-lightblue-500 fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endif %}
-                                {% endfor %}
-                            {% endif %}
                             {% endfor %}
                         </div>
 
@@ -140,50 +141,45 @@ body_class: apprenticeship-employer
                     </div>
                 </div>
             </div>
-
             <div class="employers-employees section-rounded py-24">
                 <h2 class="text-center text-white">{% if page.url === '/ldcf/' %} Hear from Previous Learners {% else %}Hear from the Employers and Employees{% endif %}
                 </h2>
                 <div>
                     <div class="md:w-9/12 mx-auto flex flex-col lg:flex-row justify-center">
-                    {% for testimonial in testimonials %}
-                        {% if testimonial._id === '7b59b61e-7d49-4d14-9bad-bf121a4cb66a' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
-                            <div class="w-full lg:w-6/12 p-8">
-                                <div class="relative shadow-secondary bg-blue-300 text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
-                                <div class="sm:flex sm:flex-col">
-                                    <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                                    <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
-                                    <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                                    <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
+                        {% for testimonial in testimonials %}
+                            {% if testimonial._id === '7b59b61e-7d49-4d14-9bad-bf121a4cb66a' or testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
+                                <div class="w-full lg:w-6/12 p-8">
+                                    <div class="relative shadow-secondary bg-blue-300 text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
+                                        <div class="sm:flex sm:flex-col">
+                                            <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                                            <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
+                                            <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                                            <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                </div>
-                            </div>
                             {% endif %}
-                    {% endfor %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
+        {% if page.url === '/ldcf/' %}
+            <section class="py-24 bg-grey-100">
+                {% include '../components/hub/blog-section.njk' %}
+            </section>
+        {% endif %}
     </div>
-
-
-{% if page.url === '/ldcf/' %}
-<section class="py-24 bg-grey-100">
-    {% include '../components/hub/blog-section.njk' %}
+    <section class="contact py-24">
+        <div class="inner">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-4/12 mb-6 md:mb-0">
+                    <img class="w-full" src="../../images/chevrons-2.png" alt="The Coders Guild students on a course">
+                </div>
+                <div class="w-full md:w-8/12">
+                    {% include '../components/contact/contact-form.njk' %}
+                </div>
+            </div>
+        </div>
     </section>
-{% endif %}
-
-
-<section class="contact py-24">
-<div class="inner">
-    <div class="flex flex-wrap">
-        <div class="w-full md:w-4/12 mb-6 md:mb-0">
-            <img class="w-full" src="../../images/chevrons-2.png" alt="The Coders Guild students on a course">
-        </div>
-        <div class="w-full md:w-8/12">
-            {% include '../components/contact/contact-form.njk' %}
-        </div>
-    </div>
-</div>
-</section>
 </main>
