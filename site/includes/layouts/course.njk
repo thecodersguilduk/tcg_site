@@ -23,8 +23,12 @@ body_class: apprenticeship-employer
         </div>
       </div>
       <div class="flex flex-col sm:flex-row">
-        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="px-2 md:px-4 py-2 bg-blue-200" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
-        <a href data-modal="expression-of-interest" class="rounded px-2 md:px-4 py-2 text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+        <div>
+          <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="px-2 md:px-4 py-2 bg-blue-200" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+          </div>
+          <div>
+          <a href data-modal="expression-of-interest" class="rounded px-2 md:px-4 py-2 text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+          </div>
       </div>
     </div>
   </section>
@@ -41,11 +45,18 @@ body_class: apprenticeship-employer
               {% endif %}
               <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:<strong> {{ course.start | dateDisplay }}</strong>
               </p>
-              <div class="">
-              <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
-              <a href data-modal="expression-of-interest" class="px-2 md:px-4 py-2 bg-white text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later<i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+              <div class="flex flex-col my-6">
+                <div class="flex justify-between">
+                  <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+                    {% if course.isKnoma %}
+                      <a href="{{ course.knomaFields.knomaLink}}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded w-6/12 font-bold" target="_blank" target="_blank"><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Available direct via Knoma <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+                    {% endif %}
+                </div>
+                <div class="my-6">
+                  <a href data-modal="expression-of-interest" class="px-2 md:px-4 py-2 bg-white text-blue-200 "><span class="text-blue-200 font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Later<i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+                  <a href="#" data-modal="cd-send-info" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
+                </div>
               </div>
-              <a href="#" data-modal="cd-send-info" class="mt-4 text-purle-700 text-lg flex items-center "><strong>Info for Businesses <i class="ml-2 fa-solid fa-angle-right"></i></strong> </a>
             </header>
           </div>
           <div class="lg:w-6/12 pt-24 lg:pt-0 order-1 lg:order-2 flex items-center justify-center mb-6 lg:mb-0">
