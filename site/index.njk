@@ -7,19 +7,20 @@ title: The Coders Guild - Coding Apprenticeships & Digital Skill Training
 ---
 
 <div class="container max-w-full md:pt-22 pt-20">
-  <div class="hero relative bg-white">
-  {%image './images/banner-1.png', 'Apprenticeships hero image', 'md:block hidden h-full w-full hero-desktop' %}
-  {%image './images/banner-2.png', 'Apprenticeships hero image', 'md:hidden block h-full w-full hero-mobile' %}
-    <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
-        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">{{title}}</h1>
-          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
-          <p class="text-white font-heading text-center text-3xl md:leading-4xl font-bold max-w-md mx-auto">Developing The Future</p>
+  <div class="relative isolate overflow-hidden pt-14 section-rounded">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=2574a9&sat=100&exp=5&blend-mode=multiply" alt="The Coders Guild - providers of quality IT further education, apprenticeships and bootcamps" class="-z-1 absolute inset-0 -z-10 h-full w-full object-cover">
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="text-center text-white">
+        <h1 class="text-4xl font-bold tracking-loose leading-none text-white sm:text-6xl">Unlock Your Potential in the Digital World with Our Expert Apprenticeships</h1>
+        <p class="mt-6 text-2xl leading-8 text-white">Crafting Future Innovators, One Apprentice at a Time</p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-y-8 items-center justify-center gap-x-6">
+          <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" target="_blank" class="rounded bg-gradient-to-r from-yellow-200 to-yellow-100 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Hire an Apprentice <span aria-hidden="true">→</span></a>
+          <a href="#" class="text-lg font-semibold leading-6 text-white">Become an Apprentice <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
   </div>
+  {% include './includes/components/home/logos.njk' %}
 
   <main id="main" class="main flex flex-1 flex-col focus:outline-none relative" tabindex="-1">
     <div class="bg-red-100 section-rounded">

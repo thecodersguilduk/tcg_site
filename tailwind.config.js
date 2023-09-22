@@ -279,6 +279,7 @@ module.exports = {
 			'3xl': '32px',
 			'4xl': '30px',
 			'5xl': '40px',
+			'6xl': '60px',
 			'9xl': '95px',
 		},
 		fontWeight: {
@@ -455,6 +456,7 @@ module.exports = {
 			30: '30',
 			40: '40',
 			50: '50',
+			'-1': '-1',
 		},
 	},
 	variants: {
