@@ -4,7 +4,7 @@
         <h2 class="text-center mb-8 md:mb-14">What learners say about this course</h2>
 
         <div class="flex flex-col lg:flex-row justify-center">
-          {% if course.testimonials.length > 0 %}
+          {% if course.testimonials %}
               {% for testimonial in course.testimonials | limit(3) %}
                   <div class="w-full lg:w-4/12 p-8">
                     <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
