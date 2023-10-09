@@ -1,6 +1,10 @@
 {
 	"main": [
 		{
+			"label": "Employers",
+			"url": "/employers"
+		},
+		{
 			"label": "apprenticeships",
 			"url": "#",
 			"submenu": [

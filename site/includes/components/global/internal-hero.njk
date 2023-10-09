@@ -7,6 +7,17 @@
             <header class="md:w-8/12">
               <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ title }}</h1>
               <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-4xl">{{tagline}}</h2>
+              {% if valueProps.length > 0 %}
+                <ul class="list-none text-grey-800">
+                  {% for props in valueProps %}
+                    <li class="flex items-center mb-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span class="text-black">{{props}}</span></li>
+                  {% endfor%}
+                </ul>
+              {% endif %}
             </header>
           </div>
           <div class="lg:w-6/12 pt-24 lg:pt-0 order-1 lg:order-2 flex items-center justify-center mb-6 lg:mb-0">

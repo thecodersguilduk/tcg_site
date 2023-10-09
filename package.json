@@ -1,50 +1,50 @@
 {
- "name": "skeleventy",
- "version": "2.0.0",
- "description": "Skeleventy - A skeleton boilerplate built with Eleventy",
- "scripts": {
-  "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
- },
- "repository": {
-  "type": "git",
-  "url": "https://github.com/josephdyer/skeleventy.git"
- },
- "engines": {
-  "node": ">=13.14.0 <15"
- },
- "author": "Joseph Dyer",
- "license": "MIT",
- "devDependencies": {
-  "@11ty/eleventy": "^0.12.1",
-  "@11ty/eleventy-img": "^1.1.0",
-  "@tailwindcss/ui": "^0.3.1",
-  "axios": "^0.21.4",
-  "dotenv": "^8.6.0",
-  "dotenv-webpack": "^7.1.0",
-  "html-minifier": "^4.0.0",
-  "jquery": "^3.6.0",
-  "laravel-mix": "^5.0.9",
-  "laravel-mix-purgecss": "^4.2.0",
-  "node-fetch": "^2.6.7",
-  "resolve-url-loader": "^3.1.4",
-  "sass": "^1.52.1",
-  "sass-loader": "^8.0.0",
-  "tailwindcss": "^1.9.6",
-  "vue-template-compiler": "^2.6.14"
- },
- "dependencies": {
-  "@sanity/block-content-to-html": "^2.0.0",
-  "@sanity/block-content-to-hyperscript": "^3.0.0",
-  "@sanity/block-content-to-markdown": "0.0.5",
-  "@sanity/cli": "^2.30.0",
-  "@sanity/client": "^2.23.2",
-  "autoprefixer": "^10.4.7",
-  "sanity": "^2.29.3"
- },
- "prettier": {
-  "tabWidth": 1,
-  "useTabs": true,
-  "singleQuote": true
- }
+	"name": "skeleventy",
+	"version": "2.0.0",
+	"description": "Skeleventy - A skeleton boilerplate built with Eleventy",
+	"scripts": {
+		"dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/josephdyer/skeleventy.git"
+	},
+	"engines": {
+		"node": ">=13.14.0 <15"
+	},
+	"author": "Joseph Dyer",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-img": "^1.1.0",
+		"@tailwindcss/ui": "^0.3.1",
+		"axios": "^0.21.4",
+		"dotenv": "^8.6.0",
+		"dotenv-webpack": "^7.1.0",
+		"html-minifier": "^4.0.0",
+		"jquery": "^3.6.0",
+		"laravel-mix": "^5.0.9",
+		"laravel-mix-purgecss": "^4.2.0",
+		"node-fetch": "^2.6.7",
+		"resolve-url-loader": "^3.1.4",
+		"sass": "^1.52.1",
+		"sass-loader": "^8.0.0",
+		"tailwindcss": "^1.9.6",
+		"vue-template-compiler": "^2.6.14"
+	},
+	"dependencies": {
+		"@sanity/block-content-to-html": "^2.0.0",
+		"@sanity/block-content-to-hyperscript": "^3.0.0",
+		"@sanity/block-content-to-markdown": "0.0.5",
+		"@sanity/cli": "^2.30.0",
+		"@sanity/client": "^2.23.2",
+		"autoprefixer": "^10.4.7",
+		"sanity": "^2.29.3"
+	},
+	"prettier": {
+		"tabWidth": 1,
+		"useTabs": true,
+		"singleQuote": true
+	}
 }

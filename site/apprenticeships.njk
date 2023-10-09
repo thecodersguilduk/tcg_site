@@ -1,21 +1,13 @@
 ---
-layout: default
+layout: internal-page
 meta_title: Web Development Apprenticeship Programs
 meta_description: We Provide Paid Software & Web Development Apprenticeship Training Courses In Leeds, London & Remotely Online. Get in touch to learn more.
 body_class: apprenticeships
-title: How an Apprenticeship can work for your Business
+title: Not all apprenticeships are equal. Choose the best training provider
 image: /images/homepage/MVIMG_20180119_122608.jpg
 ---
+{% include './includes/components/apprenticeships/explainer-icons.njk' %}
 
-<div class="container max-w-full md:pt-22 pt-20">
-  {% include './includes/components/global/internal-hero.njk' %}
-  {% include './includes/components/apprenticeships/explainer-icons.njk' %}
-
-  <main id="main" class="main flex flex-1 flex-col focus:outline-none  overflow-hidden" tabindex="-1">
-    <div class="bg-green-100">
-      <div class="bg-red-100 section-rounded">
-        <div class="bg-blue-200 section-rounded">
-          <div class="bg-white">
             {% include './includes/components/apprenticeships/faqs.njk' %}
             <section class="bg-white relative z-10 overflow-hidden">
             <object type="image/svg+xml" data="../images/patterns/1.svg" class="hidden md:block absolute pattern pattern-1"></object>
@@ -30,11 +22,4 @@ image: /images/homepage/MVIMG_20180119_122608.jpg
           </div>
           <div class="inner py-24">
             {% include "./includes/components/global/course-grid.njk" %}
-          </div>
-        </div>
-        {% include "components/home/services.njk" %}
-      </div>
-      {% include "components/global/newsletter.njk" %}
-    </div>
-  </main>
-</div>
+
