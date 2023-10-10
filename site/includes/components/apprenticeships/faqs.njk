@@ -1,9 +1,37 @@
-<section class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-    <div class="flex flex-col md:flex-row justify-around max-w-2xl mx-auto">
-        <button class="rounded py-2 px-4 bg-gradient-to-r from-yellow-200 to-yellow-100 text-white font-bold">For Employers</button>
-        <button class="rounded py-2 px-4 bg-gradient-to-r from-blue-200 to-blue-100 text-white font-bold">For Candidates</button>
-    </div>
+<div class="bg-white section-rounded relative">
+    <object type="image/svg+xml" data="../images/patterns/14.svg" class="absolute pattern pattern-6"></object>
+    <object type="image/svg+xml" data="../images/patterns/8.svg" class="absolute pattern pattern-4"></object>
+    <object type="image/svg+xml" data="../images/patterns/8.svg" class="absolute pattern pattern-9"></object>
 
-    {% include './for-employers.njk' %}
-    {% include './for-candidates.njk' %}
-</section>
+    <div class=" mx-auto max-w-3xl inner px-6 py-16 sm:py-24 lg:px-8">
+        <h2 class="text-center">Our simple guide to what you need to know</h2>
+        <div class="flex flex-col md:flex-row justify-around max-w-2xl mx-auto">
+            <button id="employers-btn" class="rounded py-2 px-4 bg-gradient-to-r from-yellow-200 to-yellow-100 text-white font-bold">For Employers</button>
+            <button id="candidates-btn" class="rounded py-2 px-4 bg-gradient-to-r from-blue-200 to-blue-100 text-white font-bold">For Candidates</button>
+        </div>
+
+        {% include './for-employers.njk' %}
+        {% include './for-candidates.njk' %}
+    </div>
+</div>
+
+<script>
+    const employersBtn = document.getElementById('employers-btn');
+    const candidatesBtn = document.getElementById('candidates-btn');
+    const employersSection = document.getElementById('employers');
+    const candidatesSection = document.getElementById('candidates');
+
+    employersBtn.addEventListener('click', () => {
+        candidatesSection.classList.remove('block')
+        candidatesSection.classList.add('hidden')
+        employersSection.classList.remove('hidden')
+        employersSection.classList.add('block')
+    });
+
+    candidatesBtn.addEventListener('click', () => {
+        employersSection.classList.remove('block')
+        employersSection.classList.add('hidden')
+        candidatesSection.classList.remove('hidden')
+        candidatesSection.classList.add('block')
+    });
+</script>

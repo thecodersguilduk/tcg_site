@@ -2,11 +2,11 @@
   <object type="image/svg+xml" data="../../images/patterns/280.svg" class="hidden lg:block absolute pattern pattern-280"></object>
     <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 md:pt-24 min-h-80 rounded" style="background-image: url(../../images/gradient-background.svg); background-size: cover; background-repeat: no-repeat; background-position: center;">
       <div class="flex flex-col">
-        <div class="flex flex-col lg:flex-row container">
+        <div class="flex flex-col lg:flex-row container items-center">
           <div class="lg:w-6/12 order-2 lg:order-1">
-            <header class="md:w-8/12">
-              <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ title }}</h1>
-              <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-4xl">{{tagline}}</h2>
+            <header class="md:w-8/12 {% if ctas.length < 1 %} flex flex-col justify-evenly {% endif %} ">
+              <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-4xl mb-2">{{ title }}</h1>
+              <h2 class="mb-2 text-2xl sm:text-2xl text-black leading-3xl sm:leading-2xl">{{tagline}}</h2>
               {% if valueProps.length > 0 %}
                 <ul class="list-none text-grey-800">
                   {% for props in valueProps %}
@@ -17,6 +17,13 @@
                       <span class="text-black">{{props}}</span></li>
                   {% endfor%}
                 </ul>
+              {% endif %}
+              {% if ctas.length > 0%}
+                <div class="flex gap-x-4">
+                  {% for cta in ctas %}
+                    <a href="{{ cta.url }}" class="internal-hero-cta flex justify-center items-center px-2 py-4 text-white rounded my-6 font-bold">{{ cta.text }} <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+                  {% endfor %}
+                </div>
               {% endif %}
             </header>
           </div>

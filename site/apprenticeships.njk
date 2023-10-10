@@ -1,25 +1,24 @@
+---js
+{
+layout: 'internal-page',
+meta_title: 'Web Development Apprenticeship Programs',
+meta_description: 'We Provide Paid Software & Web Development Apprenticeship Training Courses In Leeds, London & Remotely Online. Get in touch to learn more.',
+body_class: 'apprenticeships',
+title: 'What is an Apprenticeship?',
+tagline: 'The Ultimate Guide to Skill-Building Success',
+image: '/images/homepage/MVIMG_20180119_122608.jpg',
+ctas: []
+}
 ---
-layout: internal-page
-meta_title: Web Development Apprenticeship Programs
-meta_description: We Provide Paid Software & Web Development Apprenticeship Training Courses In Leeds, London & Remotely Online. Get in touch to learn more.
-body_class: apprenticeships
-title: Not all apprenticeships are equal. Choose the best training provider
-image: /images/homepage/MVIMG_20180119_122608.jpg
----
-{% include './includes/components/apprenticeships/explainer-icons.njk' %}
 
-            {% include './includes/components/apprenticeships/faqs.njk' %}
-            <section class="bg-white relative z-10 overflow-hidden">
-            <object type="image/svg+xml" data="../images/patterns/1.svg" class="hidden md:block absolute pattern pattern-1"></object>
-              <div class="inner max-w-3xl mx-auto mt-16 sm:px-16 mb-16 relative">
-                <p class="text-center">We have over 8 years experience delivering modern technical
-                apprenticeships - way before apprenticeships were cool.
-                We firmly believe they are the key to the future of the digital
-                industry in this country.</p>
-              </div>
-            </section>
-            {% include './includes/components/apprenticeships/levy-faqs.njk' %}
-          </div>
-          <div class="inner py-24">
-            {% include "./includes/components/global/course-grid.njk" %}
+<div class="bg-white section-rounded">
+  {% include './includes/components/apprenticeships/explainer-icons.njk' %}
+  {% include './includes/components/apprenticeships/apprenticeships-pitch.njk' %}
+  {% include './includes/components/apprenticeships/faqs.njk' %}
+  {% include './includes/components/apprenticeships/levy-faqs.njk' %}
+</div>
+
+<div class="inner py-24">
+  {% include "./includes/components/global/course-grid.njk" %}
+</div>
 

@@ -16,11 +16,11 @@
                 <div class="bg-white px-6 py-8 rounded-lg shadow-primary  apprenticeships__item">
                 <div class="flex flex-col items-start">
                     <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                    <h3 class="text-xl leading-lg mb-0">{{ course.title }}</h3>
+                    <h3 class="text-xl leading-lg mb-0">{{ course.title | courseDisplay}}</h3>
                     <div class="mt-auto">
                     <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
                     <div class="mb-4">
-                        <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a {{course.title | courseDisplay }}</a>
+                        <a href="/course-directory/{{ course.slug.current }}/" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Find out more!</a>
                     </div>
                     <div>
                         <a href="#" data-modal="book-a-call" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a {{course.title | courseDisplay }}</a>
