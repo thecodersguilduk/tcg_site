@@ -1,0 +1,12 @@
+[build]
+  functions = "/netlify/functions" # Path to your Netlify functions directory
+
+
+# CORS configuration for functions
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "POST, OPTIONS" # Add other HTTP methods as needed
+
