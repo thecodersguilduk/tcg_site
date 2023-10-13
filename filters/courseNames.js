@@ -17,16 +17,16 @@ module.exports = function (str) {
 		case 'Get Hired in the Tech Industry':
 			return 'Work in the Tech Industry';
 			break;
-		case 'Software Dev L4':
+		case 'Software Developer Apprenticeship Level 4':
 			return 'Developer';
 			break;
-		case 'Software Testing L4':
+		case 'Software Testing Apprenticeship Level 4':
 			return 'Tester';
 			break;
 		case 'DevOps L4':
 			return 'DevOps Engineer';
 			break;
-		case 'Accessibility L4':
+		case 'Accessibility Apprenticeship Level 4':
 			return 'A11y expert!';
 			break;
 		default:
