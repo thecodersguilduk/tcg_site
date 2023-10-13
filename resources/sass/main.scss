@@ -22,16 +22,6 @@
 	mix-blend-mode: multiply;
 }
 
-dt {
-	display: flex;
-	align-items: center;
-}
-dt::before {
-	content: url('/images/Chevron-Left-list.svg');
-	margin-right: 1rem;
-	display: inline-block;
-}
-
 #course_breakdown,
 #course_outline,
 #content,
