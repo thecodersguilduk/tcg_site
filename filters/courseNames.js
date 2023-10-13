@@ -18,17 +18,16 @@ module.exports = function (str) {
 			return 'Work in the Tech Industry';
 			break;
 		case 'Software Developer Apprenticeship Level 4':
-			return 'Developer';
+			return 'Software Developer';
 			break;
 		case 'Software Testing Apprenticeship Level 4':
-			return 'Tester';
+			return 'Software Tester';
 			break;
 		case 'DevOps Apprenticeship Level 4':
 			return 'DevOps Engineer ';
 			break;
 		case 'Accessibility Apprenticeship Level 4':
-			console.log(str);
-			return 'A11y expert!';
+			return 'Accessibility expert!';
 			break;
 		default:
 			return str;
