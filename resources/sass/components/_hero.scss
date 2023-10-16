@@ -1,21 +1,25 @@
 #apprenticeships {
+	.hero {
+		&-desktop {
+			display: block;
 
-  .hero {
-  
-    &-desktop {
-      display: block;
-  
-      @media screen and (max-width: 640px) {
-        display: none;
-      }
-    }
-  
-    &-mobile {
-      display: none;
-  
-      @media screen and (max-width: 640px) {
-        display: block;
-      }
-    }
-  }
+			@media screen and (max-width: 640px) {
+				display: none;
+			}
+		}
+
+		&-mobile {
+			display: none;
+
+			@media screen and (max-width: 640px) {
+				display: block;
+			}
+		}
+	}
 }
+
+// #hero .internal-hero-cta {
+// 	&:nth-child(1) {
+// 		background: linear-gradient('to right', $primary, $secondary);
+// 	}
+// }

@@ -3,23 +3,14 @@ layout: default
 meta_title: Coding Apprenticeships & Digital Skills Training
 meta_description: We are the leading Software Development Apprenticeships and Software Testing Training provider. Get in touch to discover our coding courses & bootcamps.
 body_class: home
-title: The Coders Guild - Coding Apprenticeships & Digital Skill Training
+title: Industry Led, Community Driven
+tagline: Elevating the tech industry through cutting edge digital skills training and apprenticeships
+heroImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=2574a9&sat=100&exp=5&blend-mode=multiply'
 ---
 
-<div class="container max-w-full md:pt-22 pt-20">
-  <div class="hero relative bg-white">
-  {%image './images/banner-1.png', 'Apprenticeships hero image', 'md:block hidden h-full w-full hero-desktop' %}
-  {%image './images/banner-2.png', 'Apprenticeships hero image', 'md:hidden block h-full w-full hero-mobile' %}
-    <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
-        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">{{title}}</h1>
-          <span class="block lg:my-6 sm:my-6 md:my-4 my-4 mx-auto h-2px bg-white max-w-sm"></span>
-          <p class="text-white font-heading text-center text-3xl md:leading-4xl font-bold max-w-md mx-auto">Developing The Future</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container max-w-full md:pt-2">
+  {% include './includes/components/home/hero.njk' %}
+  {% include './includes/components/home/logos.njk' %}
 
   <main id="main" class="main flex flex-1 flex-col focus:outline-none relative" tabindex="-1">
     <div class="bg-red-100 section-rounded">

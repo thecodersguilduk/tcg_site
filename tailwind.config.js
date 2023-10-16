@@ -91,6 +91,7 @@ module.exports = {
 				900: '#234e52',
 			},
 			blue: {
+				50: 'rgba(22, 174, 219, 0.15)',
 				100: '#16aedb',
 				200: '#2574a9',
 				300: '#064789',
@@ -161,6 +162,7 @@ module.exports = {
 			sm: '0.125rem',
 			default: '0.25rem',
 			lg: '0.5rem',
+			'2xl': '1.5rem',
 			full: '9999px',
 		},
 		borderWidth: {
@@ -279,6 +281,7 @@ module.exports = {
 			'3xl': '32px',
 			'4xl': '30px',
 			'5xl': '40px',
+			'6xl': '60px',
 			'9xl': '95px',
 		},
 		fontWeight: {
@@ -306,6 +309,7 @@ module.exports = {
 			100: '100px',
 			auto: 'auto',
 			'-16': '-4rem',
+			'1/2': '50%',
 		},
 		letterSpacing: {
 			tighter: '-0.05em',
@@ -364,6 +368,7 @@ module.exports = {
 		},
 		minHeight: {
 			0: '0',
+			50: '50vh',
 			full: '100%',
 			screen: '100vh',
 			80: '80vh',
@@ -455,6 +460,7 @@ module.exports = {
 			30: '30',
 			40: '40',
 			50: '50',
+			'-1': '-1',
 		},
 	},
 	variants: {

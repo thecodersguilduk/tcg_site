@@ -34,39 +34,7 @@
       </div>
     </div>
 
-    <div class="md:flex md:flex-col lg:flex-row md:mb-16 mb-14">
-      <div class="lg:max-w-sm lg:pr-12 mb-12 lg:mb-0">
-        <h3 class="text-white">Our Available Apprenticeships & Digital Courses</h3>
-        <p class="text-white mb-6">Kick-start your new career with proper training and support from industry experts. Check out our <a class="text-white border-b-2 border-white" href="/course-directory/">course directory</a>. Our expertise covers a range of training options, such as coding bootcamps, courses in user experience design, and junior web development apprenticeships. We also offer workshops and immersive courses to meet all needs. Whether you're looking for a short course, a full-immersive experience or a <a class="text-white" href="/apprenticeships/">digital skill apprenticeship</a>, we have the perfect options to broaden your skillset and boost your job prospects.</p>
-        <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" class="inline-block text-md leading-sm text-blue-200 bg-white py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">Apply for an apprenticeship!<i class="fas fa-angle-right text-md leading-sm text-blue-200 ml-2"></i></a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center">
-        {% for course in courses %}
-          {% if course.courseType === "Apprenticeship" and course.isActive  %}
-              <div class="md:flex mx-4 mb-4 w-full">
-                <div class="sm:px-4">
-                  <div class="bg-white px-6 py-8 rounded-lg shadow-primary  apprenticeships__item">
-                    <div class="flex flex-col items-start">
-                      <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                      <h3 class="text-xl leading-lg mb-0">{{ course.title }}</h3>
-                      <div class="mt-auto">
-                        <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
-                        <div class="mb-4">
-                          <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Be a {{course.title | courseDisplay }}</a>
-                        </div>
-                        <div>
-                          <a href="#" data-modal="book-a-call" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a {{course.title | courseDisplay }}</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
+    {% include '../global/course-grid.njk' %}
   </div>
   <object type="image/svg+xml" data="../images/patterns/16.svg" class="absolute pattern pattern-5"></object>
 

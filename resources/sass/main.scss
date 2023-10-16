@@ -17,6 +17,11 @@
 @tailwind utilities;
 
 //CSS Rules for blog ul and ol li styling
+.saturated-image {
+	filter: saturate(100%);
+	mix-blend-mode: multiply;
+}
+
 #course_breakdown,
 #course_outline,
 #content,
@@ -26,7 +31,6 @@
 		li {
 			list-style: none;
 			list-style-position: outside;
-			font-weight: bold;
 			font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, 'Segoe UI',
 				Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
 				'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
