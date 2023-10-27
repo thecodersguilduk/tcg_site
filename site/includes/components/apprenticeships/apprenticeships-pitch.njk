@@ -1,0 +1,52 @@
+<div class="bg-grey-100 section-rounded px-6 py-16 relative overflow-hidden">
+  <object type="image/svg+xml" data="../images/patterns/14.svg" class="absolute pattern pattern-6"></object>
+  <object type="image/svg+xml" data="../images/patterns/8.svg" class="absolute pattern pattern-4"></object>
+  <div class="mx-auto inner content text-base leading-7 text-gray-700 max-w-3xl">
+    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why are apprenticeships in tech so important?</h2>
+    <p class="mt-6 text-xl leading-8">Apprenticeships are the lifeblood of what we do at The Coders Guild because they embody our core values and mission. Here's why they're so crucial to us:</p>
+    <div class="mt-10">
+      <ul role="list" class="mt-8 space-y-8 text-gray-600">
+        <li class="flex gap-x-3 items-center">
+           <span><strong class="font-semibold text-gray-900">Bridging Skill Gaps</strong> In an industry that's ever-evolving, apprenticeships allow us to provide timely and relevant training. We equip individuals with the tools they need to meet current and future challenges in the tech world.</span>
+        </li>
+        <li class="flex gap-x-3 items-center">
+          <span><strong class="font-semibold text-gray-900">Driving Social Impact</strong> We are passionate about making tech careers accessible to everyone, regardless of background. Apprenticeships allow us to open doors for people from underrepresented groups and those with fewer traditional qualifications but abundant potential.</span>
+        </li>
+        <li class="flex gap-x-3 items-center">
+          <span><strong class="font-semibold text-gray-900">Alternative Pathways</strong> We believe that there's more than one way to build a successful career. Apprenticeships offer a practical, hands-on alternative to traditional education paths, allowing for immediate immersion into real-world job scenarios.</span>
+        </li>
+        <li class="flex gap-x-3 items-center">
+          <span><strong class="font-semibold text-gray-900">Community & Knowledge Sharing</strong> Apprenticeships foster an ecosystem where learning is reciprocal. Experienced staff mentor apprentices, who in turn bring fresh perspectives and enthusiasm that can invigorate a team.</span>
+        </li>
+        <li class="flex gap-x-3 items-center">
+          <span><strong class="font-semibold text-gray-900">Quality Assurance</strong> We've been in this field for over a decade, and our apprenticeship programmes are meticulously designed, reflecting our industry expertise. This guarantees that both employers and apprentices benefit from high-quality training and skill development.</span>
+        </li>
+        <li class="flex gap-x-3 items-center">
+          <span><strong class="font-semibold text-gray-900">Making the Best Use of Levy Funds
+            </strong> For employers, our apprenticeship schemes represent a valuable opportunity to utilise levy funds wisely, ensuring the development of skilled, loyal, and highly motivated employees.</span>
+        </li>
+      </ul>
+      <p class="mt-8">Simply put, apprenticeships are not just training programmes; they're a catalyst for change, growth, and social equality. This is why they lie at the heart of The Coders Guild's vision and operations..</p>
+      <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Our apprenticeships are valued by Employers and Candidates!</h2>
+        <div class="relative">
+              <object type="image/svg+xml" data="../images/patterns/4.svg" class="absolute pattern pattern-8"></object>
+            <div class="flex flex-col lg:flex-row justify-center">
+                {% for testimonial in testimonials %}
+                    {% if testimonial._id === '24d8cf73-2b27-41ae-a482-44fc6e9694c0' or testimonial._id === '8cd390ce-8641-41fb-8692-98b7a72207e3' %}
+                        <div class="w-full lg:w-6/12 p-8">
+                            <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
+                                <div class="sm:flex sm:flex-col">
+                                    <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                                    <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
+                                    <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
+                                    <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {%endfor %}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

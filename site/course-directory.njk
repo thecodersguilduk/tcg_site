@@ -84,7 +84,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                   <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
                </div>
                {% for type in courseTypes %}
-               {% if type.courseType !== 'Apprenticeship' %}
+
                 <div class="courseGroup">
                   <div class="heading">
                      <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
@@ -93,7 +93,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                      {% endif %}
                   </div>
                   {% for item in courses %}
-                     {% if item.isActive and item.courseType !== 'Apprenticeship' and item.courseType === type.courseType %}
+                     {% if item.isActive and item.courseType === type.courseType %}
                         <div class="course-item flex flex-col md:flex-row rounded-lg shadow-lg overflow-hidden mb-6 {% if item.attendance %} {{ item.attendance | join }} {% endif %} {% if item.courseTopics %} {% for item in item.courseTopics %} {{ item.name | join }} {% endfor %}{% endif %} {% if item.title %}{{ item.title | join }}{% endif %} {% if item.courseType %}{{ item.courseType | join }}{% endif %} ">
                            <div class="w-full md:w-4/12">
                               <img class="h-full w-full object-cover" src="{{item.courseItemImage}}" alt="{{item.name}}">
@@ -143,14 +143,14 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                      {% endif %}
                   {% endfor %}
                   </div>
-               {% endif %}
+
                {% endfor %}
             </div>
          </div>
       </div>
    </section>
 
-      <section id="apprenticeships" class="relative overflow-hidden bg-blue-200">
+      {# <section id="apprenticeships" class="relative overflow-hidden bg-blue-200">
          <object type="image/svg+xml" data="../images/patterns/3.svg" class="hidden md:block absolute pattern pattern-3"></object>
             <div class="inner relative z-10">
             <div class="mt-24 mb-32">
@@ -158,7 +158,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
             </div>
             </div>
          <object type="image/svg+xml" data="../images/patterns/4.svg" class="hidden md:block absolute bottom-0 pattern pattern-4"></object>
-      </section>
+      </section> #}
    </main>
 
    <script>
