@@ -1,43 +1,29 @@
----
-layout: default
-meta_title: About Us | Our Mission and Vision
-meta_description: The UK’s gold standard for tech education & digital skills training, delivering the industry’s future innovators from society’s most underrepresented groups.
-body_class: about
-title: Not all apprenticeships are equal, choose the best training provider.
+---js
+{
+layout: 'internal-page',
+meta_title: 'Web Development Apprenticeship Programs',
+meta_description: 'We Provide Paid Software & Web Development Apprenticeship Training Courses In Leeds, London & Remotely Online. Get in touch to learn more.',
+body_class: 'apprenticeships',
+title: 'Pioneering Digital Skills Development with a Social Purpose—That\'s The Coders Guild.',
+tagline: 'Find out who we are, why we do what we do and what makes us tick',
+heroImage: '/images/group-11.png',
+ctas: []
+}
 ---
 
-<div class="container max-w-full md:pt-22 pt-20">
-  <div class="hero relative bg-white">
-    <img src="../images/banner-1.png" alt="Apprenticeships hero image" class="sm:block hidden h-full w-full hero-desktop"/>
-    <img src="../images/group-13.png" alt="Apprenticeships hero image" class="sm:hidden block h-full w-full hero-mobile"/>
-    <div class="absolute top-0 w-full h-full">
-      <div class="flex flex-col justify-center items-center md:py-24 w-full h-full">
-        <div class="max-w-2xl mx-auto px-4 lg:mb-8">
-          <h1 class="text-center text-white mb-0 text-5xl leading-5xl max-w-md md:max-w-full">About Us</h1>
-        </div>
-      </div>
-    </div>
+<div class="bg-blue-200 section-rounded">
+  <div class="bg-white section-rounded py-8">
+    {% include "components/about/intro.njk" %}
+    {% include "components/about/mission-and-vision.njk" %}
+    {% include "components/about/our-story.njk" %}
+    {% include "components/about/connections-partnerships.njk" %}
+
   </div>
-  <main id="main" class="main flex flex-1 flex-col focus:outline-none bg-white" tabindex="-1">
-    <div class="bg-white">
-      <div class="bg-blue-200 section-rounded">
-        <div class="bg-white section-rounded">
-          <div class="bg-blue-200 section-rounded">
-            <div class="bg-white section-rounded">
-              {% include "components/about/mission-and-vision.njk" %}
-              {% include "components/about/our-story.njk" %}
-            </div>
-            {% include "components/team/team-component.njk" %}
-          </div>
-          {% include "components/about/how-we-work.njk" %}
-        </div>
-        {% include "components/about/apprenticeships.njk" %}
-      </div>
-      {% include "components/about/contact-us.njk" %}
-      {% include "components/global/newsletter.njk" %}
-    </div>
-
-
-
-  </main>
-</div>
+  {% include "components/team/team-component.njk" %}
+  </div>
+  <div class="section-rounded bg-white">
+    {% include "components/about/how-we-work.njk" %}
+  </div>
+  <div class="section-rounded bg-blue">
+    {% include "components/home/apprenticeships.njk" %}
+  </div>
