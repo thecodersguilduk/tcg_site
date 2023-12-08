@@ -4,7 +4,7 @@
     <div class="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
       <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
         <div class="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-          <img class="absolute inset-0 h-full w-full rounded-2xl bg-grey-800 object-cover shadow-2xl" src="{{testimonial.avatar}}" alt="{{testimonial.client}} - a successful graduate of one of our fully funded digital courses!">
+          <img class="absolute inset-0 h-full w-full rounded-2xl bg-grey-800 object-cover shadow-2xl" src="{{course.featuredTestimonial.avatar}}" alt="{{course.featuredTestimonial.client}} - a successful graduate of one of our fully funded digital courses!">
         </div>
       </div>
       <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24 text-white">
@@ -14,11 +14,11 @@
             <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
           </svg>
           <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-            <p class="text-white">{{testimonial.testimonial}}</p>
+            <p class="text-white">{{course.featuredTestimonial.testimonial}}</p>
           </blockquote>
           <figcaption class="mt-8 text-base">
-            <div class="font-semibold text-white">{{testimonial.client}}</div>
-            <div class="mt-1 text-grey-600">{{testimonial.occupation}}</div>
+            <div class="font-semibold text-white">{{course.testimonial.client}}</div>
+            <div class="mt-1 text-grey-600">{{course.featuredTestimonial.occupation}}</div>
           </figcaption>
         </figure>
       </div>

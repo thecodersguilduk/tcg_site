@@ -23,7 +23,14 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
 		"featured": featured,
 		"avatar": item->avatar.asset->url,
 		"occupation": item->occupation
-	   }
+	   },
+	"featuredTestimonial": {
+		"occupation": featuredTestimonial->.occupation,
+		"_id": featuredTestimonial->_id,
+	  "client": featuredTestimonial->client,
+		"testimonial": featuredTestimonial->.testimonial,
+		"avatar": featuredTestimonial->avatar.asset->url
+	  }
 } | order(start asc)`;
 
 module.exports = async function () {

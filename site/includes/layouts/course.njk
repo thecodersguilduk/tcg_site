@@ -63,16 +63,15 @@ body_class: apprenticeship-employer
         {% include '../components/women-leaders/custom-excerpt.njk' %}
       {% endif %}
 
+    {% if course.featuredTestimonial.client %}
     </div>
-    {% if course.testimonials %}
-        {% for testimonial in course.testimonials %}
-          {% if testimonial.featured %}
-            {% include '../components/global/big-testimonial.njk' %}
-          {% endif %}
-        {% endfor %}
-    {% include '../components/courses/graduate-logos.njk' %}
+      {% include '../components/global/big-testimonial.njk' %}
     <div class="post inner content md:px-20 mx-auto mt-12">
-      {% endif %}
+    {% endif %}
+    {% include '../components/courses/graduate-logos.njk' %}
+
+
+      {% include '../components/courses/reasons.njk' %}
       {% if course.instances %}
         {% include '../components/courses/course-instances.njk' %}
       {% endif %}
@@ -82,7 +81,7 @@ body_class: apprenticeship-employer
     {% if course.video_embed %}
       {% include '../components/courses/video.njk' %}
     {% endif %}
-    </div>
+
   </section>
   <section id="content" class="section-rounded z-10">
     {% include '../components/courses/content.njk' %}
