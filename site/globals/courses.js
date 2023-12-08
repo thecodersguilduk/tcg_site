@@ -171,6 +171,7 @@ const serializers = {
 		imageSection: ({ node: { asset, width } }) =>
 			h('img', {
 				src: urlFor(asset).width().url(),
+				className: 'inline',
 			}),
 		applyBtn: ({ node: { btnText, btnLink, style, isModal, modalName } }) => {
 			function modalNameGenerator(str) {
