@@ -1,182 +1,186 @@
 ---
-layout: "layouts/jobs-board.njk"
+layout: "layouts/internal-page.njk"
 title: Apprenticeship Vacancies
 permalink: /jobs/apprenticeship-vacancies/
+heroImage: '/images/group-11.png'
 ---
 
 
-
-    <div class="flex flex-wrap justify-center">
-      <div class="w-full lg:w-1/5 h-full">
-        <div class="flex justify-between items-center mt-6">
-          <h5 class="text-lg mb-0">Filters</h5>
-          <div class="resetIcon flex items-center">
-            <img src="../../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
-            <h5 class="text-xs mb-0">Reset Filters</h5>
-          </div>
-        </div>
-
-        <div class="w-full filterOptions">
-        <div class="flex justify-center items-center text-sm">
-          <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col mt-4">
-
-            <div>
-            <p class="font-bold">Location</p>
-            <div>
-              <input type="checkbox" class="location" name="location" value="Greater London"
-                class="transform scale-150">
-              <label for="location" class="ml-1">Greater London</label>
+  <div class="bg-white section-rounded">
+    <div class="max-w-7xl mx-auto py-16">
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full lg:w-1/5 h-full">
+          <div class="flex justify-between items-center mt-6">
+            <h5 class="text-lg mb-0">Filters</h5>
+            <div class="resetIcon flex items-center">
+              <img src="../../images/apprenticeJobAd/restart_alt_black_24dp.svg" class="h-8 p-2">
+              <h5 class="text-xs mb-0">Reset Filters</h5>
             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="South East England"
-                class="transform scale-150">
-              <label for="location" class="ml-1"> South East England</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="South West England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">South West England</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="West Midlands"
-                class="transform scale-150">
-              <label for="location" class="ml-1">West Midlands</label>
-             </div>
-             <div>
-              <input type="checkbox" class="location" name="location" value="East Midlands"
-                class="transform scale-150">
-              <label for="location" class="ml-1">East Midlands</label>
-              </div>
+          </div>
+
+          <div class="w-full filterOptions">
+          <div class="flex justify-center items-center text-sm">
+            <div class="flex items-start content-center flex-col sm:flex-row lg:flex-col mt-4">
+
               <div>
-              <input type="checkbox" class="location" name="location" value="North West England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">North West England</label>
-              </div>
-               <div>
-                <input type="checkbox" class="location" name="location" value="North East England"
+              <p class="font-bold">Location</p>
+              <div>
+                <input type="checkbox" class="location" name="location" value="Greater London"
                   class="transform scale-150">
-                <label for="location" class="ml-1">North East England</label>
+                <label for="location" class="ml-1">Greater London</label>
               </div>
-               <div>
-              <input type="checkbox" class="location" name="location" value="East of England"
-                class="transform scale-150">
-              <label for="location" class="ml-1">East of England</label>
+              <div>
+                <input type="checkbox" class="location" name="location" value="South East England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1"> South East England</label>
               </div>
+              <div>
+                <input type="checkbox" class="location" name="location" value="South West England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">South West England</label>
+              </div>
+              <div>
+                <input type="checkbox" class="location" name="location" value="West Midlands"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">West Midlands</label>
+              </div>
+              <div>
+                <input type="checkbox" class="location" name="location" value="East Midlands"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">East Midlands</label>
+                </div>
                 <div>
-              <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
-                class="transform scale-150">
-              <label for="location" class="ml-1">Yorkshire and the Humber</label>
+                <input type="checkbox" class="location" name="location" value="North West England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">North West England</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="location" name="location" value="North East England"
+                    class="transform scale-150">
+                  <label for="location" class="ml-1">North East England</label>
+                </div>
+                <div>
+                <input type="checkbox" class="location" name="location" value="East of England"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">East of England</label>
+                </div>
+                  <div>
+                <input type="checkbox" class="location" name="location" value="Yorkshire and the Humber"
+                  class="transform scale-150">
+                <label for="location" class="ml-1">Yorkshire and the Humber</label>
+              </div>
             </div>
-          </div>
-            {#end of main location filter section ----- #}
+              {#end of main location filter section ----- #}
 
 
-            {#-------apprenticeship standard#}
-            <div class="lg:my-4">
-              <p class="font-bold">Apprenticeship Standard</p>
+              {#-------apprenticeship standard#}
+              <div class="lg:my-4">
+                <p class="font-bold">Apprenticeship Standard</p>
+                <div>
+                  <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                    value="software developer level 4" class="transform scale-150">
+                  <label for="apprentince standard" class="ml-1"> Software Developer Level 4</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="apprentince-standard" name="apprentince standard"
+                    value="software tester level 4" class="transform scale-150">
+                  <label for="apprentince standard" class="ml-1"> Software Tester Level 4</label>
+                </div>
+              </div>
+
+              {# end of standard -------- #}
+
+              {# salary range----- #}
+              {# <div>
+
+                <p class="font-bold text-xs">Salary Range</p>
+                <label for="salary range" class="text-xs">24k-36k</label>
+                <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
+                  max="100" step="1" value="18" />
+                <div class="flex flex-row justify-between">
+                  <p class="flex text-xs">18k</p>
+                  <p class="flex text-xs">100k</p>
+                </div>
+              </div> #}
+
+              {# end of salary range #}
+
+            <div class="lg:mt-4">
+              <p class="font-bold">Disability confident employer</p>
               <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software developer level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software Developer Level 4</label>
+                <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="true"
+                  class="transform scale-150">
+                <label for="disability-confident-employer" class="ml-1"> Yes</label>
               </div>
               <div>
-                <input type="checkbox" class="apprentince-standard" name="apprentince standard"
-                  value="software tester level 4" class="transform scale-150">
-                <label for="apprentince standard" class="ml-1"> Software Tester Level 4</label>
+                <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="false"
+                  class="transform scale-150">
+                <label for="disability confident employer" class="ml-1"> No</label>
               </div>
             </div>
-
-            {# end of standard -------- #}
-
-            {# salary range----- #}
-            {# <div>
-
-              <p class="font-bold text-xs">Salary Range</p>
-              <label for="salary range" class="text-xs">24k-36k</label>
-              <input class="rounded-lg overflow-hidden appearance-none bg-grey-700 w-full h-1" type="range" min="18"
-                max="100" step="1" value="18" />
-              <div class="flex flex-row justify-between">
-                <p class="flex text-xs">18k</p>
-                <p class="flex text-xs">100k</p>
-              </div>
-            </div> #}
-
-            {# end of salary range #}
-
-          <div class="lg:mt-4">
-            <p class="font-bold">Disability confident employer</p>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="true"
-                class="transform scale-150">
-              <label for="disability-confident-employer" class="ml-1"> Yes</label>
-            </div>
-            <div>
-              <input type="checkbox" class="disability-confident-employer" name="disability confident employer" value="false"
-                class="transform scale-150">
-              <label for="disability confident employer" class="ml-1"> No</label>
             </div>
           </div>
           </div>
         </div>
-        </div>
-      </div>
-      <div class="lg:w-4/5 w-full h-full lg:px-6">
-        <div class="flex justify-between items-center mt-6">
-          <h5 class="mb-0">Showing: <span class="showing"></span></h5>
-          <div class="flex items-center">
-            <img class="hidden lg:block w-8 gridView" src="../../images/apprenticeJobAd/grid_view_black_24dp.svg">
-            <img class="hidden lg:block listView" src="../../images/apprenticeJobAd/list_black_24dp.svg">
+        <div class="lg:w-4/5 w-full h-full lg:px-6">
+          <div class="flex justify-between items-center mt-6">
+            <h5 class="mb-0">Showing: <span class="showing"></span></h5>
+            <div class="flex items-center">
+              <img class="hidden lg:block w-8 gridView" src="../../images/apprenticeJobAd/grid_view_black_24dp.svg">
+              <img class="hidden lg:block listView" src="../../images/apprenticeJobAd/list_black_24dp.svg">
+            </div>
           </div>
-        </div>
-        <div class="flex flex-col"></div>
-        {%if apprentice_jobs.length < 1 %}
-          <h2 class="text-center mt-20">Sorry, There are no live vacancies at the moment...</h2>
-          <p>But don't let that put you off applying for our Apprenticeship. We can aid your job search and train you in Essential job hunting skills to help you pursue a career in Tech.</p>
-          <div class="flex justify-around mt-8">
-            <a href="https://applysdl4.thecodersguild.org.uk/" class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 mr-2 md:mr-8">Apply for our Software Development Apprenticeship</a>
-            <a href="https://applystl4.thecodersguild.org.uk/" class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 ml-2 md:ml-8">Apply for our Software Testing Apprenticeship</a>
-          </div>
-        {% else %}
-          {% for job in apprentice_jobs %}
-              <div class="main-container singleAd {{ job.standard | join }} {{ job.jobTitle | join }}  {{ job.disabilityConfident }} {%for location in job.location %}{{location.name | join}}{% endfor %} flex flex-col">
-                <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
-                  <div class="top-row flex flex-row justify-between mb-6">
-                    <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
+          <div class="flex flex-col"></div>
+          {%if apprentice_jobs.length < 1 %}
+            <h2 class="text-center mt-20">Sorry, There are no live vacancies at the moment...</h2>
+            <p>But don't let that put you off applying for our Apprenticeship. We can aid your job search and train you in Essential job hunting skills to help you pursue a career in Tech.</p>
+            <div class="flex justify-around mt-8">
+              <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 mr-2 md:mr-8">Apply for our Software Development Apprenticeship</a>
+              <a href="https://forms.gle/HWEdypZ5uuNzbGNJ9" class="py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100 ml-2 md:ml-8">Apply for our Software Testing Apprenticeship</a>
+            </div>
+          {% else %}
+            {% for job in apprentice_jobs %}
+                <div class="main-container singleAd {{ job.standard | join }} {{ job.jobTitle | join }}  {{ job.disabilityConfident }} {%for location in job.location %}{{location.name | join}}{% endfor %} flex flex-col">
+                  <div class="card-container  bg-white my-4 p-8 rounded-lg shadow-xl">
+                    <div class="top-row flex flex-row justify-between mb-6">
+                      <div class="hidden md:block w-36 h-36 mr-2" style="background-image: url('{{job.employerLogo}}'); background-size: contain; background-repeat: no-repeat; background-position: center;" alt="{{job.jobTitle}}" class="w-24 h-24 mr-6"></div>
 
-                    <div class="flex flex-col align-start justify-self-start w-full">
-                      <div class="flex justify-between w-full">
-                        <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
-                        <span class="font-bold p-0 m-0">{%if job.salary%}{{job.salary}}{%else%}DOE{%endif%}</span>
-                      </div>
-                      <h5 class="p-0 my-2">{{job.employerName}}</h5>
-                      <h5 class="text-sm">{{job.standard}}</h5>
-
-                      <div class="flex flex-row flex-wrap items-center">
-                        <div class="flex items-center mr- my-2 sm:my-0">
-                          <img src="../../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{% for location in job.location %}<span class="mr-4 text-sm">{{location.name}}</span>{% endfor %}
+                      <div class="flex flex-col align-start justify-self-start w-full">
+                        <div class="flex justify-between w-full">
+                          <h3 class="p-0 mb-0 leading-none text-xl">{{job.jobTitle}}</h3>
+                          <span class="font-bold p-0 m-0">{%if job.salary%}{{job.salary}}{%else%}DOE{%endif%}</span>
                         </div>
-                        <div class="flex items-center mr-4 my-2 sm:my-0">
-                          <img src="../../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
-                          <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+                        <h5 class="p-0 my-2">{{job.employerName}}</h5>
+                        <h5 class="text-sm">{{job.standard}}</h5>
+
+                        <div class="flex flex-row flex-wrap items-center">
+                          <div class="flex items-center mr- my-2 sm:my-0">
+                            <img src="../../images/apprenticeJobAd/place_black_24dp.svg" alt="location-icon" class="p-0">{% for location in job.location %}<span class="mr-4 text-sm">{{location.name}}</span>{% endfor %}
+                          </div>
+                          <div class="flex items-center mr-4 my-2 sm:my-0">
+                            <img src="../../images/apprenticeJobAd/date_range_black_24dp.svg" alt="clock-icon" class="flex">
+                            <span class="text-sm">{{job.closingDate | dateDisplay}}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-description my-2">
-                    <p class="text-sm">{{job.excerpt | safe}}</p>
-                  </div>
-                  <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
-                    <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
-                    <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+                    <div class="job-description my-2">
+                      <p class="text-sm">{{job.excerpt | safe}}</p>
+                    </div>
+                    <div class="apply-btn find-out-more-btn flex flex-col sm:flex-row">
+                      <a class="mt-auto mr-0 sm:mr-8 mb-2 sm:mb-0 py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white" href="{% if job.isDev%}https://applysdl4.thecodersguild.org.uk{% elseif job.isTest%}https://applystl4.thecodersguild.org.uk{% endif %}" style="color:white;" target="_blank">Apply Now</a>
+                      <a class="mt-auto py-2 px-4 bg-white text-md font-bold font-heading rounded border border-blue-200" href="/apprenticeship-vacancies/{{ job.slug.current }}/index.html" style="color:#2574a9;">Find Out More</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-          {% endfor %}
-        {% endif %}
-        </div>
+            {% endfor %}
+          {% endif %}
+          </div>
 
+        </div>
       </div>
     </div>
+
 
 <script>
 const filterOptions = document.querySelector('.filterOptions')

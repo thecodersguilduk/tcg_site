@@ -23,14 +23,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
 		"featured": featured,
 		"avatar": item->avatar.asset->url,
 		"occupation": item->occupation
-	   },
-	"featuredTestimonial": {
-		"occupation": featuredTestimonial->.occupation,
-		"_id": featuredTestimonial->_id,
-	  "client": featuredTestimonial->client,
-		"testimonial": featuredTestimonial->.testimonial,
-		"avatar": featuredTestimonial->avatar.asset->url
-	  }
+	   }
 } | order(start asc)`;
 
 module.exports = async function () {
@@ -178,7 +171,6 @@ const serializers = {
 		imageSection: ({ node: { asset, width } }) =>
 			h('img', {
 				src: urlFor(asset).width().url(),
-				className: 'inline',
 			}),
 		applyBtn: ({ node: { btnText, btnLink, style, isModal, modalName } }) => {
 			function modalNameGenerator(str) {
@@ -190,10 +182,10 @@ const serializers = {
 			let classes;
 			if (style === 'float-right') {
 				classes =
-					'inline bg-gradient-to-r from-blue-200 to-blue-100 px-6 py-4 text-white rounded my-6 w-6/12 font-bold float-right';
+					'mt-auto block float-right py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white';
 			} else {
 				classes =
-					'inline bg-gradient-to-r from-blue-200 to-blue-100 px-6 py-4 text-white rounded my-6 w-6/12 font-bold';
+					'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white';
 			}
 
 			if (isModal) classes += `${modalName}-c-btn`;
