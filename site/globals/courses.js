@@ -178,6 +178,7 @@ const serializers = {
 		imageSection: ({ node: { asset, width } }) =>
 			h('img', {
 				src: urlFor(asset).width().url(),
+				className: 'inline',
 			}),
 		applyBtn: ({ node: { btnText, btnLink, style, isModal, modalName } }) => {
 			function modalNameGenerator(str) {
@@ -189,10 +190,10 @@ const serializers = {
 			let classes;
 			if (style === 'float-right') {
 				classes =
-					'mt-auto block float-right py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white';
+					'inline bg-gradient-to-r from-blue-200 to-blue-100 px-6 py-4 text-white rounded my-6 w-6/12 font-bold float-right';
 			} else {
 				classes =
-					'mt-auto inline-block py-2 px-4 bg-blue-200 text-md font-bold font-heading rounded text-white';
+					'inline bg-gradient-to-r from-blue-200 to-blue-100 px-6 py-4 text-white rounded my-6 w-6/12 font-bold';
 			}
 
 			if (isModal) classes += `${modalName}-c-btn`;
