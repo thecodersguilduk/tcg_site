@@ -5,6 +5,7 @@ module.exports = {
 		'./site/**/*.{html,njk}',
 		'./site/**/**/*.{html,njk}',
 		'./site/**/**/**/*.{html,njk}',
+		'./site/**/**/**/**/*.{html,njk}',
 	],
 	purge: false,
 	important: false,

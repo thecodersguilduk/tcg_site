@@ -2015,6 +2015,9 @@ input, textarea{
 .min-h-80{
   min-height: 80vh;
 }
+.min-h-\[80\%\]{
+  min-height: 80%;
+}
 .min-h-full{
   min-height: 100%;
 }
