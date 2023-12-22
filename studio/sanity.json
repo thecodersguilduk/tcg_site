@@ -12,15 +12,6 @@
         "projectId": "wd1bon7z",
         "dataset": "production"
       }
-    },
-    {
-      "name": "courses",
-      "title": "courses",
-      "default": false,
-      "api": {
-        "projectId": "wd1bon7z",
-        "dataset": "course-directory"
-      }
     }
   ],
   "api": {

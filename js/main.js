@@ -784,7 +784,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var courseApplyValidation = function courseApplyValidation() {
   if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseApply) return;
   var submitBtn = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyBtnSubmit;
@@ -792,7 +791,6 @@ var courseApplyValidation = function courseApplyValidation() {
   form.addEventListener('change', function (e) {
     var input = e.target.closest('.form-input-field') || e.target.closest('.form-checkbox');
     if (!input) return;
-
     if (input.type === 'radio' || input.type === 'checkbox') {
       input = form.querySelectorAll("input[name='".concat(input.name, "']"));
       input.forEach(function (item) {
@@ -801,15 +799,12 @@ var courseApplyValidation = function courseApplyValidation() {
     } else {
       input.value !== '' ? input.setAttribute('data-valid', true) : input.setAttribute('data-valid', false);
     }
-
     var invalidInputs = this.querySelectorAll('[data-valid="false"]');
-
     if (submitBtn) {
       submitBtn.disabled = invalidInputs.length > 0 ? true : false;
     }
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (courseApplyValidation);
 
 /***/ }),
@@ -825,14 +820,12 @@ var courseApplyValidation = function courseApplyValidation() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var courseCTAHeader = function courseCTAHeader() {
   var coursePage = document.getElementById('course');
   if (!coursePage) return;
   var header = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header;
   document.addEventListener('scroll', function (e) {
     var scroll = window.scrollY;
-
     if (scroll > 125) {
       header.style.height = '0';
       header.style.overflow = 'hidden';
@@ -842,7 +835,6 @@ var courseCTAHeader = function courseCTAHeader() {
     }
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (courseCTAHeader);
 
 /***/ }),
@@ -858,7 +850,6 @@ var courseCTAHeader = function courseCTAHeader() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var expressionInterest = function expressionInterest() {
   if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].expressionInterestForm) return;
   var content = document.getElementById("content");
@@ -873,7 +864,6 @@ var expressionInterest = function expressionInterest() {
   });
   observer.observe(content);
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (expressionInterest);
 
 /***/ }),
@@ -889,7 +879,6 @@ var expressionInterest = function expressionInterest() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var faqAccordion = function faqAccordion() {
   if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection) return;
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].faqSection.addEventListener('click', function (e) {
@@ -898,7 +887,6 @@ var faqAccordion = function faqAccordion() {
     var content = btn.nextElementSibling;
     var angle = btn.querySelector('.svg-inline--fa');
     btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
-
     if (content.style.maxHeight) {
       angle.classList.add('fa-angle-down');
       angle.classList.remove('fa-angle-up');
@@ -910,7 +898,6 @@ var faqAccordion = function faqAccordion() {
     }
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (faqAccordion);
 
 /***/ }),
@@ -926,134 +913,139 @@ var faqAccordion = function faqAccordion() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
-
 var validateForm = function validateForm() {
   if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm) {
     var input, regex, invalidInputs, errorMessage, errorContainer;
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('change', function (e) {
       input = e.target.closest('.form-checkbox');
       if (!input) return;
-
       if (input.value !== '') {
         input.setAttribute('data-valid', true);
       } else {
         input.setAttribute('data-valid', false);
       }
-
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
-
       if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
       } else {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
       }
-    }); // Attach keyup event to a contact form
-
+    });
+    // Attach keyup event to a contact form
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('keyup', function (e) {
       // Get the input element
-      input = e.target.closest('.form-input-field'); // If event occured somewhere else than on input field - return;
+      input = e.target.closest('.form-input-field');
+      // If event occured somewhere else than on input field - return;
+      if (!input) return;
 
-      if (!input) return; // Check if input element has a sibling element with data-message attribute attached
-
+      // Check if input element has a sibling element with data-message attribute attached
       if (messageExists(input, 'data-message')) {
         errorContainer = input.nextElementSibling;
         errorMessage = input.nextElementSibling.getAttribute('data-message');
-      } // In input field has data-regex attribute
+      }
 
-
+      // In input field has data-regex attribute
       if (input.hasAttribute('data-regex')) {
         // Assign the value to regex variable
-        regex = RegExp(input.getAttribute('data-regex')); // Compare user input with provided regex
+        regex = RegExp(input.getAttribute('data-regex'));
 
+        // Compare user input with provided regex
         if (regex.test(input.value)) {
           // If user input matches regex - check if it has data-valid attr, and change the attribute value, so the input becomes 'valid'
-          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null; // Check if input contains specified class, if so - remove it
+          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'true') : null;
 
-          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null; // Check if current input element has errorContainer and errorMessage attached
+          // Check if input contains specified class, if so - remove it
+          input.classList.contains('form-input-field--invalid') ? input.classList.remove('form-input-field--invalid') : null;
 
+          // Check if current input element has errorContainer and errorMessage attached
           if (errorContainer && errorContainer) {
             // Change text content to be empty and hide the element itself
             errorContainer.textContent === errorMessage ? errorContainer.textContent = null : null;
             errorContainer.setAttribute('aria-hidden', 'false');
-          } // Check if event key is navigation key, if so - do nothing
+          }
 
+          // Check if event key is navigation key, if so - do nothing
         } else if (!input.value && e.which === 9 || e.which === 8 || e.which >= 37 && e.which <= 40) {
-          return; // Check if current input is email field, if so - break of the function
+          return;
+
+          // Check if current input is email field, if so - break of the function
         } else if (input === _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].emailInput) {
-          return; // If none of the specified above conditions are met:
+          return;
+
+          // If none of the specified above conditions are met:
         } else {
           // If input has data-valid attr - make it hold invlaid state
-          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null; // If input doesn't contain invalid input class - attach it to the existing class list, if not - do nothing
+          input.hasAttribute('data-valid') ? input.setAttribute('data-valid', 'false') : null;
 
-          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid'); // Check if current input element has errorContainer and errorMessage attached
+          // If input doesn't contain invalid input class - attach it to the existing class list, if not - do nothing
+          input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
 
+          // Check if current input element has errorContainer and errorMessage attached
           if (errorContainer && errorContainer) {
             // If so - display error message and make element visible
             errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
             errorContainer.setAttribute('aria-hidden', 'true');
           }
         }
-      } // Keeps track of 'invalid' input fields
+      }
 
-
-      invalidInputs = this.querySelectorAll('[data-valid="false"]'); // If there are no invalid input fields - make button available, else - disable it
+      // Keeps track of 'invalid' input fields
+      invalidInputs = this.querySelectorAll('[data-valid="false"]');
+      // If there are no invalid input fields - make button available, else - disable it
 
       if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
       } else {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].applyFormSubmit.disabled = invalidInputs.length > 0 ? true : false;
       }
-    }); // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
+    });
 
+    // Attach focusout event to a contact form (can't use 'blur' event, because it doesn't bubble)
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('focusout', function (e) {
-      input = e.target.closest('.form-input-field'); //console.log(input.value);
-
+      input = e.target.closest('.form-input-field');
+      //console.log(input.value);
       if (!input) return;
-
       if (messageExists(input, 'data-message')) {
         errorContainer = e.target.nextElementSibling;
         errorMessage = e.target.nextElementSibling.getAttribute('data-message');
       }
-
       if (!input.hasAttribute('data-regex') && input.type !== 'textarea') {
         if (input.value !== '') {
           input.setAttribute('data-valid', true);
         }
-      } // Check if input, where event occured - has no value and contains a required class
+      }
 
-
+      // Check if input, where event occured - has no value and contains a required class
       if (!input.value && input.classList.contains('required')) {
         // If it does - append red border
-        input.classList.contains('border-red-100') ? null : input.classList.add('border-red-100'); // Show 'Required' pop-up on the top of the form
+        input.classList.contains('border-red-100') ? null : input.classList.add('border-red-100');
 
+        // Show 'Required' pop-up on the top of the form
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].requiredPopUp.classList.contains('hidden') ? _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].requiredPopUp.classList.remove('hidden') : null;
       } else {
         // Else - remove red border
         input.classList.contains('border-red-100') ? input.classList.remove('border-red-100') : null;
-      } // Check if current input is the email field, not empty and has a data-regex attribute
+      }
 
-
+      // Check if current input is the email field, not empty and has a data-regex attribute
       if (input === _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].emailInput && input.hasAttribute('data-regex') && input.value) {
         // Assign and convert data-regex value into a regular expression
-        regex = RegExp(input.getAttribute('data-regex')); // Compare input value with provided regex
+        regex = RegExp(input.getAttribute('data-regex'));
 
+        // Compare input value with provided regex
         if (!regex.test(e.target.value)) {
           input.classList.contains('form-input-field--invalid') ? null : input.classList.add('form-input-field--invalid');
-
           if (errorContainer && errorContainer) {
             errorContainer.textContent === errorMessage ? null : errorContainer.textContent = errorMessage;
             errorContainer.setAttribute('aria-hidden', 'false');
           }
         }
       }
-
       invalidInputs = this.querySelectorAll('[data-valid="false"]');
       console.log(invalidInputs.length);
-
       if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn) {
         _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].submitBtn.disabled = invalidInputs.length > 0 ? true : false;
       } else {
@@ -1064,7 +1056,6 @@ var validateForm = function validateForm() {
     return;
   }
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (validateForm);
 
 /***/ }),
@@ -1077,6 +1068,7 @@ var validateForm = function validateForm() {
 /***/ (function(module, exports) {
 
 // import $$ from '@utilities/selectors';
+
 // const headerScroll = function headerScroll() {
 //   window.addEventListener('scroll', function() {
 //     if ( window.scrollY > 0 ) {
@@ -1086,6 +1078,7 @@ var validateForm = function validateForm() {
 //     }
 //   });
 // }();
+
 // export default headerScroll;
 
 /***/ }),
@@ -1103,29 +1096,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @utilities/helpers */ "./resources/js/utilities/helpers/index.js");
 
 
-
 var Lazyload = function Lazyload() {
   // lazyload our images
   var images = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].wrapper.querySelectorAll('[data-lazy]');
-
   if (Object(_utilities_helpers__WEBPACK_IMPORTED_MODULE_1__["exists"])(images)) {
     // options
     var options = {
       threshold: 0.5
     };
-
     var preloadImage = function preloadImage(img) {
       // find and store the image's data-lazy attribute
       // commented out for now, but if you want to go the extra mile, then you can do all the srcset attribute stuff on the images ;)
       // const srcset = img.dataset.srcset
       var src = img.dataset.lazy;
-      img.src = src; // img.srcset = srcset
+      img.src = src;
+      // img.srcset = srcset
+
       // add a class of loaded
       // we can then use this as a hook for fade-in animations etc
-
       img.classList.add('loaded');
     };
-
     var lazyLoad = new IntersectionObserver(function (entries, lazyLoad) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -1139,7 +1129,6 @@ var Lazyload = function Lazyload() {
     });
   }
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (Lazyload);
 
 /***/ }),
@@ -1155,22 +1144,18 @@ var Lazyload = function Lazyload() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 function displayEl(el, attr, hiddenClass) {
   el.classList.contains(hiddenClass) ? el.classList.remove(hiddenClass) : null;
   el.hasAttribute(attr) ? el.setAttribute(attr, 'false') : null;
 }
-
 var loadMorePosts = function loadMorePosts() {
   var maxItems = 9,
-      hiddenClass = 'hidden',
-      blogPostsArray = Array.from(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].blogPostList),
-      attr = 'aria-hidden';
-
+    hiddenClass = 'hidden',
+    blogPostsArray = Array.from(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].blogPostList),
+    attr = 'aria-hidden';
   if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].postContainer) {
     return;
   }
-
   blogPostsArray.splice(0, maxItems).forEach(function (el) {
     displayEl(el, attr, hiddenClass);
   });
@@ -1179,7 +1164,6 @@ var loadMorePosts = function loadMorePosts() {
       displayEl(el, attr, hiddenClass);
     });
     displayEl(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].scrollTopBtn, attr, hiddenClass);
-
     if (!blogPostsArray.length) {
       this.classList.add(hiddenClass);
       this.setAttribute(attr, true);
@@ -1190,7 +1174,6 @@ var loadMorePosts = function loadMorePosts() {
     document.documentElement.scrollTop = 0;
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (loadMorePosts);
 
 /***/ }),
@@ -1206,14 +1189,12 @@ var loadMorePosts = function loadMorePosts() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var mobileNav = function mobileNav() {
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].navToggle.addEventListener('click', function (e) {
     this.classList.toggle('burger-active');
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].mobileNavContainer.classList.toggle('opacity-0');
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (mobileNav);
 
 /***/ }),
@@ -1229,33 +1210,25 @@ var mobileNav = function mobileNav() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var displayModal = function displayModal() {
   var btn, dataAttr, modal;
   document.addEventListener('click', function (e) {
     btn = e.target.closest('[data-modal]');
-
     if (!btn) {
       return;
     }
-
     e.preventDefault();
     dataAttr = btn.hasAttribute('data-modal') ? btn.getAttribute('data-modal') : null;
-
     if (!dataAttr) {
       return;
     }
-
     modal = document.querySelector("#".concat(dataAttr));
-
     if (!modal) {
       return;
     }
-
     modal.classList.toggle('modal--active');
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (displayModal);
 
 /***/ }),
@@ -1271,15 +1244,12 @@ var displayModal = function displayModal() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 function getChildren(parent, className) {
   var child;
-
   if (!parent || !className || !parent.childNodes.length) {
     console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
     return;
   }
-
   var children = Array.from(parent.childNodes);
   children.map(function (childEl) {
     if (childEl.classList) {
@@ -1290,7 +1260,6 @@ function getChildren(parent, className) {
   });
   return child;
 }
-
 var ShowHide = function ShowHide() {
   var parentNode, content, iconUp, iconDown;
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].toggleShowHide.forEach(function (btn) {
@@ -1301,7 +1270,6 @@ var ShowHide = function ShowHide() {
       iconDown = getChildren(this, 'fa-angle-down');
       iconUp = getChildren(this, 'fa-angle-up');
       content.maxHeight = content.scrollHeight;
-
       if (!content.style.maxHeight) {
         iconDown.classList.remove('fa-angle-down');
         iconDown.classList.add('fa-angle-up');
@@ -1316,7 +1284,6 @@ var ShowHide = function ShowHide() {
     });
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (ShowHide);
 
 /***/ }),
@@ -1332,7 +1299,6 @@ var ShowHide = function ShowHide() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var sliderSettings = function () {
   var slick = document.querySelector('.testimonials__slider');
   if (!slick) return;
@@ -1346,7 +1312,6 @@ var sliderSettings = function () {
     slidesToScroll: 1
   });
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (sliderSettings);
 
 /***/ }),
@@ -1362,37 +1327,33 @@ var sliderSettings = function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-
 var submenu = function submenu() {
   var navlinks = document.getElementById('nav-links');
   var mobileNav = document.getElementById('mobile-nav');
   navlinks.addEventListener('click', toggleSubMenu);
   mobileNav.addEventListener('click', toggleSubMenu);
-
   function toggleSubMenu(e) {
     var target = e.target;
-
     if (target.nodeName.toLowerCase() === 'li') {
       //now open thesubmenu of the li just clicked on
       var currentSubMenu = target.querySelector('.submenu');
-
       if (currentSubMenu.classList.contains('block')) {
         currentSubMenu.classList.remove('block');
         currentSubMenu.classList.add('hidden');
       } else {
         currentSubMenu.classList.remove('hidden');
         currentSubMenu.classList.add('block');
-      } //close all the submenus
+      }
 
-
+      //close all the submenus
       var submenus = document.querySelectorAll('.submenu');
       submenus.forEach(function (menu) {
         console.log(menu.parentElement);
-
         if (menu.classList.contains('block') && target.innerText.toLowerCase() !== menu.parentElement.innerText.toLowerCase()) {
           // console.log('were here');
           menu.classList.remove('block');
-          menu.classList.add('hidden'); // console.log(menu.classList);
+          menu.classList.add('hidden');
+          // console.log(menu.classList);
         }
       });
       currentSubMenu.addEventListener('mouseleave', function (e) {
@@ -1402,7 +1363,6 @@ var submenu = function submenu() {
     }
   }
 }();
-
 /* harmony default export */ __webpack_exports__["default"] = (submenu);
 
 /***/ }),
@@ -1422,13 +1382,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! dotenv */ "./node_modules/dotenv/lib/main.js").config();
 
 
-
-
 var vacancyFilters = function vacancyFilters() {
   if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].vacancies) return;
   var url = "https://".concat(_site_globals_config__WEBPACK_IMPORTED_MODULE_1___default.a.PROJECTID, ".api.sanity.io/v").concat(_site_globals_config__WEBPACK_IMPORTED_MODULE_1___default.a.apiVersion, "/<path>");
   console.log(_site_globals_config__WEBPACK_IMPORTED_MODULE_1___default.a);
-}(); // const filterOptions = document.querySelector('.filterOptions')
+}();
+
+// const filterOptions = document.querySelector('.filterOptions')
 // const resetIcon = document.querySelector('.resetIcon')
 // const singleAd = Array.from(document.querySelectorAll('.singleAd'))
 // const sortSelect = document.querySelector('.sort')
@@ -1436,8 +1396,10 @@ var vacancyFilters = function vacancyFilters() {
 // const listIcon = document.querySelector('.listView')
 // const noresults = document.querySelector('.no-results')
 // //const url = `https://${process.env.PROJECTID}.api.sanity.io/v${process.env.API_VERSION}/<path>`
+
 // listIcon.addEventListener('click', toggleGrid)
 // gridIcon.addEventListener('click', toggleGrid)
+
 // filterOptions.addEventListener('change', e => {
 //   //filter options is the container div for all the checkboxes.the event listener listens for any change, check/uncheck
 //     if(e.target.classList.contains('location')){
@@ -1450,6 +1412,7 @@ var vacancyFilters = function vacancyFilters() {
 //         }
 //     } else if(e.target.classList.contains('disability-confident-employer')){
 //         let checkboxValue = join(e.target.value);
+
 //         if(e.target.checked){
 //         disabilityArray.push(checkboxValue)
 //         } else if(!e.target.checked) {
@@ -1458,6 +1421,7 @@ var vacancyFilters = function vacancyFilters() {
 //         }
 //     } else if(e.target.classList.contains('apprentince-standard')){
 //         let checkboxValue = join(e.target.value);
+
 //         if(e.target.checked){
 //         standardArray.push(checkboxValue)
 //         } else if(!e.target.checked) {
@@ -1465,44 +1429,55 @@ var vacancyFilters = function vacancyFilters() {
 //             standardArray.splice(index, 1)
 //         }
 //     }
+
 //     singleAd.forEach(job => {
 //       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length > 0){
 //         ('triple array filter')
 //         filtertriplearray(standardArray, disabilityArray, standardArray, job)
 //       }
+
 //       if(locationArray.length < 1 && disabilityArray.length > 0 && standardArray.length > 0){
 //         ('double array filter')
 //         filterdoublearray(disabilityArray, standardArray, job)
 //       }
+
 //       if(locationArray.length > 0 && disabilityArray.length < 1 && standardArray.length > 0){
 //         ('double array filter')
 //         filterdoublearray(locationArray, standardArray, job)
 //       }
+
 //       if(locationArray.length > 0 && disabilityArray.length > 0 && standardArray.length < 1){
 //         ('double array filter')
 //         filterdoublearray(locationArray, disabilityArray, job)
 //       }
+
 //       if(locationArray.length >= 1 && disabilityArray.length < 1 && standardArray.length < 1){
 //         ('single array filter')
 //         filterSingleArray(locationArray, job)
 //       }
+
 //       if(disabilityArray.length >= 1 && locationArray.length < 1 && standardArray.length < 1){
 //         ('single array filter')
 //         filterSingleArray(disabilityArray, job)
 //       }
+
 //       if(standardArray.length >= 1 && disabilityArray.length < 1 && locationArray.length < 1){
 //         ('single array filter')
 //         filterSingleArray(standardArray, job)
 //       }
+
 //       if(locationArray.length < 1 && disabilityArray.length < 1 && standardArray.length < 1){
 //         reset()
 //       }
 //     })
 // })
+
 // resetIcon.addEventListener('click', reset);
+
 // /* searchBar.addEventListener('keyup', e => {
 // const searchString = e.target.value
 // const jobs = document.querySelectorAll('.singleAd.flex');
+
 //   jobs.forEach(job => {
 //     if(!job.classList.includes(searchString)){
 //       job.classList.add('hidden')
@@ -1512,20 +1487,26 @@ var vacancyFilters = function vacancyFilters() {
 //       job.classList.remove('hidden')
 //     }
 //   })
+
 //   displayNumVacancies()
+
 // }) */
+
 // function toggleGrid(){
 //   const jobs = document.querySelectorAll('.singleAd.flex')
 //   const jobChildEl = jobs[0];
 //   jobChildEl.parentNode.classList.toggle('flex-col')
 //   jobChildEl.parentNode.classList.toggle('flex-row')
 //   jobChildEl.parentNode.classList.toggle('flex-wrap')
+
 //   jobs.forEach(job => {
 //     job.classList.toggle('w-5/12')
 //     job.classList.toggle('mx-auto')
 //     job.firstElementChild.classList.toggle('h-full')
+
 //   })
 // }
+
 // function filtertriplearray(arr1, arr2, arr3, el){
 //     if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item)) && arr3.some(item=>Array.from(el.classList).includes(item))){
 //       el.classList.remove('hidden')
@@ -1534,8 +1515,10 @@ var vacancyFilters = function vacancyFilters() {
 //       el.classList.add('hidden')
 //       el.classList.remove('flex')
 //     }
+
 //     displayNumVacancies()
 // }
+
 // function filterdoublearray(arr1, arr2, el){
 //     if(arr1.some(item=>Array.from(el.classList).includes(item)) && arr2.some(item=>Array.from(el.classList).includes(item))){
 //       el.classList.remove('hidden')
@@ -1544,8 +1527,10 @@ var vacancyFilters = function vacancyFilters() {
 //       el.classList.add('hidden')
 //       el.classList.remove('flex')
 //     }
+
 //     displayNumVacancies()
 // }
+
 // function filterSingleArray(arr, el){
 //     if(arr.some(item=>Array.from(el.classList).includes(item))){
 //     (arr, el)
@@ -1556,33 +1541,43 @@ var vacancyFilters = function vacancyFilters() {
 //       el.classList.add('hidden')
 //       el.classList.remove('flex')
 //     }
+
 //     displayNumVacancies()
 // }
+
 // function join(string){
 //     return string.replace(/\s+/g, '-').toLowerCase()
 // }
+
 // function reset(){
 //   disabilityArray = []
 //   locationArray = []
+
 //   singleAd.forEach(ad => {
 //     ad.classList.remove('hidden')
 //     ad.classList.add('flex')
 //   })
+
 //   standardCheckbox.forEach(box => {
 //     box.checked = false
 //   })
+
 //   locationCheckbox.forEach(box => {
 //     box.checked = false
 //   })
+
 //   disabilityCheckbox.forEach(box => {
 //     box.checked = false
 //   })
 //   displayNumVacancies()
 // }
+
 // function displayNumVacancies(){
 //   const ads = document.querySelectorAll('.singleAd.flex');
 //   const display = document.querySelector('.showing')
+
 //   display.innerHTML = ads.length;
+
 //   if(ads.length === 0){
 //     noresults.classList.add('block')
 //     noresults.classList.remove('hidden')
@@ -1591,6 +1586,7 @@ var vacancyFilters = function vacancyFilters() {
 //     noresults.classList.add('hidden')
 //   }
 // }
+
 // displayNumVacancies()
 
 /***/ }),
@@ -1608,6 +1604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exists", function() { return exists; });
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
+
 /**
  * @description Test if the body id is something
  * @param  		{string}
@@ -1619,9 +1616,9 @@ var page = function page(name) {
   if (!name) {
     return _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].body.getAttribute('id');
   }
-
   return _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].body.getAttribute('id') == name;
 };
+
 /**
  * @description Check if element exists the page
  * @param  		{string} Element selector
@@ -1629,11 +1626,9 @@ var page = function page(name) {
  * @return 		{bool}
  */
 
-
 var exists = function exists(el, limit) {
   return el.length > 0;
 };
-
 
 
 /***/ }),
@@ -1711,7 +1706,6 @@ var $$ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {__webpack_require__(/*! dotenv */ "./node_modules/dotenv/lib/main.js").config();
-
 var config = {
   projectId: process.env.PROJECTID,
   dataset: process.env.DATASET,
@@ -1732,8 +1726,8 @@ module.exports = config;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /home/steve/codersguild/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /home/steve/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /home/steve/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })

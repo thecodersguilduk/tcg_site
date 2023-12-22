@@ -8,28 +8,20 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "export NODE_OPTIONS=--openssl-legacy-provider; sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "dev": "sanity dev"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.11.2",
-    "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.11.0",
-    "@sanity/dashboard": "^2.13.1",
-    "@sanity/default-layout": "^2.11.2",
-    "@sanity/default-login": "^2.11.1",
-    "@sanity/desk-tool": "^2.11.2",
-    "@sanity/production-preview": "^2.13.0",
-    "@sanity/vision": "^2.11.2",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "sanity-plugin-autocomplete-tags": "^1.0.2",
-    "sanity-plugin-content-calendar": "^1.1.2",
-    "sanity-plugin-dashboard-widget-netlify": "^1.1.0",
-    "styled-components": "^5.3.3"
+    "@sanity/vision": "^3.0.6",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.0.6",
+    "sanity-plugin-tags": "^2.0.1",
+    "styled-components": "^5.3.6"
   },
   "repository": {
     "type": "git",

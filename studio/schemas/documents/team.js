@@ -31,15 +31,9 @@ export default {
         fieldset: 'staffType'
       },
       {
-        name: 'softwareDevTrainer',
+        name: 'trainer',
         type: 'boolean',
-        title: 'Software Dev Trainer',
-        fieldset: 'staffType'
-      },
-      {
-        name: 'softwareTestTrainer',
-        type: 'boolean',
-        title: 'Software Testing Trainer',
+        title: 'Trainer',
         fieldset: 'staffType'
       },
       {
