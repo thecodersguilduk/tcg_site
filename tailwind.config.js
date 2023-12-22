@@ -7,7 +7,13 @@ module.exports = {
 		'./site/**/**/**/*.{html,njk}',
 		'./site/**/**/**/**/*.{html,njk}',
 	],
-	purge: false,
+	purge: [
+		'./site/*.{html,njk}',
+		'./site/**/*.{html,njk}',
+		'./site/**/**/*.{html,njk}',
+		'./site/**/**/**/*.{html,njk}',
+		'./site/**/**/**/**/*.{html,njk}',
+	],
 	important: false,
 	separator: ':',
 	theme: {
