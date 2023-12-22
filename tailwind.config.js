@@ -1,6 +1,12 @@
 module.exports = {
 	prefix: '',
-	purge: false,
+	content: [
+		'./site/*.{html,njk}',
+		'./site/**/*.{html,njk}',
+		'./site/**/**/*.{html,njk}',
+		'./site/**/**/**/*.{html,njk}',
+		'./site/**/**/**/**/*.{html,njk}',
+	],
 	important: false,
 	separator: ':',
 	theme: {
@@ -461,6 +467,7 @@ module.exports = {
 			40: '40',
 			50: '50',
 			'-1': '-1',
+			'-20': '-20',
 		},
 	},
 	variants: {
@@ -531,5 +538,5 @@ module.exports = {
 	},
 	corePlugins: {},
 
-	plugins: [require('@tailwindcss/ui')],
+	plugins: [],
 };
