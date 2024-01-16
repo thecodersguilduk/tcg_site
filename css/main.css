@@ -1814,9 +1814,6 @@ input, textarea{
 .mb-3{
   margin-bottom: 0.75rem;
 }
-.mb-32{
-  margin-bottom: 8rem;
-}
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -2262,11 +2259,6 @@ input, textarea{
 }
 .overflow-y-hidden{
   overflow-y: hidden;
-}
-.truncate{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .break-all{
   word-break: break-all;
@@ -3797,9 +3789,6 @@ fieldset a {
   }
   .md\:w-2\/5{
     width: 40%;
-  }
-  .md\:w-3\/12{
-    width: 25%;
   }
   .md\:w-3\/5{
     width: 60%;
