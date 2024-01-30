@@ -1769,6 +1769,9 @@ input, textarea{
   margin-top: auto;
   margin-bottom: auto;
 }
+.-mb-px{
+  margin-bottom: -1px;
+}
 .-ml-10{
   margin-left: -2.5rem;
 }
@@ -2017,6 +2020,9 @@ input, textarea{
 }
 .w-1\/12{
   width: 8.333333%;
+}
+.w-1\/4{
+  width: 25%;
 }
 .w-1\/5{
   width: 20%;
@@ -2351,6 +2357,10 @@ input, textarea{
 .border-grey-300{
   --tw-border-opacity: 1;
   border-color: rgb(112 112 112 / var(--tw-border-opacity));
+}
+.border-indigo-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(102 126 234 / var(--tw-border-opacity));
 }
 .border-lightblue-500{
   --tw-border-opacity: 1;
@@ -3832,6 +3842,9 @@ fieldset a {
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .md\:flex-row{
     flex-direction: row;
   }
@@ -4139,6 +4152,9 @@ fieldset a {
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .lg\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -4285,6 +4301,9 @@ fieldset a {
   }
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .xl\:flex-row{
     flex-direction: row;
