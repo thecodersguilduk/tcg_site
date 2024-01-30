@@ -29,6 +29,8 @@ module.exports = function (str) {
 		case 'Accessibility Apprenticeship Level 4':
 			return 'Accessibility expert!';
 			break;
+		case 'Agile Project Management: Mastering Tech & Digital Projects':
+			return 'Agile Project Manager';
 		default:
 			return str;
 	}
