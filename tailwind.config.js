@@ -10,6 +10,7 @@ module.exports = {
 	important: false,
 	separator: ':',
 	theme: {
+		extend: {
 		screens: {
 			xs: '320px',
 			sm: '640px',
@@ -461,6 +462,7 @@ module.exports = {
 			'-1': '-1',
 			'-20': '-20',
 		},
+	}
 	},
 	variants: {
 		alignContent: ['responsive'],
