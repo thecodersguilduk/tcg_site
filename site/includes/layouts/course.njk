@@ -72,7 +72,7 @@ body_class: apprenticeship-employer
 
 
       {% include '../components/courses/reasons.njk' %}
-      {% if course.instances %}
+      {% if course.instances.length > 0 %}
         {% include '../components/courses/course-instances.njk' %}
       {% endif %}
       {% if course.isFunded %}
