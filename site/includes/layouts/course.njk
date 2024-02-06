@@ -35,7 +35,7 @@ body_class: apprenticeship-employer
           <div class="lg:w-6/12 order-2 lg:order-1">
             <header class="md:w-8/12">
               <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
-              {% if course.isFunded and course.subtitle %}
+              {% if course.subtitle %}
               <h2 class="mb-2 text-lg text-grey-800 leading-md sm:leading-2xl">{{course.subtitle}}</h2>
               {% endif %}
               <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:<strong> {{ course.start | dateDisplay }}</strong>
