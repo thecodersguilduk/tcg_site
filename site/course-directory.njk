@@ -20,7 +20,7 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                {% for type in courseTypes %}
 
                 <div class="courseGroup">
-                  <div class="heading" {% if type.courseType === 'Apprenticeship' %} id="apprenticeships" {% endif %}>
+                  <div class="heading" {% if type.courseType === 'Apprenticeships' %} id="apprenticeships" {% endif %}>
                      <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
                      {% if type.tagline %}
                      <p class="mb-6">{{type.tagline}}</p>
