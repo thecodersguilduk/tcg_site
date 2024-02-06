@@ -2,7 +2,7 @@ module.exports = function (str) {
 	if (typeof str != 'string') return;
 
 	switch (str) {
-		case 'Get Hired as a UX Professional':
+		case str.contains('UX Professional'):
 			return 'User Experience';
 			break;
 		case 'Get Hired as a Software Tester':
@@ -23,7 +23,7 @@ module.exports = function (str) {
 		case 'Software Testing Apprenticeship Level 4':
 			return 'Software Tester';
 			break;
-		case 'DevOps Apprenticeship Level 4':
+		case str.contains('DevOps'):
 			return 'DevOps Engineer ';
 			break;
 		case 'Accessibility Apprenticeship Level 4':

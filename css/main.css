@@ -2213,6 +2213,9 @@ input, textarea{
 .items-baseline{
   align-items: baseline;
 }
+.items-stretch{
+  align-items: stretch;
+}
 .justify-start{
   justify-content: flex-start;
 }
