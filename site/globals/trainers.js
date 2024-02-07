@@ -1,7 +1,7 @@
 const config = require('../globals/config');
 const imageUrlBuilder = require('@sanity/image-url');
 const sanityClient = require('@sanity/client');
-const query = `*[_type == "team" && !(_id in path("drafts.**"))] {
+const query = `*[_type == "team" && trainer && !(_id in path("drafts.**"))] {
     "image": image.asset->url,
     ...
 } | order(order asc)`
@@ -25,11 +25,11 @@ function urlFor(source) {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
   // Returns back to our main function
-  console.log(data.image);
-  data.image = urlFor(data.image)
-  console.log(data.image);
+  console.log(data);
+  data.image = urlFor(data.image).width(200).height(200).url();
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
   data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
+
   return data
 }

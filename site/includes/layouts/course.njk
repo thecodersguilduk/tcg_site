@@ -35,13 +35,13 @@ body_class: apprenticeship-employer
           <div class="lg:w-6/12 order-2 lg:order-1">
             <header class="md:w-8/12">
               <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
-              {% if course.isFunded and course.subtitle %}
+              {% if course.subtitle %}
               <h2 class="mb-2 text-lg text-grey-800 leading-md sm:leading-2xl">{{course.subtitle}}</h2>
               {% endif %}
               <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:<strong> {{ course.start | dateDisplay }}</strong>
               </p>
               <div class="">
-              <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
+              <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 important px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
             </header>
           </div>
           <div class="lg:w-6/12 pt-24 lg:pt-0 order-1 lg:order-2 flex items-center justify-center mb-6 lg:mb-0">
@@ -72,7 +72,7 @@ body_class: apprenticeship-employer
 
 
       {% include '../components/courses/reasons.njk' %}
-      {% if course.instances %}
+      {% if course.instances.length > 0 %}
         {% include '../components/courses/course-instances.njk' %}
       {% endif %}
       {% if course.isFunded %}

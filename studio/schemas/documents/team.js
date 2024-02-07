@@ -37,6 +37,12 @@ export default {
         fieldset: 'staffType'
       },
       {
+        name: 'governor',
+        type: 'boolean',
+        title: 'Governor',
+        fieldset: 'staffType'
+      },
+      {
         name: 'slug',
         type: 'slug',
         title: 'Slug',

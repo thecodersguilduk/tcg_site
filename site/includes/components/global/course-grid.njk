@@ -10,20 +10,20 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 place-items-center">
     {% for course in courses %}
-        {% if course.courseType === "Apprenticeship" and course.isActive  %}
-            <div class="md:flex mx-4 mb-4 w-full">
-            <div class="sm:px-4">
-                <div class="bg-white px-6 py-8 rounded-lg shadow-primary  apprenticeships__item">
+        {% if course.courseType === "Apprenticeships" and course.isActive  %}
+            <div class="md:flex md:flex-col items-stretch mx-4 mb-4 p-4 w-full h-full px-4">
+            <div class="flex items-stretch h-full w-full">
+                <div class="bg-white px-6 py-8 rounded-lg shadow-primary w-full">
                 <div class="flex flex-col items-start">
                     <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                    <h3 class="text-xl leading-lg mb-0">{{ course.title | courseDisplay}}</h3>
+                    <h3 class="text-xl leading-lg mb-0">{{ course.title }}</h3>
                     <div class="mt-auto">
                     <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
                     <div class="mb-4">
                         <a href="/course-directory/{{ course.slug.current }}/" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Find out more!</a>
                     </div>
                     <div>
-                        <a href="#" data-modal="book-a-call" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire a {{course.title | courseDisplay }}</a>
+                        <a href="#" data-modal="book-a-call" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire our next star!</a>
                     </div>
                     </div>
                 </div>

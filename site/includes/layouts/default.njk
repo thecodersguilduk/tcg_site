@@ -101,12 +101,13 @@
 
   {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
   {# include main.css if in development mode #}
-  {% if helpers.environment === "development" %}
+  <!-- {% if helpers.environment === "development" %}
   <link rel="stylesheet" href="/css/main.css">
   {% else %}
   {# else, use the minified css file for production #}
   <link rel="stylesheet" href="/css/main.min.css">
-  {% endif %}
+  {% endif %} -->
+  <link rel="stylesheet" href="/css/main.css">
   {# include scripts #}
   {% if helpers.environment === "development" %}
   <script src="/js/main.js" defer></script>
@@ -122,9 +123,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   {# font awesome #}
-  <script defer src="https://kit.fontawesome.com/c7b754904c.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/95a20dbc21.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-   <link rel="stylesheet" href="/css/jquery-ui.css">
+  <link rel="stylesheet" href="/css/jquery-ui.css">
 
   {# canonical #}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">

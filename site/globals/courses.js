@@ -159,8 +159,6 @@ function prepPost(data) {
 
 	data.isFunded = data.logos.length > 0;
 
-	//console.log(data);
-
 	return data;
 }
 
