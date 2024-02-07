@@ -5,10 +5,19 @@
 
     <div class=" mx-auto max-w-3xl inner px-6 py-16 sm:py-24 lg:px-8">
         <h2 class="text-center">Our simple guide to what you need to know</h2>
-        <div class="flex flex-col md:flex-row justify-around max-w-2xl mx-auto">
+        <!-- <div class="flex flex-col md:flex-row justify-around max-w-2xl mx-auto">
             <button id="employers-btn" class="rounded py-2 px-4 bg-gradient-to-r from-yellow-200 to-yellow-100 text-white font-bold">For Employers</button>
             <button id="candidates-btn" class="rounded py-2 px-4 bg-gradient-to-r from-blue-200 to-blue-100 text-white font-bold">For Candidates</button>
-        </div>
+        </div> -->
+
+        <div>
+           <div class="border-b border-gray-200">
+              <nav class="flex space-x-8" aria-label="Tabs">
+                <button name="employers" id="employers-btn" class="bg-blue-100 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Employers</a>
+                <button name="candidates" id="candidates-btn" class="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer">Candidates</a>
+              </nav>
+            </div>
+          </div>
 
         {% include './for-employers.njk' %}
         {% include './for-candidates.njk' %}
@@ -20,18 +29,48 @@
     const candidatesBtn = document.getElementById('candidates-btn');
     const employersSection = document.getElementById('employers');
     const candidatesSection = document.getElementById('candidates');
+    const activeClasses = "active bg-blue-100 text-white rounded-md px-3 py-2 text-sm font-medium visited:text-blue-200";
+    const inactiveClasses = "text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium cursor-pointer visited:text-blue-200";
 
-    employersBtn.addEventListener('click', () => {
-        candidatesSection.classList.remove('block')
-        candidatesSection.classList.add('hidden')
-        employersSection.classList.remove('hidden')
-        employersSection.classList.add('block')
-    });
+    
+    const switchSections = (target, sections) => {
+        sections.forEach(section => {
+            if(target.name === section.id){
+            section.classList.remove('hidden');
+            section.classList.add('block');
+            } else {
+                section.classList.remove('block');
+                section.classList.add('hidden');
+            }
+        });
+    }
+    
+    const handleClick = (event) => {
+        const target = event.target;
+        if(!target.classList.contains('active')){
+            const elements = target.parentNode.childNodes;
+            elements.forEach(el => el.classList = inactiveClasses);
+            target.classList = activeClasses;
+        } else {
+            const elements = target.parentNode.childNodes;
+            elements.forEach(el => el.classList = inactiveClasses);
+            target.classList = activeClasses;
+        }
 
-    candidatesBtn.addEventListener('click', () => {
-        employersSection.classList.remove('block')
-        employersSection.classList.add('hidden')
-        candidatesSection.classList.remove('hidden')
-        candidatesSection.classList.add('block')
-    });
+        switchSections(target, [employersSection, candidatesSection]);
+    }
+
+    employersBtn.addEventListener('click', handleClick
+        // candidatesSection.classList.remove('block')
+        // candidatesSection.classList.add('hidden')
+        // employersSection.classList.remove('hidden')
+        // employersSection.classList.add('block')
+    );
+
+    candidatesBtn.addEventListener('click', handleClick
+        // employersSection.classList.remove('block')
+        // employersSection.classList.add('hidden')
+        // candidatesSection.classList.remove('hidden')
+        // candidatesSection.classList.add('block')
+    );
 </script>
