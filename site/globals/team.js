@@ -25,9 +25,9 @@ function urlFor(source) {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
   // Returns back to our main function
-  console.log(data.image);
+
   data.image = urlFor(data.image)
-  console.log(data.image);
+
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
   data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
