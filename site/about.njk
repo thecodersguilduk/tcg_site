@@ -30,6 +30,8 @@ ctas: []
   <div class="bg-blue section-rounded">
     {% include "components/global/trainers.njk" %}
   </div>
+  {% if governors.length > 0 %}
   <div class="bg-white section-rounded">
     {% include "components/about/governors.njk" %}
   </div>
+  {% endif %}
