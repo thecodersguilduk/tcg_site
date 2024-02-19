@@ -74,7 +74,9 @@ const $$ = {
 
     vacancies           : document.querySelector('.vacancies'),
 
-    submenu             : document.querySelector('.submenu')
+    submenu             : document.querySelector('.submenu'),
+
+    stripeCheckoutBtn  : document.getElementById('buy-now-btn'),
 
 }
 
