@@ -1,15 +1,13 @@
 const stripe = require('stripe')(process.env.STRIPE_TEST_SECRET_KEY);
 
 exports.handler = async (event) => {
-    console.log(event);
-    debugger
     try {
       // Retrieve the event data from the request body
       const {title, price} = JSON.parse(event.body);
 
     // Create a checkout session
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ['card', 'klarna', 'paypal'],
+        payment_method_types: ['card'],
         line_items: [{
             price_data: {
                 currency: 'gbp',
