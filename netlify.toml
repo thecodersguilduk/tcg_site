@@ -1,2 +1,6 @@
 [dev]
   functions = "functions/"
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "functions/"
