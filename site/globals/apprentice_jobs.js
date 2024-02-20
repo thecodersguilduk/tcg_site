@@ -148,15 +148,6 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
-    styledHeading: (node) => h('h2', {
-      innerHTML: node.node.styledHeading,
-      className: 'text-lightblue-500',
-      style: 'font-size: 32px'
-    }),
-    leadSentence: (node) => h('h3', {
-      innerHTML: node.leadSentence,
-      className: 'text-blue-200 text-2xl'
-    }),
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).url(),
     }),

@@ -32,13 +32,13 @@ export default {
 	},
 	fieldsets: [
 		{
-			name: 'cta',
-			description: 'Activate the CTA here if required',
-			title: 'Course CTA Field',
+			name: 'courseName',
+			description: 'Titles of the course',
+			title: 'Course Name(s)',
 			options: {
 				collapsible: true,
-				collapsed: true,
-			},
+				collapsed: true
+			}
 		},
 		{
 			name: 'Benefits',
@@ -80,11 +80,13 @@ export default {
 			name: 'title',
 			type: 'string',
 			title: 'Course Name',
+			fieldset: 'courseName'
 		},
 		{
 			name: 'subtitle',
 			type: 'string',
 			title: 'Course SubTitle',
+			fieldset: 'courseName',
 			description:
 				'The contracted course title as stipulated by the course funders',
 		},
@@ -99,13 +101,14 @@ export default {
 					title: 'Alt Text',
 					name: 'alt',
 					type: 'text',
+					description: 'Make sure you put something in here - this will display to the user if the image fails to loads, and will be used by screen readers to those with low vision'
 				},
 			],
 		},
 		{
 			name: 'logos',
 			type: 'array',
-			title: 'Course Partners',
+			title: 'Course Partners/Funders',
 			of: [
 				{
 					type: 'reference',
@@ -134,33 +137,6 @@ export default {
 					type: 'reference',
 					to: {
 						type: 'courseTypes',
-					},
-				},
-			],
-		},
-		{
-			name: 'courseTopics',
-			type: 'array',
-			description: 'Select as many as you like - what is the course relevant to?',
-			title: 'Course Topic(s)',
-			of: [
-				{
-					type: 'reference',
-					to: {
-						type: 'courseTopics',
-					},
-				},
-			],
-		},
-		{
-			name: 'duration',
-			description: 'Non-apprenticeship courses only',
-			type: 'array',
-			of: [
-				{
-					type: 'reference',
-					to: {
-						type: 'courseDuration',
 					},
 				},
 			],
@@ -450,11 +426,6 @@ export default {
 				},
 				component: TestimonialPreview,
 			},
-		},
-		{
-			name: 'link',
-			title: 'Course Direct Apply Link',
-			type: 'string',
 		},
 		{
 			name: 'qualification',

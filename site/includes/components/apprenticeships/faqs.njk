@@ -11,24 +11,12 @@
         </div> -->
 
         <div>
-            <div class="sm:hidden">
-              <label for="tabs" class="sr-only">Select a tab</label>
-              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-              <select id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
-                <option>My Account</option>
-                <option>Company</option>
-                <option selected>Team Members</option>
-                <option>Billing</option>
-              </select>
-            </div>
-            <div class="hidden sm:block">
+            <div class="block">
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex" aria-label="Tabs">
                   <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                  <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm font-medium">My Account</a>
-                  <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm font-medium">Company</a>
-                  <a href="#" class="border-indigo-500 text-indigo-600 w-1/4 border-b-2 py-4 px-1 text-center text-sm font-medium" aria-current="page">Team Members</a>
-                  <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm font-medium">Billing</a>
+                  <a name="employers" id="employers-btn" class="active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium" aria-current="page">Employers</span>
+                  <a name="candidates" id="candidates-btn" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium">Learners</span>
                 </nav>
               </div>
             </div>
@@ -44,18 +32,39 @@
     const candidatesBtn = document.getElementById('candidates-btn');
     const employersSection = document.getElementById('employers');
     const candidatesSection = document.getElementById('candidates');
+    const activeClasses = "active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
+    const inactiveClasses = "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
 
-    employersBtn.addEventListener('click', () => {
-        candidatesSection.classList.remove('block')
-        candidatesSection.classList.add('hidden')
-        employersSection.classList.remove('hidden')
-        employersSection.classList.add('block')
-    });
+    
+    const switchSections = (target, sections) => {
+        console.log(target.name, sections);
+        sections.forEach(section => {
+            if(target.name === section.id){
+            section.classList.remove('hidden');
+            section.classList.add('block');
+            } else {
+                section.classList.remove('block');
+                section.classList.add('hidden');
+            }
+        });
+    }
+    
+    const handleClick = (event) => {
+        const target = event.target;
+        if(!target.classList.contains('active')){
+            const elements = target.parentNode.childNodes;
+            elements.forEach(el => el.classList = inactiveClasses);
+            target.classList = activeClasses;
+        } else {
+            const elements = target.parentNode.childNodes;
+            elements.forEach(el => el.classList = inactiveClasses);
+            target.classList = activeClasses;
+        }
 
-    candidatesBtn.addEventListener('click', () => {
-        employersSection.classList.remove('block')
-        employersSection.classList.add('hidden')
-        candidatesSection.classList.remove('hidden')
-        candidatesSection.classList.add('block')
-    });
-</script>
+        switchSections(target, [employersSection, candidatesSection]);
+    }
+
+    employersBtn.addEventListener('click', handleClick);
+
+    candidatesBtn.addEventListener('click', handleClick);
+  </script>

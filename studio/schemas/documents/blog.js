@@ -76,9 +76,6 @@ export default {
         { type: 'imageSection' },
         { type: 'applyBtn' },
         { type: 'callModal' },
-        { type: 'leadSentence' },
-        { type: 'supportingSentence' },
-        { type: 'styledHeading' },
         { type: 'newsletter' },
         { type: 'form' },
         { type: 'youtubeEmbed' }
