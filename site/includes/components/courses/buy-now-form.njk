@@ -1,0 +1,14 @@
+<form method="POST">
+    <select value="{{ course.title }}">
+        {% for option in courses %}
+        <option></option>
+        {% endfor %}
+    </select>
+    <button type="submit" id="buy-now-btn" data-course-title="{{course.title}}" data-price="{{2995 * 100}}" class="text-md leading-sm text-white bg-blue-200 py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">
+        Enroll on this course now for just £2995!
+    </button>
+
+</form>
+
+
+
