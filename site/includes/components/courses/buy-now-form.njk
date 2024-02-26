@@ -1,14 +1,26 @@
-<form method="POST">
-    <select value="{{ course.title }}">
-        {% for option in courses %}
-        <option></option>
-        {% endfor %}
-    </select>
-    <button type="submit" id="buy-now-btn" data-course-title="{{course.title}}" data-price="{{2995 * 100}}" class="text-md leading-sm text-white bg-blue-200 py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">
-        Enroll on this course now for just £2995!
-    </button>
-
-</form>
+<div class="overflow-hidden md:max-w-xs md:mx-auto not-on-print">
+    <div>
+      <h2 class="leading-3xl text-2xl">Not Eligible for Funding?</h2>
+      <p>Some blurb here about whether you are an individual or a business</p>
+    </div>
+    <form method="POST" id="contact-form" class="relative stripe-form">
+      <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
+      <div>
+        <div class="mb-4">
+          <label for="number" class="sr-only">Number of people you'd like to put on the course (up to a maximum of 6)</label>
+          <div class="relative">
+            <input type="number" id="number" name="number" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Number of People Joining the Course*" required name="number" value="1" />
+            <span class="form-error text-xs leading-xs text-red-100" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="submit" id="submit" data-number="" data-course-title="{{course.title}}" data-price="{{2995 * 100}}" class="text-md leading-sm text-white bg-blue-200 py-2 px-4 font-heading font-bold rounded whitespace-no-wrap">
+            Enroll on this course!
+        </button>
+      </div>
+    </form>
+  </div>
 
 
 

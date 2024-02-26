@@ -755,7 +755,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_expression_interest__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @modules/expression-interest */ "./resources/js/modules/expression-interest/index.js");
 /* harmony import */ var _modules_course_cta_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @modules/course-cta-header */ "./resources/js/modules/course-cta-header/index.js");
 /* harmony import */ var _modules_course_apply_validation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @modules/course-apply-validation */ "./resources/js/modules/course-apply-validation/index.js");
-/* harmony import */ var _modules_stripe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @modules/stripe */ "./resources/js/modules/stripe/index.js");
+/* harmony import */ var _modules_stripe_form__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @modules/stripe-form */ "./resources/js/modules/stripe-form/index.js");
 // Import local modules
 
 
@@ -771,6 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import '@modules/stripe'
 
 
 /***/ }),
@@ -1318,10 +1319,10 @@ var sliderSettings = function () {
 
 /***/ }),
 
-/***/ "./resources/js/modules/stripe/index.js":
-/*!**********************************************!*\
-  !*** ./resources/js/modules/stripe/index.js ***!
-  \**********************************************/
+/***/ "./resources/js/modules/stripe-form/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/modules/stripe-form/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1333,36 +1334,47 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var stripe = function () {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeCheckoutBtn) return;
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeCheckoutBtn.addEventListener('click', /*#__PURE__*/function () {
+var stripeForm = function () {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeForm) return;
+  var numberInput = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeForm.querySelector('input[name="number"]');
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeForm.addEventListener('change', function () {
+    var qty = numberInput.value;
+    if (qty > 6) {
+      numberInput.nextSibling.textContent = 'You can only order 6 courses at a time.';
+    }
+  });
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].stripeForm.addEventListener('submit', /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
-      var title, price, response, data;
+      var number, price, title, totalPrice, response, data;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             e.preventDefault();
-            title = this.getAttribute('data-course-title');
-            price = this.getAttribute('data-price');
-            _context.next = 5;
+            number = this.number.value;
+            price = this.submit.getAttribute('data-price');
+            title = this.submit.getAttribute('data-course-title');
+            totalPrice = price * number;
+            _context.next = 7;
             return fetch('/.netlify/functions/stripeHandler', {
               method: 'POST',
               body: JSON.stringify({
                 title: title,
+                totalPrice: totalPrice,
+                number: number,
                 price: price
               }),
               headers: {
                 'Content-Type': 'application/json'
               }
             });
-          case 5:
+          case 7:
             response = _context.sent;
-            _context.next = 8;
+            _context.next = 10;
             return response.json();
-          case 8:
+          case 10:
             data = _context.sent;
             window.location.href = data.checkoutUrl;
-          case 10:
+          case 12:
           case "end":
             return _context.stop();
         }
@@ -1373,7 +1385,7 @@ var stripe = function () {
     };
   }());
 }();
-/* harmony default export */ __webpack_exports__["default"] = (stripe);
+/* harmony default export */ __webpack_exports__["default"] = (stripeForm);
 
 /***/ }),
 
@@ -1743,7 +1755,8 @@ var $$ = {
   faqSection: document.querySelector('.faq'),
   vacancies: document.querySelector('.vacancies'),
   submenu: document.querySelector('.submenu'),
-  stripeCheckoutBtn: document.getElementById('buy-now-btn')
+  stripeCheckoutBtn: document.getElementById('buy-now-btn'),
+  stripeForm: document.querySelector('.stripe-form')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 

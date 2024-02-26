@@ -76,7 +76,9 @@ const $$ = {
 
     submenu             : document.querySelector('.submenu'),
 
-    stripeCheckoutBtn  : document.getElementById('buy-now-btn'),
+    stripeCheckoutBtn   : document.getElementById('buy-now-btn'),
+
+    stripeForm          : document.querySelector('.stripe-form'),
 
 }
 

@@ -3,7 +3,7 @@ const stripe = require('stripe')(process.env.STRIPE_LIVE_SECRET_KEY);
 exports.handler = async (event) => {
     try {
       // Retrieve the event data from the request body
-      const {title, price} = JSON.parse(event.body);
+      const {title, totalPrice, price, number} = JSON.parse(event.body);
 
     // Create a checkout session
       const session = await stripe.checkout.sessions.create({
@@ -16,7 +16,7 @@ exports.handler = async (event) => {
                 },
                 unit_amount: price,
             },
-            quantity: 1,
+            quantity: number,
         }],
         mode: 'payment',
         success_url: 'https://www.thecodersguild.org.uk/success.html',
