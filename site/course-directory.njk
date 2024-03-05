@@ -6,20 +6,19 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
 
 
 <main id="main" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
-   <section class="bg-white section-rounded pt-48 md:pt-64 pb-24">
+   {% include './includes/components/course-directory/header.njk' %}
+   <section class="bg-white">
       <div class="inner">
-         <h2 class="my-8">{{meta_title}}</h2>
-         <div class="py-6">
-            <span class="text-blue-200 font-medium mr-2 md:mr-6">Jump to:</span> <a class="font-bold mr-2 md:mr-6 no-border" href="#courses">Courses</a> <a class="font-bold mr-2 md:mr-6 no-border" href="#apprenticeships">Apprenticeships</a>
-         </div>
+         
+         
          <div class="main-content flex flex-wrap mt-12">
             <div class="w-full mx-auto lg:max-w-none md:pl-6 parent">
                <div class="flex justify-between border-b-1 pb-4 mb-4">
                   <h3 class="text-blue-200 mb-0"><span class="numberCourses"></span> Courses Found</h3>
                </div>
+               
                {% for type in courseTypes %}
-
-                <div class="courseGroup">
+               <div class="courseGroup">
                   <div class="heading" {% if type.courseType === 'Apprenticeships' %} id="apprenticeships" {% endif %}>
                      <h3 class="courseTypes mb-0">{{ type.courseType }}</h3>
                      {% if type.tagline %}
@@ -76,9 +75,9 @@ meta_description: See All Our Digital Skills Courses And Web Development Apprent
                         </div>
                      {% endif %}
                   {% endfor %}
-                  </div>
-
+               </div>
                {% endfor %}
+
             </div>
          </div>
       </div>

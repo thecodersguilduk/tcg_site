@@ -2051,12 +2051,6 @@ input, textarea{
 .w-1\/12{
   width: 8.333333%;
 }
-.w-1\/2{
-  width: 50%;
-}
-.w-1\/4{
-  width: 25%;
-}
 .w-1\/5{
   width: 20%;
 }
@@ -2939,6 +2933,10 @@ input, textarea{
 .text-blue-200{
   --tw-text-opacity: 1;
   color: rgb(37 116 169 / var(--tw-text-opacity));
+}
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(49 130 206 / var(--tw-text-opacity));
 }
 .text-gray-300{
   --tw-text-opacity: 1;
