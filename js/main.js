@@ -756,7 +756,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_course_cta_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @modules/course-cta-header */ "./resources/js/modules/course-cta-header/index.js");
 /* harmony import */ var _modules_course_apply_validation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @modules/course-apply-validation */ "./resources/js/modules/course-apply-validation/index.js");
 /* harmony import */ var _modules_stripe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @modules/stripe */ "./resources/js/modules/stripe/index.js");
+/* harmony import */ var _modules_course_directory_tabs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @modules/course-directory-tabs */ "./resources/js/modules/course-directory-tabs/index.js");
 // Import local modules
+
 
 
 
@@ -838,6 +840,92 @@ var courseCTAHeader = function courseCTAHeader() {
   });
 }();
 /* harmony default export */ __webpack_exports__["default"] = (courseCTAHeader);
+
+/***/ }),
+
+/***/ "./resources/js/modules/course-directory-tabs/index.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/modules/course-directory-tabs/index.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
+
+var inactiveClasses = 'course-directory-tab text-xl font-bold text-grey-1000 cursor-pointer';
+var activeClasses = 'course-directory-tab text-xl font-bold text-blue-100 border-b-2 border-blue-100 cursor-pointer';
+function init() {
+  setContainerSize('.course-directory-grid:nth-of-type(1)');
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs[0].classList = activeClasses;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.remove('opacity-0', 'left-[-100%]');
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.add('opacity-100', 'left-0');
+  ;
+}
+function findTallestCourse(courses) {
+  var tallestCourse = 0;
+  courses.forEach(function (course) {
+    if (course.offsetHeight > tallestCourse) {
+      tallestCourse = course.clientHeight;
+    }
+  });
+  return tallestCourse;
+}
+function setContainerSize(section) {
+  var screenWidth = window.innerWidth;
+  var container = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseGridContainer;
+  var courses = container.querySelectorAll(section + ' .grid .course');
+  var tallestCourse = findTallestCourse(courses);
+  var numRows;
+  switch (true) {
+    case screenWidth > 1024:
+      numRows = Math.ceil(courses.length / 3);
+      break;
+    case screenWidth > 768 && screenWidth <= 1024:
+      numRows = Math.ceil(courses.length / 2);
+      break;
+    default:
+      numRows = courses.length;
+      break;
+  }
+  console.log(courses.length, numRows, tallestCourse);
+  container.style.height = numRows * (tallestCourse + 64) + 'px';
+}
+function setTabClasses(target) {
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
+    if (tab.dataset.target !== target) {
+      tab.classList = inactiveClasses;
+    } else {
+      tab.classList = activeClasses;
+    }
+  });
+}
+function setSection(target) {
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems.forEach(function (item) {
+    if (item.id !== target) {
+      item.classList.remove('opacity-100');
+      item.classList.add('opacity-0');
+    } else {
+      item.classList.remove('opacity-0');
+      item.classList.add('opacity-100');
+      setContainerSize('#' + target);
+    }
+  });
+}
+var handleTabs = function () {
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs) return;
+  init();
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = e.target.dataset.target;
+      setTabClasses(target);
+      setSection(target);
+    });
+  });
+}();
+/* harmony default export */ __webpack_exports__["default"] = (handleTabs);
 
 /***/ }),
 
@@ -1743,7 +1831,10 @@ var $$ = {
   faqSection: document.querySelector('.faq'),
   vacancies: document.querySelector('.vacancies'),
   submenu: document.querySelector('.submenu'),
-  stripeCheckoutBtn: document.getElementById('buy-now-btn')
+  stripeCheckoutBtn: document.getElementById('buy-now-btn'),
+  courseDirectoryTabs: document.querySelectorAll('.course-directory-tab'),
+  courseGridContainer: document.querySelector('.course-grid-container'),
+  courseDirectoryGridItems: document.querySelectorAll('.course-directory-grid')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
