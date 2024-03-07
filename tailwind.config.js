@@ -19,6 +19,15 @@ module.exports = {
 				xl: '1280px',
 				xxxl: '1480px',
 			},
+			keyframes: {
+				fade: {
+					'0%': {opacity:  '0'},
+					'100%': {opacity: '1'},
+				}
+			},
+			animation: {
+				fade: 'fade 1s ease-in-out',
+			},
 			colors: {
 				transparent: 'transparent',
 
@@ -38,6 +47,7 @@ module.exports = {
 					700: '#4a5568',
 					800: '#2d3748',
 					900: '#1a202c',
+					1000: '#949494'
 				},
 				red: {
 					100: '#c94b62',

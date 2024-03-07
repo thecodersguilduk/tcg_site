@@ -22,17 +22,6 @@ export default {
             name: 'avatar',
             type: 'image',
             title: 'Avatar'
-        },
-        {
-            name: 'tags',
-            title: 'Tags',
-            type: 'array',
-            of: [
-              {
-                type: 'reference',
-                to: [{ type: 'course' }]
-              }
-            ]
         }
     ]
 }

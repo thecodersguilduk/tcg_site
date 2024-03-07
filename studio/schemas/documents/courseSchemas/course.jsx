@@ -16,13 +16,17 @@ const CourseInstancePreview = ({ value }) => {
 };
 
 const TestimonialPreview = ({ value }) => {
+	if (!value || !value.testimonial) {
+	  return <div>No testimonial specified</div>;
+	}
 	return (
-		<div>
-			<h3>Client: {value}</h3>
-		</div>
+	  <div>
+		<h3>Client: {value.client}</h3>
+		{value.avatar && <img src={value.avatar} alt="Client Avatar" />}
+		<p>Testimonial: {value.testimonial}</p>
+	  </div>
 	);
-};
-
+  };
 export default {
 	name: 'course',
 	type: 'document',
@@ -32,22 +36,22 @@ export default {
 	},
 	fieldsets: [
 		{
-			name: 'courseName',
-			description: 'Titles of the course',
-			title: 'Course Name(s)',
+			name: 'metaHero',
+			description: 'Page Meta Data and Hero Section Content',
+			title: 'Meta and Hero Section',
 			options: {
 				collapsible: true,
 				collapsed: true
 			}
 		},
 		{
-			name: 'Benefits',
-			description: 'Renders the icons under the 10s pitch',
-			title: 'Benefits',
+			name: 'intro',
+			description: 'Course Intro Content',
+			title: 'Course Intro Content',
 			options: {
 				collapsible: true,
-				collapsed: true,
-			},
+				collapsed: true
+			}	
 		},
 		{
 			name: 'content',
@@ -56,16 +60,6 @@ export default {
 			options: {
 				collapsible: true,
 				collapsed: true,
-			},
-		},
-		{
-			name: 'apprenticeshipOnly',
-			title: 'Apprenticeship Info Only',
-			description: 'Click to input data for apprenticeships only',
-			options: {
-				collapsible: true,
-				collapsed: true,
-				columns: 2,
 			},
 		},
 	],
@@ -77,18 +71,45 @@ export default {
 			description: 'Switch on when course is available',
 		},
 		{
+			name: 'price',
+			type: 'string',
+			title: 'Course Price',
+			description: 'Per Person',
+			fieldset: 'metaHero'
+		},
+		{
 			name: 'title',
 			type: 'string',
-			title: 'Course Name',
-			fieldset: 'courseName'
+			title: 'H1',
+			fieldset: 'metaHero'
 		},
 		{
 			name: 'subtitle',
 			type: 'string',
 			title: 'Course SubTitle',
-			fieldset: 'courseName',
+			fieldset: 'metaHero',
 			description:
 				'The contracted course title as stipulated by the course funders',
+		},
+		{
+			name: 'excerpt',
+			type: 'array',
+			title: 'Excerpt/Meta Description',
+			fieldset: 'intro',
+			of: [
+				{ type: 'block' },
+				{ type: 'applyBtn' },
+				{ type: 'imageSection' },
+				{ type: 'break' },
+				{ type: 'newsletter' },
+				{ type: 'form' },
+			],
+		},
+		{
+			name: 'video_embed',
+			title: 'Video Embed',
+			type: 'string',
+			fieldset: 'metaHero'
 		},
 		{
 			name: 'featuredImage',
@@ -96,19 +117,13 @@ export default {
 				'Please ensure you edit the image to have an aspect ratio of 16/9 BEFORE you upload it - for consistency on the regional hub pages',
 			type: 'image',
 			title: 'Featured image',
-			fields: [
-				{
-					title: 'Alt Text',
-					name: 'alt',
-					type: 'text',
-					description: 'Make sure you put something in here - this will display to the user if the image fails to loads, and will be used by screen readers to those with low vision'
-				},
-			],
+			fieldset: 'metaHero',
 		},
 		{
 			name: 'logos',
 			type: 'array',
 			title: 'Course Partners/Funders',
+			fieldset: 'metaHero',
 			of: [
 				{
 					type: 'reference',
@@ -117,75 +132,10 @@ export default {
 			],
 		},
 		{
-			name: 'tags',
-			title: 'Tags',
-			type: 'tags',
-			options: {
-				//Locks menu from creating new tags (defaults to false)
-				frozen: false,
-				//Closes menu after tag selected (defaults to true)
-				closeMenuOnSelect: true,
-			},
-		},
-		{
-			name: 'courseType',
-			title: 'Course Type',
-			type: 'array',
-			description: 'Please select one',
-			of: [
-				{
-					type: 'reference',
-					to: {
-						type: 'courseTypes',
-					},
-				},
-			],
-		},
-		{
-			title: 'Attendance',
-			description:
-				'Non-apprenticeship courses only - only one can be selected - please contact the administrator for more details',
-			name: 'attendance',
-			type: 'string',
-			options: {
-				list: [
-					{ title: 'Full Time', value: 'Full Time' },
-					{ title: 'Part Time', value: 'Part Time' },
-					{ title: 'Remote', value: 'Remote' },
-					{ title: 'Classroom Based', value: 'Classroom Based' },
-					{ title: 'On Demand', value: 'On Demand' },
-				],
-			},
-		},
-		{
-			name: 'slug',
-			type: 'slug',
-			title: 'Slug',
-			description:
-				'Some frontends will require a slug to be set to be able to show the post',
-			options: {
-				source: 'title',
-			},
-			maxLength: 96,
-		},
-		{
-			name: 'excerpt',
-			type: 'array',
-			title: 'Excerpt',
-			fieldset: 'content',
-			of: [
-				{ type: 'block' },
-				{ type: 'applyBtn' },
-				{ type: 'imageSection' },
-				{ type: 'break' },
-				{ type: 'newsletter' },
-				{ type: 'form' },
-				{ type: 'youtubeEmbed' },
-			],
-		},
-		{
 			name: 'instances',
 			title: 'Instances',
+			description: 'Add in each time a course is running in here',
+			fieldset: 'intro',
 			type: 'array',
 			of: [
 				{
@@ -222,58 +172,58 @@ export default {
 			],
 		},
 		{
-			name: 'part_time_learning',
-			title: 'Part Time Learning',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'one_or_two_sessions_per_week',
-			title: 'One or Two Sessions per Week',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'evenings_available',
-			title: 'Evenings Available',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'one_session_per_week',
-			title: 'One Session per Week',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'two_day_workshop',
-			title: 'Two Day Workshop',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'group_and_one_on_one_learning',
-			title: 'Group and One on One learning',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'super_fast_roi',
-			title: 'Super Fast ROI',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'three_half_days',
-			title: 'Three Half Days',
-			type: 'boolean',
-			fieldset: 'Benefits',
-		},
-		{
-			name: 'expert_professionals',
-			title: 'Expert Professionals',
-			type: 'boolean',
-			fieldset: 'Benefits',
+			name: 'benefits',
+			title: 'Benefits',
+			description: 'The benefits of this course',
+			type: 'object',
+			fields: [
+						{
+							name: 'part_time_learning',
+							title: 'Part Time Learning',
+							type: 'boolean',
+						},
+						{
+							name: 'one_or_two_sessions_per_week',
+							title: 'One or Two Sessions per Week',
+							type: 'boolean',
+						},
+						{
+							name: 'evenings_available',
+							title: 'Evenings Available',
+							type: 'boolean',
+						},
+						{
+							name: 'one_session_per_week',
+							title: 'One Session per Week',
+							type: 'boolean',
+						},
+						{
+							name: 'two_day_workshop',
+							title: 'Two Day Workshop',
+							type: 'boolean',
+						},
+						{
+							name: 'group_and_one_on_one_learning',
+							title: 'Group and One on One learning',
+							type: 'boolean',
+						},
+						{
+							name: 'super_fast_roi',
+							title: 'Super Fast ROI',
+							type: 'boolean',
+						},
+						{
+							name: 'three_half_days',
+							title: 'Three Half Days',
+							type: 'boolean',
+						},
+						{
+							name: 'expert_professionals',
+							title: 'Expert Professionals',
+							type: 'boolean',
+						},
+					],
+			fieldset: 'intro'
 		},
 		{
 			name: 'who_is_this_for',
@@ -294,21 +244,6 @@ export default {
 			name: 'what_you_will_get',
 			type: 'array',
 			title: 'What you will get?',
-			fieldset: 'content',
-			of: [
-				{ type: 'block' },
-				{ type: 'applyBtn' },
-				{ type: 'imageSection' },
-				{ type: 'break' },
-				{ type: 'newsletter' },
-				{ type: 'form' },
-				{ type: 'youtubeEmbed' },
-			],
-		},
-		{
-			name: 'bonus_takeaways',
-			type: 'array',
-			title: 'Bonus Takeaways',
 			fieldset: 'content',
 			of: [
 				{ type: 'block' },
@@ -381,11 +316,6 @@ export default {
 			],
 		},
 		{
-			name: 'video_embed',
-			title: 'Video Embed',
-			type: 'string',
-		},
-		{
 			name: 'trainers',
 			type: 'array',
 			title: 'Trainers',
@@ -402,44 +332,48 @@ export default {
 			title: 'Testimonials',
 			of: [
 				{
-					type: 'object',
-					fields: [
-						{
-							name: 'item',
-							type: 'reference',
-							title: 'Testimonial',
-							to: [{ type: 'testimonial' }],
-						},
-						{
-							name: 'featured',
-							type: 'boolean',
-							title: 'Featured Testimonial',
-							description: 'Check this box if this testimonial should be featured.',
-						},
-					],
+					type: 'reference',
+					to: {type: 'testimonial'}
+				
+				}
+			]
+		},
+
+		{
+			name: 'courseType',
+			title: 'Course Type',
+			type: 'array',
+			description: 'Please select one',
+			of: [
+				{
+					type: 'reference',
+					to: {
+						type: 'courseTypes',
+					},
 				},
 			],
-			preview: {
-				select: {
-					client: 'client',
-					testimonial: 'testimonial',
-				},
-				component: TestimonialPreview,
+		},
+		{
+			name: 'slug',
+			type: 'slug',
+			title: 'Slug',
+			description:
+				'Please click generate to create a unique slug based on the title',
+			options: {
+				source: 'title',
 			},
+			maxLength: 96,
 		},
 		{
-			name: 'qualification',
-			type: 'string',
-			fieldset: 'apprenticeshipOnly',
-			title: 'Qualification',
-			description: 'If applicable.',
-		},
-		{
-			name: 'level',
-			description: 'If applicable',
-			fieldset: 'apprenticeshipOnly',
-			type: 'string',
-			title: 'Level',
+			name: 'tags',
+			title: 'Tags',
+			type: 'tags',
+			options: {
+				//Locks menu from creating new tags (defaults to false)
+				frozen: false,
+				//Closes menu after tag selected (defaults to true)
+				closeMenuOnSelect: true,
+			},
 		},
 	],
 };

@@ -2006,6 +2006,9 @@ input, textarea{
 .h-6{
   height: 1.5rem;
 }
+.h-64{
+  height: 16rem;
+}
 .h-80{
   height: 20rem;
 }
@@ -2050,12 +2053,6 @@ input, textarea{
 }
 .w-1\/12{
   width: 8.333333%;
-}
-.w-1\/2{
-  width: 50%;
-}
-.w-1\/4{
-  width: 25%;
 }
 .w-1\/5{
   width: 20%;
@@ -2165,6 +2162,9 @@ input, textarea{
 .flex-shrink-0{
   flex-shrink: 0;
 }
+.shrink-0{
+  flex-shrink: 0;
+}
 .flex-grow-grow{
   flex-grow: 1;
 }
@@ -2231,11 +2231,23 @@ input, textarea{
 .justify-around{
   justify-content: space-around;
 }
+.justify-stretch{
+  justify-content: stretch;
+}
 .gap-0{
   gap: 0px;
 }
 .gap-0\.5{
   gap: 0.125rem;
+}
+.gap-16{
+  gap: 4rem;
+}
+.gap-2{
+  gap: 0.5rem;
+}
+.gap-4{
+  gap: 1rem;
 }
 .gap-6{
   gap: 1.5rem;
@@ -2270,6 +2282,9 @@ input, textarea{
 }
 .gap-y-20{
   row-gap: 5rem;
+}
+.gap-y-6{
+  row-gap: 1.5rem;
 }
 .gap-y-8{
   row-gap: 2rem;
@@ -2307,6 +2322,9 @@ input, textarea{
 }
 .self-center{
   align-self: center;
+}
+.self-stretch{
+  align-self: stretch;
 }
 .justify-self-start{
   justify-self: start;
@@ -2384,9 +2402,6 @@ input, textarea{
   border-width: 4px;
 }
 .border-b{
-  border-bottom-width: 1px;
-}
-.border-b-1{
   border-bottom-width: 1px;
 }
 .border-b-2{
@@ -2742,6 +2757,9 @@ input, textarea{
 .pb-4{
   padding-bottom: 1rem;
 }
+.pb-6{
+  padding-bottom: 1.5rem;
+}
 .pb-7{
   padding-bottom: 1.75rem;
 }
@@ -2805,9 +2823,6 @@ input, textarea{
 .pt-4{
   padding-top: 1rem;
 }
-.pt-48{
-  padding-top: 12rem;
-}
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -2843,6 +2858,9 @@ input, textarea{
 }
 .text-5xl{
   font-size: 40px;
+}
+.text-\[21px\]{
+  font-size: 21px;
 }
 .text-base{
   font-size: 1rem;
@@ -2936,9 +2954,17 @@ input, textarea{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.text-blue-100{
+  --tw-text-opacity: 1;
+  color: rgb(22 174 219 / var(--tw-text-opacity));
+}
 .text-blue-200{
   --tw-text-opacity: 1;
   color: rgb(37 116 169 / var(--tw-text-opacity));
+}
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(49 130 206 / var(--tw-text-opacity));
 }
 .text-gray-300{
   --tw-text-opacity: 1;
@@ -2963,6 +2989,10 @@ input, textarea{
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-grey-1000{
+  --tw-text-opacity: 1;
+  color: rgb(148 148 148 / var(--tw-text-opacity));
 }
 .text-grey-300{
   --tw-text-opacity: 1;
@@ -3042,11 +3072,6 @@ input, textarea{
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-primary{
@@ -3942,9 +3967,6 @@ fieldset a {
   .md\:mr-0{
     margin-right: 0px;
   }
-  .md\:mr-6{
-    margin-right: 1.5rem;
-  }
   .md\:mr-8{
     margin-right: 2rem;
   }
@@ -4050,11 +4072,17 @@ fieldset a {
   .md\:flex-wrap{
     flex-wrap: wrap;
   }
+  .md\:items-start{
+    align-items: flex-start;
+  }
   .md\:items-center{
     align-items: center;
   }
   .md\:items-baseline{
     align-items: baseline;
+  }
+  .md\:justify-start{
+    justify-content: flex-start;
   }
   .md\:justify-center{
     justify-content: center;
@@ -4156,9 +4184,6 @@ fieldset a {
   }
   .md\:pt-24{
     padding-top: 6rem;
-  }
-  .md\:pt-64{
-    padding-top: 16rem;
   }
   .md\:text-left{
     text-align: left;

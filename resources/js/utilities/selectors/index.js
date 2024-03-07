@@ -78,6 +78,13 @@ const $$ = {
 
     stripeCheckoutBtn  : document.getElementById('buy-now-btn'),
 
+    courseDirectoryTabs : document.querySelectorAll('.course-directory-tab'),
+
+    courseGridContainer : document.querySelector('.course-grid-container'),
+
+    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid'),
+
+
 }
 
 export default $$
