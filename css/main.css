@@ -2231,6 +2231,9 @@ input, textarea{
 .justify-around{
   justify-content: space-around;
 }
+.justify-stretch{
+  justify-content: stretch;
+}
 .gap-0{
   gap: 0px;
 }
@@ -3124,11 +3127,6 @@ input, textarea{
 }
 .transition-all{
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.transition-opacity{
-  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
