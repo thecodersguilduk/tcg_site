@@ -4,10 +4,8 @@ const inactiveClasses = 'course-directory-tab text-xl font-bold text-grey-1000 c
 const activeClasses = 'course-directory-tab text-xl font-bold text-blue-100 border-b-2 border-blue-100 cursor-pointer';
 
 function init(){
-    setContainerSize('.course-directory-grid:nth-of-type(1)');
     $$.courseDirectoryTabs[0].classList = activeClasses;
-    $$.courseDirectoryGridItems[0].classList.remove('opacity-0', 'left-[-100%]');
-    $$.courseDirectoryGridItems[0].classList.add('opacity-100', 'left-0');;
+    $$.courseDirectoryGridItems[0].classList.remove('hidden');
 }
 
 function findTallestCourse(courses){
@@ -20,29 +18,6 @@ function findTallestCourse(courses){
     return tallestCourse;
 }
 
-function setContainerSize(section){
-    const screenWidth = window.innerWidth;
-    const container = $$.courseGridContainer;
-    const courses = container.querySelectorAll(section + ' .grid .course');
-    const tallestCourse = findTallestCourse(courses);
-    let numRows;
-
-    
-    
-    switch(true){
-        case screenWidth > 1024:
-            numRows = Math.ceil(courses.length / 3);
-            break;
-        case screenWidth > 768 && screenWidth <= 1024:
-            numRows = Math.ceil(courses.length / 2);
-            break;
-        default:
-            numRows = courses.length;
-            break;
-    }
-        console.log(courses.length, numRows, tallestCourse);
-        container.style.height = numRows * (tallestCourse + 64) + 'px';
-}
 
 function setTabClasses(target){
     $$.courseDirectoryTabs.forEach(tab => {
@@ -57,12 +32,9 @@ function setTabClasses(target){
 function setSection(target){
     $$.courseDirectoryGridItems.forEach(item => {
         if(item.id !== target){
-            item.classList.remove('opacity-100');
-            item.classList.add('opacity-0');
+            item.classList.add('hidden');
         } else {
-            item.classList.remove('opacity-0');
-            item.classList.add('opacity-100');
-            setContainerSize('#' + target)
+            item.classList.remove('hidden');
         }
     });
 }

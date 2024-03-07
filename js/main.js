@@ -857,11 +857,8 @@ __webpack_require__.r(__webpack_exports__);
 var inactiveClasses = 'course-directory-tab text-xl font-bold text-grey-1000 cursor-pointer';
 var activeClasses = 'course-directory-tab text-xl font-bold text-blue-100 border-b-2 border-blue-100 cursor-pointer';
 function init() {
-  setContainerSize('.course-directory-grid:nth-of-type(1)');
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs[0].classList = activeClasses;
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.remove('opacity-0', 'left-[-100%]');
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.add('opacity-100', 'left-0');
-  ;
+  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.remove('hidden');
 }
 function findTallestCourse(courses) {
   var tallestCourse = 0;
@@ -871,26 +868,6 @@ function findTallestCourse(courses) {
     }
   });
   return tallestCourse;
-}
-function setContainerSize(section) {
-  var screenWidth = window.innerWidth;
-  var container = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseGridContainer;
-  var courses = container.querySelectorAll(section + ' .grid .course');
-  var tallestCourse = findTallestCourse(courses);
-  var numRows;
-  switch (true) {
-    case screenWidth > 1024:
-      numRows = Math.ceil(courses.length / 3);
-      break;
-    case screenWidth > 768 && screenWidth <= 1024:
-      numRows = Math.ceil(courses.length / 2);
-      break;
-    default:
-      numRows = courses.length;
-      break;
-  }
-  console.log(courses.length, numRows, tallestCourse);
-  container.style.height = numRows * (tallestCourse + 64) + 'px';
 }
 function setTabClasses(target) {
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
@@ -904,12 +881,9 @@ function setTabClasses(target) {
 function setSection(target) {
   _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems.forEach(function (item) {
     if (item.id !== target) {
-      item.classList.remove('opacity-100');
-      item.classList.add('opacity-0');
+      item.classList.add('hidden');
     } else {
-      item.classList.remove('opacity-0');
-      item.classList.add('opacity-100');
-      setContainerSize('#' + target);
+      item.classList.remove('hidden');
     }
   });
 }

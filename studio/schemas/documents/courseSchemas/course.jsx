@@ -74,22 +74,15 @@ export default {
 			fieldset: 'metaHero'
 		},
 		{
-			name: 'h1',
-			type: 'string',
-			title: 'H1',
-			description: 'H1 Text',
-			fieldset: 'metaHero'
-		},
-		{
 			name: 'title',
 			type: 'string',
-			title: 'Course Title',
+			title: 'H1',
 			fieldset: 'metaHero'
 		},
 		{
 			name: 'subtitle',
 			type: 'string',
-			title: 'Course SubTitle',
+			title: 'Course Title',
 			fieldset: 'metaHero',
 			description:
 				'The contracted course title as stipulated by the course funders',
