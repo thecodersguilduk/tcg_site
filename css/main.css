@@ -2859,6 +2859,9 @@ input, textarea{
 .text-5xl{
   font-size: 40px;
 }
+.text-\[21px\]{
+  font-size: 21px;
+}
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2877,9 +2880,6 @@ input, textarea{
 }
 .text-xs{
   font-size: 11px;
-}
-.font-\[21px\]{
-  font-weight: 21px;
 }
 .font-bold{
   font-weight: 700;
@@ -4072,11 +4072,17 @@ fieldset a {
   .md\:flex-wrap{
     flex-wrap: wrap;
   }
+  .md\:items-start{
+    align-items: flex-start;
+  }
   .md\:items-center{
     align-items: center;
   }
   .md\:items-baseline{
     align-items: baseline;
+  }
+  .md\:justify-start{
+    justify-content: flex-start;
   }
   .md\:justify-center{
     justify-content: center;

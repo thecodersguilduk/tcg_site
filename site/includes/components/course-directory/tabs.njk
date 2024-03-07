@@ -1,6 +1,6 @@
-<div class="flex flex-col items-start self-stretch gap-y-6 py-24">
-    <p class="font-bold tracking-6 font-[21px]">Browse Course Types</p>
-    <div class="flex flex-wrap items-start self-stretch gap-6">
+<div class="flex flex-col items-center md:items-start self-stretch gap-y-6 py-24">
+    <p class="font-bold tracking-6 text-[21px]">Browse Course Types</p>
+    <div class="flex flex-wrap items-center justify-center md:justify-start self-stretch gap-6">
         {% for type in courseTypes %}
             <button data-target="{{ type.courseType | slug }}" class="course-directory-tab text-xl font-bold text-grey-1000 cursor-pointer">
                {{ type.courseType }}
