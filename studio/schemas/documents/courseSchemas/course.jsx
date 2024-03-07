@@ -16,13 +16,17 @@ const CourseInstancePreview = ({ value }) => {
 };
 
 const TestimonialPreview = ({ value }) => {
+	if (!value || !value.testimonial) {
+	  return <div>No testimonial specified</div>;
+	}
 	return (
-		<div>
-			<h3>Client: {value}</h3>
-		</div>
+	  <div>
+		<h3>Client: {value.client}</h3>
+		{value.avatar && <img src={value.avatar} alt="Client Avatar" />}
+		<p>Testimonial: {value.testimonial}</p>
+	  </div>
 	);
-};
-
+  };
 export default {
 	name: 'course',
 	type: 'document',
@@ -82,7 +86,7 @@ export default {
 		{
 			name: 'subtitle',
 			type: 'string',
-			title: 'Course Title',
+			title: 'Course SubTitle',
 			fieldset: 'metaHero',
 			description:
 				'The contracted course title as stipulated by the course funders',
@@ -91,7 +95,7 @@ export default {
 			name: 'excerpt',
 			type: 'array',
 			title: 'Excerpt/Meta Description',
-			fieldset: 'metaHero',
+			fieldset: 'intro',
 			of: [
 				{ type: 'block' },
 				{ type: 'applyBtn' },
@@ -328,25 +332,13 @@ export default {
 			title: 'Testimonials',
 			of: [
 				{
-					type: 'object',
-					fields: [
-						{
-							name: 'item',
-							type: 'reference',
-							title: 'Testimonial',
-							to: [{ type: 'testimonial' }],
-						}
-					],
-				},
-			],
-			preview: {
-				select: {
-					client: 'client',
-					testimonial: 'testimonial',
-				},
-				component: TestimonialPreview,
-			},
+					type: 'reference',
+					to: {type: 'testimonial'}
+				
+				}
+			]
 		},
+
 		{
 			name: 'courseType',
 			title: 'Course Type',
