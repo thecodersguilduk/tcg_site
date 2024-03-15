@@ -1,0 +1,24 @@
+<div class="py-32 px-4 flex flex-col w-full md:flex-row items-center gap-6 self-stretch lg:px-48 relative">
+    <div class="md:w-6/12 md:order-2">
+        {% if course.video %}
+            {% include "components/courses/video.njk" %}
+        {% else %}
+            <div>
+                <img src="{{course.featuredImage}}" class="rounded-lg aspect-[4/3] z-20 object-cover" alt="{{course.title}}" />
+                <object type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden md:block absolute pattern pattern-145"></object>
+            </div>
+        {% endif %}
+    </div>
+    <div class="w-full md:w-6/12 flex flex-col justify-center items-start gap-6 self-stretch md:order-1">
+        <div class="flex flex-col justify-center gap-6 self-stretch">
+            <h1 class="text-4xl font-bold m-0">{{ course.title }}</h1>
+            <h2 class="text-lg font-medium text-black m-0">{{ course.subtitle }}</h2>
+            <button class="w-[335px] md:w-2/12 bg-green-100 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Apply Now</button>
+        </div>
+        <div>
+            {% include "components/courses/logos.njk" %}
+        </div>
+        
+    </div>
+    
+</div>

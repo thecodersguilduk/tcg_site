@@ -1661,12 +1661,6 @@ input, textarea{
 .z-50{
   z-index: 50;
 }
-.order-1{
-  order: 1;
-}
-.order-2{
-  order: 2;
-}
 .order-first{
   order: -9999;
 }
@@ -1737,10 +1731,6 @@ input, textarea{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-.my-0{
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 .my-10{
   margin-top: 2.5rem;
@@ -1943,9 +1933,6 @@ input, textarea{
 .table{
   display: table;
 }
-.flow-root{
-  display: flow-root;
-}
 .grid{
   display: grid;
 }
@@ -2039,9 +2026,6 @@ input, textarea{
 .max-h-96{
   max-height: 24rem;
 }
-.min-h-80{
-  min-height: 80vh;
-}
 .min-h-\[80\%\]{
   min-height: 80%;
 }
@@ -2078,9 +2062,6 @@ input, textarea{
 .w-4{
   width: 1rem;
 }
-.w-4\/12{
-  width: 33.333333%;
-}
 .w-40{
   width: 10rem;
 }
@@ -2098,6 +2079,9 @@ input, textarea{
 }
 .w-9\/12{
   width: 75%;
+}
+.w-\[335px\]{
+  width: 335px;
 }
 .w-\[48rem\]{
   width: 48rem;
@@ -2171,6 +2155,9 @@ input, textarea{
 .grow{
   flex-grow: 1;
 }
+.basis-0{
+  flex-basis: 0px;
+}
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2185,9 +2172,6 @@ input, textarea{
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2213,14 +2197,14 @@ input, textarea{
 .items-center{
   align-items: center;
 }
-.items-baseline{
-  align-items: baseline;
-}
 .items-stretch{
   align-items: stretch;
 }
 .justify-start{
   justify-content: flex-start;
+}
+.justify-end{
+  justify-content: flex-end;
 }
 .justify-center{
   justify-content: center;
@@ -2240,11 +2224,17 @@ input, textarea{
 .gap-0\.5{
   gap: 0.125rem;
 }
+.gap-10{
+  gap: 2.5rem;
+}
 .gap-16{
   gap: 4rem;
 }
 .gap-2{
   gap: 0.5rem;
+}
+.gap-3{
+  gap: 0.75rem;
 }
 .gap-4{
   gap: 1rem;
@@ -2254,10 +2244,6 @@ input, textarea{
 }
 .gap-8{
   gap: 2rem;
-}
-.gap-x-1{
-  -moz-column-gap: 0.25rem;
-       column-gap: 0.25rem;
 }
 .gap-x-3{
   -moz-column-gap: 0.75rem;
@@ -2308,10 +2294,6 @@ input, textarea{
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-}
-.divide-gray-100 > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-divide-opacity));
 }
 .divide-grey-200 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
@@ -2438,6 +2420,10 @@ input, textarea{
 .border-grey-100{
   --tw-border-opacity: 1;
   border-color: rgb(244 244 244 / var(--tw-border-opacity));
+}
+.border-grey-1000{
+  --tw-border-opacity: 1;
+  border-color: rgb(148 148 148 / var(--tw-border-opacity));
 }
 .border-grey-200{
   --tw-border-opacity: 1;
@@ -2623,9 +2609,6 @@ input, textarea{
 .p-0{
   padding: 0px;
 }
-.p-1{
-  padding: 0.25rem;
-}
 .p-2{
   padding: 0.5rem;
 }
@@ -2684,6 +2667,10 @@ input, textarea{
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .py-1{
   padding-top: 0.25rem;
@@ -3843,9 +3830,6 @@ fieldset a {
   .sm\:text-xs{
     font-size: 11px;
   }
-  .sm\:leading-2xl{
-    line-height: 32px;
-  }
   .sm\:leading-5{
     line-height: 1.25rem;
   }
@@ -4012,6 +3996,9 @@ fieldset a {
   .md\:w-1\/3{
     width: 33.333333%;
   }
+  .md\:w-2\/12{
+    width: 16.666667%;
+  }
   .md\:w-2\/3{
     width: 66.666667%;
   }
@@ -4096,6 +4083,13 @@ fieldset a {
   .md\:justify-evenly{
     justify-content: space-evenly;
   }
+  .md\:gap-16{
+    gap: 4rem;
+  }
+  .md\:gap-x-8{
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -4112,9 +4106,17 @@ fieldset a {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+  .md\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .md\:px-48{
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
   .md\:px-6{
     padding-left: 1.5rem;
@@ -4123,6 +4125,10 @@ fieldset a {
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .md\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .md\:py-20{
     padding-top: 5rem;
@@ -4185,9 +4191,6 @@ fieldset a {
   .md\:pt-24{
     padding-top: 6rem;
   }
-  .md\:text-left{
-    text-align: left;
-  }
   .md\:text-center{
     text-align: center;
   }
@@ -4221,12 +4224,6 @@ fieldset a {
   .lg\:top-100{
     top: 100px;
   }
-  .lg\:order-1{
-    order: 1;
-  }
-  .lg\:order-2{
-    order: 2;
-  }
   .lg\:order-last{
     order: 9999;
   }
@@ -4236,10 +4233,6 @@ fieldset a {
   .lg\:-mx-3{
     margin-left: -0.75rem;
     margin-right: -0.75rem;
-  }
-  .lg\:-mx-8{
-    margin-left: -2rem;
-    margin-right: -2rem;
   }
   .lg\:mx-0{
     margin-left: 0px;
@@ -4270,12 +4263,6 @@ fieldset a {
   }
   .lg\:mr-4{
     margin-right: 1rem;
-  }
-  .lg\:mt-0{
-    margin-top: 0px;
-  }
-  .lg\:mt-10{
-    margin-top: 2.5rem;
   }
   .lg\:mt-12{
     margin-top: 3rem;
@@ -4396,16 +4383,6 @@ fieldset a {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
-  .lg\:divide-x > :not([hidden]) ~ :not([hidden]){
-    --tw-divide-x-reverse: 0;
-    border-right-width: calc(1px * var(--tw-divide-x-reverse));
-    border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
-  }
-  .lg\:divide-y-0 > :not([hidden]) ~ :not([hidden]){
-    --tw-divide-y-reverse: 0;
-    border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
-    border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
-  }
   .lg\:p-4{
     padding: 1rem;
   }
@@ -4416,6 +4393,14 @@ fieldset a {
   .lg\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .lg\:px-48{
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
   .lg\:px-6{
     padding-left: 1.5rem;
@@ -4469,9 +4454,6 @@ fieldset a {
   .lg\:pr-8{
     padding-right: 2rem;
   }
-  .lg\:pt-0{
-    padding-top: 0px;
-  }
   .lg\:pt-10{
     padding-top: 2.5rem;
   }
@@ -4507,10 +4489,6 @@ fieldset a {
 @media (min-width: 1280px){
   .xl\:col-span-2{
     grid-column: span 2 / span 2;
-  }
-  .xl\:-mx-4{
-    margin-left: -1rem;
-    margin-right: -1rem;
   }
   .xl\:mx-0{
     margin-left: 0px;
@@ -4556,10 +4534,6 @@ fieldset a {
   .xl\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-  .xl\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
   .xl\:py-24{
     padding-top: 6rem;
