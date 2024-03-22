@@ -1267,7 +1267,7 @@ input, textarea{
 .faq-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .services-item img {
@@ -1457,6 +1457,9 @@ input, textarea{
   opacity: 1;
 }
 
+#course #testimonials #course-testimonial-image {
+  display: none;
+}
 #course #trainers p {
   color: #fff;
   margin-bottom: unset;
@@ -1520,9 +1523,6 @@ input, textarea{
 #course .pattern-458 {
   right: 15%;
   top: 40%;
-}
-#course #content p {
-  margin-bottom: 1rem;
 }
 #course #content .content a{
   font-weight: 700;
@@ -1604,9 +1604,6 @@ input, textarea{
 .relative{
   position: relative;
 }
-.sticky{
-  position: sticky;
-}
 .inset-0{
   inset: 0;
 }
@@ -1636,9 +1633,6 @@ input, textarea{
 }
 .top-1{
   top: 0.25rem;
-}
-.top-100{
-  top: 100px;
 }
 .isolate{
   isolation: isolate;
@@ -1915,6 +1909,9 @@ input, textarea{
 .mt-auto{
   margin-top: auto;
 }
+.box-content{
+  box-sizing: content-box;
+}
 .block{
   display: block;
 }
@@ -1954,6 +1951,9 @@ input, textarea{
 .aspect-\[4\/3\]{
   aspect-ratio: 4/3;
 }
+.h-1{
+  height: 0.25rem;
+}
 .h-1\/3{
   height: 33.333333%;
 }
@@ -1968,6 +1968,9 @@ input, textarea{
 }
 .h-16{
   height: 4rem;
+}
+.h-20{
+  height: 5rem;
 }
 .h-24{
   height: 6rem;
@@ -2001,6 +2004,9 @@ input, textarea{
 }
 .h-96{
   height: 24rem;
+}
+.h-\[420px\]{
+  height: 420px;
 }
 .h-auto{
   height: auto;
@@ -2077,11 +2083,8 @@ input, textarea{
 .w-6\/12{
   width: 50%;
 }
-.w-9\/12{
-  width: 75%;
-}
-.w-\[335px\]{
-  width: 335px;
+.w-\[350px\]{
+  width: 350px;
 }
 .w-\[48rem\]{
   width: 48rem;
@@ -2172,6 +2175,9 @@ input, textarea{
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2299,9 +2305,6 @@ input, textarea{
   --tw-divide-opacity: 1;
   border-color: rgb(222 222 222 / var(--tw-divide-opacity));
 }
-.self-start{
-  align-self: flex-start;
-}
 .self-center{
   align-self: center;
 }
@@ -2359,14 +2362,26 @@ input, textarea{
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
 }
+.rounded-bl-\[72px\]{
+  border-bottom-left-radius: 72px;
+}
 .rounded-bl-lg{
   border-bottom-left-radius: 0.5rem;
+}
+.rounded-br-\[20px\]{
+  border-bottom-right-radius: 20px;
 }
 .rounded-br-lg{
   border-bottom-right-radius: 0.5rem;
 }
+.rounded-tl-\[20px\]{
+  border-top-left-radius: 20px;
+}
 .rounded-tl-lg{
   border-top-left-radius: 0.5rem;
+}
+.rounded-tr-\[72px\]{
+  border-top-right-radius: 72px;
 }
 .rounded-tr-lg{
   border-top-right-radius: 0.5rem;
@@ -2501,6 +2516,10 @@ input, textarea{
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
+.bg-grey-1000{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 148 148 / var(--tw-bg-opacity));
+}
 .bg-grey-200{
   --tw-bg-opacity: 1;
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
@@ -2560,6 +2579,11 @@ input, textarea{
   --tw-gradient-to: rgb(37 116 169 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-red-1000{
+  --tw-gradient-from: #AD556A var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(173 85 106 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .from-red-900{
   --tw-gradient-from: #BB4E69 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(187 78 105 / 0) var(--tw-gradient-to-position);
@@ -2575,6 +2599,9 @@ input, textarea{
 }
 .to-blue-200{
   --tw-gradient-to: #2574a9 var(--tw-gradient-to-position);
+}
+.to-purple-1000{
+  --tw-gradient-to: #54509F var(--tw-gradient-to-position);
 }
 .to-purple-900{
   --tw-gradient-to: #5350A5 var(--tw-gradient-to-position);
@@ -2680,6 +2707,10 @@ input, textarea{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -2732,9 +2763,6 @@ input, textarea{
 .pb-16{
   padding-bottom: 4rem;
 }
-.pb-2{
-  padding-bottom: 0.5rem;
-}
 .pb-20{
   padding-bottom: 5rem;
 }
@@ -2776,6 +2804,9 @@ input, textarea{
 }
 .pr-12{
   padding-right: 3rem;
+}
+.pr-2{
+  padding-right: 0.5rem;
 }
 .pr-4{
   padding-right: 1rem;
@@ -3059,6 +3090,11 @@ input, textarea{
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[-44px_46px_3px_-6px_rgba\(822c 21\2c 82\2c 1\)\]{
+  --tw-shadow: -44px 46px 3px -6px rgba(82,21,82,1);
+  --tw-shadow-colored: -44px 46px 3px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-primary{
@@ -3626,9 +3662,6 @@ fieldset a {
   .sm\:h-2\/3{
     height: 66.666667%;
   }
-  .sm\:h-36{
-    height: 9rem;
-  }
   .sm\:h-56{
     height: 14rem;
   }
@@ -3638,14 +3671,8 @@ fieldset a {
   .sm\:w-1\/2{
     width: 50%;
   }
-  .sm\:w-36{
-    width: 9rem;
-  }
   .sm\:w-6\/12{
     width: 50%;
-  }
-  .sm\:w-7\/12{
-    width: 58.333333%;
   }
   .sm\:w-\[57rem\]{
     width: 57rem;
@@ -3679,6 +3706,9 @@ fieldset a {
   }
   .sm\:justify-center{
     justify-content: center;
+  }
+  .sm\:gap-6{
+    gap: 1.5rem;
   }
   .sm\:gap-px{
     gap: 1px;
@@ -3820,9 +3850,6 @@ fieldset a {
   }
   .sm\:text-6xl{
     font-size: 60px;
-  }
-  .sm\:text-md{
-    font-size: 16px;
   }
   .sm\:text-sm{
     font-size: 14px;
@@ -3996,9 +4023,6 @@ fieldset a {
   .md\:w-1\/3{
     width: 33.333333%;
   }
-  .md\:w-2\/12{
-    width: 16.666667%;
-  }
   .md\:w-2\/3{
     width: 66.666667%;
   }
@@ -4086,6 +4110,12 @@ fieldset a {
   .md\:gap-16{
     gap: 4rem;
   }
+  .md\:gap-6{
+    gap: 1.5rem;
+  }
+  .md\:gap-8{
+    gap: 2rem;
+  }
   .md\:gap-x-8{
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -4093,6 +4123,10 @@ fieldset a {
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+  .md\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .md\:px-16{
     padding-left: 4rem;
@@ -4138,9 +4172,17 @@ fieldset a {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  .md\:py-28{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
   .md\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+  .md\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .md\:py-6{
     padding-top: 1.5rem;
@@ -4197,6 +4239,9 @@ fieldset a {
   .md\:text-2xl{
     font-size: 24px;
   }
+  .md\:text-3xl{
+    font-size: 32px;
+  }
   .md\:text-5xl{
     font-size: 40px;
   }
@@ -4223,6 +4268,12 @@ fieldset a {
   }
   .lg\:top-100{
     top: 100px;
+  }
+  .lg\:order-1{
+    order: 1;
+  }
+  .lg\:order-2{
+    order: 2;
   }
   .lg\:order-last{
     order: 9999;
@@ -4282,14 +4333,14 @@ fieldset a {
   .lg\:aspect-\[3\/2\]{
     aspect-ratio: 3/2;
   }
-  .lg\:h-40{
-    height: 10rem;
-  }
   .lg\:h-48{
     height: 12rem;
   }
   .lg\:h-8{
     height: 2rem;
+  }
+  .lg\:h-auto{
+    height: auto;
   }
   .lg\:w-1\/2{
     width: 50%;
@@ -4309,14 +4360,8 @@ fieldset a {
   .lg\:w-3\/12{
     width: 25%;
   }
-  .lg\:w-4\/12{
-    width: 33.333333%;
-  }
   .lg\:w-4\/6{
     width: 66.666667%;
-  }
-  .lg\:w-40{
-    width: 10rem;
   }
   .lg\:w-5\/12{
     width: 41.666667%;
@@ -4335,6 +4380,9 @@ fieldset a {
   }
   .lg\:w-9\/12{
     width: 75%;
+  }
+  .lg\:w-\[335px\]{
+    width: 335px;
   }
   .lg\:w-auto{
     width: auto;
@@ -4371,6 +4419,9 @@ fieldset a {
   }
   .lg\:flex-nowrap{
     flex-wrap: nowrap;
+  }
+  .lg\:items-start{
+    align-items: flex-start;
   }
   .lg\:justify-start{
     justify-content: flex-start;
@@ -4418,6 +4469,10 @@ fieldset a {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+  .lg\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -4459,6 +4514,9 @@ fieldset a {
   }
   .lg\:pt-24{
     padding-top: 6rem;
+  }
+  .lg\:pt-32{
+    padding-top: 8rem;
   }
   .lg\:pt-4{
     padding-top: 1rem;
@@ -4502,6 +4560,9 @@ fieldset a {
   }
   .xl\:h-56{
     height: 14rem;
+  }
+  .xl\:w-7\/12{
+    width: 58.333333%;
   }
   .xl\:w-96{
     width: 24rem;
@@ -4560,5 +4621,20 @@ fieldset a {
   }
   .xl\:text-6xl{
     font-size: 60px;
+  }
+}
+
+@media (min-width: 1480px){
+  .xxxl\:block{
+    display: block;
+  }
+  .xxxl\:hidden{
+    display: none;
+  }
+  .xxxl\:justify-start{
+    justify-content: flex-start;
+  }
+  .xxxl\:p-0{
+    padding: 0px;
   }
 }

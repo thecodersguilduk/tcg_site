@@ -55,6 +55,8 @@ module.exports = (eleventyConfig) => {
 	//
 	eleventyConfig.addFilter('courseDisplay', require('./filters/courseNames.js'));
 
+	eleventyConfig.addFilter('removeUnderscores', require('./filters/removeUnderscores.js'));
+
 	eleventyConfig.addFilter('underscore', require('./filters/underscore.js'));
 
 	// Add a readable date formatter filter to Nunjucks

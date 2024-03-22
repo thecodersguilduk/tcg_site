@@ -16,20 +16,15 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
       date,
       description
     },
-    coursePortableText,
-    "testimonials": testimonials[]{
-		"client": item->client,
-		"testimonial": item->testimonial,
-		"featured": featured,
-		"avatar": item->avatar.asset->url,
-		"occupation": item->occupation
-	   },
-	"featuredTestimonial": {
-		"occupation": featuredTestimonial->.occupation,
-		"_id": featuredTestimonial->_id,
-	  "client": featuredTestimonial->client,
-		"testimonial": featuredTestimonial->.testimonial,
-		"avatar": featuredTestimonial->avatar.asset->url
+	benefits[]->{
+		'title': title,
+		'image': image.asset->url
+	},
+    "testimonials": testimonials[]->{
+		'testimonial': testimonial,
+		'avatar': avatar.asset->url,
+		'client': client,
+		'occupation': occupation
 	  }
 } | order(start asc)`;
 
@@ -47,6 +42,23 @@ module.exports = async function () {
 
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
+
+	data.formLink = data.formLink ? data.formLink : 'https://forms.gle/RrPafeNmXX1FBoet8'
+	data.content = [];
+	const dataContentFields = ['who_is_this_for', 'what_you_will_get', 'course_outline', 'course_breakdown', 'delivery', 'pre_requisites', 'bonus_takeaways'];
+
+	dataContentFields.forEach(field => {
+		if (data[field]) {
+            data.content.push({
+                [field]: blocksToHtml({
+                    blocks: data[field],
+                    serializers: serializers,
+                })
+            });
+        }
+	});
+	
+
 	if (data.trainers) {
 		data.trainers.forEach((trainer) => {
 			trainer.image = urlFor(trainer.image).width(350).url();
@@ -56,55 +68,6 @@ function prepPost(data) {
 	if (data.excerpt) {
 		data.excerpt = blocksToHtml({
 			blocks: data.excerpt,
-			serializers: serializers,
-		});
-	}
-
-	if (data.who_is_this_for) {
-		data.who_is_this_for = blocksToHtml({
-			blocks: data.who_is_this_for,
-			serializers: serializers,
-		});
-	}
-
-	if (data.what_you_will_get) {
-		data.what_you_will_get = blocksToHtml({
-			blocks: data.what_you_will_get,
-			serializers: serializers,
-		});
-	}
-
-	if (data.course_outline) {
-		data.course_outline = blocksToHtml({
-			blocks: data.course_outline,
-			serializers: serializers,
-		});
-	}
-
-	if (data.course_breakdown) {
-		data.course_breakdown = blocksToHtml({
-			blocks: data.course_breakdown,
-			serializers: serializers,
-		});
-	}
-
-	if (data.delivery) {
-		data.delivery = blocksToHtml({
-			blocks: data.delivery,
-			serializers: serializers,
-		});
-	}
-
-	if (data.pre_requisites) {
-		data.pre_requisites = blocksToHtml({
-			blocks: data.pre_requisites,
-			serializers: serializers,
-		});
-	}
-
-	if (data.bonus_takeaways) {
-		data.bonus_takeaways = blocksToHtml({
-			blocks: data.bonus_takeaways,
 			serializers: serializers,
 		});
 	}
@@ -129,9 +92,17 @@ function prepPost(data) {
 		? urlFor(data.featuredImage).width(500).url()
 		: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
 
-	data.featuredImage = data.featuredImage
-		? urlFor(data.featuredImage).width(972).url()
-		: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+		data.featuredImage = data.featuredImage
+		? {
+			small: urlFor(data.featuredImage).width(500).url(), // Small image for smaller screens
+			medium: urlFor(data.featuredImage).width(972).url(), // Medium image for medium screens
+			large: urlFor(data.featuredImage).width(1500).url() // Large image for larger screens
+		  }
+		: {
+			small: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', // Fallback small image
+			medium: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=60', // Fallback medium image
+			large: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=60' // Fallback large image
+		  };
 
 	data.start = data.instances ? data.instances[0].date : 'TBC';
 
@@ -159,7 +130,7 @@ function prepPost(data) {
 
 	data.isFunded = data.logos.length > 0;
 
-	console.log(data);
+	// console.log(data.title, data.testimonials);
 
 	return data;
 }

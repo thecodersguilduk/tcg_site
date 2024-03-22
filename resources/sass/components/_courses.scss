@@ -1,4 +1,10 @@
 #course {
+  #testimonials{
+    #course-testimonial-image{
+      display: none;
+    }
+  }
+  
   #trainers {
     p {
       color: #fff;
@@ -70,10 +76,6 @@
   }
 
   #content {
-    p {
-      margin-bottom: 1rem;
-    }
-
     .content {
       a {
         @apply text-blue-200 no-underline transition-all duration-300 font-bold ease-out;

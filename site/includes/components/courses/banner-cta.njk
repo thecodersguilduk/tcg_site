@@ -1,18 +1,15 @@
-<div class="relative my-4 lg:my-12">
+<div class="relative p-4 my-4 lg:my-12">
     <div class="flex justify-between">
         <object type="image/svg+xml" data="../../images/patterns/98.svg" class="absolute pattern pattern-98 left-0 hidden lg:block"></object>
         <object type="image/svg+xml" data="../../images/patterns/99.svg" class="absolute pattern pattern-99 right-0 hidden lg:block"></object>
     </div>
     <div>
         <h2 class="mt-12 mb-0 text-center text-blue-200">Would you like to do this course for free?</h2>
-        <h2 class="mb-12 text-center text-red-100"><span class="strikediag">£2995</span></h2>
+        <h2 class="mb-12 text-center text-red-100"><span class="strikediag">£{{ course.price }}</span></h2>
 
-        <div class="cta bg-gradient-to-r from-blue-200 to-blue-100 flex flex-col lg:flex-row justify-between px-8 py-4 rounded">
+        <div class="cta bg-green-100 flex flex-col lg:flex-row justify-between px-8 py-4 rounded">
         <p class="text-center lg:text-left text-white max-w-3xl leading-xl lg:leading-md text-lg mb-4 lg:mb-0 lg:w-9/12">If you live or work in {% if course.partners.includes('N Yorkshire') %}<strong>North</strong> or {% endif %} <strong>West Yorkshire</strong> it is very likely that you will be eligible for <strong>100% funding.</strong></p>
-        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-0 text-lightblue-500 rounded text-center" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i></a>
+        <a href="{{course.formLink}}" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-0 text-black font-bold rounded text-center">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i></a>
         </div>
-    </div>
-    <div class="flex items-center justify-around mx-auto mt-8 w-full sm:w-7/12">
-        <p class="bg-green-100 text-center text-black text-sm sm:text-md rounded px-4 py-2">Next Course Starts: <strong>{{ course.start | dateDisplay }}<strong></p>
     </div>
 </div>

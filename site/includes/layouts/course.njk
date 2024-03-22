@@ -28,36 +28,28 @@ body_class: apprenticeship-employer
     </div>
   </section>
   {% include '../components/courses/header.njk' %}
-    <div class="md:px-48 mx-auto mt-12">
+    <section id="pitch " class="px-6 lg:px-48">
       {% include '../components/courses/pitch.njk' %}
       {% include '../components/courses/graduate-logos.njk' %}
       {% include '../components/courses/upcoming-courses.njk' %}
-
-
-      {% if course.isFunded %}
-        {% include '../components/courses/banner-cta.njk' %}
-      {% endif %}
-  <section id="content" class="section-rounded z-10">
-    {% include '../components/courses/content.njk' %}
-  </section>
-  {% if course.trainers.length > 0%}
+      {% include '../components/courses/banner-cta.njk' %}
+    </section>
+    <section id="content" class="section-rounded z-10">
+      {% include '../components/courses/content.njk' %}
+    </section>
+  {% if course.trainers.length > 0 %}
     <section id="trainers">
       {% include '../components/courses/trainers.njk' %}
     </section>
   {% endif %}
-  <section id="testimonials" class="my-12">
+  <section id="testimonials">
       {% include '../components/courses/course-testimonial.njk' %}
   </section>
-  {% if course.isFunded %}
-  <section id="further-cta">
-      {% include '../components/courses/further-cta.njk' %}
-  </section>
-  {% endif %}
   <section id="footer-cta">
     {% include '../components/courses/individuals-and-businesses.njk' %}
   </section>
   <section id="contact" class="pt-16">
     {% include '../components/courses/contact.njk' %}
   </section>
-  </div>
+
 </main>
