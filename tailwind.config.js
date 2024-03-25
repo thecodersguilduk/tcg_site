@@ -184,6 +184,9 @@ module.exports = {
 				4: '4px',
 				8: '8px',
 			},
+			borderRadius: {
+				72: '72px'
+			},
 			boxShadow: {
 				primary: '0px 0px 8px rgba(0, 0, 0, 0.29)',
 				secondary: '0px 0px 6px rgba(0, 0, 0, 0.29)',
