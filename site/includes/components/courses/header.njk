@@ -22,9 +22,12 @@
             <h2 class="text-lg md:text-md font-medium text-black m-0">{{ course.subtitle }}</h2>
             <button class="w-full lg:w-[335px] bg-green-100 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Apply Now</button>
         </div>
-        <div class="p-4 flex flex-col justify-end items-start self-stretch w-full gap-3">
+        <div class="md:hidden flex lg:flex flex-col justify-end items-start self-stretch w-full gap-3">
             {% include "components/courses/logos.njk" %}
         </div>    
     </div>
- 
+
 </div>
+<div class="hidden md:flex md:px-4 lg:hidden flex-col justify-end items-start self-stretch w-full gap-3">
+    {% include "components/courses/logos.njk" %}
+</div>  

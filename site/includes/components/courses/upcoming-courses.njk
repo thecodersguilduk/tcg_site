@@ -1,13 +1,13 @@
 {% if course.instances.length > 0 %}
-<section class="p-4 flex flex-col lg:flex-row lg:items-start gap-8 self-stretch">
-    <div class="xl:w-5/12 flex flex-col items-start gap-10 self-stretch">
+<section class="p-4 flex flex-col xl:flex-row lg:items-start gap-8 self-stretch">
+    <div class="xl:w-4/12 flex flex-col items-start gap-10 self-stretch">
         <h3 class="text-lg">Upcoming Courses</h3>
         <p class="text-3xl font-bold">Choose the best delivery for you</p>
         <p>We have new courses coming up all the time. If the delivery patterns below are not suitable for you please get in touch and we will let you know
             about future courses - <a class="text-blue-200" href="mailto:appliations@thecodersguild.org.uk">applications@thecodersguild.org.uk</a>
         </p>
     </div>
-    <div class="xl:w-7/12 grow flex flex-col lg:flex-row lg:items-start gap-10">
+    <div class="xl:w-8/12 grow flex flex-col lg:flex-row lg:items-start gap-10">
         {% include '../courses/course-instances.njk' %}
     </div>
 </section>
