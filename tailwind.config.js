@@ -195,6 +195,7 @@ module.exports = {
 				inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
 				outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
 				none: 'none',
+				testimonial: '-44px 46px 3px -6px_ gba(82,21,82,1)',
 			},
 			container: {},
 			cursor: {
