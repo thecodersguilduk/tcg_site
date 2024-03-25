@@ -2059,6 +2059,9 @@ input, textarea{
 .w-24{
   width: 6rem;
 }
+.w-28{
+  width: 7rem;
+}
 .w-32{
   width: 8rem;
 }
@@ -4561,6 +4564,9 @@ fieldset a {
   .xl\:h-56{
     height: 14rem;
   }
+  .xl\:w-5\/12{
+    width: 41.666667%;
+  }
   .xl\:w-7\/12{
     width: 58.333333%;
   }
@@ -4578,6 +4584,9 @@ fieldset a {
   }
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .xl\:flex-row{
     flex-direction: row;
@@ -4621,20 +4630,5 @@ fieldset a {
   }
   .xl\:text-6xl{
     font-size: 60px;
-  }
-}
-
-@media (min-width: 1480px){
-  .xxxl\:block{
-    display: block;
-  }
-  .xxxl\:hidden{
-    display: none;
-  }
-  .xxxl\:justify-start{
-    justify-content: flex-start;
-  }
-  .xxxl\:p-0{
-    padding: 0px;
   }
 }
