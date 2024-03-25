@@ -21,7 +21,7 @@ const faqAccordion = function faqAccordion() {
     } else {
       //angle.classList.remove('fa-angle-down');
       //angle.classList.add('fa-angle-up');
-      content.style.padding = '3rem';
+      //content.style.padding = '3rem';
       content.style.maxHeight = `${content.scrollHeight + 96}px`;
 
     }
