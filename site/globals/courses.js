@@ -118,7 +118,7 @@ function prepPost(data) {
 
 	if (data.testimonials) {
 		data.testimonials.forEach((testimonial) => {
-			testimonial.avatar = urlFor(testimonial.avatar).url();
+			testimonial.avatar = urlFor(testimonial.avatar).width(350).height(420).url();
 		});
 	}
 

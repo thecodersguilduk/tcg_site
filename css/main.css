@@ -2005,9 +2005,6 @@ input, textarea{
 .h-96{
   height: 24rem;
 }
-.h-\[420px\]{
-  height: 420px;
-}
 .h-auto{
   height: auto;
 }
@@ -2085,9 +2082,6 @@ input, textarea{
 }
 .w-6\/12{
   width: 50%;
-}
-.w-\[350px\]{
-  width: 350px;
 }
 .w-\[48rem\]{
   width: 48rem;
@@ -4362,6 +4356,9 @@ fieldset a {
   }
   .lg\:w-3\/12{
     width: 25%;
+  }
+  .lg\:w-4\/12{
+    width: 33.333333%;
   }
   .lg\:w-4\/6{
     width: 66.666667%;
