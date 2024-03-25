@@ -42,9 +42,11 @@ body_class: apprenticeship-employer
       {% include '../components/courses/trainers.njk' %}
     </section>
   {% endif %}
+  {% if course.testimonials.length > 0 %}
   <section id="testimonials">
       {% include '../components/courses/course-testimonial.njk' %}
   </section>
+  {% endif %}
   <section id="footer-cta">
     {% include '../components/courses/individuals-and-businesses.njk' %}
   </section>

@@ -3,9 +3,11 @@
     <div class="flex flex-col gap-8 self-stretch items-center">
         <h2 class="text-center text-3xl mb-0 leading-0">100% Funded Courses Available</h2>
         <p class="text-sm text-center">*Whilst it is very likely you will be eligible for funding it is not a guarantee</p>
-        <div class="bg-green-100 text-black px-4 py-2 text-center mx-auto">
-            Next Course Starts: <strong>{{ course.start | dateDisplay }}</strong>
-        </div>
+        {% if course.instances.length > 0 %}
+            <div class="bg-green-100 text-black px-4 py-2 text-center mx-auto">
+                Next Course Starts: <strong>{{ course.start | dateDisplay }}</strong>
+            </div>
+        {% endif %}
     </div>
     {% endif %}
     <div class="flex flex-col md:flex-row md:justify-around my-24 px-8 inner relative">

@@ -1,3 +1,5 @@
+{% if course.isFunded %}
+
 <div class="w-full">
     <h3 class="font-bold text-lg mb-0">Supported By:</h3>
     <div class="flex flex-wrap w-full">
@@ -6,3 +8,4 @@
         {% endfor %}
     </div>
 </div>
+{% endif %}

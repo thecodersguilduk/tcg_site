@@ -184,6 +184,7 @@ export default {
 			description: 'The benefits of this course - MAXIMUM 3!!',
 			type: 'array',
             of: [{ type: 'reference', to: [{ type: 'courseBenefits' }]}],
+			validation: Rule => Rule.unique(),
 			fieldset: 'intro'
 		},
 		{
@@ -324,6 +325,12 @@ export default {
 				source: 'title',
 			},
 			maxLength: 96,
+		},
+		{
+			name: 'formLink',
+			title: 'Form Link',
+			description: 'Link to the course application form - default will be the google form for Short Courses',
+			type: 'string'
 		},
 		{
 			name: 'tags',
