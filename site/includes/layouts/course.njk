@@ -28,7 +28,7 @@ body_class: apprenticeship-employer
     </div>
   </section>
   {% include '../components/courses/header.njk' %}
-    <section id="pitch " class="px-6 lg:px-48">
+    <section id="pitch" class="px-6 lg:px-64">
       {% include '../components/courses/pitch.njk' %}
       {% include '../components/courses/graduate-logos.njk' %}
       {% include '../components/courses/upcoming-courses.njk' %}
@@ -42,11 +42,9 @@ body_class: apprenticeship-employer
       {% include '../components/courses/trainers.njk' %}
     </section>
   {% endif %}
-  {% if course.testimonials.length > 0 %}
-  <section id="testimonials">
+
       {% include '../components/courses/course-testimonial.njk' %}
-  </section>
-  {% endif %}
+
   <section id="footer-cta">
     {% include '../components/courses/individuals-and-businesses.njk' %}
   </section>

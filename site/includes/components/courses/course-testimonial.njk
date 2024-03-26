@@ -1,51 +1,57 @@
 {% if course.testimonials.length > 0 %}
-<div class="testimonials block p-4 lg:px-48 py-32 flex-col justify-center items-center gap-16 self-stretch bg-gradient-to-r from-red-1000 to-purple-1000 section-rounded -mt-16">
-  <div class="mx-auto">
-    <h2 class="text-center text-white mb-8 md:mb-14">What learners say about this course</h2>
-  </div>
-  <div class="testimonials__slider">
-    {% for testimonial in course.testimonials %}
-    <div>
-      <div class="flex flex-col lg:flex-row gap-2 justify-center items-center self-stretch">
-        <div class="block pl-6 pr-2 mx-auto md:w-5/12">
-          <img src="{{ testimonial.avatar }}" class="shadow-testimonial mx-auto rounded-tr-72 rounded-bl-72 rounded-tl-3xl rounded-br-3xl object-cover" alt="{{ testimonial.author}} gives their experience with The Coders Guild">
-        </div>
-
-        <div class="sm:p-10 pt-12 px-8 pb-8 md:w-7/12">
-          <div class="flex gap-2 items-center">
-            <div class="block bg-white h-1 w-12 rounded"></div>
-            <p class="text-white text-sm font-bold">Success Stories</p>
+<section id="testimonials">
+  <div class="testimonials block p-4 lg:px-48 py-32 flex-col justify-center items-center gap-16 self-stretch bg-gradient-to-r from-red-1000 to-purple-1000 section-rounded -mt-16">
+    <div class="mx-auto">
+      <h2 class="text-center text-white mb-8 md:mb-14">What learners say about this course</h2>
+    </div>
+    <div class="testimonials__slider">
+      {% for testimonial in course.testimonials %}
+      <div>
+        <div class="flex flex-col lg:flex-row gap-2 justify-center items-center self-stretch">
+          <!-- <div class="block pl-6 pr-2 mx-auto md:w-5/12">
+          </div> -->
+          <div id="course-testimonial-image-container">
+            <div class="course-testimonial-avatar" style="background: url('{{ testimonial.avatar }}'), lightgray; background-repeat: no-repeat; background-size: cover; background-position: 50% "></div>
           </div>
-          
-          <div class="sm:flex sm:gap-6 sm:items-center">
-            <div class="relative text-white">
-              <p class="text-lg text-white font-bold">{{ testimonial.highlight }}</p>
-              <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
-              <p class="mb-2px text-lg text-white font-bold">{{ testimonial.client }}</p>
-              <p class="text-sm leading-sm font-heading font-bold mb-2 text-white">{{ testimonial.occupation }}</p>
+  
+  
+          <div class="sm:p-10 pt-12 px-8 pb-8 md:w-7/12">
+            <div class="flex gap-2 items-center">
+              <div class="block bg-white h-1 w-12 rounded"></div>
+              <p class="text-white text-sm font-bold leading-lg tracking-wide">Success Stories</p>
             </div>
+            
+            <div class="sm:flex sm:gap-6 sm:items-center">
+              <div class="relative text-white">
+                <p class="text-5xl text-white font-bold leading-5xl">{{ testimonial.highlight }}</p>
+                <p class="text-md leading-lg text-white font-semibold">{{ testimonial.testimonial }}</p>
+                <p class="mb-2 text-lg text-white font-bold">{{ testimonial.client }}</p>
+                <p class="text-sm leading-sm font-heading font-bold mb-2 text-white">{{ testimonial.occupation }}</p>
+              </div>
+            </div>
+  
           </div>
-
         </div>
       </div>
+          
+      {% endfor %}
+      
     </div>
-        
-    {% endfor %}
-    
+    <div class="flex justify-center items-center mt-8">
+      <button type="button" class="prev mr-6">
+        <img src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+      <div class="dots"></div>
+      <button type="button" class="next ml-6">
+        <img src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+    </div>
+    </div>
+  
+    <object type="image/svg+xml" data="../../images/patterns/457.svg" class="hidden md:block absolute pattern pattern-457"></object>
+    <object type="image/svg+xml" data="../../images/patterns/458.svg" class="hidden md:block absolute pattern pattern-458"></object>
   </div>
-  <div class="flex justify-center items-center mt-8">
-    <button type="button" class="prev mr-6">
-      <img src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
-    </button>
-    <div class="dots"></div>
-    <button type="button" class="next ml-6">
-      <img src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
-    </button>
-  </div>
-  </div>
+</section>
 
-  <object type="image/svg+xml" data="../../images/patterns/457.svg" class="hidden md:block absolute pattern pattern-457"></object>
-  <object type="image/svg+xml" data="../../images/patterns/458.svg" class="hidden md:block absolute pattern pattern-458"></object>
-</div>
 {% endif %}
 

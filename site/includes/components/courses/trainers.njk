@@ -2,11 +2,11 @@
         <object type="image/svg+xml" data="../../images/patterns/5.svg" class="absolute pattern pattern-1 right-0 bottom-0 hidden md:block"></object>
         <object type="image/svg+xml" data="../../images/patterns/18.svg" class="absolute pattern pattern-1 left-0 top-0 hidden md:block"></object>
     
-    <div class="flex flex-col gap-8 items-start">
-        <h2 class="text-white text-3xl">Who trains this course?</h2>
-        <p class="text-white">All out technical and vocational courses are devised, reviewed and delivered by prominent industry professionals, many of them are experts in their fields</p>
+    <div class="flex flex-col gap-8 items-start lg:w-5/12 ">
+        <h2 class="text-white text-3xl mb-0 leading-112">Who trains this course?</h2>
+        <p class="text-white leading-lg font-semibold">All out technical and vocational courses are devised, reviewed and delivered by prominent industry professionals, many of them are experts in their fields</p>
     </div>
-    <div class="grid grid-cols-2 xl:grid-cols-4 justify-center items-start gap-8">
+    <div class="lg:w-7/12 grid grid-cols-2 xl:grid-cols-4 justify-center items-start gap-8">
         {% for trainer in course.trainers | limit(4) %}
         <div class="flex flex-col items-center gap-2 text-white">
             <div class="image h-24 w-24 flex rounded-full" style="background-image: url({{trainer.image}}); background-size: cover; background-repeat: no-repeat; background-position: center; ">

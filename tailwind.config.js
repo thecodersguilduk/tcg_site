@@ -345,6 +345,7 @@ module.exports = {
 				'3xl': '34px',
 				'4xl': '40px',
 				'5xl': '48px',
+				'112': '112%',
 			},
 			listStyleType: {
 				none: 'none',
