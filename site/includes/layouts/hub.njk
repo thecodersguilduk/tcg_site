@@ -11,77 +11,24 @@ body_class: apprenticeship-employer
                         <div class="inner py-24">
                             <div class="flex flex-wrap pt-6 lg:pt-24 pb-12">
                                 <div class="w-full lg:w-5/12">
-                                    <h1 class="text-center lg:text-left">{{location}} {% if page.url !== '/ldcf/' %} Digital Skills Hub {% else %} #LCDF23 {% endif %}</h1>
-                                    <p class="font-bold text-lightblue-500 mb-4"><span> {% if page.url === '/ldcf/' %}Are you ready to upgrade or kick start your career?
-                                    We provide 100% government funded courses in key areas such as <a href="/course-directory/digital-project-manager/">Agile Project Management</a> and <a href="/course-directory/leading-digital-teams/">Team Leadership</a> as well as courses in working with <a href="/course-directory/get-hired-as-a-software-developer/">code</a> - all courses come with 6 months career support to help you find your dream job. Courses are running now and space is limited so don’t delay{% else %}Are you eager to learn new skills? You can apply for one of our FULLY FUNDED digital courses!
-                                    Whether you want to broaden your job prospects or simply upgrade your skill set, you can get training and support from industry experts with our digital courses
-                                    {% endif %}</span> Reserve your spot now — space is limited!
+                                    <h1 class="text-center lg:text-left">Elevate Your Tech Career in West Yorkshire with The Coders Guild</h1>
+                                    <p class="font-bold text-lightblue-500 mb-4">Are you ready to enhance your skillset? Dive into our fully funded digital courses! Expand your career opportunities or refine your existing skills through expert-led training and support. Secure your place today - spaces are filling up fast! 
                                     </p>
-                                    {% if page.url !== '/ldcf/' %}
-                                     <p>Our {% if location === 'Greater Manchester' %}FULLY  FUNDED coding courses in {{ location }}{% else %}Digital Skills Bootcamps in {{ location }}{% endif %} will help:</p>
-                                        <ul class="decorated-ul my-4">
-                                        {% if location === 'Greater Manchester'%}
-                                            <li class="mb-0">Help local businesses fill the digital skills gap and increase productivity.</li>
-                                            <li class="mb-0">Upskill individuals already employed in the IT industry to maximise potential.</li>
-                                            <li class="mb-0">Supporting the {{location}} community through providing FULLY  FUNDED courses for
-                                            those over 16 years of age, enabling career progression within tech and other digital industries.</li>
-                                        {% else %}
-                                            <li class="mb-0"><strong>Businesses {% if page.url === '/york-north-yorkshire/'%} and Self Employed {% endif %}</strong> in {{ location }} to fill the digital skills gap and increase productivity</li>
-                                            <li class="mb-0"><strong>Career Changers</strong> work to get ahead in digital</li>
-                                            <li class="mb-0"><strong>{% if page.url === '/york-north-yorkshire/'%} Recently Unemployed (within the last 12 months){% else %}un/underemployed{% endif %}</strong> to get a job in tech</li>
-                                        {% endif %}
-                                        </ul>
-                                    {% endif %}
-                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses"> View our Courses and Apply Today</a>
+                                    <ul class="decorated-ul my-4">
+                                        <li class="mb-0"><strong>Diverse course offerings for all skill levels</li>
+                                        <li class="mb-0"><strong>Real-world skills for immediate career impact</li>
+                                        <li class="mb-0"><strong>Fully funded opportunities by WYCA</li>
+                                    </ul>
+                                    <a class="my-4 inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100" href="#courses">Explore Courses and Secure Your Spot</a>
                                 </div>
                                 <div class="w-full lg:w-7/12 flex flex-col items-center justify-center mb-8 lg:mb-0 order-first lg:order-last">
-                                    {% if location === 'Greater Manchester' %}
-
-                                        <iframe class="block" width="530" height="298" src="https://www.youtube.com/embed/waFGqRBR4qs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                    <div class="mt-8 mb-4 grid grid-cols-4 gap-0.5">
-                                        <div class="col-span-4 sm:col-span-2 flex items-center justify-center py-2 px-6 bg-gray-50">
-                                            <img class="sm:max-h-10 max-h-12" src="../../images/LocalAuthLogos/skills_for_growth.png"  alt="Department for Education Logo">
-                                        </div>
-                                        <div class="col-span-4 sm:col-span-2 flex items-center justify-center py-2 px-6 bg-gray-50">
-                                            <img class="sm:max-h-10 max-h-12 px-16 sm:px-0" src="../../images/LocalAuthLogos/european_union_social.png"  alt="EU Reginonal Development Fund Logo">
-                                        </div>
-                                    </div>
-                                    {% else %}
                                     <img class="lg:px-6" src="../../images/{{ image_source}}" alt="Digital Skills Courses in {{location}}" class="w-full" />
-                                    {% endif %}
                                 </div>
                             </div>
                             <div class="w-full md:w-8/12 mx-auto">
-                                {% if page.url === '/ldcf/' %}
-                                    {% include 'components/hub/ldcf-pitch.njk' %}
-                                {% else %}
-                                    {% if tag === 'wyca' %}
-                                        {% include '../components/hub/west-yorks-intro.njk' %}
-                                    {% endif %}
-                                {% endif %}
-
-                                {% if page.url !== '/ldcf/' %}
-                                    <p class="text-center my-4">
-                                    <span class="font-bold">Businesses: </span>Plug the digital skills gap and upskill your teams to increase productivity and drive business growth.
-                                    </p>
-                                    <p class="text-center my-4">
-                                    <span class="font-bold">Individuals/Self Employed: </span>
-                                    Gain the digital skills you need to get ahead at work or if you are out of work, build up in-demand digital skills to land you that dream job in tech.
-                                    </p>
-                                {% endif %}
+                                {% include '../components/hub/west-yorks-intro.njk' %}
                                 <div class="mt-12">
-                                    {% if tag === 'wyca' %}
-                                        {% include '../components/hub/wyca/wyca-logos.njk' %}
-                                    {% elif tag === 'hey' %}
-                                        {% include '../components/hub/hey/hey-logos.njk' %}
-                                    {% elif tag === 'yny' %}
-                                        {% include '../components/hub/yny/yny-logos.njk' %}
-                                    {% elif tag === 'yorkshire-humber' %}
-                                        {% include '../components/hub/yorkshire-humber/yorkshire-humber-logos.njk' %}
-                                    {% elif tag === 'ldcf' %}
-                                        {% include '../components/hub/ldcf/ldcf-logos.njk' %}
-                                    {% endif %}
+                                    {% include '../components/hub/wyca/wyca-logos.njk' %}
                                 </div>
                             </div>
                         </div>
@@ -90,8 +37,8 @@ body_class: apprenticeship-employer
                 <div id="courses" class="section-rounded py-24">
                     <div class="inner">
                         <div class="w-full md:w-8/12 mx-auto">
-                            <h2 class="text-center text-white mb-6">{% if page.url === '/ldcf/' %}Upskill{% else %}Reskill{% endif %} yourself {% if page.url !== '/ldcf/' %}and
-                            your teams{% endif %} with these 100% funded courses </h2>
+                            <h2 class="text-center text-white mb-6">Reskill yourself and
+                            your teams with these 100% funded courses </h2>
                         </div>
 
                         <div class="courses flex flex-wrap justify-center">
@@ -130,9 +77,8 @@ body_class: apprenticeship-employer
                                 <img class="w-full" src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Logo">
                             </div>
                             <div class="content flex flex-col justify-center md:w-7/12 lg:w-8/12 text-center lg:text-left mb-4 md:mb-0">
-                                <h4 class="mb-0">{% if page.url === '/ldcf/' %} Looking to upskill your team? {% else %}Not found a suitable course for your team?{% endif %}</h4>
-                                <p>{% if page.url ==='/ldcf/' %}Book a call with our course experts to find out how you can use government funding to train your team in Leadership, Agile and Code.
-                                {% else %} Speak to our course experts to find out how we can help your team grow, or register your interest for our courses coming soon{% endif %}</p>
+                                <h4 class="mb-0">Not found a suitable course for your team?</h4>
+                                <p>Speak to our course experts to find out how we can help your team grow, or register your interest for our courses coming soon</p>
                             </div>
                             <div class="buttons flex items-center self-center md:w-4/12 lg:w-3/12">
                                 <a href="" data-modal="book-a-call" class="bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100">Get in Touch Today <i class="align-middle ml-2 text-white fas fa-angle-right text-md leading-md" aria-hidden="true"></i></a>
@@ -142,7 +88,7 @@ body_class: apprenticeship-employer
                 </div>
             </div>
             <div class="employers-employees section-rounded py-24">
-                <h2 class="text-center text-white">{% if page.url === '/ldcf/' %} Hear from Previous Learners {% else %}Hear from the Employers and Employees{% endif %}
+                <h2 class="text-center text-white">Hear from the Employers and Employees
                 </h2>
                 <div>
                     <div class="md:w-9/12 mx-auto flex flex-col lg:flex-row justify-center">
@@ -164,11 +110,6 @@ body_class: apprenticeship-employer
                 </div>
             </div>
         </div>
-        {% if page.url === '/ldcf/' %}
-            <section class="py-24 bg-grey-100">
-                {% include '../components/hub/blog-section.njk' %}
-            </section>
-        {% endif %}
     </div>
     <section class="contact py-24">
         <div class="inner">
