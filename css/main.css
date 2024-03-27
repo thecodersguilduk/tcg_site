@@ -2316,6 +2316,10 @@ input, textarea{
   max-width: 72rem;
 }
 
+.max-w-9xl{
+  max-width: 100rem;
+}
+
 .max-w-full{
   max-width: 100%;
 }
@@ -3001,11 +3005,6 @@ input, textarea{
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .px-12{
@@ -4629,17 +4628,9 @@ fieldset a {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
-  .md\:px-32{
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .md\:px-48{
-    padding-left: 12rem;
-    padding-right: 12rem;
   }
   .md\:px-6{
     padding-left: 1.5rem;
@@ -4758,12 +4749,6 @@ fieldset a {
   .lg\:top-100{
     top: 100px;
   }
-  .lg\:order-1{
-    order: 1;
-  }
-  .lg\:order-2{
-    order: 2;
-  }
   .lg\:order-last{
     order: 9999;
   }
@@ -4822,6 +4807,9 @@ fieldset a {
   .lg\:aspect-\[3\/2\]{
     aspect-ratio: 3/2;
   }
+  .lg\:h-14{
+    height: 3.5rem;
+  }
   .lg\:h-48{
     height: 12rem;
   }
@@ -4845,6 +4833,9 @@ fieldset a {
   }
   .lg\:w-2\/6{
     width: 33.333333%;
+  }
+  .lg\:w-20{
+    width: 5rem;
   }
   .lg\:w-3\/12{
     width: 25%;
@@ -4912,8 +4903,14 @@ fieldset a {
   .lg\:items-start{
     align-items: flex-start;
   }
+  .lg\:items-center{
+    align-items: center;
+  }
   .lg\:justify-start{
     justify-content: flex-start;
+  }
+  .lg\:justify-center{
+    justify-content: center;
   }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
@@ -4941,10 +4938,6 @@ fieldset a {
   .lg\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-  .lg\:px-64{
-    padding-left: 16rem;
-    padding-right: 16rem;
   }
   .lg\:px-8{
     padding-left: 2rem;
@@ -5091,6 +5084,18 @@ fieldset a {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  .xl\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .xl\:px-48{
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+  .xl\:px-64{
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
   .xl\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -5116,5 +5121,18 @@ fieldset a {
   }
   .xl\:text-6xl{
     font-size: 60px;
+  }
+}
+
+@media (min-width: 1480px){
+  .xxxl\:h-20{
+    height: 5rem;
+  }
+  .xxxl\:w-28{
+    width: 7rem;
+  }
+  .xxxl\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

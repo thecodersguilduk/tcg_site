@@ -1,5 +1,5 @@
-<div class="pt-24 pb-12 lg:pt-32 px-4 flex flex-col w-full md:flex-row items-center gap-6 self-stretch lg:px-48 xl:px-64 relative">
-    <div class="lg:h-auto md:w-7/12 lg:w-6/12 lg:order-2">
+<div class="pt-24 pb-12 lg:pt-32 px-6 flex flex-col w-full md:flex-row items-center gap-6 self-stretch xl:px-48 relative max-w-9xl mx-auto">
+    <div class="lg:h-auto md:w-7/12 lg:w-6/12 md:order-2">
         {% if course.video %}
             {% include "components/courses/video.njk" %}
         {% else %}
@@ -16,7 +16,7 @@
             </div>
         {% endif %}
     </div>
-    <div class="w-full md:w-5/12 lg:w-6/12 flex flex-col justify-center items-start gap-6 self-stretch lg:order-1">
+    <div class="w-full md:w-5/12 lg:w-6/12 flex flex-col justify-center items-start gap-6 self-stretch md:order-1">
         <div class="flex flex-col justify-center gap-6 self-stretch">
             <h1 class="text-4xl md:text-3xl font-bold m-0 leading-112">{{ course.title }}</h1>
             <h2 class="text-lg md:text-md font-medium text-black m-0 leading-112">{{ course.subtitle }}</h2>
