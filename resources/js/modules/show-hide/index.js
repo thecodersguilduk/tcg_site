@@ -1,6 +1,7 @@
 import $$ from '@utilities/selectors';
 
 function getChildren(parent, className) {
+  
   let child;
   if ( !parent || !className || !parent.childNodes.length) {
     console.log("Please check if all correct arguments are provided for loopThroughChildren() function!");
@@ -21,6 +22,7 @@ function getChildren(parent, className) {
 }
 
 const ShowHide = function ShowHide() {
+  
   let parentNode,
       content,
       iconUp,

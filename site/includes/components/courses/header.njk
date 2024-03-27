@@ -1,0 +1,33 @@
+<div class="pt-24 pb-12 lg:pt-32 px-6 flex flex-col w-full md:flex-row items-center gap-6 self-stretch xl:px-48 relative max-w-9xl mx-auto">
+    <div class="lg:h-auto md:w-7/12 lg:w-6/12 md:order-2">
+        {% if course.video %}
+            {% include "components/courses/video.njk" %}
+        {% else %}
+            <div>
+                <picture>
+                    <!-- Small screens -->
+                    <source media="(max-width: 768px)" srcset="{{ course.featuredImage.small }}" type="image/jpeg">
+                    <!-- Large screens -->
+                    <source media="(min-width: 769px)" srcset="{{ course.featuredImage.large }}" type="image/jpeg">
+                    <!-- Default image -->
+                    <img src="{{ course.featuredImage.large }}" class="rounded-lg aspect-[4/3] z-20 object-cover" alt="{{ course.title }}">
+                  </picture>
+                <!-- <object type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden md:block absolute pattern pattern-145"></object> -->
+            </div>
+        {% endif %}
+    </div>
+    <div class="w-full md:w-5/12 lg:w-6/12 flex flex-col justify-center items-start gap-6 self-stretch md:order-1">
+        <div class="flex flex-col justify-center gap-6 self-stretch">
+            <h1 class="text-4xl md:text-3xl font-bold m-0 leading-112">{{ course.title }}</h1>
+            <h2 class="text-lg md:text-md font-medium text-black m-0 leading-112">{{ course.subtitle }}</h2>
+            <a href="{{ course.formLink }}" class="w-full lg:w-4/12 bg-green-100 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Apply Now</button>
+        </div>
+        <div class="md:hidden flex lg:flex flex-col justify-end items-start self-stretch w-full gap-3">
+            {% include "components/courses/logos.njk" %}
+        </div>    
+    </div>
+
+</div>
+<div class="hidden md:flex md:px-4 lg:hidden flex-col justify-end items-start self-stretch w-full gap-3">
+    {% include "components/courses/logos.njk" %}
+</div>  

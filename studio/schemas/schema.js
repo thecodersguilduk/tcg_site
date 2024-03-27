@@ -2,6 +2,7 @@ import blog from "./documents/blog";
 import team from "./documents/team";
 import testimonial from "./documents/testimonials";
 import categories from "./documents/categories";
+import courseBenefits from "./documents/courseSchemas/courseBenefits";
 import courses from "./documents/courseSchemas/course";
 import courseTypes from "./documents/courseSchemas/courseTypes";
 import courseDurations from "./documents/courseSchemas/courseDuration";
@@ -27,6 +28,7 @@ export default [
     team,
     testimonial,
     categories,
+    courseBenefits,
     courses,
     courseTypes,
     courseDurations,

@@ -59,6 +59,7 @@ module.exports = {
 					700: '#c53030',
 					800: '#9b2c2c',
 					900: '#BB4E69',
+					1000: '#AD556A'
 				},
 				orange: {
 					100: '#fffaf0',
@@ -140,6 +141,7 @@ module.exports = {
 					700: '#6b46c1',
 					800: '#553c9a',
 					900: '#5350A5',
+					1000: '#54509F'
 				},
 				pink: {
 					100: '#fff5f7',
@@ -182,6 +184,9 @@ module.exports = {
 				4: '4px',
 				8: '8px',
 			},
+			borderRadius: {
+				72: '72px'
+			},
 			boxShadow: {
 				primary: '0px 0px 8px rgba(0, 0, 0, 0.29)',
 				secondary: '0px 0px 6px rgba(0, 0, 0, 0.29)',
@@ -193,6 +198,7 @@ module.exports = {
 				inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
 				outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
 				none: 'none',
+				testimonial: '-44px 46px 3px -6px_ gba(82,21,82,1)',
 			},
 			container: {},
 			cursor: {
@@ -339,6 +345,7 @@ module.exports = {
 				'3xl': '34px',
 				'4xl': '40px',
 				'5xl': '48px',
+				'112': '112%',
 			},
 			listStyleType: {
 				none: 'none',
@@ -373,6 +380,7 @@ module.exports = {
 				'5xl': '60rem',
 				'6xl': '64rem',
 				'7xl': '72rem',
+				'9xl': '100rem',
 				full: '100%',
 			},
 			minHeight: {

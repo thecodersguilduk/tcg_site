@@ -1,31 +1,42 @@
-<div class="flex flex-col md:flex-row md:justify-around my-24 px-8 inner relative">
-    <div class="relative rounded
-     flex flex-col justify-between bg-gradient-to-r from-blue-100 to-blue-200 px-8 pt-24 pb-8 my-8 w-full md:w-4/12">
-        <div class="icon-box flex items-center justify-center rounded-full absolute top-0 w-36 h-36 border-2 border-lightblue-500 bg-white -mt-16 self-center">
-            <img src="../../images/icons/individual_icon.svg" alt="Digital Courses for individuals">
-        </div>
-            <h3 class="text-white text-center text-2xl">Individuals</h3>
-            <p class="text-white text-lg text-center">{% if course.isFunded %}If you live or work in {% if course.partners.includes('N Yorkshire') %}North or {% endif %} West Yorkshire it is very likely that you will be eligible for 100% funding.{% else %}Bolster your skillset and supercharge your career with this interactive group training{% endif %}</p>
-            <div class="bg-white rounded px-4 py-2 my-4">
-                <p class="text-center"><a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="text-lightblue-500 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now</a></p>
+<section class="py-12 xl:px-48 xxl:px-64 gap-12 flex flex-col items-center self-stretch">
+    {% if course.isFunded %}
+    <div class="flex flex-col gap-8 self-stretch items-center">
+        <h2 class="text-center text-3xl mb-0 leading-0">100% Funded Courses Available</h2>
+        <p class="text-sm text-center">*Whilst it is very likely you will be eligible for funding it is not a guarantee</p>
+        {% if course.instances.length > 0 %}
+            <div class="bg-green-100 text-black px-4 py-2 text-center mx-auto">
+                Next Course Starts: <strong>{{ course.start | dateDisplay }}</strong>
             </div>
-            <p class="text-center"><a class="book-a-call-short-course text-center mt-4 text-white text-underline font-bold" href="#" data-modal="book-a-call-short-course">Book a call</a></p>
+        {% endif %}
     </div>
-
-    <div class="relative rounded flex flex-col justify-between bg-gradient-to-br from-red-900 to-purple-900 px-8 pt-24 pb-8 my-16 md:my-8 w-full md:w-4/12">
-        <div class="icon-box flex items-center justify-center rounded-full absolute top-0 w-36 h-36 border-2 border-red-900 bg-white -mt-16 self-center">
-            <img src="../../images/icons/business_icon.svg" alt="Digital Courses for businesses and teams">
-        </div>
-            <h3 class="text-white text-center text-2xl">Business and Employers</h3>
-            <p class="text-white text-lg text-center">We offer full team training! Reach out to us now if you wish to bolster the skillset of your entire team, and increase overall output in the office.</p>
-            <div class="bg-white rounded my-4 px-4 py-2">
-                <p class="text-center"><a href="#" data-modal="book-a-call-short-course" class="book-a-call-short-course text-lightblue-500 font-bold">Book a call with us</a></p>
+    {% endif %}
+    <div class="flex flex-col md:flex-row md:justify-around my-24 px-8 inner relative">
+        <div class="relative rounded flex flex-col justify-between bg-gradient-to-r from-blue-100 to-blue-200 px-8 pt-24 pb-8 my-8 w-full md:w-5/12">
+            <div class="icon-box flex items-center justify-center rounded-full absolute top-0 w-36 h-36 border-2 border-lightblue-500 bg-white -mt-16 self-center">
+                <img src="../../images/icons/individual_icon.svg" alt="Digital Courses for individuals">
             </div>
-            <p class="text-center"><a data-modal="cd-send-info" class="book-a-call text-center mt-4 text-white text-underline font-bold" href="#">Send me info</a></p>
+                <h3 class="text-white text-center text-2xl">Individuals</h3>
+                <p class="text-white text-lg text-center">{% if course.isFunded %}If you live or work in {% if course.partners.includes('N Yorkshire') %}North or {% endif %} West Yorkshire it is very likely that you will be eligible for 100% funding.{% else %}Bolster your skillset and supercharge your career with this interactive group training{% endif %}</p>
+                <div class="bg-white rounded px-4 py-2 my-4">
+                    <p class="text-center"><a href="{{course.formLink}}" class="text-lightblue-500 font-bold" target="_blank">Apply Now</a></p>
+                </div>
+        </div>
+    
+        <div class="relative rounded flex flex-col justify-between bg-gradient-to-br from-red-900 to-purple-900 px-8 pt-24 pb-8 my-16 md:my-8 w-full md:w-5/12">
+            <div class="icon-box flex items-center justify-center rounded-full absolute top-0 w-36 h-36 border-2 border-red-900 bg-white -mt-16 self-center">
+                <img src="../../images/icons/business_icon.svg" alt="Digital Courses for businesses and teams">
+            </div>
+                <h3 class="text-white text-center text-2xl">Business and Employers</h3>
+                <p class="text-white text-lg text-center">We offer full team training! Reach out to us now if you wish to bolster the skillset of your entire team, and increase overall output in the office.</p>
+                <div class="bg-white rounded my-4 px-4 py-2">
+                    <p class="text-center"><a href="#" data-modal="book-a-call-short-course" class="book-a-call-short-course text-lightblue-500 font-bold">Book a call with us</a></p>
+                </div>
+        </div>
+    
+    
+            <object type="image/svg+xml" data="../../images/patterns/460.svg" class="hidden md:block absolute pattern pattern-460 hidden lg:block"></object>
+            <object type="image/svg+xml" data="../../images/patterns/459.svg" class="hidden md:block absolute pattern pattern-459 hidden lg:block"></object>
+    
     </div>
+</section>
 
-
-        <object type="image/svg+xml" data="../../images/patterns/460.svg" class="hidden md:block absolute pattern pattern-460 hidden lg:block"></object>
-        <object type="image/svg+xml" data="../../images/patterns/459.svg" class="hidden md:block absolute pattern pattern-459 hidden lg:block"></object>
-
-</div>

@@ -1,43 +1,57 @@
-
-    <div class="inner mx-auto relative z-10  md:pt-16 pt-14 testimonials overflow-hidden bg-white">
-      <div class="mx-auto">
-        <h2 class="text-center mb-8 md:mb-14">What learners say about this course</h2>
-
-        <div class="flex flex-col lg:flex-row justify-center">
-          {% if course.testimonials %}
-              {% for testimonial in course.testimonials | limit(3) %}
-                  <div class="w-full lg:w-4/12 p-8">
-                    <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
-                      <div class="sm:flex sm:flex-col">
-                        <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                          <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
-                          <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                          <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
-                      </div>
-                    </div>
-
-                  </div>
-              {% endfor %}
-          {% else %}
-              {% for testimonial in testimonials %}
-                {% if testimonial._id === '91de1d93-948e-44ff-8672-da0df1d9aba9' or testimonial._id === 'fdd56cf8-0507-47f1-b18d-95e6542fec74' %}
-                                                   <div class="w-full lg:w-4/12 p-8">
-                    <div class="relative shadow-secondary {% if loop.index0 % 2 !== 0%}bg-blue-200 {% else %} bg-blue-300 {% endif %} text-white pt-4 pl-16 pr-4 pb-8 w-full flex flex-col">
-                      <div class="sm:flex sm:flex-col">
-                        <div class="-ml-10 mt-4 sm:mr-14 sm:mb-0 mb-6 border-1 border-lightblue-500 rounded-full h-24 w-24 absolute top-0 left-0" style="background-image: url('{{ testimonial.avatar }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
-                          <h3 class="mb-0 text-white text-md">{{ testimonial.client }}</h3>
-                          <span class="text-sm text-white leading-sm font-heading font-bold mb-2 block">{{ testimonial.occupation }}</span>
-                          <p class="text-sm leading-lg text-white">{{ testimonial.testimonial }}</p>
-                      </div>
-                    </div>
-                  </div>
-                {% endif %}
-              {%endfor %}
-          {% endif %}
+{% if course.testimonials.length > 0 %}
+<section id="testimonials">
+  <div class="testimonials block p-4 xl:px-32 py-32 flex-col justify-center items-center gap-16 self-stretch bg-gradient-to-r from-red-1000 to-purple-1000 section-rounded -mt-16">
+    <div class="mx-auto">
+      <h2 class="text-center text-white mb-8 md:mb-14">What learners say about this course</h2>
+    </div>
+    <div class="testimonials__slider">
+      {% for testimonial in course.testimonials %}
+      <div>
+        <div class="flex flex-col lg:flex-row gap-2 justify-center items-center self-stretch">
+          <!-- <div class="block pl-6 pr-2 mx-auto md:w-5/12">
+          </div> -->
+          <div id="course-testimonial-image-container">
+            <div class="course-testimonial-avatar" style="background: url('{{ testimonial.avatar }}'), lightgray; background-repeat: no-repeat; background-size: cover; background-position: 50% "></div>
+          </div>
+  
+  
+          <div class="sm:p-10 pt-12 px-8 pb-8 md:w-7/12">
+            <div class="flex gap-2 items-center">
+              <div class="block bg-white h-1 w-12 rounded"></div>
+              <p class="text-white text-sm font-bold leading-lg tracking-wide">Success Stories</p>
+            </div>
+            
+            <div class="sm:flex sm:gap-6 sm:items-center">
+              <div class="relative text-white">
+                <p class="text-5xl text-white font-bold leading-5xl">{{ testimonial.highlight }}</p>
+                <p class="text-md leading-lg text-white font-semibold">{{ testimonial.testimonial }}</p>
+                <p class="mb-2 text-lg text-white font-bold">{{ testimonial.client }}</p>
+                <p class="text-sm leading-sm font-heading font-bold mb-2 text-white">{{ testimonial.occupation }}</p>
+              </div>
+            </div>
+  
+          </div>
         </div>
       </div>
-
-      <object type="image/svg+xml" data="../../images/patterns/457.svg" class="hidden md:block absolute pattern pattern-457"></object>
-      <object type="image/svg+xml" data="../../images/patterns/458.svg" class="hidden md:block absolute pattern pattern-458"></object>
+          
+      {% endfor %}
+      
     </div>
+    <div class="flex justify-center items-center mt-8">
+      <button type="button" class="prev mr-6">
+        <img src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+      <div class="dots"></div>
+      <button type="button" class="next ml-6">
+        <img src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+    </div>
+    </div>
+  
+    <object type="image/svg+xml" data="../../images/patterns/457.svg" class="hidden md:block absolute pattern pattern-457"></object>
+    <object type="image/svg+xml" data="../../images/patterns/458.svg" class="hidden md:block absolute pattern pattern-458"></object>
+  </div>
+</section>
+
+{% endif %}
 

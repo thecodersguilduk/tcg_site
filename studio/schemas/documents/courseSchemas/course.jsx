@@ -181,55 +181,10 @@ export default {
 		{
 			name: 'benefits',
 			title: 'Benefits',
-			description: 'The benefits of this course',
-			type: 'object',
-			fields: [
-						{
-							name: 'part_time_learning',
-							title: 'Part Time Learning',
-							type: 'boolean',
-						},
-						{
-							name: 'one_or_two_sessions_per_week',
-							title: 'One or Two Sessions per Week',
-							type: 'boolean',
-						},
-						{
-							name: 'evenings_available',
-							title: 'Evenings Available',
-							type: 'boolean',
-						},
-						{
-							name: 'one_session_per_week',
-							title: 'One Session per Week',
-							type: 'boolean',
-						},
-						{
-							name: 'two_day_workshop',
-							title: 'Two Day Workshop',
-							type: 'boolean',
-						},
-						{
-							name: 'group_and_one_on_one_learning',
-							title: 'Group and One on One learning',
-							type: 'boolean',
-						},
-						{
-							name: 'super_fast_roi',
-							title: 'Super Fast ROI',
-							type: 'boolean',
-						},
-						{
-							name: 'three_half_days',
-							title: 'Three Half Days',
-							type: 'boolean',
-						},
-						{
-							name: 'expert_professionals',
-							title: 'Expert Professionals',
-							type: 'boolean',
-						},
-					],
+			description: 'The benefits of this course - MAXIMUM 3!!',
+			type: 'array',
+            of: [{ type: 'reference', to: [{ type: 'courseBenefits' }]}],
+			validation: Rule => Rule.unique(),
 			fieldset: 'intro'
 		},
 		{
@@ -370,6 +325,12 @@ export default {
 				source: 'title',
 			},
 			maxLength: 96,
+		},
+		{
+			name: 'formLink',
+			title: 'Form Link',
+			description: 'Link to the course application form - default will be the google form for Short Courses',
+			type: 'string'
 		},
 		{
 			name: 'tags',

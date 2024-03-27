@@ -128,8 +128,6 @@ function prepPost(data) {
     })
   }
 
-  console.log(data.location)
-
   return data
 }
 
