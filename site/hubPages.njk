@@ -1,0 +1,18 @@
+---js
+{
+pagination: {
+    data: 'hub',
+    size: 1,
+    alias: 'hubs'
+    },
+layout: 'hub',
+tag: ['hub'],
+permalink: "hub/{{ hubs.slug.current }}/index.html",
+eleventyComputed: {
+    meta_title: data => data.hubs.title,
+    meta_description: data => data.hubs.excerpt ? data.hubs.excerpt.replace( /(<([^>]+)>)/ig, '') : '',
+    }
+}
+---
+
+

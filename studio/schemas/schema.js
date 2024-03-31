@@ -19,6 +19,7 @@ import newsletter from "./documents/components/newsletter";
 import form from "./documents/components/form";
 import locations from "./documents/locations";
 import youtube from "./documents/components/youtubeEmbed";
+import hub from "./documents/hub";
 
 
 export default [
@@ -32,6 +33,7 @@ export default [
     courseDurations,
     courseTopics,
     coursePartners,
+    hub,
     imageSection,
     applyBtn,
     callModal,
