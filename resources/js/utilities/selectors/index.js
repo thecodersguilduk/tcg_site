@@ -82,9 +82,7 @@ const $$ = {
 
     courseGridContainer : document.querySelector('.course-grid-container'),
 
-    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid'),
-
-
+    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid')
 }
 
 export default $$

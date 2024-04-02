@@ -854,50 +854,43 @@ var courseCTAHeader = function courseCTAHeader() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
-var inactiveClasses = 'course-directory-tab text-xl font-bold text-grey-1000 cursor-pointer';
-var activeClasses = 'course-directory-tab text-xl font-bold text-blue-100 border-b-2 border-blue-100 cursor-pointer';
-function init() {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs[0].classList = activeClasses;
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.remove('hidden');
-}
-function findTallestCourse(courses) {
-  var tallestCourse = 0;
-  courses.forEach(function (course) {
-    if (course.offsetHeight > tallestCourse) {
-      tallestCourse = course.clientHeight;
-    }
-  });
-  return tallestCourse;
-}
-function setTabClasses(target) {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
-    if (tab.dataset.target !== target) {
-      tab.classList = inactiveClasses;
-    } else {
-      tab.classList = activeClasses;
-    }
-  });
-}
-function setSection(target) {
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems.forEach(function (item) {
-    if (item.id !== target) {
-      item.classList.add('hidden');
-    } else {
-      item.classList.remove('hidden');
-    }
-  });
-}
 var handleTabs = function () {
-  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs) return;
-  init();
-  _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
-    tab.addEventListener('click', function (e) {
-      e.preventDefault();
-      var target = e.target.dataset.target;
-      setTabClasses(target);
-      setSection(target);
+  if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.length == 0) return;
+  if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs) {
+    var init = function init() {
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs[0].classList = activeClasses;
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems[0].classList.remove('hidden');
+    };
+    var setTabClasses = function setTabClasses(target) {
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
+        if (tab.dataset.target !== target) {
+          tab.classList = inactiveClasses;
+        } else {
+          tab.classList = activeClasses;
+        }
+      });
+    };
+    var setSection = function setSection(target) {
+      _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryGridItems.forEach(function (item) {
+        if (item.id !== target) {
+          item.classList.add('hidden');
+        } else {
+          item.classList.remove('hidden');
+        }
+      });
+    };
+    var inactiveClasses = 'course-directory-tab text-xl font-bold text-grey-1000 cursor-pointer';
+    var activeClasses = 'course-directory-tab text-xl font-bold text-blue-100 border-b-2 border-blue-100 cursor-pointer';
+    init();
+    _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseDirectoryTabs.forEach(function (tab) {
+      tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = e.target.dataset.target;
+        setTabClasses(target);
+        setSection(target);
+      });
     });
-  });
+  }
 }();
 /* harmony default export */ __webpack_exports__["default"] = (handleTabs);
 
@@ -949,16 +942,19 @@ var faqAccordion = function faqAccordion() {
     var btn = e.target.closest('.faq-btn');
     if (!btn) return;
     var content = btn.nextElementSibling;
-    var angle = btn.querySelector('.svg-inline--fa');
+    //let angle = btn.querySelector('.svg-inline--fa');
+
     btn.classList.contains('faq-btn--active') ? btn.classList.remove('faq-btn--active') : btn.classList.add('faq-btn--active');
     if (content.style.maxHeight) {
-      angle.classList.add('fa-angle-down');
-      angle.classList.remove('fa-angle-up');
+      //angle.classList.add('fa-angle-down');
+      //angle.classList.remove('fa-angle-up');
       content.style.maxHeight = null;
+      content.style.padding = null;
     } else {
-      angle.classList.remove('fa-angle-down');
-      angle.classList.add('fa-angle-up');
-      content.style.maxHeight = "".concat(content.scrollHeight, "px");
+      //angle.classList.remove('fa-angle-down');
+      //angle.classList.add('fa-angle-up');
+      //content.style.padding = '3rem';
+      content.style.maxHeight = "".concat(content.scrollHeight + 96, "px");
     }
   });
 }();
@@ -1361,20 +1357,32 @@ var ShowHide = function ShowHide() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
-
 var sliderSettings = function () {
-  var slick = document.querySelector('.testimonials__slider');
-  if (!slick) return;
-  return $('.testimonials__slider').slick({
-    dots: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    appendDots: $('.dots'),
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  var reviewsSlick = document.querySelector('.testimonials__slider');
+  var courseSlick = document.querySelector('.course__testimonials__slider');
+  if (!reviewsSlick && !courseSlick) return;
+  if (reviewsSlick) {
+    return $('.testimonials__slider').slick({
+      dots: true,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+      appendDots: $('.dots'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
+  if (courseSlick) {
+    return $('.course__testimonials__slider').slick({
+      dots: true,
+      prevArrow: null,
+      nextArrow: null,
+      appendDots: $('.dots'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
 }();
 /* harmony default export */ __webpack_exports__["default"] = (sliderSettings);
 

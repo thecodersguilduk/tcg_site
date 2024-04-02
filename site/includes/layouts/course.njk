@@ -23,90 +23,33 @@ body_class: apprenticeship-employer
         </div>
       </div>
       <div class="flex flex-col sm:flex-row">
-        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="px-2 md:px-4 py-2 bg-blue-200" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-sm lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="rounded inline-flex justify-center items-center p-2 gap-2 bg-green-100" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-xs lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
       </div>
     </div>
   </section>
-  <section id="hero relative">
-  <object type="image/svg+xml" data="../../images/patterns/280.svg" class="hidden lg:block absolute pattern pattern-280"></object>
-    <div class="flex flex-col items-center justify-center md:px-20 relative sm:pt-10 md:pt-24 min-h-80 rounded" style="background-image: url(../../images/gradient-background.svg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-      <div class="flex flex-col">
-        <div class="flex flex-col lg:flex-row container">
-          <div class="lg:w-6/12 order-2 lg:order-1">
-            <header class="md:w-8/12">
-              <h1 class="md:pt-12 text-blue-200 text-4xl leading-4xl sm:text-5xl sm:leading-5xl mb-2">{{ course.title }}</h1>
-              {% if course.subtitle %}
-              <h2 class="mb-2 text-lg text-grey-800 leading-md sm:leading-2xl">{{course.subtitle}}</h2>
-              {% endif %}
-              <p class="bg-green-100 py-2 px-4 text-black inline-block rounded text-sm lg:text-md">Next Course Starts:<strong> {{ course.start | dateDisplay }}</strong>
-              </p>
-              <div class="">
-              <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-100 important px-2 py-4 text-white rounded my-6 w-6/12 font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-angle-right"></i> </a>
-            </header>
-          </div>
-          <div class="lg:w-6/12 pt-24 lg:pt-0 order-1 lg:order-2 flex items-center justify-center mb-6 lg:mb-0">
-            <img src="{{course.featuredImage}}" class="rounded-lg aspect-[4/3] z-20" alt="{{course.title}}" />
-            <object type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden lg:block absolute pattern pattern-145"></object>
-          </div>
-        </div>
-        {% if course.isFunded %}
-        {% include '../components/courses/logos.njk' %}
-        {% endif %}
-      </div>
-    </div>
-  </section>
-  <section id="pitch">
-    <div class="post inner content md:px-20 mx-auto mt-12">
-      <!-- {% include '../components/courses/buy-now-button.njk'  %} -->
-
-
-      {% if course.excerpt.length > 0 %}
-        {% include '../components/courses/pitch.njk' %}
-      {% else %}
-        {% include '../components/women-leaders/custom-excerpt.njk' %}
-      {% endif %}
-
-    {% if course.featuredTestimonial.client %}
-    </div>
-      {% include '../components/global/big-testimonial.njk' %}
-    <div class="post inner content md:px-20 mx-auto mt-12">
-    {% endif %}
-    {% include '../components/courses/graduate-logos.njk' %}
-
-
-      {% include '../components/courses/reasons.njk' %}
-      {% if course.instances.length > 0 %}
-        {% include '../components/courses/course-instances.njk' %}
-      {% endif %}
-      {% if course.isFunded %}
-        {% include '../components/courses/banner-cta.njk' %}
-      {% endif %}
-    {% if course.video_embed %}
-      {% include '../components/courses/video.njk' %}
-    {% endif %}
-
-  </section>
-  <section id="content" class="section-rounded z-10">
-    {% include '../components/courses/content.njk' %}
-  </section>
-  {% if course.trainers.length > 0%}
+  {% include '../components/courses/header.njk' %}
+    <section id="pitch" class="px-6 xl:px-48 max-w-9xl mx-auto">
+      {% include '../components/courses/pitch.njk' %}
+      {% include '../components/courses/graduate-logos.njk' %}
+      {% include '../components/courses/upcoming-courses.njk' %}
+      {% include '../components/courses/banner-cta.njk' %}
+    </section>
+    <section id="content" class="section-rounded z-10">
+      {% include '../components/courses/content.njk' %}
+    </section>
+  {% if course.trainers.length > 0 %}
     <section id="trainers">
       {% include '../components/courses/trainers.njk' %}
     </section>
   {% endif %}
-  <section id="testimonials" class="my-12">
+
       {% include '../components/courses/course-testimonial.njk' %}
-  </section>
-  {% if course.isFunded %}
-  <section id="further-cta">
-      {% include '../components/courses/further-cta.njk' %}
-  </section>
-  {% endif %}
+
   <section id="footer-cta">
     {% include '../components/courses/individuals-and-businesses.njk' %}
   </section>
   <section id="contact" class="pt-16">
     {% include '../components/courses/contact.njk' %}
   </section>
-  </div>
+
 </main>

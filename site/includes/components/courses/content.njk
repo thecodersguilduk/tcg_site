@@ -1,102 +1,67 @@
-<div class="bg-grey-100 py-24 section-rounded">
-    <div class="flex flex-col lg:flex-row container mx-auto">
-        <div class="w-full lg:w-4/12 md:px-8">
-            <div class="sticky top-100 self-start">
-            <object type="image/svg+xml" data="../../images/patterns/11.svg" class="hidden lg:block absolute pattern pattern-11"></object>
-            <object type="image/svg+xml" data="../../images/patterns/16.svg" class="hidden lg:block absolute pattern pattern-16"></object>
-                <div class="flex flex-col justify-between bg-white border-2 border-lightblue-500 rounded p-4">
-                    <div class="border-b-2 border-grey-100 pt-6 pb-2">
-                        <h4 class="mb-0 text-center lg:text-left">{{ course.title}}</h4>
-                    </div>
-                    <div class="py-8">
-                        <ul class="leading-xl text-center lg:text-left course-content-menu">
-                        {% if course.who_is_this_for %}
-                            <li><a href="#who_is_this_for" class="">Who is this for?</a></li>
-                        {% endif %}
-                        {% if course.what_you_will_get %}
-                            <li><a href="#what_you_get" class="">What You'll Get</a></li>
-                        {% endif %}
-                        {% if course.course_outline %}
-                            <li><a href="#course_outline" class="">Course Outline</a></li>
-                        {% endif %}
-                        {% if course.course_breakdown %}
-                            <li><a href="#course_breakdown" class="">Course Breakdown</a></li>
-                        {% endif %}
-                        {% if course.delivery %}
-                            <li><a href="#delivery" class="">Delivery</a></li>
-                        {% endif %}
-                        {% if course.pre_requisites %}
-                            <li><a href="#pre_requisites" class="">Pre-requisites</a></li>
-                        {% endif %}
-                        </ul>
-                    </div>
-                    {% if course.isFunded %}
-                    <div class="bg-green-100 flex flex-col rounded p-4">
-                        <div>
-                            <p class="text-center text-black mb-4 leading-sm">Next Course Starts:
-                            <strong>{{ course.start | dateDisplay }}</strong>
-                        </div>
-                        <div>
-                            <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-100 py-2 px-4 rounded"><span class="text-white font-bold" {% if course.link %}target="_blank"{% endif %}>Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
+<div class="bg-grey-100 py-24 section-rounded p-4 lg:px-48 xl:px-64">
+    <object type="image/svg+xml" data="../../images/patterns/11.svg" class="hidden lg:block absolute pattern pattern-11"></object>
+    <object type="image/svg+xml" data="../../images/patterns/16.svg" class="hidden lg:block absolute pattern pattern-16"></object>
+    
+    <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col justify-center mx-auto">
+            <div class="flex items-center gap-4">
+                <div class="block h-1 w-12 bg-grey-1000 rounded"></div>
+                <p class="mb-0 font-sm font-bold text-grey-1000 !important">Course Content</p>
+            </div>
+            <div>
+                <h3>{{ course.title }}</h3>
             </div>
         </div>
-        <div class="w-full lg:w-8/12 lg:px-16 content">
-            {% if course.who_is_this_for %}
-                <div id="who_is_this_for" class="py-8 border-b-2 border-lightblue-500">
-                    {{course.who_is_this_for | safe }}
+        <div class="cursor-pointer flex flex-col items-center max-w-7xl mx-auto bg-white faq">
+            {% for block in course.content %}
+                <div class="py-4 border-grey-1000 border-1 px-6 w-full">
+                    {% for key, value in block %}
+                        <div class="flex justify-between items-center self-stretch faq-btn">
+                            <div class="flex items-center gap-2">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70702 9.08092L0.874548 5.16451C0.605305 4.98371 0.384746 4.73978 0.232255 4.45416C0.0797639 4.16853 9.43149e-06 3.84995 0 3.52642V1.97862C0 0.392097 1.78205 -0.547047 3.0979 0.346096L8.93044 4.30427C9.19741 4.48544 9.41591 4.72888 9.56693 5.01341C9.71794 5.29793 9.7969 5.61492 9.79692 5.93679V7.44277C9.79692 9.02486 8.02363 9.96502 6.70702 9.08092Z" fill="#3599A5"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70702 6.9191L0.874548 10.8356C0.605305 11.0164 0.384746 11.2603 0.232255 11.5459C0.0797639 11.8316 9.43149e-06 12.1501 0 12.4737V14.0213C0 15.6079 1.78205 16.547 3.0979 15.6539L8.93044 11.6958C9.19741 11.5146 9.41591 11.2711 9.56693 10.9866C9.71794 10.7021 9.7969 10.3851 9.79692 10.0632V5.93687C9.7969 5.615 9.71794 5.29801 9.56693 5.01348C9.41591 4.72895 9.19741 4.48552 8.93044 4.30434L6.67172 2.75781C6.67172 2.75781 7.93582 3.91254 7.93582 5.1723C7.93582 6.43207 6.70702 6.9191 6.70702 6.9191Z" fill="#6FCDD6"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70702 9.08092L0.874548 5.16451C0.605305 4.98371 0.384746 4.73978 0.232255 4.45416C0.0797639 4.16853 9.43149e-06 3.84995 0 3.52642V1.97862C0 0.392097 1.78205 -0.547047 3.0979 0.346096L8.93044 4.30427C9.19741 4.48544 9.41591 4.72888 9.56693 5.01341C9.71794 5.29793 9.7969 5.61492 9.79692 5.93679V7.44277C9.79692 9.02486 8.02363 9.96502 6.70702 9.08092Z" fill="#2574A9"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70702 6.9191L0.874548 10.8356C0.605305 11.0164 0.384746 11.2603 0.232255 11.5459C0.0797639 11.8316 9.43149e-06 12.1501 0 12.4737V14.0213C0 15.6079 1.78205 16.547 3.0979 15.6539L8.93044 11.6958C9.19741 11.5146 9.41591 11.2711 9.56693 10.9866C9.71794 10.7021 9.7969 10.3851 9.79692 10.0632V5.93687C9.7969 5.615 9.71794 5.29801 9.56693 5.01348C9.41591 4.72895 9.19741 4.48552 8.93044 4.30434L6.67172 2.75781C6.67172 2.75781 7.93582 3.91254 7.93582 5.1723C7.93582 6.43207 6.70702 6.9191 6.70702 6.9191Z" fill="#16AEDB"/>
+                                        </svg>
+                                </div>
+                                <div class="flex flex-col justify-center text-sm font-bold text-grey-600">{{ key | removeUnderscores }}</div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_85_3056)">
+                                    <mask id="mask0_85_3056" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+                                        <path d="M10.5714 10.5714V2H13.4286V10.5714H22V13.4286H13.4286V22H10.5714V13.4286H2V10.5714H10.5714Z" fill="black"/>
+                                    </mask>
+                                    <g mask="url(#mask0_85_3056)">
+                                        <rect width="24" height="24" fill="#BCB7BD"/>
+                                    </g>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_85_3056">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center self-stretch gap-8 faq-content box-content">
+                            {{ value | safe }}
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endif %}
-            {% if course.what_you_will_get %}
-                <div id="what_you_get" class="py-8 border-b-2 border-lightblue-500">
-                    {{course.what_you_will_get | safe }}
-                    {{course.bonus_takeaways | safe }}
-                </div>
-            {% endif %}
-            {% if course.course_outline %}
-                <div id="course_outline" class="py-8 border-b-2 border-lightblue-500">
-                    {{course.course_outline | safe }}
-                </div>
-            {% endif %}
-            {% if course.course_breakdown %}
-                <div id="course_breakdown" class="py-8 border-b-2 border-lightblue-500">
-                    {{course.course_breakdown | safe }}
-                </div>
-            {% endif %}
-            {% if course.delivery %}
-                <div id="delivery" class="py-8 border-b-2 border-lightblue-500">
-                    {{ course.delivery | safe }}
-                </div>
-            {% endif %}
-            {% if course.pre_requisites %}
-                <div id="pre_requisites" class="py-8 border-b-2 border-lightblue-500">
-                    {{ course.pre_requisites | safe }}
-                </div>
-            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="mt-6 w-full flex flex-col md:flex-row justify-center items-center gap-2 md:gap-8 p-4 bg-green-100 rounded ">
+            <p class="text-sm md:text-md font-semibold">Next course starts: <strong>{{ course.start | dateDisplay }}</strong></p>
+            <a href="{{ course.formLink }}" class="flex px-4 py-2 md:py-4 justify-center items-center gap-2 shrink-0 bg-white rounded text-sm text-black font-bold">Apply Now 
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                    <path d="M5.12988 0.461568C4.99359 0.315715 4.82964 0.199596 4.64799 0.120254C4.46634 0.0409117 4.27077 0 4.07314 0C3.87551 0 3.67994 0.0409117 3.49829 0.120254C3.31663 0.199596 3.15269 0.315715 3.0164 0.461568C2.873 0.600303 2.75881 0.76733 2.68077 0.95248C2.60274 1.13763 2.5625 1.33703 2.5625 1.53853C2.5625 1.74004 2.60274 1.93944 2.68077 2.12459C2.75881 2.30974 2.873 2.47676 3.0164 2.6155L5.80941 5.53941L3.0175 8.38475C2.87421 8.52367 2.76013 8.69082 2.68217 8.87605C2.60421 9.06128 2.56402 9.26073 2.56402 9.46228C2.56402 9.66383 2.60421 9.86328 2.68217 10.0485C2.76013 10.2337 2.87421 10.4009 3.0175 10.5398C3.15488 10.684 3.31899 10.7989 3.5003 10.8779C3.68161 10.9569 3.87651 10.9984 4.07369 11C4.27087 10.9984 4.46577 10.9569 4.64708 10.8779C4.82839 10.7989 4.9925 10.684 5.12988 10.5398L8.9846 6.61132C9.12771 6.47242 9.24165 6.30534 9.3195 6.12021C9.39736 5.93509 9.4375 5.73577 9.4375 5.53436C9.4375 5.33295 9.39736 5.13363 9.3195 4.94851C9.24165 4.76338 9.12771 4.5963 8.9846 4.4574L5.12988 0.461568Z" fill="black"/>
+                </svg>
+            </a>
         </div>
     </div>
+
+ </div>
 </div>
-
-<script>
-    const menu = document.querySelector('.course-content-menu');
-    const menuItems =  Array.from(menu.querySelectorAll('a'));
-    const content = Array.from(document.querySelectorAll('.content > div')).filter((item) => item.id);
-
-    menuItems.forEach(item => {
-        const hash = item.hash
-        const match = hash.substring(1);
-
-        item.addEventListener('click', function(){
-            content.forEach(item => {
-                if(match === item.id){
-                    item.classList.add('pt-24');
-                } else {
-                    item.classList.remove('pt-24');
-                }
-            })
-        })
-    })
-</script>
