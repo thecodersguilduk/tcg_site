@@ -1725,10 +1725,6 @@ input, textarea{
   grid-column: span 3 / span 3;
 }
 
-.col-span-4{
-  grid-column: span 4 / span 4;
-}
-
 .col-start-2{
   grid-column-start: 2;
 }
@@ -3012,11 +3008,6 @@ input, textarea{
   padding-right: 3rem;
 }
 
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -4156,9 +4147,6 @@ fieldset a {
   .sm\:h-56{
     height: 14rem;
   }
-  .sm\:max-h-10{
-    max-height: 3.8rem;
-  }
   .sm\:w-1\/2{
     width: 50%;
   }
@@ -4254,10 +4242,6 @@ fieldset a {
   }
   .sm\:p-10{
     padding: 2.5rem;
-  }
-  .sm\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
   .sm\:px-12{
     padding-left: 3rem;
