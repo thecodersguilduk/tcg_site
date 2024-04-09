@@ -74,7 +74,7 @@ export default {
 			name: 'price',
 			type: 'string',
 			title: 'Course Price',
-			description: 'Per Person',
+			description: 'Per Person - please just use numbers - no £/$ signs required',
 			fieldset: 'metaHero'
 		},
 		{
