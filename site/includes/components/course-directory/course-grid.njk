@@ -6,7 +6,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for course in courses %}
             {% if course.courseType === type.courseType %}
-            <div class="flex flex-col gap-6 self-stretch rounded-md shrink-0 shadow-primary course">
+            <div class="relative flex flex-col gap-6 self-stretch rounded-md shrink-0 shadow-primary course">
                 <div class="flex flex-col items-start gap-2 self-stretch">
                     <img src="{{ course.featuredImage.medium }}" alt="{{ course.title }}" class="w-full h-64 object-cover">
                 </div>
@@ -19,7 +19,7 @@
                         </svg>                        
                         <span>{{ course.start | dateDisplay }}</span>
                     </div>
-                    <a href="{{ course.slug.current }}" class="text-blue-100 font-bold font-md">View Course ></a>
+                    <a href="{{ course.slug.current }}" class="text-blue-100 font-bold font-md"><span class="absolute inset-0"></span>View Course ></a>
                 </div>
             </div>   
             {% endif %}

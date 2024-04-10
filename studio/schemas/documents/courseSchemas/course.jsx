@@ -92,6 +92,13 @@ export default {
 				'The contracted course title as stipulated by the course funders',
 		},
 		{
+			name: 'ctaText',
+			title: 'CTA Button Text',
+			type: 'string',
+			fieldset: 'metaHero',
+			description: 'This controls the text that appears in the CTA buttons on the course page. Defaults to apply now.'
+		},
+		{
 			name: 'meta_description',
 			title: 'Meta Description',
 			description: 'For google and perhaps rendering on the page!',

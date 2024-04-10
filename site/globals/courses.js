@@ -130,7 +130,7 @@ function prepPost(data) {
 
 	data.isFunded = data.logos.length > 0;
 
-	console.log(data.benefits);
+	data.ctaText = data.ctaText ? data.ctaText : 'Apply Now';
 
 	return data;
 }

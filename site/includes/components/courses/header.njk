@@ -20,10 +20,10 @@
         <div class="flex flex-col justify-center gap-6 self-stretch">
             <h1 class="text-4xl md:text-3xl font-bold m-0 leading-112">{{ course.title }}</h1>
             <h2 class="text-lg md:text-md font-medium text-black m-0 leading-112">{{ course.subtitle }}</h2>
-            {% if course.price %}<p class="text-red-100 text-lg md:text-md font-semibold leading-112">£{{ course.price }}</p>{% endif %}
+            <p class="text-lg md:text-md font-semibold leading-112">{% if course.price %}<span class="text-red-100">£{{ course.price }}</span> - {% endif %} {% if course.instances.length > 0 %} Next course starts: {{course.instances[0].date | dateDisplay}} {% endif %}</p>
             <div>
-                <a href="#contact" class="w-full lg:w-4/12 bg-green-100 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Apply Now</a>
-                <p class="text-sm leading-0">*Pricing plans and government funding available on many courses</p>
+                <a href="#contact" class="w-full lg:w-4/12 bg-green-100 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">{{course.ctaText}}</a>
+                <p class="text-sm leading-0">Pricing plans and government funding available on many courses</p>
             </div>
         </div>
         <div class="md:hidden flex lg:flex flex-col justify-end items-start self-stretch w-full gap-3">
