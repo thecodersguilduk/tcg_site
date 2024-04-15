@@ -99,6 +99,13 @@ export default {
 			description: 'This controls the text that appears in the CTA buttons on the course page. Defaults to apply now.'
 		},
 		{
+			name: 'formLink',
+			title: 'Form Link',
+			description: 'Link to the course application form',
+			type: 'string',
+			fieldset: 'metaHero',
+		},
+		{
 			name: 'meta_description',
 			title: 'Meta Description',
 			description: 'For google and perhaps rendering on the page!',
@@ -332,12 +339,6 @@ export default {
 				source: 'title',
 			},
 			maxLength: 96,
-		},
-		{
-			name: 'formLink',
-			title: 'Form Link',
-			description: 'Link to the course application form - default will be the google form for Short Courses',
-			type: 'string'
 		},
 		{
 			name: 'tags',

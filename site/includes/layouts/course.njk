@@ -28,11 +28,12 @@ body_class: apprenticeship-employer
     </div>
   </section>
   {% include '../components/courses/header.njk' %}
+  
     <section id="pitch" class="px-6 xl:px-48 max-w-9xl mx-auto">
+      {% include '../components/courses/banner-cta.njk' %}
       {% include '../components/courses/pitch.njk' %}
       {% include '../components/courses/graduate-logos.njk' %}
       {% include '../components/courses/upcoming-courses.njk' %}
-      {% include '../components/courses/banner-cta.njk' %}
     </section>
     <section id="content" class="section-rounded z-10">
       {% include '../components/courses/content.njk' %}
