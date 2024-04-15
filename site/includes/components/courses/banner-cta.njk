@@ -9,9 +9,9 @@
         <h2 class="mt-12 mb-0 text-center text-blue-200">Would you like to do this course for free?</h2>
         {% if course.price %}<h2 class="mb-12 text-center text-red-100"><span class="strikediag">£{{ course.price }}</span></h2>{% endif %}
 
-        <div class="cta bg-green-100 flex flex-col lg:flex-row justify-between px-8 py-4 rounded">
-        <p class="text-center lg:text-left text-white max-w-3xl leading-xl lg:leading-md text-lg mb-4 lg:mb-0 lg:w-9/12">If you live or work in {% if course.partners.includes('N Yorkshire') %}<strong>North</strong> or {% endif %} <strong>West Yorkshire</strong> it is very likely that you will be eligible for <strong>100% funding.</strong></p>
-        <a href="#contact" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-0 text-black font-bold rounded text-center">Apply Now <i class="ml-2 fa-solid fa-angle-right"></i></a>
+        <div class="cta bg-green-100 flex flex-col lg:flex-row justify-between items-center px-8 py-4 rounded">
+        <p class="text-center lg:text-left text-white max-w-3xl leading-xl lg:leading-md text-lg mb-4 lg:mb-0 lg:w-9/12">If you live or work in West Yorkshire it is very likely that you will be eligible for <strong>100% funding.</strong></p>
+        <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="flex items-center justify-center lg:justify-start bg-white px-12 py-2 lg:py-2 text-black font-bold rounded text-center">{{course.ctaText}} <i class="ml-2 fa-solid fa-angle-right"></i></a>
         </div>
     </div>
 </div>

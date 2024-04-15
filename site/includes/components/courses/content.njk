@@ -46,7 +46,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center self-stretch gap-8 faq-content box-content">
+                        <div class="flex flex-col items-start self-stretch gap-8 faq-content box-content">
                             {{ value | safe }}
                         </div>
                     {% endfor %}
@@ -55,7 +55,7 @@
         </div>
         <div class="mt-6 w-full flex flex-col md:flex-row justify-center items-center gap-2 md:gap-8 p-4 bg-green-100 rounded ">
             <p class="text-sm md:text-md font-semibold">Next course starts: <strong>{{ course.start | dateDisplay }}</strong></p>
-            <a href="#contact" class="flex px-4 py-2 md:py-4 justify-center items-center gap-2 shrink-0 bg-white rounded text-sm text-black font-bold">Apply Now 
+            <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="flex px-4 py-2 md:py-4 justify-center items-center gap-2 shrink-0 bg-white rounded text-sm text-black font-bold">{{course.ctaText}} 
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
                     <path d="M5.12988 0.461568C4.99359 0.315715 4.82964 0.199596 4.64799 0.120254C4.46634 0.0409117 4.27077 0 4.07314 0C3.87551 0 3.67994 0.0409117 3.49829 0.120254C3.31663 0.199596 3.15269 0.315715 3.0164 0.461568C2.873 0.600303 2.75881 0.76733 2.68077 0.95248C2.60274 1.13763 2.5625 1.33703 2.5625 1.53853C2.5625 1.74004 2.60274 1.93944 2.68077 2.12459C2.75881 2.30974 2.873 2.47676 3.0164 2.6155L5.80941 5.53941L3.0175 8.38475C2.87421 8.52367 2.76013 8.69082 2.68217 8.87605C2.60421 9.06128 2.56402 9.26073 2.56402 9.46228C2.56402 9.66383 2.60421 9.86328 2.68217 10.0485C2.76013 10.2337 2.87421 10.4009 3.0175 10.5398C3.15488 10.684 3.31899 10.7989 3.5003 10.8779C3.68161 10.9569 3.87651 10.9984 4.07369 11C4.27087 10.9984 4.46577 10.9569 4.64708 10.8779C4.82839 10.7989 4.9925 10.684 5.12988 10.5398L8.9846 6.61132C9.12771 6.47242 9.24165 6.30534 9.3195 6.12021C9.39736 5.93509 9.4375 5.73577 9.4375 5.53436C9.4375 5.33295 9.39736 5.13363 9.3195 4.94851C9.24165 4.76338 9.12771 4.5963 8.9846 4.4574L5.12988 0.461568Z" fill="black"/>
                 </svg>

@@ -4,8 +4,8 @@
     <p class="text-lg font-bold leading-2xl">
       {{ instance.date | dateDisplay }}
     </p>
-    <a href="#contact" target="_blank" aria-describedby="date" class="bg-green-100 rounded flex p-4 justify-center items-center gap-2 self-stretch">
-      <span class="text-white font-bold text-sm">Apply Now</span>
+    <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" target="_blank" aria-describedby="date" class="bg-green-100 rounded flex p-4 justify-center items-center gap-2 self-stretch">
+      <span class="text-white font-bold text-sm">{{course.ctaText}}</span>
       <i class="fa-solid fa-chevron-right ml-2 text-white"></i>
     </a>
     <div class="flex flex-col items-start gap-6 self-stretch content">{{ instance.description | safe }}</div>
