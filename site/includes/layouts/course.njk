@@ -23,7 +23,7 @@ body_class: apprenticeship-employer
         </div>
       </div>
       <div class="flex flex-col sm:flex-row">
-        <a href="{% if course.link %}{{ course.link }}{% else %}#contact{% endif %}" class="rounded inline-flex justify-center items-center p-2 gap-2 bg-green-100" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-xs lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+        <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="rounded inline-flex justify-center items-center p-2 gap-2 bg-green-100" {% if course.link %}target="_blank"{% endif %}><span class="text-white font-bold rounded whitespace-no-wrap text-xs lg:text-md">Apply Now <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
       </div>
     </div>
   </section>
