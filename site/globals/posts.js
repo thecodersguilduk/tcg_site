@@ -75,7 +75,7 @@ const serializers = {
         'data-url': node.node.calendlyLink,
         style: {
           minWidth: "320px",
-          height: '800px'
+          height: "800px"
         }
       },
       y("script", {

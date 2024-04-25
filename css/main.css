@@ -2188,10 +2188,6 @@ input, textarea{
   max-height: 24rem;
 }
 
-.min-h-\[80\%\]{
-  min-height: 80%;
-}
-
 .min-h-full{
   min-height: 100%;
 }
