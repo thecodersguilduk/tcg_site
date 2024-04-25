@@ -81,7 +81,8 @@ export default {
         { type: 'callModal' },
         { type: 'newsletter' },
         { type: 'form' },
-        { type: 'youtubeEmbed' }
+        { type: 'youtubeEmbed' },
+        { type: 'calendlyEmbed' }
       ]
     }
   ],

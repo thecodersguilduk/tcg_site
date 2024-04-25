@@ -70,6 +70,21 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
+    calendlyEmbed: node => (
+      y('div.calendly-inline-widget', {
+        'data-url': node.node.calendlyLink,
+        style: {
+          minWidth: "320px",
+          height: '800px'
+        }
+      },
+      y("script", {
+        src: "https://assets.calendly.com/assets/external/widget.js",
+        type: "text/javascript",
+        async: true
+      })
+      )
+    ),
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).url(),
     }),
