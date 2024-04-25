@@ -5,8 +5,9 @@ const blocksToHyperScript = require('@sanity/block-content-to-hyperscript')
 const imageUrlBuilder = require('@sanity/image-url')
 const sanityClient = require('@sanity/client')
 const config = require('../globals/config');
+const currentDate = new Date().toISOString();
 
-const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
+const query = `*[_type == "blog" && !(_id in path("drafts.**")) && publishedAt <= currentDate] {
     title,
     slug,
     publishedAt,
@@ -22,12 +23,14 @@ const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
         "calendlyLink": calendlyLink 
       }
     },
-} | order(publishedAt desc)`
+} | order(publishedAt desc)`;
+
+const params = { currentDate }
 
 module.exports = async function () {
   // Fetches data
   const client = sanityClient(config)
-  const data = await client.fetch(query)
+  const data = await client.fetch(query, params)
 
   // Modifies the data to fit our needs
   const preppedData = data.map(prepPost)
@@ -51,7 +54,7 @@ function prepPost(data) {
   // data.avatar = urlFor(data.avatar);
   data.avatar = urlFor(data.avatar[0]).width(100).url();
 
-  //console.log(data.tags);
+  console.log(data.publishedAt, currentDate);
 
   return data
 }
