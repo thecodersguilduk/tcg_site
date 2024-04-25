@@ -16,7 +16,12 @@ const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     authors[]->{name},
     "avatar": authors[]->image.asset,
     categories[]->{name},
-    blogPortableText,
+    blogPortableText[]{
+      ...,
+      _type == "calendlyLink" => {
+        "calendlyLink": calendlyLink 
+      }
+    },
 } | order(publishedAt desc)`
 
 module.exports = async function () {

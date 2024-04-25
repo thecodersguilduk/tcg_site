@@ -72,7 +72,10 @@ export default {
       type: 'array',
       title: 'Body',
       of: [
-        { type: 'block' },
+        { 
+          type: 'block' ,
+ 
+        },
         { type: 'imageSection' },
         { type: 'applyBtn' },
         { type: 'callModal' },

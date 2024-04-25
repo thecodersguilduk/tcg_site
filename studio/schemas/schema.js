@@ -9,6 +9,7 @@ import courseDurations from "./documents/courseSchemas/courseDuration";
 import courseTopics from "./documents/courseSchemas/courseTopics";
 import coursePartners from "./documents/courseSchemas/coursePartners";
 import imageSection from "./documents/components/imageSection";
+import calendlyLink from "./documents/components/calendlyLink";
 import applyBtn from "./documents/components/applyBtn";
 import callModal from "./documents/components/callModal";
 import apprenticeAd from "./documents/apprenticeAd";
@@ -37,6 +38,7 @@ export default [
     imageSection,
     applyBtn,
     callModal,
+    calendlyLink,
     apprenticeAd,
     hr,
     policies,
