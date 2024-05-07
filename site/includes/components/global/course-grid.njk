@@ -24,7 +24,7 @@
                     <object type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
                     <h3 class="text-xl leading-lg mb-0">{{ modifiedTitle }}</h3>
                     <div class="mt-auto">
-                    <p class="font-bold leading-sm font-heading mb-4">I want to...</p>
+                    <p class="font-bold leading-sm font-heading mb-4">{% if page.url === '/apprenticeships/' %}{{ course.title }}{% else %}I want to...{% endif %}</p>
                     <div class="mb-4">
                         <a href="/course-directory/{{ course.slug.current }}/" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Find out more!</a>
                     </div>
