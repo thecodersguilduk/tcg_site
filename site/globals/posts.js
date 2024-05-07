@@ -61,6 +61,15 @@ function urlFor(source) {
   return imageBuilder.image(source);
 }
 
+let currentDate = new Date();
+
+// Get the year and month
+let year = currentDate.getFullYear();
+let month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Adding 1 to month because it's zero-based index
+
+// Format the date as YYYY-MM
+let formattedDate = `${year}-${month}`;
+
 // This is a way of converting our custom blocks from Portable Text to html
 const serializers = {
   // Creates the code blocks how html and 11ty want them
@@ -72,7 +81,7 @@ const serializers = {
     ),
     calendlyEmbed: node => (
       y('div.calendly-inline-widget', {
-        'data-url': node.node.calendlyLink,
+        'data-url': node.node.calendlyLink + `?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2574a9&month=${formattedDate}`,
         style: {
           minWidth: "320px",
           height: "800px"

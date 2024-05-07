@@ -340,16 +340,5 @@ export default {
 			},
 			maxLength: 96,
 		},
-		{
-			name: 'tags',
-			title: 'Tags',
-			type: 'tags',
-			options: {
-				//Locks menu from creating new tags (defaults to false)
-				frozen: false,
-				//Closes menu after tag selected (defaults to true)
-				closeMenuOnSelect: true,
-			},
-		},
 	],
 };
