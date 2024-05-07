@@ -15,8 +15,8 @@
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex" aria-label="Tabs">
                   <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                  <a name="employers" id="employers-btn" class="active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium" aria-current="page">Employers</span>
-                  <a name="candidates" id="candidates-btn" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium">Learners</span>
+                  <a name="employers" id="employers-btn" class="cursor-pointer active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium" aria-current="page">Employers</span>
+                  <a name="candidates" id="candidates-btn" class="cursor-pointer border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium">Learners</span>
                 </nav>
               </div>
             </div>
@@ -32,8 +32,8 @@
     const candidatesBtn = document.getElementById('candidates-btn');
     const employersSection = document.getElementById('employers');
     const candidatesSection = document.getElementById('candidates');
-    const activeClasses = "active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
-    const inactiveClasses = "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
+    const activeClasses = "cursor-pointer active border-blue-200 text-blue-600 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
+    const inactiveClasses = "cursor-pointer border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-6/12 border-b-2 py-4 px-1 text-center text-sm font-medium";
 
     
     const switchSections = (target, sections) => {

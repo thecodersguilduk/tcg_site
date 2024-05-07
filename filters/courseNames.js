@@ -1,37 +1,37 @@
 module.exports = function (str) {
-	if (typeof str != 'string') return;
+	
+	if (typeof str != 'string' || !str) return str;
 
-	switch (str) {
-		case str.contains('UX Professional'):
-			return 'User Experience';
+	const comparison = str.toLowerCase().split(' ');
+
+	switch (true) {
+		case comparison.includes('ux'):
+			return 'UX Level 4';
 			break;
-		case 'Get Hired as a Software Tester':
-			return 'Software Tester';
+		case comparison.includes('testing'):
+			return 'Software Tester Level 4';
 			break;
-		case 'Get Hired as a Software Developer':
-			return 'Software Development';
+		case comparison.includes('developer'):
+			return 'Software Development Level 4';
 			break;
-		case 'Essential Skills For Your Tech Career':
-			return 'Essential Tech Skills';
+		case comparison.includes('devops'):
+			return 'DevOps Engineer Level 4';
 			break;
-		case 'Get Hired in the Tech Industry':
-			return 'Work in the Tech Industry';
+		case comparison.includes('accessibility'):
+			return 'Accessibility Apprenticeship Level 4';
 			break;
-		case 'Software Developer Apprenticeship Level 4':
-			return 'Software Developer';
+		case comparison.includes('product'):
+			return 'Product Management Level 4';
 			break;
-		case 'Software Testing Apprenticeship Level 4':
-			return 'Software Tester';
+		case comparison.includes('projects'):
+			return 'Associate Project Management Level 4';
 			break;
-		case str.contains('DevOps'):
-			return 'DevOps Engineer ';
+		case comparison.includes('security'):
+			return 'Cyber Security Level 4';
 			break;
-		case 'Accessibility Apprenticeship Level 4':
-			return 'Accessibility expert!';
+		case comparison.includes('data'):
+			return 'Data Analyst Level 4';
 			break;
-		case 'Agile Project Management: Mastering Tech & Digital Projects':
-			return 'Agile Project Manager';
-		default:
 			return str;
 	}
 };
