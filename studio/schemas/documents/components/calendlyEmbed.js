@@ -11,7 +11,7 @@ export default {
         options: {
           isHighlighted: true
         },
-        initialValue: 'https://calendly.com/crispin_read/skills-gap-consultancy'
+        initialValue: 'https://calendly.com/tcg-skills/enquiry'
       }
     ]
   }

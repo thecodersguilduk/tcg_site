@@ -7,11 +7,6 @@ body_class: apprenticeship-employer
 title: {{ course.title }}
 ---
 
-{% if course.instances.length > 0 %}
-{% include "components/modals/expression-of-interest.njk" %}
-{% endif %}
-
-
 <main id="course" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
   <section id="course-cta-header"class="fixed top-0 bg-white flex space-between mx-auto z-50 shadow py-2 lg:py-4 w-full">
     <div class="flex inner justify-between items-center">

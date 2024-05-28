@@ -66,7 +66,7 @@ const serializers = {
       },
       callModal: ({ node: { title } }) => h('a', {
         href: "#",
-        'data-modal': "book-a-call",
+        'data-modal': "book-a-call-calendly",
         className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
         innerHTML: title,
         style: 'color: white;',
