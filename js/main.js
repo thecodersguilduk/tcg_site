@@ -1456,43 +1456,29 @@ var stripe = function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
-
 var submenu = function submenu() {
-  var navlinks = document.getElementById('nav-links');
-  var mobileNav = document.getElementById('mobile-nav');
-  navlinks.addEventListener('click', toggleSubMenu);
-  mobileNav.addEventListener('click', toggleSubMenu);
-  function toggleSubMenu(e) {
-    var target = e.target;
-    if (target.nodeName.toLowerCase() === 'li') {
-      //now open thesubmenu of the li just clicked on
-      var currentSubMenu = target.querySelector('.submenu');
-      if (currentSubMenu.classList.contains('block')) {
-        currentSubMenu.classList.remove('block');
-        currentSubMenu.classList.add('hidden');
-      } else {
-        currentSubMenu.classList.remove('hidden');
-        currentSubMenu.classList.add('block');
-      }
+  document.addEventListener('DOMContentLoaded', function () {
+    // Toggle mobile nav
+    var navToggle = document.getElementById('nav-toggle');
+    var mobileNavContainer = document.getElementById('mobile-nav-container');
+    navToggle.addEventListener('click', function () {
+      var expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      mobileNavContainer.classList.toggle('hidden');
+    });
 
-      //close all the submenus
-      var submenus = document.querySelectorAll('.submenu');
-      submenus.forEach(function (menu) {
-        console.log(menu.parentElement);
-        if (menu.classList.contains('block') && target.innerText.toLowerCase() !== menu.parentElement.innerText.toLowerCase()) {
-          // console.log('were here');
-          menu.classList.remove('block');
-          menu.classList.add('hidden');
-          // console.log(menu.classList);
-        }
+    // Handle submenu toggle
+    var submenuButtons = document.querySelectorAll('.dropdown-trigger');
+    submenuButtons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        var submenu = this.nextElementSibling;
+        var expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        submenu.classList.toggle('hidden');
       });
-      currentSubMenu.addEventListener('mouseleave', function (e) {
-        currentSubMenu.classList.remove('block');
-        currentSubMenu.classList.add('hidden');
-      });
-    }
-  }
+    });
+  });
 }();
 /* harmony default export */ __webpack_exports__["default"] = (submenu);
 
@@ -1812,7 +1798,7 @@ var $$ = {
   scrollTopBtn: document.getElementById('scroll-top'),
   faqSection: document.querySelector('.faq'),
   vacancies: document.querySelector('.vacancies'),
-  submenu: document.querySelector('.submenu'),
+  submenu: document.querySelectorAll('li.has-submenu'),
   stripeCheckoutBtn: document.getElementById('buy-now-btn'),
   courseDirectoryTabs: document.querySelectorAll('.course-directory-tab'),
   courseGridContainer: document.querySelector('.course-grid-container'),
