@@ -43,7 +43,6 @@ module.exports = async function () {
 // This is mostly Sanity specific, but is a good function idea for preparing data
 function prepPost(data) {
 
-	data.formLink = data.formLink ? data.formLink : 'https://forms.gle/RrPafeNmXX1FBoet8'
 	data.content = [];
 	const dataContentFields = ['who_is_this_for', 'what_you_will_get', 'course_outline', 'course_breakdown', 'delivery', 'pre_requisites', 'bonus_takeaways'];
 
@@ -131,6 +130,8 @@ function prepPost(data) {
 	data.isFunded = data.logos.length > 0;
 
 	data.ctaText = data.ctaText ? data.ctaText : 'Apply Now';
+
+	data.formLink = data.formLink ? data.formLink : '#contact';
 
 	return data;
 }
