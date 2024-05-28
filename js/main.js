@@ -1464,7 +1464,13 @@ var submenu = function submenu() {
     navToggle.addEventListener('click', function () {
       var expanded = this.getAttribute('aria-expanded') === 'true' || false;
       this.setAttribute('aria-expanded', !expanded);
-      mobileNavContainer.classList.toggle('hidden');
+      if (expanded) {
+        mobileNavContainer.classList.add('opacity-0');
+        mobileNavContainer.classList.add('hidden');
+      } else {
+        mobileNavContainer.classList.remove('opacity-0');
+        mobileNavContainer.classList.remove('hidden');
+      }
     });
 
     // Handle submenu toggle
