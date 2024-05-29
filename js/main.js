@@ -1461,17 +1461,18 @@ var submenu = function submenu() {
     // Toggle mobile nav
     var navToggle = document.getElementById('nav-toggle');
     var mobileNavContainer = document.getElementById('mobile-nav-container');
-    navToggle.addEventListener('click', function () {
-      var expanded = this.getAttribute('aria-expanded') === 'true' || false;
-      this.setAttribute('aria-expanded', !expanded);
-      if (expanded) {
-        mobileNavContainer.classList.add('opacity-0');
-        mobileNavContainer.classList.add('hidden');
-      } else {
-        mobileNavContainer.classList.remove('opacity-0');
-        mobileNavContainer.classList.remove('hidden');
-      }
-    });
+    // navToggle.addEventListener('click', function() {
+    // 	const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    // 	this.setAttribute('aria-expanded', !expanded);
+
+    // 	if (expanded) {
+    // 	  mobileNavContainer.classList.add('opacity-0');
+    // 	  mobileNavContainer.classList.add('hidden');
+    // 	} else {
+    // 	  mobileNavContainer.classList.remove('opacity-0');
+    // 	  mobileNavContainer.classList.remove('hidden');
+    // 	}
+    //   });
 
     // Handle submenu toggle
     var submenuButtons = document.querySelectorAll('.dropdown-trigger');

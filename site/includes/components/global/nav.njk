@@ -5,28 +5,30 @@
       <span class="block bg-blue-100 rounded"></span>
       <span class="block bg-blue-100 rounded"></span>
     </button>
-    <div id="mobile-nav-container" class="mobile-nav-container fixed z-10 h-full flex bg-white hidden">
+    <div id="mobile-nav-container" class="mobile-nav-container opacity-0 fixed z-10 h-full flex items-center bg-white">
       <nav id="mobile-nav" class="inner">
         <ul class="py-24 nav-links">
           {% for nav_link in navigation.main %}
-          <li class="px-4 text-center relative parent py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">
-            <button aria-haspopup="true" aria-expanded="false" class="dropdown-trigger capitalize">
-              {{ nav_link.label | safe }}<i class="align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
-            </button>
             {% if nav_link.submenu %}
-            <ul class="submenu absolute shadow-secondary hidden">
-              {% for link in nav_link.submenu %}
-              <li class="px-4 hover:bg-blue-200 hover:text-white">
-                <a href="{{ link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-xl leading-xl">{{ link.label | safe }}</a>
+              <li class="px-4 text-center relative parent py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">
+                <button aria-haspopup="true" aria-expanded="false" class="dropdown-trigger capitalize">
+                  {{ nav_link.label | safe }}<i class="align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="submenu absolute shadow-secondary hidden">
+                  {% for link in nav_link.submenu %}
+                  <li class="px-4 hover:bg-blue-200 hover:text-white">
+                    <a href="{{ link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-xl leading-xl">{{ link.label | safe }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                
               </li>
-              {% endfor %}
-            </ul>
+            {% else %}
+              <li class="px-4 text-center">
+                <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}</a>
+              </li>
             {% endif %}
-          </li>
-          {% else %}
-          <li class="px-4 text-center">
-            <a href="{{ nav_link.url | safe }}" class="block py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">{{ nav_link.label | safe }}</a>
-          </li>
           {% endfor %}
         </ul>
       </nav>
