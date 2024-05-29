@@ -10,7 +10,7 @@
         <ul class="py-24 nav-links">
           {% for nav_link in navigation.main %}
           <li class="px-4 text-center relative parent py-2 font-bold font-heading text-black capitalize text-3xl leading-4xl">
-            <button aria-haspopup="true" aria-expanded="false" class="dropdown-trigger">
+            <button aria-haspopup="true" aria-expanded="false" class="dropdown-trigger capitalize">
               {{ nav_link.label | safe }}<i class="align-middle ml-2 fas fa-angle-down text-md leading-md" aria-hidden="true"></i>
             </button>
             {% if nav_link.submenu %}
