@@ -2571,10 +2571,6 @@ input, textarea{
   border-radius: 0.375rem;
 }
 
-.rounded-none{
-  border-radius: 0px;
-}
-
 .rounded-xl{
   border-radius: 0.75rem;
 }
@@ -2809,11 +2805,6 @@ input, textarea{
 .bg-indigo-500{
   --tw-bg-opacity: 1;
   background-color: rgb(102 126 234 / var(--tw-bg-opacity));
-}
-
-.bg-indigo-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(90 103 216 / var(--tw-bg-opacity));
 }
 
 .bg-red-100{
@@ -3478,16 +3469,6 @@ input, textarea{
   color: rgb(0 0 0 / var(--tw-placeholder-opacity));
 }
 
-.placeholder-grey-500::-moz-placeholder{
-  --tw-placeholder-opacity: 1;
-  color: rgb(160 174 192 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-grey-500::placeholder{
-  --tw-placeholder-opacity: 1;
-  color: rgb(160 174 192 / var(--tw-placeholder-opacity));
-}
-
 .opacity-0{
   opacity: 0;
 }
@@ -3831,11 +3812,6 @@ fieldset a {
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-indigo-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(102 126 234 / var(--tw-bg-opacity));
-}
-
 .hover\:text-blue-200:hover{
   --tw-text-opacity: 1;
   color: rgb(37 116 169 / var(--tw-text-opacity));
@@ -3885,11 +3861,6 @@ fieldset a {
 .focus\:border-indigo-500:focus{
   --tw-border-opacity: 1;
   border-color: rgb(102 126 234 / var(--tw-border-opacity));
-}
-
-.focus\:border-indigo-700:focus{
-  --tw-border-opacity: 1;
-  border-color: rgb(76 81 191 / var(--tw-border-opacity));
 }
 
 .focus\:bg-blue-100:focus{
@@ -3958,11 +3929,6 @@ fieldset a {
 .active\:bg-green-100:active{
   --tw-bg-opacity: 1;
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
-}
-
-.active\:bg-indigo-700:active{
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 81 191 / var(--tw-bg-opacity));
 }
 
 .active\:text-blue-100:active{
@@ -4044,9 +4010,6 @@ fieldset a {
   }
   .sm\:block{
     display: block;
-  }
-  .sm\:inline-block{
-    display: inline-block;
   }
   .sm\:flex{
     display: flex;
@@ -4169,10 +4132,6 @@ fieldset a {
   .sm\:px-14{
     padding-left: 3.5rem;
     padding-right: 3.5rem;
-  }
-  .sm\:px-24{
-    padding-left: 6rem;
-    padding-right: 6rem;
   }
   .sm\:px-4{
     padding-left: 1rem;
@@ -4476,9 +4435,6 @@ fieldset a {
   }
   .md\:justify-start{
     justify-content: flex-start;
-  }
-  .md\:justify-center{
-    justify-content: center;
   }
   .md\:justify-between{
     justify-content: space-between;
