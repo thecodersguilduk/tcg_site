@@ -918,7 +918,20 @@ var courseGridSlider = function () {
     appendDots: $('.dots'),
     infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 1
+    slidesToScroll: 2,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
   });
 }();
 /* harmony default export */ __webpack_exports__["default"] = (courseGridSlider);
