@@ -757,7 +757,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_course_apply_validation__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @modules/course-apply-validation */ "./resources/js/modules/course-apply-validation/index.js");
 /* harmony import */ var _modules_stripe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @modules/stripe */ "./resources/js/modules/stripe/index.js");
 /* harmony import */ var _modules_course_directory_tabs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @modules/course-directory-tabs */ "./resources/js/modules/course-directory-tabs/index.js");
+/* harmony import */ var _modules_course_grid_slider__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @modules/course-grid-slider */ "./resources/js/modules/course-grid-slider/index.js");
 // Import local modules
+
 
 
 
@@ -896,6 +898,33 @@ var handleTabs = function () {
 
 /***/ }),
 
+/***/ "./resources/js/modules/course-grid-slider/index.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/modules/course-grid-slider/index.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var courseGridSlider = function () {
+  var courseGridSlider = document.querySelector('#course-grid');
+  console.log(courseGridSlider);
+  if (!courseGridSlider) return;
+  return $(courseGridSlider).slick({
+    dots: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    appendDots: $('.dots'),
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  });
+}();
+/* harmony default export */ __webpack_exports__["default"] = (courseGridSlider);
+
+/***/ }),
+
 /***/ "./resources/js/modules/expression-interest/index.js":
 /*!***********************************************************!*\
   !*** ./resources/js/modules/expression-interest/index.js ***!
@@ -977,6 +1006,7 @@ function messageExists(el, attr) {
   return el.nextElementSibling && el.nextElementSibling.getAttribute(attr) ? true : false;
 }
 var validateForm = function validateForm() {
+  console.log(_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"] + ' from validate form');
   if (_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm) {
     var input, regex, invalidInputs, errorMessage, errorContainer;
     _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].contactForm.addEventListener('change', function (e) {
@@ -1766,7 +1796,9 @@ var exists = function exists(el, limit) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
+/* harmony import */ var _modules_course_grid_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/course-grid-slider */ "./resources/js/modules/course-grid-slider/index.js");
+/* harmony import */ var _modules_submenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/submenu */ "./resources/js/modules/submenu/index.js");
+
 
 var $$ = {
   courseApply: document.getElementById('courseApply'),
@@ -1809,7 +1841,8 @@ var $$ = {
   stripeCheckoutBtn: document.getElementById('buy-now-btn'),
   courseDirectoryTabs: document.querySelectorAll('.course-directory-tab'),
   courseGridContainer: document.querySelector('.course-grid-container'),
-  courseDirectoryGridItems: document.querySelectorAll('.course-directory-grid')
+  courseDirectoryGridItems: document.querySelectorAll('.course-directory-grid'),
+  courseGridSlider: document.querySelector('#course-grid')
 };
 /* harmony default export */ __webpack_exports__["default"] = ($$);
 
