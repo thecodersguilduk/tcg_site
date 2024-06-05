@@ -20,7 +20,6 @@ const courseGridSlider = function (){
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode: true,
               }
             },
             {
@@ -28,7 +27,6 @@ const courseGridSlider = function (){
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                centerMode: true,
               }
             }
           ]
