@@ -14,20 +14,21 @@ const courseGridSlider = function (){
           infinite: true,
           slidesToShow: 2,
           slidesToScroll: 2,
-          centerMode: true,
           responsive: [
             {
               breakpoint: 1200,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                centerMode: true,
               }
             },
             {
               breakpoint: 768,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                centerMode: true,
               }
             }
           ]
