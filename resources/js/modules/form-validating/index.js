@@ -5,6 +5,7 @@ function messageExists(el, attr) {
 }
 
 const validateForm = function validateForm() {
+  console.log($$ + ' from validate form');
   if ($$.contactForm) {
 
     let input,

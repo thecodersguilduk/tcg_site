@@ -1,3 +1,4 @@
+import courseGridSlider from "../../modules/course-grid-slider"
 import submenu from "../../modules/submenu"
 
 const $$ = {
@@ -82,7 +83,9 @@ const $$ = {
 
     courseGridContainer : document.querySelector('.course-grid-container'),
 
-    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid')
+    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid'),
+
+    courseGridSlider    : document.querySelector('#course-grid')
 }
 
 export default $$

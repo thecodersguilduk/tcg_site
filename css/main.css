@@ -1617,6 +1617,47 @@ input, textarea{
   box-shadow: -31px 44px 0px 1px rgba(92, 16, 34, 0.2);
 }
 
+#course-grid-container .slick-track {
+  display: flex !important;
+}
+#course-grid-container .slick-slide {
+  height: inherit !important;
+}
+#course-grid-container .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+#course-grid-container .slick-dots button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 222 222 / var(--tw-bg-opacity));
+  font-size: 0;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+#course-grid-container .slick-dots .slick-active button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 174 219 / var(--tw-bg-opacity));
+}
+#course-grid-container .slick-dots li{
+  display: flex;
+  justify-content: center;
+}
+#course-grid-container .slick-arrow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 116 169 / var(--tw-bg-opacity));
+  font-size: 0;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: block;
+}
+#course-grid-container .slick-slide > div {
+  border-radius: 10px;
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -1767,11 +1808,6 @@ input, textarea{
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}
-
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .mx-auto{
@@ -4361,6 +4397,9 @@ fieldset a {
   .md\:h-full{
     height: 100%;
   }
+  .md\:min-h-\[375px\]{
+    min-height: 375px;
+  }
   .md\:w-1\/2{
     width: 50%;
   }
@@ -4712,9 +4751,6 @@ fieldset a {
   }
   .lg\:max-w-screen-xl{
     max-width: 1280px;
-  }
-  .lg\:max-w-sm{
-    max-width: 24rem;
   }
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
