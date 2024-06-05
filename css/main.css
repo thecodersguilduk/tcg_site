@@ -1810,11 +1810,6 @@ input, textarea{
   margin-right: 0.25rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -2210,10 +2205,6 @@ input, textarea{
 
 .max-h-96{
   max-height: 24rem;
-}
-
-.min-h-\[375px\]{
-  min-height: 375px;
 }
 
 .min-h-full{
@@ -4405,6 +4396,9 @@ fieldset a {
   }
   .md\:h-full{
     height: 100%;
+  }
+  .md\:min-h-\[375px\]{
+    min-height: 375px;
   }
   .md\:w-1\/2{
     width: 50%;
