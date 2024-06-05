@@ -1617,6 +1617,12 @@ input, textarea{
   box-shadow: -31px 44px 0px 1px rgba(92, 16, 34, 0.2);
 }
 
+#course-grid-container .slick-track {
+  display: flex !important;
+}
+#course-grid-container .slick-slide {
+  height: inherit !important;
+}
 #course-grid-container .slick-dots {
   display: flex;
   justify-content: center;
@@ -2206,8 +2212,8 @@ input, textarea{
   max-height: 24rem;
 }
 
-.min-h-\[350px\]{
-  min-height: 350px;
+.min-h-\[375px\]{
+  min-height: 375px;
 }
 
 .min-h-full{
