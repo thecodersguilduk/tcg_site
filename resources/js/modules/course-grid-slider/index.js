@@ -1,5 +1,3 @@
-import { TRUE } from "sass";
-
 const courseGridSlider = function (){
   const courseGridSlider = document.querySelector('#course-grid');
   console.log(courseGridSlider);
@@ -27,6 +25,13 @@ const courseGridSlider = function (){
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
+              }
+            },
+            {
+              breakpoint: 568,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
               }
             }
           ]
