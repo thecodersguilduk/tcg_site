@@ -148,11 +148,19 @@ const serializers = {
 	types: {
 		code: (node) =>
 			h('pre', { className: node.node.language }, h('code', node.node.code)),
-		imageSection: ({ node: { asset, width } }) =>
-			h('img', {
-				src: urlFor(asset).width().url(),
-				className: 'inline',
-			}),
+		imageSection: ({ node: { asset, width, alt, ccLink } }) => y("figure", { className: "" },
+			y("picture",
+			y("source", { media: "(max-width: 768px)", srcset: urlFor(asset).width(width).url() }),
+			y("source", { media: "(min-width: 769px)", srcset: urlFor(asset).width(width).url() }),
+			y("img", { src: urlFor(asset).width(width).url(), className: "inline", alt: alt ? alt : 'The Coders Guild - providing high quality IT training with government funding available' }),
+			ccLink ? y("figcaption", { className: "flex text-sm leading-0" }, "This image is licensed under ", 
+				y("span", {innerHTML: "&nbsp;"}),
+				y("a", { href: "https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1", target: "_blank", rel: "license noopener noreferrer" }, " CC BY-SA 4.0. "),
+				y("span", {innerHTML: "&nbsp;"}),
+				y("span", "The original can be found ", y("a", { href: ccLink, target: "_blank" }, "here"))
+				) : null
+			) 
+		),
 		applyBtn: ({ node: { btnText, btnLink, style, isModal, modalName } }) => {
 			function modalNameGenerator(str) {
 				if (!str) return '';
