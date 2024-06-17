@@ -125,6 +125,18 @@ export default {
 			type: 'image',
 			title: 'Featured image',
 			fieldset: 'metaHero',
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt Text',
+					type:'string',
+				},
+				{
+					name: 'ccLink',
+					title: 'CC Link',
+					type:'string',
+				},
+			]
 		},
 		{
 			name: 'logos',

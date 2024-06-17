@@ -1,10 +1,8 @@
 ---
 layout: default
 related_articles: true
-meta_title: {{ title }}
 meta_description: {{ excerpt }}
 body_class: apprenticeship-employer
-title: {{ course.title }}
 ---
 
 <main id="course" class="main flex flex-1 flex-col focus:outline-none" tabindex="-1">
@@ -24,7 +22,6 @@ title: {{ course.title }}
     </div>
   </section>
   {% include '../components/courses/header.njk' %}
-  
     <section id="pitch" class="px-6 xl:px-48 max-w-9xl mx-auto">
       {% include '../components/courses/banner-cta.njk' %}
       {% include '../components/courses/pitch.njk' %}

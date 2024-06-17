@@ -8,6 +8,7 @@ const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     ...,
     courseType[]->{courseType},
     "featuredImage": featuredImage.asset->url,
+	"ccLink": featuredImage.ccLink,
     courseTopics[]->{name},
     duration[]->{name},
     trainers[]->{...},

@@ -4,14 +4,18 @@
             {% include "components/courses/video.njk" %}
         {% else %}
             <div>
-                <picture>
-                    <!-- Small screens -->
-                    <source media="(max-width: 768px)" srcset="{{ course.featuredImage.small }}" type="image/jpeg">
-                    <!-- Large screens -->
-                    <source media="(min-width: 769px)" srcset="{{ course.featuredImage.large }}" type="image/jpeg">
-                    <!-- Default image -->
-                    <img src="{{ course.featuredImage.large }}" class="rounded-lg aspect-[4/3] z-20 object-cover" alt="{{ course.title }}">
-                  </picture>
+                <figure>
+                    <picture>
+                        <!-- Small screens -->
+                        <source media="(max-width: 768px)" srcset="{{ course.featuredImage.small }}" type="image/jpeg">
+                        <!-- Large screens -->
+                        <source media="(min-width: 769px)" srcset="{{ course.featuredImage.large }}" type="image/jpeg">
+                        <!-- Default image -->
+                        <img src="{{ course.featuredImage.large }}" class="rounded-lg aspect-[4/3] z-20 object-cover" alt="{{ course.title }}">
+                    </picture>
+                    {% if course.ccLink %}<figcaption class="flex text-sm leading-0" xmlns:cc="http://creativecommons.org/ns#">This work is licensed under &nbsp;<a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a></figcaption>{% endif %}
+                </figure>
+                
                 <!-- <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/145.svg" class="hidden md:block absolute pattern pattern-145"></object> -->
             </div>
         {% endif %}
