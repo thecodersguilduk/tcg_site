@@ -1,5 +1,6 @@
 const blocksToHtml = require('@sanity/block-content-to-html');
 const h = blocksToHtml.h;
+const y = require('hyperscript');
 const imageUrlBuilder = require('@sanity/image-url');
 const sanityClient = require('@sanity/client');
 const config = require('../globals/config');
@@ -148,12 +149,12 @@ const serializers = {
 	types: {
 		code: (node) =>
 			h('pre', { className: node.node.language }, h('code', node.node.code)),
-		imageSection: ({ node: { asset, width, alt, ccLink } }) => y("figure", { className: "" },
+		imageSection: ({ node: { asset, alt, ccLink } }) => y("figure", { className: "mb-4" },
 			y("picture",
-			y("source", { media: "(max-width: 768px)", srcset: urlFor(asset).width(width).url() }),
-			y("source", { media: "(min-width: 769px)", srcset: urlFor(asset).width(width).url() }),
-			y("img", { src: urlFor(asset).width(width).url(), className: "inline", alt: alt ? alt : 'The Coders Guild - providing high quality IT training with government funding available' }),
-			ccLink ? y("figcaption", { className: "flex text-sm leading-0" }, "This image is licensed under ", 
+			y("source", { media: "(max-width: 768px)", srcset: urlFor(asset).url(), type: "image/jpeg" }),
+			y("source", { media: "(min-width: 769px)", srcset: urlFor(asset).url(), type: "image/jpeg" }),
+			y("img", { src: urlFor(asset).url(), className: "inline", alt: alt ? alt : 'The Coders Guild - providing high quality IT training with government funding available' }),
+			ccLink ? y("figcaption", { className: "text-xs leading-0" }, "This image is licensed under ", 
 				y("span", {innerHTML: "&nbsp;"}),
 				y("a", { href: "https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1", target: "_blank", rel: "license noopener noreferrer" }, " CC BY-SA 4.0. "),
 				y("span", {innerHTML: "&nbsp;"}),
