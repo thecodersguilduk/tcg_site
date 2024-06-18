@@ -2207,6 +2207,10 @@ input, textarea{
   max-height: 24rem;
 }
 
+.min-h-\[350px\]{
+  min-height: 350px;
+}
+
 .min-h-full{
   min-height: 100%;
 }
@@ -4396,9 +4400,6 @@ fieldset a {
   }
   .md\:h-full{
     height: 100%;
-  }
-  .md\:min-h-\[375px\]{
-    min-height: 375px;
   }
   .md\:w-1\/2{
     width: 50%;
