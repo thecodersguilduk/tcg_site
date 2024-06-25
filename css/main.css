@@ -1310,10 +1310,6 @@ input, textarea{
   left: -225px;
   top: 80px;
 }
-.pattern-8 {
-  left: -225px;
-  top: 80px;
-}
 #home .pattern-9 {
   right: -230px;
   bottom: 55px;
@@ -1521,7 +1517,7 @@ input, textarea{
   left: 45%;
   z-index: 1;
 }
-.pattern-417 {
+#course .pattern-417 {
   z-index: 1;
   top: 15%;
   right: 10%;
@@ -2339,10 +2335,6 @@ input, textarea{
   max-width: none;
 }
 
-.max-w-prose{
-  max-width: 65ch;
-}
-
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -2771,6 +2763,10 @@ input, textarea{
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-\[\#16aedb0d\]{
+  background-color: #16aedb0d;
+}
+
 .bg-blue-100{
   --tw-bg-opacity: 1;
   background-color: rgb(22 174 219 / var(--tw-bg-opacity));
@@ -3019,6 +3015,11 @@ input, textarea{
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-48{
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 
 .px-5{
@@ -4577,6 +4578,9 @@ fieldset a {
   }
   .md\:pb-8{
     padding-bottom: 2rem;
+  }
+  .md\:pl-28{
+    padding-left: 7rem;
   }
   .md\:pl-6{
     padding-left: 1.5rem;
