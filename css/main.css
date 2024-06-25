@@ -1686,8 +1686,8 @@ input, textarea{
   inset: 0;
 }
 
-.-bottom-14{
-  bottom: -3.5rem;
+.-bottom-20{
+  bottom: -5rem;
 }
 
 .-left-2{
@@ -2389,6 +2389,11 @@ input, textarea{
 
 .basis-0{
   flex-basis: 0px;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
