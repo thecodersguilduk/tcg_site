@@ -1639,7 +1639,7 @@ input, textarea{
 }
 #course-grid-container .slick-dots .slick-active button{
   --tw-bg-opacity: 1;
-  background-color: rgb(22 174 219 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 #course-grid-container .slick-dots li{
   display: flex;
@@ -2285,6 +2285,10 @@ input, textarea{
 
 .w-6\/12{
   width: 50%;
+}
+
+.w-8\/12{
+  width: 66.666667%;
 }
 
 .w-\[48rem\]{
@@ -3161,16 +3165,16 @@ input, textarea{
   padding-bottom: 1rem;
 }
 
-.pb-48{
-  padding-bottom: 12rem;
-}
-
 .pb-6{
   padding-bottom: 1.5rem;
 }
 
 .pb-7{
   padding-bottom: 1.75rem;
+}
+
+.pb-72{
+  padding-bottom: 18rem;
 }
 
 .pb-8{
@@ -3255,6 +3259,10 @@ input, textarea{
 
 .pt-64{
   padding-top: 16rem;
+}
+
+.pt-72{
+  padding-top: 18rem;
 }
 
 .pt-8{

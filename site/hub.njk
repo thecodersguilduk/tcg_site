@@ -17,8 +17,8 @@ title: SME Growth Hub
   </section>
   {% include './includes/components/hub/header.njk' %}
 
-  <section class="flex flex-col items-start gap-2 py-32 px-48">
-    <div class="flex flex-col md:flex-row md:pl-28 justify-between">
+  <section class="flex flex-col items-start px-48 pt-72">
+    <div class="flex flex-col md:flex-row md:pl-28 justify-between items-center">
         <div class="flex flex-col items-start gap-12">
             <h2>Why Upskill Your Team</h2>
             <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
@@ -29,28 +29,38 @@ title: SME Growth Hub
             </ul>
             <a href="#" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
         </div>
-        <div class="bg-grey-100">
+        <div class="bg-grey-100 grid relative">
+            <object aria-hidden="true" type="image/svg+xml" data="../images/patterns/8.svg" class="absolute pattern pattern-4"></object>
+            <img class="object-cover h-auto w-8/12 justify-self-start" src="../images/learner-images/coders-training.jpg" alt="Some training from TCG">
+        </div>
+    </div>
 
+    <div class="flex flex-col md:flex-row md:pl-28 justify-between">
+        <div class="bg-grey-100">
+            <img class="object-cover h-auto w-8/12" src="../images/learner-images/coders-training.jpg" alt="Some training from TCG">
+        </div>
+        <div class="flex flex-col items-start gap-12">
+            <h2>Why Upskill Your Team</h2>
+            <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
+            <ul>
+                <li>Enhance productivity and efficiency</li>
+                <li>Boost employee morale and retention</li>
+                <li>Increase your team's billable rate with advanced tech skills</li>
+            </ul>
+            <a href="#" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
         </div>
     </div>
 
   </section>
 
-  <section class="flex flex-col items-start gap-2 py-16 px-48">
-    <div class="flex flex-col md:flex-row md:pl-28 justify-between">
-        <div class="bg-grey-100">
-            <img class="object-cover h-auto max-w-8/12" src="../images/learner-images/coders-training.jpg" alt="Some training from TCG">
-        </div>
-        <div class="flex flex-col items-start gap-12">
-            <h2>Why Upskill Your Team</h2>
-            <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
-            <ul>
-                <li>Enhance productivity and efficiency</li>
-                <li>Boost employee morale and retention</li>
-                <li>Increase your team's billable rate with advanced tech skills</li>
-            </ul>
-            <a href="#" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
-        </div>
-    </div>
 
+  <section class="w-full bg-gradient-to-r from-blue-100 to-blue-200 py-16 px-48">
+    <h2 class="text-white text-center w-full">Featured Courses and Apprenticeships</h2>
+    <p>Explore our range of training programs designed to meet the evolving needs of the tech industry</p>
+    <div id="course-grid-container">
+        {% include './includes/components/global/course-carousel.njk' %}
+
+    </div>
+    <h2 class="text-white text-center">Meet the Trainers</h2>
+    {% include './includes/components/hub/trainers.njk' %}
   </section>
