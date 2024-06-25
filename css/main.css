@@ -1686,6 +1686,10 @@ input, textarea{
   inset: 0;
 }
 
+.-bottom-14{
+  bottom: -3.5rem;
+}
+
 .-left-2{
   left: -0.5rem;
 }
@@ -1700,6 +1704,10 @@ input, textarea{
 
 .left-0{
   left: 0;
+}
+
+.left-2\/4{
+  left: 50%;
 }
 
 .right-0{
@@ -3146,6 +3154,10 @@ input, textarea{
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pb-48{
+  padding-bottom: 12rem;
 }
 
 .pb-6{
