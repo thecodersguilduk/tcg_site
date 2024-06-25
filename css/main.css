@@ -1310,6 +1310,10 @@ input, textarea{
   left: -225px;
   top: 80px;
 }
+.pattern-8 {
+  left: -225px;
+  top: 80px;
+}
 #home .pattern-9 {
   right: -230px;
   bottom: 55px;
@@ -1517,7 +1521,7 @@ input, textarea{
   left: 45%;
   z-index: 1;
 }
-#course .pattern-417 {
+.pattern-417 {
   z-index: 1;
   top: 15%;
   right: 10%;
@@ -2171,6 +2175,10 @@ input, textarea{
   height: 16rem;
 }
 
+.h-7{
+  height: 1.75rem;
+}
+
 .h-96{
   height: 24rem;
 }
@@ -2329,6 +2337,10 @@ input, textarea{
 
 .max-w-none{
   max-width: none;
+}
+
+.max-w-prose{
+  max-width: 65ch;
 }
 
 .max-w-screen-xl{
