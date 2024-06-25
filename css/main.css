@@ -2171,10 +2171,6 @@ input, textarea{
   height: 16rem;
 }
 
-.h-7{
-  height: 1.75rem;
-}
-
 .h-96{
   height: 24rem;
 }
@@ -2761,10 +2757,6 @@ input, textarea{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.bg-\[\#16aedb0d\]{
-  background-color: #16aedb0d;
 }
 
 .bg-blue-100{
