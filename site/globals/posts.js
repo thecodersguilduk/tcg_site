@@ -196,7 +196,51 @@ const serializers = {
                     )
                 )
             )
+          ),
+    leadGenFormEmbed: (({node: { title }}) => y('div', { id: 'contact', className: 'overflow-hidden w-full md:mx-auto not-on-print'},
+    y('div', { className: 'overflow-hidden w-full md:mx-auto not-on-print'},
+      y('div',
+        y('h2', { innerHTML: title })
+        ),
+        y('form', { method: 'POST', action: '/thanks-send-info', name: 'blog-eoi', className: 'relative', attrs: {netlify: true} },
+          y('div', { innerHTML: 'Required', className: 'required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden' }),
+          y('div',
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'name', className: 'sr-only', innerHTML: 'Name' }),
+                y('div', { className: 'relative' },
+                  y('input', { id: 'name', type: 'text', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Your Name*', maxlength: 50 }, { attrs: { 'required': '', 'data-regex': '^[a-zA-Z ]+$', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only alphabetical values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'email', className: 'sr-only', innerHTML: 'Email'}),
+                y('div', { className: 'relative' },
+                  y('input', { id: 'email', type: 'email', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Email*', maxlength: 50 }, { attrs: { 'required': '', 'data-regex': '\\S+@\\S+\\.\\S+', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Please check if provided email is correct', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'phone', className: 'sr-only', innerHTML: 'Phone' }),
+                y('div', { className: 'relative' },
+                  y('input', { id: 'phone', type: 'text', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Phone', maxlength: 14 }, { attrs: { 'data-regex': '^[+0-9]+$', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only numeric values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'company', className: 'sr-only', innerHTML: 'Company Name' }),
+                y('div', { className: 'relative' },
+                  y('input', { id: 'company', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Company Name*' }, { attrs: { 'required': ''}}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              )
+            ),
+            y('div',
+              y('button', { className: 'contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out', id: 'submit', type: 'submit', innerHTML: 'Send Enquiry'})
+            )
           )
+      )
+  )
+)
 
   }
 }

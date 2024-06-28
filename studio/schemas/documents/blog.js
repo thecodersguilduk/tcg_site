@@ -82,7 +82,8 @@ export default {
         { type: 'newsletter' },
         { type: 'form' },
         { type: 'youtubeEmbed' },
-        { type: 'calendlyEmbed' }
+        { type: 'calendlyEmbed' },
+        { type: 'leadGenFormEmbed' },
       ]
     }
   ],
