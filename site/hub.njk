@@ -17,6 +17,7 @@ title: SME Growth Hub
   </section>
   {% include './includes/components/hub/header.njk' %}
 
+  <!-- intro -->
   <section class="flex flex-col items-start px-48 pt-60">
     <div class="flex flex-col md:flex-row md:pl-28 justify-between items-center">
         <div class="flex flex-col items-start gap-12 shrink-0 w-5/12">
@@ -53,7 +54,7 @@ title: SME Growth Hub
 
   </section>
 
-
+  <!-- featured courses -->
   <section class="w-full bg-gradient-to-r from-blue-100 to-blue-200 py-16 px-48">
     <h2 class="text-white text-center w-full">Featured Courses and Apprenticeships</h2>
     <p>Explore our range of training programs designed to meet the evolving needs of the tech industry</p>
@@ -63,4 +64,74 @@ title: SME Growth Hub
     </div>
     <h2 class="text-white text-center">Meet the Trainers</h2>
     {% include './includes/components/hub/trainers.njk' %}
+  </section>
+
+  <!-- success stories -->
+
+  <section class="flex flex-col items-start gap-4 px-48 py-12 bg-grey-100">
+    <div class="max-w-3xl mx-auto flex">
+      <div class="w/6/12">
+        <div class="flex flex-col items-start gap-8">
+          <h2 class="m-0">Success Stories</h2>
+          <p>See how our training has transformed businesses</p>
+        </div>
+        <div class="bg-white p-8 items-start gap-4 absolute w-6/12 rounded bottom-0 right-0 overflow-hidden">
+          <div class="relative">
+            <object aria-hidden="true" type="image/svg+xml" data="../images/patterns/8.svg" class="absolute top-0 right-0 overflow-hidden pattern pattern-4"></object>
+            <img src="../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" class="w-48 h-14">
+            <p class="text-xl">“Partnering with The Coders Guild has not only upskilled our team but ingrained a culture of innovation and agility in our operations. Our turnover increased significantly thanks to their funded training programs.”</p>
+            <p class="text-blue-100 text-lg font-bold">Sam, Brand Ambition</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-6/12">
+        <img src="../images/testimonials/sam-brand-ambition.jpeg" alt="Brand Ambition Logo" class="rounded shadow h-full object-cover">
+      </div>
+    </div> 
+  </section>
+
+  <!-- getting started -->
+  <section class="flex flex-col items-center px-48 py-12 self-stretch bg-grey-100">
+    <div class="flex flex-col gap-4">
+      <h2 class="text-center font-3xl font-bold leading-lg">Getting Started</h2>
+      <p class="text-lg text-center">Ready to transform your team? Follow these simple steps:</p>
+    </div>
+    <div class="max-w-9xl mx-auto grid grid-cols-4 justify-between items-start">
+      <div class="flex flex-col items-start gap-8 shrink-0">
+        <div class="flex h-24 justify-center items-start self-stretch">
+          <img class="h-24" src="../images/icons/Conversation.svg" alt="Get in touch with TCG">
+        </div>
+        <div class="text-center">
+          <p>1. Get in Touch</p>
+          <p>Use our chat feature or fill out the contact form.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-start gap-8 shrink-0">
+        <div class="flex h-24 justify-center items-start self-stretch">
+          <img class="h-24" src="../images/icons/session_icon.svg" alt="Get in touch with TCG">
+        </div>
+        <div class="text-center">
+          <p>1. Get in Touch</p>
+          <p>Use our chat feature or fill out the contact form.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-start gap-8 shrink-0">
+        <div class="flex h-24 justify-center items-start self-stretch">
+          <img class="h-24" src="../images/icons/part_time_icon.svg" alt="Get in touch with TCG">
+        </div>
+        <div class="text-center">
+          <p>1. Get in Touch</p>
+          <p>Use our chat feature or fill out the contact form.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-start gap-8 shrink-0">
+        <div class="flex h-24 justify-center items-start self-stretch">
+          <img class="h-24" src="../images/icons/part_time_icon.svg" alt="Get in touch with TCG">
+        </div>
+        <div class="text-center">
+          <p>1. Get in Touch</p>
+          <p>Use our chat feature or fill out the contact form.</p>
+        </div>
+      </div>
+    </div>
   </section>
