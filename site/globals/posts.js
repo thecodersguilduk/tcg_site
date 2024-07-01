@@ -200,7 +200,7 @@ const serializers = {
     leadGenFormEmbed: (({node: { title }}) => y('div', { id: 'contact', className: 'overflow-hidden w-full md:mx-auto not-on-print'},
     y('div', { className: 'overflow-hidden w-full md:mx-auto not-on-print'},
       y('div',
-        y('h2', { innerHTML: title })
+        y('h3', { innerHTML: 'Get in Touch' })
         ),
         y('form', { method: 'POST', action: '/thanks-send-info', name: 'blog-eoi', className: 'relative', attrs: {netlify: true} },
           y('div', { innerHTML: 'Required', className: 'required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden' }),
