@@ -1686,12 +1686,20 @@ input, textarea{
   inset: 0;
 }
 
+.-bottom-1\/2{
+  bottom: -50%;
+}
+
 .-bottom-20{
   bottom: -5rem;
 }
 
 .-left-2{
   left: -0.5rem;
+}
+
+.-left-4{
+  left: -1rem;
 }
 
 .-top-4{
@@ -1704,6 +1712,10 @@ input, textarea{
 
 .left-0{
   left: 0;
+}
+
+.left-1\/4{
+  left: 25%;
 }
 
 .left-2\/4{
@@ -1720,6 +1732,10 @@ input, textarea{
 
 .top-1{
   top: 0.25rem;
+}
+
+.top-4{
+  top: 1rem;
 }
 
 .isolate{
@@ -3555,6 +3571,12 @@ input, textarea{
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
