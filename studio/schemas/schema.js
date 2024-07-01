@@ -21,6 +21,7 @@ import newsletter from "./documents/components/newsletter";
 import form from "./documents/components/form";
 import locations from "./documents/locations";
 import youtube from "./documents/components/youtubeEmbed";
+import leadGenFormEmbed from "./documents/components/formEmbed";
 
 
 export default [
@@ -48,4 +49,5 @@ export default [
     interviewQuestions,
     locations,
     youtube,
+    leadGenFormEmbed
   ]
