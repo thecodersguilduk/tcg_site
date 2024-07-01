@@ -2207,6 +2207,10 @@ input, textarea{
   height: 24rem;
 }
 
+.h-\[1400px\]{
+  height: 1400px;
+}
+
 .h-auto{
   height: auto;
 }
@@ -2518,6 +2522,10 @@ input, textarea{
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-24{
+  gap: 6rem;
 }
 
 .gap-3{
