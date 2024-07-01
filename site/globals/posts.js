@@ -213,6 +213,13 @@ const serializers = {
                 )
               ),
               y('div', { className: 'mb-4' },
+              y('label', { for: 'company', className: 'sr-only', innerHTML: 'Company Name' }),
+              y('div', { className: 'relative' },
+                y('input', { name: 'company', id: 'company', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Company Name*' }, { attrs: { 'required': ''}}),
+                y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'aria-hidden': 'false', 'role': 'alert' }})
+              )
+            ),
+              y('div', { className: 'mb-4' },
                 y('label', { for: 'email', className: 'sr-only', innerHTML: 'Email'}),
                 y('div', { className: 'relative' },
                   y('input', { name: 'email', id: 'email', type: 'email', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Email*', maxlength: 50 }, { attrs: { 'required': '', 'data-regex': '\\S+@\\S+\\.\\S+', 'data-valid': false }}),
@@ -227,12 +234,12 @@ const serializers = {
                 )
               ),
               y('div', { className: 'mb-4' },
-                y('label', { for: 'company', className: 'sr-only', innerHTML: 'Company Name' }),
-                y('div', { className: 'relative' },
-                  y('input', { name: 'company', id: 'company', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Company Name*' }, { attrs: { 'required': ''}}),
-                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'aria-hidden': 'false', 'role': 'alert' }})
-                )
+              y('label', { for: 'message', className: 'sr-only', innerHTML: 'Message' }),
+              y('div', { className: 'relative' },
+                y('textarea', { name: 'message', id: 'message', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Add a message - if you like!', rows: 3 },),
+                y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only numeric values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
               )
+            ),
             ),
             y('div',
               y('button', { className: 'contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out', id: 'submit', type: 'submit', innerHTML: 'Send Enquiry'})
