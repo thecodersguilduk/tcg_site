@@ -3,135 +3,36 @@ layout: default
 title: SME Growth Hub
 ---
 
-<section id="hub-cta-header"class="fixed top-0 bg-white flex space-between mx-auto z-50 shadow py-2 lg:py-4 w-full">
-    <div class="flex inner justify-between items-center">
-      <div class="flex items-center">
-        <div class="logo mr-8 hidden sm:block">
-          <img class="block h-10 md:h-10 w-auto" src="../../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" alt="The Coders Guild Logo">
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row">
-        <a href="#" class="rounded inline-flex justify-center items-center p-2 gap-2 bg-gradient-to-r from-red-1000 to-purple-1000"><span class="text-white font-bold rounded whitespace-no-wrap text-xs lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
+<section id="course-cta-header" class="fixed top-0 bg-white flex space-between mx-auto z-50 shadow py-2 lg:py-4 w-full">
+  <div class="flex inner justify-between items-center">
+    <div class="flex items-center">
+      <div class="logo mr-8 hidden sm:block">
+        <img class="block h-10 md:h-10 w-auto" src="../../../images/tcg-logo/Blue/The_Coders_Guild_Logo_Blue.svg" alt="The Coders Guild Logo">
       </div>
     </div>
-  </section>
-  {% include './includes/components/hub/header.njk' %}
-
-  <!-- intro -->
-  <section class="flex flex-col items-start px-48 pt-60">
-    <div class="flex flex-col md:flex-row md:pl-28 justify-between items-center">
-        <div class="flex flex-col items-start gap-12 shrink-0 w-5/12">
-            <h2>Why Upskill Your Team</h2>
-            <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
-            <ul>
-                <li>Enhance productivity and efficiency</li>
-                <li>Boost employee morale and retention</li>
-                <li>Increase your team's billable rate with advanced tech skills</li>
-            </ul>
-            <a href="#" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
-        </div>
-        <div class="bg-grey-100 grid relative w-6/12">
-            <object aria-hidden="true" type="image/svg+xml" data="../images/patterns/8.svg" class="absolute pattern pattern-4"></object>
-            <img class="object-cover h-auto w-8/12 justify-self-start" src="../images/learner-images/coders-training.jpg" alt="Some training from TCG">
-        </div>
+    <div class="flex flex-col sm:flex-row">
+      <a href="#" class="rounded inline-flex justify-center items-center p-2 gap-2 bg-gradient-to-r from-red-1000 to-purple-1000"><span class="text-white font-bold rounded whitespace-no-wrap text-xs lg:text-md">Book a Free Consultation<i class="ml-2 fa-solid fa-chevron-right"></i></span></a>
     </div>
+  </div>
+</section>
 
-    <div class="flex flex-col md:flex-row md:pl-28 justify-between">
-        <div class="bg-grey-100">
-            <img class="object-cover h-auto w-8/12" src="../images/learner-images/coders-training.jpg" alt="Some training from TCG">
-        </div>
-        <div class="flex flex-col items-start gap-12">
-            <h2>Why Upskill Your Team</h2>
-            <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
-            <ul>
-                <li>Enhance productivity and efficiency</li>
-                <li>Boost employee morale and retention</li>
-                <li>Increase your team's billable rate with advanced tech skills</li>
-            </ul>
-            <a href="#" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">Book Your FREE Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
-        </div>
-    </div>
-
-  </section>
-
-  <!-- featured courses -->
-  <section class="w-full bg-gradient-to-r from-blue-100 to-blue-200 py-16 px-48">
-    <h2 class="text-white text-center w-full">Featured Courses and Apprenticeships</h2>
-    <p>Explore our range of training programs designed to meet the evolving needs of the tech industry</p>
-    <div id="course-grid-container">
-        {% include './includes/components/global/course-carousel.njk' %}
-
-    </div>
-    <h2 class="text-white text-center">Meet the Trainers</h2>
-    {% include './includes/components/hub/trainers.njk' %}
-  </section>
-
-  <!-- success stories -->
-
-  <section class="flex flex-col items-start gap-4 px-48 py-12 bg-grey-100">
-    <div class="max-w-3xl mx-auto flex">
-      <div class="w/6/12">
-        <div class="flex flex-col items-start gap-8">
-          <h2 class="m-0">Success Stories</h2>
-          <p>See how our training has transformed businesses</p>
-        </div>
-        <div class="bg-white p-8 items-start gap-4 absolute w-6/12 rounded bottom-0 right-0 overflow-hidden">
-          <div class="relative">
-            <object aria-hidden="true" type="image/svg+xml" data="../images/patterns/8.svg" class="absolute top-0 right-0 overflow-hidden pattern pattern-4"></object>
-            <img src="../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" class="w-48 h-14">
-            <p class="text-xl">“Partnering with The Coders Guild has not only upskilled our team but ingrained a culture of innovation and agility in our operations. Our turnover increased significantly thanks to their funded training programs.”</p>
-            <p class="text-blue-100 text-lg font-bold">Sam, Brand Ambition</p>
-          </div>
-        </div>
-      </div>
-      <div class="w-6/12">
-        <img src="../images/testimonials/sam-brand-ambition.jpeg" alt="Brand Ambition Logo" class="rounded shadow h-full object-cover">
-      </div>
-    </div> 
-  </section>
-
-  <!-- getting started -->
-  <section class="flex flex-col items-center px-48 py-12 self-stretch bg-grey-100">
-    <div class="flex flex-col gap-4">
-      <h2 class="text-center font-3xl font-bold leading-lg">Getting Started</h2>
-      <p class="text-lg text-center">Ready to transform your team? Follow these simple steps:</p>
-    </div>
-    <div class="max-w-9xl mx-auto grid grid-cols-4 justify-between items-start">
-      <div class="flex flex-col items-start gap-8 shrink-0">
-        <div class="flex h-24 justify-center items-start self-stretch">
-          <img class="h-24" src="../images/icons/Conversation.svg" alt="Get in touch with TCG">
-        </div>
-        <div class="text-center">
-          <p>1. Get in Touch</p>
-          <p>Use our chat feature or fill out the contact form.</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-start gap-8 shrink-0">
-        <div class="flex h-24 justify-center items-start self-stretch">
-          <img class="h-24" src="../images/icons/session_icon.svg" alt="Get in touch with TCG">
-        </div>
-        <div class="text-center">
-          <p>1. Get in Touch</p>
-          <p>Use our chat feature or fill out the contact form.</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-start gap-8 shrink-0">
-        <div class="flex h-24 justify-center items-start self-stretch">
-          <img class="h-24" src="../images/icons/part_time_icon.svg" alt="Get in touch with TCG">
-        </div>
-        <div class="text-center">
-          <p>1. Get in Touch</p>
-          <p>Use our chat feature or fill out the contact form.</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-start gap-8 shrink-0">
-        <div class="flex h-24 justify-center items-start self-stretch">
-          <img class="h-24" src="../images/icons/part_time_icon.svg" alt="Get in touch with TCG">
-        </div>
-        <div class="text-center">
-          <p>1. Get in Touch</p>
-          <p>Use our chat feature or fill out the contact form.</p>
-        </div>
+<!-- hero section -->
+<section class="bg-blue-100/5 relative overflow-hidden">
+  <object class="absolute -left-4 top-4 pattern" data="../images/patterns/2.svg" type="image/svg+xml"></object>
+  <div class="relative px-4 py-32">
+    <div class="relative mb-16">
+      <img src="../images/learner-images/learners-in-agile-software-development.jpeg" alt="Learners in agile software development" class="rounded shadow-lg" />
+      <div class="absolute -bottom-1/2 left-1/4">
+        <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
+        <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
       </div>
     </div>
-  </section>
+    <div class="flex flex-col items-start gap-8">
+      <img src="" alt="The Coders Guild Small Logo" class="">
+      <h2>Empower Your SME with Cutting-Edge Tech Skills</h2>
+      <p>Enhance your team’s capabilities with government-funded tech training. Book a free consultation today and discover how our bespoke training plans can upskill your team and boost productivity.</p>
+      <a href="#" class="flex justify-center items-center self-stretch bg-gradient-to-r from-red-1000 to-purple-1000 px-4 py-4 text-white font-bold rounded shadow-lg">Book a Free Consultation <i class="ml-2 fa-solid fa-chevron-right"></i></a>
+
+    </div>
+  </div>
+</section>

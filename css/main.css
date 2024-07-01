@@ -2287,10 +2287,6 @@ input, textarea{
   width: 50%;
 }
 
-.w-8\/12{
-  width: 66.666667%;
-}
-
 .w-\[48rem\]{
   width: 48rem;
 }
@@ -3042,11 +3038,6 @@ input, textarea{
   padding-right: 1rem;
 }
 
-.px-48{
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -3255,10 +3246,6 @@ input, textarea{
 
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pt-60{
-  padding-top: 15rem;
 }
 
 .pt-64{
@@ -4611,9 +4598,6 @@ fieldset a {
   }
   .md\:pb-8{
     padding-bottom: 2rem;
-  }
-  .md\:pl-28{
-    padding-left: 7rem;
   }
   .md\:pl-6{
     padding-left: 1.5rem;
