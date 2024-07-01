@@ -1686,6 +1686,10 @@ input, textarea{
   inset: 0;
 }
 
+.-bottom-1\/2{
+  bottom: -50%;
+}
+
 .-bottom-1\/4{
   bottom: -25%;
 }
@@ -1696,10 +1700,6 @@ input, textarea{
 
 .-left-2{
   left: -0.5rem;
-}
-
-.-left-4{
-  left: -1rem;
 }
 
 .-top-4{
@@ -1718,6 +1718,10 @@ input, textarea{
   left: 50%;
 }
 
+.left-\[-10rem\]{
+  left: -10rem;
+}
+
 .left-\[5\%\]{
   left: 5%;
 }
@@ -1734,8 +1738,8 @@ input, textarea{
   top: 0.25rem;
 }
 
-.top-4{
-  top: 1rem;
+.top-\[5rem\]{
+  top: 5rem;
 }
 
 .isolate{
@@ -3168,12 +3172,20 @@ input, textarea{
   padding-bottom: 6rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
 
 .pb-6{
   padding-bottom: 1.5rem;
+}
+
+.pb-64{
+  padding-bottom: 16rem;
 }
 
 .pb-7{
@@ -3230,6 +3242,10 @@ input, textarea{
 
 .pr-6{
   padding-right: 1.5rem;
+}
+
+.pt-0{
+  padding-top: 0px;
 }
 
 .pt-10{
