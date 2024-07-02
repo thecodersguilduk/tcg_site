@@ -1686,10 +1686,6 @@ input, textarea{
   inset: 0;
 }
 
-.-bottom-1\/2{
-  bottom: -50%;
-}
-
 .-bottom-1\/4{
   bottom: -25%;
 }
@@ -1710,8 +1706,16 @@ input, textarea{
   bottom: 0;
 }
 
+.bottom-1{
+  bottom: 0.25rem;
+}
+
 .left-0{
   left: 0;
+}
+
+.left-1{
+  left: 0.25rem;
 }
 
 .left-2\/4{
@@ -2207,8 +2211,8 @@ input, textarea{
   height: 24rem;
 }
 
-.h-\[1400px\]{
-  height: 1400px;
+.h-\[1475px\]{
+  height: 1475px;
 }
 
 .h-auto{
