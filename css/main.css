@@ -1686,10 +1686,6 @@ input, textarea{
   inset: 0;
 }
 
-.-bottom-1\/4{
-  bottom: -25%;
-}
-
 .-bottom-20{
   bottom: -5rem;
 }
@@ -1706,16 +1702,12 @@ input, textarea{
   bottom: 0;
 }
 
-.bottom-1{
-  bottom: 0.25rem;
+.bottom-\[-20\%\]{
+  bottom: -20%;
 }
 
 .left-0{
   left: 0;
-}
-
-.left-1{
-  left: 0.25rem;
 }
 
 .left-2\/4{
@@ -1726,12 +1718,20 @@ input, textarea{
   left: -10rem;
 }
 
+.left-\[10\%\]{
+  left: 10%;
+}
+
 .left-\[5\%\]{
   left: 5%;
 }
 
 .right-0{
   right: 0;
+}
+
+.right-\[10\%\]{
+  right: 10%;
 }
 
 .top-0{
