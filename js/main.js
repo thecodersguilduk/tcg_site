@@ -909,15 +909,17 @@ var handleTabs = function () {
 __webpack_require__.r(__webpack_exports__);
 var courseGridSlider = function () {
   var courseGridSlider = document.querySelector('#course-grid');
-  console.log(courseGridSlider);
   if (!courseGridSlider) return;
+  var parent = document.getElementById('course-grid-container');
+  var slidesToShow = parent.getAttribute('data-cards') || 2;
+  console.log(slidesToShow);
   return $(courseGridSlider).slick({
     dots: true,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     appendDots: $('.dots'),
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: slidesToShow,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2000,

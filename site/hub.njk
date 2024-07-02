@@ -18,7 +18,7 @@ title: SME Growth Hub
 
 <!-- hero section -->
 <section class="relative flex flex-col bg-white gap-10">
-  <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center px-4 lg:px-48 pb-32">
+  <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center lg:gap-10 px-4 lg:px-48 pb-32">
     <div class="relative py-32 overflow-hidden">
       <object class="absolute left-[-10rem] top-[5rem] pattern" data="../images/patterns/2.svg" type="image/svg+xml"></object>
       <div class="relative">
@@ -36,7 +36,7 @@ title: SME Growth Hub
       {% include './includes/components/hub/consultation-button.njk' %}
     </div>
   </div>
-  <div class="absolute bottom-0 left-[50%] translate-x-1/2 flex p-8 items-start gap-4 bg-white rounded shadow-lg max-w-xs mx-auto">
+  <div class="absolute bottom-0 left-[50%] -translate-x-1/2 translate-y-1/2 flex p-8 items-start gap-4 bg-white rounded shadow-lg max-w-[1000px] mx-auto">
     <div class="flex flex-col items-center gap-8 flex-1">
       <h2 class="mb-0">Welcome to The Coders Guild</h2>
       <p>In today's fast-paced business environment, staying ahead of the curve is essential. At The Coders Guild, we specialise in transforming your team’s potential through expert-led, government-funded tech training. Whether you're looking to upskill your existing team or onboard new talent, our tailored training plans ensure your business thrives.</p>
@@ -45,12 +45,12 @@ title: SME Growth Hub
 </section>
 
 <!-- Why Upskill -->
-<section class="flex pt-0 px-4 pb-8">
-  <div class="flex flex-col items-start gap-10">
-    <div class="flex flex-col items-start gap-10">
+<section class="flex pt-32 px-4 lg:px-48 mx-auto pb-8">
+  <div class="flex flex-col lg:flex-row items-start gap-10">
+    <div class="flex flex-col items-start gap-8 decorated-list">
       <h2 class="mb-0">Why Upskill Your Team?</h2>
       <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
-      <ul>
+      <ul class="font-semibold">
         <li>Enhance productivity and efficiency.</li>
         <li>Boost employee morale and retention.</li>
         <li>Increase your team’s billable rate with advanced tech skills.</li>
@@ -62,11 +62,11 @@ title: SME Growth Hub
 </section>
 
 <!--Our Approach -->
-<section class="flex flex-col items-center py-8 px-4">
-  <div class="flex flex-col items-start gap-10">
+<section class="flex flex-col lg:flex-row items-center py-8 px-4 lg:px-48 mx-auto">
+  <div class="flex flex-col items-start gap-8 decorated-list">
     <h2 class="mb-0">Our Approach to Training</h2>
     <p>At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>
-    <ul>
+    <ul class="font-semibold">
       <li>Customised Learning Journeys: Training programs designed to fit your business processes and technologies.</li>
       <li>Industry-Led Curriculum: Courses crafted by professionals actively working in the field.</li>
       <li>Practical Skills Application: Focused on real-world application and immediate relevance.</li>
@@ -76,14 +76,14 @@ title: SME Growth Hub
 </section>
 
 <!-- Featured Courses and Meet The Trainers -->
-<section class="flex flex-col items-start justify-center py-16 px-4 gap-24 bg-gradient-to-r from-blue-100 to-blue-200">
-  <div class="flex flex-col items-start gap-10 self-stretch">
-    <div class="flex flex-col justify-center items-center gap-4 text-white text-center">
-      <h2 class="font-bold">Featured Courses and Apprenticeships</h2>
-      <p>Explore our range of training programs designed to meet the evolving needs of the tech industry:</p>
+<section class="flex flex-col items-start justify-center py-16 px-4 lg:px-48 gap-24 bg-gradient-to-r from-blue-100 to-blue-200">
+  <div class="flex flex-col gap-10 self-stretch">
+    <div class="flex flex-col justify-center items-center gap-2 text-white text-center">
+      <h2 class="font-bold text-white text-center">Featured Courses and Apprenticeships</h2>
+      <p class="text-white text-center">Explore our range of training programs designed to meet the evolving needs of the tech industry:</p>
     </div>
-    <div class="">
-      {% include './includes/components/global/course-grid.njk' %}
+    <div id="course-grid-container" data-cards="4">
+      {% include './includes/components/global/course-carousel.njk' %}
     </div>
   </div>
   <div class=""></div>
