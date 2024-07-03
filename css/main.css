@@ -1702,8 +1702,8 @@ input, textarea{
   bottom: 0;
 }
 
-.bottom-\[-20\%\]{
-  bottom: -20%;
+.bottom-\[-10\%\]{
+  bottom: -10%;
 }
 
 .left-0{
@@ -3176,6 +3176,11 @@ input, textarea{
   padding-bottom: 12rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3307,16 +3312,16 @@ input, textarea{
   padding-top: 6rem;
 }
 
-.pt-32{
-  padding-top: 8rem;
-}
-
 .pt-4{
   padding-top: 1rem;
 }
 
 .pt-6{
   padding-top: 1.5rem;
+}
+
+.pt-60{
+  padding-top: 15rem;
 }
 
 .pt-64{
@@ -4752,6 +4757,9 @@ fieldset a {
   .lg\:top-100{
     top: 100px;
   }
+  .lg\:order-1{
+    order: 1;
+  }
   .lg\:order-2{
     order: 2;
   }
@@ -4973,6 +4981,9 @@ fieldset a {
   }
   .lg\:pl-10{
     padding-left: 2.5rem;
+  }
+  .lg\:pl-32{
+    padding-left: 8rem;
   }
   .lg\:pr-0{
     padding-right: 0px;

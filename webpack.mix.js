@@ -88,7 +88,8 @@ mix
                     'slick-slide slick-active',
                     'slick-dots',
                     'slick-active',
-                    'bg-gradient-to-r'
+                    'bg-gradient-to-r',
+                    
 
                 ]
             })
