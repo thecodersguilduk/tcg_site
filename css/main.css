@@ -1431,6 +1431,10 @@ input, textarea{
   margin: 0 auto;
   max-width: 1000px;
 }
+#hub .trustist-box {
+  bottom: -10%;
+  left: 5%;
+}
 #hub .decorated-ul li {
   list-style: none;
   list-style-position: outside;
