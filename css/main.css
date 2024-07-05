@@ -1452,7 +1452,6 @@ input, textarea{
   right: -8rem;
 }
 #hub .testimonial-body {
-  position: absolute;
   bottom: 6rem;
   left: 16rem;
   max-width: 614px;
@@ -2198,6 +2197,10 @@ input, textarea{
   height: 6rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -2236,10 +2239,6 @@ input, textarea{
 
 .h-96{
   height: 24rem;
-}
-
-.h-\[562px\]{
-  height: 562px;
 }
 
 .h-auto{
@@ -2553,10 +2552,6 @@ input, textarea{
 
 .gap-12{
   gap: 3rem;
-}
-
-.gap-14{
-  gap: 3.5rem;
 }
 
 .gap-16{
@@ -3132,11 +3127,6 @@ input, textarea{
   padding-right: 1.5rem;
 }
 
-.px-64{
-  padding-left: 16rem;
-  padding-right: 16rem;
-}
-
 .px-7{
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -3249,10 +3239,6 @@ input, textarea{
   padding-bottom: 1.5rem;
 }
 
-.pb-60{
-  padding-bottom: 15rem;
-}
-
 .pb-7{
   padding-bottom: 1.75rem;
 }
@@ -3263,6 +3249,10 @@ input, textarea{
 
 .pb-8{
   padding-bottom: 2rem;
+}
+
+.pb-80{
+  padding-bottom: 20rem;
 }
 
 .pb-9{
@@ -3337,16 +3327,8 @@ input, textarea{
   padding-top: 1rem;
 }
 
-.pt-48{
-  padding-top: 12rem;
-}
-
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pt-60{
-  padding-top: 15rem;
 }
 
 .pt-64{
@@ -3355,6 +3337,10 @@ input, textarea{
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-80{
+  padding-top: 20rem;
 }
 
 .text-left{
@@ -3395,10 +3381,6 @@ input, textarea{
 
 .text-\[21px\]{
   font-size: 21px;
-}
-
-.text-\[50px\]{
-  font-size: 50px;
 }
 
 .text-base{
@@ -3456,6 +3438,10 @@ input, textarea{
 
 .leading-112{
   line-height: 112%;
+}
+
+.leading-118{
+  line-height: 118%;
 }
 
 .leading-2xl{
@@ -4847,6 +4833,9 @@ fieldset a {
   .lg\:h-14{
     height: 3.5rem;
   }
+  .lg\:h-40{
+    height: 10rem;
+  }
   .lg\:h-48{
     height: 12rem;
   }
@@ -4873,6 +4862,9 @@ fieldset a {
   }
   .lg\:w-4\/12{
     width: 33.333333%;
+  }
+  .lg\:w-40{
+    width: 10rem;
   }
   .lg\:w-5\/12{
     width: 41.666667%;
@@ -4940,8 +4932,8 @@ fieldset a {
   .lg\:justify-between{
     justify-content: space-between;
   }
-  .lg\:gap-10{
-    gap: 2.5rem;
+  .lg\:gap-14{
+    gap: 3.5rem;
   }
   .lg\:gap-40{
     gap: 10rem;
@@ -4973,6 +4965,10 @@ fieldset a {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .lg\:px-64{
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -4993,6 +4989,10 @@ fieldset a {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -5004,6 +5004,9 @@ fieldset a {
   .lg\:py-56{
     padding-top: 14rem;
     padding-bottom: 14rem;
+  }
+  .lg\:pb-60{
+    padding-bottom: 15rem;
   }
   .lg\:pb-8{
     padding-bottom: 2rem;
@@ -5035,6 +5038,12 @@ fieldset a {
   .lg\:pt-4{
     padding-top: 1rem;
   }
+  .lg\:pt-48{
+    padding-top: 12rem;
+  }
+  .lg\:pt-60{
+    padding-top: 15rem;
+  }
   .lg\:text-left{
     text-align: left;
   }
@@ -5043,6 +5052,9 @@ fieldset a {
   }
   .lg\:text-5xl{
     font-size: 40px;
+  }
+  .lg\:text-6xl{
+    font-size: 60px;
   }
   .lg\:text-lg{
     font-size: 18px;
@@ -5108,6 +5120,9 @@ fieldset a {
   .xl\:items-stretch{
     align-items: stretch;
   }
+  .xl\:gap-10{
+    gap: 2.5rem;
+  }
   .xl\:bg-fixed{
     background-attachment: fixed;
   }
@@ -5150,6 +5165,9 @@ fieldset a {
   }
   .xl\:text-6xl{
     font-size: 60px;
+  }
+  .xl\:text-xl{
+    font-size: 20px;
   }
 }
 

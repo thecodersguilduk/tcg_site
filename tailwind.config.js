@@ -349,6 +349,7 @@ module.exports = {
 				'5xl': '48px',
 				'6xl': '56px',
 				'112': '112%',
+				'118': '118%',
 			},
 			listStyleType: {
 				none: 'none',
