@@ -49,10 +49,27 @@
     max-width: 614px;
   }
 
+  .decorated-list.white {
+    ul {
+      li {
+        list-style: none;
+        list-style-position: outside;
+        margin-bottom: 0;
+      }
+  
+      li::before {
+        content: url('/images/icons/white-icon-right.svg');
+        margin-right: 1rem;
+        display: inline-block;
+      }
+    }
+  }
+
   .decorated-ul {
       li {
         list-style: none;
         list-style-position: outside;
+        margin-bottom: 0;
       }
 
       li::before {

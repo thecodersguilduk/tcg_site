@@ -1457,9 +1457,20 @@ input, textarea{
   left: 16rem;
   max-width: 614px;
 }
+#hub .decorated-list.white ul li {
+  list-style: none;
+  list-style-position: outside;
+  margin-bottom: 0;
+}
+#hub .decorated-list.white ul li::before {
+  content: url("/images/icons/white-icon-right.svg");
+  margin-right: 1rem;
+  display: inline-block;
+}
 #hub .decorated-ul li {
   list-style: none;
   list-style-position: outside;
+  margin-bottom: 0;
 }
 #hub .decorated-ul li::before {
   content: url("/images/Chevron-Left-list.svg");
@@ -2381,14 +2392,6 @@ input, textarea{
 
 .max-w-\[1000px\]{
   max-width: 1000px;
-}
-
-.max-w-\[484px\]{
-  max-width: 484px;
-}
-
-.max-w-\[592px\]{
-  max-width: 592px;
 }
 
 .max-w-full{
@@ -3394,6 +3397,10 @@ input, textarea{
   font-size: 21px;
 }
 
+.text-\[50px\]{
+  font-size: 50px;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3802,19 +3809,6 @@ input, textarea{
   background-size: auto;
   margin-left: -40px;
   background-repeat: no-repeat;
-}
-
-.decorated-list.white ul li {
-  list-style: none;
-  list-style-position: outside;
-  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  line-height: 26px;
-  margin-bottom: 1rem;
-}
-.decorated-list.white ul li::before {
-  content: url("/images/icons/white-icon-right.svg");
-  margin-right: 1rem;
-  display: inline-block;
 }
 
 .header {
