@@ -1454,7 +1454,7 @@ input, textarea{
 #hub .testimonial-body {
   position: absolute;
   bottom: 6rem;
-  left: 3rem;
+  left: 16rem;
   max-width: 614px;
 }
 #hub .decorated-ul li {
@@ -2403,6 +2403,10 @@ input, textarea{
   max-width: none;
 }
 
+.max-w-screen-2xl{
+  max-width: 1536px;
+}
+
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -3073,10 +3077,6 @@ input, textarea{
   padding: 0.75rem;
 }
 
-.p-32{
-  padding: 8rem;
-}
-
 .p-4{
   padding: 1rem;
 }
@@ -3127,6 +3127,11 @@ input, textarea{
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-64{
+  padding-left: 16rem;
+  padding-right: 16rem;
 }
 
 .px-7{
@@ -4624,6 +4629,9 @@ fieldset a {
   }
   .md\:justify-start{
     justify-content: flex-start;
+  }
+  .md\:justify-center{
+    justify-content: center;
   }
   .md\:justify-between{
     justify-content: space-between;
