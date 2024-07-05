@@ -1447,6 +1447,16 @@ input, textarea{
   bottom: 11px;
   left: 0;
 }
+#hub .pattern.pattern-460 {
+  top: -4rem;
+  right: -8rem;
+}
+#hub .testimonial-body {
+  position: absolute;
+  bottom: 6rem;
+  left: 3rem;
+  max-width: 614px;
+}
 #hub .decorated-ul li {
   list-style: none;
   list-style-position: outside;
@@ -2381,10 +2391,6 @@ input, textarea{
   max-width: 592px;
 }
 
-.max-w-\[614px\]{
-  max-width: 614px;
-}
-
 .max-w-full{
   max-width: 100%;
 }
@@ -3067,6 +3073,10 @@ input, textarea{
   padding: 0.75rem;
 }
 
+.p-32{
+  padding: 8rem;
+}
+
 .p-4{
   padding: 1rem;
 }
@@ -3446,6 +3456,10 @@ input, textarea{
 
 .leading-4xl{
   line-height: 40px;
+}
+
+.leading-5{
+  line-height: 1.25rem;
 }
 
 .leading-5xl{
