@@ -49,8 +49,8 @@ body_class: hub
   
   <!-- Why Upskill -->
   <section class="flex pt-60 px-4 lg:px-48 mx-auto pb-8">
-    <div class="flex flex-col lg:flex-row items-start gap-10 xl:pl-32">
-      <div class="flex flex-col items-start gap-8 decorated-list">
+    <div class="flex flex-col lg:flex-row items-start gap-10 max-w-7xl mx-auto">
+      <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
         <h2 class="mb-0">Why Upskill Your Team?</h2>
         <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
         <ul class="font-semibold">
@@ -61,24 +61,23 @@ body_class: hub
         {% include './includes/components/hub/consultation-button.njk' %}
 
       </div>
-      <div class="bg-grey-2000 h-full w-full"></div>
+      <div class="bg-grey-2000 h-full w-full lg:w-6/12"></div>
     </div>
   </section>
   
   <!--Our Approach -->
-  <section class="flex py-8 px-4 lg:px-48 mx-auto">
-    <div class="flex flex-col lg:flex-row items-start gap-10 xl:pl-32">
-      <div class="flex flex-col items-start gap-8 decorated-list lg:order-2">
+  <section class="flex py-12 px-4 lg:px-48 mx-auto pb-8">
+    <div class="flex flex-col lg:flex-row items-start gap-10 max-w-7xl mx-auto">
+      <div class="flex flex-col items-start gap-8 decorated-list lg:order-2 lg:w-5/12">
         <h2 class="mb-0">Our Approach to Training</h2>
-        <p>At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>
+        <p class="text-wrap">At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>
         <ul class="font-semibold">
           <li>Customised Learning Journeys: Training programs designed to fit your business processes and technologies.</li>
           <li>Industry-Led Curriculum: Courses crafted by professionals actively working in the field.</li>
           <li>Practical Skills Application: Focused on real-world application and immediate relevance.</li>
         </ul>
-        {% include './includes/components/hub/consultation-button.njk' %}
       </div>
-      <div class="bg-grey-2000 h-full w-full"></div>
+      <div class="bg-grey-2000 h-full w-full lg:w-6/12"></div>
     </div>
   </section>
   
@@ -89,7 +88,11 @@ body_class: hub
         <h2 class="font-bold text-white text-center">Featured Courses and Apprenticeships</h2>
         <p class="text-white text-center">Explore our range of training programs designed to meet the evolving needs of the tech industry:</p>
       </div>
-      <div id="course-grid-container" data-cards="4">
+      <div id="course-grid-container" class="relative" data-cards="4">
+        <object class="absolute pattern pattern-12" data="../images/patterns/12.svg" type="image/svg+xml"></object>
+        <object class="absolute pattern pattern-1212" data="../images/patterns/11.svg" type="image/svg+xml"></object>
+
+
         {% include './includes/components/global/course-carousel.njk' %}
       </div>
     </div>
@@ -98,12 +101,30 @@ body_class: hub
       <div class="flex flex-col md:flex-row md:flex-wrap items-start justify-center gap-y-8 self-stretch mx-auto">
         {% for trainer in trainers %}
           <div class="flex flex-col py-0 px-8 justify-center items-center gap-6 lg:w-1/4">
-            <img src="{{ trainer.image }}" alt="{{ trainer.name }}'s profile picture" class="w-32 h-32 object-cover rounded-full">
-            <div class="flex flex-col gap-2">
-              <p class="text-white text-center">{{trainer.name}}</p>
+            <img src="{{ trainer.image }}" alt="{{ trainer.name }}'s profile picture" class="border-4 border-blue-100 w-32 h-32 object-cover rounded-full">
+            <div class="flex flex-col gap-2 leading-5">
+              <p class="text-white font-semibold text-center">{{trainer.name}}</p>
               <p class="text-white text-center">{{ trainer.occupation }}</p>
-              <div class="flex">
-              </div>
+              <div class="flex justify-center">
+                {% if trainer.linkedin %}
+                    <a href="{{ trainer.linkedin }}" class="p-2">
+                    <span class="sr-only">Linkedin</span>
+                    <img src="../../images/icons/linkedin.svg" class="h-4"/>
+                    </a>
+                {% endif %}
+                {% if trainer.twitter %}
+                    <a href="{{ trainer.twitter }}" class="p-2">
+                    <span class="sr-only">Twitter</span>
+                    <img src="../../images/icons/twitter.svg" class="h-4"/>
+                    </a>
+                {% endif %}
+                {% if trainer.github %}
+                    <a href="{{ trainer.github }}" class="p-2">
+                    <span class="sr-only">Github</span>
+                    <img src="../../images/icons/github.svg" class="h-4"/>
+                    </a>
+                {% endif %}
+            </div>
             </div>
           </div>
         {% endfor %}
