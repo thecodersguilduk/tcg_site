@@ -19,22 +19,24 @@ body_class: hub
 
 <div class="bg-grey-100">
   <section class="relative flex flex-col bg-white gap-10">
-    <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center lg:gap-10 px-4 lg:px-32 xl:px-48 pb-32">
-      <div class="relative py-48 lg:order-2 lg:w-7/12">
-        <object class="absolute pattern pattern-2" data="../images/patterns/2.svg" type="image/svg+xml"></object>
-        <div class="relative">
-          <img src="../images/learner-images/learners-in-agile-software-development.jpeg" alt="Learners in agile software development" class="relative rounded shadow-lg" />
-          <div class="absolute bottom-[-10%] left-[5%]">
-            <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
-            <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
+    <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-10 px-4 pt-48 pb-60">
+      <div class="max-w-5xl xl:max-w-9xl mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-10 lg:py-32 pt-32 pb-48">
+        <div class="relative lg:order-2 lg:w-7/12 mb-12 lg:mb-0" style="max-height: 516px;">
+          <object class="absolute pattern pattern-2" data="../images/patterns/2.svg" type="image/svg+xml"></object>
+          <div class="relative">
+            <img src="../images/learner-images/learners-in-agile-software-development.jpeg" alt="Learners in agile software development" class="relative rounded-lg shadow-lg w-full h-full object-cover" style="max-height: 516px;" />
+            <div class="absolute trustist-box">
+              <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
+              <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex flex-col items-start gap-4 max-w-2xl lg:content-center lg:order-1 lg:w-5/12">
-        <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover">
-        <h2 class="mb-0">Empower Your SME with Cutting-Edge Tech Skills</h2>
-        <p>Enhance your team’s capabilities with government-funded tech training. Book a free consultation today and discover how our bespoke training plans can upskill your team and boost productivity.</p>
-        {% include './includes/components/hub/consultation-button.njk' %}
+        <div class="flex flex-col lg:items-start gap-4 max-w-2xl lg:content-center lg:order-1 lg:w-5/12">
+          <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
+          <h2 class="mb-0">Empower Your SME with Cutting-Edge Tech Skills</h2>
+          <p>Enhance your team’s capabilities with government-funded tech training. Book a free consultation today and discover how our bespoke training plans can upskill your team and boost productivity.</p>
+          {% include './includes/components/hub/consultation-button.njk' %}
+        </div>
       </div>
     </div>
     <div class="hero-info">
@@ -47,7 +49,7 @@ body_class: hub
   
   <!-- Why Upskill -->
   <section class="flex pt-60 px-4 lg:px-48 mx-auto pb-8">
-    <div class="flex flex-col lg:flex-row items-start gap-10 lg:pl-32">
+    <div class="flex flex-col lg:flex-row items-start gap-10 xl:pl-32">
       <div class="flex flex-col items-start gap-8 decorated-list">
         <h2 class="mb-0">Why Upskill Your Team?</h2>
         <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
@@ -65,7 +67,7 @@ body_class: hub
   
   <!--Our Approach -->
   <section class="flex py-8 px-4 lg:px-48 mx-auto">
-    <div class="flex flex-col lg:flex-row items-start gap-10 lg:pl-32">
+    <div class="flex flex-col lg:flex-row items-start gap-10 xl:pl-32">
       <div class="flex flex-col items-start gap-8 decorated-list lg:order-2">
         <h2 class="mb-0">Our Approach to Training</h2>
         <p>At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>

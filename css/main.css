@@ -1425,7 +1425,7 @@ input, textarea{
   align-items: start;
   gap: 10px;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 24px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   width: 75%;
   margin: 0 auto;
@@ -1434,6 +1434,10 @@ input, textarea{
 #hub .trustist-box {
   bottom: -10%;
   left: 5%;
+}
+#hub .pattern.pattern-2 {
+  left: -10rem;
+  top: -4rem;
 }
 #hub .decorated-ul li {
   list-style: none;
@@ -1720,24 +1724,12 @@ input, textarea{
   bottom: 0;
 }
 
-.bottom-\[-10\%\]{
-  bottom: -10%;
-}
-
 .left-0{
   left: 0;
 }
 
 .left-2\/4{
   left: 50%;
-}
-
-.left-\[-10rem\]{
-  left: -10rem;
-}
-
-.left-\[5\%\]{
-  left: 5%;
 }
 
 .right-0{
@@ -1750,10 +1742,6 @@ input, textarea{
 
 .top-1{
   top: 0.25rem;
-}
-
-.top-\[5rem\]{
-  top: 5rem;
 }
 
 .isolate{
@@ -3184,16 +3172,6 @@ input, textarea{
   padding-bottom: 1rem;
 }
 
-.py-48{
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-}
-
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3233,16 +3211,20 @@ input, textarea{
   padding-bottom: 6rem;
 }
 
-.pb-32{
-  padding-bottom: 8rem;
-}
-
 .pb-4{
   padding-bottom: 1rem;
 }
 
+.pb-48{
+  padding-bottom: 12rem;
+}
+
 .pb-6{
   padding-bottom: 1.5rem;
+}
+
+.pb-60{
+  padding-bottom: 15rem;
 }
 
 .pb-7{
@@ -3325,8 +3307,16 @@ input, textarea{
   padding-top: 6rem;
 }
 
+.pt-32{
+  padding-top: 8rem;
+}
+
 .pt-4{
   padding-top: 1rem;
+}
+
+.pt-48{
+  padding-top: 12rem;
 }
 
 .pt-6{
@@ -4927,6 +4917,9 @@ fieldset a {
   .lg\:justify-center{
     justify-content: center;
   }
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
   .lg\:gap-10{
     gap: 2.5rem;
   }
@@ -4977,6 +4970,10 @@ fieldset a {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   .lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -4994,9 +4991,6 @@ fieldset a {
   }
   .lg\:pl-10{
     padding-left: 2.5rem;
-  }
-  .lg\:pl-32{
-    padding-left: 8rem;
   }
   .lg\:pr-0{
     padding-right: 0px;
@@ -5071,6 +5065,9 @@ fieldset a {
   .xl\:w-96{
     width: 24rem;
   }
+  .xl\:max-w-9xl{
+    max-width: 100rem;
+  }
   .xl\:max-w-none{
     max-width: none;
   }
@@ -5131,6 +5128,9 @@ fieldset a {
   }
   .xl\:pb-32{
     padding-bottom: 8rem;
+  }
+  .xl\:pl-32{
+    padding-left: 8rem;
   }
   .xl\:text-6xl{
     font-size: 60px;
