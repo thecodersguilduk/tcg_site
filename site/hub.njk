@@ -42,7 +42,7 @@ body_class: hub
     <div class="hero-info">
       <div class="flex flex-col items-center gap-8 flex-1">
         <h2 class="mb-0">Welcome to The Coders Guild</h2>
-        <p>In today's fast-paced business environment, staying ahead of the curve is essential. At The Coders Guild, we specialise in transforming your team’s potential through expert-led, government-funded tech training. Whether you're looking to upskill your existing team or onboard new talent, our tailored training plans ensure your business thrives.</p>
+        <p class="leading-7">In today's fast-paced business environment, staying ahead of the curve is essential. At The Coders Guild, we specialise in transforming your team’s potential through expert-led, government-funded tech training. Whether you're looking to upskill your existing team or onboard new talent, our tailored training plans ensure your business thrives.</p>
       </div>
     </div>
   </section>
@@ -51,12 +51,12 @@ body_class: hub
   <section class="flex pt-80 lg:pt-60 px-4 lg:px-48 mx-auto pb-8">
     <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto">
       <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
-        <h2 class="mb-0">Why Upskill Your Team?</h2>
-        <p>Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
-        <ul class="font-semibold">
-          <li>Enhance productivity and efficiency.</li>
-          <li>Boost employee morale and retention.</li>
-          <li>Increase your team’s billable rate with advanced tech skills.</li>
+        <h2 class="mb-0 leading-120">Why Upskill Your Team?</h2>
+        <p class="leading-200 text-md">Investing in your team's development isn't just about new skills—it's about driving your business forward. By accessing government funding, you can:</p>
+        <ul class="text-lg leading-7 ml-4">
+          <li> Enhance productivity and efficiency.</li>
+          <li> Boost employee morale and retention.</li>
+          <li> Increase your team’s billable rate with advanced tech skills.</li>
         </ul>
         {% include './includes/components/hub/consultation-button.njk' %}
 
@@ -69,9 +69,9 @@ body_class: hub
   <section class="flex pt-4 pb-8 px-4 lg:px-48 mx-auto ">
     <div class="flex flex-col lg:flex-row lg:justify-between  items-start gap-10 max-w-7xl mx-auto">
       <div class="flex flex-col items-start gap-8 decorated-list lg:order-2 lg:w-5/12">
-        <h2 class="mb-0">Our Approach to Training</h2>
-        <p class="text-wrap">At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>
-        <ul class="font-semibold">
+        <h2 class="mb-0 leading-120">Our Approach to Training</h2>
+        <p class="text-wrap leading-200 text-md">At The Coders Guild, we understand that every business is unique. Our bespoke training plans are tailored to align with your specific needs, systems, and tools, ensuring maximum relevance and impact.</p>
+        <ul class="text-lg leading-7 ml-4">
           <li>Customised Learning Journeys: Training programs designed to fit your business processes and technologies.</li>
           <li>Industry-Led Curriculum: Courses crafted by professionals actively working in the field.</li>
           <li>Practical Skills Application: Focused on real-world application and immediate relevance.</li>
@@ -85,8 +85,8 @@ body_class: hub
   <section class="flex flex-col items-start justify-center py-16 px-4 lg:px-48 gap-24 bg-gradient-to-r from-blue-100 to-blue-200">
     <div class="flex flex-col gap-10 self-stretch">
       <div class="flex flex-col justify-center items-center gap-2 text-white text-center">
-        <h2 class="font-bold text-white text-center">Featured Courses and Apprenticeships</h2>
-        <p class="text-white text-center">Explore our range of training programs designed to meet the evolving needs of the tech industry:</p>
+        <h2 class="font-bold text-white text-center leading-120">Featured Courses and Apprenticeships</h2>
+        <p class="text-white text-center leading-200 text-md">Explore our range of training programs designed to meet the evolving needs of the tech industry:</p>
       </div>
       <div id="course-grid-container" class="relative" data-cards="4">
         <object class="absolute pattern pattern-12" data="../images/patterns/12.svg" type="image/svg+xml"></object>
@@ -97,7 +97,7 @@ body_class: hub
       </div>
     </div>
     <div class="flex flex-col gap-y-12">
-      <h2 class="text-white text-center">Meet the Trainers</h2>
+      <h2 class="text-white text-center leading-120">Meet the Trainers</h2>
       <div class="flex flex-wrap md:items-start items-start justify-center gap-y-8 self-stretch mx-auto">
         {% for trainer in trainers %}
           <div class="flex flex-col py-0 px-8 justify-center items-center gap-6 w-6/12 lg:w-1/4">
@@ -138,8 +138,8 @@ body_class: hub
   <section class="px-4 lg:px-48">
     <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row md:justify-center lg:py-32 lg:px-64 relative gap-8">
       <div class="flex flex-col gap-8 mt-16 md:w-6/12">
-        <h2 class="mb-0 text-5xl">Success Stories</h2>
-        <p class="font-lg leading-7">See how our training has transformed businesses</p>
+        <h2 class="mb-0 text-5xl leading-120">Success Stories</h2>
+        <p class="text-lg leading-7">See how our training has transformed businesses</p>
       </div>
       <div class="md:w-6/12">
         <img class="w-full object-cover rounded-2xl shadow" src="../images/testimonials/sam-brand-ambition.jpeg" alt="Sam from Brand Ambition Leeds credits The Coders Guild with transforming his team" style="height: 562px;" />
@@ -148,7 +148,7 @@ body_class: hub
         <div class="relative p-10 flex flex-col items-start gap-4">
           <object class="absolute pattern pattern-460" data="../images/patterns/460.svg" type="image/svg+xml"></object>
           <img class="w-48 h-14 object-cover rounded-3xl" src="../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" />
-          <p class="leading-2xl font-xl">"Partnering with The Coders Guild has not only upskilled our team but ingrained a culture of innovation and agility in our operations. Our turnover increased significantly thanks to their funded training programs."</p>
+          <p class="leading-2xl text-xl">"Partnering with The Coders Guild has not only upskilled our team but ingrained a culture of innovation and agility in our operations. Our turnover increased significantly thanks to their funded training programs."</p>
           <p class="text-blue-100 font-bold text-lg">Sam, Brand Ambition</p>
         </div>
         
@@ -159,36 +159,36 @@ body_class: hub
   <!-- Getting Started -->
   <section class="lg:px-48 px-4 py-20">
     <div class="max-w-screen-xl mx-auto flex flex-col relative gap-8">
-      <div class="flex flex-col items-center">
-        <h2>Getting Started</h2>
-        <p class="font-lg leading-7">Ready to transform your team? Follow these simple steps:</p>
+      <div class="flex flex-col items-center gap-8">
+        <h2 class="mb-0 leading-112">Getting Started</h2>
+        <p class="text-lg leading-7 text-center text-dark">Ready to transform your team? Follow these simple steps:</p>
       </div>
       <div class="flex flex-col gap-y-12 md:flex-row items-start justify-between">
         <div class="flex flex-col flex-0 items-center items-start gap-4 w-full md:w-6/12 lg:w-2/12">
           <img class="h-12 w-12" src="../images/icons/Conversation.svg" alt="get in touch">
-          <div class="flex flex-col text-center">
-            <h3 class="text-md leading-lg">1. Get in Touch</h3>
+          <div class="flex flex-col text-center gap-4">
+            <h3 class="text-md leading-lg mb-0">1. Get in Touch</h3>
             <p class="text-sm leading-5">Use our chat feature or fill out the contact form.</p>
           </div>
         </div>
         <div class="flex flex-col flex-0 items-center items-start gap-4 w-full md:w-6/12 lg:w-2/12">
           <img class="h-12 w-12" src="../images/icons/session_icon.svg" alt="schedule a consultation (BELOW)">
-          <div class="flex flex-col text-center">
-            <h3 class="text-md leading-lg">2. Schedule a Consulatation</h3>
+          <div class="flex flex-col text-center gap-4">
+            <h3 class="text-md leading-lg mb-0">2. Schedule a Consulatation</h3>
             <p class="text-sm leading-5">Book your free consultancy session</p>
           </div>
         </div>
         <div class="flex flex-col flex-0 items-center items-start gap-4 w-full md:w-6/12 lg:w-2/12">
           <img class="h-12 w-12" src="../images/icons/plan.svg" alt="Receive Your Training Plan">
-          <div class="flex flex-col text-center">
+          <div class="flex flex-col text-center gap-4">
             <h3 class="text-md leading-lg">3. Receive Your Training Plan</h3>
-            <p class="text-sm leading-5">We'll handle the paperwork and setup.</p>
+            <p class="text-sm leading-5 mb-0">We'll handle the paperwork and setup.</p>
           </div>
         </div>
         <div class="flex flex-col flex-0 items-center items-start gap-4 w-full md:w-6/12 lg:w-2/12">
           <img class="h-12 w-12" src="../images/icons/part_time_icon.svg" alt="Start training with The Coders Guild">
-          <div class="flex flex-col text-center">
-            <h3 class="text-md leading-lg">4. Start Training</h3>
+          <div class="flex flex-col text-center gap-4">
+            <h3 class="text-md leading-lg mb-0">4. Start Training</h3>
             <p class="text-sm leading-5">Begin your tailored training program and watch your business grow.</p>
           </div>
         </div>
@@ -203,7 +203,7 @@ body_class: hub
     <div class="flex flex-col xl:flex-row justify-between items-center flex-1 gap-10">
       <div class="w-full lg:w-5/12 flex flex-col items-start gap-10 lg:gap-14 text-white decorated-list white">
         <h2 class="mb-0 text-white text-5xl lg:text-6xl font-bold leading-112">Book Your Free Consultancy</h2>
-        <p class="text-white text-md leading-lg">Take advantage of our limited-time offer: three free consultancy sessions per week for the next six weeks. <strong>Book a 45-minute session with Crispin Read</strong>, our founder and CEO, to discover how your SME can benefit from government-funded training.</p>
+        <p class="text-white text-md leading-200">Take advantage of our limited-time offer: three free consultancy sessions per week for the next six weeks. <strong>Book a 45-minute session with Crispin Read</strong>, our founder and CEO, to discover how your SME can benefit from government-funded training.</p>
         <ul class="flex flex-col items-start gap-2 text-md leading-lg xl:text-xl">
           <li>Get a Personalized Skills Gap Analysis</li>
           <li>Discover Available Funding Opportunities</li>
@@ -212,7 +212,7 @@ body_class: hub
       </div>
       <div class="w-full">
         <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/crispin_read/skills-gap-consultancy" style="min-width:320px;height:700px;"></div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/crispin_read/skills-gap-consultancy" style="min-width:320px;height:900px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <!-- Calendly inline widget end --></div>
     </div>

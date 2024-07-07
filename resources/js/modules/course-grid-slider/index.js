@@ -6,7 +6,6 @@ const courseGridSlider = function (){
   const parent = document.getElementById('course-grid-container');
     
   const slidesToShow = parent.getAttribute('data-cards') || 2;
-  console.log(slidesToShow);
     return $(courseGridSlider).slick({
           dots: true,
           prevArrow: $('.prev'),

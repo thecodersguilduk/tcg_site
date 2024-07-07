@@ -912,7 +912,6 @@ var courseGridSlider = function () {
   if (!courseGridSlider) return;
   var parent = document.getElementById('course-grid-container');
   var slidesToShow = parent.getAttribute('data-cards') || 2;
-  console.log(slidesToShow);
   return $(courseGridSlider).slick({
     dots: true,
     prevArrow: $('.prev'),
