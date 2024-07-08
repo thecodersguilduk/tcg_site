@@ -1,5 +1,15 @@
 #hub {
 
+  .slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
+
   .hero-info {
     position: absolute;
     bottom: 0;
