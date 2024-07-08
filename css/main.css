@@ -1457,6 +1457,12 @@ input, textarea{
   left: 16rem;
   max-width: 614px;
 }
+@media (min-width: 1024px) {
+  #hub .testimonial-body {
+    bottom: 0;
+    left: 0;
+  }
+}
 #hub .decorated-list.white ul li {
   list-style: none;
   list-style-position: outside;
@@ -4636,9 +4642,6 @@ fieldset a {
   .md\:justify-start{
     justify-content: flex-start;
   }
-  .md\:justify-center{
-    justify-content: center;
-  }
   .md\:justify-between{
     justify-content: space-between;
   }
@@ -4673,6 +4676,10 @@ fieldset a {
   .md\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+  .md\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
   .md\:px-3{
     padding-left: 0.75rem;
@@ -4726,6 +4733,9 @@ fieldset a {
   .md\:pb-20{
     padding-bottom: 5rem;
   }
+  .md\:pb-60{
+    padding-bottom: 15rem;
+  }
   .md\:pb-8{
     padding-bottom: 2rem;
   }
@@ -4755,6 +4765,9 @@ fieldset a {
   }
   .md\:pt-24{
     padding-top: 6rem;
+  }
+  .md\:pt-60{
+    padding-top: 15rem;
   }
   .md\:text-center{
     text-align: center;
@@ -4986,6 +4999,10 @@ fieldset a {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  .lg\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
   .lg\:px-48{
     padding-left: 12rem;
     padding-right: 12rem;
@@ -4993,10 +5010,6 @@ fieldset a {
   .lg\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-  .lg\:px-64{
-    padding-left: 16rem;
-    padding-right: 16rem;
   }
   .lg\:px-8{
     padding-left: 2rem;
@@ -5034,9 +5047,6 @@ fieldset a {
     padding-top: 14rem;
     padding-bottom: 14rem;
   }
-  .lg\:pb-60{
-    padding-bottom: 15rem;
-  }
   .lg\:pb-8{
     padding-bottom: 2rem;
   }
@@ -5069,9 +5079,6 @@ fieldset a {
   }
   .lg\:pt-48{
     padding-top: 12rem;
-  }
-  .lg\:pt-60{
-    padding-top: 15rem;
   }
   .lg\:text-left{
     text-align: left;

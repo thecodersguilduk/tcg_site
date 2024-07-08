@@ -49,6 +49,14 @@
     max-width: 614px;
   }
 
+  @media (min-width: 1024px){
+    .testimonial-body {
+      bottom: 0;
+      left: 0;
+    }
+   
+  }
+
   .decorated-list.white {
     ul {
       li {
