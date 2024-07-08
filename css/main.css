@@ -1415,6 +1415,15 @@ input, textarea{
   margin-bottom: 24px !important;
 }
 
+#hub #course-grid .slick-track {
+  display: flex !important;
+}
+#hub #course-grid .slick-slide {
+  height: inherit !important;
+}
+#hub #course-grid .slick-slide > div {
+  height: 100%;
+}
 #hub .hero-info {
   position: absolute;
   bottom: 0;
@@ -4977,8 +4986,8 @@ fieldset a {
   .lg\:gap-14{
     gap: 3.5rem;
   }
-  .lg\:gap-28{
-    gap: 7rem;
+  .lg\:gap-16{
+    gap: 4rem;
   }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
@@ -5220,5 +5229,8 @@ fieldset a {
   .xxxl\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .xxxl\:text-6xl{
+    font-size: 60px;
   }
 }
