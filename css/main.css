@@ -4977,8 +4977,8 @@ fieldset a {
   .lg\:gap-14{
     gap: 3.5rem;
   }
-  .lg\:gap-40{
-    gap: 10rem;
+  .lg\:gap-28{
+    gap: 7rem;
   }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
@@ -5158,6 +5158,9 @@ fieldset a {
   }
   .xl\:gap-10{
     gap: 2.5rem;
+  }
+  .xl\:gap-40{
+    gap: 10rem;
   }
   .xl\:bg-fixed{
     background-attachment: fixed;
