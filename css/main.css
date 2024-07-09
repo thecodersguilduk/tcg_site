@@ -2425,10 +2425,6 @@ input, textarea{
   max-width: none;
 }
 
-.max-w-screen-2xl{
-  max-width: 1536px;
-}
-
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -5085,9 +5081,6 @@ fieldset a {
   }
   .lg\:pt-4{
     padding-top: 1rem;
-  }
-  .lg\:pt-48{
-    padding-top: 12rem;
   }
   .lg\:text-left{
     text-align: left;

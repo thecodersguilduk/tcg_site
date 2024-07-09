@@ -13,7 +13,7 @@ const $$ = {
 
     header              : document.getElementById('header'),
 
-    courseCTAHeader     : document.getElementById('cours-cta-header'),
+    courseCTAHeader     : document.getElementById('course-cta-header'),
 
     nav                 : document.getElementById('nav'),
 
