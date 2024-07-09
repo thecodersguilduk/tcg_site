@@ -3133,6 +3133,11 @@ input, textarea{
   padding-right: 1rem;
 }
 
+.px-44{
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
