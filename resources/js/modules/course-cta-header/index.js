@@ -1,9 +1,7 @@
 import $$ from '@utilities/selectors';
 
 const courseCTAHeader = function courseCTAHeader(){
-    const coursePage = document.getElementById('course');
-
-    if(!coursePage) return;
+    if(!$$.courseCTAHeader) return;
 
     const header = $$.header;
 

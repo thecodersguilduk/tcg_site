@@ -827,8 +827,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utilities/selectors */ "./resources/js/utilities/selectors/index.js");
 
 var courseCTAHeader = function courseCTAHeader() {
-  var coursePage = document.getElementById('course');
-  if (!coursePage) return;
+  if (!_utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].courseCTAHeader) return;
   var header = _utilities_selectors__WEBPACK_IMPORTED_MODULE_0__["default"].header;
   document.addEventListener('scroll', function (e) {
     var scroll = window.scrollY;
@@ -909,15 +908,16 @@ var handleTabs = function () {
 __webpack_require__.r(__webpack_exports__);
 var courseGridSlider = function () {
   var courseGridSlider = document.querySelector('#course-grid');
-  console.log(courseGridSlider);
   if (!courseGridSlider) return;
+  var parent = document.getElementById('course-grid-container');
+  var slidesToShow = parent.getAttribute('data-cards') || 2;
   return $(courseGridSlider).slick({
     dots: true,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     appendDots: $('.dots'),
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: slidesToShow,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -1827,7 +1827,7 @@ var $$ = {
   body: document.querySelector('body'),
   wrapper: document.getElementById('wrapper'),
   header: document.getElementById('header'),
-  courseCTAHeader: document.getElementById('cours-cta-header'),
+  courseCTAHeader: document.getElementById('course-cta-header'),
   nav: document.getElementById('nav'),
   hero: document.getElementById('hero'),
   main: document.getElementById('main'),

@@ -1,16 +1,18 @@
 const courseGridSlider = function (){
   const courseGridSlider = document.querySelector('#course-grid');
-  console.log(courseGridSlider);
+  
     if(!courseGridSlider) return;
-    
 
+  const parent = document.getElementById('course-grid-container');
+    
+  const slidesToShow = parent.getAttribute('data-cards') || 2;
     return $(courseGridSlider).slick({
           dots: true,
           prevArrow: $('.prev'),
           nextArrow: $('.next'),
           appendDots: $('.dots'),
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: slidesToShow,
           slidesToScroll: 2,
           autoplay: true,
           autoplaySpeed: 2000,

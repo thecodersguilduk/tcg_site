@@ -1,0 +1,37 @@
+<div class="relative py-12 lg:py-24 section-rounded flex flex-col lg:flex-row gap-8 justify-center items-center px-6">
+    <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/5.svg" class="absolute pattern pattern-1 right-0 bottom-0 hidden md:block"></object>
+    <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/18.svg" class="absolute pattern pattern-1 left-0 top-0 hidden md:block"></object>
+
+<div class="grid grid-cols-2 xl:grid-cols-4 justify-center items-start gap-8">
+    {% for trainer in trainers %}
+    <div class="flex flex-col items-center gap-2 text-white">
+        <div class="image h-32 w-32 flex rounded-full" style="background-image: url({{trainer.image}}); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+        </div>
+
+        <p class="text-lg text-white font-bold text-center">{{ trainer.name }}</p>
+        <p class="text-center text-white">{{ trainer.occupation }}</p>
+        <div class="flex justify-center">
+            {% if trainer.linkedin %}
+                <a href="{{ trainer.linkedin }}" class="p-2">
+                <span class="sr-only">Linkedin</span>
+                <img src="../../images/icons/linkedin.svg" class="h-4"/>
+                </a>
+            {% endif %}
+            {% if trainer.twitter %}
+                <a href="{{ trainer.twitter }}" class="p-2">
+                <span class="sr-only">Twitter</span>
+                <img src="../../images/icons/twitter.svg" class="h-4"/>
+                </a>
+            {% endif %}
+            {% if trainer.github %}
+                <a href="{{ trainer.github }}" class="p-2">
+                <span class="sr-only">Github</span>
+                <img src="../../images/icons/github.svg" class="h-4"/>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+</div>

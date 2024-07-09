@@ -1415,24 +1415,91 @@ input, textarea{
   margin-bottom: 24px !important;
 }
 
-.decorated-ul li {
+#hub #course-grid .slick-track {
+  display: flex !important;
+}
+#hub #course-grid .slick-slide {
+  height: inherit !important;
+}
+#hub #course-grid .slick-slide > div {
+  height: 100%;
+}
+#hub .hero-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  padding: 40px;
+  align-items: start;
+  gap: 10px;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+#hub .trustist-box {
+  bottom: -10%;
+  left: 5%;
+}
+#hub .pattern.pattern-2 {
+  left: -10rem;
+  top: -4rem;
+}
+#hub .pattern.pattern-12 {
+  top: -5rem;
+  right: 6rem;
+}
+#hub .pattern.pattern-1212 {
+  bottom: 11px;
+  left: 0;
+}
+#hub .pattern.pattern-460 {
+  top: -4rem;
+  right: -8rem;
+}
+#hub .testimonial-body {
+  bottom: 6rem;
+  left: 16rem;
+  max-width: 614px;
+}
+@media (min-width: 1024px) {
+  #hub .testimonial-body {
+    bottom: 0;
+    left: 0;
+  }
+}
+#hub .decorated-list.white ul li {
   list-style: none;
   list-style-position: outside;
+  margin-bottom: 0;
 }
-.decorated-ul li::before {
+#hub .decorated-list.white ul li::before {
+  content: url("/images/icons/white-icon-right.svg");
+  margin-right: 1rem;
+  display: inline-block;
+}
+#hub .decorated-ul li {
+  list-style: none;
+  list-style-position: outside;
+  margin-bottom: 0;
+}
+#hub .decorated-ul li::before {
   content: url("/images/Chevron-Left-list.svg");
   display: inline-block;
   margin-right: 0.3rem;
   margin-top: 0.3rem;
 }
-
-.decorated-ol li::marker {
+#hub .decorated-ol li::marker {
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 32px;
   margin-top: 40px;
   color: #2574a9;
 }
-.decorated-ol li::before {
+#hub .decorated-ol li::before {
   content: "";
   background-image: url("/images/patterns/Numbered_List_Pattern.svg");
   width: 100%;
@@ -1444,16 +1511,15 @@ input, textarea{
   margin-left: -40px;
   background-repeat: no-repeat;
 }
-
-.partners .testimonials__slider .slick-list {
+#hub .partners .testimonials__slider .slick-list {
   overflow: visible;
 }
-.partners .testimonials__slider .slick-list .slick-slide {
+#hub .partners .testimonials__slider .slick-list .slick-slide {
   min-height: 100%;
   height: 100%;
   opacity: 0.3;
 }
-.partners .testimonials__slider .slick-list .slick-slide.slick-active {
+#hub .partners .testimonials__slider .slick-list .slick-slide.slick-active {
   opacity: 1;
 }
 
@@ -1639,7 +1705,7 @@ input, textarea{
 }
 #course-grid-container .slick-dots .slick-active button{
   --tw-bg-opacity: 1;
-  background-color: rgb(22 174 219 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 #course-grid-container .slick-dots li{
   display: flex;
@@ -1686,6 +1752,10 @@ input, textarea{
   inset: 0;
 }
 
+.-bottom-20{
+  bottom: -5rem;
+}
+
 .-left-2{
   left: -0.5rem;
 }
@@ -1700,6 +1770,10 @@ input, textarea{
 
 .left-0{
   left: 0;
+}
+
+.left-2\/4{
+  left: 50%;
 }
 
 .right-0{
@@ -1893,6 +1967,10 @@ input, textarea{
 
 .-mt-16{
   margin-top: -4rem;
+}
+
+.-mt-48{
+  margin-top: -12rem;
 }
 
 .-mt-8{
@@ -2139,6 +2217,10 @@ input, textarea{
   height: 6rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -2169,6 +2251,10 @@ input, textarea{
 
 .h-64{
   height: 16rem;
+}
+
+.h-7{
+  height: 1.75rem;
 }
 
 .h-96{
@@ -2259,6 +2345,10 @@ input, textarea{
   width: 10rem;
 }
 
+.w-48{
+  width: 12rem;
+}
+
 .w-5{
   width: 1.25rem;
 }
@@ -2319,6 +2409,10 @@ input, textarea{
   max-width: 100rem;
 }
 
+.max-w-\[1000px\]{
+  max-width: 1000px;
+}
+
 .max-w-full{
   max-width: 100%;
 }
@@ -2373,6 +2467,11 @@ input, textarea{
 
 .basis-0{
   flex-basis: 0px;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -2479,6 +2578,10 @@ input, textarea{
   gap: 0.5rem;
 }
 
+.gap-24{
+  gap: 6rem;
+}
+
 .gap-3{
   gap: 0.75rem;
 }
@@ -2575,6 +2678,10 @@ input, textarea{
   justify-self: start;
 }
 
+.justify-self-end{
+  justify-self: end;
+}
+
 .justify-self-center{
   justify-self: center;
 }
@@ -2585,6 +2692,10 @@ input, textarea{
 
 .overflow-y-hidden{
   overflow-y: hidden;
+}
+
+.text-wrap{
+  text-wrap: wrap;
 }
 
 .rounded{
@@ -2764,6 +2875,10 @@ input, textarea{
   background-color: rgb(22 174 219 / var(--tw-bg-opacity));
 }
 
+.bg-blue-100\/5{
+  background-color: rgb(22 174 219 / 0.05);
+}
+
 .bg-blue-200{
   --tw-bg-opacity: 1;
   background-color: rgb(37 116 169 / var(--tw-bg-opacity));
@@ -2820,6 +2935,11 @@ input, textarea{
 .bg-grey-200{
   --tw-bg-opacity: 1;
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
+}
+
+.bg-grey-2000{
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 228 / var(--tw-bg-opacity));
 }
 
 .bg-grey-50{
@@ -2957,6 +3077,10 @@ input, textarea{
 
 .p-0{
   padding: 0px;
+}
+
+.p-10{
+  padding: 2.5rem;
 }
 
 .p-2{
@@ -3135,8 +3259,16 @@ input, textarea{
   padding-bottom: 1.75rem;
 }
 
+.pb-72{
+  padding-bottom: 18rem;
+}
+
 .pb-8{
   padding-bottom: 2rem;
+}
+
+.pb-80{
+  padding-bottom: 20rem;
 }
 
 .pb-9{
@@ -3221,6 +3353,10 @@ input, textarea{
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-80{
+  padding-top: 20rem;
 }
 
 .text-left{
@@ -3320,6 +3456,18 @@ input, textarea{
   line-height: 112%;
 }
 
+.leading-118{
+  line-height: 118%;
+}
+
+.leading-120{
+  line-height: 120%;
+}
+
+.leading-200{
+  line-height: 200%;
+}
+
 .leading-2xl{
   line-height: 32px;
 }
@@ -3330,6 +3478,10 @@ input, textarea{
 
 .leading-4xl{
   line-height: 40px;
+}
+
+.leading-5{
+  line-height: 1.25rem;
 }
 
 .leading-5xl{
@@ -3525,6 +3677,12 @@ input, textarea{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-primary{
   --tw-shadow: 0px 0px 8px rgba(0, 0, 0, 0.29);
   --tw-shadow-colored: 0px 0px 8px var(--tw-shadow-color);
@@ -3661,6 +3819,19 @@ input, textarea{
   background-size: auto;
   margin-left: -40px;
   background-repeat: no-repeat;
+}
+
+.decorated-list.white ul li {
+  list-style: none;
+  list-style-position: outside;
+  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 26px;
+  margin-bottom: 1rem;
+}
+.decorated-list.white ul li::before {
+  content: url("/images/icons/white-icon-right.svg");
+  margin-right: 1rem;
+  display: inline-block;
 }
 
 .header {
@@ -4511,6 +4682,10 @@ fieldset a {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  .md\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
   .md\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -4563,6 +4738,9 @@ fieldset a {
   .md\:pb-20{
     padding-bottom: 5rem;
   }
+  .md\:pb-60{
+    padding-bottom: 15rem;
+  }
   .md\:pb-8{
     padding-bottom: 2rem;
   }
@@ -4592,6 +4770,9 @@ fieldset a {
   }
   .md\:pt-24{
     padding-top: 6rem;
+  }
+  .md\:pt-60{
+    padding-top: 15rem;
   }
   .md\:text-center{
     text-align: center;
@@ -4623,11 +4804,20 @@ fieldset a {
 }
 
 @media (min-width: 1024px){
+  .lg\:absolute{
+    position: absolute;
+  }
   .lg\:sticky{
     position: sticky;
   }
   .lg\:top-100{
     top: 100px;
+  }
+  .lg\:order-1{
+    order: 1;
+  }
+  .lg\:order-2{
+    order: 2;
   }
   .lg\:order-last{
     order: 9999;
@@ -4690,6 +4880,9 @@ fieldset a {
   .lg\:h-14{
     height: 3.5rem;
   }
+  .lg\:h-40{
+    height: 10rem;
+  }
   .lg\:h-48{
     height: 12rem;
   }
@@ -4716,6 +4909,9 @@ fieldset a {
   }
   .lg\:w-4\/12{
     width: 33.333333%;
+  }
+  .lg\:w-40{
+    width: 10rem;
   }
   .lg\:w-5\/12{
     width: 41.666667%;
@@ -4765,6 +4961,9 @@ fieldset a {
   .lg\:flex-row{
     flex-direction: row;
   }
+  .lg\:content-center{
+    align-content: center;
+  }
   .lg\:items-start{
     align-items: flex-start;
   }
@@ -4776,6 +4975,15 @@ fieldset a {
   }
   .lg\:justify-center{
     justify-content: center;
+  }
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
+  .lg\:gap-14{
+    gap: 3.5rem;
+  }
+  .lg\:gap-16{
+    gap: 4rem;
   }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
@@ -4795,6 +5003,10 @@ fieldset a {
   .lg\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .lg\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
   .lg\:px-48{
     padding-left: 12rem;
@@ -4823,6 +5035,10 @@ fieldset a {
   .lg\:py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+  .lg\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
   .lg\:py-4{
     padding-top: 1rem;
@@ -4875,6 +5091,9 @@ fieldset a {
   .lg\:text-5xl{
     font-size: 40px;
   }
+  .lg\:text-6xl{
+    font-size: 60px;
+  }
   .lg\:text-lg{
     font-size: 18px;
   }
@@ -4915,6 +5134,9 @@ fieldset a {
   .xl\:w-96{
     width: 24rem;
   }
+  .xl\:max-w-9xl{
+    max-width: 100rem;
+  }
   .xl\:max-w-none{
     max-width: none;
   }
@@ -4935,6 +5157,12 @@ fieldset a {
   }
   .xl\:items-stretch{
     align-items: stretch;
+  }
+  .xl\:gap-10{
+    gap: 2.5rem;
+  }
+  .xl\:gap-40{
+    gap: 10rem;
   }
   .xl\:bg-fixed{
     background-attachment: fixed;
@@ -4979,6 +5207,9 @@ fieldset a {
   .xl\:text-6xl{
     font-size: 60px;
   }
+  .xl\:text-xl{
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1480px){
@@ -4991,5 +5222,8 @@ fieldset a {
   .xxxl\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .xxxl\:text-6xl{
+    font-size: 60px;
   }
 }
