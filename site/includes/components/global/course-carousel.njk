@@ -1,7 +1,7 @@
 
 <div class="course-grid-internal-container flex flex-col w-full">
     <div id="course-grid" class="w-full flex items-stretch">
-            {% if page.url === '/agile' %}
+            {% if page.url === '/agile/' %}
                 {% set courseArray = courses | selectattr("tags", "contains", "agile") %}
             {% else %}
                 {% set courseArray = courses %}
