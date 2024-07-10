@@ -340,5 +340,10 @@ export default {
 			},
 			maxLength: 96,
 		},
+		{
+			'name': 'tags',
+			'type': 'tags',
+			'title': 'Tags',
+		}
 	],
 };

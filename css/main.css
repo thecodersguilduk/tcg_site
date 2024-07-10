@@ -2425,6 +2425,10 @@ input, textarea{
   max-width: none;
 }
 
+.max-w-screen-2xl{
+  max-width: 1536px;
+}
+
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -2584,6 +2588,10 @@ input, textarea{
 
 .gap-3{
   gap: 0.75rem;
+}
+
+.gap-36{
+  gap: 9rem;
 }
 
 .gap-4{
@@ -3126,6 +3134,11 @@ input, textarea{
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-32{
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .px-4{
@@ -4023,6 +4036,11 @@ fieldset a {
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-green-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-grey-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
@@ -4089,6 +4107,11 @@ fieldset a {
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
 }
 
+.focus\:bg-green-200:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
+}
+
 .focus\:text-blue-100:focus{
   --tw-text-opacity: 1;
   color: rgb(22 174 219 / var(--tw-text-opacity));
@@ -4145,6 +4168,11 @@ fieldset a {
 .active\:bg-green-100:active{
   --tw-bg-opacity: 1;
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
+}
+
+.active\:bg-green-200:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
 }
 
 .active\:text-blue-100:active{

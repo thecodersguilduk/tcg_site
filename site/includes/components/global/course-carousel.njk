@@ -1,13 +1,20 @@
 
 <div class="course-grid-internal-container flex flex-col w-full">
     <div id="course-grid" class="w-full flex items-stretch">
-        {% for course in courses %}
-            {% if course.courseType === "Apprenticeships" and course.isActive  %}
-            {% if page.url === '/apprenticeships/' %}
-                {% set modifiedTitle = course.title | courseDisplay %}
+            {% if page.url === '/agile' %}
+                {% set courseArray = courses | selectattr("tags", "contains", "agile") %}
             {% else %}
-                {% set modifiedTitle = course.title %}
+                {% set courseArray = courses %}
             {% endif %}
+            {% for course in courseArray %}
+
+
+                {% if course.courseType === "Apprenticeships" and course.isActive  %}
+                {% if page.url === '/apprenticeships/' %}
+                    {% set modifiedTitle = course.title | courseDisplay %}
+                {% else %}
+                    {% set modifiedTitle = course.title %}
+                {% endif %}
 
             <div class="mb-4 p-4 h-full px-4 flex items-stretch self-stretch">
             <div class="h-full">
