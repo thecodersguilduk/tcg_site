@@ -1415,13 +1415,13 @@ input, textarea{
   margin-bottom: 24px !important;
 }
 
-#hub #course-grid .slick-track {
+#hub #course-grid-container #course-grid .slick-track {
   display: flex !important;
 }
-#hub #course-grid .slick-slide {
+#hub #course-grid-container #course-grid .slick-slide {
   height: inherit !important;
 }
-#hub #course-grid .slick-slide > div {
+#hub #course-grid-container #course-grid .slick-slide > div {
   height: 100%;
 }
 #hub .hero-info {
@@ -5166,6 +5166,9 @@ fieldset a {
   }
   .xl\:h-56{
     height: 14rem;
+  }
+  .xl\:w-4\/12{
+    width: 33.333333%;
   }
   .xl\:w-5\/12{
     width: 41.666667%;
