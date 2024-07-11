@@ -3131,6 +3131,11 @@ input, textarea{
   padding-right: 0.5rem;
 }
 
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -3144,11 +3149,6 @@ input, textarea{
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-44{
-  padding-left: 11rem;
-  padding-right: 11rem;
 }
 
 .px-5{
@@ -3363,10 +3363,6 @@ input, textarea{
 
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pt-60{
-  padding-top: 15rem;
 }
 
 .pt-64{
@@ -5044,6 +5040,10 @@ fieldset a {
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+  .lg\:px-44{
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
   .lg\:px-48{
     padding-left: 12rem;
