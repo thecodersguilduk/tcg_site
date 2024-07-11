@@ -3136,11 +3136,6 @@ input, textarea{
   padding-right: 0.75rem;
 }
 
-.px-32{
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -5017,6 +5012,9 @@ fieldset a {
   .lg\:gap-16{
     gap: 4rem;
   }
+  .lg\:gap-36{
+    gap: 9rem;
+  }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
@@ -5040,6 +5038,10 @@ fieldset a {
     padding-left: 6rem;
     padding-right: 6rem;
   }
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
   .lg\:px-44{
     padding-left: 11rem;
     padding-right: 11rem;
@@ -5059,6 +5061,10 @@ fieldset a {
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  .lg\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .lg\:py-2{
     padding-top: 0.5rem;
