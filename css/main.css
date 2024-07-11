@@ -1523,6 +1523,9 @@ input, textarea{
   opacity: 1;
 }
 
+#course .logos {
+  bottom: -10rem;
+}
 #course #pitch .course-pitch div:first-child {
   display: flex;
   flex-direction: column;
@@ -2512,6 +2515,10 @@ input, textarea{
 
 .place-items-center{
   place-items: center;
+}
+
+.content-start{
+  align-content: flex-start;
 }
 
 .items-start{
@@ -4792,6 +4799,9 @@ fieldset a {
   .md\:text-sm{
     font-size: 14px;
   }
+  .md\:text-xl{
+    font-size: 20px;
+  }
   .md\:leading-2xl{
     line-height: 32px;
   }
@@ -4867,9 +4877,6 @@ fieldset a {
   }
   .lg\:block{
     display: block;
-  }
-  .lg\:flex{
-    display: flex;
   }
   .lg\:hidden{
     display: none;
