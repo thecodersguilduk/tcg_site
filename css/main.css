@@ -3846,6 +3846,16 @@ input, textarea{
   display: inline-block;
 }
 
+#hub #course-grid-container #course-grid .slick-track {
+  display: flex !important;
+}
+#hub #course-grid-container #course-grid .slick-slide {
+  height: inherit !important;
+}
+#hub #course-grid-container #course-grid .slick-slide > div {
+  height: 100%;
+}
+
 .header {
   position: fixed;
   top: 0;
