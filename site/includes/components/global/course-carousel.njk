@@ -1,10 +1,11 @@
 
 <div class="course-grid-internal-container flex flex-col w-full">
     <div id="course-grid" class="w-full flex items-stretch">
+            {% set courseArray = courses %} 
+        
             {% if page.url === '/agile/' %}
-                {% set courseArray = courses | selectattr("tags", "contains", "agile") %}
-            {% else %}
-                {% set courseArray = courses %}
+                {% set courseArray = courses | agile('agile') %}
+                {{ courseArray | log }}
             {% endif %}
             {% for course in courseArray %}
 
