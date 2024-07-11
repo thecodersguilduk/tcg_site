@@ -85,6 +85,11 @@ export default {
         { type: 'calendlyEmbed' },
         { type: 'leadGenFormEmbed' },
       ]
+    },
+    {
+      name: 'tags',
+      type: 'tags',
+      title: 'Tags',
     }
   ],
   orderings: [

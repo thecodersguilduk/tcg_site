@@ -37,6 +37,10 @@
 					"url": "/course-directory"
 				},
 				{
+					"label": "Agile Project Management",
+					"url": "/agile-project-management"
+				},
+				{
 					"label": "West Yorkshire",
 					"url": "/west-yorkshire"
 				}

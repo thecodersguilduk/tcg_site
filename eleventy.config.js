@@ -53,6 +53,13 @@ module.exports = (eleventyConfig) => {
 	//eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
 	//
+
+	eleventyConfig.addFilter("agile", function(courses, tag) {
+		const filteredCourses = courses.filter(course => course.tags && course.tags.includes(t => t.value === tag));
+
+		console.log(filteredCourses)
+	  });
+
 	eleventyConfig.addFilter('courseDisplay', require('./filters/courseNames.js'));
 
 	eleventyConfig.addFilter('removeUnderscores', require('./filters/removeUnderscores.js'));
