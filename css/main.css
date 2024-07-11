@@ -3365,6 +3365,10 @@ input, textarea{
   padding-top: 1.5rem;
 }
 
+.pt-60{
+  padding-top: 15rem;
+}
+
 .pt-64{
   padding-top: 16rem;
 }
