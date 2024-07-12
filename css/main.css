@@ -1415,13 +1415,13 @@ input, textarea{
   margin-bottom: 24px !important;
 }
 
-#hub #course-grid .slick-track {
+#hub #course-grid-container #course-grid .slick-track {
   display: flex !important;
 }
-#hub #course-grid .slick-slide {
+#hub #course-grid-container #course-grid .slick-slide {
   height: inherit !important;
 }
-#hub #course-grid .slick-slide > div {
+#hub #course-grid-container #course-grid .slick-slide > div {
   height: 100%;
 }
 #hub .hero-info {
@@ -1431,7 +1431,7 @@ input, textarea{
   transform: translate(-50%, 50%);
   display: flex;
   padding: 40px;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
   background-color: white;
   border-radius: 24px;
@@ -2428,6 +2428,10 @@ input, textarea{
   max-width: none;
 }
 
+.max-w-screen-2xl{
+  max-width: 1536px;
+}
+
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -2591,6 +2595,10 @@ input, textarea{
 
 .gap-3{
   gap: 0.75rem;
+}
+
+.gap-36{
+  gap: 9rem;
 }
 
 .gap-4{
@@ -3286,6 +3294,10 @@ input, textarea{
   padding-bottom: 2.25rem;
 }
 
+.pb-96{
+  padding-bottom: 24rem;
+}
+
 .pl-10{
   padding-left: 2.5rem;
 }
@@ -3845,6 +3857,16 @@ input, textarea{
   display: inline-block;
 }
 
+#hub #course-grid-container #course-grid .slick-track {
+  display: flex !important;
+}
+#hub #course-grid-container #course-grid .slick-slide {
+  height: inherit !important;
+}
+#hub #course-grid-container #course-grid .slick-slide > div {
+  height: 100%;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -4029,6 +4051,11 @@ fieldset a {
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-green-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-grey-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
@@ -4095,6 +4122,11 @@ fieldset a {
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
 }
 
+.focus\:bg-green-200:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
+}
+
 .focus\:text-blue-100:focus{
   --tw-text-opacity: 1;
   color: rgb(22 174 219 / var(--tw-text-opacity));
@@ -4151,6 +4183,11 @@ fieldset a {
 .active\:bg-green-100:active{
   --tw-bg-opacity: 1;
   background-color: rgb(134 186 144 / var(--tw-bg-opacity));
+}
+
+.active\:bg-green-200:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 177 135 / var(--tw-bg-opacity));
 }
 
 .active\:text-blue-100:active{
@@ -4996,6 +5033,9 @@ fieldset a {
   .lg\:gap-8{
     gap: 2rem;
   }
+  .lg\:gap-36{
+    gap: 9rem;
+  }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
@@ -5019,6 +5059,14 @@ fieldset a {
     padding-left: 6rem;
     padding-right: 6rem;
   }
+  .lg\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .lg\:px-44{
+    padding-left: 11rem;
+    padding-right: 11rem;
+  }
   .lg\:px-48{
     padding-left: 12rem;
     padding-right: 12rem;
@@ -5034,6 +5082,10 @@ fieldset a {
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  .lg\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .lg\:py-2{
     padding-top: 0.5rem;
@@ -5138,6 +5190,9 @@ fieldset a {
   }
   .xl\:h-56{
     height: 14rem;
+  }
+  .xl\:w-4\/12{
+    width: 33.333333%;
   }
   .xl\:w-5\/12{
     width: 41.666667%;
