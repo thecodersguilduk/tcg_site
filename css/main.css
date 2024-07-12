@@ -4390,6 +4390,9 @@ fieldset a {
   .sm\:pb-24{
     padding-bottom: 6rem;
   }
+  .sm\:pb-32{
+    padding-bottom: 8rem;
+  }
   .sm\:pl-8{
     padding-left: 2rem;
   }
@@ -5062,6 +5065,9 @@ fieldset a {
   .lg\:py-56{
     padding-top: 14rem;
     padding-bottom: 14rem;
+  }
+  .lg\:pb-0{
+    padding-bottom: 0px;
   }
   .lg\:pb-8{
     padding-bottom: 2rem;
