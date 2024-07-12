@@ -1523,6 +1523,9 @@ input, textarea{
   opacity: 1;
 }
 
+#course .logos {
+  bottom: -10rem;
+}
 #course #pitch .course-pitch div:first-child {
   display: flex;
   flex-direction: column;
@@ -2518,6 +2521,10 @@ input, textarea{
   place-items: center;
 }
 
+.content-start{
+  align-content: flex-start;
+}
+
 .items-start{
   align-items: flex-start;
 }
@@ -3257,6 +3264,10 @@ input, textarea{
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pb-48{
+  padding-bottom: 12rem;
 }
 
 .pb-6{
@@ -4829,6 +4840,9 @@ fieldset a {
   .md\:text-sm{
     font-size: 14px;
   }
+  .md\:text-xl{
+    font-size: 20px;
+  }
   .md\:leading-2xl{
     line-height: 32px;
   }
@@ -4905,9 +4919,6 @@ fieldset a {
   .lg\:block{
     display: block;
   }
-  .lg\:flex{
-    display: flex;
-  }
   .lg\:hidden{
     display: none;
   }
@@ -4943,9 +4954,6 @@ fieldset a {
   }
   .lg\:w-3\/12{
     width: 25%;
-  }
-  .lg\:w-4\/12{
-    width: 33.333333%;
   }
   .lg\:w-40{
     width: 10rem;
@@ -5021,6 +5029,9 @@ fieldset a {
   }
   .lg\:gap-16{
     gap: 4rem;
+  }
+  .lg\:gap-8{
+    gap: 2rem;
   }
   .lg\:gap-36{
     gap: 9rem;
@@ -5104,6 +5115,9 @@ fieldset a {
     padding-top: 14rem;
     padding-bottom: 14rem;
   }
+  .lg\:pb-0{
+    padding-bottom: 0px;
+  }
   .lg\:pb-8{
     padding-bottom: 2rem;
   }
@@ -5182,6 +5196,9 @@ fieldset a {
   }
   .xl\:w-5\/12{
     width: 41.666667%;
+  }
+  .xl\:w-6\/12{
+    width: 50%;
   }
   .xl\:w-7\/12{
     width: 58.333333%;
