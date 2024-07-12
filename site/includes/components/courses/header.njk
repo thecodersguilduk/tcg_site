@@ -16,7 +16,7 @@
                 </div>
             {% endif %}
         </div>
-        <div class="relative w-full lg:w-5/12 xl:w-6/12 flex flex-col justify-center items-start gap-4 lg:gap-8 self-stretch flex-1 lg:order-1"> 
+        <div class="relative w-full lg:w-5/12 xl:w-6/12 flex flex-col justify-center items-start gap-4 lg:gap-8 self-stretch flex-1 lg:order-1 {% if course.price %}pb-48{% endif %}"> 
             <div class="logos absolute bottom-0 left-0 right-0 bg-white inline-flex flex-col justify-end items-start p-6 rounded-md w-full gap-3">
                 {% include "components/courses/logos.njk" %}
             </div>
@@ -36,7 +36,7 @@
                 <div class="w-full">
                     <div class="flex flex-col items-start lg:flex-row lg:items-center gap-3">
                         <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">{{course.ctaText}}<i class="fa-solid fa-chevron-right"></i></a>
-                        <a class="text-white underline-none" href="#"><i class="fa-solid fa-circle-info"></i> Why can't I buy this course?</span>
+                        <a class="hidden text-white underline-none" href="#"><i class="fa-solid fa-circle-info"></i> Why can't I buy this course?</span>
                     </div>
                     <p class="text-xs leading-0 text-white">Pricing plans and government funding available on many courses</p>
                 </div>

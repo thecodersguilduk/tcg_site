@@ -3258,6 +3258,10 @@ input, textarea{
   padding-bottom: 1rem;
 }
 
+.pb-48{
+  padding-bottom: 12rem;
+}
+
 .pb-6{
   padding-bottom: 1.5rem;
 }
@@ -4914,9 +4918,6 @@ fieldset a {
   .lg\:w-3\/12{
     width: 25%;
   }
-  .lg\:w-4\/12{
-    width: 33.333333%;
-  }
   .lg\:w-40{
     width: 10rem;
   }
@@ -4991,6 +4992,9 @@ fieldset a {
   }
   .lg\:gap-16{
     gap: 4rem;
+  }
+  .lg\:gap-8{
+    gap: 2rem;
   }
   .lg\:gap-x-10{
     -moz-column-gap: 2.5rem;
@@ -5134,6 +5138,9 @@ fieldset a {
   }
   .xl\:w-5\/12{
     width: 41.666667%;
+  }
+  .xl\:w-6\/12{
+    width: 50%;
   }
   .xl\:w-7\/12{
     width: 58.333333%;
