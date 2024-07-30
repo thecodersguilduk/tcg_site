@@ -1908,8 +1908,8 @@ module.exports = config;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/steve/tcg_site/resources/js/main.js */"./resources/js/main.js");
-module.exports = __webpack_require__(/*! /home/steve/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /Users/sophiewright/TCG/TCG_website/tcg_site/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/sophiewright/TCG/TCG_website/tcg_site/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
