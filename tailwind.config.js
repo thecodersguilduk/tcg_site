@@ -1,5 +1,4 @@
 module.exports = {
-	mode: 'jit',
 	prefix: '',
 	content: [
 		'./site/*.{html,njk}',
