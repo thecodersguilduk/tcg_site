@@ -55,7 +55,9 @@ mix
 
             .purgeCss({
                 folders: [
-                    'site'
+                    'site',
+                    './site/**/*.html',
+                    './site/**/*.njk',
                 ],
                 extensions: [
                     'html',
