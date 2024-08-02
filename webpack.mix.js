@@ -1,6 +1,7 @@
 
 let mix = require('laravel-mix')
 let tailwindcss = require('tailwindcss')
+let path = require('path')
 require('laravel-mix-purgecss')
 
 // Paths
