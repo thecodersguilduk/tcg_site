@@ -1,16 +1,18 @@
 #hub {
-  #course-grid {
-    .slick-track
-    {
-        display: flex !important;
+  #course-grid-container {
+    #course-grid {
+      .slick-track
+      {
+          display: flex !important;
+      }
+      
+      .slick-slide
+      {
+          height: inherit !important;
+      }
+  
+      .slick-slide > div { height: 100%; }
     }
-    
-    .slick-slide
-    {
-        height: inherit !important;
-    }
-
-    .slick-slide > div { height: 100%; }
   }
 
 
@@ -22,7 +24,7 @@
     transform: translate(-50%, 50%);
     display: flex;
     padding: 40px;
-    align-items: start;
+    align-items: flex-start;
     gap: 10px;
     background-color: white;
     border-radius: 24px;

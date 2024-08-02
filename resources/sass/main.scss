@@ -103,6 +103,24 @@
 	}
 }
 
+#hub {
+	#course-grid-container {
+	  #course-grid {
+		.slick-track
+		{
+			display: flex !important;
+		}
+		
+		.slick-slide
+		{
+			height: inherit !important;
+		}
+	
+		.slick-slide > div { height: 100%; }
+	  }
+	}
+}
+
 //CSS for application progress bar option 1
 
 .header {

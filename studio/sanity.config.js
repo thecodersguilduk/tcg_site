@@ -1,6 +1,6 @@
 import { defineConfig, ScheduleAction } from "sanity";
 import {structureTool} from 'sanity/structure';
-import {deskTool} from 'sanity/desk';
+import {tags} from 'sanity-plugin-tags'
 import schemas from './schemas/schema';
 import deskStructure from "./deskStructure";
 import { visionTool } from "@sanity/vision";
@@ -14,6 +14,7 @@ export default defineConfig({
     structure: deskStructure
     }),
     visionTool(),
+    tags({})
   ],
   scheduledPublishing: {
     enabled: true
