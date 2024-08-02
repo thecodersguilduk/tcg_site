@@ -4,7 +4,7 @@
 	"description": "Skeleventy - A skeleton boilerplate built with Eleventy",
 	"scripts": {
 		"dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve --quiet & mix watch",
-   		"production": "mix --production & npx @11ty/eleventy --config=eleventy.config.js"
+   		"production": "mix & npx @11ty/eleventy --config=eleventy.config.js"
 	},
 	"repository": {
 		"type": "git",
