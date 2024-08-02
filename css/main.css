@@ -562,8 +562,7 @@ html {
 a{
   --tw-text-opacity: 1;
   color: rgb(83 80 165 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -683,11 +682,11 @@ input, textarea{
   position: absolute;
 }
 .content > blockquote > p::before {
-  content: "\201C";
+  content: "“";
   letter-spacing: 3px;
 }
 .content > blockquote > p::after {
-  content: "\201D";
+  content: "”";
 }
 .content > blockquote span{
   text-align: center;
@@ -788,10 +787,10 @@ input, textarea{
   color: rgb(113 128 150 / var(--tw-text-opacity));
 }
 .form .row.required label:after {
-  content: "\A0(required)";
+  content: " (required)";
 }
 .form .row:not(.required) label:after {
-  content: "\A0(optional)";
+  content: " (optional)";
 }
 .form .input,
 .form .textarea{
@@ -1025,8 +1024,7 @@ input, textarea{
 .policy-item:hover p:first-child, .policy-item:focus p:first-child{
   --tw-text-opacity: 1;
   color: rgb(37 116 169 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .footer .footer-dropdown-content {
@@ -1166,7 +1164,7 @@ input, textarea{
   right: -30px;
   font-size: 153px;
   line-height: 0;
-  content: "\201C";
+  content: "“";
 }
 
 .filter-blue {
@@ -1616,8 +1614,7 @@ input, textarea{
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(37 116 169 / var(--tw-text-opacity));
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -3625,8 +3622,7 @@ input, textarea{
 }
 
 .no-underline{
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .antialiased{
@@ -3706,9 +3702,9 @@ input, textarea{
 }
 
 .transition{
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
