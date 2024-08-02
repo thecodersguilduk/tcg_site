@@ -1,7 +1,7 @@
 [dev]
   functions = "functions/"
 [build]
-  command = "npm run production"
+  command = "npm install && npm run production"
   publish = "dist"
   functions = "functions/"
   node_version = "20.10.0"
