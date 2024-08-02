@@ -25,6 +25,10 @@ mix
             alias: {
                 '@utilities': path.resolve(__dirname, 'resources/js/utilities'),
                 '@modules': path.resolve(__dirname, 'resources/js/modules')
+            },
+            fallback: {
+                fs: false,
+                path: require.resolve('path-browserify')
             }
         }
     })
