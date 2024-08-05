@@ -93,9 +93,19 @@ const serializers = {
       })
       )
     ),
-    imageSection: ({ node: { asset, width } }) => h("img", {
-      src: urlFor(asset).url(),
-    }),
+    imageSection: ({ node: { asset, width, license, licenseUrl, licenseSite } }) => y("div", {
+      className: "flex flex-col",
+      },
+        y("img", {
+          src: urlFor(asset).url(),
+        },
+        ),
+        license ? y("p", {
+          className: "text-gray-500 text-xs",
+          innerHTML:  `Image dislayed under ${license} from <a href="${licenseUrl}" target="_blank"> ${licenseSite}</a>`
+      },
+      ) : ''
+    ),
     youtubeEmbed: (node) => h("iframe", {
       src: node.node.src,
       width: node.node.width || '100%',
