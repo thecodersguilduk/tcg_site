@@ -2,7 +2,17 @@
 	"main": [
 		{
 			"label": "Employers",
-			"url": "/employers"
+			"url": "#",
+			"submenu": [
+				{
+					"label": "Apprenticeships Info",
+					"url": "/employers"
+				},
+				{
+					"label": "Upskilling Staff",
+					"url": "/upskilling-staff"
+				}
+			]
 		},
 		{
 			"label": "apprenticeships",
@@ -25,6 +35,10 @@
 				{
 					"label": "Course Directory",
 					"url": "/course-directory"
+				},
+				{
+					"label": "Agile Project Management",
+					"url": "/agile-project-management"
 				},
 				{
 					"label": "West Yorkshire",

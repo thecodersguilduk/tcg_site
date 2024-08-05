@@ -1,0 +1,46 @@
+<form method="POST" action="/thanks-send-info" name="blog-eoi" class="relative" netlify>
+    <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">Required</div>
+  
+    <div>
+      <div class="mb-4">
+        <label for="name" class="sr-only">Name</label>
+        <div class="relative">
+          <input name="name" id="name" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Your Name*" maxlength="50" required data-regex="^[a-zA-Z ]+$" data-valid="false">
+          <span class="form-error text-xs leading-xs text-red-100" data-message="Only alphabetical values are allowed" aria-hidden="false" role="alert"></span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="company" class="sr-only">Company Name</label>
+        <div class="relative">
+          <input name="company" id="company" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Company Name*" required>
+          <span class="form-error text-xs leading-xs text-red-100" aria-hidden="false" role="alert"></span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="sr-only">Email</label>
+        <div class="relative">
+          <input name="email" id="email" type="email" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Email*" maxlength="50" required data-regex="\\S+@\\S+\\.\\S+" data-valid="false">
+          <span class="form-error text-xs leading-xs text-red-100" data-message="Please check if provided email is correct" aria-hidden="false" role="alert"></span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="sr-only">Phone</label>
+        <div class="relative">
+          <input name="phone" id="phone" type="text" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Phone" maxlength="14" data-regex="^[+0-9]+$" data-valid="false">
+          <span class="form-error text-xs leading-xs text-red-100" data-message="Only numeric values are allowed" aria-hidden="false" role="alert"></span>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="message" class="sr-only">Message</label>
+        <div class="relative">
+          <textarea name="message" id="message" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="Add a message - if you like!" rows="3"></textarea>
+          <span class="form-error text-xs leading-xs text-red-100" data-message="Only numeric values are allowed" aria-hidden="false" role="alert"></span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <button class="contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-green-100 hover:bg-green-200 focus:bg-green-200 active:bg-green-200 transition duration-150 ease-in-out" id="submit" type="submit">Send Enquiry</button>
+    </div>
+  </form>
+  

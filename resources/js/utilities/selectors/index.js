@@ -1,3 +1,4 @@
+import courseGridSlider from "../../modules/course-grid-slider"
 import submenu from "../../modules/submenu"
 
 const $$ = {
@@ -12,7 +13,7 @@ const $$ = {
 
     header              : document.getElementById('header'),
 
-    courseCTAHeader     : document.getElementById('cours-cta-header'),
+    courseCTAHeader     : document.getElementById('course-cta-header'),
 
     nav                 : document.getElementById('nav'),
 
@@ -82,7 +83,9 @@ const $$ = {
 
     courseGridContainer : document.querySelector('.course-grid-container'),
 
-    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid')
+    courseDirectoryGridItems : document.querySelectorAll('.course-directory-grid'),
+
+    courseGridSlider    : document.querySelector('#course-grid')
 }
 
 export default $$

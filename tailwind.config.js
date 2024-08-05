@@ -1,4 +1,5 @@
 module.exports = {
+	mode: 'jit',
 	prefix: '',
 	content: [
 		'./site/*.{html,njk}',
@@ -47,7 +48,8 @@ module.exports = {
 					700: '#4a5568',
 					800: '#2d3748',
 					900: '#1a202c',
-					1000: '#949494'
+					1000: '#949494',
+					2000: '#e4e4e4'
 				},
 				red: {
 					100: '#c94b62',
@@ -345,7 +347,11 @@ module.exports = {
 				'3xl': '34px',
 				'4xl': '40px',
 				'5xl': '48px',
+				'6xl': '56px',
 				'112': '112%',
+				'118': '118%',
+				'120' : '120%',
+				'200': '200%',
 			},
 			listStyleType: {
 				none: 'none',
