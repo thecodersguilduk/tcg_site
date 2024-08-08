@@ -1,6 +1,7 @@
 
 let mix = require('laravel-mix')
 let tailwindcss = require('tailwindcss')
+let path = require('path')
 require('laravel-mix-purgecss')
 
 // Paths
@@ -24,10 +25,11 @@ mix
             alias: {
                 '@utilities': path.resolve(__dirname, 'resources/js/utilities'),
                 '@modules': path.resolve(__dirname, 'resources/js/modules')
+            },
+            fallback: {
+                fs: false,
+                path: require.resolve('path-browserify')
             }
-        },
-        node: {
-            fs: "empty"
         }
     })
 
@@ -53,7 +55,9 @@ mix
 
             .purgeCss({
                 folders: [
-                    'site'
+                    'site',
+                    './site/**/*.html',
+                    './site/**/*.njk',
                 ],
                 extensions: [
                     'html',
