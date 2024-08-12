@@ -2,15 +2,17 @@
 <div class="course-grid-internal-container flex flex-col w-full">
     <div id="course-grid" class="w-full flex items-stretch">
             {% set courseArray = courses %} 
+
+            
         
             {% if page.url === '/agile/' %}
-                {% set courseArray = courses | agile('agile') %}
-                {{ courseArray | log }}
+                {% set courseArray = courses | courseFilter('agile') %}
+            {% elif page.url === '/gainshare/' %}
+                {% set courseArray = courses | courseFilter('gainshare') %}
             {% endif %}
+
+
             {% for course in courseArray %}
-
-
-                {% if course.courseType === "Apprenticeships" and course.isActive  %}
                 {% if page.url === '/apprenticeships/' %}
                     {% set modifiedTitle = course.title | courseDisplay %}
                 {% else %}
@@ -36,7 +38,7 @@
                 </div>
             </div>
             </div>
-        {% endif %}
+
     {% endfor %}
     </div>
     <div class="flex justify-center items-center mt-8">

@@ -127,6 +127,8 @@ function prepPost(data) {
 		});
 	}
 
+	data.tags = data.tags ? data.tags.map((tag) => tag.value) : [];
+
 	data.partners = data.logos ? data.logos.map((logo) => logo.partnerName) : [];
 
 	data.logos = data.logos
@@ -138,6 +140,8 @@ function prepPost(data) {
 	data.ctaText = data.ctaText ? data.ctaText : 'Apply Now';
 
 	data.formLink = data.formLink ? data.formLink : '#contact';
+
+	console.log(data.tags);
 
 	return data;
 }

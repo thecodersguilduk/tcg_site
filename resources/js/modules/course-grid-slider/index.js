@@ -8,9 +8,9 @@ const courseGridSlider = function (){
   const slidesToShow = parent.getAttribute('data-cards') || 2;
     return $(courseGridSlider).slick({
           dots: true,
-          prevArrow: $('.prev'),
-          nextArrow: $('.next'),
-          appendDots: $('.dots'),
+          prevArrow: $('#course-grid .prev'),
+          nextArrow: $('#course-grid .next'),
+          appendDots: $('#course-grid .dots'),
           infinite: true,
           slidesToShow: slidesToShow,
           slidesToScroll: 2,
