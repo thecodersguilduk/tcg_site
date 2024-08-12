@@ -7,7 +7,13 @@ const config = require('../globals/config');
 const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
     ...,
     courseType[]->{courseType},
-    "featuredImage": featuredImage.asset->url,
+    "featuredImage": {
+		"url": featuredImage.asset->url,
+		"alt": featuredImage.alt,
+		"license": featuredImage.license,
+		"licenseUrl": featuredImage.licenseUrl,
+		"licenseSite": featuredImage.licenseSite
+	},
     courseTopics[]->{name},
     duration[]->{name},
     trainers[]->{...},
@@ -91,11 +97,11 @@ function prepPost(data) {
 		? urlFor(data.featuredImage).width(500).url()
 		: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
 
-		data.featuredImage = data.featuredImage
+		data.featuredImage.url = data.featuredImage.url
 		? {
-			small: urlFor(data.featuredImage).width(500).url(), // Small image for smaller screens
-			medium: urlFor(data.featuredImage).width(972).url(), // Medium image for medium screens
-			large: urlFor(data.featuredImage).width(1500).url() // Large image for larger screens
+			small: urlFor(data.featuredImage.url).width(500).url(), // Small image for smaller screens
+			medium: urlFor(data.featuredImage.url).width(972).url(), // Medium image for medium screens
+			large: urlFor(data.featuredImage.url).width(1500).url() // Large image for larger screens
 		  }
 		: {
 			small: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', // Fallback small image

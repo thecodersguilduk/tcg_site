@@ -8,7 +8,7 @@
             {% if course.courseType === type.courseType %}
             <div class="relative flex flex-col gap-6 self-stretch rounded-md shrink-0 shadow-primary course">
                 <div class="flex flex-col items-start gap-2 self-stretch">
-                    <img src="{{ course.featuredImage.medium }}" alt="{{ course.title }}" class="w-full h-64 object-cover">
+                    <img src="{{ course.featuredImage.url.medium }}" alt="{{ course.title }}" class="w-full h-64 object-cover">
                 </div>
                 <div class="flex flex-col gap-6 items-start self-stretch justify-stretch shrink-0 px-4 pb-6">
                     <h4 class="text-2xl font-bold mb-0">{{ course.title }}</h4>
