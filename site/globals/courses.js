@@ -4,7 +4,7 @@ const imageUrlBuilder = require('@sanity/image-url');
 const sanityClient = require('@sanity/client');
 const config = require('../globals/config');
 
-const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
+const query = `*[_type == "course" && isActive && !(_id in path("drafts.**"))] {
     ...,
     courseType[]->{courseType},
     "featuredImage": {

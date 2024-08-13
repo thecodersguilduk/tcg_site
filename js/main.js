@@ -190,9 +190,9 @@ var courseGridSlider = function () {
   var slidesToShow = parent.getAttribute('data-cards') || 2;
   return $(courseGridSlider).slick({
     dots: true,
-    prevArrow: $('#course-grid .prev'),
-    nextArrow: $('#course-grid .next'),
-    appendDots: $('#course-grid .dots'),
+    prevArrow: $('.course-grid-internal-container .prev'),
+    nextArrow: $('.course-grid-internal-container .next'),
+    appendDots: $('.course-grid-internal-container .slick-dots'),
     infinite: true,
     slidesToShow: slidesToShow,
     slidesToScroll: 2,
@@ -707,28 +707,27 @@ var sliderSettings = function () {
   var courseSlick = document.querySelector('.course__testimonials__slider');
   if (!reviewsSlick && !courseSlick) return;
   if (reviewsSlick) {
-    $('.testimonials__slider').slick({
+    return $('.testimonials__slider').slick({
       dots: true,
-      prevArrow: $('.testimonials__slider .prev'),
-      nextArrow: $('.testimonials__slider .next'),
-      appendDots: $('.testimonials__slider .slick-dots'),
+      prevArrow: $('.testimonials .prev'),
+      nextArrow: $('.testimonials .next'),
+      appendDots: $('.testimonials .dots'),
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
     });
   }
-
-  // if(courseSlick){
-  //   $('.course__testimonials__slider').slick({
-  //     dots: true,
-  //     prevArrow: null,
-  //     nextArrow: null,
-  //     appendDots: $('.course__testimonials__slider .dots'),
-  //     infinite: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //   });
-  // }
+  if (courseSlick) {
+    return $('.course__testimonials__slider').slick({
+      dots: true,
+      prevArrow: null,
+      nextArrow: null,
+      appendDots: $('.dots'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sliderSettings);
 

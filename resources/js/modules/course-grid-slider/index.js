@@ -8,9 +8,9 @@ const courseGridSlider = function (){
   const slidesToShow = parent.getAttribute('data-cards') || 2;
     return $(courseGridSlider).slick({
           dots: true,
-          prevArrow: $('#course-grid .prev'),
-          nextArrow: $('#course-grid .next'),
-          appendDots: $('#course-grid .dots'),
+          prevArrow: $('.course-grid-internal-container .prev'),
+          nextArrow: $('.course-grid-internal-container .next'),
+          appendDots: $('.course-grid-internal-container .slick-dots'),
           infinite: true,
           slidesToShow: slidesToShow,
           slidesToScroll: 2,
@@ -39,7 +39,7 @@ const courseGridSlider = function (){
               }
             }
           ]
-        });
+    });
 
 }()
 

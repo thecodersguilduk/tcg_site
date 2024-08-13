@@ -5,10 +5,12 @@
 
             
         
-            {% if page.url === '/agile/' %}
-                {% set courseArray = courses | courseFilter('agile') %}
+            {% if page.url === '/' %}
+                {% set courseArray = courses | courseFilter('apprenticeship') %}
             {% elif page.url === '/gainshare/' %}
                 {% set courseArray = courses | courseFilter('gainshare') %}
+            {% elif page.url === '/upskilling-staff/' %}
+                {% set courseArray = courses | courseFilter('apprenticeship') %}
             {% endif %}
 
 
@@ -19,35 +21,35 @@
                     {% set modifiedTitle = course.title %}
                 {% endif %}
 
-            <div class="mb-4 p-4 h-full px-4 flex items-stretch self-stretch">
-            <div class="h-full">
-                <div class="bg-white px-6 py-8 rounded-lg shadow-primary min-h-[350px]">
-                <div class="flex flex-col items-start">
-                    <object aria-hidden="true" type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
-                    <h3 class="text-xl leading-lg mb-0">{{ modifiedTitle }}</h3>
-                    <div class="mt-auto">
-                    <p class="font-bold leading-sm font-heading mb-4">{% if page.url === '/apprenticeships/' %}{{ course.title }}{% else %}I want to...{% endif %}</p>
-                    <div class="mb-4">
-                        <a href="/course-directory/{{ course.slug.current }}/" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Find out more!</a>
-                    </div>
-                    <div>
-                        <a href="#" data-modal="book-a-call-calendly" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire our next star!</a>
+                <div class="mb-4 p-4 h-full px-4 flex items-stretch self-stretch">
+                <div class="h-full">
+                    <div class="bg-white px-6 py-8 rounded-lg shadow-primary min-h-[350px]">
+                    <div class="flex flex-col items-start">
+                        <object aria-hidden="true" type="image/svg+xml" data="../images/icons/Group-79.svg" class="mb-2"></object>
+                        <h3 class="text-xl leading-lg mb-0">{{ modifiedTitle }}</h3>
+                        <div class="mt-auto">
+                        <p class="font-bold leading-sm font-heading mb-4">{% if page.url === '/apprenticeships/' %}{{ course.title }}{% else %}I want to...{% endif %}</p>
+                        <div class="mb-4">
+                            <a href="/course-directory/{{ course.slug.current }}/" class="inline-block bg-blue-200 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Find out more!</a>
+                        </div>
+                        <div>
+                            <a href="#" data-modal="book-a-call-calendly" class="bookacall inline-block bg-red-100 text-white font-heading font-bold text-md leading-sm py-2 px-6 rounded whitespace-no-wrap">Hire our next star!</a>
+                        </div>
+                        </div>
                     </div>
                     </div>
                 </div>
                 </div>
-            </div>
-            </div>
 
-    {% endfor %}
+            {% endfor %}
     </div>
     <div class="flex justify-center items-center mt-8">
         <button type="button" class="prev mr-6">
           <img alt="click to see the previous courses" src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
         </button>
-        <div class="dots"></div>
+        <div class="slick-dots"></div>
         <button type="button" class="next ml-6">
           <img alt="click to the the next courses" src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
         </button>
-      </div>
+    </div>
 </div> 

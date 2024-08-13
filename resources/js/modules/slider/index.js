@@ -5,31 +5,30 @@ const sliderSettings = function(){
   if(!reviewsSlick && !courseSlick) return
 
   if(reviewsSlick){
-    $('.testimonials__slider').slick({
+    return $('.testimonials__slider').slick({
       dots: true,
-      prevArrow: $('.testimonials__slider .prev'),
-      nextArrow: $('.testimonials__slider .next'),
-      appendDots: $('.testimonials__slider .slick-dots'),
+      prevArrow: $('.testimonials .prev'),
+      nextArrow: $('.testimonials .next'),
+      appendDots: $('.testimonials .dots'),
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
     });
   }
 
-  // if(courseSlick){
-  //   $('.course__testimonials__slider').slick({
-  //     dots: true,
-  //     prevArrow: null,
-  //     nextArrow: null,
-  //     appendDots: $('.course__testimonials__slider .dots'),
-  //     infinite: true,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //   });
-  // }
+  if(courseSlick){
+    return $('.course__testimonials__slider').slick({
+      dots: true,
+      prevArrow: null,
+      nextArrow: null,
+      appendDots: $('.dots'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  }
 
   
 }()
 
 export default sliderSettings
-

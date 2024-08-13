@@ -1175,11 +1175,11 @@ input, textarea{
   filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(135deg) brightness(106%) contrast(96%);
 }
 
-#hub .testimonials__slider .slick-dots {
+#hub .testimonials .slick-dots {
   display: flex;
   justify-content: center;
 }
-#hub .testimonials__slider .slick-dots button{
+#hub .testimonials .slick-dots button{
   --tw-bg-opacity: 1;
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
   font-size: 0;
@@ -1189,15 +1189,15 @@ input, textarea{
   border-radius: 50%;
   margin: 0 4px;
 }
-#hub .testimonials__slider .slick-dots .slick-active button{
+#hub .testimonials .slick-dots .slick-active button{
   --tw-bg-opacity: 1;
   background-color: rgb(22 174 219 / var(--tw-bg-opacity));
 }
-#hub .testimonials__slider .slick-dots li{
+#hub .testimonials .slick-dots li{
   display: flex;
   justify-content: center;
 }
-#hub .testimonials__slider .slick-arrow{
+#hub .testimonials .slick-arrow{
   --tw-bg-opacity: 1;
   background-color: rgb(37 116 169 / var(--tw-bg-opacity));
   font-size: 0;
@@ -1206,10 +1206,10 @@ input, textarea{
   border-radius: 50%;
   display: block;
 }
-#hub .testimonials__slider .slick-slide > div {
+#hub .testimonials .slick-slide > div {
   border-radius: 10px;
 }
-#hub .testimonials__slider__author{
+#hub .testimonials__author{
   border-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(22 174 219 / var(--tw-border-opacity));
@@ -1222,7 +1222,7 @@ input, textarea{
   background-repeat: no-repeat;
   position: relative;
 }
-#hub .testimonials__slider__author::before{
+#hub .testimonials__author::before{
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   --tw-text-opacity: 1;

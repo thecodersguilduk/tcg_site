@@ -180,7 +180,7 @@ body_class: hub
 
       </div>
       <div class="bg-grey-2000 h-full w-full lg:w-6/12">
-        <img src="../images/learner-images/upskilling-your-team-2.jpg" alt="Upskill yuor Team with The Coders Guild" class="w-full h-full object-cover">
+        <img src="../images/learner-images/upskilling-your-team-2.jpg" alt="Upskill your Team with The Coders Guild" class="w-full h-full object-cover">
       </div>
     </div>
   </section>
@@ -188,7 +188,7 @@ body_class: hub
   
   <!-- testimonial -->
   
-  <section class="px-6 xl:px-48 lg:px-24 pb-24">
+  <section class="testimonials px-6 xl:px-48 lg:px-24 pb-24">
     <div class="testimonials__slider">
         {% for testimonial in testimonials %}
             {% if testimonial._id === 'e2fa4724-d9f6-4624-9b77-1b4971f47be9' or testimonial._id === '8cd390ce-8641-41fb-8692-98b7a72207e3' %}
@@ -213,8 +213,17 @@ body_class: hub
             </div>
             {% endif %}
         {% endfor %}
-        <div class="slick-dots"></div>
+        
     </div>
+    <div class="flex justify-center items-center mt-8">
+      <button type="button" class="prev mr-6">
+        <img alt="click to see the previous courses" src="../../images/icons/chevron-right-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+      <div class="dots"></div>
+      <button type="button" class="next ml-6">
+        <img alt="click to the the next courses" src="../../images/icons/chevron-left-white.svg" class="h-6 w-6 m-auto" />
+      </button>
+  </div>
   </section>
 
 
