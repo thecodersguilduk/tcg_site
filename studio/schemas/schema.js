@@ -2,19 +2,17 @@ import blog from "./documents/blog";
 import team from "./documents/team";
 import testimonial from "./documents/testimonials";
 import categories from "./documents/categories";
+import courseBenefits from "./documents/courseSchemas/courseBenefits";
 import courses from "./documents/courseSchemas/course";
 import courseTypes from "./documents/courseSchemas/courseTypes";
 import courseDurations from "./documents/courseSchemas/courseDuration";
 import courseTopics from "./documents/courseSchemas/courseTopics";
 import coursePartners from "./documents/courseSchemas/coursePartners";
-import courseProject from "./documents/courseSchemas/courseProject";
 import imageSection from "./documents/components/imageSection";
+import calendlyEmbed from "./documents/components/calendlyEmbed";
 import applyBtn from "./documents/components/applyBtn";
 import callModal from "./documents/components/callModal";
 import apprenticeAd from "./documents/apprenticeAd";
-import leadSentence from "./documents/components/leadSentence.js";
-import styledHeading from "./documents/components/styledHeading.js";
-import supportingSentence from "./documents/components/supportingSentence.js";
 import hr from "./documents/components/hr";
 import policies from "./documents/policies";
 import vacancies from "./documents/vacancies";
@@ -23,6 +21,7 @@ import newsletter from "./documents/components/newsletter";
 import form from "./documents/components/form";
 import locations from "./documents/locations";
 import youtube from "./documents/components/youtubeEmbed";
+import leadGenFormEmbed from "./documents/components/formEmbed";
 
 
 export default [
@@ -31,19 +30,17 @@ export default [
     team,
     testimonial,
     categories,
+    courseBenefits,
     courses,
     courseTypes,
     courseDurations,
     courseTopics,
     coursePartners,
-    courseProject,
     imageSection,
     applyBtn,
     callModal,
+    calendlyEmbed,
     apprenticeAd,
-    styledHeading,
-    leadSentence,
-    supportingSentence,
     hr,
     policies,
     newsletter,
@@ -52,4 +49,5 @@ export default [
     interviewQuestions,
     locations,
     youtube,
+    leadGenFormEmbed
   ]

@@ -1,13 +1,13 @@
 <div class="bg-gradient-to-r from-blue-100 to-blue-200">
     <div class="inner flex flex-col md:flex-row mx-auto py-16">
         <div class="w-full md:w-6/12 relative flex items-center justify-center">
-            <object type="image/svg+xml" data="../../images/patterns/417.svg" class="absolute pattern pattern-417 z-10 hidden lg:block"></object>
-            <object type="image/svg+xml" data="../../images/patterns/416.svg" class="absolute pattern pattern-416 z-10 hidden lg:block"></object>
+            <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/417.svg" class="absolute pattern pattern-417 z-10 hidden lg:block"></object>
+            <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/416.svg" class="absolute pattern pattern-416 z-10 hidden lg:block"></object>
             <img src="../../images/chevrons-2.png" alt="Contact us about our digital courses" class="z-20">
         </div>
-        <div class="w-full md:w-6/12 px-2 lg:px-16 mt-8 md:mt-0">
-            <h2 class="text-white">Let's get this show on the road!</h2>
-            <p class="text-white">{% if course.isFunded %}Find out if you qualify for 100% funding for this course by completing this short callback form.{% else %}Register your interest in this course to be kept in the loop about upcoming dates and funding.{% endif %}</p>
+        <div class="w-full md:w-6/12 px-2 lg:px-16 mt-8 md:mt-0 flex flex-col gap-4">
+            <h2 class="text-white mb-0">Start Your Journey Today!</h2>
+            <p class="text-white leading-lg">Whether you’re exploring fully funded opportunities or our flexible payment options, we’re here to help you advance. Complete this brief form to discover how you can qualify and to schedule a personalised consultation. Let’s unlock your potential together!</p>
             {% include '../contact/expression-of-interest-form.njk' %}
         </div>
     </div>

@@ -1,4 +1,4 @@
- <form netlify action="/thanks-applications/" name="expression-interest">
+ <form netlify action="/thanks-interest/" name="expression-interest">
     <div class="mb-4">
         <label for="eoi-name" class="sr-only">Name</label>
         <div class="relative">
@@ -20,7 +20,7 @@
         <input type="text" name="eoi-phone" class="form-input-field border-1 rounded py-2 px-3 required mt-1 mb-1 block w-full placeholder-black" placeholder="Your Phone Number">
     </div>
     <div class="mb-4">
-        <p><label for="eoi-course_choice" class="">Which course might you be interested in?</label>
+        <p class="leading-lg"><label for="eoi-course_choice" class="text-white leading-lg">Which course might you be interested in?</label>
         </p>
         <div class="relative flex items-start">
 
@@ -34,6 +34,20 @@
                     <option value="Any/Not Sure">Any/Not Sure</option>
                 </select>
 
+        </div>
+    </div>
+    <div class="mb-4">
+        <p class="leading-lg"><label for="session-times" class="text-white leading-lg">Do you have a preference of time of day to attend course sessions?</label></p>
+        <div class="relative">
+            <select id="session-times" name="session-times" class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required border-red-100" required>
+                <option selected disabled>Please select one</option>
+                <option value="Day time">I can only do this course if sessions are during the workday</option>
+                <option value="After work">I can only do this course if the sessions are after work (6pm - 9pm)</option>
+                <option value="either">I could attend either during the day or after work sessions</option>
+                <option value="Just interested/other">Just interested/other</option>
+
+
+            </select>
         </div>
     </div>
     <div class="mb-4">

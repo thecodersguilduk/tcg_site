@@ -1,59 +1,15 @@
 const htmlmin = require('html-minifier');
-//const Image = require('@11ty/eleventy-img');
-// const path = require('path');
-
-// async function imageShortcode(src, alt, classNames) {
-// 	let sizes = '(min-width: 1024px) 100vw, 50vw';
-// 	let classes = [classNames];
-// 	//console.log(`Generating image(s) from:  ${src}`)
-// 	if (alt === undefined) {
-// 		// Throw an error on missing alt (alt="" works okay)
-// 		throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-// 	}
-// 	let metadata = await Image(src, {
-// 		widths: [null],
-// 		formats: ['webp'],
-// 		urlPath: './images/',
-// 		outputDir: './dist/images/',
-// 		/* =====
-//     Now we'll make sure each resulting file's name will
-//     make sense to you. **This** is why you need
-//     that `path` statement mentioned earlier.
-//     ===== */
-// 		filenameFormat: function (id, src, width, format, options) {
-// 			const extension = path.extname(src);
-// 			const name = path.basename(src, extension);
-// 			return `${name}-${width}w.${format}`;
-// 		},
-// 	});
-// 	let lowsrc = metadata.webp[0];
-// 	//console.log(lowsrc);
-// 	let highsrc = metadata.webp[metadata.webp.length - 1];
-// 	return `<picture>
-//       ${Object.values(metadata)
-// 							.map((imageFormat) => {
-// 								return `  <source type="${
-// 									imageFormat[0].sourceType
-// 								}" srcset="${imageFormat
-// 									.map((entry) => entry.srcset)
-// 									.join(', ')}" sizes="${sizes}">`;
-// 							})
-// 							.join('\n')}
-//       <img
-//         src="${lowsrc.url}"
-//         alt="${alt}"
-//         loading="lazy"
-//         decoding="async"
-//         class="${classes}">
-//     </picture>`;
-// }
 
 module.exports = (eleventyConfig) => {
-	//add shortcode to change image formats to webp or jpeg
-	//eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
+	eleventyConfig.addFilter("agile", function(courses, tag) {
+		const filteredCourses = courses.filter(course => course.tags && course.tags.includes(t => t.value === tag));
 
-	//
+		console.log(filteredCourses)
+	  });
+
 	eleventyConfig.addFilter('courseDisplay', require('./filters/courseNames.js'));
+
+	eleventyConfig.addFilter('removeUnderscores', require('./filters/removeUnderscores.js'));
 
 	eleventyConfig.addFilter('underscore', require('./filters/underscore.js'));
 
@@ -86,19 +42,6 @@ module.exports = (eleventyConfig) => {
 	// Skips first post with limit
 	eleventyConfig.addFilter('skipFirst', function (array, limit) {
 		return array.slice(1, limit);
-	});
-
-	// Minify our HTML
-	eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
-		if (outputPath.endsWith('.html')) {
-			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true,
-			});
-			return minified;
-		}
-		return content;
 	});
 
 	// Add a readable date formatter filter to Nunjucks

@@ -7,10 +7,11 @@ const stripe = function(){
         e.preventDefault();
         const title = this.getAttribute('data-course-title');
         const price = this.getAttribute('data-price');
+        const number = this.getAttribute('data-number');
 
         const response = await fetch('/.netlify/functions/stripeHandler', {
             method: 'POST',
-            body: JSON.stringify({title, price}),
+            body: JSON.stringify({title, price, number}),
             headers: {
                 'Content-Type': 'application/json'
             }

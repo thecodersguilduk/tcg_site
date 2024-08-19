@@ -10,6 +10,7 @@ tag: ['course'],
 permalink: "/course-directory/{{ course.slug.current }}/index.html",
 eleventyComputed: {
     meta_title: data => data.course.title,
+    title: data => data.course.title,
     meta_description: data => data.course.excerpt ? data.course.excerpt.replace( /(<([^>]+)>)/ig, '') : '',
     featured_image: data => data.course.featuredImage,
     }

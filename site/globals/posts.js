@@ -16,7 +16,13 @@ const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
     authors[]->{name},
     "avatar": authors[]->image.asset,
     categories[]->{name},
-    blogPortableText,
+    blogPortableText[]{
+      ...,
+      _type == "calendlyLink" => {
+        "calendlyLink": calendlyLink 
+      }
+    },
+    "tags": tags[].value
 } | order(publishedAt desc)`
 
 module.exports = async function () {
@@ -46,8 +52,6 @@ function prepPost(data) {
   // data.avatar = urlFor(data.avatar);
   data.avatar = urlFor(data.avatar[0]).width(100).url();
 
-  //console.log(data.tags);
-
   return data
 }
 
@@ -55,6 +59,15 @@ function urlFor(source) {
   const imageBuilder = imageUrlBuilder(sanityClient(config));
   return imageBuilder.image(source);
 }
+
+let currentDate = new Date();
+
+// Get the year and month
+let year = currentDate.getFullYear();
+let month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // Adding 1 to month because it's zero-based index
+
+// Format the date as YYYY-MM
+let formattedDate = `${year}-${month}`;
 
 // This is a way of converting our custom blocks from Portable Text to html
 const serializers = {
@@ -65,9 +78,34 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
-    imageSection: ({ node: { asset, width } }) => h("img", {
-      src: urlFor(asset).url(),
-    }),
+    calendlyEmbed: node => (
+      y('div.calendly-inline-widget', {
+        'data-url': node.node.calendlyLink + `?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2574a9&month=${formattedDate}`,
+        style: {
+          minWidth: "320px",
+          height: "800px"
+        }
+      },
+      y("script", {
+        src: "https://assets.calendly.com/assets/external/widget.js",
+        type: "text/javascript",
+        async: true
+      })
+      )
+    ),
+    imageSection: ({ node: { asset, width, license, licenseUrl, licenseSite } }) => y("div", {
+      className: "flex flex-col",
+      },
+        y("img", {
+          src: urlFor(asset).url(),
+        },
+        ),
+        license ? y("p", {
+          className: "text-gray-500 text-xs",
+          innerHTML:  `Image dislayed under ${license} from <a href="${licenseUrl}" target="_blank"> ${licenseSite}</a>`
+      },
+      ) : ''
+    ),
     youtubeEmbed: (node) => h("iframe", {
       src: node.node.src,
       width: node.node.width || '100%',
@@ -93,7 +131,7 @@ const serializers = {
     },
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
-      'data-modal': "book-a-call",
+      'data-modal': "book-a-call-calendly",
       className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
       innerHTML: title,
       style: 'color: white;',
@@ -167,7 +205,58 @@ const serializers = {
                     )
                 )
             )
+          ),
+    leadGenFormEmbed: (({node: { title }}) => y('div', { id: 'contact', className: 'overflow-hidden w-full md:mx-auto not-on-print'},
+    y('div', { className: 'overflow-hidden w-full md:mx-auto not-on-print'},
+      y('div',
+        y('h3', { innerHTML: 'Get in Touch' })
+        ),
+        y('form', { method: 'POST', action: '/thanks-send-info', name: 'blog-eoi', className: 'relative', attrs: {netlify: true} },
+          y('div', { innerHTML: 'Required', className: 'required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden' }),
+          y('div',
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'name', className: 'sr-only', innerHTML: 'Name' }),
+                y('div', { className: 'relative' },
+                  y('input', { name: 'name', id: 'name', type: 'text', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Your Name*', maxlength: 50 }, { attrs: { 'required': '', 'data-regex': '^[a-zA-Z ]+$', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only alphabetical values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+              y('label', { for: 'company', className: 'sr-only', innerHTML: 'Company Name' }),
+              y('div', { className: 'relative' },
+                y('input', { name: 'company', id: 'company', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Company Name*' }, { attrs: { 'required': ''}}),
+                y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'aria-hidden': 'false', 'role': 'alert' }})
+              )
+            ),
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'email', className: 'sr-only', innerHTML: 'Email'}),
+                y('div', { className: 'relative' },
+                  y('input', { name: 'email', id: 'email', type: 'email', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Email*', maxlength: 50 }, { attrs: { 'required': '', 'data-regex': '\\S+@\\S+\\.\\S+', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Please check if provided email is correct', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+                y('label', { for: 'phone', className: 'sr-only', innerHTML: 'Phone' }),
+                y('div', { className: 'relative' },
+                  y('input', { name: 'phone', id: 'phone', type: 'text', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Phone', maxlength: 14 }, { attrs: { 'data-regex': '^[+0-9]+$', 'data-valid': false }}),
+                  y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only numeric values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
+                )
+              ),
+              y('div', { className: 'mb-4' },
+              y('label', { for: 'message', className: 'sr-only', innerHTML: 'Message' }),
+              y('div', { className: 'relative' },
+                y('textarea', { name: 'message', id: 'message', className: 'form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required', placeholder: 'Add a message - if you like!', rows: 3 },),
+                y('span', { className: 'form-error text-xs leading-xs text-red-100'}, { attrs: { 'data-message': 'Only numeric values are allowed', 'aria-hidden': 'false', 'role': 'alert' }})
+              )
+            ),
+            ),
+            y('div',
+              y('button', { className: 'contact-btn rounded font-heading font-bold w-full block py-2 px-6 border border-transparent text-white bg-blue-200 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-100 transition duration-150 ease-in-out', id: 'submit', type: 'submit', innerHTML: 'Send Enquiry'})
+            )
           )
+      )
+  )
+)
 
   }
 }

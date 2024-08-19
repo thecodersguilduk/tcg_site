@@ -128,8 +128,6 @@ function prepPost(data) {
     })
   }
 
-  console.log(data.location)
-
   return data
 }
 
@@ -148,15 +146,6 @@ const serializers = {
         h('code', node.node.code)
       )
     ),
-    styledHeading: (node) => h('h2', {
-      innerHTML: node.node.styledHeading,
-      className: 'text-lightblue-500',
-      style: 'font-size: 32px'
-    }),
-    leadSentence: (node) => h('h3', {
-      innerHTML: node.leadSentence,
-      className: 'text-blue-200 text-2xl'
-    }),
     imageSection: ({ node: { asset, width } }) => h("img", {
       src: urlFor(asset).url(),
     }),
@@ -178,7 +167,7 @@ const serializers = {
     },
     callModal: ({ node: { title } }) => h('a', {
       href: "#",
-      'data-modal': "book-a-call",
+      'data-modal': "book-a-call-calendly",
       className: "bookacall-c-btn inline-block py-2 px-6 font-bold bg-blue-200 text-white rounded font-heading hover:bg-blue-100",
       innerHTML: title,
       style: 'color: white;',

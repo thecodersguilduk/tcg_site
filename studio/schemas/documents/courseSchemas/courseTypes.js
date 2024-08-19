@@ -16,7 +16,8 @@ export default {
     {
       title: 'Tagline',
       name: 'tagline',
-      type: 'string'
+      type: 'array',
+      of: [{type: 'block'}]
     },
 
 ]

@@ -1,7 +1,10 @@
-<div>
-    <div class="inner max-w-5xl">
-        <div class="excerpt">
-            {{ course.excerpt | safe }}
-        </div>
+<div class="flex flex-col lg:flex-row items-center gap-8 md:gap-x-8 self-stretch p-4 {% if course.isFunded == true and course.courseType !== 'Skills Bootcamps' %} pt-20 {% endif %}">
+    <div class="flex flex-col lg:w-7/12 items-start gap-8 course-pitch">
+        {{ course.excerpt | safe }}
     </div>
+    <div class="flex md:gap-16 md:py-0 xxxl:px-16 md:items-center">
+        <div class="benefits flex flex-col items-start bg-grey-100 rounded py-16 px-8 gap-16">
+            {% include "components/courses/reasons.njk" %}
+        </div>
+    </div>  
 </div>
