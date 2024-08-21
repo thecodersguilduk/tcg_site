@@ -7,8 +7,8 @@
         
             {% if page.url === '/' %}
                 {% set courseArray = courses | courseFilter('apprenticeship') %}
-            {% elif page.url === '/gainshare/' %}
-                {% set courseArray = courses | courseFilter('gainshare') %}
+            {% elif page.url === '/west-yorkshire/' %}
+                {% set courseArray = courses | courseFilter('wyca') %}
             {% elif page.url === '/upskilling-staff/' %}
                 {% set courseArray = courses | courseFilter('apprenticeship') %}
             {% endif %}
