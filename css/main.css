@@ -1175,6 +1175,74 @@ input, textarea{
   filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(135deg) brightness(106%) contrast(96%);
 }
 
+#hub .testimonials .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+#hub .testimonials .slick-dots button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 222 222 / var(--tw-bg-opacity));
+  font-size: 0;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+#hub .testimonials .slick-dots .slick-active button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 174 219 / var(--tw-bg-opacity));
+}
+#hub .testimonials .slick-dots li{
+  display: flex;
+  justify-content: center;
+}
+#hub .testimonials .slick-arrow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 116 169 / var(--tw-bg-opacity));
+  font-size: 0;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: block;
+}
+#hub .testimonials .slick-slide > div {
+  border-radius: 10px;
+}
+#hub .testimonials__author{
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(22 174 219 / var(--tw-border-opacity));
+  height: 110px;
+  max-width: 110px;
+  border-radius: 50%;
+  flex: 1 0 110px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#hub .testimonials__author::before{
+  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(37 116 169 / var(--tw-text-opacity));
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  font-size: 153px;
+  line-height: 0;
+  content: "“";
+}
+
+.filter-blue {
+  filter: invert(33%) sepia(91%) saturate(817%) hue-rotate(172deg) brightness(90%) contrast(78%);
+}
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(135deg) brightness(106%) contrast(96%);
+}
+
 .get-in-touch .cta__text {
   max-width: 60%;
 }
@@ -2470,6 +2538,10 @@ input, textarea{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -3644,6 +3716,10 @@ input, textarea{
   opacity: 0;
 }
 
+.mix-blend-multiply{
+  mix-blend-mode: multiply;
+}
+
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3751,43 +3827,47 @@ input, textarea{
   margin-right: 1rem;
   display: inline-block;
 }
-#course_breakdown ol li,
-#course_outline ol li,
-#content ol li,
-.decorated-list ol li,
-.content ol li {
+#course_breakdown ol,
+#course_outline ol,
+#content ol,
+.decorated-list ol,
+.content ol {
+  counter-reset: item;
+}
+#course_breakdown ol > li,
+#course_outline ol > li,
+#content ol > li,
+.decorated-list ol > li,
+.content ol > li {
+  counter-increment: item;
   z-index: 1;
-  font-weight: bold;
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 26px;
   margin-bottom: 1rem;
 }
-#course_breakdown ol li::marker,
-#course_outline ol li::marker,
-#content ol li::marker,
-.decorated-list ol li::marker,
-.content ol li::marker {
-  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 32px;
-  margin-top: 40px;
+#course_breakdown ol > li::before,
+#course_outline ol > li::before,
+#content ol > li::before,
+.decorated-list ol > li::before,
+.content ol > li::before {
+  content: counter(item);
+  font-size: 1.5rem;
   color: #2574a9;
-  line-height: 26px;
+  line-height: 1.5;
   font-weight: bold;
-}
-#course_breakdown ol li::before,
-#course_outline ol li::before,
-#content ol li::before,
-.decorated-list ol li::before,
-.content ol li::before {
-  content: "";
   background-image: url("/images/patterns/Numbered_List_Pattern.svg");
-  height: 43px;
-  position: absolute;
-  z-index: -1;
-  display: block;
-  background-size: auto;
-  margin-left: -40px;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+  padding: 5px;
+  margin-right: 5px;
+}
+#course_breakdown ol > li > ul,
+#course_outline ol > li > ul,
+#content ol > li > ul,
+.decorated-list ol > li > ul,
+.content ol > li > ul {
+  margin-left: 25px;
 }
 
 .decorated-list.white ul li {

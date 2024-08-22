@@ -4,7 +4,7 @@ const imageUrlBuilder = require('@sanity/image-url');
 const sanityClient = require('@sanity/client');
 const config = require('../globals/config');
 
-const query = `*[_type == "course" && !(_id in path("drafts.**"))] {
+const query = `*[_type == "course" && isActive && !(_id in path("drafts.**"))] {
     ...,
     courseType[]->{courseType},
     "featuredImage": {
@@ -127,6 +127,8 @@ function prepPost(data) {
 		});
 	}
 
+	data.tags = data.tags ? data.tags.map((tag) => tag.value) : [];
+
 	data.partners = data.logos ? data.logos.map((logo) => logo.partnerName) : [];
 
 	data.logos = data.logos
@@ -138,6 +140,8 @@ function prepPost(data) {
 	data.ctaText = data.ctaText ? data.ctaText : 'Apply Now';
 
 	data.formLink = data.formLink ? data.formLink : '#contact';
+
+	console.log(data.tags);
 
 	return data;
 }

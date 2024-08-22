@@ -1,10 +1,8 @@
 const htmlmin = require('html-minifier');
 
 module.exports = (eleventyConfig) => {
-	eleventyConfig.addFilter("agile", function(courses, tag) {
-		const filteredCourses = courses.filter(course => course.tags && course.tags.includes(t => t.value === tag));
-
-		console.log(filteredCourses)
+	eleventyConfig.addFilter("courseFilter", function(courses, tag) {
+		return courses.filter(course => course.tags.includes(tag));
 	  });
 
 	eleventyConfig.addFilter('courseDisplay', require('./filters/courseNames.js'));

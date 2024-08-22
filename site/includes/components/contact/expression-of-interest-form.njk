@@ -1,3 +1,13 @@
+{% set courseArray = courses %} 
+
+{% if page.url === '/' %}
+    {% set courseArray = courses | courseFilter('apprenticeship') %}
+{% elif page.url === '/west-yorkshire/' %}
+    {% set courseArray = courses | courseFilter('wyca') %}
+{% elif page.url === '/upskilling-staff/' %}
+    {% set courseArray = courses | courseFilter('apprenticeship') %}
+{% endif %}
+ 
  <form netlify action="/thanks-interest/" name="expression-interest">
     <div class="mb-4">
         <label for="eoi-name" class="sr-only">Name</label>
@@ -23,17 +33,15 @@
         <p class="leading-lg"><label for="eoi-course_choice" class="text-white leading-lg">Which course might you be interested in?</label>
         </p>
         <div class="relative flex items-start">
-
-                <select class="form-input-field rounded block w-full py-2 px-3 border-1" name="course_choice">
-                    <option selected>{{course.title}}</option>
-                    {% for item in courses %}
-                        {% if item.title !== course.title and item.courseType !== 'Apprenticeship' and item.isActive %}
-                            <option value="{{ item.title }}">{{ item.title }}</option>
-                        {% endif %}
-                    {% endfor %}
-                    <option value="Any/Not Sure">Any/Not Sure</option>
-                </select>
-
+            <select class="form-input-field rounded block w-full py-2 px-3 border-1" name="course_choice">
+                <option selected>{% if course.title %}{{course.title}}{% else %}Please Select{% endif %}</option>
+                {% for item in courseArray %}
+                    {% if item.title !== course.title and item.courseType !== 'Apprenticeship' and item.isActive %}
+                        <option value="{{ item.title }}">{{ item.title }}</option>
+                    {% endif %}
+                {% endfor %}
+                <option value="Any/Not Sure">Any/Not Sure</option>
+            </select>
         </div>
     </div>
     <div class="mb-4">
