@@ -7,9 +7,9 @@ const sliderSettings = function(){
   if(reviewsSlick){
     return $('.testimonials__slider').slick({
       dots: true,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next'),
-      appendDots: $('.dots'),
+      prevArrow: $('.testimonials .prev'),
+      nextArrow: $('.testimonials .next'),
+      appendDots: $('.testimonials .dots'),
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
@@ -32,4 +32,3 @@ const sliderSettings = function(){
 }()
 
 export default sliderSettings
-

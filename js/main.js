@@ -190,9 +190,9 @@ var courseGridSlider = function () {
   var slidesToShow = parent.getAttribute('data-cards') || 2;
   return $(courseGridSlider).slick({
     dots: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    appendDots: $('.dots'),
+    prevArrow: $('.course-grid-internal-container .prev'),
+    nextArrow: $('.course-grid-internal-container .next'),
+    appendDots: $('.course-grid-internal-container .slick-dots'),
     infinite: true,
     slidesToShow: slidesToShow,
     slidesToScroll: 2,
@@ -709,9 +709,9 @@ var sliderSettings = function () {
   if (reviewsSlick) {
     return $('.testimonials__slider').slick({
       dots: true,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next'),
-      appendDots: $('.dots'),
+      prevArrow: $('.testimonials .prev'),
+      nextArrow: $('.testimonials .next'),
+      appendDots: $('.testimonials .dots'),
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
