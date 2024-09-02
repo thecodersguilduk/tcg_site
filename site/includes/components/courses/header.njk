@@ -41,7 +41,11 @@
                 <div class="w-full">
                     <div class="flex flex-col items-start lg:flex-row lg:items-center gap-3">
                         <div class="flex flex-col gap-3">
-                            <p class="text-sm leading-0 text-white">Live in <strong>West Yorkshire?</strong> Apply now to get a fully funded place</p>
+                            {% for tag in course.tags %}
+                                {% if tag.value === 'wyca' %}
+                                    <p class="text-sm leading-0 text-white">Live in <strong>West Yorkshire?</strong> Apply now to get a fully funded place</p>
+                                {% endif %}
+                            {% endfor %}
                             <a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="bg-gradient-to-r from-red-1000 to-purple-1000 py-2 px-4 text-white flex gap-2 items-center justify-center rounded font-bold text-sm lg:text-md">{{course.ctaText}}<i class="fa-solid fa-chevron-right"></i></a>   
                         </div>
                         

@@ -139,6 +139,8 @@ function prepPost(data) {
 
 	data.formLink = data.formLink ? data.formLink : '#contact';
 
+	console.log(data.tags)
+
 	return data;
 }
 
