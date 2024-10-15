@@ -3034,6 +3034,11 @@ input, textarea{
   background-color: rgb(242 165 65 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(90 103 216 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -4284,6 +4289,9 @@ fieldset a {
   }
   .sm\:mt-6{
     margin-top: 1.5rem;
+  }
+  .sm\:mt-20{
+    margin-top: 5rem;
   }
   .sm\:block{
     display: block;
