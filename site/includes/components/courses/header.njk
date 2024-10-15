@@ -35,14 +35,15 @@
                 {% if course.price %}
                 <div class="flex flex-col gap-2 text-white">
                     <span class="text-md">Price</span>
-                    <p class="text-4xl md:text-5xl font-bold leading-112">{% if course.isFunded %}<span class="strikediag text-red-100">£{{course.price}}</span>{% else %}£{{course.price}}{% endif %}</p> 
+                    <p class="text-4xl md:text-5xl font-bold leading-112 text-white">£{{course.price}}</p> 
                 </div>
                 {% endif %}
                 <div class="w-full">
                     <div class="flex flex-col items-start lg:flex-row lg:items-center gap-3">
                         <div class="flex flex-col gap-3">
                             {% for tag in course.tags %}
-                                {% if tag === 'wyca' %}
+                                {% if tag === 'wyca' and course.isFunded %}
+                                <p class="text-4xl md:text-5xl font-bold leading-112">{% if course.isFunded %}<span class="strikediag text-red-100">£{{course.price}}</span>{% endif %}</p>
                                     <p class="text-sm leading-0 text-white">Live in <strong>West Yorkshire?</strong> Apply now to get a fully funded place - with no cost to you!</p>
                                 {% endif %}
                             {% endfor %}
