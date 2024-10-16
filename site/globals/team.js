@@ -26,7 +26,7 @@ function urlFor(source) {
 function prepPost(data) {
   // Returns back to our main function
 
-  data.image = urlFor(data.image)
+  data.image = data.image ? urlFor(data.image) : null;
 
   data.github = data.github ? 'https://www.github.com/' + data.github : ''
   data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
