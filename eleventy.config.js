@@ -138,6 +138,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addLayoutAlias('internalAd', 'layouts/internaljobapp.njk');
 	eleventyConfig.addLayoutAlias('hub', 'layouts/hub.njk');
 	eleventyConfig.addLayoutAlias('internal-page', 'layouts/internal-page.njk');
+	eleventyConfig.addLayoutAlias('landing', 'layouts/landing.njk');
 
 	// Include our static assets
 	eleventyConfig.addPassthroughCopy('css');

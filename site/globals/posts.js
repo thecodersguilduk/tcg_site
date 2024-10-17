@@ -7,6 +7,7 @@ const sanityClient = require('@sanity/client')
 const config = require('../globals/config');
 
 const query = `*[_type == "blog" && !(_id in path("drafts.**"))] {
+    _id,
     title,
     slug,
     publishedAt,
