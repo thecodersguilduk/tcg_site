@@ -35,7 +35,7 @@
                 {% if course.price %}
                 <div class="flex flex-col gap-2 text-white">
                     <span class="text-md">Price</span>
-                    <p class="text-4xl md:text-5xl font-bold leading-112 text-white">£{{course.price}}</p> 
+                    <p class="text-4xl md:text-5xl font-bold leading-112 text-white">£{{course.price}}</p>
                 </div>
                 {% endif %}
                 <div class="w-full">
@@ -43,7 +43,7 @@
                         <div class="flex flex-col gap-3">
                             {% for tag in course.tags %}
                                 {% if tag === 'wyca' and course.isFunded %}
-                                <p class="text-2xl md:text-xl font-bold leading-112 text-white"><span class="strikediag text-red-100">£{{course.price}}</span> <strong>West Yorkshire Residents</strong></p>
+                                  <p class="text-2xl md:text-xl font-bold leading-112 text-white"><span class="strikediag text-red-100">£{{course.price}}</span> <strong>West Yorkshire Residents</strong></p>
                                     <p class="text-sm leading-0 text-white">This course is fully funded - no cost to you!</p>
                                 {% endif %}
                             {% endfor %}

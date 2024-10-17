@@ -1,2 +1,35 @@
 
 //==========  Buttons ==========//
+
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    button {
+      @apply bg-grey-200;
+
+      font-size: 0;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+
+    button {
+      @apply bg-grey-200;
+
+      font-size: 0;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+}
