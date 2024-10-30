@@ -1,5 +1,6 @@
 ---
 layout: default
+body_class: hub
 ---
 
 <!-- <section id="course-cta-header" class="fixed top-0 bg-white flex space-between mx-auto z-50 shadow py-2 lg:py-4 w-full">
@@ -22,7 +23,7 @@ layout: default
         <div class="relative lg:order-2 lg:w-7/12 mb-12 lg:mb-0" style="max-height: 516px;">
           <object class="absolute pattern pattern-2" data="../images/patterns/2.svg" type="image/svg+xml"></object>
           <div class="relative">
-            <img src="{{ featured_image.src }}" alt="{{ fetaured_image.alt }}" class="relative rounded-lg shadow-lg w-full h-full object-cover" style="max-height: 516px;" />
+            <img src="{{ landingPage.featuredImage.src }}" alt="{{ landingPage.featuredImage.alt }}" class="relative rounded-lg shadow-lg w-full h-full object-cover" style="max-height: 516px;" />
             <div class="absolute trustist-box">
               <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
               <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
@@ -31,22 +32,19 @@ layout: default
         </div>
         <div class="flex flex-col md:items-start gap-4 lg:content-center lg:order-1 lg:w-5/12" style="max-width: 620px;">
           <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
-          <h1 class="mb-0 text-4xl xxxl:text-6xl leading-118">{{title}}</h1>
-          <p class="text-lg leading-7">{{tagline}}</p>
+          <h1 class="mb-0 text-4xl xxxl:text-6xl leading-118">{{landingPage.h1}}</h1>
+          <p class="text-lg leading-7">{{landingPage.hero_copy | safe }}</p>
           
         </div>
       </div>
     </div>
-    <div class="hero-info">
+    <div class="hero-info content">
       <div class="flex flex-col items-center gap-8 flex-1">
-        <h2 class="mb-0">{{skills_relevance_title}}</h2>
-        <p class="leading-7">{{skills_relevance}}</p>
+        {{ landingPage.intro_copy | safe }}
       </div>
     </div>
   </section>
 
-  
-  
   <!-- Why Upskill -->
   <section class="pt-80 md:pt-60 px-6 xl:px-48 lg:px-24 mx-auto pb-8">
     <section class="py-8">
@@ -54,11 +52,17 @@ layout: default
             <div class="flex flex-col items-center gap-8 flex-1 text-white text-center">
                 <h2 class="text-white text-4xl mb-0">Upskill Your Team with Our Tailored Solutions</h2>
                 <p class="text-white">Ready to boost your team’s productivity and stay ahead in a competitive market? We offer a wide range of upskilling options, including government-funded training, to help you achieve your goals. Whether you’re looking to develop existing staff or recruit new talent, our no-obligation skills gap consultancy can identify the perfect solution for your business. Contact us today to explore the best options for your team.</p>
-                <a href="#contact" class="bg-white rounded font-bold flex items-center justify-center gap-2 p-4 text-blue-200">Enquire Now <i class="ml-2 fa-solid fa-chevron-right"></i></a>
+                <a href="#contact" class="bg-white rounded font-bold flex items-center justify-center gap-2 p-4 text-blue-200">Enquire Now <i class="ml-2 fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
-    <div class="flex">
+
+    <section class="max-w-3xl mx-auto content py-12 md:px-20 content">
+      {{ landingPage.main_copy | safe }}
+    </section>
+
+    <section>
+      <div class="flex">
         <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
             <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
               <h2 class="mb-0 leading-120">Why Choose The Coders Guild?</h2>
@@ -77,9 +81,13 @@ layout: default
             </div>
           </div>
     </div>
+    </section>
+    
   </section>
 
-  {% if trainer_ids | length > 0 %}
+
+
+{% if landingPage.trainers | length > 0 %}
   <div class="bg-blue-200 relative py-12 lg:py-24 section-rounded flex flex-col lg:flex-row gap-8 justify-center items-center px-6 md:px-12 xl:px-48">
     <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/5.svg" class="absolute pattern pattern-1 right-0 bottom-0 hidden md:block"></object>
     <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/18.svg" class="absolute pattern pattern-1 left-0 top-0 hidden md:block"></object>
@@ -89,18 +97,7 @@ layout: default
     <p class="text-white leading-lg font-semibold">Here are some of the industry professionals who contribute their expertise to The Coders Guild. Our trainers don’t just teach – they practice what they preach, ensuring the content you learn is up-to-date and relevant to today’s job market. Each trainer helps design, review, and deliver cutting-edge training in their area of expertise.</p>
   </div>
   <div class="lg:w-7/12 grid grid-cols-2 xl:grid-cols-4 justify-center items-start gap-8">
-  {% for trainer in trainers %}
-    {% set is_trainer_in_list = false %}
-    
-    <!-- Check if trainer._id is in trainer_ids -->
-    {% for id in trainer_ids %}
-      {% if id == trainer._id %}
-        {% set is_trainer_in_list = true %}
-      {% endif %}
-    {% endfor %}
-    
-    <!-- Output something if the trainer ID is found in the list -->
-    {% if is_trainer_in_list %}
+  {% for trainer in landingPage.trainers %}
     <div class="flex flex-col items-center gap-2 text-white">
       <div class="image h-24 w-24 flex rounded-full" style="background-image: url({{trainer.image}}); background-size: cover; background-repeat: no-repeat; background-position: center; ">
       </div>
@@ -128,7 +125,6 @@ layout: default
           {% endif %}
       </div>
   </div>
-    {% endif %}
   {% endfor %}
 </div>
 
@@ -175,43 +171,37 @@ layout: default
   </div>
 </section>
 
-   <!-- testimonial - to review -->
+<!-- testimonial - to review -->
 
-   {% if testimonial_id | length > 0 %}
-    <section class="pb-12 px-6 xl:px-48 lg:px-24">
-      <div class="max-w-4xl mx-auto flex flex-col lg:flex-row lg:justify-center md:items-center lg:items-start lg:py-32 relative gap-8">
-        <div class="flex flex-col gap-8 mt-16 lg:w-6/12">
-          <h2 class="mb-0 text-5xl leading-120">Real Results</h2>
-        </div>
-    {% for testimonial in testimonials %}
-      {% set is_testimonial_in_list = false %}
+{% if landingPage.testimonials | length > 0 %}
+<section class="pb-12 px-6 xl:px-48 lg:px-24">
+  <div class="max-w-4xl mx-auto flex flex-col lg:flex-row lg:justify-center md:items-center lg:items-start lg:py-32 relative gap-8">
+    <div class="flex flex-col gap-8 mt-16 lg:w-6/12">
+      <h2 class="mb-0 text-5xl leading-120">Real Results</h2>
+    </div>
+    {% for item in landingPage.testimonials %}
       
-      
-        {% if testimonial_id == testimonial._id %}
-          {% set is_testimonial_in_list = true %}
-        {% endif %}
-      {% if is_testimonial_in_list %}
       <div class="lg:w-6/12">
-        <img class="w-full object-cover rounded-2xl shadow" src="{{testimonial.avatar}}" alt="Sam from Brand Ambition Leeds credits The Coders Guild with transforming his team" style="height: 562px;" />
+        <img class="w-full object-cover rounded-2xl shadow" src="{{item.avatar}}" alt="Sam from Brand Ambition Leeds credits The Coders Guild with transforming his team" style="height: 562px;" />
       </div>
-      <div class="testimonial-body lg:absolute -mt-48 bg-white overflow-hidden rounded-3xl shadow-lg">
+      <div class="testimonial-body lg:absolute bottom-0 -mt-48 bg-white overflow-hidden rounded-3xl shadow-lg">
         <div class="relative p-10 flex flex-col items-start gap-4">
           <object class="absolute pattern pattern-460" data="../images/patterns/460.svg" type="image/svg+xml"></object>
           <!-- <img class="w-48 h-14 object-cover rounded-3xl" src="../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" /> -->
-          <p class="leading-2xl text-xl">{{testimonial.testimonial}}</p>
-          <p class="text-blue-100 font-bold text-lg">{{testimonial.client}}</p>
+          <p class="leading-2xl text-xl">{{item.testimonial}}</p>
+          <p class="text-blue-100 font-bold text-lg">{{item.client}}</p>
         </div>
         
       </div>
-      {% endif %}
+
     {% endfor %}
-    </div>
-    </section>
-   {% endif %}
+  </div>
+</section>
+{% endif %}
   
 
 
-{% if course_ids | length > 0 %}
+{% if landingPage.courses | length > 0 %}
   
   <!-- Featured Courses -->
   <section class="flex flex-col items-start justify-center py-16 px-6 xl:px-48 lg:px-24 gap-24 bg-gradient-to-r from-blue-100 to-blue-200">
@@ -219,7 +209,7 @@ layout: default
       <div class="flex flex-col justify-center items-center gap-2 text-white text-center">
         <h2 class="font-bold text-white text-center leading-120">Explore our Courses</h2>
       </div>
-      <div id="course-grid-container" class="relative" data-cards="{{course_ids | length}}">
+      <div id="course-grid-container" class="relative" data-cards="{{landingPage.courses | length}}">
         <object class="absolute pattern pattern-12" data="../images/patterns/12.svg" type="image/svg+xml"></object>
         <object class="absolute pattern pattern-1212" data="../images/patterns/11.svg" type="image/svg+xml"></object>
 
@@ -228,19 +218,12 @@ layout: default
         <div class="course-grid-internal-container flex flex-col w-full">
           <div id="course-grid" class="w-full flex justify-center gap-8 items-stretch">
                   
-              {% for course in courses %}
-                {% set is_course_in_list = false %}
-                {% for id in course_ids %}
-                  {% if id == course._id %}
-                    {% set is_course_in_list = true %}
-                  {% endif %}
-                {% endfor %}
-                {% if is_course_in_list %}
+              {% for course in landingPage.courses %}
 
                   <div class="px-4 rounded-md">
                       <div class="bg-white relative flex flex-col self-stretch shrink-0 shadow-primary">
                         <div class="flex flex-col items-start gap-2 self-stretch">
-                          <img src="{{ course.featuredImage.url.medium }}" alt="{{ course.title }}" class="w-full h-64 object-cover">
+                          <img src="{{ course.featuredImage.src }}" alt="{{ course.title }}" class="w-full h-64 object-cover">
                         </div>
                         <div class="flex flex-col gap-6 items-start self-stretch justify-between h-full px-4 py-8 relative">
                           <h4 class="text-2xl font-bold mb-0">{{ course.title }}</h4>
@@ -248,27 +231,26 @@ layout: default
                           
                           <!-- Course type display (if it exists) -->
                           {% if course.courseType %}
-                          <div class="category absolute top-0 flex -my-4 -mx-1">
-                            <div class="px-1">
-                              <a href="/category/{{ course.courseType | slug }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ course.courseType | capitalize }}</a>
+                            <div class="category absolute top-0 flex -my-4 -mx-1">
+                              <div class="px-1">
+                                <a href="/category/{{ course.courseType | slug }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ course.courseType | capitalize }}</a>
+                              </div>
                             </div>
-                          </div>
                           {% endif %}
                     
                           <div class="flex flex-row gap-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                               <!-- SVG content here -->
                             </svg>
-                            <span>{{ course.start | dateDisplay }}</span>
+                            <span>{{ course.nextStart | dateDisplay }}</span>
                           </div>
-                          <a href="{{ course.slug.current }}" class="text-blue-100 font-bold font-md">
+                          <a href="../course-directory/{{ course.slug }}" class="text-blue-100 font-bold font-md">
                             <span class="absolute inset-0"></span>View Course >
                           </a>
                         </div>
                       </div>
-                    </div>
-                  
-                {% endif %}
+                  </div>
+
               {% endfor %}
           </div>
           <div class="flex justify-center items-center mt-8">
@@ -285,18 +267,16 @@ layout: default
     </div>
   </section>
 
-  {% endif %}
+{% endif %}
 
-  
-  
   <!-- CTA Section -->
-  <section id="contact" class="bg-gradient-to-r from-red-1000 to-purple-1000 flex items-start self-stretch gap-4 px-6 lg:px-24 xl:px-48 py-8 lg:py-32 max-w-9xl mx-auto">
-    <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start flex-1 gap-10">
+  <section id="contact" class="bg-gradient-to-r from-red-1000 to-purple-1000 flex items-start self-stretch gap-4 px-6 lg:px-24 xl:px-48 py-8 lg:py-32">
+    <div class="ax-w-9xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start flex-1 gap-10">
       <div class="w-full lg:w-5/12 flex flex-col items-start gap-10 lg:gap-14 text-white decorated-list white">
         <h2 class="mb-0 text-white text-5xl font-bold leading-112">Access Government Funding to Upskill Your Team</h2>
         <div class="flex flex-col gap-8 items-start">
           <p class="text-white text-md leading-200">We can help you tap into a wide range of government funding opportunities to support your team’s professional development. From fully funded apprenticeships to cost-effective short courses, our training solutions are designed to maximise ROI while minimising cost. Explore how your business can benefit from these programs and start upskilling today</p>
-          <a href="#" data-modal="book-a-call-calendly" class="bg-white text-blue-200 flex justify-center items-center flex gap-2 py-4 px-4 rounded font-bold">Book a Call<i class="ml-2 fa-solid fa-chevron-right"></i></a>
+          <a href="#" data-modal="book-a-call-calendly" class="bg-white text-blue-200 flex justify-center items-center flex gap-2 py-4 px-4 rounded font-bold">Book a Call<i class="ml-2 fas fa-chevron-right"></i></a>
           <p class="text-white"><strong>Let's maximise your team's potential together!</strong></p>
         </div>
       </div>
@@ -307,78 +287,90 @@ layout: default
     </div>
   </section>
 
-  {% if blog_ids | length > 0 %}
+  {% if landingPage.blogPosts | length > 0 %}
   <section class="px-6 lg:px-32 py-16 bg-white flex flex-col items-center">
     <div class="flex flex-col gap-8 justify-center items-center self-stretch">
         <h2>Featured Blog Posts</h2>
         <div class="flex flex-col md:flex-row justify-center items-start gap-8 self-stretch">
-            {% for post in posts %}
-                {% set is_post_in_list = false %}
-                {% for id in blog_ids %}
-                  {% if id == post._id %}
-                    {% set is_post_in_list = true %}
-                  {% endif %}
-                {% endfor %}
-                {% if is_post_in_list %}
-                    
-                    <div class="w-full md:w-6/12 xl:w-4/12 md:px-3 w-full h-full mb-8 sm:mb-10 lg:mb-0 max-w-none self-stretch">
-                        <div class="flex flex-col rounded-lg shadow-primary md:h-full overflow-hidden">
-                          {% if post.mainImage %}
-                            <div class="flex-shrink-0">
-                              <img class="h-56 w-full object-cover" data-lazy="{{ post.mainImage }}" alt="{{ post.title }}" />
-                            </div>
-            
-                          {% endif %}
-                          <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
-                            <div class="flex-1 mt-2">
-                              {% if post.tags %}
-                                <div class="category absolute top-0 flex -my-4 -mx-1">
-                                  {% for item in post.tags %}
-                                    {% if item != "blog" %}
-                                      <div class="px-1">
-                                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item | capitalize }}</a>
-                                      </div>
-                                    {% endif %}
-                                  {% endfor %}
+            {% for post in landingPage.blogPosts %}
+                <div class="w-full md:w-6/12 xl:w-4/12 md:px-3 w-full h-full mb-8 sm:mb-10 lg:mb-0 max-w-none self-stretch">
+                    <div class="flex flex-col rounded-lg shadow-primary md:h-full overflow-hidden">
+                      {% if post.mainImage %}
+                        <div class="flex-shrink-0">
+                          <img class="h-56 w-full object-cover" data-lazy="{{ post.mainImage }}" alt="{{ post.title }}" />
+                        </div>
+        
+                      {% endif %}
+                      <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
+                        <div class="flex-1 mt-2">
+                          {% if post.tags %}
+                            <div class="category absolute top-0 flex -my-4 -mx-1">
+                              {% for item in post.tags %}
+                                {% if item.name !== "blog" %}
+                                  <div class="px-1">
+                                    <a href="/category/{{ item.name }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item.name | capitalize }}</a>
                                   </div>
-                              {% endif %}
-            
-                                <a href="{{ post.url }}" class="block"><h3 class="text-blue-200 max-w-90 mb-4">{{ post.title }}</h3></a>
-                                <p class="mb-6 sm:mb-4 text-sm leading-md">{{ post.excerpt }}</p>
-            
-                            </div>
-                            <div class="flex">
-                              <div class="mr-2 w-10 h-10">
-                                <img src="{{post.avatar}}" alt="{{post.avatar.alt}}" class="w-full h-full object-cover rounded-50 block" />
-                              </div>
-            
-                              <div class="{% if post.data.time %}my-auto{% else  %}mt-auto{% endif %}">
-                                {% if post.time %}
-                                  <p class="time text-blue-200 font-bold font-heading mb-1 text-md sm:text-sm leading-sm">{{ post.time }} read time</p>
                                 {% endif %}
-            
-                                <div class="">
-                                  <p class="author text-black text-sm leading-sm sm:text-xs sm:leading-xs">
-                                    By {{ post.author }}
-                                    {% if post.date %}
-                                      <span class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">&#8210;</span>
-                                      <time datetime="{{ post.data.date }}" class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">
-                                        {{ post.date | dateDisplay }}
-                                      </time>
-                                    {% endif %}
-                                  </p>
-                                </div>
+                              {% endfor %}
                               </div>
+                          {% endif %}
+        
+                            <a href="../blog/{{ post.slug.current }}" class="block"><h3 class="text-blue-200 max-w-90 mb-4">{{ post.title }}</h3></a>
+                            <p class="mb-6 sm:mb-4 text-sm leading-md">{{ post.excerpt }}</p>
+        
+                        </div>
+                        <div class="flex">
+                          <div class="mr-2 w-10 h-10">
+                            <img src="{{post.avatar}}" alt="{{post.authors[0].name}}" class="w-full h-full object-cover rounded-50 block" />
+                          </div>
+        
+                          <div class="{% if post.data.time %}my-auto{% else  %}mt-auto{% endif %}">
+                            {% if post.time %}
+                              <p class="time text-blue-200 font-bold font-heading mb-1 text-md sm:text-sm leading-sm">{{ post.time }} mins read time</p>
+                            {% endif %}
+        
+                            <div class="">
+                              <p class="author text-black text-sm leading-sm sm:text-xs sm:leading-xs">
+                                By {{ post.authors[0].name }}
+                                {% if post.publishedAt %}
+                                  <span class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">&#8210;</span>
+                                  <time datetime="{{ post.publishedAt }}" class="text-black text-sm leading-sm sm:text-xs sm:leading-xs my-auto">
+                                    {{ post.publishedAt| dateDisplay }}
+                                  </time>
+                                {% endif %}
+                              </p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    
-                {% endif %}
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>
   </section>
   {% endif %}
-  {% include '../../includes/components/agile/faqs.njk' %}
+
+  <!-- Faqs-->
+  <section class="relative md:pt-16 py-16 md:pb-8 bg-grey-100 faq section-rounded -mt[3rem]">
+    <div class="inner">
+      <div class="max-w-5xl md:px-8 mx-auto">
+        <h2 class="text-center mb-10 md:mb-12">FAQs</h2>
+        <p class="text-center mb-6">As an employer looking at Apprenticeships, you may have questions around the Apprenticeship Levy.</p>
+
+        {% for question in landingPage.faqs %}
+          <div class="mb-6 bg-white rounded-lg md:px-10 px-7">
+            <button class="faq-btn block text-md leading-2xl text-grey-300 py-7 font-bold w-full text-left flex justify-between items-center">
+              <span>{{ question.question }}</span>
+              <i class="fas fa-angle-down text-grey-300 text-xl"></i>
+            </button>
+            <div class="faq-content">
+              <p class="py-8 border-t-2 border-grey-100">{{ question.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+  
+      </div>
+    </div>
+  </section>
 </div>
