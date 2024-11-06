@@ -1751,6 +1751,11 @@ input, textarea{
   box-shadow: -31px 44px 0px 1px rgba(92, 16, 34, 0.2);
 }
 
+.trustist-box {
+  bottom: -10%;
+  left: 5%;
+}
+
 #course-grid-container .slick-track {
   display: flex !important;
 }
@@ -4029,7 +4034,7 @@ fieldset a {
 }
 
 .strikediag {
-  background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+  background: linear-gradient(to left top, transparent 41.75%, currentColor 42.5%, currentColor 52.5%, transparent 52.25%);
 }
 
 .focus-within\:ring-2:focus-within{
@@ -4301,6 +4306,9 @@ fieldset a {
   }
   .sm\:h-2\/3{
     height: 66.666667%;
+  }
+  .sm\:h-20{
+    height: 5rem;
   }
   .sm\:h-56{
     height: 14rem;
