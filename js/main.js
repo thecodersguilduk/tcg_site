@@ -705,7 +705,8 @@ __webpack_require__.r(__webpack_exports__);
 var sliderSettings = function () {
   var reviewsSlick = document.querySelector('.testimonials__slider');
   var courseSlick = document.querySelector('.course__testimonials__slider');
-  if (!reviewsSlick && !courseSlick) return;
+  var consultantSlider = document.querySelector('.consultant__slider');
+  if (!reviewsSlick && !courseSlick && !consultantSlider) return;
   if (reviewsSlick) {
     return $('.testimonials__slider').slick({
       dots: true,
@@ -723,6 +724,17 @@ var sliderSettings = function () {
       prevArrow: null,
       nextArrow: null,
       appendDots: $('.dots'),
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
+  if (consultantSlider) {
+    return $('.consultant__slider').slick({
+      dots: true,
+      prevArrow: $('.consultant__slider + div .prev'),
+      nextArrow: $('.consultant__slider + div .next'),
+      appendDots: $('.consultant__slider + div .dots'),
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1

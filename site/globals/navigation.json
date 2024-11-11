@@ -43,6 +43,34 @@
 				{
 					"label": "West Yorkshire",
 					"url": "/west-yorkshire"
+				},
+				{
+					"label": "Software Development",
+					"url": "/master-software-engineering/"
+				},
+				{
+					"label": "Product Management & Ownership",
+					"url": "/master-product-management-and-ownership"
+				},
+				{
+					"label": "DevOps & Cloud Computing",
+					"url": "/master-devops-and-cloud-computing/"
+				},
+				{
+					"label": "Software Testing",
+					"url": "/master-qa-and-software-testing"
+				},
+				{
+					"label": "Cybersecurity",
+					"url": "/master-cybersecurity"
+				},
+				{
+					"label": "UX and CX Design",
+					"url": "/master-ux-and-cx-design"
+				},
+				{
+					"label": "Data Analysis & Engineering",
+					"url": "/master-data-analysis-and-engineering"
 				}
 			]
 		},
