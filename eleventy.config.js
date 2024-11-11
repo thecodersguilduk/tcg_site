@@ -147,6 +147,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('admin');
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('_redirects');
+	eleventyConfig.addPassthroughCopy('js7rt1ac06p9kwn07jpd2exltc1ml1.html');
 
 	return {
 		templateFormats: ['md', 'njk'],
