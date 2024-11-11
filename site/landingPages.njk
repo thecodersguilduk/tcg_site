@@ -1,0 +1,20 @@
+---js
+{
+pagination: {
+    data: 'landingPages',
+    size: 1,
+    alias: 'landingPage'
+    },
+layout: 'landing',
+tag: ['landingPage'],
+permalink: "/{{ landingPage.slug.current }}/index.html",
+eleventyComputed: {
+    meta_title: data => data.landingPage.meta_title,
+    title: data => data.landingPage.h1,
+    meta_description: data => data.landingPage.meta_description ? data.landingPage.meta_description.replace( /(<([^>]+)>)/ig, '') : '',
+    featured_image: data => data.landingPage.featuredImage,
+    }
+}
+---
+
+
