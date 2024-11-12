@@ -41,37 +41,39 @@
 					"url": "/agile-project-management"
 				},
 				{
-					"label": "West Yorkshire",
-					"url": "/west-yorkshire"
+					"label": "Cybersecurity",
+					"url": "/master-cybersecurity"
 				},
 				{
-					"label": "Software Development",
-					"url": "/master-software-engineering/"
-				},
-				{
-					"label": "Product Management & Ownership",
-					"url": "/master-product-management-and-ownership"
+					"label": "Data Analysis & Engineering",
+					"url": "/master-data-analysis-and-engineering"
 				},
 				{
 					"label": "DevOps & Cloud Computing",
 					"url": "/master-devops-and-cloud-computing/"
 				},
 				{
+					"label": "Product Management & Ownership",
+					"url": "/master-product-management-and-ownership"
+				},
+				{
+					"label": "Software Development",
+					"url": "/master-software-engineering/"
+				},
+				{
 					"label": "Software Testing",
 					"url": "/master-qa-and-software-testing"
 				},
-				{
-					"label": "Cybersecurity",
-					"url": "/master-cybersecurity"
-				},
+
 				{
 					"label": "UX and CX Design",
 					"url": "/master-ux-and-cx-design"
 				},
 				{
-					"label": "Data Analysis & Engineering",
-					"url": "/master-data-analysis-and-engineering"
+					"label": "West Yorkshire",
+					"url": "/west-yorkshire"
 				}
+
 			]
 		},
 		{
