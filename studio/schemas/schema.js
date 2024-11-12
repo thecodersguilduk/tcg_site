@@ -22,6 +22,8 @@ import form from "./documents/components/form";
 import locations from "./documents/locations";
 import youtube from "./documents/components/youtubeEmbed";
 import leadGenFormEmbed from "./documents/components/formEmbed";
+import faqsItem from './documents/faqsItem';
+import landingPages from "./documents/landingPages";
 
 
 export default [
@@ -49,5 +51,7 @@ export default [
     interviewQuestions,
     locations,
     youtube,
-    leadGenFormEmbed
+    leadGenFormEmbed,
+    faqsItem,
+    landingPages
   ]
