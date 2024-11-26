@@ -4202,7 +4202,7 @@ fieldset a {
 }
 
 .strikediag {
-  background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+  background: linear-gradient(to left top, transparent 41.75%, currentColor 42.5%, currentColor 52.5%, transparent 52.25%);
 }
 
 .focus-within\:ring-2:focus-within{
