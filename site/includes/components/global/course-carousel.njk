@@ -5,7 +5,7 @@
 
             
         
-            {% if page.url === '/' %}
+            {% if page.url === '/' or page.url === '/apprenticeships/' %}
                 {% set courseArray = courses | courseFilter('apprenticeship') %}
             {% elif page.url === '/west-yorkshire/' %}
                 {% set courseArray = courses | courseFilter('wyca') %}
