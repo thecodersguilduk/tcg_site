@@ -25,6 +25,7 @@ const query = `*[_type == "landingPages" && !(_id in path("drafts.**"))] {
         }, 
         "slug": slug.current, 
         "nextStart": instances[0].date,
+		courseType[]->{courseType},
     },
     testimonials[]->{
         "avatar": avatar.asset->url,
@@ -78,7 +79,7 @@ function prepPost(data) {
         serializers: serializers
     })
 
-    console.log('from landingpages.js: ', data.testimonials);
+    console.log('from landingpages.js: ', data.courses);
 
 	return data;
 }

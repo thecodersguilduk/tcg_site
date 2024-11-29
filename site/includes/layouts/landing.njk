@@ -231,11 +231,15 @@ body_class: hub
                           
                           <!-- Course type display (if it exists) -->
                           {% if course.courseType %}
-                            <div class="category absolute top-0 flex -my-4 -mx-1">
-                              <div class="px-1">
-                                <a href="/category/{{ course.courseType | slug }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ course.courseType | capitalize }}</a>
-                              </div>
-                            </div>
+                            {% for item in course.courseType %}
+                              {% if item.courseType %}
+                                <div class="category absolute top-0 flex -my-4 -mx-1">
+                                  <div class="px-1">
+                                    <p class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item.courseType }}</a>
+                                  </div>
+                                </div>
+                              {% endif %}
+                            {% endfor %}
                           {% endif %}
                     
                           <div class="flex flex-row gap-4">
