@@ -11,6 +11,10 @@
 				{
 					"label": "Upskilling Staff",
 					"url": "/upskilling-staff"
+				},
+				{
+					"label": "Capability Hub",
+					"url": "/capability-hub"
 				}
 			]
 		},
