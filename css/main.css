@@ -5032,6 +5032,9 @@ fieldset a {
   .md\:pb-20{
     padding-bottom: 5rem;
   }
+  .md\:pb-32{
+    padding-bottom: 8rem;
+  }
   .md\:pb-60{
     padding-bottom: 15rem;
   }

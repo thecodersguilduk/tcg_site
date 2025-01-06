@@ -1,0 +1,18 @@
+---js
+{
+    layout: 'case-studies',
+    pagination: {
+        data: 'case_studies',
+        size: 1,
+        alias: 'study'
+        },
+    permalink: '/',
+    eleventyComputed: {
+        permalink: `/case-study/{{study.slug.current}}/index.html`,
+        excerpt: data => data.study.excerpt,
+        title: data => data.study.title,
+        meta_title: data => data.study.title,
+        meta_description: data => data.study.excerpt,
+    }
+}
+---

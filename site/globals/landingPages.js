@@ -79,8 +79,6 @@ function prepPost(data) {
         serializers: serializers
     })
 
-    console.log('from landingpages.js: ', data.courses);
-
 	return data;
 }
 
