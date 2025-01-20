@@ -2173,6 +2173,10 @@ input, textarea{
   margin-left: 1.5rem;
 }
 
+.ml-8{
+  margin-left: 2rem;
+}
+
 .mr-0{
   margin-right: 0px;
 }
@@ -2725,6 +2729,10 @@ input, textarea{
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .gap-x-1{
@@ -3608,6 +3616,10 @@ input, textarea{
 
 .text-xs{
   font-size: 11px;
+}
+
+.text-6xl{
+  font-size: 60px;
 }
 
 .font-bold{

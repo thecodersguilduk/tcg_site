@@ -7,7 +7,7 @@ body_class: hub
   <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 xl:gap-10 px-6 md:px-24 pt-24 lg:pt-32 pb-96 md:pb-32">
     <div class="max-w-5xl xl:max-w-9xl mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-40">
       <div class="relative lg:order-2 lg:w-7/12 mb-12 lg:mb-0" style="max-height: 516px;">
-        <object class="absolute pattern pattern-2" data="../images/patterns/2.svg" type="image/svg+xml"></object>
+        <object class="absolute pattern pattern-2" data="../../images/patterns/2.svg" type="image/svg+xml"></object>
         <div class="relative">
           <img src="{{ study.featuredImage.src }}" alt="{{ study.featuredImage.alt }}" class="relative rounded-lg shadow-lg w-full h-full object-cover" style="max-height: 516px;" />
           <div class="absolute trustist-box">
@@ -17,11 +17,34 @@ body_class: hub
         </div>
       </div>
       <div class="flex flex-col md:items-start gap-4 lg:content-center lg:order-1 lg:w-5/12" style="max-width: 620px;">
-        <img src="../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
+        <img src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
         <h1 class="mb-0 text-4xl xxxl:text-6xl leading-118">{{study.title}}</h1>
         <p class="text-lg leading-7">{{study.excerpt | safe }}</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="pt-80 md:pt-16 px-6 xl:px-48 lg:px-24 mx-auto pb-8">
+  <div class="flex flex-col lg:flex-row gap-10">
+    <div class="text-lg font-bold">
+      {{ study.excerpt }}
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pt-80 md:pt-16 px-6 xl:px-48 lg:px-24 mx-auto pb-8">
+  <div class="flex flex-col lg:flex-row gap-6">
+    {% for image in study.gallery %}
+      <div>
+        <img src="{{image.src}}" class="object-cover w-full" alt="{{image.alt}}">
+      </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -77,6 +100,22 @@ body_class: hub
   </div>
 </section>
 
+<!-- Video -->
+
+<section class="px-6 xl:px-48 lg:px-24 py-8">
+  <iframe width="100%" height="700" src="https://www.youtube.com/embed/{{study.videoId}}" title="Brand Ambition Coders Guild Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section class="px-6 xl:px-48 lg:px-32 py-32 flex justify-center">
+  <div class="flex flex-col gap-20 justify-center">
+    {% for metric in study.metrics %}
+      <div class="{% if loop.index == 2 %}ml-8{% endif %}">
+        <p class="text-blue-200 text-6xl">{{metric}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
 <!-- testimonial-->
 
 <section class="px-6 xl:px-48 lg:px-24 py-8">
@@ -99,3 +138,11 @@ body_class: hub
     </div>
   </div>
 </section>
+
+<!-- cta -->
+
+<div class="max-w-2xl text-center mx-auto my-20">
+  <h2 class="text-center mb-6">Ready to upskill your team?</h2>
+  {% include '../components/hub/consultation-button.njk' %}
+</div>
+

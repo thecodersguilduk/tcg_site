@@ -7,6 +7,10 @@ const config = require('./config');
 
 const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
     ...,
+    gallery[]{
+      alt,
+      "src": asset->url,
+    },
     "situation": {
       "text": situation.text,
       "image": situation.image.asset->url
