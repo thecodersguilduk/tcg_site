@@ -3543,6 +3543,10 @@ input, textarea{
   padding-top: 20rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -3724,6 +3728,10 @@ input, textarea{
 
 .leading-xs{
   line-height: 16px;
+}
+
+.leading-snug{
+  line-height: 1.375;
 }
 
 .tracking-tight{

@@ -20,12 +20,48 @@
                 maxLength: 96
             }
 		},
+    {
+			name: 'featuredImage',
+			label: 'Image',
+			type: 'image',
+			required: true,
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'alt',
+                    type:'string',
+                },
+                {
+                    name: 'license',
+                    title: 'Creative Commons License',
+                    description: 'If you are unsure, please leave blank',
+                    type: 'string',
+                    options: {
+                        list: [
+                            { title: 'CC BY (Attribution)', value: 'CC BY' },
+                            { title: 'CC BY-SA (Attribution-ShareAlike)', value: 'CC BY-SA' },
+                            { title: 'CC BY-ND (Attribution-NoDerivs)', value: 'CC BY-ND' },
+                            { title: 'CC BY-NC (Attribution-NonCommercial)', value: 'CC BY-NC' },
+                            { title: 'CC BY-NC-SA (Attribution-NonCommercial-ShareAlike)', value: 'CC BY-NC-SA' },
+                            { title: 'CC BY-NC-ND (Attribution-NonCommercial-NoDerivs)', value: 'CC BY-NC-ND' }
+                        ],
+                    }
+                }
+            ]
+		},
 		{
 			name: 'excerpt',
 			label: 'Description',
 			type: 'text',
 			required: true
 		},
+    {
+      name: 'intro',
+      title: 'Intro Paragraph',
+      type: 'array',
+      of: [{ type: 'block' }],
+      description: 'Around 3 short paragraphs to introduce the case study'
+    },
     {
       name: 'gallery',
       title: 'Gallery',
@@ -59,45 +95,9 @@
         },
       ]
     },
-		{
-			name: 'featuredImage',
-			label: 'Image',
-			type: 'image',
-			required: true,
-            fields: [
-                {
-                    name: 'alt',
-                    title: 'alt',
-                    type:'string',
-                },
-                {
-                    name: 'license',
-                    title: 'Creative Commons License',
-                    description: 'If you are unsure, please leave blank',
-                    type: 'string',
-                    options: {
-                        list: [
-                            { title: 'CC BY (Attribution)', value: 'CC BY' },
-                            { title: 'CC BY-SA (Attribution-ShareAlike)', value: 'CC BY-SA' },
-                            { title: 'CC BY-ND (Attribution-NoDerivs)', value: 'CC BY-ND' },
-                            { title: 'CC BY-NC (Attribution-NonCommercial)', value: 'CC BY-NC' },
-                            { title: 'CC BY-NC-SA (Attribution-NonCommercial-ShareAlike)', value: 'CC BY-NC-SA' },
-                            { title: 'CC BY-NC-ND (Attribution-NonCommercial-NoDerivs)', value: 'CC BY-NC-ND' }
-                        ],
-                    }
-                }
-            ]
-		},
-		{
-			name: 'partner',
-			label: 'Partner',
-			type: 'reference',
-      to: { type: 'coursePartners'},
-			required: true
-		},
     {
         name: 'situation',
-        title: 'Situation',
+        title: 'Situation/Problem',
         type: 'object',
         fields: [
           {
@@ -182,6 +182,7 @@
     {
       name: 'metrics',
       title: 'Metrics',
+      description: '3 things we can measure to show the impact we had!',
       type: 'array',
       of: [
         { type: 'string' }
@@ -190,6 +191,7 @@
     {
       name: 'testimonial',
       title: 'Testimonial',
+      description: 'Just one!',
       type: 'reference',
       to: { type: 'testimonial'},
     },
