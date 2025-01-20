@@ -3427,6 +3427,10 @@ input, textarea{
   padding-bottom: 0.75rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -3543,10 +3547,6 @@ input, textarea{
   padding-top: 20rem;
 }
 
-.pb-32{
-  padding-bottom: 8rem;
-}
-
 .text-left{
   text-align: left;
 }
@@ -3581,10 +3581,6 @@ input, textarea{
 
 .text-5xl{
   font-size: 40px;
-}
-
-.text-6xl{
-  font-size: 60px;
 }
 
 .text-\[21px\]{
@@ -3718,6 +3714,10 @@ input, textarea{
   line-height: 20px;
 }
 
+.leading-snug{
+  line-height: 1.375;
+}
+
 .leading-tight{
   line-height: 1.25;
 }
@@ -3728,10 +3728,6 @@ input, textarea{
 
 .leading-xs{
   line-height: 16px;
-}
-
-.leading-snug{
-  line-height: 1.375;
 }
 
 .tracking-tight{
@@ -5052,9 +5048,6 @@ fieldset a {
   .md\:pb-20{
     padding-bottom: 5rem;
   }
-  .md\:pb-32{
-    padding-bottom: 8rem;
-  }
   .md\:pb-60{
     padding-bottom: 15rem;
   }
@@ -5102,6 +5095,9 @@ fieldset a {
   }
   .md\:text-5xl{
     font-size: 40px;
+  }
+  .md\:text-6xl{
+    font-size: 60px;
   }
   .md\:text-md{
     font-size: 16px;

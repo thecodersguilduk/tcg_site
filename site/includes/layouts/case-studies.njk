@@ -40,9 +40,7 @@ body_class: hub
       {{ study.excerpt }}
     </div>
     <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aperiam nisi facere! Repellat aperiam, sapiente libero velit aliquam rerum cum.</p>
+      {{study.intro}}
     </div>
   </div>
 </section>
@@ -119,7 +117,7 @@ body_class: hub
   <div class="flex flex-col gap-20 justify-center">
     {% for metric in study.metrics %}
       <div class="{% if loop.index == 2 %}ml-8{% endif %}">
-        <p class="text-white text-4xl md:text-6xl leading-snug">{{metric}}</p>
+        <p class="text-white text-5xl md:text-6xl leading-snug">{{metric}}</p>
       </div>
     {% endfor %}
   </div>

@@ -60,6 +60,11 @@ module.exports = async function () {
 function prepPost(data) {
 
   // Converts Portable Text to markdown
+  data.intro = blocksToHtml({
+    blocks: data.intro,
+    serializers: serializers
+  })
+
   data.situation.text = blocksToHtml({
     blocks: data.situation.text,
     serializers: serializers
