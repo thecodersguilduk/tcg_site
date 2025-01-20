@@ -119,7 +119,7 @@ body_class: hub
   <div class="flex flex-col gap-20 justify-center">
     {% for metric in study.metrics %}
       <div class="{% if loop.index == 2 %}ml-8{% endif %}">
-        <p class="text-white text-6xl leading-snug">{{metric}}</p>
+        <p class="text-white text-4xl md:text-6xl leading-snug">{{metric}}</p>
       </div>
     {% endfor %}
   </div>
