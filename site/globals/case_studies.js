@@ -37,6 +37,9 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
       occupation,
       "avatar": avatar.asset->url,
 
+    },
+    pdfLink{
+      "link": asset->url,
     }
 } | order(publishedAt desc)`
 

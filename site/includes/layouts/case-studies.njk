@@ -20,6 +20,13 @@ body_class: hub
         <img src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
         <h1 class="mb-0 text-4xl xxxl:text-6xl leading-118">{{study.title}}</h1>
         <p class="text-lg leading-7">{{study.excerpt | safe }}</p>
+        {% if study.pdfLink.link %}
+            <a href="{{study.pdfLink.link}}" target="_blank"
+                class="flex gap-2">
+                Download this case study as a PDF
+                <img src="/images/PDF.png" class="h-10 ml-2" alt="pdf logo">
+            </a>
+        {% endif %}
       </div>
     </div>
   </div>

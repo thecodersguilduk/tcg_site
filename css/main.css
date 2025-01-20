@@ -2707,6 +2707,10 @@ input, textarea{
   gap: 0.5rem;
 }
 
+.gap-20{
+  gap: 5rem;
+}
+
 .gap-24{
   gap: 6rem;
 }
@@ -2729,10 +2733,6 @@ input, textarea{
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-20{
-  gap: 5rem;
 }
 
 .gap-x-1{
@@ -3579,6 +3579,10 @@ input, textarea{
   font-size: 40px;
 }
 
+.text-6xl{
+  font-size: 60px;
+}
+
 .text-\[21px\]{
   font-size: 21px;
 }
@@ -3616,10 +3620,6 @@ input, textarea{
 
 .text-xs{
   font-size: 11px;
-}
-
-.text-6xl{
-  font-size: 60px;
 }
 
 .font-bold{
