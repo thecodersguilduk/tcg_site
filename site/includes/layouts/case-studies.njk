@@ -34,6 +34,29 @@ body_class: hub
   </div>
 </section>
 
+<!-- Metrics -->
+
+<section class="px-6 py-8 flex justify-center">
+  <div class="relative bg-white py-6 sm:py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid grid-cols-1 items-start gap-x-8 gap-y-12 sm:gap-x-10 sm:gap-y-14 sm:grid-cols-3">
+        {% for metric in study.metrics %}
+          <div>
+              <img class="col-span-2 h-24  w-full sm:col-span-1 mx-auto mb-6" src="{{metric.image}}" alt="{{metric.description}}">
+              <p class="text-center text-md leading-lg mb-0 text-blue-200 font-bold">{{ metric.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video -->
+
+<section class="px-6 xl:px-48 lg:px-24 py-16">
+  <iframe width="100%" height="700" src="https://www.youtube.com/embed/{{study.videoId}}" title="Brand Ambition Coders Guild Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
   <div class="flex flex-col lg:flex-row gap-10">
     <div class="text-lg font-bold">
@@ -45,15 +68,8 @@ body_class: hub
   </div>
 </section>
 
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
-  <div class="flex flex-col lg:flex-row gap-6">
-    {% for image in study.gallery %}
-      <div>
-        <img src="{{image.src}}" class="object-cover w-full" alt="{{image.alt}}">
-      </div>
-    {% endfor %}
-  </div>
-</section>
+
+<!-- Situation -->
 
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
   <div class="flex">
@@ -68,6 +84,7 @@ body_class: hub
   </div>
 </section>
 
+<!-- Task -->
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
@@ -81,6 +98,20 @@ body_class: hub
   </div>
 </section>
 
+
+<!-- Gallery -->
+<section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
+  <div class="flex flex-col lg:flex-row gap-6">
+    {% for image in study.gallery %}
+      <div>
+        <img src="{{image.src}}" class="object-cover w-full" alt="{{image.alt}}">
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+<!-- Action -->
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
@@ -94,6 +125,7 @@ body_class: hub
   </div>
 </section>
 
+<!-- Result -->
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
@@ -107,21 +139,6 @@ body_class: hub
   </div>
 </section>
 
-<!-- Video -->
-
-<section class="px-6 xl:px-48 lg:px-24 py-16">
-  <iframe width="100%" height="700" src="https://www.youtube.com/embed/{{study.videoId}}" title="Brand Ambition Coders Guild Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
-
-<section class="px-6 xl:px-48 lg:px-32 py-32 flex justify-center bg-blue-200 section-rounded">
-  <div class="flex flex-col gap-20 justify-center">
-    {% for metric in study.metrics %}
-      <div class="{% if loop.index == 2 %}ml-8{% endif %}">
-        <p class="text-white text-5xl md:text-6xl leading-snug">{{metric}}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
 
 <!-- testimonial-->
 
@@ -137,7 +154,7 @@ body_class: hub
     <div class="testimonial-body lg:absolute -mt-48 bg-white overflow-hidden rounded-3xl shadow-lg">
       <div class="relative p-10 flex flex-col items-start gap-4">
         <object class="absolute pattern pattern-460" data="../images/patterns/460.svg" type="image/svg+xml"></object>
-        <!-- <img class="w-48 h-14 object-cover rounded-3xl" src="../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" /> -->
+        <img class="w-48 h-14 object-cover rounded-3xl" src="../../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" />
         <p class="leading-2xl text-xl">{{study.testimonial.testimonial}}</p>
         <p class="text-blue-100 font-bold text-lg">{{study.testimonial.client}}</p>
       </div>

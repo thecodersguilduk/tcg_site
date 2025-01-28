@@ -185,7 +185,24 @@
       description: '3 things we can measure to show the impact we had!',
       type: 'array',
       of: [
-        { type: 'string' }
+        { 
+          type: 'object', 
+          fields: [
+            {
+              name: 'description',
+              title: 'Description of the metric - eg. 20% Increase in sales',
+              type: 'string',
+            },
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            }
+          ] 
+        }
       ]
     },
     {

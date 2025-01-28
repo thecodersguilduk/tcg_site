@@ -11,6 +11,10 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
       alt,
       "src": asset->url,
     },
+    metrics[]{
+      description,
+      "image": image.asset->url
+    },
     "situation": {
       "text": situation.text,
       "image": situation.image.asset->url
