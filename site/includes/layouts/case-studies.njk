@@ -59,10 +59,10 @@ body_class: hub
 
 <section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
   <div class="flex flex-col lg:flex-row gap-10">
-    <div class="text-lg font-bold">
-      {{ study.excerpt }}
+    <div class="text-lg font-bold decorated-list case-study-sanity-content">
+      {{ study.quote }}
     </div>
-    <div>
+    <div class="decorated-list case-study-sanity-content">
       {{study.intro | safe}}
     </div>
   </div>
@@ -71,7 +71,7 @@ body_class: hub
 
 <!-- Situation -->
 
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
+<section class="px-6 xl:px-48 lg:px-24 mx-auto py-8 decorated-list case-study-sanity-content">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
           <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
@@ -85,7 +85,7 @@ body_class: hub
 </section>
 
 <!-- Task -->
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
+<section class="px-6 xl:px-48 lg:px-24 mx-auto py-16 decorated-list case-study-sanity-content">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
           <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12 lg:order-2">
@@ -98,41 +98,14 @@ body_class: hub
   </div>
 </section>
 
-
-<!-- Gallery -->
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-16">
-  <div class="flex flex-col lg:flex-row gap-6">
-    {% for image in study.gallery %}
-      <div>
-        <img src="{{image.src}}" class="object-cover w-full" alt="{{image.alt}}">
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-
-<!-- Action -->
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
+<!-- Result -->
+<section class="px-6 xl:px-48 lg:px-24 mx-auto py-8 decorated-list case-study-sanity-content">
   <div class="flex">
       <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
           <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
-            {{study.action.text | safe}}   
-          </div>
-          <div class="bg-grey-2000 h-full w-full lg:w-6/12">
-            <img src="{{study.action.image}}" alt="{{study.title}}" class="w-full h-full object-cover rounded-lg">
-          </div>
-        </div>
-  </div>
-</section>
-
-<!-- Result -->
-<section class="px-6 xl:px-48 lg:px-24 mx-auto py-8">
-  <div class="flex">
-      <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
-          <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12 lg:order-2">
             {{study.result.text | safe}}   
           </div>
-          <div class="bg-grey-2000 h-full w-full lg:w-6/12 lg:order-1">
+          <div class="bg-grey-2000 h-full w-full lg:w-6/12">
             <img src="{{study.result.image}}" alt="{{study.title}}" class="w-full h-full object-cover rounded-lg">
           </div>
         </div>

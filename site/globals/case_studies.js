@@ -7,10 +7,6 @@ const config = require('./config');
 
 const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
     ...,
-    gallery[]{
-      alt,
-      "src": asset->url,
-    },
     metrics[]{
       description,
       "image": image.asset->url
@@ -22,10 +18,6 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
     "task": {
       "text": task.text,
       "image": task.image.asset->url
-    },
-    "action": {
-      "text": action.text,
-      "image": action.image.asset->url
     },
     "result": {
       "text": result.text,
@@ -40,7 +32,6 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
       testimonial,
       occupation,
       "avatar": avatar.asset->url,
-
     },
     pdfLink{
       "link": asset->url,
@@ -71,11 +62,6 @@ function prepPost(data) {
 
   data.situation.text = blocksToHtml({
     blocks: data.situation.text,
-    serializers: serializers
-  })
-
-  data.action.text = blocksToHtml({
-    blocks: data.action.text,
     serializers: serializers
   })
 
