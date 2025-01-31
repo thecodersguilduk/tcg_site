@@ -3,6 +3,29 @@
 	label: 'Case Studies',
     type: 'document',
 	fields: [
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published at',
+      description: 'This helps sort it in the blog feed - Please ensure this is set (and not a placeholder!)'
+    },
+    {
+      name: 'time',
+      type: 'string',
+      title: 'Time to read',
+    },
+    {
+      name: 'authors',
+      title: 'Authors',
+      type: 'array',
+      description: 'Again - helps with blog formatting',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'team' }]
+        }
+      ]
+    },
 		{
 			name: 'title',
 			label: 'Title',

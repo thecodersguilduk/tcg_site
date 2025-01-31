@@ -74,6 +74,9 @@ module.exports = (eleventyConfig) => {
 	// Collections
 	eleventyConfig.addCollection('blog', (collection) => {
 		let blogs = collection.getFilteredByTag('blog');
+		let caseStudies = collection.getFilteredByTag('case-studies');
+
+		blogs = blogs.concat(caseStudies);
 
 		for (let i = 0; i < blogs.length; i++) {
 			const prevPost = blogs[i - 1];

@@ -6,7 +6,6 @@ const sanityClient = require('@sanity/client')
 const config = require('./config');
 
 const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
-    ...,
     metrics[]{
       description,
       "image": image.asset->url
@@ -35,7 +34,11 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
     },
     pdfLink{
       "link": asset->url,
-    }
+    },
+    authors[0]->{name},
+    "avatar": authors[0]->image.asset->url,
+    publishedAt,
+    ...
 } | order(publishedAt desc)`
 
 module.exports = async function () {
@@ -75,7 +78,9 @@ function prepPost(data) {
     serializers: serializers
   })
 
-  console.log('case studies: ', data);
+  data.date = data.publishedAt.split('T')[0];
+
+  console.log(data.authors[0]);
   return data
 }
 

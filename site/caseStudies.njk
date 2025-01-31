@@ -13,6 +13,13 @@
         title: data => data.study.title,
         meta_title: data => data.study.title,
         meta_description: data => data.study.excerpt,
+        featured_image: data =>  data.study.featuredImage.src,
+        featured_image_alt: data =>  data.study.featuredImage.alt,
+        author: data => data.study.authors[0].name,
+        publishedAt: data => data.study.date,
+        avatar: data => data.study.avatar,
+        time: data => data.study.time
+
     }
 }
 ---
