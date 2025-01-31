@@ -15,10 +15,10 @@
         meta_description: data => data.study.excerpt,
         featured_image: data =>  data.study.featuredImage.src,
         featured_image_alt: data =>  data.study.featuredImage.alt,
-        author: data => data.study.authors[0].name,
-        publishedAt: data => data.study.date,
+        date: data => data.study.publishedAt,
         avatar: data => data.study.avatar,
-        time: data => data.study.time
+        time: data => data.study.time,
+        author: data => data.study.author.name,
 
     }
 }
