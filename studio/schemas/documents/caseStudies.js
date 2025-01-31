@@ -4,6 +4,18 @@
     type: 'document',
 	fields: [
     {
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'categories' }]
+        }
+      ],
+      defaultValue: ['Case Studies'],
+    },
+    {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',

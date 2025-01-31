@@ -28,7 +28,7 @@ pagination: {
             arr.push(cat.name);
         })
 
-        return arr.filter(item => item !== 'blog')[0]
+        return arr.filter(item => item !== 'blog')
       },
       meta_title: data => data.post.title,
       meta_description: data => data.post.excerpt,

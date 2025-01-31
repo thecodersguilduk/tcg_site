@@ -74,7 +74,7 @@ module.exports = (eleventyConfig) => {
 	// Collections
 	eleventyConfig.addCollection('blog', (collection) => {
 		let blogs = collection.getFilteredByTag('blog');
-		let caseStudies = collection.getFilteredByTag('case-studies');
+		let caseStudies = collection.getFilteredByTag('Case Studies');
 
 		blogs = blogs.concat(caseStudies);
 

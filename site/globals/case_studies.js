@@ -39,6 +39,7 @@ const query = `*[_type == "caseStudies" && !(_id in path("drafts.**"))] {
     "author": authors[0]->{name},
     "avatar": authors[0]->image.asset->url,
     publishedAt,
+    categories[]->{name},
 } | order(publishedAt desc)`
 
 module.exports = async function () {
@@ -80,7 +81,6 @@ function prepPost(data) {
 
   data.date = data.publishedAt.split('T')[0];
 
-  console.log(data.featuredImage.asset);
   return data
 }
 

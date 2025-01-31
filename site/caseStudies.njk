@@ -19,6 +19,16 @@
         avatar: data => data.study.avatar,
         time: data => data.study.time,
         author: data => data.study.author.name,
+        categories: data => {
+            const arr = ['blog'];
+            const categories = data.study.categories;
+    
+            categories.forEach(cat => {
+                arr.push(cat.name);
+            })
+    
+            return arr.filter(item => item !== 'blog')
+        },
 
     }
 }
