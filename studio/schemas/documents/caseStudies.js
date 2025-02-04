@@ -1,19 +1,19 @@
-    export default {
-	name: 'caseStudies',
-	label: 'Case Studies',
-    type: 'document',
+export default {
+  name: 'caseStudies',
+  label: 'Case Studies',
+  type: 'document',
 	fields: [
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
+      description: 'Just one for now please!',
       of: [
         {
           type: 'reference',
           to: [{ type: 'categories' }]
         }
-      ],
-      defaultValue: ['Case Studies'],
+      ]
     },
     {
       name: 'publishedAt',

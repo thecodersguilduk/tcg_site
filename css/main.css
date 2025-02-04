@@ -5267,6 +5267,9 @@ fieldset a {
   .lg\:max-w-screen-xl{
     max-width: 1280px;
   }
+  .lg\:max-w-6xl{
+    max-width: 64rem;
+  }
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
