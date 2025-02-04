@@ -24,6 +24,7 @@ import youtube from "./documents/components/youtubeEmbed";
 import leadGenFormEmbed from "./documents/components/formEmbed";
 import faqsItem from './documents/faqsItem';
 import landingPages from "./documents/landingPages";
+import caseStudies from "./documents/caseStudies";
 
 
 export default [
@@ -53,5 +54,6 @@ export default [
     youtube,
     leadGenFormEmbed,
     faqsItem,
-    landingPages
+    landingPages,
+    caseStudies
   ]

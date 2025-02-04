@@ -1,0 +1,151 @@
+---
+layout: default
+body_class: hub
+meta_title: {{ study.title }}
+meta_description: {{ study.excerpt }}
+tags: ["Case Studies"]
+
+---
+
+<section class="relative flex flex-col bg-white gap-10">
+  <div class="bg-blue-100/5 relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 xl:gap-10 px-6 md:px-24 pt-24 lg:pt-32 pb-32">
+    <div class="max-w-5xl xl:max-w-9xl mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-40">
+      <div class="relative lg:order-2 lg:w-7/12 mb-12 lg:mb-0" style="max-height: 516px;">
+        <object class="absolute pattern pattern-2" data="../../images/patterns/2.svg" type="image/svg+xml"></object>
+        <div class="relative">
+          <img src="{{ study.featuredImage.src }}" alt="{{ study.featuredImage.alt }}" class="relative rounded-lg shadow-lg w-full h-full object-cover" style="max-height: 516px;" />
+          <div class="absolute trustist-box">
+            <script src="https://widget.trustist.com/JgTmKy9K3kqIxBnXqyliBg/trustistreviewer.js"></script>
+            <div ts-widget="" ts-border-radius="15px" ts-suppress-review-link="true" ts-reviews-url="/reviews"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:items-start gap-4 lg:content-center lg:order-1 lg:w-5/12" style="max-width: 620px;">
+        <img src="../../images/tcg-logo/Blue/TGC_Square_Logo_Blue.svg" alt="The Coders Guild Small Logo" class="w-10 h-7 object-cover rounded-lg">
+        <h1 class="mb-0 text-4xl xxxl:text-6xl leading-118">{{study.title}}</h1>
+        <p class="text-lg leading-7">{{study.excerpt | safe }}</p>
+        {% if study.pdfLink.link %}
+            <a href="{{study.pdfLink.link}}" target="_blank"
+                class="flex gap-2">
+                Download this case study as a PDF
+                <img src="/images/PDF.png" class="h-10 ml-2" alt="pdf logo">
+            </a>
+        {% endif %}
+        {% include '../components/hub/consultation-button.njk' %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Metrics -->
+
+<section class="px-6 py-8 flex justify-center">
+  <div class="relative bg-white py-6 sm:py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid grid-cols-1 items-start gap-x-8 gap-y-12 sm:gap-x-10 sm:gap-y-14 sm:grid-cols-3">
+        {% for metric in study.metrics %}
+          <div>
+              <img class="col-span-2 h-24  w-full sm:col-span-1 mx-auto mb-6" src="{{metric.image}}" alt="{{metric.description}}">
+              <p class="text-center text-md leading-lg mb-0 text-blue-200 font-bold">{{ metric.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video -->
+
+<section class="px-6 xl:px-48 lg:px-24 py-16">
+  <iframe width="100%" height="700" src="https://www.youtube.com/embed/{{study.videoId}}" title="Brand Ambition Coders Guild Case Study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+<section class="px-6 mx-auto py-16 max-w-2xl lg:max-w-7xl">
+  <div class="flex flex-col lg:flex-row gap-14">
+    <div class="text-3xl lg:text-5xl lg:w-6/12 font-bold italic decorated-list case-study-sanity-content">
+      {{ study.quote }}
+    </div>
+    <div class="lg:w-6/12 decorated-list case-study-sanity-content">
+      {{study.intro | safe}}
+    </div>
+  </div>
+</section>
+
+
+<!-- Situation -->
+
+<section class="px-6 max-w-2xl lg:max-w-7xl mx-auto py-8 decorated-list case-study-sanity-content">
+  <div class="flex">
+      <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
+          <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
+            {{study.situation.text | safe}}   
+          </div>
+          <div class="bg-grey-2000 h-full w-full lg:w-6/12">
+            <img src="{{study.situation.image}}" alt="{{study.title}}" class="w-full h-full object-cover rounded-lg">
+          </div>
+        </div>
+  </div>
+</section>
+
+<!-- Task -->
+<section class="px-6 max-w-2xl lg:max-w-7xl mx-auto py-16 decorated-list case-study-sanity-content">
+  <div class="flex">
+      <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
+          <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12 lg:order-2">
+            {{study.task.text | safe}}   
+          </div>
+          <div class="bg-grey-2000 h-full w-full lg:w-6/12 lg:order-1">
+            <img src="{{study.task.image}}" alt="{{study.title}}" class="w-full h-full object-cover rounded-lg">
+          </div>
+        </div>
+  </div>
+</section>
+
+<!-- Result -->
+<section class="px-6 max-w-2xl lg:max-w-7xl mx-auto py-8 decorated-list case-study-sanity-content">
+  <div class="flex">
+      <div class="flex flex-col lg:flex-row lg:justify-between  gap-10 max-w-7xl mx-auto lg:py-16">
+          <div class="flex flex-col items-start gap-8 decorated-list lg:w-5/12">
+            {{study.result.text | safe}}   
+          </div>
+          <div class="bg-grey-2000 h-full w-full lg:w-6/12">
+            <img src="{{study.result.image}}" alt="{{study.title}}" class="w-full h-full object-cover rounded-lg">
+          </div>
+        </div>
+  </div>
+</section>
+
+
+<!-- testimonial-->
+
+<section class="px-6 xl:px-48 lg:px-24 py-16">
+  <div class="max-w-4xl mx-auto flex flex-col lg:flex-row lg:justify-center md:items-center lg:items-start lg:py-32 relative gap-8">
+    <div class="flex flex-col gap-8 mt-16 lg:w-6/12">
+      <h2 class="mb-0 text-5xl leading-120">What they said about it!</h2>
+      <p class="text-lg leading-7">See how our training has transformed businesses</p>
+    </div>
+    <div class="lg:w-6/12">
+      <img class="w-full object-cover rounded-2xl shadow" src="{{study.testimonial.avatar}}" alt="Hear testimonials about how The Coders Guild could help with your business development" style="height: 562px;" />
+    </div>
+    <div class="testimonial-body lg:absolute -mt-48 bg-white overflow-hidden rounded-3xl shadow-lg">
+      <div class="relative p-10 flex flex-col items-start gap-4">
+        <object class="absolute pattern pattern-460" data="../images/patterns/460.svg" type="image/svg+xml"></object>
+        <img class="w-48 h-14 object-cover rounded-3xl" src="../../images/company-logos/brand-ambition.png" alt="Brand Ambition Logo" />
+        <p class="leading-2xl text-xl">{{study.testimonial.testimonial}}</p>
+        <p class="text-blue-100 font-bold text-lg">{{study.testimonial.client}}</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- cta -->
+
+<div class="py-32 bg-grey-100 px-4">
+  <div class="max-w-2xl text-center mx-auto">
+    <h2 class="text-center mb-6">Ready to upskill your team?</h2>
+    {% include '../components/hub/consultation-button.njk' %}
+  </div>
+</div>
+

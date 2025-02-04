@@ -1,0 +1,35 @@
+---js
+{
+    layout: 'case-studies',
+    pagination: {
+        data: 'case_studies',
+        size: 1,
+        alias: 'study'
+        },
+    permalink: '/',
+    eleventyComputed: {
+        permalink: `/case-study/{{study.slug.current}}/index.html`,
+        excerpt: data => data.study.excerpt,
+        title: data => data.study.title,
+        meta_title: data => data.study.title,
+        meta_description: data => data.study.excerpt,
+        featured_image: data =>  data.study.featuredImage.src,
+        featured_image_alt: data =>  data.study.featuredImage.alt,
+        date: data => data.study.publishedAt,
+        avatar: data => data.study.avatar,
+        time: data => data.study.time,
+        author: data => data.study.author.name,
+        categories: data => {
+            const arr = ['blog'];
+            const categories = data.study.categories;
+    
+            categories.forEach(cat => {
+                arr.push(cat.name);
+            })
+    
+            return arr.filter(item => item !== 'blog')
+        },
+
+    }
+}
+---

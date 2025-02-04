@@ -2695,6 +2695,10 @@ input, textarea{
   gap: 3rem;
 }
 
+.gap-14{
+  gap: 3.5rem;
+}
+
 .gap-16{
   gap: 4rem;
 }
@@ -3419,6 +3423,10 @@ input, textarea{
   padding-bottom: 0.75rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -3632,6 +3640,10 @@ input, textarea{
 
 .capitalize{
   text-transform: capitalize;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .leading-10{
@@ -3987,9 +3999,8 @@ input, textarea{
 .content ul li {
   list-style: none;
   list-style-position: outside;
-  font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  line-height: 26px;
-  margin-bottom: 1rem;
+  line-height: 32px;
+  margin-left: 1rem;
 }
 #course_breakdown ul li::before,
 #course_outline ul li::before,
@@ -3997,7 +4008,7 @@ input, textarea{
 .decorated-list ul li::before,
 .content ul li::before {
   content: url("/images/Chevron-Left-list.svg");
-  margin-right: 1rem;
+  margin-right: 0.3rem;
   display: inline-block;
 }
 #course_breakdown ol,
@@ -4203,6 +4214,10 @@ fieldset a {
 
 .strikediag {
   background: linear-gradient(to left top, transparent 41.75%, currentColor 42.5%, currentColor 52.5%, transparent 52.25%);
+}
+
+.case-study-sanity-content p {
+  margin-bottom: 1rem;
 }
 
 .focus-within\:ring-2:focus-within{
@@ -5236,6 +5251,9 @@ fieldset a {
   }
   .lg\:max-w-4xl{
     max-width: 58rem;
+  }
+  .lg\:max-w-6xl{
+    max-width: 64rem;
   }
   .lg\:max-w-7xl{
     max-width: 72rem;

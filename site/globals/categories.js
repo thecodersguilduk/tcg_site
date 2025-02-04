@@ -18,6 +18,5 @@ module.exports = async function () {
   }
 
   function prepPost(data) {
-
     return data
   }

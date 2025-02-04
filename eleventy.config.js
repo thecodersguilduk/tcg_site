@@ -74,6 +74,9 @@ module.exports = (eleventyConfig) => {
 	// Collections
 	eleventyConfig.addCollection('blog', (collection) => {
 		let blogs = collection.getFilteredByTag('blog');
+		let caseStudies = collection.getFilteredByTag('Case Studies');
+
+		blogs = blogs.concat(caseStudies);
 
 		for (let i = 0; i < blogs.length; i++) {
 			const prevPost = blogs[i - 1];
@@ -140,6 +143,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addLayoutAlias('internal-page', 'layouts/internal-page.njk');
 	eleventyConfig.addLayoutAlias('landing', 'layouts/landing.njk');
 	eleventyConfig.addLayoutAlias('blank', 'layouts/blank.njk');
+	eleventyConfig.addLayoutAlias('case-studies', 'layouts/case-studies.njk');
 
 	// Include our static assets
 	eleventyConfig.addPassthroughCopy('css');
