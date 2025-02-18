@@ -144,7 +144,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addLayoutAlias('landing', 'layouts/landing.njk');
 	eleventyConfig.addLayoutAlias('blank', 'layouts/blank.njk');
 	eleventyConfig.addLayoutAlias('case-studies', 'layouts/case-studies.njk');
-
+	eleventyConfig.addLayoutAlias('quiz-result', 'layouts/quiz-result.njk');
 	// Include our static assets
 	eleventyConfig.addPassthroughCopy('css');
 	eleventyConfig.addPassthroughCopy('js');
