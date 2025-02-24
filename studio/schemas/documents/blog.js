@@ -7,13 +7,15 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Titles should be catchy, descriptive, and not too long'
+      description: 'Titles should be catchy, descriptive, and not too long',
+      validation: rule => rule.required()
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
       description: 'Some frontends will require a slug to be set to be able to show the post',
+      validation: rule => rule.required(),
       options: {
         source: 'title',
         maxLength: 96
@@ -23,12 +25,14 @@ export default {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
-      description: 'Please ensure this is set (and not a placeholder!)'
+      description: 'Please ensure this is set (and not a placeholder!)',
+      validation: rule => rule.required()
     },
     {
       name: 'mainImage',
       type: 'image',
       title: 'Main image',
+      validation: rule => rule.required(),
       fields: [
         {
           name: 'alt',
@@ -69,6 +73,7 @@ export default {
       name: 'excerpt',
       type: 'text',
       title: 'Excerpt',
+      validation: rule => rule.required(),
       description:
         'This ends up on summary pages, on Google, when people share your post in social media.'
     },
@@ -76,6 +81,7 @@ export default {
       name: 'authors',
       title: 'Authors',
       type: 'array',
+      validation: rule => rule.required(),
       of: [
         {
           type: 'reference',
@@ -87,12 +93,14 @@ export default {
       name: 'time',
       title: 'Time to Read',
       type: 'string',
-      description: 'Just enter the number of minutes here!'
+      description: 'Just enter a whole number of minutes here!',
+      validation: rule => rule.required(),
     },
     {
       name: 'categories',
       type: 'array',
       title: 'Categories',
+      validation: rule => rule.required(),
       of: [
         {
           type: 'reference',

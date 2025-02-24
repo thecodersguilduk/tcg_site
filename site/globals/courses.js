@@ -20,7 +20,8 @@ const query = `*[_type == "course" && isActive && !(_id in path("drafts.**"))] {
     logos[]->{logo, partnerName},
     instances[] {
       date,
-      description
+      description,
+	  "pdf": pdf.asset->url
     },
 	benefits[]->{
 		'title': title,

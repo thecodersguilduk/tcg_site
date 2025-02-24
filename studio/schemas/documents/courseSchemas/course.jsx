@@ -2,15 +2,16 @@ import { format } from 'date-fns';
 import React from 'react';
 
 const CourseInstancePreview = ({ value }) => {
+	console.log(value);
 	if (!value || !value.date) {
 		return <div>No course instance date specified</div>;
 	}
 
-	const formattedDate = format(new Date(value.date), 'dd/MM/yyyy hh:mm a');
+	const formattedDate = format(new Date(value), 'dd/MM/yyyy hh:mm a');
 
 	return (
 		<div>
-			<div>{formattedDate}</div>
+			<div>Does this show up?</div>
 		</div>
 	);
 };
@@ -216,14 +217,15 @@ export default {
 							],
 							description: 'A description of this course instance',
 						},
-					],
-					preview: {
-						select: {
-							date: 'date',
-							description: 'description',
-						},
-						component: CourseInstancePreview,
-					},
+						{
+							name: 'pdf',
+							title: 'Upload the course PDF here',
+							type: 'file',
+							options: {
+								accept: '.pdf',
+							}
+						}
+					]
 				},
 			],
 		},
