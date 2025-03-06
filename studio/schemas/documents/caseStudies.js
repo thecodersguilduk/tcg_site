@@ -214,6 +214,12 @@ export default {
       title: 'Video Embed Id',
       type: 'string',
       description: 'Get this from the embed code from the youtube video embed'
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'tag',
+      description: 'Is this an employer, learner or funder case study?'
     }
 	]
 };

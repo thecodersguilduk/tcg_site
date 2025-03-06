@@ -1,10 +1,3 @@
-// profile Image
-// job title
-// description
-// social media links
-// internal/external
-
-
 export default {
     name: 'team',
     type: 'document',

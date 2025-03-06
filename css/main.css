@@ -4085,6 +4085,7 @@ input, textarea{
   font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 26px;
   margin-bottom: 1rem;
+  list-style-type: none;
 }
 #course_breakdown ol > li::before,
 #course_outline ol > li::before,
