@@ -9,6 +9,10 @@
 					"url": "/employers"
 				},
 				{
+					"label": "Test your Leadership",
+					"url": "/tech-leadership-quiz"
+				},
+				{
 					"label": "Upskilling Staff",
 					"url": "/upskilling-staff"
 				}
