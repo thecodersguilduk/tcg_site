@@ -106,19 +106,19 @@ body_class: hub
       <p class="text-center text-white">{{ trainer.occupation }}</p>
       <div class="flex justify-center">
           {% if trainer.linkedin %}
-              <a href="{{ trainer.linkedin }}" class="p-2">
+              <a href="https://www.linkedin.com/{{ trainer.linkedin }}" class="p-2">
               <span class="sr-only">Linkedin</span>
               <img src="../../images/icons/linkedin.svg" class="h-4"/>
               </a>
           {% endif %}
           {% if trainer.twitter %}
-              <a href="{{ trainer.twitter }}" class="p-2">
+              <a href="https://x.com/{{ trainer.twitter }}" class="p-2">
               <span class="sr-only">Twitter</span>
               <img src="../../images/icons/twitter.svg" class="h-4"/>
               </a>
           {% endif %}
           {% if trainer.github %}
-              <a href="{{ trainer.github }}" class="p-2">
+              <a href="https://www.github.com/{{ trainer.github }}" class="p-2">
               <span class="sr-only">Github</span>
               <img src="../../images/icons/github.svg" class="h-4"/>
               </a>
