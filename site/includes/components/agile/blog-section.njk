@@ -15,12 +15,12 @@
                           {% endif %}
                           <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
                             <div class="flex-1 mt-2">
-                              {% if post.tags %}
+                              {% if post.categories %}
                                 <div class="category absolute top-0 flex -my-4 -mx-1">
-                                  {% for item in post.tags %}
-                                    {% if item != "blog" %}
+                                  {% for item in post.categories %}
+                                    {% if item.name != "blog" %}
                                       <div class="px-1">
-                                        <a href="/category/{{ item }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item | capitalize }}</a>
+                                        <a href="/category/{{ item.name }}" class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item.name | capitalize }}</a>
                                       </div>
                                     {% endif %}
                                   {% endfor %}

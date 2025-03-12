@@ -1,13 +1,26 @@
-/promo                         /index.html
-/larf                          /west-yorkshire/
-/ldcf                          /west-yorkshire/index.html
-/yorkshire-humber              /west-yorkshire/
-/greater-manchester            /west-yorkshire/
-/york-north-yorkshire          /west-yorkshire/
-/hull-east-yorkshire           /west-yorkshire/
-/employer-software-dev         /course-directory/
-/employer-software-test        /course-directory/
-/applicant-software-dev        /course-directory/
-/applicant-software-test       /course-directory/
-/course-directory/digtal-project-and-account-management    /course-directory/digital-project-manager/
-/apply/                        https://forms.gle/RrPafeNmXX1FBoet8
+/promo /index.html 200!
+/larf /west-yorkshire/ 200!
+/ldcf /west-yorkshire/index.html 200!
+/yorkshire-humber /west-yorkshire/ 200!
+/greater-manchester /west-yorkshire/ 200!
+/york-north-yorkshire /west-yorkshire/ 200!
+/hull-east-yorkshire /west-yorkshire/ 200!
+/employer-software-dev /course-directory/ 200!
+/employer-software-test /course-directory/ 200!
+/applicant-software-dev /course-directory/ 200!
+/applicant-software-test /course-directory/ 200!
+/course-directory/digtal-project-and-account-management /course-directory/digital-project-manager/ 200!
+/course-directory/essential-qa-and-testing-fundamentals /course-directory/test-automation-for-software-excellence/ 200!
+/course-directory/cyber-security-l4-apprenticeship /course-directory/cyber-security-l4/ 200!
+/course-directory/get-hired-as-a-ux-professional/ /course-directory/ux-essentials/ 200!
+/blog/hiring-developer-apprentice-sme-thrive-2021/ /blog/ 200!
+/blog/liverpool-gets-ready-to-learn-valuable-tech-skills-in-2021/ /blog/liverpool-city-region-gets-ready-to-learn-valuable-tech-skills-in-2021/ 200!
+/blog/from-furlough-to-software-testing-apprentice-in-just-a-few-weeks-case-study-interview/ /blog/from-furlough-to-software-testing-apprenticeship-in-just-a-few-months-or-case-study/ 200!
+/course-directory/ux-in-5-days/ /course-directory/ux-essentials/ 200!
+/jobs/technical-trainer-coach/ /jobs/ 200!
+/blog/free-tech-boot-camps-for-west-yorkshire/ /blog/free-tech-skills-bootcamps-for-west-yorkshire/ 200!
+/blog/learn-web-and-app-development-with-the-jamstack/ /blog/free-course-web-and-app-development-with-javascript-and-apis-jamstack/ 200!
+
+# External Redirects (require explicit status code)
+/apply/ https://forms.gle/RrPafeNmXX1FBoet8 301
+/apply/index.html?pj=17&pt=3&f=4&cN=ga-esftc https://forms.gle/RrPafeNmXX1FBoet8 301

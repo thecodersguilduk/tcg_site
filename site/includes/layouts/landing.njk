@@ -235,7 +235,7 @@ body_class: hub
                               {% if item.courseType %}
                                 <div class="category absolute top-0 flex -my-4 -mx-1">
                                   <div class="px-1">
-                                    <p class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item.courseType }}</a>
+                                    <p class="p-2 bg-red-100 text-white font-bold rounded block font-heading text-sm leading-sm">{{ item.courseType }}</p>
                                   </div>
                                 </div>
                               {% endif %}
@@ -306,7 +306,7 @@ body_class: hub
                       {% endif %}
                       <div class="flex-1 bg-white px-4 md:px-6 py-6 flex flex-col justify-between relative">
                         <div class="flex-1 mt-2">
-                          {% if post.tags %}
+                          {% if post.category %}
                             <div class="category absolute top-0 flex -my-4 -mx-1">
                               {% for item in post.tags %}
                                 {% if item.name !== "blog" %}
