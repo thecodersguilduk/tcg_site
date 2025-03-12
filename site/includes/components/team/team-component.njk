@@ -19,14 +19,8 @@
                               <img src="../images/icons/linkedin.svg" class="h-4"/>
                             </a>
                           {% endif %}
-                          {% if member.twitter %}
-                            <a href="{{ member.twitter }}" class="p-2">
-                              <span class="sr-only">Twitter</span>
-                              <img src="../images/icons/twitter.svg" class="h-4"/>
-                            </a>
-                          {% endif %}
                           {% if member.github %}
-                            <a href="{{ member.github }}" class="p-2">
+                            <a href="https://www.github.com/{{ member.github }}" class="p-2">
                               <span class="sr-only">Github</span>
                               <img src="../images/icons/github.svg" class="h-4"/>
                             </a>

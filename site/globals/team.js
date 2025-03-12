@@ -28,8 +28,5 @@ function prepPost(data) {
 
   data.image = data.image ? urlFor(data.image) : null;
 
-  data.github = data.github ? 'https://www.github.com/' + data.github : ''
-  data.twitter = data.twitter ? 'https://www.twitter.com/' + data.twitter : ''
-  data.linkedin = data.linkedin ? 'https://www.linkedin.com/in/' + data.linkedin : ''
   return data
 }
