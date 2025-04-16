@@ -1,6 +1,8 @@
-<header class="bg-gradient-to-r from-blue-100 to-blue-200 section-rounded">
+<header class="bg-gradient-to-r from-blue-100 to-blue-200 section-rounded relative">
+    <object aria-hidden="true" type="image/svg+xml" data="../../images/patterns/11.svg" class="hidden lg:block absolute pattern pattern-11"></object>
     <div class="pt-24 lg:pt-32 pb-12 px-6 xl:px-48 flex flex-col items-start content-start w-full lg:flex-row items-center gap-8 self-stretch relative max-w-9xl mx-auto">
         <div class="lg:h-auto lg:w-7/12 xl:w-6/12 lg:order-2 relative">
+            
             {% if course.video %}
                 {% include "components/courses/video.njk" %}
             {% else %}
@@ -39,7 +41,11 @@
                 {% if course.price %}
                 <div class="flex flex-col gap-2 text-white">
                     <span class="text-md">Price</span>
-                    <p class="text-4xl md:text-5xl font-bold leading-112 text-white"><span class="strikediag text-red-100">£{{course.price}}</span></p> 
+                    <p class="text-4xl md:text-5xl font-bold leading-112 text-white">
+                        <span class="{% if course._id == 'e2e66c2c-0ab5-4296-8b34-2e9f2ed4cab6' or course._id == '6509c12c-3dfd-4cf4-8b67-05f42985d431' %} strikediag text-red-100 {% endif %}">
+                            £{{course.price}}
+                        </span>
+                    </p> 
                 </div>
                 {% endif %}
                 <div class="w-full">

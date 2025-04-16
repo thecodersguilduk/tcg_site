@@ -1651,9 +1651,6 @@ input, textarea{
 #course .excerpt {
   text-align: center;
 }
-#course .pattern {
-  z-index: -1;
-}
 #course .pattern-5 {
   top: 40%;
   left: 0;
@@ -1663,7 +1660,8 @@ input, textarea{
   left: 40%;
 }
 #course .pattern-16 {
-  bottom: 0;
+  top: 0;
+  right: 0;
 }
 #course .pattern-18 {
   right: 5%;
@@ -1912,6 +1910,14 @@ input, textarea{
   top: 2.5rem;
 }
 
+.left-\[-10\%\]{
+  left: -10%;
+}
+
+.right-\[-5\%\]{
+  right: -5%;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -1938,6 +1944,14 @@ input, textarea{
 
 .z-50{
   z-index: 50;
+}
+
+.z-0{
+  z-index: 0;
+}
+
+.z-1{
+  z-index: 1;
 }
 
 .order-first{

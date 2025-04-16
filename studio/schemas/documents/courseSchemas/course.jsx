@@ -79,6 +79,12 @@ export default {
 			fieldset: 'metaHero'
 		},
 		{
+			name: 'metaDescription',
+			type: 'string',
+			title: 'Meta Description',
+			fieldset: 'metaHero'
+		},
+		{
 			name: 'title',
 			type: 'string',
 			title: 'H1',

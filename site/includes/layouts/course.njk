@@ -29,11 +29,11 @@ body_class: apprenticeship-employer
       {% include '../components/courses/graduate-logos.njk' %}
       {% include '../components/courses/upcoming-courses.njk' %}
     </section>
-    <section id="content" class="section-rounded z-10">
+    <section id="content" class="section-rounded relative">
       {% include '../components/courses/content.njk' %}
     </section>
   {% if course.trainers.length > 0 %}
-    <section id="trainers">
+    <section id="trainers overflow-hidden">
       {% include '../components/courses/trainers.njk' %}
     </section>
   {% endif %}
