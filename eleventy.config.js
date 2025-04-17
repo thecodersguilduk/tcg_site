@@ -154,6 +154,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('robots.txt');
 	eleventyConfig.addPassthroughCopy('_redirects');
 	eleventyConfig.addPassthroughCopy('js7rt1ac06p9kwn07jpd2exltc1ml1.html');
+	eleventyConfig.addPassthroughCopy('googleae17b4c41a50d51a.html');
 
 	return {
 		templateFormats: ['md', 'njk'],
