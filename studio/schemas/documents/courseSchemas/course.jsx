@@ -79,12 +79,6 @@ export default {
 			fieldset: 'metaHero'
 		},
 		{
-			name: 'metaDescription',
-			type: 'string',
-			title: 'Meta Description',
-			fieldset: 'metaHero'
-		},
-		{
 			name: 'title',
 			type: 'string',
 			title: 'H1',
@@ -111,6 +105,13 @@ export default {
 			description: 'Link to the course application form',
 			type: 'string',
 			fieldset: 'metaHero',
+		},
+		{
+			name: 'qualifier',
+			title: 'Qualifier Text',
+			type: 'string',
+			fieldset: 'metaHero',
+			description: 'This is the text that appears below the call to action button in the hero section on the course page. Will not appear if left blank.',
 		},
 		{
 			name: 'meta_description',

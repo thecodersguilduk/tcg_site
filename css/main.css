@@ -1890,6 +1890,10 @@ input, textarea{
   left: 50%;
 }
 
+.left-\[-10\%\]{
+  left: -10%;
+}
+
 .left-\[max\(50\%\2c 25rem\)\]{
   left: max(50%,25rem);
 }
@@ -1902,20 +1906,16 @@ input, textarea{
   right: 2.5rem;
 }
 
+.right-\[-5\%\]{
+  right: -5%;
+}
+
 .top-0{
   top: 0;
 }
 
 .top-10{
   top: 2.5rem;
-}
-
-.left-\[-10\%\]{
-  left: -10%;
-}
-
-.right-\[-5\%\]{
-  right: -5%;
 }
 
 .isolate{
@@ -1934,6 +1934,14 @@ input, textarea{
   z-index: -20;
 }
 
+.z-0{
+  z-index: 0;
+}
+
+.z-1{
+  z-index: 1;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -1944,14 +1952,6 @@ input, textarea{
 
 .z-50{
   z-index: 50;
-}
-
-.z-0{
-  z-index: 0;
-}
-
-.z-1{
-  z-index: 1;
 }
 
 .order-first{
@@ -2771,6 +2771,10 @@ input, textarea{
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
 }
 
 .gap-x-1{

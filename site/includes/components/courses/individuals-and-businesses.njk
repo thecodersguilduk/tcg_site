@@ -21,7 +21,11 @@
                 <h3 class="text-white text-center text-2xl">Individuals</h3>
                 <p class="text-white text-lg text-center">{% if course.isFunded %}If you live or work in {% if course.partners.includes('N Yorkshire') %}North or {% endif %} West Yorkshire it is very likely that you will be eligible for 100% funding.{% else %}Bolster your skillset and supercharge your career with this interactive group training{% endif %}</p>
                 <div class="bg-white rounded px-4 py-2 my-4">
+                    {% if course.courseType != 'Apprenticeships' %}
                     <p class="text-center"><a href="{% if course.formLink %} {{ course.formLink }} {% else %}#contact{% endif %}" class="text-lightblue-500 font-bold">{{course.ctaText}}</a></p>
+                    {% else %}
+                    <p class="text-center"><a href="https://t-c-g.typeform.com/to/laQGmNaD" class="text-lightblue-500 font-bold">Enquire Now</a></p>
+                    {% endif %}
                 </div>
         </div>
     
