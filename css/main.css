@@ -2729,6 +2729,10 @@ input, textarea{
   gap: 0.125rem;
 }
 
+.gap-1{
+  gap: 0.25rem;
+}
+
 .gap-10{
   gap: 2.5rem;
 }
@@ -2771,10 +2775,6 @@ input, textarea{
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-1{
-  gap: 0.25rem;
 }
 
 .gap-x-1{

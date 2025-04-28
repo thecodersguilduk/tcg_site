@@ -134,7 +134,7 @@ layout: default
             </div>
             {% endif %}
 
-
+            <div id="dynamic-fields">
             {% for item in job.questions %}
               <div class="mb-4">
                 {% switch item.inputType %}
@@ -184,6 +184,7 @@ layout: default
                 {% endswitch %}
               </div>
             {% endfor %}
+            </div>
 
             {% if job.slug.current !== "apprentice-admin-assistant-tcg" %}
             <div class="mb-4">
@@ -224,6 +225,25 @@ layout: default
     </div>
   </div>
 </main>
+
+<script>
+ const dynamicFields = document.getElementById('dynamic-fields');
+  
+  // Get all input fields, selects, textareas, checkboxes, and radios inside the 'dynamic-fields' div
+  const formElements = dynamicFields.querySelectorAll('input, select, textarea');
+
+  
+  let questionNumber = 1; // Start the question numbering
+  
+  // Loop through all the form elements inside the dynamic-fields div
+  formElements.forEach(function(element) {
+
+      element.name = `question_${questionNumber}`;
+      questionNumber++;
+    
+  });
+
+</script>
 
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery-ui.js"></script>
