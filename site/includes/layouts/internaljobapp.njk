@@ -46,7 +46,7 @@ layout: default
       <div class="md:w-1/2 max-w-md not-on-print">
         <form id="contact-form" class="w-l flex-1 justify-center relative" name="tcg-internal-application" action="/thanks-job-application" data-netlify="true" method="POST"
             enctype="multipart/form-data">
-            <input type="hidden" value="{{job.slug.current}}" class="hidden" />
+            <input type="hidden" name="job-applied-for" value="{{job.slug.current}}" class="hidden" />
           <div class="required-pop-up absolute text-red-100 w-full text-xs leading-xs text-right mb-2 hidden">*Required</div>
           <div>
             <div class="mb-4">
