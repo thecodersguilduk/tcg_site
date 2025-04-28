@@ -135,55 +135,56 @@ layout: default
             {% endif %}
 
             <div id="dynamic-fields">
-            {% for item in job.questions %}
+              {% for item in job.questions %}
               <div class="mb-4">
                 {% switch item.inputType %}
                   {% case 'text'%}
-                  <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
-                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="text" id="{{item.questionName | underscore}}"
-                  name="{{item.questionName | underscore}}" />
+                  <label for="question_{{ loop.index }}" class="sr-only">{{ item.question }}</label>
+                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{ item.question }}" type="text" id="question_{{ loop.index }}"
+                    name="question_{{ loop.index }}" />
                   {% case 'email'%}
-                  <label for="{{item.questionName | underscore}}" class="sr-only">{{item.question}}</label>
-                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{item.question}}" type="email" id="{{item.questionName | underscore}}"
-                  name="{{item.questionName | underscore}}" />
+                  <label for="question_{{ loop.index }}" class="sr-only">{{ item.question }}</label>
+                  <input class="form-input-field rounded block w-full py-2 px-3 border-1 placeholder-black required" placeholder="{{ item.question }}" type="email" id="question_{{ loop.index }}"
+                    name="question_{{ loop.index }}" />
                   {% case 'select'%}
                     <div class="flex-column mt-2">
-                      <label for="{{item.questionName | underscore}}" class="text-md font-medium mt-4 flex">{{item.question}}</label>
-                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-                      <select class="border-1 border-gray-400  bg-white rounded-lg my-2 p-2 w-full" name="{{item.questionName | underscore}}">
+                      <label for="question_{{ loop.index }}" class="text-md font-medium mt-4 flex">{{ item.question }}</label>
+                      {% if item.help %}<p class="text-sm">{{ item.help }}</p>{% endif %}
+                      <select class="border-1 border-gray-400 bg-white rounded-lg my-2 p-2 w-full" name="question_{{ loop.index }}">
                         <option value="N/A">Please select one option</option>
                         {% for option in item.options %}
-                          <option value="{{option | underscore}}">{{option}}</option>
+                          <option value="{{ option | underscore }}">{{ option }}</option>
                         {% endfor %}
                       </select>
                     </div>
                   {% case 'checkbox'%}
-                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
-                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-                      <div class="flex flex-row flex-wrap justify-around">
-                      {% for option in item.options%}
-                        <input class="flex mb-2 mt-1" type="checkbox" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
-                          <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
+                    <label for="question_{{ loop.index }}" class="block text-md font-medium text-black my-3">{{ item.question }}</label>
+                    {% if item.help %}<p class="text-sm">{{ item.help }}</p>{% endif %}
+                    <div class="flex flex-row flex-wrap justify-around">
+                      {% for option in item.options %}
+                        <input class="flex mb-2 mt-1" type="checkbox" id="option_{{ option | underscore }}" name="question_{{ loop.index }}" value="{{ option | underscore }}" />
+                        <label for="option_{{ option | underscore }}" class="text-sm font-medium">{{ option }}</label>
                       {% endfor %}
-                      </div>
+                    </div>
                   {% case 'radio'%}
-                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black my-3">{{item.question}}</label>
-                      {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
-                      <div class="flex flex-row flex-wrap justify-around">
-                      {% for option in item.options%}
-                        <input class="flex mb-2 mt-1" type="radio" id="{{option | underscore}}" name="{{item.questionName | underscore}}" value="{{option | underscore}}" />
-                          <label for="{{option | underscore }}" class="text-sm font-medium">{{option}}</label>
+                    <label for="question_{{ loop.index }}" class="block text-md font-medium text-black my-3">{{ item.question }}</label>
+                    {% if item.help %}<p class="text-sm">{{ item.help }}</p>{% endif %}
+                    <div class="flex flex-row flex-wrap justify-around">
+                      {% for option in item.options %}
+                        <input class="flex mb-2 mt-1" type="radio" id="option_{{ option | underscore }}" name="question_{{ loop.index }}" value="{{ option | underscore }}" />
+                        <label for="option_{{ option | underscore }}" class="text-sm font-medium">{{ option }}</label>
                       {% endfor %}
-                      </div>
+                    </div>
                   {% case 'textarea'%}
-                    <label for="{{item.questionName | underscore}}" class="block text-md font-medium text-black mt-3">{{item.question}}</label>
-                    {%if item.help %}<p class="text-sm">{{item.help}}</p>{% endif %}
+                    <label for="question_{{ loop.index }}" class="block text-md font-medium text-black mt-3">{{ item.question }}</label>
+                    {% if item.help %}<p class="text-sm">{{ item.help }}</p>{% endif %}
                     <textarea class="py-3 px-4 block w-full h-35 border-1 border-gray-400 rounded-lg shadow-sm" rows="8"
-                      name="{{item.questionName | underscore}}">
+                      name="question_{{ loop.index }}">
                     </textarea>
                 {% endswitch %}
               </div>
             {% endfor %}
+            
             </div>
 
             {% if job.slug.current !== "apprentice-admin-assistant-tcg" %}
@@ -226,7 +227,7 @@ layout: default
   </div>
 </main>
 
-<script>
+<!-- <script>
  const dynamicFields = document.getElementById('dynamic-fields');
   
   // Get all input fields, selects, textareas, checkboxes, and radios inside the 'dynamic-fields' div
@@ -243,7 +244,7 @@ layout: default
     
   });
 
-</script>
+</script> -->
 
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery-ui.js"></script>
