@@ -32,7 +32,7 @@ body_class: apprenticeship-employer
     <section id="content" class="section-rounded relative">
       {% include '../components/courses/content.njk' %}
     </section>
-  {% if course.trainers.length > 0 %}
+  {% if course?.trainers?.length > 0 %}
     <section id="trainers overflow-hidden">
       {% include '../components/courses/trainers.njk' %}
     </section>
