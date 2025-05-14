@@ -73,7 +73,18 @@ module.exports = (eleventyConfig) => {
 
 	// Collections
 	eleventyConfig.addCollection('blog', (collection) => {
+		let caseStudies = collection.getFilteredByTag('Case Studies');
 		let blogs = collection.getFilteredByTag('blog');
+
+		caseStudies.forEach(cs => {
+			if (!blogs.find(item => item.inputPath === cs.inputPath)) {
+				blogs.push(cs);
+			}
+		});
+
+
+		//console.log(blogs);
+
 
 		for (let i = 0; i < blogs.length; i++) {
 			const prevPost = blogs[i - 1];
@@ -83,37 +94,13 @@ module.exports = (eleventyConfig) => {
 			blogs[i].data['nextPost'] = nextPost;
 		}
 
-		const blogsWithUpdatedDates = blogs.map((blog) => {
-			// If the item has a data.post object (from external Data)
-			// Then set a new date based on the date property
-			// Else return the original date (takes care of the Markdown)
-			blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date;
-			return blog;
+		blogs.forEach(b => {
+			console.log(`${b.data.title} — ${b.data.date}`);
 		});
-		// Now we need to re-sort based on the date (since our posts keep their index in the array otherwise)
-		blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date);
-		// Make sortedPosts the array for the collection
-
-		return blogs;
+	
+		return blogs.sort((a, b) => b.data.date - a.data.date);
 	});
 
-	eleventyConfig.addCollection('ldcf', (collection) => {
-		let blogs = collection.getFilteredByTag('LDCF');
-
-		const blogsWithUpdatedDates = blogs.map((blog) => {
-			// If the item has a data.post object (from external Data)
-			// Then set a new date based on the date property
-			// Else return the original date (takes care of the Markdown)
-			blog.date = blog.data.post ? new Date(blog.data.post.date) : blog.date;
-			return blog;
-		});
-
-		blogs = blogsWithUpdatedDates.sort((a, b) => b.date - a.date);
-
-		console.log(blogs.length);
-
-		return blogs;
-	});
 
 	eleventyConfig.addCollection('courses', (collection) => {
 		let courses = collection.getFilteredByTag('course');

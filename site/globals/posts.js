@@ -47,9 +47,11 @@ function prepPost(data) {
     blocks: data.blogPortableText,
     serializers: serializers
   })
+
+  
   // Adjusts where our date lives (for convenience)
-  data.date = data.publishedAt.split('T')[0];
-  // Returns back to our main function
+  data.date = new Date(data.publishedAt); 
+ 
   // data.avatar = urlFor(data.avatar);
   data.avatar = urlFor(data.avatar[0]).width(100).url();
 

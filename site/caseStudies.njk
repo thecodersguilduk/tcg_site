@@ -6,7 +6,6 @@
         size: 1,
         alias: 'study'
         },
-    permalink: '/',
     eleventyComputed: {
         permalink: `/case-study/{{study.slug.current}}/index.html`,
         excerpt: data => data.study.excerpt,
@@ -15,12 +14,22 @@
         meta_description: data => data.study.excerpt,
         featured_image: data =>  data.study.featuredImage.src,
         featured_image_alt: data =>  data.study.featuredImage.alt,
-        date: data => data.study.publishedAt,
+        date: data => data.study.date,
         avatar: data => data.study.avatar,
         time: data => data.study.time,
         author: data => data.study.author.name,
+        tags: data => {
+            const arr = ['Case Studies'];
+            const categories = data.study.categories || [];
+      
+            categories.forEach(cat => {
+              arr.push(cat.name);
+            });
+      
+            return arr;
+          },
         categories: data => {
-            const arr = ['blog'];
+            const arr = ['Blog', 'Case Studies'];
             const categories = data.study.categories;
     
             categories.forEach(cat => {

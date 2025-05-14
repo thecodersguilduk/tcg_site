@@ -21,7 +21,7 @@ permalink: /category/{{ category.name }}/
     {% set filtered_posts = [] %}
 
     {% for post in collections.blog %}
-        {% if post.data.categories == category.name %}
+        {% if category.name in post.data.categories %}
           {% set filtered_posts = (filtered_posts.push(post), filtered_posts) %}
         {% endif %}
     {% endfor %}

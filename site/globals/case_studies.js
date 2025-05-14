@@ -79,8 +79,7 @@ function prepPost(data) {
     serializers: serializers
   })
 
-  data.date = data.publishedAt.split('T')[0];
-
+  data.date = new Date(data.publishedAt);
   return data
 }
 
